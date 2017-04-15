@@ -1,0 +1,9 @@
+Title: About
+
+----
+
+Aboutimage: whale-binocular-view.png
+
+----
+
+Text: Welcome to my blog! I’m Lia, and this is where I examine the wonderfully perplexing world we live in and report back my findings. I’m a self-proclaimed visual learner and a software designer by trade, but I love to write, so I decided to start Curiosity-Colored Glasses as a way to educate myself (and potentially others) through imagery and explanations. Happy looking and learning!

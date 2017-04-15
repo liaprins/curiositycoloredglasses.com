@@ -1,0 +1,17 @@
+Cid: 8
+
+----
+
+Date: 2016-12-26 00:59:19
+
+----
+
+Name: Lia J Prins
+
+----
+
+Email: liajprins@gmail.com
+
+----
+
+Text: Testing date with the <time> HTML element

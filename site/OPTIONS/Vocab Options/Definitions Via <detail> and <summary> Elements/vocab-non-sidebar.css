@@ -1,0 +1,58 @@
+/* !!!!!!!!!! 04 FEB 2017 THIS vvv IS ONLY HERE TO EXPERIMENT WITH A VOCAB IDEA !!!!!!!!!! */
+
+#vocabdetails summary::-webkit-details-marker {
+    display: none    }
+
+#vocabdetails[open] {
+    display: inline;
+}
+
+#vocabdetails[open] summary {
+    background-color: black;
+    color: white;    }
+
+.vocabstyle2 {
+    padding: 5px;
+    cursor: pointer;    }
+
+/* In the example text, I typed the vocab word ("vocab") again, ...
+bc having the actual vocab word absolutely positioned meant the text after it overlapped it...
+this style is to show that the repeated word (inside a <span>) is there */
+/*
+.blueunderline {
+    color: blue;
+    text-decoration: underline;    }
+*/
+
+
+
+
+
+/* USE THESE PROPERTIES FOR THE BASIS OF DEFINITIONS THAT APPEAR IN THE TEXT DIRECTLY BELOW THE WORD */
+/* IF DECIDE TO GO THIS ROUTE, THE DEFINITION WILL HAVE TO SIT ON TOP OF THE CONTENT INSTEAD OF INSERTING */
+/* CAN FINESSE IT MORE, DEPENDING ON WHERE I WANT THE DEFINITION POSITIONED, RELATIVE TO VOCAB WORD AND/OR REST OF SCREEN */
+#vocabdetails {
+    display: inline;    }
+
+#vocabsummary {
+    position: relative;
+    display: inline;    }
+
+#defcon {    }
+
+#defconii {   
+    position: absolute;
+    left: 0;
+    width: 100%;    }    /* The full width of the screen */
+
+#definition {
+    width: 50%;    /* These percents can be replaced by the right ones to represent the number of columns !!!!!!!!!! This is the % of #defcon's %, though (I think) !!!!!!!!!!! */
+    background-color: white;    /* THIS IS SO IT CAN NOW COVER UP WHAT IS BELOW IT WHEN IT IS OPEN */
+    color: black;
+    padding: 52.78px;
+    border-color: black;
+    border-style: solid;
+    border-width: 5px;
+    margin: 0 auto;    }
+
+

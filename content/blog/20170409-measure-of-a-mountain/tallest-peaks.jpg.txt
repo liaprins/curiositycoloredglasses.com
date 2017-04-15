@@ -1,0 +1,5 @@
+Caption: This rendering starts all mountains' height measurements at their "base". Leaving me wondering: where do their bases start?
+
+----
+
+Alt: Triangle bar chart depicting Everest, Mauna Kea, and Olympus Mons' heights from their bases.

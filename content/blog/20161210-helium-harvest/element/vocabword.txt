@@ -1,0 +1,21 @@
+Vocabword: element
+
+----
+
+Pronunciation: 
+
+----
+
+Audiopronunciation: 
+
+----
+
+Definition: A substance consisting of atoms which all have the same number of protons, and thereby the same atomic number. Elements are chemically the simplest substances and hence cannot be broken down using chemical methods. Elements can only be changed into other elements using nuclear methods.
+
+----
+
+Illustration: helium-element.png
+
+----
+
+Title: element

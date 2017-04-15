@@ -1,0 +1,5 @@
+Caption: The number to the left is a county code, in this case the 1 represents Jefferson County.
+
+----
+
+Alt: The number to the left is a county code, in this case the 1 represents Jefferson County.
