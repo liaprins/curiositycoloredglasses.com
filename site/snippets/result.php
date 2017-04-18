@@ -1,5 +1,5 @@
 <!-- adding <article> for semantic reasons and to hold together each result -->
-<article>
+<article class="result">
 
     
     <!-- adding link outside date, blog post name, and postglasses image; tags link to their own tag result page -->
@@ -42,7 +42,7 @@
 
 
 
-<article>
+</article>
 
 
 

@@ -14,14 +14,20 @@
     OR "right before closing </body> tag" (in the footer.php snippet)? Currently it is in both places.-->
     <?php snippet('facebook-sdk') ?>
 
+            
+
+
+    <?php snippet('test') ?>
+
+
+
+
 
     <!-- I MOVED THE HOME GLASSES ICON INTO THE 'menu' SNIPPET SO CALLING IT NOW INSTEAD OF 'internal-menu' SNIPPET -->
     <?php snippet('menu') ?>
 
-    <main>
 
-        <!-- KEEP "ARTICLE" FOR SEMANTIC PURPOSES -->
-        <article id="post">
+        <article class="mockmain" id="pre-rr">    <!-- opening first instance of <article> to make room for RR results that need to be wider than this width, to accommodate their all having margins on L + R -->
 
 
         <!-- I'm arranging the pieces of the intro part according to the mobile V design; CSS can re-arrange them; this is according to responsive design principles -->
@@ -94,6 +100,7 @@
                 <!-- Process section of post -->
                 <?php snippet('blogarticle-process') ?>
 
+            </article>    <!-- closing first instance of <article> to make room for RR results that need to be wider than this width, to accommodate their all having margins on L + R -->
 
 
 
@@ -101,6 +108,8 @@
                 <?php snippet('blogarticle-relevantreading') ?>
 
 
+
+            <article class="mockmain" id="post-rr">    <!-- opening second instance of <article> to make room for RR results that need to be wider than this width, to accommodate their all having margins on L + R -->
 
                 <!-- Comments via Disqus; trying out custom comments from Kirby instead for now, though -->
                 <!-- <?php snippet('disqus') ?> -->
@@ -113,13 +122,13 @@
                 <?php snippet('comments') ?>
 
 
+            </article>    <!-- opening second instance of <article> to make room for RR results that need to be wider than this width, to accommodate their all having margins on L + R -->
+
+
             </aside>
 
 
         </article>
-
-
-    </main>
 
 
     <?php snippet('footer') ?>

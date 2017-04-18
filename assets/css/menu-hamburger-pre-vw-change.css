@@ -52,15 +52,15 @@ nav {   }
     display: block;    /* :) This is so you can select the home button when you are hovering to the right of it, just like the words */
     width: 25px;
     padding: 2.5px 7.5px 2.5px 0;    /* :) V-Mobile bottom: This is to account for the extra white space that goes with the menu words, to match the spacing (alternatively, set line-height to 1 for menu words...) */
-    margin-bottom: 1.536rem;    }    /* :) V-Mobile .75 lh*/
+    margin: 0 0 7.143vw 0;    }
 
 #navlist {    }    /* :) This applies to the group as a whole that holds the menu words (About, Archive, and Library) */
 
 .navnothome {    /* :) The menu items that aren't the home button (About, Archive, Library, and search) */
     padding: 0;    /* :) Padding needs to be called to override the padding of .sectionsummary, which needed to be applied for the font-size; any padding will add to the space between menu items, which optically needs to remain the same */
-    margin: 1.536rem 0;    }    /* :) V-Mobile top + bottom: .75 lh | This is the space between the nav items */  
+    margin: 7.143vw 0;    }    /* :) V-Mobile top + bottom: 3/18 cols | This is the space between the nav items */  
 
 #navsearch {
-    margin: -0.512rem 0 0 0;    }    /* :) V-Mobile top: -.25 lh to make it look like it has equal spacing optically, bottom is 0 to prevents the search bar from having the extra margin on bottom */
+    margin-bottom: 0;    }    /* This prevents the search bar from having the extra margin on bottom */
 
 

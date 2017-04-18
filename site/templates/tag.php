@@ -26,6 +26,11 @@
             <?php echo $page->text()->kirbytext() ?>
         </span>
 
+    </main>
+
+
+    <!-- establishing a separate div so I can make it wider in screens with more than one result wide to accommodate margins I need to put on both L + R sides of all results so they have proper spacing between each other, but don't look like they're extending past the page margins -->
+    <div class="resultarea"> 
 
         <!-- resulting article attributes defined in results snippet -->
         <?php foreach($site->page('blog')
@@ -38,8 +43,9 @@
 	
         <?php endforeach ?>
 
+    </div>    <!-- closing "searchtagresult" div -->
 
-    </main>
+
 
     <?php snippet('footer') ?>
 

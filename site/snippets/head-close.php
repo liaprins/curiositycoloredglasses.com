@@ -19,6 +19,10 @@
  	<details open id="navdetails"> -->
  	<!-- <?php echo css('assets/css/menu-desktop-cascade.css') ?> -->
 
+ 	<!-- Media queries -->
+ 	<?php echo css('assets/css/mediaqueries.css') ?>
+
+
 
 </head>
 

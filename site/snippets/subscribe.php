@@ -39,7 +39,7 @@
 	Thank you!
 	</span>
 	
-</span> -->    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+</span> -->   <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
    
 
 <!-- NOT SURE IF THIS WILL STAY AS <p> -->

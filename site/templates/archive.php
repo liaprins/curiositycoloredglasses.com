@@ -32,7 +32,7 @@
 
 <!-- ARCHIVE YEAR MENU -->
 
-    <p id="archivemenu" >
+        <p id="archivemenu" >
 
         <?php $years = $page->years()
                             ->toStructure()
@@ -41,13 +41,15 @@
         <?php foreach($years as $year): ?>
 
         <!-- This holds together all the years on one line -->
-        <span>
+            <span>
 
-            <!-- NOT SURE THAT THE YEAR MENU WILL STAY AS <h3> -->
-            <a href="<?php echo url('archive#' . $year) ?>" id="archivemenuyear" class="sectionsummary yellowhover">
-                <?php echo $year ?></a></span><?php endforeach ?>
+                <!-- NOT SURE THAT THE YEAR MENU WILL STAY AS <h3> -->
+                <a href="<?php echo url('archive#' . $year) ?>" id="archivemenuyear" class="sectionsummary yellowhover">
+                    <?php echo $year ?></a></span><?php endforeach ?>
 
-    </p>
+        </p>
+
+    </main>
 
 <!-- __________________________________________________________________________________ -->      
 
@@ -70,6 +72,9 @@
 
 <!-- BLOG ARTICLES GROUPED BY YEAR: needs to go through the same loops as above -->
 
+    <div class="resultarea">
+
+
         <?php foreach($site->page('blog')
                            ->children()
                            ->visible() 
@@ -87,8 +92,10 @@
 
             <!-- this is what shows up on screen-->
             
+
             <details open>
-                <summary class="sectionsummary blackbg"><h3>
+
+                <summary class="sectionsummary blackbg" id="archivemockmain"><h3>
             
                     <!-- !!!!!!!!!! (currently the sub-heading for each group of results grouped by year is acting as an anchor link to itself; will remove this in future) -->
                     <!-- <a href="<?php echo url('archive#' . $date['year']) ?>"> -->
@@ -105,22 +112,21 @@
             <?php endif ?>
 
 
-            <!-- resulting article attributes to be defined in results snippet -->
-            <?php snippet('result', array('result' => $result)) ?>
 
+                <!-- resulting article attributes to be defined in results snippet -->
+                <?php snippet('result', array('result' => $result)) ?>
 
 
             <!-- this needs to stay or all year group headings will be most recent year; don't know why, it just does! -->
             <?php $tmpDate = $date; endforeach ?>
 
 
-
             </details>
 
         </section>
 
+    </div>
 
-    </main>
 
 <!-- __________________________________________________________________________________ -->      
 

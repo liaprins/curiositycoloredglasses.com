@@ -1,0 +1,62 @@
+@media only screen and (min-width: 375px) {
+    
+    #navdetails[open] {    /* :) The style for just when the menu is open */
+        width: 60.714vw;    }    /* :) H-Mobile 17/28 cols | Making the menu 2/3 column-grids wide when open */
+
+    #navsearchinput {    /* :) Adjusting length of nav search bar for the narrower menu */
+        width: calc(39.286vw - 34px);    }    /* H-Mobile | This should be the width of the content area within the open hamburger menu (11/28 cols = 39.286vw) minus the width of the menu icon + its spacing between it and this input bar (15px + 7.5px = 22.5px) */
+
+
+    .postglasses {
+        width: 28.571vw;    } /* :) H-Mobile 8/28 cols */
+
+    .date {
+        border-width: 1.143vw;    }    /* :) This should dynamically match the weight of the line of the postglasses below date, based on their width of 28.571vw (8/28 cols) and the ratio of the postglasses width to their line weight of 25:1; */ 
+
+    figcaption {
+            border-width: 1.143vw;    }    /* :) This should dynamically match the weight of the line of the postglasses below date, based on their width of 42.857vw (12/28 cols) and the ratio of the postglasses width to their line weight of 25:1; */ 
+
+    #resultglasses {
+        width: 14.286vw;    }    /* :) H-Mobile 4/28 cols */ 
+    
+    #resultdate {
+    border-width: 0.571vw;    }    /* :) This should dynamically match the weight of the line of the resultglasses below date, based on their width of 28.571vw (8/28 cols) and the ratio of the resultglasses width to their line weight of 25:1; */ 
+
+    #noresultmessage {
+        max-width: 1610px;    /* FINALIZE This is is max width that allows menu icon (25px) to have 7.5px padding while hovered on, and beyond that, 30px margin all around (70px/col x 23 cols = 1610px); I can certainly set max width to less than this, but not more, without crowding menu icon so it's not centered in the outermost column. Alternatively, I could also make the very outside columns (only of desktop’s 21-column grid) wider %-wise (just enough to accommodate the glasses icon centering), and also adjusting the middle 19 columns of the grid to be narrower %-wise */
+        width:  78.571%;    }    /* :) V-H-Mobile hybrid 22/28 cols | Use % here instead of vw because it can be used inside the max-width | Getting the width back to the same as <main>'s when there aren't results */
+
+    .resultarea {
+        overflow: auto;    /* :) This line and the next are to fix a broswer bug wherein this containing element thinks it is 0px tall because it only contains floated elements; see pp373-4 in HTML & CSS book */
+        /* width: 100%; */    /* :) This line and the previous are to fix a broswer bug wherein this containing element thinks it is 0px tall because it only contains floated elements; see pp373-4 in HTML & CSS book; but commenting out the 100% width because I actually want a specific width, and it seems to be working anyway */
+        width: 85.714%;    /* :) V-Mobile 24/28 cols | Establishing a separate div so I can make it wider in screens with more than one result wide to accommodate margins I need to put on both L + R sides of all results so they have proper spacing between each other, but don't look like they're extending past the page margins */
+        margin: 0 auto;    }
+
+    .result {
+        width: 35.714vw;    /* :) V-H-Mobile hybrid 10/28 cols | Setting results to 2-column grid */
+        margin: 0 3.571vw;
+        float: left;    }
+
+    #mce-EMAIL {    /* :) Making subscribe input field 2/3 */
+        float: left;
+        width: calc(78.571vw - 85px);    }
+
+    .subscribebutton {
+        margin: 0 0 15px 0;
+        width: 85px;   }
+
+}    /* :) This is the closing bracket for the (min-width: 375px) media query itself */ 
+
+
+@media only screen and (min-width: 550px) {
+
+    #navdetails[open] {    /* :) The style for just when the menu is open */
+        width: 50vw;    }    /* :) H-Mobile 19/28 cols | Making the menu 1/2 column-grids wide when open */
+
+    #navsearchinput {    /* :) Adjusting length of nav search bar for the narrower menu */
+        width: calc(28.571vw - 34px);    }    /* H-Mobile | This should be the width of the content area within the open hamburger menu (8/28 cols = 28.571vw) minus the width of the menu icon + its spacing between it and this input bar (15px + 7.5px = 22.5px) */
+
+    .result {
+        width: 21.429vw;    }    /* :) V-H-Mobile hybrid 6/28 cols | Setting results to 3-column grid */
+
+}    /* :) This is the closing bracket for the (min-width: 550px) media query itself */ 

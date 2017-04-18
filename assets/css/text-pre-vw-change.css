@@ -1,5 +1,3 @@
-/* "1 lineheight" = the height of one lineheight's-worth of m-textface at 1.6 lineheight */
-
  /* TEXT
 -------------------------------------------------- */
 
@@ -64,13 +62,12 @@ h3 {    /* :) This is applied for semantic purposes to high-level "parts" of pos
     font-family: 'Grotesque_Bold', 'Courier_New', Courier, Monotype;
     text-transform: uppercase;
     letter-spacing: 0.25em;
-    clear: both;
     padding: 0.6em 0.6em 0.5em 1em;    /* :) Finessing to be perfectly centered */
-    margin: 24.587px 0 16.391px 0;    }    /* :) V-Mobile top: 0.75 lineheights, bottom: 0.5 lineheights */
+    margin: 10.714vw 0 7.143vw 0;    }    /* :) V-Mobile top: 3/28 col-widths, bottom: 2/28 cols */
 
 .s-display {
     font-size: 9.563px;    /* :) This height matches x-height of m-textface! | Mobile-V based on 1.125 ratio (8:9, Major Second) typescale with 8.5px base at level 0, and this at level 1 | Fallback for browser's not processing rems */
-    font-size: 0.598rem;    /* :) This is the rem equivalent of the px size */
+    font-size: 0.598rem;    /* :) This should be the proper rem, but in Chrome it's rendering much larger than the px measurement */
     font-family: 'Grotesque_Bold', 'Courier_New', Courier, Monotype;
     text-transform: uppercase;
     letter-spacing: .25em;    }
@@ -86,8 +83,7 @@ h4 {    /* :) This is reserved for sub-headings within post content */
     font-size: 17.798px;    /* :) V-Mobile | Matches xl-textface size */
     font-size: 1.112rem;    /* :) This is the rem equivalent of the px size */
     font-family: 'Sintesi_Sans_Demi-Bold', 'Courier_New', Courier, Monotype;    /* :) Making the headers bold */
-    margin-bottom: -8.196px;    /* :) 0.25 lineheight's-worth of m-textface at 1.6 lineheight */
-    margin-bottom: -0.512rem;    }    /* :) This is the rem equivalent of the px size */
+    margin-bottom: -3.571vw;    }
 
 .xl-textface {    /* :) Applied to search page input text and tag page name */
     font-size: 17.798px;    /* :) Mobile-V based on 1.125 ratio (8:9, Major Second) typescale with 12.5px base at level 0, and this at level 3 | Fallback for browser's not processing rems */
@@ -98,8 +94,7 @@ h5 {    /* :) This is reserved for sub-headings within post content */
     font-size: 14.063px;     /* :) V-Mobile | Matches l-textface size*/
     font-size: 0.879rem;    /* :) This is the rem equivalent of the px size */
     font-family: 'Sintesi_Sans_Demi-Bold', 'Courier_New', Courier, Monotype;    /* :) Making the headers bold */
-    margin-bottom: -8.196px;    /* :) 0.25 lineheight's-worth of m-textface at 1.6 lineheight */
-    margin-bottom: -0.512rem;    }    /* :) This is the rem equivalent of the px size */
+    margin-bottom: -3.571vw;    }
 
 .l-textface { 
     font-size: 14.063px;    /* :) Mobile-V based on 1.125 ratio (8:9, Major Second) typescale with 12.5px base at level 0, and this at level 1 | Fallback for browser's not processing rems */
@@ -109,8 +104,7 @@ h6 {    /* :) This is reserved for sub-headings within post content */
     font-size: 12.5px;    /* :) V-Mobile | Matches m-textface size*/
     font-size: 0.781rem;    /* :) This is the rem equivalent of the px size */
     font-family: 'Sintesi_Sans_Demi-Bold', 'Courier_New', Courier, Monotype;    /* :) Making the headers bold */
-    margin-bottom: -8.196px;    /* :) 0.25 lineheight's-worth of m-textface at 1.6 lineheight */
-    margin-bottom: -0.512rem;    }    /* :) This is the rem equivalent of the px size */
+    margin-bottom: -3.571vw;    }
 
 .m-textface {
     font-size: 12.5px;    /* :) Mobile-V based on 1.125 ratio (8:9, Major Second) typescale with 12.5px base at level 0, and this at level 0 | Fallback for browser's not processing rems */
