@@ -9,10 +9,10 @@
 <?php if (!$comments->isEmpty()): ?>
   
 
-    <details open>
+    <details class="commentsdetails" open>
 
         <!-- calling the count of total number of comments, as part of the "Comments" sub-head -->
-        <summary class="sectionsummary blackbg"><h3>Comments: <?php echo $page->children()->find('comments')->children()->last()->cid() ?>
+        <summary class="sectionsummary commentssummary blackbg"><h3>Comments: <?php echo $page->children()->find('comments')->children()->last()->cid() ?>
             </h3>
         </summary>
 
@@ -76,9 +76,9 @@
 
 <?php else: ?>
 
-            <details open> <!-- Another set of <details>/<summary> tags, technically nested within the first, to account for the second "Comments" heading, when there are 0 comments -->
+            <details class="commentsdetails" open> <!-- Another set of <details>/<summary> tags, technically nested within the first, to account for the second "Comments" heading, when there are 0 comments -->
 
-                <summary class="sectionsummary blackbg"><h3>Comments
+                <summary class="sectionsummary commentssummary blackbg" id="nocommentsheader"><h3>Comments
                     </h3>
                 </summary>
 

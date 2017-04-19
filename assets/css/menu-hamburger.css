@@ -12,6 +12,7 @@ nav {   }
     padding: 10.714vw 10.714vw 0 0;    }    /* :) V-Mobile top + right 3/28 cols | Aligning the edge of the hamburger icon with right edge of the blog title for Mobile V; also sets the vertical position of the hamburger icon to 3/28 cols down from top of screen; can't set the padding all the way around when closed because it interferes with Archive's year menu being able to be clicked on (the menu padding "covers" it) */
 
 #navdetails[open] {    /* :) The style for just when the menu is open */
+    z-index: 1;    /* :) This is to get it to come above the year sections on Archive page */
     padding: 10.714vw;   /* :) V-Mobile 3/28 cols */
     background-color: #e2e43a;
     width: 89.286vw;    }    /* :) V-Mobile 25/28 cols | Aligning the edge of the menu box with the edge of content for Mobile V (25/28 grid columns) */
@@ -26,7 +27,6 @@ nav {   }
     border-style: solid;
     border-width: 0 0 7.5px 7.5px;   /* FINALIZE */
     background-color: #e2e43a;
-
     float: right;
     cursor: pointer;    }
 

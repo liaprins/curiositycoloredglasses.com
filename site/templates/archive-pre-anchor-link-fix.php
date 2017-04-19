@@ -72,7 +72,7 @@
 
 <!-- BLOG ARTICLES GROUPED BY YEAR: needs to go through the same loops as above -->
 
-    <div id="archiveresultarea" class="resultarea">
+    <div class="resultarea">
 
 
         <?php foreach($site->page('blog')
@@ -86,41 +86,44 @@
 
 
 
-        <!-- this is what shows up on screen-->
+        <!-- THIS "SECTION" HTML ELEMENT WAS ALREADY HERE WITH THE DEFAULT KIRBY SETUP, 
+        SO I'M LEAVING IT FOR NOW SO THE DEFAULT CSS WORKS -->
+        <section id="<?php echo $date ['year']?>">
 
-        <details id="archivedetails" open>
+            <!-- this is what shows up on screen-->
+            
 
-            <summary class="sectionsummary archivemockmain blackbg" id="<?php echo $date ['year']?>"><h3>
-        
-                <!-- !!!!!!!!!! (currently the sub-heading for each group of results grouped by year is acting as an anchor link to itself; will remove this in future) -->
-                <!-- <a href="<?php echo url('archive#' . $date['year']) ?>"> -->
+            <details open>
 
-                    <!-- KEEP THIS! IT IS THE CONTENT FOR THE YEAR HEADINGS OF EACH GROUPING -->
-                    <?= $date['year'] ?>
+                <summary class="sectionsummary blackbg" id="archivemockmain"><h3>
+            
+                    <!-- !!!!!!!!!! (currently the sub-heading for each group of results grouped by year is acting as an anchor link to itself; will remove this in future) -->
+                    <!-- <a href="<?php echo url('archive#' . $date['year']) ?>"> -->
 
-                <!-- !!!!!!!!!! (currently the sub-heading for each group of results grouped by year is acting as an anchor link to itself; will remove this in future) -->
-                <!-- </a> -->
-                </h3>
-            </summary>
+                        <!-- KEEP THIS! IT IS THE CONTENT FOR THE YEAR HEADINGS OF EACH GROUPING -->
+                        <?= $date['year'] ?>
 
-            <!-- This is sort of a hack to get the year sections to have white space above them, since their margins weren't responding for some reason -->
-            <div id="yearheaderplaceholder">
-            </div>
-
-
-        <?php endif ?>
+                    <!-- !!!!!!!!!! (currently the sub-heading for each group of results grouped by year is acting as an anchor link to itself; will remove this in future) -->
+                    <!-- </a> -->
+                    </h3>
+                </summary>
 
 
-
-            <!-- resulting article attributes to be defined in results snippet -->
-            <?php snippet('result', array('result' => $result)) ?>
+            <?php endif ?>
 
 
-        <!-- this needs to stay or all year group headings will be most recent year; don't know why, it just does! -->
-        <?php $tmpDate = $date; endforeach ?>
+
+                <!-- resulting article attributes to be defined in results snippet -->
+                <?php snippet('result', array('result' => $result)) ?>
 
 
-        </details>
+            <!-- this needs to stay or all year group headings will be most recent year; don't know why, it just does! -->
+            <?php $tmpDate = $date; endforeach ?>
+
+
+            </details>
+
+        </section>
 
     </div>
 

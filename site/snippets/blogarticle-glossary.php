@@ -8,7 +8,7 @@
 
 
     <!-- keeping this heading in for now, so it can act like a section like RR, etc, for accessibility purposes -->
-    <details open>
+    <details class="postsectiondetails" open>
         <summary class="sectionsummary blackbg"><h3>Glossary
             </h3>
         </summary>

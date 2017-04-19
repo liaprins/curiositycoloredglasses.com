@@ -1,11 +1,16 @@
 @media only screen and (min-width: 375px) {
     
+    body {
+        padding-bottom: calc(32.143vw + 73px + 2.998rem);    }    /* :)  H-Mobile | (margin between main's lowest content and footer (3/28 cols = 10.714vw) + footer's top-padding (3/28 cols = 10.714vw) + footer's bottom padding (3/28 cols = 10.714vw) = 9/28 cols = 32.143vw) + (subscribe input field's height (30px) + margin between input and button (15px) + subscribe button's height (30px) + follow icons' height including padding (30px) = 115px) + (margin between subscribe message and follow icons (0.5 lineheights = 1.024rem) + 2 lines of subscribe message in size xs-textface at 1.6 line height ratio (2 * 0.617rem * 1.6) = 1.9744rem + 1.024rem = 2.998rem) */
+
     #navdetails[open] {    /* :) The style for just when the menu is open */
         width: 60.714vw;    }    /* :) H-Mobile 17/28 cols | Making the menu 2/3 column-grids wide when open */
 
     #navsearchinput {    /* :) Adjusting length of nav search bar for the narrower menu */
         width: calc(39.286vw - 34px);    }    /* H-Mobile | This should be the width of the content area within the open hamburger menu (11/28 cols = 39.286vw) minus the width of the menu icon + its spacing between it and this input bar (15px + 7.5px = 22.5px) */
 
+    h2 {
+        font-size: 15.317px;    }
 
     .postglasses {
         width: 28.571vw;    } /* :) H-Mobile 8/28 cols */
@@ -14,7 +19,7 @@
         border-width: 1.143vw;    }    /* :) This should dynamically match the weight of the line of the postglasses below date, based on their width of 28.571vw (8/28 cols) and the ratio of the postglasses width to their line weight of 25:1; */ 
 
     figcaption {
-            border-width: 1.143vw;    }    /* :) This should dynamically match the weight of the line of the postglasses below date, based on their width of 42.857vw (12/28 cols) and the ratio of the postglasses width to their line weight of 25:1; */ 
+        border-width: 1.143vw;    }    /* :) This should dynamically match the weight of the line of the postglasses below date, based on their width of 42.857vw (12/28 cols) and the ratio of the postglasses width to their line weight of 25:1; */ 
 
     #resultglasses {
         width: 14.286vw;    }    /* :) H-Mobile 4/28 cols */ 
@@ -45,7 +50,29 @@
         margin: 0 0 15px 0;
         width: 85px;   }
 
+    #avatar {
+        height: 7.143vw;    /* :) V-Mobile 3/28 cols */
+        width: 7.143vw;    }    /* :) V-Mobile 3/28 cols */
+
+    #libraryicon {
+        margin: 3.571vw 3.571vw 0 3.571vw;    /* :) V-Mobile top + L + R: 2/28 cols */
+        padding-bottom: 3.571vw;    /* :) V-Mobile bottom: 2/28 cols | Used padding here instead of margin for just the bottom so the bottom underline on selection would have space between it and the icon, and would only be as long as the icon is wide */
+        max-width: 7.143vw;    /* :) V-Mobile 4/28 cols */
+        max-height: 7.143vw;    }    /* :) V-Mobile 4/28 cols */
+
 }    /* :) This is the closing bracket for the (min-width: 375px) media query itself */ 
+
+
+
+
+@media only screen and (min-width: 449px) {    /* :) This is for the point after which the width is wide enough that the subscribe message only has to be one line, making footer a shorter height */
+
+    body {
+        padding-bottom: calc(32.143vw + 58px + 2.998rem);    }    /* :)  H-Mobile | (margin between main's lowest content and footer (3/28 cols = 10.714vw) + footer's top-padding (3/28 cols = 10.714vw) + footer's bottom padding (3/28 cols = 10.714vw) = 9/28 cols = 32.143vw) + (subscribe input field's height (30px) + margin between input and button (15px) + subscribe button's height (30px) + follow icons' height including padding (30px) = 115px) + (margin between subscribe message and follow icons (0.5 lineheights = 1.024rem) + 2 lines of subscribe message in size xs-textface at 1.6 line height ratio (2 * 0.617rem * 1.6) = 1.9744rem + 1.024rem = 2.998rem) */
+
+}    /* :) This is the closing bracket for the (min-width: 449px) media query itself */ 
+
+
 
 
 @media only screen and (min-width: 550px) {

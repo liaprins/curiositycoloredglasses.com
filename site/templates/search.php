@@ -58,8 +58,6 @@
 
 
 
-        <div id="noresultmessage">
-
             <?php else: ?>
 
             <!-- NOT SURE IF THIS WILL STAY AS <p> -->
@@ -69,10 +67,9 @@
 
             <?php endif ?>
 
-        </div>    <!-- closing "noresultmessage" div -->
 
 
 
-    </div>    <!-- closing "searchtagresult" div -->
+    </div>    <!-- closing "resultarea" div -->
 
 <?php snippet('footer') ?>

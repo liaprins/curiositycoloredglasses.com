@@ -3,7 +3,7 @@
 <!-- this works for image only, no metadata (field needs to be put back into markdown) -->
 <?php if(!$page->thankyou2()->empty()): ?>
     
-    <details open>
+    <details class="postsectiondetails" open>
 
     	<summary class="sectionsummary blackbg"><h3>Thank You!
     		</h3>

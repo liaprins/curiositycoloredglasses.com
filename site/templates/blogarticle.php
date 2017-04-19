@@ -14,13 +14,6 @@
     OR "right before closing </body> tag" (in the footer.php snippet)? Currently it is in both places.-->
     <?php snippet('facebook-sdk') ?>
 
-            
-
-
-    <?php snippet('test') ?>
-
-
-
 
 
     <!-- I MOVED THE HOME GLASSES ICON INTO THE 'menu' SNIPPET SO CALLING IT NOW INSTEAD OF 'internal-menu' SNIPPET -->

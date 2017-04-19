@@ -3,7 +3,7 @@
 
     <?php if(!$page->relevantreading1()->empty()): ?>
         
-    <details open>
+    <details id="rrdetails" open>
 
         <!-- MIGHT NEED TO ADD IN A HALF-SPACE VIA UTF-8 ENCODED CHARACTER OR SOMETHING, BETWEEN <summary> AND "Relevant" -->
         <summary class="sectionsummary blackbg" id="rrsectionheader"><h3>Relevant Reading

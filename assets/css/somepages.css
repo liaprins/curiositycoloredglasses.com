@@ -7,10 +7,11 @@ header {    /* :) Holds blog name  + tagline */
 
 #tagline { 
     text-align: center;
-    margin: 1.024rem 0 1.536rem 0;    }    /* :) V-Mobile top: 0.5 lineheights, bottom: 0.75 lineheights */
+    margin: 1.536rem 0 2.048rem 0;
+    /* margin: 1.024rem 0 1.536rem 0; */    }    /* :) V-Mobile top: 0.5 lineheights, bottom: 0.75 lineheights */
 
 #homedate {
-    margin-top: 1.536rem;    }    /* :) V-Mobile 0.75 lineheights */
+    margin-top: 2.048rem;    }    /* :) V-Mobile 0.75 lineheights */
 
 #homeintro {
     hyphens: auto;
@@ -69,7 +70,7 @@ header {    /* :) Holds blog name  + tagline */
     padding-top: 10.714vw;    }    /* :) V-Mobile 3/28 cols */
 
 #postdate {
-    width: 64.286vw;    }    /* :) Making room for the menu icon | V-Mobile 18/28 cols = width of 'main' (22/28 cols) minus width of menu icon (~2/28 cols) minus about equal space of menu icon as margin between date line and menu icon (2/28 cols) */
+    width: calc(78.571vw - 32px);    }    /* :) V-Mobile This should be [the width of <main> (22/28 cols = 78.571vw)[] minus [the width of menu icon + the space between them (17px + 15px = 32px)] | Making room for the menu icon */
 
 #postintro {     /* :) Introductory paragraph of post, on post page only */
     display: block;    /* :) This is so the margins will be recognized, since margins won't apply to inline elements (at least in this case) */
@@ -146,10 +147,17 @@ header {    /* :) Holds blog name  + tagline */
 #rrsectionheader {    /* :) This applies to Relevant Reading's section header, which isn't encapsulated in the .post <article> class (so that the results can have a wider area to accommodate their margins needing to be on both sides for spacing) */
     max-width: 1610px;    /* FINALIZE This is is max width that allows menu icon (25px) to have 7.5px padding while hovered on, and beyond that, 30px margin all around (70px/col x 23 cols = 1610px); I can certainly set max width to less than this, but not more, without crowding menu icon so it's not centered in the outermost column. Alternatively, I could also make the very outside columns (only of desktop’s 21-column grid) wider %-wise (just enough to accommodate the glasses icon centering), and also adjusting the middle 19 columns of the grid to be narrower %-wise */
     width: 78.571%;    /* :) V-Mobile 22/28 cols | Use % here instead of vw because they can be used inside the max-width */
-    margin: 0 auto;    }
+    margin: 2.048rem auto;    }    /* :) V-Mobile 1 lh*/
+#rrdetails[open] #rrsectionheader {
+    margin-bottom: 0;    }    /* :) Making it so the margin below comment section header only applies when it's open */
 
 
 /* COMMENTS (POST PAGE) -------------------------------------------------- */
+
+.commentssummary {    /* :) Making it so the margin below comment section header only applies when it's open */
+    margin-bottom: 0px;    }
+.commentsdetails[open] .commentssummary {
+    margin-bottom: 1.536rem;    }    /* :) .75 lh */
 
 .onecomment {    /* :) For now this applies to already-there comments' name + date + message */
     overflow: auto;    /* :) This line and the next are to fix a broswer bug wherein this containing element thinks it is 0px tall because it only contains floated elements; see pp373-4 in HTML & CSS book */
@@ -157,12 +165,11 @@ header {    /* :) Holds blog name  + tagline */
     margin-bottom: 1.536rem;    }    /* :) V-Mobile .75 lh | This is needed so the bottom comment has this same space between it and the first "Post a Comment" button */
 
 #avatar {
-    /* vertical-align: text-top; */
     float: left;
-    width: 10.714vw;    /* :) V-Mobile 3/28 cols */
     height: 10.714vw;    /* :) V-Mobile 3/28 cols */
+    width: 10.714vw;    /* :) V-Mobile 3/28 cols */
     background-color: #e2e43a;    /* :) Currently be overridden by color randomizer code in comments.php, line ~44 */
-    margin: 0 3.571vw 3.571vw 0;    }    /* V-Mobile right + bottom: 1/28 cols */
+    margin-right: 3.571vw;    }    /* V-Mobile right: 1/28 cols */
 
 #namedatecomment {
     margin-top: -8px;
@@ -251,20 +258,20 @@ However, adding a class via the panel REPLACES this .contentimage class entirely
 So for any custom class added via the panel, I need to copy and paste all the properties of .contentimage and just replace the values I would have overridden, and also add new properties I want. */
 .contentimage { 
     display: block;
-    margin: 1.536rem auto 0 auto;    /* :) V-Mobile top: .75 lh | Leaving the bottom margin 0 since it depends if there's a caption (then figcaption specifies its top margin to cover this space) or another image (it's top margin covert the space) or text (figure specifies its bottom margin to cover the space) */
+    margin: 2.048rem auto 0 auto;    /* :) V-Mobile top: .75 lh | Leaving the bottom margin 0 since it depends if there's a caption (then figcaption specifies its top margin to cover this space) or another image (it's top margin covert the space) or text (figure specifies its bottom margin to cover the space) */
     max-width: 78.571vw;    /* :) V-Mobile 22/28 cols */
     max-height: 100vh;    }    /* FINALIZE Making the images never taller than the browser window (1vh = 1% of vertical height of screen) */
 
 #galleryimage {    }    /* :) This is the id for gallery images; they already have the .contentimage class applied in the site/tags/gallery.php kirbytag file */
 
 figure {    /* :) This applies to the image + its caption (if it has one) as a whole */
-    margin-bottom: 1.536rem;    }    /* :) V-Mobile .75 lh | This is needed so the text following a captionless image has this space between it and the image */
+    margin: 2.048rem 0 2.048rem 0;    }    /* :) V-Mobile .75 lh | This is needed so the text following a captionless image has this space between it and the image */
 
 figcaption {    /* :) This applies to all places captions appear (post page single and/or gallery images, About page) */
-    padding-bottom:  0.512rem;    /* :) V-Mobile .25 lh */
+    padding-bottom:  1.024rem;    /* :) V-Mobile .5 lh */
     border-style: none none solid none;    
     border-width: 1.71428vw;    /* :) This should dynamically match the weight of the line of the postglasses below date, based on their width of 42.857vw (12/28 cols) and the ratio of the postglasses width to their line weight of 25:1; */ 
-    margin: 1.024rem 0 1.536rem 0;    }    /* :) V-Mobile top: .5 lh, bottom: .75 lh */
+    margin: 1.024rem 0 2.048rem 0;    }    /* :) V-Mobile top: .5 lh, bottom: .75 lh */
 
 /* POST + SEARCH + TAG PAGES -------------------------------------------------- */
 
@@ -276,6 +283,9 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
 
 /* ABOUT PAGE -------------------------------------------------- */
 
+#aboutimage {
+    margin-top: -0.512rem;    }    /* :) V-Mobile .25 lh | Counteracting <figure>'s top margin to move top of About image closer to About page name optically */
+
 #abouttext {
     hyphens: auto;    }
 
@@ -285,21 +295,32 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
 .extracontentpagetitle {
     padding-right: 30px;
     padding-top: calc(10.714vw - 1.5px);    /* :) V-Mobile top: 3/28 cols, but finessing to center vertically with menu icon */
-    margin-bottom: 1.024rem;    }    /* :) V-Mobile bottom: .5 lh */
+    margin-bottom: 1.536rem;    }    /* :) V-Mobile bottom: .5 lh */
 
 
 /* ARCHIVE PAGE -------------------------------------------------- */
 
 #archivemenu {
-    margin: 1.024rem 0 1.536rem 0;    }    /* :) V-Mobile top: .5 lh, bottom: .75 lh */
+    margin-top: 1.024rem;    }    /* :) V-Mobile top: .5 lh, bottom: .75 lh */
 
 #archivemenuyear {    /* :) Applies to the years in the menu; this is only needed if I want to override any properties set by .sectionsummary, which applies to the year headings and section headings on other pages, and is also applied to the element that this is an ide for to get it to be the same size as them */  
     padding: 0.6em 0.4em 0.4em 0.7em;    }    /* :) Based on line-height, but finessing optically */
 
-#archivemockmain {
+#archiveresultarea {
+    padding-bottom: 10.714vw;    }    /* :) V-Mobile 3/28 cols */
+
+.archivemockmain {
+    position: relative;
+    top: calc(1.6em + 0.672rem);
     max-width: 1610px;    /* FINALIZE This is is max width that allows menu icon (25px) to have 7.5px padding while hovered on, and beyond that, 30px margin all around (70px/col x 23 cols = 1610px); I can certainly set max width to less than this, but not more, without crowding menu icon so it's not centered in the outermost column. Alternatively, I could also make the very outside columns (only of desktop’s 21-column grid) wider %-wise (just enough to accommodate the glasses icon centering), and also adjusting the middle 19 columns of the grid to be narrower %-wise */
     width: 78.571vw;    /* :) V-Mobile 22/28 cols | Had to use vw instead of % here because it's already inside class .resultarea which sets a width that's wider than <main> for the results...for desktop/max-width size, maybe calculate the proper %-inside-of-% to get equivalent width, and apply here globally (I'm just not stopping to do that now) */
-    margin: 0 auto;    }
+    margin: 0 auto;    }    /* :) .75 lh */
+
+#yearheaderplaceholder {
+    /* background-color: blue; */    /* :) Keeping this commented out so I can turn it on again for future troubleshooting at other screensizes */
+    z-index: -100;
+    height: calc(1.1em + 0.672rem);    }    /* :) Making identical in height to sectionsummary = padding-top (0.6em) + padding-bottom (0.5em) + height of type (0.672rem) (had to set font-size in line above to match that of sectionsummary in text.css)) */
+
 
 /* LIBRARY PAGE -------------------------------------------------- */
 
@@ -308,7 +329,7 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
     /* width: 100%; */    /* :) This line and the previous are to fix a broswer bug wherein this containing element thinks it is 0px tall because it only contains floated elements; see pp373-4 in HTML & CSS book; but commenting out the 100% width because I actually want a specific width, and it seems to be working anyway */
     width: 85.74vw;    /* :) V-Mobile 24/28 cols | had to round up slightly from 85.714vw to get the icons to fit 3-across */
     background-color: white;    
-    margin: 0 auto;     }
+    margin: 7.143vw auto -3.571vw auto;     }    /* :) V-Mobile top: 2/28 cols, bottom: -1/28 cols | Trying to counteract other margins to make the space between library icon zone and above and below it match the space between library icons themselves */
 
 #libraryentry {    }
 
@@ -346,15 +367,15 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
 /* SEARCH PAGE -------------------------------------------------- */
 
 #searchpageform {
+    margin-bottom: 2.048rem;
     padding-top: calc(10.714vw - 7.5px);    }    /* :) V-Mobile 3/28 cols, but finessing vertical centering of search bar with menu icon */
 
 #searchpageinput {
     padding-bottom: 2.75px;    /* :) Finessed the space between input word and underline bar to match space between input and bottom of field for subscribe + comment name fields (this is a different measurement than nav search's is, because they have different input text sizes, so the line-height (relative sizing) offsets each differently in px for the default spacing)*/
-    margin-bottom: 0.512rem;    /* :) V-Mobile .25 lh | These margin settings don't work on the <form> element that holds this input + search button, so I have to apply the margins to those each of those elements individually */
-    width: calc(75vw - 50.5px);    }    /* :) V-Mobile This should be [the width of <main> (22/28 cols = 78.571vw) minus with the width between magnifier and menu icon (22/28 cols - 1/28 cols = 21/28 cols) = 75vw ] minus [the width of magnifier icon + its padding/margins and the width of menu icon and the space between them (30px + 17px + 7.5px = 54.5px)] */
+    /* margin-bottom: 0.512rem; */    /* :) V-Mobile .25 lh | These margin settings don't work on the <form> element that holds this input + search button, so I have to apply the margins to those each of those elements individually */
+    width: calc(78.571vw - 62px);    }    /* :) V-Mobile This should be [the width of <main> (22/28 cols = 78.571vw)[] minus [the width of magnifier icon + its padding + the width of menu icon + the space between them (30px + 17px + 15px = 62px)] */
 
 #searchpagebutton {
-    padding-bottom: 2.75px;    /* :) Finessed the space between input word and underline bar to match space between input and bottom of field for subscribe + comment name fields (this is a different measurement than nav search's is, because they have different input text sizes, so the line-height (relative sizing) offsets each differently in px for the default spacing)*/
     height: 30px;
     padding: 7.5px;    }
 
