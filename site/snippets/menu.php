@@ -1,6 +1,6 @@
 <nav role="navigation"> 
 
-    <details id="navdetails">
+    <details id="navdetails" open>
 
         <summary id="navsummary">
         </summary>

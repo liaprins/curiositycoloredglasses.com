@@ -16,4 +16,21 @@
     <!-- Tiny article end glasses -->
     <img src="<?php echo url('assets/images/home.svg') ?>" alt="" id="articleendglasses">
 
+
+
+
+
+
+    <details>
+
+    	<summary>Vocabulario</summary>
+
+    </details>
+
+
+
+
+
+
+
 </div>

@@ -12,8 +12,10 @@ body {    /* :) This spans the total screen width, 100% */
     padding-bottom: calc(32.143vw + 118px + 2.998rem);    /* :)  V-Mobile | (margin between main's lowest content and footer (3/28 cols = 10.714vw) + footer's top-padding (3/28 cols = 10.714vw) + footer's bottom padding (3/28 cols = 10.714vw) = 9/28 cols = 32.143vw) + (subscribe input field's height (30px) + margin between input and button (15px) + subscribe button's height (30px) + follow icons' height including padding (30px) = 115px) + (margin between subscribe message and follow icons (0.5 lineheights = 1.024rem) + 2 lines of subscribe message in size xs-textface at 1.6 line height ratio (2 * 0.617rem * 1.6) = 1.9744rem + 1.024rem = 2.998rem) */
     background-color: white;
     color: black;
-    font-family: 'Sintesi_Sans', 'Courier_New', Courier, Monotype;
-    line-height: 1.6;   }
+    /* font-family: 'Sintesi_Sans', 'Courier_New', Courier, Monotype; */
+    font-family: 'Sintesi_Sans_Light', 'Courier_New', Courier, Monotype;
+    line-height: 1.7;
+    /* line-height: 1.6; */   }
 
 main {    /* :) This is for all content except nav and footer on all pages; "content area" in G-Drive's Responsive Diagrams doc */
     max-width: 1610px;    /* FINALIZE This is is max width that allows menu icon (25px) to have 7.5px padding while hovered on, and beyond that, 30px margin all around (70px/col x 23 cols = 1610px); I can certainly set max width to less than this, but not more, without crowding menu icon so it's not centered in the outermost column. Alternatively, I could also make the very outside columns (only of desktop’s 21-column grid) wider %-wise (just enough to accommodate the glasses icon centering), and also adjusting the middle 19 columns of the grid to be narrower %-wise */
@@ -136,9 +138,10 @@ footer {
     text-decoration-color: black;    }
 
 #mc-embedded-subscribe-form div {   /* :) Error message, like "Please enter a value" */
-    color: #df0a17;    /* :) CSS red multiplied over my yellow, to match the pattern of the input field's placeholder text mutliplied over the yellow (because it's a bit darker when multiplied and easier to read) | FINALIZE In FF, it also applies red to the placeholder text of the email input field which I don't want, so commenting this out, but leaving it in case I decide to just not support FF (or at least the IBM version, not sure how it behaves in newer FF versions) */
-    font-size: 9.877px;    /* :) This needs to match xs-textface, but since I can't apply classes to it, I'm calling it's class here and adding the properties needed: Mobile-V based on 1.125 ratio (8:9, Major Second) typescale with 12.5px base at level 0, and this at level -2 | Fallback for browser's not processing rems */
-    margin: 10px 0 -8px 0;    }    /* :) Finessing the placement */
+    /* color: #df0a17; */    /* :) CSS red multiplied over my yellow, to match the pattern of the input field's placeholder text mutliplied over the yellow (because it's a bit darker when multiplied and easier to read) | FINALIZE In FF, it also applies red to the placeholder text of the email input field which I don't want, so commenting this out, but leaving it in case I decide to just not support FF (or at least the IBM version, not sure how it behaves in newer FF versions) */
+    /* font-size: 9.877px; */    /* :) This needs to match xs-textface, but since I can't apply classes to it, I'm calling it's class here and adding the properties needed: Mobile-V based on 1.125 ratio (8:9, Major Second) typescale with 12.5px base at level 0, and this at level -2 | Fallback for browser's not processing rems */
+    font-size: 0;
+    /* margin: 10px 0 -8px 0; */    }    /* :) Finessing the placement */
 
 #follow {    }    /* :) <span> holding follow icons + liaprins.com; not needed by V-Mobile, but may be needed by other versions, to float them as a whole...? so leaving it in CSS and HTML for now */
 

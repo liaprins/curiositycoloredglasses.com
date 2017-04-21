@@ -1,49 +1,47 @@
-/*
-
-Lia Prins's CSS style sheet for Curiosity-Colored Glasses
-
-*/
-
-
 /* FONTS -------------------------------------------------- */
+/* FOR CHROME AND FF, ONLY WORKS WHEN .WOFF IS THE ONLY ONE THERE... */
+
 
 @font-face {
     font-family: 'Grotesque_Bold';
-    /* src: url(../fonts/GROTESQUE_BOLD_smooth.eot); /* IE9 Compat Modes */
-    /* src: url(../fonts/GROTESQUE_BOLD_smooth.eot?#iefix) format('embedded-opentype'); /* IE6-IE8 */
-    src: url(../fonts/GROTESQUE_BOLD_smooth.woff) format('woff'); /* Modern Browsers */
-    /* src: url(../fonts/GROTESQUE_BOLD_smooth.ttf) format('truetype'); /* Safari, Android, iOS */
-    /* src: url(../fonts/GROTESQUE_BOLD_smooth.svg#wf) format('svg'); /* Legacy iOS */
+    /* src: url(../fonts/GROTESQUE_BOLD_smooth.eot);    /* IE9 Compat Modes */
+    /* src: url(../fonts/GROTESQUE_BOLD_smooth.eot?#iefix) format('embedded-opentype');    /* IE6-IE8 */
+    src: url(../fonts/GROTESQUE_BOLD_smooth.woff) format('woff');    /* Modern Browsers */
+    /* src: url(../fonts/GROTESQUE_BOLD_smooth.ttf) format('truetype'); */    /* Safari, Android, iOS */
+    /* src: url(../fonts/GROTESQUE_BOLD_smooth.svg#wf) format('svg'); */    }    /* Legacy iOS */
 
-    /* FOR CHROME AND FF, ONLY WORKS WHEN .WOFF IS THE ONLY ONE THERE... */
-
-}
 
 @font-face {
     font-family: 'Sintesi_Sans';
-    /* src: url(../fonts/SINTESI_SANS_native.eot); /* IE9 Compat Modes */
-    /* src: url(../fonts/SINTESI_SANS_native.eot?#iefix) format('embedded-opentype'); /* IE6-IE8 */ 
-    src: url(../fonts/SINTESI_SANS_native.woff) format('woff'); /* Modern Browsers */
-    /* src: url(../fonts/SINTESI_SANS_native.ttf) format('truetype'); /* Safari, Android, iOS */
-    /* src: url(../fonts/SINTESI_SANS_native.svg#wf) format('svg'); /* Legacy iOS */
+    /* src: url(../fonts/SINTESI_SANS_native.eot);    /* IE9 Compat Modes */
+    /* src: url(../fonts/SINTESI_SANS_native.eot?#iefix) format('embedded-opentype');    /* IE6-IE8 */ 
+    src: url(../fonts/SINTESI_SANS_native.woff) format('woff');    /* Modern Browsers */
+    /* src: url(../fonts/SINTESI_SANS_native.ttf) format('truetype'); */    /* Safari, Android, iOS */
+    /* src: url(../fonts/SINTESI_SANS_native.svg#wf) format('svg'); */    }     /* Legacy iOS */
 
-    /* FOR CHROME AND FF, ONLY WORKS WHEN .WOFF IS THE ONLY ONE THERE... */
-}
 
-@font-face {    /* This font is to replace "bold" and "strong"; the .woff was made with Font Squirrel from my existing .ttf file */
+/* :) This font is to replace "bold" and "strong"; the .woff was made with Font Squirrel from my existing .ttf file */
+@font-face {    
     font-family: 'Sintesi_Sans_Demi-Bold';
     src: url(../fonts/sintesi_sans_demi-bold-webfont.woff) format('woff');
-    /* src: url(../fonts/SINTESI_SANS_DEMI-BOLD.ttf); */
+    /* src: url(../fonts/SINTESI_SANS_DEMI-BOLD.ttf); */    }
+    
 
-    /* FOR CHROME AND FF, ONLY WORKS WHEN .WOFF IS THE ONLY ONE THERE... */
-
-}
-
-@font-face {    /* This font is to replace "italic" and "em"; the .woff was made with Font Squirrel from my existing .ttf file */
+/* :) This font is to replace "italic" and "em"; the .woff was made with Font Squirrel from my existing .ttf file */
+@font-face {    
     font-family: 'Sintesi_Sans_Italic';
     src: url(../fonts/sintesi_sans_italic-webfont.woff) format('woff');
-    /* src: url(../fonts/SINTESI_SANS_DEMI-BOLD.ttf); */
+    /* src: url(../fonts/sintesi_sans_italic-webfont.ttf); */    }
 
-    /* FOR CHROME AND FF, ONLY WORKS WHEN .WOFF IS THE ONLY ONE THERE... */
+/* TESTING A LIGHTER WEIGHT BODY COPY */
+@font-face {    
+    font-family: 'Sintesi_Sans_Light';
+    src: url(../fonts/sintesisanslight-webfont.woff) format('woff');
+    /* src: url(../fonts/sintesisanslight-webfont.ttf); */    }
 
-}
+/* TESTING A LIGHTER WEIGHT ITALIC TO GO WITH THE LIGHTER BODY COPY FONT I'M ALSO TESTING */
+@font-face {    
+    font-family: 'Sintesi_Sans_Light_Italic';
+    src: url(../fonts/sintesisanslight-italic-webfont.woff) format('woff');
+    /* src: url(../fonts/sintesisanslight-italic-webfont.ttf); */    }
+

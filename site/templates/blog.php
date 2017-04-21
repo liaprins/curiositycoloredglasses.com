@@ -22,10 +22,15 @@
 	<?php snippet('menu') ?>
 
 
-	<main>
+	<div id="blognametagline" class="mockmain">
 
 		<!-- website name + tagline, etc -->
     	<?php snippet('blog-nametagline') ?>
+
+    </div>
+
+
+	<main>
 
 		<!-- foreach loop pulling in the articles: contains postglasses, title, date, tags, and intro -->
     	<?php snippet('blog-posts') ?>

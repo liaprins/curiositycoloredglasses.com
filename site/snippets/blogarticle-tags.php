@@ -1,3 +1,5 @@
+<span id="posttaggroup">
+
 <!-- split the list in the tag field into individual tags -->
 <?php foreach($page->tags()->split(',') as $tag): ?> 
 
@@ -10,3 +12,5 @@
 </a>
         
 <?php endforeach ?>
+
+</span>

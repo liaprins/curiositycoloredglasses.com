@@ -48,7 +48,8 @@ header {    /* :) Holds blog name  + tagline */
     background-size: 175%;    }  
 
 .posttitle {
-    margin-top: 1.536rem;    }    /* :) V-Mobile top: 0.5 lineheight, bottom: 3/28 cols | This id was needed because <h2> couldn't hold margins because different margins are needed between post titles and About, etc pages, and <h2> would cascade to override either ids; id that holds margins for About, etc pages' is .extracontentpagetitle */
+    margin-top: 2.048rem;
+    /* margin-top: 1.536rem; */    }    /* :) V-Mobile top: 0.5 lineheight, bottom: 3/28 cols | This id was needed because <h2> couldn't hold margins because different margins are needed between post titles and About, etc pages, and <h2> would cascade to override either ids; id that holds margins for About, etc pages' is .extracontentpagetitle */
 
 .tag {
     padding: 0.6em 0.5em 0.5em 0.5em;    }    /* :) Finessing to be perfectly centered */
@@ -311,12 +312,12 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
 
 .archivemockmain {
     position: relative;
-    top: calc(1.6em + 0.672rem);
+    top: calc(1.1em + 0.672rem);    /* :) Making identical in height to sectionsummary = padding-top (0.6em) + padding-bottom (0.5em) + height of type (0.672rem) (had to set font-size in line above to match that of sectionsummary in text.css)) */
     max-width: 1610px;    /* FINALIZE This is is max width that allows menu icon (25px) to have 7.5px padding while hovered on, and beyond that, 30px margin all around (70px/col x 23 cols = 1610px); I can certainly set max width to less than this, but not more, without crowding menu icon so it's not centered in the outermost column. Alternatively, I could also make the very outside columns (only of desktop’s 21-column grid) wider %-wise (just enough to accommodate the glasses icon centering), and also adjusting the middle 19 columns of the grid to be narrower %-wise */
     width: 78.571vw;    /* :) V-Mobile 22/28 cols | Had to use vw instead of % here because it's already inside class .resultarea which sets a width that's wider than <main> for the results...for desktop/max-width size, maybe calculate the proper %-inside-of-% to get equivalent width, and apply here globally (I'm just not stopping to do that now) */
     margin: 0 auto;    }    /* :) .75 lh */
 
-#yearheaderplaceholder {
+#yearheaderplaceholder {    /* :) This is sort of a hack to get the year sections to have white space above them, since their margins weren't responding for some reason */
     /* background-color: blue; */    /* :) Keeping this commented out so I can turn it on again for future troubleshooting at other screensizes */
     z-index: -100;
     height: calc(1.1em + 0.672rem);    }    /* :) Making identical in height to sectionsummary = padding-top (0.6em) + padding-bottom (0.5em) + height of type (0.672rem) (had to set font-size in line above to match that of sectionsummary in text.css)) */
@@ -327,7 +328,7 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
 #librarysection {    /* :) Had to make a new section (24/28 col widths) that is wider than <main> to hold the margins of the library icons */
     overflow: auto;    /* :) This line and the next are to fix a broswer bug wherein this containing element thinks it is 0px tall because it only contains floated elements; see pp373-4 in HTML & CSS book */
     /* width: 100%; */    /* :) This line and the previous are to fix a broswer bug wherein this containing element thinks it is 0px tall because it only contains floated elements; see pp373-4 in HTML & CSS book; but commenting out the 100% width because I actually want a specific width, and it seems to be working anyway */
-    width: 85.74vw;    /* :) V-Mobile 24/28 cols | had to round up slightly from 85.714vw to get the icons to fit 3-across */
+    width: 85.77vw;    /* :) V-Mobile 24/28 cols | Had to round up slightly from 85.714vw to get the icons to fit 3-across */
     background-color: white;    
     margin: 7.143vw auto -3.571vw auto;     }    /* :) V-Mobile top: 2/28 cols, bottom: -1/28 cols | Trying to counteract other margins to make the space between library icon zone and above and below it match the space between library icons themselves */
 
@@ -406,7 +407,7 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
 /* RESULTS -------------------------------------------------- */
 
 #resultdate {
-    padding-top: .256rem;    /* :) V-Mobile .125 lh; this is the space between the date and it's top border */
+    padding-top: 0.256rem;    /* :) V-Mobile .125 lh; this is the space between the date and it's top border */
     margin: 1.536rem 0 0.512rem 0;    /* :) V-Mobile top: .75 lh, bottom: .25 lh */
     border-width: 1.14284vw;    }    /* :) This should dynamically match the weight of the line of the resultglasses below date, based on their width of 28.571vw (8/28 cols) and the ratio of the resultglasses width to their line weight of 25:1; */ 
 
