@@ -15,39 +15,43 @@
 
     <main>
 
-        <!-- title of the page + any intro text -->
-        <!-- NOT SURE IF THIS WILL STAY AS <h2> -->
-        <h2 class="extracontentpagetitle">
-            <?php echo $page->title()->kirbytext() ?>
-        </h2>
+        <div class="desktopcontent">
 
-        <!-- text for the page -->
-        <!-- NOT SURE IF THIS WILL STAY AS <p> -->
-        <span class="l-textface">
-            <?php echo $page->text()->kirbytext() ?>
-        </span>
+            <!-- title of the page + any intro text -->
+            <!-- NOT SURE IF THIS WILL STAY AS <h2> -->
+            <h2 class="extracontentpagetitle">
+                <?php echo $page->title()->kirbytext() ?>
+            </h2>
+
+            <!-- text for the page -->
+            <!-- NOT SURE IF THIS WILL STAY AS <p> -->
+            <span class="l-textface">
+                <?php echo $page->text()->kirbytext() ?>
+            </span>
 
 
 <!-- __________________________________________________________________________________ -->      
 
 <!-- ARCHIVE YEAR MENU -->
 
-        <p id="archivemenu" >
+            <p id="archivemenu" >
 
-        <?php $years = $page->years()
-                            ->toStructure()
-                            ->flip() ?>
+            <?php $years = $page->years()
+                                ->toStructure()
+                                ->flip() ?>
 
-        <?php foreach($years as $year): ?>
+            <?php foreach($years as $year): ?>
 
-        <!-- This holds together all the years on one line -->
-            <span>
+            <!-- This holds together all the years on one line -->
+                <span>
 
-                <!-- NOT SURE THAT THE YEAR MENU WILL STAY AS <h3> -->
-                <a href="<?php echo url('archive#' . $year) ?>" id="archivemenuyear" class="sectionsummary yellowhover">
-                    <?php echo $year ?></a></span><?php endforeach ?>
+                    <!-- NOT SURE THAT THE YEAR MENU WILL STAY AS <h3> -->
+                    <a href="<?php echo url('archive#' . $year) ?>" id="archivemenuyear" class="sectionsummary yellowhover">
+                        <?php echo $year ?></a></span><?php endforeach ?>
 
-        </p>
+            </p>
+
+        </div>
 
     </main>
 

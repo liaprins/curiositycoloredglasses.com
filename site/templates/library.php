@@ -23,19 +23,23 @@
 
     <main>
 
-        <!-- title of the page -->
-        <!-- NOT SURE IF THIS WILL END UP STAYING AS <h2> -->
-        <h2 class="extracontentpagetitle">
-            <?php echo $page->title()->kirbytext() ?>
-        </h2>
+        <div class="desktopcontent">
+
+            <!-- title of the page -->
+            <!-- NOT SURE IF THIS WILL END UP STAYING AS <h2> -->
+            <h2 class="extracontentpagetitle">
+                <?php echo $page->title()->kirbytext() ?>
+            </h2>
 
 
-        <!-- intro text for the page -->
-        <!-- NOT SURE IF THIS WILL STAY AS <p> -->
-        <span class="l-textface">
-            <?php echo $page->text()->kirbytext() ?>
-        </span>
+            <!-- intro text for the page -->
+            <!-- NOT SURE IF THIS WILL STAY AS <p> -->
+            <span class="l-textface">
+                <?php echo $page->text()->kirbytext() ?>
+            </span>
 
+        </div>
+    
     </main>
 
 

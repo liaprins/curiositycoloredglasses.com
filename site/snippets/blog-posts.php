@@ -5,7 +5,7 @@
                     ->flip() as $article): ?>
       
     <!-- KEEP "ARTICLE" FOR NOW FOR SEMANTIC PURPOSES -->
-    <article>
+    <article class="desktopcontent">
 
         <!-- I'm arranging the pieces by the mobile V design; CSS can re-arrange them; this is according to responsive design principles -->
 
@@ -51,18 +51,25 @@
         </p>
 
 
+
+
+        <div id="hometaggroup">
+
         <!-- foreach loop pulling in the tags for each article -->
         <?php foreach($article->tags()
                               ->split(',') as $tag): ?> 
 
         <!-- tags -->   
         <!-- using "$tag:" instead of "html($tag)" because the "\" from markdown text file will return as its own tag-->                   
-        <a href="<?php echo url('tag/tag:' . $tag)?>" id="hometag" class="s-textface tag yellowhover">
-            <!-- Adding the 2 x "no break spaces" (&nbsp) to act as L-padding (like for "Read more" button), because using actual padding-left measurements can separate the padding from the word if the word starts on a new line -->
-            <!-- &nbsp&nbsp -->     #<?php echo html($tag) ?>
-        </a>
+            <a href="<?php echo url('tag/tag:' . $tag)?>" id="hometag" class="s-textface tag yellowhover">
+                <!-- Adding the 2 x "no break spaces" (&nbsp) to act as L-padding (like for "Read more" button), because using actual padding-left measurements can separate the padding from the word if the word starts on a new line -->
+                <!-- &nbsp&nbsp -->     #<?php echo html($tag) ?>
+            </a>
         
         <?php endforeach ?>
+
+        </div>
+
 
 
 

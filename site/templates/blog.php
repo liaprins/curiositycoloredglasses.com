@@ -10,32 +10,23 @@
 <?php snippet('head-close') ?>
 
 
+<?php snippet('menu') ?>
 
 
-	<!-- !!!!!!!!!! TESTING COLUMNS 'test' !!!!!!!!!! -->
+<div id="blognametagline" class="mockmain">
+
+	<!-- website name + tagline, etc -->
+   	<?php snippet('blog-nametagline') ?>
+
+</div>
 
 
+<main>
 
+	<!-- foreach loop pulling in the articles: contains postglasses, title, date, tags, and intro -->
+    <?php snippet('blog-posts') ?>
 
-
-	<!-- I MOVED THE HOME GLASSES ICON INTO THE 'menu' SNIPPET SO CALLING IT NOW INSTEAD OF 'internal-menu' SNIPPET -->
-	<?php snippet('menu') ?>
-
-
-	<div id="blognametagline" class="mockmain">
-
-		<!-- website name + tagline, etc -->
-    	<?php snippet('blog-nametagline') ?>
-
-    </div>
-
-
-	<main>
-
-		<!-- foreach loop pulling in the articles: contains postglasses, title, date, tags, and intro -->
-    	<?php snippet('blog-posts') ?>
-
-	</main>
+</main>
 
 
 <?php snippet('footer') ?>

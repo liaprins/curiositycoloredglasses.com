@@ -1,12 +1,5 @@
 <!-- NOT SURE THAT THIS WILL STAY AS <p> -->
-<div id="posttext" class="m-textface hyphenation">
-
-
-
-	<!-- TESTING LINE LENGTH TO DETERMINE BREAKPOINTS FOR MEDIA QUERIES -->
-	<?php snippet('linelengthtest') ?>
-	
-
+<div id="posttext" class="m-textface hyphenation">	
 
 	<?php echo kirbytext($page->text()) ?>
 
@@ -15,22 +8,5 @@
 
     <!-- Tiny article end glasses -->
     <img src="<?php echo url('assets/images/home.svg') ?>" alt="" id="articleendglasses">
-
-
-
-
-
-
-    <details>
-
-    	<summary>Vocabulario</summary>
-
-    </details>
-
-
-
-
-
-
 
 </div>

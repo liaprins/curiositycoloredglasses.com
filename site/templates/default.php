@@ -14,15 +14,19 @@
 
     <main>
 
-        <!-- NOT SURE THAT THIS WILL STAY AS <h2> -->
-        <h2 class="extracontentpagetitle">
-            <?php echo $page->title()->html() ?>
-        </h2>
+        <div class="desktopcontent">
 
-        <!-- text for the page -->
-        <span class="l-textface">
-            <?php echo $page->text()->kirbytext() ?>
-        </span>
+            <!-- NOT SURE THAT THIS WILL STAY AS <h2> -->
+            <h2 class="extracontentpagetitle">
+                <?php echo $page->title()->html() ?>
+            </h2>
+
+            <!-- text for the page -->
+            <span class="l-textface">
+                <?php echo $page->text()->kirbytext() ?>
+            </span>
+
+        </div>
 
     </main>
 

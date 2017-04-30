@@ -6,7 +6,7 @@
     <details id="rrdetails" open>
 
         <!-- MIGHT NEED TO ADD IN A HALF-SPACE VIA UTF-8 ENCODED CHARACTER OR SOMETHING, BETWEEN <summary> AND "Relevant" -->
-        <summary class="sectionsummary blackbg" id="rrsectionheader"><h3>Relevant Reading
+        <summary class="sectionsummary postpagesectionsummary blackbg" id="rrsectionheader"><h3>Relevant Reading
             </h3>
         </summary>
 

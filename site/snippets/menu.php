@@ -19,7 +19,7 @@
         (Doesn't apply to home, since I call it above with just an icon) -->
         <a <?php e($p->isOpen(), ' class="active"') ?> href="<?php echo $p->url() ?>" >
 
-        	<li id="menuword" class="navnothome sectionsummary yellowhover">
+        	<li id="menuword" class="navnothome m-display yellowhover">
 
                 <?php echo $p->title()->html() ?>
 

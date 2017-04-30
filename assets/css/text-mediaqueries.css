@@ -1,0 +1,106 @@
+
+/* FINALIZE Breakpoints + text size -------------------------------------------------- */
+
+
+@media only screen and (min-width: 442px) {
+    h1 {
+        font-size: 4.786vw;    }
+    h2 {
+        font-size: 3.323vw;    }
+    .sectionsummary {
+        font-size: 2.769vw;    }
+    .m-display {
+        font-size: 2.308vw;    }
+    .s-display {
+        font-size: 1.855vw;    }
+    .xs-display {
+        font-size: 1.602vw;    }
+    h4, .xl-textface {
+        font-size: 4.072vw;    }
+    h5, .l-textface {
+        font-size: 3.394vw;    }
+    h6, .m-textface {
+        font-size: 2.828vw;    }
+    .s-textface {
+        font-size: 2.357vw;    }
+    .xs-textface {
+        font-size: 1.964vw;    }
+}
+
+@media only screen and (min-width: 650px) {
+    h1 {
+        font-size: 31.109px;    }
+    h2 {
+        font-size: 21.600px;    }
+    .sectionsummary {
+        font-size: 18.000px;    }
+    .m-display {
+        font-size: 15.002px;    }
+    .s-display {
+        font-size: 12.058px;    }
+    .xs-display {
+        font-size: 10.413px;    }
+    h4, .xl-textface {
+        font-size: 26.468px;    }
+    h5, .l-textface {
+        font-size: 22.061px;    }
+    h6, .m-textface {
+        font-size: 18.382px;    }
+    .s-textface {
+        font-size: 15.321px;    }
+    .xs-textface {
+        font-size: 12.766px;    }
+}
+
+@media only screen and (min-width: 1175px) {
+    h1 {
+        font-size: 2.648vw;    }
+    h2 {
+        font-size: 1.838vw;    }
+    .sectionsummary {
+        font-size: 1.532vw;    }
+    .m-display {
+        font-size: 1.277vw;    }
+    .s-display {
+        font-size: 1.026vw;    }
+    .xs-display {
+        font-size: 0.886vw;    }
+    h4, .xl-textface {
+        font-size: 2.253vw;    }
+    h5, .l-textface {
+        font-size: 1.878vw;    }
+    h6, .m-textface {
+        font-size: 1.564vw;    }
+    .s-textface {
+        font-size: 1.304vw;    }
+    .xs-textface {
+        font-size: 1.086vw;    }
+}
+
+@media only screen and (min-width: 1225px) {
+    h1 {
+        font-size: 32.438px;    }
+    h2 {
+        font-size: 22.516px;    }
+    .sectionsummary {
+        font-size: 18.767px;    }
+    .m-display {
+        font-size: 15.643px;    }
+    .s-display {
+        font-size: 12.569px;    }
+    .xs-display {
+        font-size: 10.854px;    }
+    h4, .xl-textface {
+        font-size: 27.599px;    }
+    h5, .l-textface {
+        font-size: 23.006px;    }
+    h6, .m-textface {
+        font-size: 19.159px;    }
+    .s-textface {
+        font-size: 15.974px;    }
+    .xs-textface {
+        font-size: 13.304px;    }
+}
+
+
+

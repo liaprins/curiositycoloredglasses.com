@@ -3,7 +3,7 @@
     <!-- NOT SURE IF THIS WILL STAY AS <h2> -->
     <details class="postsectiondetails" open>
 
-    	<summary class="sectionsummary blackbg"><h3>The Method to My Madness
+    	<summary class="sectionsummary postpagesectionsummary blackbg"><h3>The Method to My Madness
     		</h3>
    		</summary>
 

@@ -22,6 +22,7 @@
 
         <article class="mockmain" id="pre-rr">    <!-- opening first instance of <article> to make room for RR results that need to be wider than this width, to accommodate their all having margins on L + R -->
 
+            <div class="desktopcontent">
 
         <!-- I'm arranging the pieces of the intro part according to the mobile V design; CSS can re-arrange them; this is according to responsive design principles -->
         <!-- Also considering making this content into a snippet, so it can be re-used by blog.php
@@ -93,6 +94,8 @@
                 <!-- Process section of post -->
                 <?php snippet('blogarticle-process') ?>
 
+                </div>
+
             </article>    <!-- closing first instance of <article> to make room for RR results that need to be wider than this width, to accommodate their all having margins on L + R -->
 
 
@@ -104,6 +107,8 @@
 
             <article class="mockmain" id="post-rr">    <!-- opening second instance of <article> to make room for RR results that need to be wider than this width, to accommodate their all having margins on L + R -->
 
+                <div class="desktopcontent">
+
                 <!-- Comments via Disqus; trying out custom comments from Kirby instead for now, though -->
                 <!-- <?php snippet('disqus') ?> -->
 
@@ -113,6 +118,8 @@
                 <!-- IMPORTANT! This snippet lives in site/plugins/comments/snippets; that is where the plugin calls for it to be -->
                 <!-- I am keeping it there in case of future updates to comments I need to install -->
                 <?php snippet('comments') ?>
+
+                </div>
 
 
             </article>    <!-- opening second instance of <article> to make room for RR results that need to be wider than this width, to accommodate their all having margins on L + R -->

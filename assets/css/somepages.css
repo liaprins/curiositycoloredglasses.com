@@ -108,6 +108,9 @@ header {    /* :) Holds blog name  + tagline */
     width: 1.2em;    /* :) For V-Mobile this equates to 15px based on m-textface size of 12.5px, so if I want to maintain text size to articleendglasses size ratio, keep this relative em measurement */
     margin: 0 0 .15em .25em;    }    /* :) Finessing to be perfectly placed; since ems are relative to text size, these ratios should hold for all screen sizes and text sizes, if I also keep the icon sized via ems, like in above line */
 
+.postpagesectionsummary {
+    margin: 2.048rem 0;    }    /* :) V-Mobile top + bottom: 1 lh */
+
 .vocabwordinline {    /* :) This applies to just the inline vocab word, via vocab.php in the site/tags folder */
     padding: 0.6em 0.3em 0.5em 0.5em;    }    /* :) Based on line-height, but had to finesse optically, and pull in L + R a bit because it was too wide of a space between vocab word and other text inline */
 
@@ -315,7 +318,7 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
     top: calc(1.1em + 0.672rem);    /* :) Making identical in height to sectionsummary = padding-top (0.6em) + padding-bottom (0.5em) + height of type (0.672rem) (had to set font-size in line above to match that of sectionsummary in text.css)) */
     max-width: 1610px;    /* FINALIZE This is is max width that allows menu icon (25px) to have 7.5px padding while hovered on, and beyond that, 30px margin all around (70px/col x 23 cols = 1610px); I can certainly set max width to less than this, but not more, without crowding menu icon so it's not centered in the outermost column. Alternatively, I could also make the very outside columns (only of desktop’s 21-column grid) wider %-wise (just enough to accommodate the glasses icon centering), and also adjusting the middle 19 columns of the grid to be narrower %-wise */
     width: 78.571vw;    /* :) V-Mobile 22/28 cols | Had to use vw instead of % here because it's already inside class .resultarea which sets a width that's wider than <main> for the results...for desktop/max-width size, maybe calculate the proper %-inside-of-% to get equivalent width, and apply here globally (I'm just not stopping to do that now) */
-    margin: 0 auto;    }    /* :) .75 lh */
+    /* margin: 0 auto; */    }    /* :) .75 lh */
 
 #yearheaderplaceholder {    /* :) This is sort of a hack to get the year sections to have white space above them, since their margins weren't responding for some reason */
     /* background-color: blue; */    /* :) Keeping this commented out so I can turn it on again for future troubleshooting at other screensizes */

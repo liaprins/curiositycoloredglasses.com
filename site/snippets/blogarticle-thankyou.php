@@ -5,7 +5,7 @@
     
     <details class="postsectiondetails" open>
 
-    	<summary class="sectionsummary blackbg"><h3>Thank You!
+    	<summary class="sectionsummary postpagesectionsummary blackbg"><h3>Thank You!
     		</h3>
    		</summary>
 

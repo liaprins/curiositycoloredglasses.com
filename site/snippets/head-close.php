@@ -7,8 +7,9 @@
  	
  	<?php echo css('assets/css/fonts.css') ?>
  	<?php echo css('assets/css/globalnavfooter.css') ?> 
- 	<?php echo css('assets/css/text.css') ?>
  	<?php echo css('assets/css/somepages.css') ?>
+ 	<?php echo css('assets/css/text.css') ?>
+
 
  	<!-- When I get to media queries, this should be the default -->
  	<?php echo css('assets/css/menu-hamburger.css') ?>
@@ -21,6 +22,8 @@
 
  	<!-- Media queries -->
  	<?php echo css('assets/css/mediaqueries.css') ?>
+ 	<?php echo css('assets/css/text-mediaqueries.css') ?>
+
 
  	<!-- Pulling in the desktop menu styles as a media query on the file so it's esier to edit on its own -->
  	<link rel="stylesheet" href="assets/css/menu-desktop-cascade.css" media="only screen and (min-width: 1000px)">

@@ -1,0 +1,21 @@
+Vocabword: gravimeter
+
+----
+
+Pronunciation: /grəˈvɪm ɪ tər/
+
+----
+
+Audiopronunciation: gravimeter.mp3
+
+----
+
+Definition: an instrument for measuring variations in the gravitational field of the earth by detecting differences in weight of an object of constant mass at different points on the earth's surface
+
+----
+
+Illustration: gravimeter.jpg
+
+----
+
+Title: tall
