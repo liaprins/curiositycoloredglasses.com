@@ -6,9 +6,7 @@
         width: 60.714vw;    }    /* :) H-Mobile 17/28 cols | Making the menu 2/3 column-grids wide when open */
     #navsearchinput {    /* :) Adjusting length of nav search bar for the narrower menu */
         width: calc(46.429vw - 34px);    }    /* H-Mobile | This should be the width of the content area within the open hamburger menu (13/28 cols = 46.429vw) minus the width of the menu icon + its spacing between it and this input bar (15px + 7.5px = 22.5px) */
-    .postglasses {
-        width: 28.571vw;    } /* :) H-Mobile 8/28 cols */
-    .date {
+   .date {
         border-width: 1.143vw;    }    /* :) This should dynamically match the weight of the line of the postglasses below date, based on their width of 28.571vw (8/28 cols) and the ratio of the postglasses width to their line weight of 25:1; */ 
     figcaption {
         border-width: 1.143vw;    }    /* :) This should dynamically match the weight of the line of the postglasses below date, based on their width of 42.857vw (12/28 cols) and the ratio of the postglasses width to their line weight of 25:1; */ 
@@ -96,6 +94,33 @@
 
 
 
+/* Postglasses  -------------------------------------------------- */
+@media only screen and (min-width: 295px) {
+    .postglasses {
+        width: 126.289px;    }
+    .date, figcaption {
+        border-width: 5.052px;    }
+}
+
+/* Postglasses -------------------------------------------------- */
+@media only screen and (min-width: 442px) {
+    .postglasses {
+        width: 28.571vw;    } /* :) 8/28 cols */
+    .date, figcaption {
+        border-width: 1.143vw;    }
+}
+
+/* Postglasses -------------------------------------------------- */
+
+@media only screen and (min-width: 613px) {
+    .postglasses {
+        width: 175px;    }
+    .date, figcaption {
+        border-width: 7px;    }
+}
+
+
+
 /* Max content width 817px (content area matches max content area allowed with edgelings) -------------------------------------------------- */
 
 @media only screen and (min-width: 817px) {
@@ -108,9 +133,7 @@
         width: 641.929px;    }    /* :) 22/28 cols px equivalent at 817px screen width */
     #blognametagline {
         width: 641.929px;    }    /* :) 22/28 cols px equivalent at 817px screen width */
-    .postglasses {
-        width: 175.071px;    }    /* :) 6/28 cols px equivalent at 817px screen width */
-    .date {
+    .date, figcaption {
         width: 641.929px;    /* :) 22/28 cols px equivalent at 817px screen width */
         border-width: 7.003px;    }    /* :) 6/28 cols divided by 25 (ratio of postglasses' width to their line weight) px equivalent at 817px screen width */
     #postdate {
@@ -169,6 +192,8 @@
         top: 0;    /* :) This should match the height of the date text...DEPENDS ON TYPE SETTING FOR SCREEN SIZE! (1.3em) + padding between date and its border (0.512rem) + height of postglasses (width: height = 25:10, therefore height = 5.714vw) + spacing between date and postglasses (the margin set in this call applies) (4.762vw) + space between postglasses and post title (1.536rem) */
         width: 14.286vw;    /* :) 3/21 cols */
         border-width: 0.571vw;    }    /* :) This should dynamically match the weight of the line of the postglasses below date, based on their width of 42.857vw (12/28 cols) and the ratio of the postglasses width to their line weight of 25:1; */ 
+    figcaption {
+        border-width: 0.571vw;    }
     #hometaggroup {
         position: absolute;
         display: block;
@@ -249,6 +274,8 @@
         left: -233.333px;    /* :) 4/21 cols px equivalent at 1225px screen width */
         width: 175px;    /* :) 3/21 cols px equivalent at 1225px screen width */
         border-width: 7.003px;    }    /* :) 3/28 cols divided by 25 (ratio of postglasses' width to their line weight) px equivalent at 817px screen width */
+    figcaption {
+        border-width: 7.003px;    }
     #postdate {
         width: 175px;    }    /* :) 3/21 cols px equivalent at 1225px screen width */
     #hometaggroup {

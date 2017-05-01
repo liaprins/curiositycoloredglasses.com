@@ -89,7 +89,7 @@ h3 {    /* :) This is applied for semantic purposes to high-level "parts" of pos
 
 .xs-display {
     font-size: 7.083px;    /* :) Mobile-V based on 1.2 ratio (5:6, Minor Third) typescale with 8.5px base at level 0, and this at level -1 | Fallback for browser's not processing rems */
-    /* font-size: 0.443rem; */    /* !!!!! This should be the proper rem, but in Chrome it's rendering much larger than the px measurement */
+    font-size: 0.443rem;    /* !!!!! This should be the proper rem, but in Chrome it's rendering much larger than the px measurement */
     font-family: 'Grotesque_Bold', 'Courier_New', Courier, Monotype;
     text-transform: uppercase;
     letter-spacing: .25em;    }
