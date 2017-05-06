@@ -4,7 +4,9 @@
 
 @media only screen and (min-width: 442px) {
     html {
-        font-size: 3.620vw;    } 
+        font-size: 3.620vw;    }
+    .xs-display {
+        font-size: 0.443rem;    }
 }
 
 @media only screen and (min-width: 650px) {

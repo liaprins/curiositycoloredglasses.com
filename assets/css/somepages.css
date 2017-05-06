@@ -277,13 +277,6 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
     border-width: 1.71428vw;    /* :) This should dynamically match the weight of the line of the postglasses below date, based on their width of 42.857vw (12/28 cols) and the ratio of the postglasses width to their line weight of 25:1; */ 
     margin: 1.024rem 0 2.048rem 0;    }    /* :) V-Mobile top: .5 lh, bottom: .75 lh */
 
-/* POST + SEARCH + TAG PAGES -------------------------------------------------- */
-
-.resultarea {
-    /* width: 100%; */    /* :) This line and the previous are to fix a broswer bug wherein this containing element thinks it is 0px tall because it only contains floated elements; see pp373-4 in HTML & CSS book; but commenting out the 100% width because I actually want a specific width, and it seems to be working anyway */
-    width:  78.571%;    /* :) V-Mobile 24/28 cols | Establishing a separate div so I can make it wider in screens with more than one result wide to accommodate margins I need to put on both L + R sides of all results so they have proper spacing between each other, but don't look like they're extending past the page margins */
-    margin: 0 auto;    }
-
 
 /* ABOUT PAGE -------------------------------------------------- */
 
@@ -408,6 +401,11 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
  
 
 /* RESULTS -------------------------------------------------- */
+
+.resultarea {
+    /* width: 100%; */    /* :) This line is to fix a broswer bug wherein this containing element thinks it is 0px tall because it only contains floated elements; see pp373-4 in HTML & CSS book; but commenting out the 100% width because I actually want a specific width, and it seems to be working anyway */
+    width:  78.571%;    /* :) V-Mobile 24/28 cols | Establishing a separate div so I can make it wider in screens with more than one result wide to accommodate margins I need to put on both L + R sides of all results so they have proper spacing between each other, but don't look like they're extending past the page margins */
+    margin: 0 auto;    }
 
 #resultdate {
     padding-top: 0.256rem;    /* :) V-Mobile .125 lh; this is the space between the date and it's top border */

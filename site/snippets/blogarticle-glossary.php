@@ -1,5 +1,5 @@
 <!-- adding <aside> for semantic reasons, and to hold together all the vocab definitions -->
-<section>
+<section id="glossarysection">
 
 <!-- ADDED THESE TWO LINES SO THAT THE GLOSSARY HEADING ONLY APPEARS IF THERE ARE VOCAB WORDS -->
 
@@ -12,6 +12,7 @@
         <summary class="sectionsummary postpagesectionsummary blackbg"><h3>Glossary
             </h3>
         </summary>
+
 
         <!-- <dl> = "definition list"; using it for semantic purposes -->
         <dl>
@@ -26,6 +27,9 @@
             <?php $vocabwordurl = $subpage->uid(); ?>                 
 
             <?php $thisurl = thisUrl(); ?> 
+
+
+            <div id="vocabwordanddefinition">
 
             <!-- <dt> = the name within the <dl> (parent) name-value pair  -->
             <dt id="glossaryvocabwordandaudio">
@@ -51,13 +55,6 @@
             <!-- <dd> = the value (definition) within the <dl> (parent) name-value pair  -->
             <dd id="definitionandillustration">
 
-                <!-- text pronunciation (optional) -->
-                <!--
-                <p class="xs-textface">
-                    <?php echo html($subpage->pronunciation()) ?>
-                </p>
-                -->
-
 
                 <!-- definition (required) appended with up arrow, to take user back to word in context -->
                 <?php if(!$subpage->definition()->empty()): ?>
@@ -79,9 +76,13 @@
             </dd>
 
 
+            </div>
+
+
             <?php endforeach ?> 
 
         </dl>
+
 
     </details>
 

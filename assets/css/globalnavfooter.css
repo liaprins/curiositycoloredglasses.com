@@ -93,7 +93,7 @@ footer {
     padding: 10.714vw 0;    }    /* :) V-Mobile 3/28 cols to pad top and bottom of yellow BG */
 
 #footercontent {    /* :) Matching 'main' tag for center content column width and centering */
-    max-width: 16100px;    /* FINALIZE Match whatever 'main' turns out to be */   
+    max-width: 1610px;    /* FINALIZE Match whatever 'main' turns out to be */   
     width: 78.571%;    /* :) V-Mobile 22/28 cols | Use % here instead of vw because they can be used inside the max-width */
     margin: 0 auto;    }
 
@@ -104,9 +104,11 @@ footer {
     border-color: black;
     color: black;    /* :) This is just for user's input text; does not apply to placeholder text */
     background-color: transparent;   /* :) This would be default, but <body> sets all BG to white */
-    height: 30px;
+    /* height: 30px; */
+    height: 1.875rem;    
     width: 78.571vw;    /* :) V-Mobile 22/28 cols to match 'main' */
-    padding: 1px 7px 0 7px;    }    /* :) Finessing to be perfect */   
+    /* padding: 1px 7px 0 7px; */    /* :) Finessing to be perfect */   
+    padding: 0.033rem 0.233rem 0 0.467rem;    }    /* :) Finessing to be perfect */   
 
 #mce-EMAIL::-webkit-input-placeholder {    /* :) This id applies to just the subscribe input field; this is to target the placeholder text; not accepted by FF */
    color: #686b31;   }    /* This color is to make the placeholder text in Chrome look multiplied (because I can't get it to actually!) */
@@ -116,8 +118,10 @@ footer {
     border: solid;
     border-width: 2px;
     border-color: black;    
-    padding: 2px 7.5px 0 7.5px;    /* :) Finessing to be perfectly centered */
-    height: 30px;    }
+    /* padding: 2px 7.5px 0 7.5px; */    /* :) Finessing to be perfectly centered */
+    padding: 0.125rem 0.469rem 0 0.469rem;
+    /* height: 30px; */
+    height: 1.875rem;    }
 .boxbutton:hover {
     color: black;    }
 

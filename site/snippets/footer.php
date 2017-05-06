@@ -8,7 +8,6 @@
 				<!-- subscribe to go here -->
     			<?php snippet('subscribe') ?>
 
-
 				<!-- link to my instagram profile + other ways to follow in future -->
 				<?php snippet('follow') ?>
 

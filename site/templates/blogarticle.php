@@ -69,7 +69,7 @@
             <!-- sharing for this post -->
             <?php snippet('blogarticle-share') ?>
 
-            </div>
+            </div>    <!-- Closing id="posttagshare" -->
 
 
 
@@ -77,8 +77,6 @@
             <?php snippet('blogarticle-text') ?>
 
 
-
-            <aside>
 
                 <!-- gloassary of all vocab words; listed after the main text -->
                 <?php snippet('blogarticle-glossary') ?>
@@ -94,7 +92,7 @@
                 <!-- Process section of post -->
                 <?php snippet('blogarticle-process') ?>
 
-                </div>
+                </div>    <!-- Closing class="desktopcontent" -->
 
             </article>    <!-- closing first instance of <article> to make room for RR results that need to be wider than this width, to accommodate their all having margins on L + R -->
 
@@ -122,13 +120,10 @@
                 </div>
 
 
-            </article>    <!-- opening second instance of <article> to make room for RR results that need to be wider than this width, to accommodate their all having margins on L + R -->
+            </article>    <!-- closing second instance of <article> to make room for RR results that need to be wider than this width, to accommodate their all having margins on L + R -->
 
 
-            </aside>
-
-
-        </article>
+        </article>    <!-- closing first instance of <article> -->
 
 
     <?php snippet('footer') ?>

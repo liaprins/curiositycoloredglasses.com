@@ -2,26 +2,26 @@
 /* CHANGE ALL TO REMS! */
 
 #homeicon {
-    width: 1.407rem;    /**/
-    padding: 0.140rem 0.422rem 0.140rem 0;    /**/
-    margin-bottom: 1.407rem;    }    /**/
+    width: 1.563rem;
+    padding: 0.156rem 0.469rem 0.156rem 0;
+    margin-bottom: 1.536rem;    }
 
 #navsearchbutton {    /* :) This refers to the button element holding the image */
-    height: 1.519rem;    /**/ /* :) For some reason for search icons/buttons, I had to put the padding on the button and account for its size to fit the img perfectly inside; if I tried to use box-sizing:content-box and put the padding on the img, it raised up the icon and couldn't figure out how to get it level except this method */
-    padding: 0.422rem;    }    /**/
+    height: 1.875rem;    /* :) For some reason for search icons/buttons, I had to put the padding on the button and account for its size to fit the img perfectly inside; if I tried to use box-sizing:content-box and put the padding on the img, it raised up the icon and couldn't figure out how to get it level except this method */
+    padding: 0.469rem;    }
 #navsearchicon {    /* :) This refers to just the magnifier SVG image */
     display: inline;
-    height: 0.844rem;    }    /**/
+    height: 0.938rem;    }
 
 #searchpagebutton {
-    height: 0.844rem;    /**/
-    padding: 0.422rem;    }    /**/
+    height: 0.938rem;
+    padding: 0.469rem;    }
 #searchpageicon {
-    height: 0.844rem;    }    /**/
+    height: 0.938rem;    }
 
 .socialicon {    /* :) This applies to both share (post page) and follow icons (footer) */
-    height: 0.844rem;    /**/
-    padding: 0.422rem;    }    /**/
+    height: 0.938rem;
+    padding: 0.469rem;    }
 
 
 /* SHOULD I CHANGE TO REM (INSTEAD OF EM) (...OR VICE VERSA....) FOR THE BELOW THREE SELECTORS vvv TO MATCH OTHER ICONS? WORKING FINE AS EM THOUGH, SINCE DEPENDENT ON TEXT NEXT TO IT */
@@ -31,33 +31,32 @@
     /* margin: 0 0 .15em .25em; */    }    /* :) Finessing to be perfectly placed; since ems are relative to text size, these ratios should hold for all screen sizes and text sizes, if I also keep the icon sized via ems, like in above line */
 
 #audioicon { 
-    height: 0.703rem;    /**/    /* :) Had to make smaller than usual 15px for icons to help it fit inline with potentially long phrases that wrap to next line, otherwise it would affect the text line-height */
+    height: 0.781rem;    /* :) Had to make smaller than usual 15px for icons to help it fit inline with potentially long phrases that wrap to next line, otherwise it would affect the text line-height */
     /* padding: 0.25em; */    /* :) Would be 7.5px like other icons, but has to fit inline (see above line explanation ^^^), and this way it should be relative to the line height */
     /* margin-top: -.1em; */    }    /* :) This is to finesse the vertical centering */
 
 #uparrow {
-    height: 0.694rem;    /**/ /* :) Had to make smaller than usual 15px for icons to help it fit inline with potentially long phrases that wrap to next line, otherwise it would affect the text line-height */
+    height: 0.625rem;    /* :) Had to make smaller than usual 15px for icons to help it fit inline with potentially long phrases that wrap to next line, otherwise it would affect the text line-height */
     /* padding: 0.3em; */    /* :) Would be 7.5px like other icons, but has to fit inline (see above line explanation ^^^), and this way it should be relative to the line height */
     /* margin: -.35em 0 0 .25em; */    }    /* :) This is to finesse the vertical centering */
 
 /* SHOULD I CHANGE TO REM (INSTEAD OF EM) (...OR VICE VERSA....) FOR THE ABOVE THREE SELECTORS ^^^ TO MATCH OTHER ICONS? WORKING FINE AS EM THOUGH, SINCE DEPENDENT ON TEXT NEXT TO IT */
 
 #navsummary {    /* :) Hamburger icon/button */
-    height: 0.844rem;    /**/
-    width: 0.957rem;    /**/    /* :) This is needed or else it will have width of 0 */
-    border-width: 0 0 0.422rem 0.422rem;    }    /**/
+    height: 0.938rem;
+    width: 1.063rem;    /* :) This is needed or else it will have width of 0 */
+    border-width: 0 0 0.469rem 0.469rem;    }
 
 #navdetails[open] #navsummary {    /* :) Menu "x" icon/button */
-    height: 0.844rem;
-    width: 0.844rem;
-    border-width: 0 0 0.422rem 0.422rem;    } /**/
+    height: 0.938rem;
+    border-width: 0 0 0.469rem 0.469rem;    }
 
 #postacommentdetails[open] summary {    /* :) Post a comment's "x" icon/button */
-    height: 1.519rem;    /**/
-    width: 1.519rem;    }    /**/ /* :) Width is needed in addition to height or the img will collapse to be too narrow*/
+    height: 1.875rem;
+    width: 1.875rem;    }    /* :) Width is needed in addition to height or the img will collapse to be too narrow*/
 
 #backarrow {    /* :) This is just here in case I put the HTML for it back in! */
-    padding: 0.422rem;    /**/ /* :) All icons should have 7.5px padding for yellow hover state */
-    width: 1.407rem;    }    /**/  
+    padding: 0.469rem;    /* :) All icons should have 7.5px padding for yellow hover state */
+    width: 1.563rem;    }   
 
 

@@ -13,7 +13,9 @@ nav {
 #navdetails {
     float: right;    /* Pushes the group as a whole to the right */
     position: absolute;
-    left: 0;
+    /* left: 0; */
+    top: 20px;
+    right: 20px;
     padding: 0;    }
 
 #navdetails[open] {

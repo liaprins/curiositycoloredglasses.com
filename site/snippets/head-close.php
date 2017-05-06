@@ -35,7 +35,7 @@
 
 
  	<!-- Pulling in the desktop menu styles as a media query on the file so it's esier to edit on its own -->
- 	<link rel="stylesheet" href="assets/css/menu-desktop-cascade.css" media="only screen and (min-width: 1000px)">
+ 	<link rel="stylesheet" href="assets/css/menu-desktop-cascade.css" media="only screen and (min-width: 1175px)">
 
 
 
