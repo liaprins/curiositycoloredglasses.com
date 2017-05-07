@@ -6,21 +6,32 @@
     #navdetails[open] {
         width: calc(189.310px + 21.429vw);    }    /* :) 19/28 cols in px equivalent at 272px screenwidth for content + 6/28 cols for padding */
     #navsearchinput {
-        width: 165px;    }    /* :) Closest I can get length to be to push out search icon without it going to next line */
+        width: 164px;    }    /* :) Closest I can get length to be to push out search icon without it going to next line */
 }
 
 /* Switching to 2-col margins and accounting for text growing instead of staying static */
 @media only screen and (min-width: 442px) {
     #navdetails[open] {
         padding: 7.143vw;
-        width: calc(15.527rem + 4px);    }    /* :) Height of menu when open: width needs to be this so it can match */
+        width: calc(57.113vw * 0.996);
+        /* width: calc(42.827vw + 14.286vw); */
+        /* width: calc(41.922vw + 14.286vw); */
+        /* width: calc(15.527rem + 4px); */    }    /* :) Height of menu when open: width needs to be this so it can match */
     #navsearchinput {
-        width: calc(15.527rem - 1.375rem - 14.286vw);    }    /* :) Closest I can get length to be to push out search icon without it going to next line */
+        width: calc(15.527rem - 1.4rem - 14.286vw);    }    /* :) Closest I can get length to be to push out search icon without it going to next line */
+}
+
+@media only screen and (min-width: 650px) {
+    #navdetails[open] {    
+        width: calc(274.129px + 14.286vw);    }    /* :) Height of menu when open: width needs to be this so it can match */
+    #navsearchinput {
+        width: 238px;    }    /* :) Closest I can get length to be to push out search icon without it going to next line */
 }
 
 @media only screen and (min-width: 817px) {
-    #navsearchinput {
-        width: calc(15.527rem - 1.37rem - 116.714px);    }    /* :) Closest I can get length to be to push out search icon without it going to next line */
+   #navdetails[open] {    
+        padding: 58.357px;
+        width: calc(274.129px + 116.714px);    }    /* :) Height of menu when open: width needs to be this so it can match */    
 }
 
 
@@ -361,8 +372,6 @@
     .archivemockmain {
         margin-left: 29.179px;     /* :) 1/28 cols (1/42) px equivalent at 817px screen width | For some reason, needs to be pushed over half a column*/
         width: 641.929px;    }    /* :) 22/28 cols px equivalent at 817px screen width */
-    #navdetails[open] {
-            padding: 58.357px;    }
     #blognametagline {
         width: 641.929px;    }    /* :) 22/28 cols px equivalent at 817px screen width */
     .date, figcaption {
