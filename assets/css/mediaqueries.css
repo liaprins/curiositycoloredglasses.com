@@ -1,30 +1,62 @@
-/*
-@media only screen and (min-width: 375px) {
-     #navdetails[open] {
-        padding: 7.143vw;
-        width: 60.714vw;    }
+
+/* YELLOW OPEN MENU -------------------------------------------------- */
+
+/* When it gets to perfect square width, making it hold*/
+@media only screen and (min-width: 276px) {
+    #navdetails[open] {
+        width: calc(189.310px + 21.429vw);    }    /* :) 19/28 cols in px equivalent at 272px screenwidth for content + 6/28 cols for padding */
     #navsearchinput {
-        width: calc(46.429vw - 34px);    }
-   .date {
-        border-width: 1.143vw;    }
-    figcaption {
-        border-width: 1.143vw;    }
-    #noresultmessage {
-        max-width: 1610px;    
-        width:  78.571%;    }    
-    #mce-EMAIL {    
-        float: left;
-        margin-bottom: -0.2rem;
-        width: calc(78.571vw - 85px);    }
-    .subscribebutton {
-        margin: 0 0 0.9375rem 0;
-        width: 85px;   }
-    #searchpageform {
-        margin-bottom: -0.512rem;    }    
-    #tagpagename {
-            margin-bottom: -0.0256rem;    }    
+        width: 165px;    }    /* :) Closest I can get length to be to push out search icon without it going to next line */
 }
+
+/* Switching to 2-col margins and accounting for text growing instead of staying static */
+@media only screen and (min-width: 442px) {
+    #navdetails[open] {
+        padding: 7.143vw;
+        width: calc(15.527rem + 4px);    }    /* :) Height of menu when open: width needs to be this so it can match */
+    #navsearchinput {
+        width: calc(15.527rem - 1.375rem - 14.286vw);    }    /* :) Closest I can get length to be to push out search icon without it going to next line */
+}
+
+@media only screen and (min-width: 817px) {
+    #navsearchinput {
+        width: calc(15.527rem - 1.37rem - 116.714px);    }    /* :) Closest I can get length to be to push out search icon without it going to next line */
+}
+
+
+
+
+
+/* HAMBURGER ICON LOCATION -------------------------------------------------- */
+
+@media only screen and (min-width: 442px) {
+    #navsummary {
+        position: absolute;
+        right: calc(5.357vw - 0.4785rem);
+        top: calc(5.357vw - 0.4785rem);    }
+    #navdetails[open] #navsummary {    /* :) This is just the "x" button */
+        position: absolute;
+        right: 7.143vw;
+        top: 7.143vw;    }
+}
+
+@media only screen and (min-width: 817px) {
+    #navdetails[open] #navsummary {    /* :) This is just the "x" button */
+        position: absolute;
+        right: 58.357px;
+        top: 58.357px;    }
+}
+
+/*
+@media only screen and (min-width: 817px) {
+    #navsummary {
+        position: absolute;
+        right: 31.268px;
+        top: 32.768px;    }
+    #navdetails[open] #navsummary {    }
+} 
 */
+
 
 
 /* TAGLINE(customizing line breaks) -------------------------------------------------- */
@@ -57,10 +89,10 @@
 @media only screen and (min-width: 442px) {    /* :) This is for the point after which the width is wide enough that the subscribe message only has to be one line, making footer a shorter height, also lumping in the menu switching to 1/3 screenwidth at this breakpoint */
     body {
         padding-bottom: calc(32.143vw + 73px + 2.998rem);    }
-    #navdetails[open] {    /* :) The style for just when the menu is open */
-        width: 50vw;    }    /* :) H-Mobile 19/28 cols | Making the menu 1/2 column-grids wide when open */
-    #navsearchinput {    /* :) Adjusting length of nav search bar for the narrower menu */
-        width: calc(35.714vw - 34px);    }    /* H-Mobile | This should be the width of the content area within the open hamburger menu (10/28 cols = 35.714vw) minus the width of the menu icon + its spacing between it and this input bar (15px + 7.5px = 22.5px) */
+    /* #navdetails[open] {
+        width: 50vw;    } 
+    #navsearchinput {    
+        width: calc(35.714vw - 34px);    } */
     footer {
         padding: 7.143vw 0;    }    /* :) V-Mobile 3/28 cols to pad top and bottom of yellow BG */
     .subscribebutton {
@@ -114,18 +146,6 @@
         width: 641.667px;    }    /* :) 11/21 cols px equivalent at 1225 px */
     #follow {
         left: calc(50%);    }    /* TBD */
-}
-
-
-
-/* HAMBURGER ICON LOCATION -------------------------------------------------- */
-
-@media only screen and (min-width: 817px) {
-    #navsummary {
-        position: absolute;
-        right: 31.268px;
-        top: 32.768px;    }
-    #navdetails[open] #navsummary {    }    /* :) This is just the "x" button */
 }
 
 
@@ -342,7 +362,7 @@
         margin-left: 29.179px;     /* :) 1/28 cols (1/42) px equivalent at 817px screen width | For some reason, needs to be pushed over half a column*/
         width: 641.929px;    }    /* :) 22/28 cols px equivalent at 817px screen width */
     #navdetails[open] {
-            padding: 58.357px;    }    /* :) V-Mobile top + right 3/28 cols | Aligning the edge of the hamburger icon with right edge of the blog title for Mobile V; also sets the vertical position of the hamburger icon to 3/28 cols down from top of screen; can't set the padding all the way around when closed because it interferes with Archive's year menu being able to be clicked on (the menu padding "covers" it) */
+            padding: 58.357px;    }
     #blognametagline {
         width: 641.929px;    }    /* :) 22/28 cols px equivalent at 817px screen width */
     .date, figcaption {

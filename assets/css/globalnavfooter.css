@@ -68,7 +68,7 @@ main {    /* :) This is for all content except nav and footer on all pages; "con
 
 #navsearchinput {
     padding: 0 0 4px 0;    /* :) Finessed the space between input word and underline bar to match space between input and bottom of field for subscribe + comment name fields */
-    width: calc(67.857vw - 34px);    }    /* V-Mobile | This should be the width of the content area within the open hamburger menu (19/28 cols = 67.857vw) minus the width of the menu icon + its spacing between it and this input bar (15px + 7.5px = 22.5px) */
+    width: calc(67.857vw - 1.6rem);    }    /* V-Mobile | This should be the width of the content area within the open hamburger menu (19/28 cols = 67.857vw) minus the width of the menu icon + its spacing between it and this input bar (15px + 7.5px = 22.5px) */
 
 #navsearchinput::-webkit-input-placeholder {    /* :) This is to make the placeholder text in Chrome look multiplied (because I can't get it to actually!) */
    color: #686b31;    }    

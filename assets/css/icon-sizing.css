@@ -3,12 +3,12 @@
 
 #homeicon {
     width: 1.407rem;    /**/
-    padding: 0.140rem 0.422rem 0.140rem 0;    /**/
+    padding-bottom: 0.422rem;    /**/
     margin-bottom: 1.407rem;    }    /**/
 
 #navsearchbutton {    /* :) This refers to the button element holding the image */
-    height: 1.519rem;    /**/ /* :) For some reason for search icons/buttons, I had to put the padding on the button and account for its size to fit the img perfectly inside; if I tried to use box-sizing:content-box and put the padding on the img, it raised up the icon and couldn't figure out how to get it level except this method */
-    padding: 0.422rem;    }    /**/
+    height: 1.688rem;    /* :) For some reason for search icons/buttons, I had to put the padding on the button and account for its size to fit the img perfectly inside; if I tried to use box-sizing:content-box and put the padding on the img, it raised up the icon and couldn't figure out how to get it level except this method */
+    padding: 0.422rem 0 0.422rem 0.422rem;    }    /**/
 #navsearchicon {    /* :) This refers to just the magnifier SVG image */
     display: inline;
     height: 0.844rem;    }    /**/
@@ -50,6 +50,7 @@
 #navdetails[open] #navsummary {    /* :) Menu "x" icon/button */
     height: 0.844rem;
     width: 0.844rem;
+    /* width: 0.844rem; */
     border-width: 0 0 0.422rem 0.422rem;    } /**/
 
 #postacommentdetails[open] summary {    /* :) Post a comment's "x" icon/button */
