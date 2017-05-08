@@ -1,4 +1,50 @@
 
+/* FOOTER HEIGHT (set by body's bottom padding -------------------------------------------------- */
+
+@media only screen and (min-width: 408px) {
+    body {
+        padding-bottom: calc(32.142vw + 9.156rem + 0.297rem);    }
+}
+
+@media only screen and (min-width: 442px) {
+    footer {
+        padding: 7.143vw 0;    /* :) V-Mobile 3/28 cols to pad top and bottom of yellow BG */
+        margin-top: 7.143vw;    }
+    body {
+        padding-bottom: calc(21.429vw + 5.203rem + 0.297rem);    }
+}
+
+@media only screen and (min-width: 783px) {
+    body {
+        padding-bottom: calc(21.429vw + 3.6315rem + 0.297rem);    }
+}
+
+@media only screen and (min-width: 817px) {
+    footer {
+        padding: 58.357px 0;    /* :) V-Mobile 3/28 cols to pad top and bottom of yellow BG */
+        margin-top: 58.357px;    }
+    body {
+        padding-bottom: calc(175.071px + 3.6315rem + 0.297rem);    }
+}
+
+@media only screen and (min-width: 1175px) {
+    footer {
+        padding: 4.762vw 0;    /* :) V-Mobile 3/28 cols to pad top and bottom of yellow BG */
+        margin-top: 4.762vw;    }
+    body {
+        padding-bottom: calc(14.286vw + 3.6315rem + 0.297rem);    }
+}
+
+@media only screen and (min-width: 1225px) {
+    footer {
+        padding: 58.333px 0;    /* :) V-Mobile 3/28 cols to pad top and bottom of yellow BG */
+        margin-top: 58.333px;    }
+    body {
+        padding-bottom: calc(175px + 3.6315rem + 0.297rem);    }
+}
+
+
+
 /* YELLOW OPEN MENU -------------------------------------------------- */
 
 /* When it gets to perfect square width, making it hold*/
@@ -36,8 +82,6 @@
 
 
 
-
-
 /* HAMBURGER ICON LOCATION -------------------------------------------------- */
 
 @media only screen and (min-width: 442px) {
@@ -49,13 +93,35 @@
         position: absolute;
         right: 7.143vw;
         top: 7.143vw;    }
+    #postdate {
+        width: 78.571vw;    }
+    #searchpageinput {
+        width: calc(78.571vw - 1.955rem);    }    /* :) V-Mobile This should be [the width of <main> (22/28 cols = 78.571vw)[] minus [the width of magnifier icon + its padding + the width of menu icon + the space between them (30px + 17px + 15px = 62px)] */
 }
 
 @media only screen and (min-width: 817px) {
+    #navsummary {
+        position: absolute;
+        right: calc(43.768px - 0.4785rem);
+        top: calc(43.768px - 0.4785rem);    }
     #navdetails[open] #navsummary {    /* :) This is just the "x" button */
         position: absolute;
         right: 58.357px;
         top: 58.357px;    }
+    #postdate {
+        width: 641.929px;    }
+    #searchpageinput {
+        width: calc(641.929px - 1.94rem);    }    /* :) V-Mobile This should be [the width of <main> (22/28 cols = 78.571vw)[] minus [the width of magnifier icon + its padding + the width of menu icon + the space between them (30px + 17px + 15px = 62px)] */
+}
+
+@media only screen and (min-width: 1175px) {
+    #searchpageinput {
+        width: calc(52.381vw - 1.94rem);    }    /* :) V-Mobile This should be [the width of <main> (22/28 cols = 78.571vw)[] minus [the width of magnifier icon + its padding + the width of menu icon + the space between them (30px + 17px + 15px = 62px)] */
+}
+
+@media only screen and (min-width: 1225px) {
+    #searchpageinput {
+        width: calc(641.667px - 1.94rem);    }    /* :) V-Mobile This should be [the width of <main> (22/28 cols = 78.571vw)[] minus [the width of magnifier icon + its padding + the width of menu icon + the space between them (30px + 17px + 15px = 62px)] */
 }
 
 /*
@@ -70,7 +136,7 @@
 
 
 
-/* TAGLINE(customizing line breaks) -------------------------------------------------- */
+/* TAGLINE (customizing line breaks) -------------------------------------------------- */
 
 @media only screen and (min-width: 268px) {
     .taglinehalf {
@@ -98,65 +164,81 @@
 
 /* Subscribe input field + button on same line  */
 @media only screen and (min-width: 442px) {    /* :) This is for the point after which the width is wide enough that the subscribe message only has to be one line, making footer a shorter height, also lumping in the menu switching to 1/3 screenwidth at this breakpoint */
-    body {
-        padding-bottom: calc(32.143vw + 73px + 2.998rem);    }
-    /* #navdetails[open] {
-        width: 50vw;    } 
-    #navsearchinput {    
-        width: calc(35.714vw - 34px);    } */
-    footer {
-        padding: 7.143vw 0;    }    /* :) V-Mobile 3/28 cols to pad top and bottom of yellow BG */
-    .subscribebutton {
-        width: 5.3125rem;    }
-    #mce-EMAIL {    /* :) Making subscribe input field 2/3 */
-        width: calc(78.571vw - 5.3125rem);    } 
-}
-
-/* Fixing small vertical offset between "Subscribe" button and input field, starts at this screenwidth */
-@media only screen and (min-width: 521px) {
     .subscribebutton {
         position: relative;
-        top: -1px;    }
+        top: -1px;
+        margin-top: 0;
+        width: 5.3125rem;    }
+    #mce-EMAIL {    /* :) Making subscribe input field 2/3 */
+        float: left;
+        width: calc(78.571vw - 5.3125rem);    }
 }
 
 /* Subscribe + follow on same line */
 @media only screen and (min-width: 783px) {    /* :) This is the content-width equivalent of 1175px screenwidth's content width */
-    body {
-        padding-bottom: calc(21.429vw + 28px + 2.998rem);    }    /* :)  H-Mobile | (margin between main's lowest content and footer (2/28 cols = 7.143vw) + footer's top-padding (2/28 cols = 7.143vw) + footer's bottom padding (2/28 cols = 7.143vw) = 6/28 cols = 21.429vw) + (subscribe input field's height (30px) + margin between input and button (15px) + subscribe button's height (30px) + follow icons' height including padding (30px) = 115px) + (margin between subscribe message and follow icons (0.5 lineheights = 1.024rem) + 2 lines of subscribe message in size xs-textface at 1.6 line height ratio (2 * 0.617rem * 1.6) = 1.9744rem + 1.024rem = 2.998rem) */
     #mce-EMAIL {    /* :) Making subscribe input field account for the "follow" links */
         float: left;
-        width: calc(641.929px - 5.3125rem - 183.36px);    }    /* :) [Full width of content area at 817px screenwidth (22/28 cols = 641.929px)] minus [width of subscribe button 5.3125rem] minus [total width of follow icons + liaprins.com (203.36px) and its left padding (92px) */
+        width: calc(78.571vw - 5.3125rem - 8.32rem - 0.422rem);    }    /* :) [Full width of content area at 817px screenwidth (22/28 cols = 641.929px)] minus [width of subscribe button 5.3125rem] minus [total width of follow icons + liaprins.com (203.36px) and its left padding (92px) */
     #follow {
         position: absolute;
         top: 7.143vw;
-        left: calc(50%);    }    /* TBD */
+        left: calc(50% + 39.286vw - 8.32rem);    }
     #footercontent {
         width: 78.571vw;    }    /* :) 22/28 cols */
+    #subscribemessage {
+        margin-bottom: 0;
+    }
 }
 
 @media only screen and (min-width: 817px) {
     #mce-EMAIL {    /* :) Making subscribe input field account for the "follow" links */
-        width: calc(641.929px - 5.3125rem - 183.36px);    }    /* :) [Full width of content area at 817px screenwidth (22/28 cols = 641.929px)] minus [width of subscribe button 5.3125rem] minus [total width of follow icons + liaprins.com (203.36px) and its left padding (92px) */
+        width: calc(641.929px - 5.3125rem - 8.32rem - 0.422rem);    }    /* :) [Full width of content area at 817px screenwidth (22/28 cols = 641.929px)] minus [width of subscribe button 5.3125rem] minus [total width of follow icons + liaprins.com (203.36px) and its left padding (92px) */
     #follow {
-        left: calc(50%);    }    /* TBD */
+        top: 58.357px;
+        left: calc(50% + 320.964px - 8.32rem);    }
     #footercontent {
         width: 641.929px;    }    /* :) 22/28 cols px equivalent at 817px screenwidth */
 }
 
 @media only screen and (min-width: 1175px) {
     #mce-EMAIL {    /* :) Making subscribe input field account for the "follow" links */
-        width: calc(641.929px - 5.3125rem - 183.36px);    }    /* :) [Full width of content area at 817px screenwidth (22/28 cols = 641.929px)] minus [width of subscribe button 5.3125rem] minus [total width of follow icons + liaprins.com (203.36px) and its left padding (92px) */
-    #footercontent {
-        width: 52.381vw;    }    /* :) 11/21 cols */
+        width: calc(52.381vw - 5.3125rem - 8.32rem - 0.422rem);    }    /* :) [Full width of content area at 817px screenwidth (22/28 cols = 641.929px)] minus [width of subscribe button 5.3125rem] minus [total width of follow icons + liaprins.com (203.36px) and its left padding (92px) */
     #follow {
-        left: calc(50%);    }    /* TBD */
+        top: 4.762vw;
+        left: calc(50% + 26.190vw - 8.32rem);    }
+    #footercontent {
+        width: 52.381vw;    }    /* :) 22/28 cols px equivalent at 817px screenwidth */
 }
 
 @media only screen and (min-width: 1225px) {
-    #footercontent {
-        width: 641.667px;    }    /* :) 11/21 cols px equivalent at 1225 px */
+    #mce-EMAIL {    /* :) Making subscribe input field account for the "follow" links */
+        width: calc(641.667px - 5.3125rem - 8.32rem - 0.422rem);    }    /* :) [Full width of content area at 817px screenwidth (22/28 cols = 641.929px)] minus [width of subscribe button 5.3125rem] minus [total width of follow icons + liaprins.com (203.36px) and its left padding (92px) */
     #follow {
-        left: calc(50%);    }    /* TBD */
+        top: 58.333px;
+        left: calc(50% + 320.833px - 8.32rem);    }
+    #footercontent {
+        width: 641.667px;    }    /* :) 22/28 cols px equivalent at 817px screenwidth */
+    .subscribebutton {
+        top: 0;    }
+}
+
+
+
+/* COMMENT INPUT FIELD WIDTH -------------------------------------------------- */
+
+@media only screen and (min-width: 817px) {
+    .boxinput {
+        width: 641.919px;    }    /* 22/28 cols px equivalent at 817px screenwidth */
+}
+
+@media only screen and (min-width: 1175px) {
+    .boxinput {
+        width: 52.381vw;    }    /* 11/21 cols */
+}
+
+@media only screen and (min-width: 1225px) {
+    .boxinput {
+        width: 641.667px;    }    /* 11/21 cols px equivalent at 1225px screenwidth */
 }
 
 
@@ -170,6 +252,8 @@
         margin-right: 3.571vw;    }    /* right: 1/28 cols */
     #namedatecomment {
         width: 67.857vw;   }    /* :) 19/28 cols | This should be <main>'s width in cols (22/28) minus avatar (2/28) minus space between this and avatar (2/28) = 18/28 cols */
+#postedcomment {
+    margin-top: calc(7.143vw - 0.7973rem - 0.7973rem - 0.17rem);    }
 }
 
 @media only screen and (min-width: 817px) {
@@ -179,28 +263,52 @@
         margin-right: 27.179px;    }    /* V-Mobile right: 1/28 cols px equivalent at 817px screenwidth */
     #namedatecomment {
         width: 554.392px;   }    /* :) V-Mobile 19/28 cols px equivalent at 817px screenwidth | This should be <main>'s width in cols (22/28) minus avatar (2/28) minus space between this and avatar (2/28) = 18/28 cols */
+#postedcomment {
+    margin-top: calc(58.357px - 0.7973rem - 0.7973rem - 0.17rem);    }
 }
 
 @media only screen and (min-width: 1175px) {
     #avatar {
         height: 4.762vw;    /* :) 1/21 cols */
         width: 4.762vw;    /* :) 1/21 cols */
-        margin-right: 4.762vw;    }    /* right: 1/21 cols */
+        margin-right: 2.381vw    }    /* right: 0.5/21 cols */
     #namedatecomment {
-        width: 42.857vw;   }    /* :) 9/21 cols | This should be <main>'s width in cols (22/28) minus avatar (2/28) minus space between this and avatar (2/28) = 18/28 cols */
+        width: 45.238vw   }    /* :) 9.5/21 cols | This should be <main>'s width in cols (22/28) minus avatar (2/28) minus space between this and avatar (2/28) = 18/28 cols */
+#postedcomment {
+    margin-top: calc(4.762vw - 0.7973rem - 0.7973rem - 0.17rem);    }
 }
 
 @media only screen and (min-width: 1225px) {
     #avatar {
         height: 58.333px;    /* :) 1/21 cols px equivalent at 1225 px screenwidth */
         width: 58.333px;    /* :) 1/21 cols px equivalent at 1225 px screenwidth */
-        margin-right: 58.333px;    }    /* right: 1/21 cols px equivalent at 1225 px screenwidth */
+        margin-right: 29.167px;    }    /* right: 1/21 cols px equivalent at 1225 px screenwidth */
     #namedatecomment {
-        width: 525px;   }    /* :) 9/21 cols px equivalent at 1225 px screenwidth | This should be <main>'s width in cols (22/28) minus avatar (2/28) minus space between this and avatar (2/28) = 18/28 cols */
+        width: 554.167px;   }    /* :) 9/21 cols px equivalent at 1225 px screenwidth | This should be <main>'s width in cols (22/28) minus avatar (2/28) minus space between this and avatar (2/28) = 18/28 cols */
+#postedcomment {
+    margin-top: calc(58.333px - 0.7973rem - 0.7973rem - 0.17rem);    }
 }
 
 
 /* VOCAB IMAGE -------------------------------------------------- */
+
+/* Vocab image goes to 1/2 */
+@media only screen and (min-width: 390px) {
+    #vocabwordanddefinition {
+        overflow: auto;    }    /* :) This line and the next are to fix a broswer bug wherein this containing element thinks it is 0px tall because it only contains floated elements; see pp373-4 in HTML & CSS book */
+    #glossaryvocabwordandaudio {
+        float: left;
+        margin-right: 7.143vw;
+        width: 36.714vw;    }    /* :) ~10/28 cols (1/2 grid cols) ...half would really be 35.714vw */
+    #definition {
+        float: left;
+        margin-right: 7.143vw;
+        width: 36.714vw;    }    /* :) ~10/28 cols (1/2 grid cols) ...half would really be 35.714vw */
+    #vocabillustration {
+        margin: 1.024rem 0 0 0;
+        display: inline;
+        max-width: 34.714vw;    }    /* :) ~10/28 cols (1/2 cols) ...half would really be 35.714vw */
+}
 
 /* Vocab image goes to 1/3 */
 @media only screen and (min-width: 650px) {
@@ -370,10 +478,12 @@
     .mockmain {
         width: 641.929px;    }    /* :) 22/28 cols px equivalent at 817px screen width */
     .archivemockmain {
-        margin-left: 29.179px;     /* :) 1/28 cols (1/42) px equivalent at 817px screen width | For some reason, needs to be pushed over half a column*/
+        margin-left: 29.179px;    /* :) 1/28 cols (1/42) px equivalent at 817px screen width | For some reason, needs to be pushed over half a column*/
         width: 641.929px;    }    /* :) 22/28 cols px equivalent at 817px screen width */
     #blognametagline {
         width: 641.929px;    }    /* :) 22/28 cols px equivalent at 817px screen width */
+    #pre-rr {
+        padding-top: 87.536px;    }
     .date, figcaption {
         width: 641.929px;    /* :) 22/28 cols px equivalent at 817px screen width */
         border-width: 7.003px;    }    /* :) 6/28 cols divided by 25 (ratio of postglasses' width to their line weight) px equivalent at 817px screen width */

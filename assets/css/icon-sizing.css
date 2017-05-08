@@ -14,7 +14,7 @@
     height: 0.844rem;    }    /**/
 
 #searchpagebutton {
-    height: 0.844rem;    /**/
+    height: 1.688rem;    /**/
     padding: 0.422rem;    }    /**/
 #searchpageicon {
     height: 0.844rem;    }    /**/
@@ -54,8 +54,10 @@
     border-width: 0 0 0.422rem 0.422rem;    } /**/
 
 #postacommentdetails[open] summary {    /* :) Post a comment's "x" icon/button */
-    height: 1.519rem;    /**/
-    width: 1.519rem;    }    /**/ /* :) Width is needed in addition to height or the img will collapse to be too narrow*/
+    /* height: 1.519rem; */    /**/
+    height: 1.875rem;
+    /* width: 1.519rem; */
+    width: 1.875rem;    }    /**/ /* :) Width is needed in addition to height or the img will collapse to be too narrow*/
 
 #backarrow {    /* :) This is just here in case I put the HTML for it back in! */
     padding: 0.422rem;    /**/ /* :) All icons should have 7.5px padding for yellow hover state */

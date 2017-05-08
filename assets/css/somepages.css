@@ -71,7 +71,7 @@ header {    /* :) Holds blog name  + tagline */
     padding-top: 10.714vw;    }    /* :) V-Mobile 3/28 cols */
 
 #postdate {
-    width: calc(78.571vw - 32px);    }    /* :) V-Mobile This should be [the width of <main> (22/28 cols = 78.571vw)[] minus [the width of menu icon + the space between them (17px + 15px = 32px)] | Making room for the menu icon */
+    width: calc(78.571vw - 0.957rem - 0.957rem);    }    /* :) V-Mobile This should be [the width of <main> (22/28 cols = 78.571vw)[] minus [the width of menu icon + the space between them (17px + 15px = 32px)] | Making room for the menu icon */
 
 #postintro {     /* :) Introductory paragraph of post, on post page only */
     display: block;    /* :) This is so the margins will be recognized, since margins won't apply to inline elements (at least in this case) */
@@ -83,8 +83,7 @@ header {    /* :) Holds blog name  + tagline */
 #posttagshare {     /* :) Groups the tags and share icons into one div; the HTML id is located in blogarticle.php template, surrounding the tag and share snippets */
     margin: 0.512rem 0;    }    /* :) V-Mobile top + bottom: .25 lh */
 
-#posttag {
-    vertical-align: -.15em;    }    /* :) Applies to each tag in post page */
+#posttag {    }    /* :) Applies to each tag in post page */
 
 #share {    /* :) Applies to all the share icons together as a whole */
     padding-left: 7.5px;
@@ -176,14 +175,15 @@ header {    /* :) Holds blog name  + tagline */
     margin-right: 3.571vw;    }    /* V-Mobile right: 1/28 cols */
 
 #namedatecomment {
-    margin-top: -8px;
+    margin-top: -0.6rem;
     float: left;
     width: 64.286vw;   }    /* :) V-Mobile 18/28 cols | This should be <main>'s width in cols (22/28) minus avatar (2/28) minus space between this and avatar (2/28) = 18/28 cols */
 
 #commentdate {
     white-space: nowrap;    }
 
-#postedcomment {    }
+#postedcomment {
+    margin-top: calc(10.714vw - 0.7973rem - 0.7973rem - 0.17rem);    }
 
 .postacommentbutton:hover {    /* :) This applies to all "Post a comment" buttons */
     height: 20px;
@@ -191,8 +191,10 @@ header {    /* :) Holds blog name  + tagline */
 
 #postacommentsummary {    /* :) This is the first "Post a comment" 'button' seen, before clicking it to open to the inputs */
     display: inline;    /* :) So the background color won't span the whole page */
-    height: 30px;
-    padding: 8.25px 7.5px 0 7.5px;    /* :) Finessing to be perfectly centered */
+    /* height: 30px; */
+    height: 1.875rem;
+    /* padding: 8.25px 7.5px 0 7.5px; */    /* :) Finessing to be perfectly centered */
+    padding: 0.5159rem 0.469rem 0 0.469rem;
     border-style: solid;
     border-width: 2px;
     border-color: black;
@@ -219,16 +221,18 @@ abbr {
     /* color: blue; */    }    /* FINALIZE Replace with whatever color I want the placeholder text to be (not working in FF) */
 
 #message {    /* :) This applies to only to the actual comment message input field */
-    line-height: 160%;    /* :) */
-    padding: 5px 7px;    /* :) */
-    height: 94px;    /* :) Should hold exactly four lines of text */
+    line-height: 1.7;    /* :) */
+    padding: 0.313rem 0.438rem;    /* :) */
+    /* height: 94px; */    /* :) Should hold exactly four lines of text */
+    height: 5.877rem;
     resize: none;    }    /* This is to get rid of the ability to resize the field; it should scroll automatically if needed */
 #message::-webkit-input-placeholder {
     /* color: red; */    }    /* FINALIZE Replace with whatever color I want the placeholder text to be (not working in FF) */ 
 
 #submit {    /* :) This is the id for the second (inside) "Post a comment" button (I'm afraid to change the id in case it messes up the original Kirby comments functionality) */
     display: block;
-    height: 30px;    /* :) For some reason the height needs to be specified here in addition to in .button (in globalnavfooter.css) to keep this button from freaking out and becoming shorter upon hover */
+    /* height: 30px; */    /* :) For some reason the height needs to be specified here in addition to in .button (in globalnavfooter.css) to keep this button from freaking out and becoming shorter upon hover */
+    height: 1.875rem;
     margin-top: 6px;    }    /* :) Finessing spacing to optically match 15px space between name and message inputs */
 
 #postacommentdetails {    /* :) Setting up the "x" button to replace the default <details> */
@@ -243,8 +247,10 @@ abbr {
     background-color: transparent;
     font-size: 0;    /* :) Trying to get the words "Post a comment" to go away; this is a hack, since screenreaders will still read it, but the "x" really means the opposite ... */
     border-style: none;
-    height: 30px;
-    width: 30px;    /* :) Width is needed in addition to height or the img will collapse to be too narrow*/
+    /* height: 30px; */
+    height: 1.875rem;
+    /* width: 30px; */    /* :) Width is needed in addition to height or the img will collapse to be too narrow*/
+    width: 1.875rem;
     position: absolute;    /* :) Moving the "x" down to the level of the second "Post a comment" button */
     bottom: 0;
     left: 134.875px;    }    /* :) This is finessed to get the x in the exact proper position relative to the "Post a comment" button, leaving 7.5px between them */
@@ -370,7 +376,7 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
 #searchpageinput {
     padding-bottom: 2.75px;    /* :) Finessed the space between input word and underline bar to match space between input and bottom of field for subscribe + comment name fields (this is a different measurement than nav search's is, because they have different input text sizes, so the line-height (relative sizing) offsets each differently in px for the default spacing)*/
     /* margin-bottom: 0.512rem; */    /* :) V-Mobile .25 lh | These margin settings don't work on the <form> element that holds this input + search button, so I have to apply the margins to those each of those elements individually */
-    width: calc(78.571vw - 62px);    }    /* :) V-Mobile This should be [the width of <main> (22/28 cols = 78.571vw)[] minus [the width of magnifier icon + its padding + the width of menu icon + the space between them (30px + 17px + 15px = 62px)] */
+    width: calc(78.571vw - 0.957rem - 0.957rem - 0.844rem - 0.844rem);    }    /* :) V-Mobile This should be [the width of <main> (22/28 cols = 78.571vw)[] minus [the width of magnifier icon + its padding + the width of menu icon + the space between them (30px + 17px + 15px = 62px)] */
 
 #searchpagebutton {
     height: 30px;

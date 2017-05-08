@@ -28,7 +28,6 @@
 
             <?php $thisurl = thisUrl(); ?> 
 
-
             <div id="vocabwordanddefinition">
 
             <!-- <dt> = the name within the <dl> (parent) name-value pair  -->
@@ -77,6 +76,7 @@
 
 
             </div>
+                
 
 
             <?php endforeach ?> 

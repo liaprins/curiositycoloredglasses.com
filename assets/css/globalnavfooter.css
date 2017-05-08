@@ -9,7 +9,7 @@ html {
 body {    /* :) This spans the total screen width, 100% */
     position: relative;         /* :) This is for the fixed to the bottom footer */
     min-height: 100%;
-    padding-bottom: calc(32.143vw + 118px + 2.998rem);    /* :)  V-Mobile | (margin between main's lowest content and footer (3/28 cols = 10.714vw) + footer's top-padding (3/28 cols = 10.714vw) + footer's bottom padding (3/28 cols = 10.714vw) = 9/28 cols = 32.143vw) + (subscribe input field's height (30px) + margin between input and button (15px) + subscribe button's height (30px) + follow icons' height including padding (30px) = 115px) + (margin between subscribe message and follow icons (0.5 lineheights = 1.024rem) + 2 lines of subscribe message in size xs-textface at 1.6 line height ratio (2 * 0.617rem * 1.6) = 1.9744rem + 1.024rem = 2.998rem) */
+    padding-bottom: calc(32.142vw + 9.975rem + 0.297rem);    
     background-color: white;
     color: black;
     /* font-family: 'Sintesi_Sans', 'Courier_New', Courier, Monotype; */
@@ -127,7 +127,7 @@ footer {
 
 .subscribebutton {
     width: 78.571vw;    /* :) V-Mobile 22/28 cols */
-    margin: 15px 0;    /* :) Half the height of the input field and of the button */
+    margin: 0.9375rem 0;    /* :) Half the height of the input field and of the button */
     color: #e2e43a;    }    /* :) Making the text match the yellow footer background */ 
 .subscribebutton:hover {    /* :) For some reason this needs to be a class; id's aren't working for this element with hover (including it's id assigned by MailChimp: mc-embedded-subscribe) */
     background-color: #e2e43a;    }    /* :) Making the button BG color match the yellow footer background */
@@ -160,6 +160,5 @@ footer {
     float: left;    }
 
 #portfolio {    /* "liaprins.com" */
-    vertical-align: -.25em;    /* :) Finessing the vertical centering to get liaprins.com centered with the follow icons */
-    margin-left: 7.5px;    }
+    margin-left: 0.422rem;    }
 

@@ -98,9 +98,7 @@ h4 {    /* :) This is reserved for sub-headings within post content */
     font-size: 18px;    /* :) V-Mobile | Matches xl-textface size */
     font-size: 1.125rem;    /* :) This is the rem equivalent of the px size */
     font-family: 'Sintesi_Sans_Demi-Bold', 'Courier_New', Courier, Monotype;    /* :) Making the headers bold */
-    margin-top:  2.048rem;
-    margin-bottom: -8.196px;    /* :) 0.25 lineheight's-worth of m-textface at 1.6 lineheight */
-    margin-bottom: -0.512rem;    }    /* :) This is the rem equivalent of the px size */
+    margin-top:  2.048rem;    }
 
 .xl-textface {    /* :) Applied to search page input text and tag page name */
     font-size: 18px;    /* :) Mobile-V based on 1.2 ratio (5:6, Minor Third) typescale with 12.5px base at level 0, and this at level 3 | Fallback for browser's not processing rems */
@@ -111,9 +109,7 @@ h5 {    /* :) This is reserved for sub-headings within post content */
     font-size: 15px;     /* :) V-Mobile | Matches l-textface size */
     font-size: 0.938rem;    /* :) This is the rem equivalent of the px size */
     font-family: 'Sintesi_Sans_Demi-Bold', 'Courier_New', Courier, Monotype;    /* :) Making the headers bold */
-    margin-top:  2.048rem;
-    margin-bottom: -8.196px;    /* :) 0.25 lineheight's-worth of m-textface at 1.6 lineheight */
-    margin-bottom: -0.512rem;    }    /* :) This is the rem equivalent of the px size */
+    margin-top:  2.048rem;    }
 
 .l-textface { 
     font-size: 15px;    /* :) Mobile-V based on 1.2 ratio (5:6, Minor Third) typescale with 12.5px base at level 0, and this at level 1 | Fallback for browser's not processing rems */
@@ -123,9 +119,7 @@ h6 {    /* :) This is reserved for sub-headings within post content */
     font-size: 12.5px;    /* :) V-Mobile | Matches m-textface size */
     font-size: 0.781rem;    /* :) This is the rem equivalent of the px size */
     font-family: 'Sintesi_Sans_Demi-Bold', 'Courier_New', Courier, Monotype;    /* :) Making the headers bold */
-    margin-top:  2.048rem;
-    margin-bottom: -8.196px;    /* :) 0.25 lineheight's-worth of m-textface at 1.6 lineheight */
-    margin-bottom: -0.512rem;    }    /* :) This is the rem equivalent of the px size */
+    margin-top:  2.048rem;    }
 
 .m-textface {
     font-size: 12.5px;    /* :) Mobile-V based on 1.2 ratio (5:6, Minor Third) typescale with 12.5px base at level 0, and this at level 0 | Fallback for browser's not processing rems */

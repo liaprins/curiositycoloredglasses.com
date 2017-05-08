@@ -13,7 +13,7 @@
     <!-- I MOVED THE HOME GLASSES ICON INTO THE 'menu' SNIPPET SO CALLING IT NOW INSTEAD OF 'internal-menu' SNIPPET -->
     <?php snippet('menu') ?>
    
-    <main>
+    <main class="desktopcontent">
 
         <!-- titling the page after the tag that brought us here -->
         <!-- NOT SURE IF THIS WILL STAY AS <p> -->

@@ -13,7 +13,7 @@
     <!-- I MOVED THE HOME GLASSES ICON INTO THE 'menu' SNIPPET SO CALLING IT NOW INSTEAD OF 'internal-menu' SNIPPET -->
     <?php snippet('menu') ?>
 
-    <main>
+    <main class="desktopcontent">
 
         <!-- establishing the input field for search -->
         <form id="searchpageform">
@@ -61,7 +61,7 @@
             <?php else: ?>
 
             <!-- NOT SURE IF THIS WILL STAY AS <p> -->
-            <p class="l-textface">
+            <p class="l-textface desktopcontent">
                 So sorry, I could not find that word!
             </p>
 
