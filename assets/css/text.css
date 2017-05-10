@@ -147,6 +147,10 @@ em {    /* :) This is the lighter italic; if I switch back to a heavier body cop
     color: white;
     background-color: black;    }
 
+.zerotracking {
+    letter-spacing: -0.25em
+}
+
 
 
 

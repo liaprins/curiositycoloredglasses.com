@@ -29,12 +29,16 @@
                 <?php echo $page->text()->kirbytext() ?>
             </span>
 
+        </div>
+
 
 <!-- __________________________________________________________________________________ -->      
 
 <!-- ARCHIVE YEAR MENU -->
 
-            <p id="archivemenu" >
+        <div id="archivemenudesktopcontent">
+
+            <p id="archivemenu">
 
             <?php $years = $page->years()
                                 ->toStructure()

@@ -113,9 +113,13 @@ header {    /* :) Holds blog name  + tagline */
 .vocabwordinline {    /* :) This applies to just the inline vocab word, via vocab.php in the site/tags folder */
     padding: 0.6em 0.3em 0.5em 0.5em;    }    /* :) Based on line-height, but had to finesse optically, and pull in L + R a bit because it was too wide of a space between vocab word and other text inline */
 
+#vocabwordanddefinition {
+    margin: 1.024rem 0;    }
+
 #glossaryvocabwordandaudio {    /* :) This applies to the vocab word, where it shows up with its definition in the glossary (and optionally, the audio icon next to it) */
     line-height: 1.2;   /* :) Would be 1.6 to match look of stacked blog name in display font, but had to adjust optically */
-    margin: 1.024rem 0 0.256rem 0;    }    /* :) V-Mobile top: 0.5 lineheight, bottom: 0.125 lineheight */    
+    margin-bottom: 0.256rem;
+    /* margin: 1.024rem 0 0.256rem 0;*/    }    /* :) V-Mobile top: 0.5 lineheight, bottom: 0.125 lineheight */    
 
 .glossaryvocabword {    }    /* :) Has to be a class because id is already taken by some dynamic PHP for the anchor link */
 
@@ -130,8 +134,7 @@ header {    /* :) Holds blog name  + tagline */
     margin-top: -.1em;    /* :) This is to finesse the vertical centering */
     cursor: pointer;    }
 
-#definitionandillustration {
-    margin: 0.256rem 0 1.024rem 0;    }    /* :) V-Mobile top: 0.125 lineheight, bottom: 0.5 lineheight */
+#definitionandillustration {    }
 
 #definition {
     margin-bottom: 0.512rem;    }    /* :) V-Mobile .25 lh; would be .125 lh to match space between vocab word and definition, but had to adjust optically */
@@ -145,6 +148,7 @@ header {    /* :) Holds blog name  + tagline */
     cursor: pointer;    }
 
 #vocabillustration {
+    margin-bottom: 0;
     max-width: 78.571vw;    }    /* :) V-Mobile 22/28 cols */
 
 #rrsectionheader {    /* :) This applies to Relevant Reading's section header, which isn't encapsulated in the .post <article> class (so that the results can have a wider area to accommodate their margins needing to be on both sides for spacing) */
@@ -241,7 +245,7 @@ abbr {
     display: none;    }
 
 #postacommentdetails[open] summary {    /* :) This is the "x" button */
-    background-image: url('../images/x-comments.svg');    /* :) I had to make this a special .SVG with white space built-in so it could fake as padding when hovered on (really the BG color is the yellow) */
+    background-image: url('../images/x-comments-original.svg');    /* :) I had to make this a special .SVG with white space built-in so it could fake as padding when hovered on (really the BG color is the yellow) */
     background-position: center;
     background-repeat: no-repeat;
     background-color: transparent;
@@ -253,7 +257,8 @@ abbr {
     width: 1.875rem;
     position: absolute;    /* :) Moving the "x" down to the level of the second "Post a comment" button */
     bottom: 0;
-    left: 134.875px;    }    /* :) This is finessed to get the x in the exact proper position relative to the "Post a comment" button, leaving 7.5px between them */
+    /* left: 134.875px; */
+    left: 8.430rem;    }    /* :) This is finessed to get the x in the exact proper position relative to the "Post a comment" button, leaving 7.5px between them */
 #postacommentdetails[open] summary:hover {
     background-color: #e2e43a;   }
 
@@ -370,7 +375,8 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
 /* SEARCH PAGE -------------------------------------------------- */
 
 #searchpageform {
-    margin-bottom: 2.048rem;
+    /* margin-bottom: 2.048rem; */
+    margin-bottom: 2.560rem;
     padding-top: calc(10.714vw - 7.5px);    }    /* :) V-Mobile 3/28 cols, but finessing vertical centering of search bar with menu icon */
 
 #searchpageinput {
@@ -403,7 +409,7 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
 #tagpagename {
     padding-right: 30px;
     padding-top: calc(10.714vw - 3.5px);    /* :) V-Mobile top: 3/28 cols, but negative top margin needed to get title aligned with hamburger icon */
-    margin-bottom: 1.024rem;    }    /* :) V-Mobile .5 lh */
+    margin-bottom: 2.560rem;    }    /* :) V-Mobile .5 lh */
  
 
 /* RESULTS -------------------------------------------------- */

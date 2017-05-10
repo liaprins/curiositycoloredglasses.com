@@ -43,21 +43,27 @@
 /* SHOULD I CHANGE TO REM (INSTEAD OF EM) (...OR VICE VERSA....) FOR THE ABOVE THREE SELECTORS ^^^ TO MATCH OTHER ICONS? WORKING FINE AS EM THOUGH, SINCE DEPENDENT ON TEXT NEXT TO IT */
 
 #navsummary {    /* :) Hamburger icon/button */
-    height: 0.844rem;    /**/
-    width: 0.957rem;    /**/    /* :) This is needed or else it will have width of 0 */
+    /* height: 0.844rem; */    /**/
+    height: 0.900rem;
+    /* width: 0.957rem; */    /**/    /* :) This is needed or else it will have width of 0 */
+    width: 1.013rem;
     border-width: 0 0 0.422rem 0.422rem;    }    /**/
 
 #navdetails[open] #navsummary {    /* :) Menu "x" icon/button */
-    height: 0.844rem;
-    width: 0.844rem;
+    /* height: 0.844rem; */
+    height: 0.900rem;
+    /* width: 0.844rem; */
+    width: 0.900rem;
     /* width: 0.844rem; */
     border-width: 0 0 0.422rem 0.422rem;    } /**/
 
 #postacommentdetails[open] summary {    /* :) Post a comment's "x" icon/button */
     /* height: 1.519rem; */    /**/
     height: 1.875rem;
+    /* height: 1.688rem; */
     /* width: 1.519rem; */
-    width: 1.875rem;    }    /**/ /* :) Width is needed in addition to height or the img will collapse to be too narrow*/
+    width: 1.875rem; */
+    /* width: 1.688rem; */    }    /**/ /* :) Width is needed in addition to height or the img will collapse to be too narrow*/
 
 #backarrow {    /* :) This is just here in case I put the HTML for it back in! */
     padding: 0.422rem;    /**/ /* :) All icons should have 7.5px padding for yellow hover state */

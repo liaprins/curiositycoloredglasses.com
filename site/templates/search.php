@@ -61,7 +61,7 @@
             <?php else: ?>
 
             <!-- NOT SURE IF THIS WILL STAY AS <p> -->
-            <p class="l-textface desktopcontent">
+            <p class="l-textface" id="nosearchresults">
                 So sorry, I could not find that word!
             </p>
 

@@ -11,7 +11,7 @@
         padding: 7.143vw 0;    /* :) V-Mobile 3/28 cols to pad top and bottom of yellow BG */
         margin-top: 7.143vw;    }
     body {
-        padding-bottom: calc(21.429vw + 5.203rem + 0.297rem);    }
+        padding-bottom: calc(21.429vw + 6.344rem + 0.297rem);    }
 }
 
 @media only screen and (min-width: 783px) {
@@ -252,8 +252,8 @@
         margin-right: 3.571vw;    }    /* right: 1/28 cols */
     #namedatecomment {
         width: 67.857vw;   }    /* :) 19/28 cols | This should be <main>'s width in cols (22/28) minus avatar (2/28) minus space between this and avatar (2/28) = 18/28 cols */
-#postedcomment {
-    margin-top: calc(7.143vw - 0.7973rem - 0.7973rem - 0.17rem);    }
+    #postedcomment {
+        margin-top: calc(7.143vw - 0.7973rem - 0.7973rem - 0.17rem);    }
 }
 
 @media only screen and (min-width: 817px) {
@@ -303,26 +303,21 @@
     #definition {
         float: left;
         margin-right: 7.143vw;
+        margin-bottom: 0;
         width: 36.714vw;    }    /* :) ~10/28 cols (1/2 grid cols) ...half would really be 35.714vw */
     #vocabillustration {
-        margin: 1.024rem 0 0 0;
+        /* margin-top: 1.024rem; */
         display: inline;
         max-width: 34.714vw;    }    /* :) ~10/28 cols (1/2 cols) ...half would really be 35.714vw */
 }
 
 /* Vocab image goes to 1/3 */
 @media only screen and (min-width: 650px) {
-    #vocabwordanddefinition {
-        overflow: auto;    }    /* :) This line and the next are to fix a broswer bug wherein this containing element thinks it is 0px tall because it only contains floated elements; see pp373-4 in HTML & CSS book */
     #glossaryvocabwordandaudio {
-        float: left;
         width: 50vw;    }    /* :) 14/28 cols (2/3 grid cols) */
     #definition {
-        float: left;
         width: 50vw;    }    /* :) 14/28 cols (2/3 grid cols) */
     #vocabillustration {
-        margin: 1.024rem 0 0 7.143vw;
-        display: inline;
         max-width: 21.429vw;    }    /* :) 6/28 cols (1/3 cols) */
 }
 
@@ -330,11 +325,12 @@
     #vocabwordanddefinition {
         margin: 0 auto;    }
     #glossaryvocabwordandaudio {
+        margin-right: 58.357px;
         width: 408px;    }    /* :) 14/28 cols (2/3 grid cols) px equivalent at 817px screenwidth */
     #definition {
+        margin-right: 58.357px;
         width: 408px;    }    /* :) 14/28 cols (2/3 grid cols) px equivalent at 817px screenwidth */
     #vocabillustration {
-        margin: 1.024rem 0 0 58.357px;    /* :) px equivalent of 2/28 cols at 817px screenwidth */
         max-width: 175px;    }    /* :) 6/28 cols (1/3 cols) */
 }
 
@@ -342,11 +338,12 @@
     #vocabwordanddefinition {
         width: 52.381vw;    }
     #glossaryvocabwordandaudio {
+        margin-right: 4.761vw;
         width: 33.332vw;    }    /* :) 7/21 (2/3 grid cols) */
     #definition {
+        margin-right: 4.761vw;
         width: 33.332vw;    }    /* :) 7/21 (2/3 grid cols) */
     #vocabillustration {
-        margin: 1.024rem 0 0 4.761vw;
         max-width: 14.288vw;    }    /* :) 3/21 (2/3 grid cols) */
 }
 
@@ -354,11 +351,12 @@
     #vocabwordanddefinition {
         width: 641.667px;    }
     #glossaryvocabwordandaudio {
+        margin-right: 58.333px;
         width: 408.333px;    }    /* :) 7/21 (2/3 grid cols) px equivalent at 1225px screenwidth */
     #definition {
+        margin-right: 58.333px;
         width: 408.333px;    }    /* :) 7/21 (2/3 grid cols) px equivalent at 1225px screenwidth */
     #vocabillustration {
-        margin: 1.024rem 0 0 58.333px;
         max-width: 175px;    }    /* :) 3/21 (2/3 grid cols) */
 }
 
@@ -368,13 +366,15 @@
 /* Library icons switch from 3- to 4-across -------------------------------------------------- */
 @media only screen and (min-width: 408px) {
     #librarysection {    /* :) Setting up the library entries to go 4-across */
-        width: 89.286vw;    /* :) V-H-Mobile hybrid 25/28 cols | Had to account for icon margins cutting into .5/28 cols (1/56) of side margins, leaving only a total of 5/28 cols total on both sides */
+        width: 89.31vw;    /* :) V-H-Mobile hybrid 25/28 cols | Had to account for icon margins cutting into .5/28 cols (1/56) of side margins, leaving only a total of 5/28 cols total on both sides, also had to round up slightly to accomodate all 4 icons across + their margins */
         margin: 3.571vw auto -3.571vw auto;     }    /* :) V-H-Mobile hybrid top: 1.5/28 cols (3/56), bottom: -1.5/28 cols (-3/56) | Trying to counteract other margins to make the space between library icon zone and above and below it match the space between library icons themselves */
     #libraryicon {    /* :) Setting up the library entries to go 4-across */
         margin: 5.357vw 5.357vw 0 5.357vw;    /* :) H-Mobile top + L + R: 1.5/28 cols (3/56) */
         padding-bottom: 5.357vw;    /* :) H-Mobile bottom: 1.5/28 cols (3/56) | Used padding here instead of margin for just the bottom so the bottom underline on selection would have space between it and the icon, and would only be as long as the icon is wide */
-        max-width: 10.714vw;    /* :) H-Mobile 3/28 cols */
-        max-height: 10.714vw;    }    /* :) H-Mobile 3/28 cols */
+        /* max-width: 10.714vw; */
+        max-width: 11.607vw;    /* :) H-Mobile 3.25/28 cols: splitting the extra column evenly between the 4 icons across; */
+        /* max-height: 10.714vw; */
+        max-height: 11.607vw;    }    /* :) H-Mobile 3.25/28 cols: splitting the extra column evenly between the 4 icons across; */
 }
 
 /* Library icons switch from 4- to 6-across -------------------------------------------------- */
@@ -426,6 +426,10 @@
 
 /* Results 2-across -------------------------------------------------- */
 @media only screen and (min-width: 390px) {    /* :) This is the width at which 2-across results match the width of 3-across results at 650px */
+    #searchpageform {
+        margin-bottom: 1.024rem;    }
+    #tagpagename {
+        margin-bottom: 1.024rem;    }
     .resultarea {
         overflow: auto;    /* :) This line and the next are to fix a broswer bug wherein this containing element thinks it is 0px tall because it only contains floated elements; see pp373-4 in HTML & CSS book */
         /* width: 100%; */    /* :) This line and the previous are to fix a broswer bug wherein this containing element thinks it is 0px tall because it only contains floated elements; see pp373-4 in HTML & CSS book; but commenting out the 100% width because I actually want a specific width, and it seems to be working anyway */
@@ -439,6 +443,9 @@
         width: 21.429vw;    }    /* 6/28 cols (6/10 result cols) */ 
     #resultdate {
         border-width: 0.571vw;    }    /* :) This should dynamically match the weight of the line of the resultglasses below date, based on their width of 28.571vw (8/28 cols) and the ratio of the resultglasses width to their line weight of 25:1; */ 
+    #nosearchresults {
+        margin-top: 1.024rem;
+        margin-left: 3.571vw;    }
     .archivemockmain {
         margin-left: 3.571vw;    }    /* :) 1/28 cols (1/42) | For some reason, needs to be pushed over half a column*/
 }
@@ -493,7 +500,7 @@
         max-width: 641.929px;     }    /* :) 22/28 cols px equivalent at 817px screen width */
     figcaption {
         border-width: 7.003px;    }    /* :) 3/28 cols divided by 25 (ratio of postglasses' width to their line weight) px equivalent at 817px screen width */
-    #rrsectionheader{
+    #rrsectionheader {
         width: 641.929px;    }    /* :) 22/28 cols px equivalent at 817px screen width */
     .resultarea {
         width: 700.283px;    }    /* :) 24/28 cols px equivalent at 817px screen width */
@@ -502,6 +509,8 @@
         margin: 0 29.175px;    }    /* :) 1/28 cols at 817px | Setting results to 2-column grid */
     #resultdate {
         width: 175.075px;    }    /* :) 10/28 cols at 817px | Setting results to 2-column grid */
+    #nosearchresults {
+        margin-left: 29.179px;    }
     #librarysection {    /* :) Setting up the library entries to go 6-across */ 
         width: 701px;    /* :) 24/28 cols at 817px | Had to round up slightly from 700.286px to get the icons to fit 6-across */
         margin: 29.179px auto -29.179px auto;     }    /* :) 1/28 cols, bottom: -1/28 cols at 817px | Trying to counteract other margins to make the space between library icon zone and above and below it match the space between library icons themselves */
@@ -527,26 +536,30 @@
         width: 52.381vw;    }    /* :) 11/21 cols */
     #blognametagline {
         width: 90.476vw;    }    /* :) 19/21 cols */
-    .desktopcontent {
+    .desktopcontent,
+    #archivemenudesktopcontent,
+    #aboutdesktopcontent {
         position: relative;
         margin: 0 auto;
         width: 52.381vw;    }    /* :) 11/21 cols */
     .postglasses {
+        margin-top: 3.072rem;
+        margin-bottom: 2.048rem;
         width: 14.286vw;    }    /* :) 3/21 cols */
+    #homedate {
+        margin-top: 0;    }    /* Resetting to 0 so the calc() function is less complicated to get date to right height, and can apply to post page's date too */
     .date {       
         position: absolute;
         left: -19.048vw;    /* :) 4/21 cols, to account for its width of 3/21 cols + margin between it and content column of 1/21 cols */
-        top: 0;    /* :) This should match the height of the date text...DEPENDS ON TYPE SETTING FOR SCREEN SIZE! (1.3em) + padding between date and its border (0.512rem) + height of postglasses (width: height = 25:10, therefore height = 5.714vw) + spacing between date and postglasses (the margin set in this call applies) (4.762vw) + space between postglasses and post title (1.536rem) */
+        top: calc(5.714vw + 2.048rem + 0.4rem);    /* Height of postglasses + space between them and title + title top-offset due to 1.7 lineheight (wouldnt' be necesary if lineheight were 1) */
         width: 14.286vw;    /* :) 3/21 cols */
         border-width: 0.571vw;    }    /* :) This should dynamically match the weight of the line of the postglasses below date, based on their width of 42.857vw (12/28 cols) and the ratio of the postglasses width to their line weight of 25:1; */ 
-    figcaption {
-        border-width: 0.571vw;    }
     #hometaggroup {
         position: absolute;
         display: block;
         width: 14.286vw;    
         left: -19.048vw;
-        top: 150px;    }    /* !!!!! */
+        top: calc(5.714vw + 2.048rem + 0.4rem + 0.571vw + 1.840rem);    }
     #postdate {
         position: absolute;
         width: 14.286vw;    }    /* :) 3/21 cols */
@@ -558,7 +571,7 @@
     #posttagshare {
         position: absolute;
         left: -23.810vw;
-        top: calc(1.3em + 21.761vw + 3.1rem);
+        top: calc(5.714vw + 2.048rem + 0.4rem + 0.571vw + 1.840rem);    
         margin: 0 4.762vw 4.762vw 4.762vw;
         width: 14.286vw;    }    /* :) H-Tablet 3/21 cols */
     #posttaggroup {
@@ -569,9 +582,10 @@
     figure {
         position: relative;    }
     figcaption {
+        border-width: 0.571vw;
         position: absolute;
         top: 0;
-        left: -19.048vw;
+        left: -23.810vw;
         width: 14.286vw;    /* :) H-Tablet 3/21 cols */
         margin: 0 4.762vw 4.762vw 4.762vw;
         padding-top:  1.024rem;
@@ -614,28 +628,32 @@
         width: 641.667px;    }    /* :) 11/21 cols px equivalent at 1225px screen width */
     #blognametagline {
         width: 1108.333px;    }    /* :) 19/21 cols px equivalent at 1225px screen width */
-    .desktopcontent {
+    .desktopcontent, 
+    #archivemenudesktopcontent,
+    #aboutdesktopcontent {
         width: 641.929px;    }    /* :) 11/21 cols px equivalent at 1225px screen width */
     .postglasses {
         width: 175.071px;    }    /* :) 3/21 cols px equivalent at 1225px screen width */
     .date {
         left: -233.333px;    /* :) 4/21 cols px equivalent at 1225px screen width */
+        top: calc(70px + 2.048rem + 0.4rem);    /* Height of postglasses + space between them and title + title top-offset due to 1.7 lineheight (wouldn't be necesary if lineheight were 1) */
         width: 175px;    /* :) 3/21 cols px equivalent at 1225px screen width */
         border-width: 7.003px;    }    /* :) 3/28 cols divided by 25 (ratio of postglasses' width to their line weight) px equivalent at 817px screen width */
-    figcaption {
-        border-width: 7.003px;    }
     #postdate {
         width: 175px;    }    /* :) 3/21 cols px equivalent at 1225px screen width */
     #hometaggroup {
         left: -233.333px;    /* :) 4/21 cols px equivalent at 1225px screen width */
+        top: calc(70px + 2.048rem + 0.4rem + 7px + 1.840rem);    
         width: 175px;    }    /* :) 3/21 cols px equivalent at 1225px screen width */
     #posttagshare {
         margin: 0 58.333px 58.333px 58.333px;
         left: -291.667px;
+        top: calc(70px + 2.048rem + 0.4rem + 7px + 1.840rem);            
         width: 175px;    }    /* :) 3/21 cols px equivalent at 1225px screen width */
     .contentimage {
         max-width: 641.929px;    }    /* :) 11/21 cols px equivalent at 1225px screen width */
     figcaption {
+        border-width: 7.003px;
         margin: 0 58.333px 58.333px 58.333px;
         left: -291.667px;
         width: 175px;    /* :) 3/21 cols px equivalent at 1225px screen width */

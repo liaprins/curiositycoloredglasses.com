@@ -21,7 +21,7 @@
 </div>
 
 
-<main>
+<main id="homepagepostlist">
 
 	<!-- foreach loop pulling in the articles: contains postglasses, title, date, tags, and intro -->
     <?php snippet('blog-posts') ?>

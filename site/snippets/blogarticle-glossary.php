@@ -13,7 +13,6 @@
             </h3>
         </summary>
 
-
         <!-- <dl> = "definition list"; using it for semantic purposes -->
         <dl>
 
@@ -52,7 +51,7 @@
             </dt>
 
             <!-- <dd> = the value (definition) within the <dl> (parent) name-value pair  -->
-            <dd id="definitionandillustration">
+            <!-- <dd id="definitionandillustration"> -->
 
 
                 <!-- definition (required) appended with up arrow, to take user back to word in context -->
@@ -72,7 +71,7 @@
                 <?php endif; ?>
 
 
-            </dd>
+            <!-- </dd> -->
 
 
             </div>

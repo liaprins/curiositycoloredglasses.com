@@ -44,6 +44,10 @@
 
 			</figure>
 
+		</div>
+
+
+		<div id="aboutdesktopcontent">
 
 			<!-- text for About page -->
 			<!-- FOR SOME REASON <p> ISN'T APPLYING THE CLASS, BUT <span> DOES -->

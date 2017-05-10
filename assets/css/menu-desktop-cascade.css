@@ -4,27 +4,50 @@ THEIR PROPERTIES CAN BE ADJUSTED FOR RESPONSIVITY, BUT ULTIMATELY THEY WILL REFE
 THIS ENTIRE FILE IS ALREADY BEING PULLED AS A MEDIA QUERY ITSELF, INVOKED AT 1,000PX SCREENWIDTH VIA head-close.php SNIPPET. */
 
 nav {
+    /*
     position: absolute;
     width: 100%;
     top: 0;
     left: 0;
-    margin-bottom: 200px;    }
+    margin-bottom: 200px; */    }
 
 #navdetails {
-    float: right;    /* Pushes the group as a whole to the right */
+    /*
+    float: right;
     position: absolute;
-    /* left: 0; */
     top: 20px;
     right: 20px;
-    padding: 0;    }
+    padding: 0; */
+    float: none;
+    position: static;
+    padding: 0;
+        }
 
 #navdetails[open] {
-    background-color: transparent;    }
+    background-color: transparent;
+    padding: 0;
+    width: 100%;    }
 
 #navdetails[open] #navsummary {
-    background-image: none;    }
+    background-image: none;
+    height: 0;
+    border-color: transparent;
+    border-style: none;
+    border-width: 0;
+    background-color: transparent;
+    float: none;
+    cursor: auto;    }
 
-#navsummary {    }
+#navsummary {
+    background-image: none;
+    float: none;
+    height: 0;
+    width: 0;
+    border-color: transparent;
+    border-style: none;
+    border-width: 0;
+    background-color: transparent;
+    }
 
 #navsummary:hover {    }
 
@@ -32,17 +55,32 @@ nav {
     display: none;    }
 
 #homeicon {
-    /* text-align: left; */    /* !!!!! THIS ISN'T NEEDED FOR HAMBURGER MENU, KEEPING TO VERIFY IF IT'S NEEDED FOR DESKTOP MENU !!!!! */
+    float: left;    /* !!!!! THIS ISN'T NEEDED FOR HAMBURGER MENU, KEEPING TO VERIFY IF IT'S NEEDED FOR DESKTOP MENU !!!!! */
     display: inline;
     position: fixed;
+    top: 0;
+    left: 0;
     width: 25px;
     padding: 7.5px;    /* ----- Replace with actual measurement ----- */
-    margin: 12.5px 0px 0px 12.5px;    }    /* ----- Replace with actual measurement ----- */
+    margin: 0;    }    /* ----- Replace with actual measurement ----- */
 
 #navlist {    /* Holds together nav search, About, Archive, and Library items */
-    float: right;    }    /* Pushes the group as a whole to the right */
+    /* float: right; */    }    /* Pushes the group as a whole to the right */
 
 .navnothome {
-    padding: 5.5px 7.5px 3.5px 7.5px;    /* ----- Replace with actual measurement ----- */   
-    margin: 12.5px 5px 0px 5px;    /* ----- Replace with actual measurement ----- */
-    float: left;    }    /* Makes the items go in the proper left-to-right order */
+    /* padding: 5.5px 7.5px 3.5px 7.5px; */    /* ----- Replace with actual measurement ----- */   
+    /* margin: 12.5px 5px 0px 5px; */    /* ----- Replace with actual measurement ----- */
+    margin: 0;
+    /* float: left; */    }    /* Makes the items go in the proper left-to-right order */
+
+
+
+
+
+
+
+
+
+
+
+

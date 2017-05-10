@@ -17,13 +17,13 @@
         <!-- The php string and class="active" is a holdover from Kirby blogprints.
         .active class can be used to style just the name of the page currently on
         (Doesn't apply to home, since I call it above with just an icon) -->
-        <a <?php e($p->isOpen(), ' class="active"') ?> href="<?php echo $p->url() ?>" >
+        <a <?php e($p->isOpen(), ' class="active"') ?> href="<?php echo $p->url() ?>" class="menuwordlink">
 
         	<li id="menuword" class="navnothome m-display yellowhover">
+                
+                <span <?php e($p->isOpen(), ' class="active2"') ?> href="<?php echo $p->url() ?>" >
 
-                <?php echo $p->title()->html() ?>
-
-        	</li>
+                <?php echo $p->title()->html() ?></span></li>
 
         </a>
 

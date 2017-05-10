@@ -10,9 +10,8 @@
 <?php snippet('head-close') ?>
 
 
-    <!-- CONFLICT!!! Does this go here, "directly after the opening <body> tag on each page you want to load it"
+    <!-- CONFLICT!!! Does this 'facebook-sdk' snippet go here, "directly after the opening <body> tag on each page you want to load it"
     OR "right before closing </body> tag" (in the footer.php snippet)? Currently it is in both places.-->
-    <?php snippet('facebook-sdk') ?>
 
 
 

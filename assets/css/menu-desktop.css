@@ -1,0 +1,108 @@
+/* THIS HOLDS THE CLASSES AND IDS (AND THEIR STYLES) ISOLATED FOR JUST THE DESKTOP MENU
+TO INCORPORATE RESPONSIVITY, THESE CLASSES AND IDS SHOULD MATCH EXACTLY THE ONES FOR THE HAMBURGER MENU.
+THEIR PROPERTIES CAN BE ADJUSTED FOR RESPONSIVITY, BUT ULTIMATELY THEY WILL REFER TO JUST ONE HTML */
+
+nav {
+    z-index: 100;    }
+
+#navdetails {
+    float: none;
+    position: static;
+    padding: 0;    }
+
+#navdetails[open] {
+    background-color: transparent;
+    padding: 0;
+    width: 100%;    }
+
+#navdetails[open] #navsummary {
+    background-image: none;
+    height: 0;
+    border-color: transparent;
+    border-style: none;
+    border-width: 0;
+    background-color: transparent;
+    float: none;
+    cursor: auto;    }
+
+#navsummary {
+    background-image: none;
+    float: none;
+    height: 0;
+    width: 0;
+    border-color: transparent;
+    border-style: none;
+    border-width: 0;
+    background-color: transparent;    }
+
+#navsummary:hover {    }
+
+#navsummary::-webkit-details-marker {
+    display: none;    }
+
+#homeicon {
+    display: inline;
+    position: fixed;
+    left: calc(2.381vw - 0.7035rem + 0.211rem);
+    top: calc(2.381vw - 0.2814rem - 0.211rem);
+    width: 1.407rem;    
+    padding: 0.422rem;    }
+
+#navlist {    /* Holds together nav search, About, Archive, and Library items */
+    display: inline;
+    float: right;    }    /* Pushes the group as a whole to the right */
+
+.navnothome {
+    display: inline;
+    position: relative;
+    top: 0.422rem;    }
+
+.active2 {
+    border-style: none none solid none;
+    border-color: black;
+    border-width: 0.2855vw;   /* SHOULD MATCH RESULT DATE */
+    padding-bottom: calc(0.422rem - 0.2855vw);    }
+
+#menuword {
+    position: relative;
+    top: 15px;
+    display: inline;
+    padding: 0.422rem 0 0.422rem 0.422rem;
+    margin-top: 0;
+    margin-right: 0.422rem;
+    box-sizing: border-box;
+    padding-right: 0.422rem;
+    border-color: transparent;
+    border-right-width: 0.422rem;    }
+#menuword:hover {
+    border-color: #e2e43a;    }
+
+#navsearch {
+    margin-top: 0;
+    margin-left: 0.844rem;
+    margin-right: 0.422rem;
+    float: right;    }
+
+#navsearchbutton {    /* :) This refers to the button element holding the image */
+    padding-right: 0.422rem;    }
+
+.desktopcontent:not(#homepagepost) {
+    z-index: -100;    }
+
+#archivemenudesktopcontent {
+    z-index: 100;    }
+
+#aboutdesktopcontent {
+    z-index: 100;    }
+
+
+
+
+@media only screen and (min-width: 1225px) {
+    body {
+        background-color: red;    }
+}
+
+
+
+

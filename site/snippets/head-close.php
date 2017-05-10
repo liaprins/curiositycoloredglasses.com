@@ -21,12 +21,8 @@
  	<!-- <?php echo css('assets/css/menu-desktop-cascade.css') ?> -->
 
 
-
-
  	<!-- Testing icon sizes set with rems -->
  	<?php echo css('assets/css/icon-sizing.css') ?>
-
-
 
 
  	<!-- Media queries -->
@@ -34,8 +30,12 @@
  	<?php echo css('assets/css/text-mediaqueries.css') ?>
 
 
+
  	<!-- Pulling in the desktop menu styles as a media query on the file so it's esier to edit on its own -->
+ 	<!--
  	<link rel="stylesheet" href="assets/css/menu-desktop-cascade.css" media="only screen and (min-width: 1175px)">
+	-->
+	<link rel="stylesheet" href="assets/css/menu-desktop.css" media="only screen and (min-width: 1175px)">
 
 
 
