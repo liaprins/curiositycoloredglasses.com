@@ -32,12 +32,14 @@
             <!-- COMMENTING THIS OUT UNTIL I CAN FIGURE OUT HOW TO MAKE IT FUNCTION LIKE BROWSER BACK BUTTON 
             (CURRENTLY JUST LINKS TO HOME PAGE, WHICH IS REDUNDANT TO THE NAV ITEM) -->
             <!-- <?php snippet('blogarticle-backarrow') ?> -->
+            
+            </div>
 
 
+            <div id="postdesktopcontent">
 
             <!-- date of post -->
             <?php snippet('blogarticle-date') ?>
-
 
 
             <!-- postglasses icon -->
