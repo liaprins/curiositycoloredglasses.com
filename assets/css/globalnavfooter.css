@@ -1,85 +1,59 @@
-/* "1 lineheight" = the height of one lineheight's-worth of m-textface at 1.6 lineheight */
-
 /* GLOBAL (STYLES THAT ARE ON ALL PAGES) -------------------------------------------------- */
 
 html {
-    height: 100%;     /* :) This is for the fixed to the bottom footer */
+    height: 100%;     /* This is for the fixed-to-the-bottom footer */
     font-size: 1em;    }
 
-body {    /* :) This spans the total screen width, 100% */
-    position: relative;         /* :) This is for the fixed to the bottom footer */
+body {    /* This spans the total screen width, 100% */
+    position: relative;         /* This is for the fixed-to-the-bottom footer */
     min-height: 100%;
-    padding-bottom: calc(32.142vw + 9.975rem + 0.297rem);    
+    padding-bottom: calc(32.142vw + 10.272rem);    
     background-color: white;
     color: black;
-    /* font-family: 'Sintesi_Sans', 'Courier_New', Courier, Monotype; */
     font-family: 'Sintesi_Sans_Light', 'Courier_New', Courier, Monotype;
-    line-height: 1.7;
-    /* line-height: 1.6; */   }
+    line-height: 1.7;   }
 
 main {    /* :) This is for all content except nav and footer on all pages; "content area" in G-Drive's Responsive Diagrams doc */
-    max-width: 1610px;    /* FINALIZE This is is max width that allows menu icon (25px) to have 7.5px padding while hovered on, and beyond that, 30px margin all around (70px/col x 23 cols = 1610px); I can certainly set max width to less than this, but not more, without crowding menu icon so it's not centered in the outermost column. Alternatively, I could also make the very outside columns (only of desktop’s 21-column grid) wider %-wise (just enough to accommodate the glasses icon centering), and also adjusting the middle 19 columns of the grid to be narrower %-wise */
-    width: 78.571%;    /* :) V-Mobile 22/28 cols | Use % here instead of vw because they can be used inside the max-width */
+    max-width: 1225px;    /* Max width is set with media queries, but this is a backup in case the media queries don't run */
+    width: 78.571%;    /* 22/28 cols | Use % here instead of vw because it can be used inside the max-width */
     margin: 0 auto;    }
 
-*, *:before, *:after {    /* :) Setting the easier type of box-sizing to the entire site */
+*, *:before, *:after {    /* Setting the more intuitive type of box-sizing to the entire site */
     box-sizing: border-box;   }
 
 .yellowhover:hover {
-    background-color: #e2e43a;    }    /* :) For all hover states with a yellow background */
-
-/* COLUMN TEST -------------------------------------------------- */
-
-.test {
-    width: 3.571%;    /* :) V-Mobile 1/28 cols per colored square */
-    display: inline;
-    float: left;
-    opacity: 0.7;
-    font-size: 6px;
-    text-align: center;    }
-
-.test1 {
-    background-color: aqua;    }
-
-.test2 {
-    background-color: yellow;    }
-
-
-/* LINE LENGTH TEST -------------------------------------------------- */
-
-#fortyfifthtoseventyfifth {
-    background-color: #e2e43a;    }
+    background-color: #e2e43a;    }    /* For all hover states with a yellow background */
 
 
 
 /* NAV -------------------------------------------------- */
 
-.underlineinput {    /* :) Applies to both nav search bar and search page input fields */
+.underlineinput {    /* Applies to both nav search bar and search page input fields */
     border-style: none none solid none;
-    border-width: 2px;
+    border-width: 0.125rem;    /* This will match the weight of the home glasses icon at any screensize */
     border-color: black;
     background-color: transparent;
     color: black;    }    
 
-.searchbutton {    /* :) Applies to both nav search bar and search page buttons */
+.searchbutton {    /* Applies to both nav search bar and search page buttons */
     background-color: transparent;
     border-style: none;
-    cursor: pointer;    }    /* :) This is to force the curser into a hand! */
+    cursor: pointer;    }    /* This is to force the curser into a hand */
 
 #navsearchinput {
-    padding: 0 0 4px 0;    /* :) Finessed the space between input word and underline bar to match space between input and bottom of field for subscribe + comment name fields */
-    width: calc(67.857vw - 1.6rem);    }    /* V-Mobile | This should be the width of the content area within the open hamburger menu (19/28 cols = 67.857vw) minus the width of the menu icon + its spacing between it and this input bar (15px + 7.5px = 22.5px) */
+    padding-bottom: 0.25rem;    /* :) Finessed the space between input word and underline bar to match space between input and bottom of field for subscribe + comment name fields */
+    width: calc(67.857vw - 1.6rem);    }
 
-#navsearchinput::-webkit-input-placeholder {    /* :) This is to make the placeholder text in Chrome look multiplied (because I can't get it to actually!) */
+#navsearchinput::-webkit-input-placeholder {    /* This is to make the placeholder text in Chrome look multiplied (because I can't get it to actually!) */
    color: #686b31;    }    
 
-#navsearchbutton {    /* :) This refers to the button element holding the image */
-    height: 30px;    /* :) For some reason for search icons/buttons, I had to put the padding on the button and account for its size to fit the img perfectly inside; if I tried to use box-sizing:content-box and put the padding on the img, it raised up the icon and couldn't figure out how to get it level except this method */
-    padding: 7.5px;    }
+#navsearchbutton {    /* This refers to the button element holding the image */
+    height: 1.688rem;    /* For some reason for search icons/buttons, I had to put the padding on the button and account for its size to fit the img perfectly inside; if I tried to use box-sizing:content-box and put the padding on the img, it raised up the icon and couldn't figure out how to get it level except this method */
+    padding: 0.422rem 0 0.422rem 0.422rem;    }
 
 #navsearchicon {    /* :) This refers to just the magnifier SVG image */
     display: inline;
-    height: 15px;    }
+    height: 0.844rem;    }
 
 
 /* FOOTER -------------------------------------------------- */
@@ -89,28 +63,26 @@ footer {
     bottom: 0;
     width: 100%;
     background-color: #e2e43a;
-    margin-top: 10.714vw;    /* :) V-Mobile 3/28 cols to separate yellow BG from bottom of content */
-    padding: 10.714vw 0;    }    /* :) V-Mobile 3/28 cols to pad top and bottom of yellow BG */
+    margin-top: 10.714vw;    /* 3/28 cols to separate yellow BG from bottom of content */
+    padding: 10.714vw 0;    }    /* 3/28 cols to pad top and bottom of yellow BG */
 
-#footercontent {    /* :) Matching 'main' tag for center content column width and centering */
-    max-width: 1610px;    /* FINALIZE Match whatever 'main' turns out to be */   
-    width: 78.571%;    /* :) V-Mobile 22/28 cols | Use % here instead of vw because they can be used inside the max-width */
+#footercontent {    /* Matching <main> tag for center content column width and centering */
+    max-width: 1225px;    /* Match whatever <main>'s max-width is; see above, line ~16 */   
+    width: 78.571%;    /* 22/28 cols | Use % here instead of vw because they can be used inside the max-width */
     margin: 0 auto;    }
 
-.boxinput {    /* :) This applies to subscribe + comment's input fields */
+.boxinput {    /* This applies to subscribe + comment's input fields */
     font-family: 'Sintesi_Sans', 'Courier_New', Courier, Monotype;
     border-style: solid ;
-    border-width: 2px;
+    border-width: 0.125rem;
     border-color: black;
-    color: black;    /* :) This is just for user's input text; does not apply to placeholder text */
-    background-color: transparent;   /* :) This would be default, but <body> sets all BG to white */
-    /* height: 30px; */
+    color: black;    /* This is just for user's input text; does not apply to placeholder text */
+    background-color: transparent;   /* This would be default, but <body> sets all BG to white */
     height: 1.875rem;    
-    width: 78.571vw;    /* :) V-Mobile 22/28 cols to match 'main' */
-    /* padding: 1px 7px 0 7px; */    /* :) Finessing to be perfect */   
-    padding: 0.033rem 0.233rem 0 0.467rem;    }    /* :) Finessing to be perfect */   
+    width: 78.571vw;    /* 22/28 cols to match 'main' */
+    padding: 0.033rem 0.233rem 0 0.467rem;    }    /* Finessing to be perfect */   
 
-#mce-EMAIL::-webkit-input-placeholder {    /* :) This id applies to just the subscribe input field; this is to target the placeholder text; not accepted by FF */
+#mce-EMAIL::-webkit-input-placeholder {    /* This id applies to just the subscribe input field; this is to target the placeholder text; not accepted by FF */
    color: #686b31;   }    /* This color is to make the placeholder text in Chrome look multiplied (because I can't get it to actually!) */
 
 .boxbutton {    /* This applies to subscribe button and to comments' "Post a comment" button */
@@ -118,25 +90,23 @@ footer {
     border: solid;
     border-width: 2px;
     border-color: black;    
-    /* padding: 2px 7.5px 0 7.5px; */    /* :) Finessing to be perfectly centered */
     padding: 0.125rem 0.469rem 0 0.469rem;
-    /* height: 30px; */
     height: 1.875rem;    }
 .boxbutton:hover {
     color: black;    }
 
 .subscribebutton {
-    width: 78.571vw;    /* :) V-Mobile 22/28 cols */
-    margin: 0.9375rem 0;    /* :) Half the height of the input field and of the button */
-    color: #e2e43a;    }    /* :) Making the text match the yellow footer background */ 
-.subscribebutton:hover {    /* :) For some reason this needs to be a class; id's aren't working for this element with hover (including it's id assigned by MailChimp: mc-embedded-subscribe) */
-    background-color: #e2e43a;    }    /* :) Making the button BG color match the yellow footer background */
+    width: 78.571vw;    /* 22/28 cols */
+    margin: 0.9375rem 0;    /* Half the height of the input field and of the button */
+    color: #e2e43a;    }    /* Making the text match the yellow footer background */ 
+.subscribebutton:hover {    /* For some reason this needs to be a class; id's aren't working for this element with hover (including it's id assigned by MailChimp: mc-embedded-subscribe) */
+    background-color: #e2e43a;    }    /* Making the button BG color match the yellow footer background */
 
-#subscribemessage {    /* :) "I'll only ever email you to let you know about..." */
-    margin-bottom: 1.024rem;    }    /* :) V-Mobile 0.5 lineheight */
-#subscribemessage a {    /* :) Email subscribe explanation's link to example campaigns | FINALIZE May end up unnecessary if I apply a default underline to all content or <p> links */
+#subscribemessage {    /* "I'll only ever email you to let you know about..." */
+    margin-bottom: 1.024rem;    }    /* 0.5 lineheight */
+#subscribemessage a {    /* Email subscribe explanation's link to example campaigns | May end up unnecessary if I apply a default underline to all content or <p> links */
     text-decoration: underline;
-    text-decoration-color: #b0b13a;    }    /* :) Faking the underline color on the links to be the same gray as links' are on white, but multiplied on the yellow; following pattern of subscribe input placeholder text */
+    text-decoration-color: #b0b13a;    }    /* Faking the underline color on the links to be the same gray as links' are on white, but multiplied on the yellow; following pattern of subscribe input placeholder text */
 #subscribemessage a:hover {
     text-decoration: underline;
     text-decoration-color: black;    }
@@ -144,15 +114,12 @@ footer {
 #mc-embedded-subscribe-form div {   /* :) Error message, like "Please enter a value" */
     /* color: #df0a17; */    /* :) CSS red multiplied over my yellow, to match the pattern of the input field's placeholder text mutliplied over the yellow (because it's a bit darker when multiplied and easier to read) | FINALIZE In FF, it also applies red to the placeholder text of the email input field which I don't want, so commenting this out, but leaving it in case I decide to just not support FF (or at least the IBM version, not sure how it behaves in newer FF versions) */
     /* font-size: 9.877px; */    /* :) This needs to match xs-textface, but since I can't apply classes to it, I'm calling it's class here and adding the properties needed: Mobile-V based on 1.125 ratio (8:9, Major Second) typescale with 12.5px base at level 0, and this at level -2 | Fallback for browser's not processing rems */
-    font-size: 0;
-    /* margin: 10px 0 -8px 0; */    }    /* :) Finessing the placement */
+    font-size: 0;    }    /* :) Finessing the placement */
 
-#follow {    }    /* :) <span> holding follow icons + liaprins.com; not needed by V-Mobile, but may be needed by other versions, to float them as a whole...? so leaving it in CSS and HTML for now */
-
-.socialicon {    /* :) This applies to both share (post page) and follow icons (footer) */
-    box-sizing: content-box;    /* :) This makes the padding go outside of the image, otherwise it will cut into it and shrink it */
-    height: 15px;    /* FINALIZE Or width? */
-    padding: 7.5px;    /* FINALIZE */
+.socialicon {    /* This applies to both share (post page) and follow icons (footer) */
+    box-sizing: content-box;    /* This makes the padding go outside of the image, otherwise it will cut into it and shrink it */
+    height: 0.844rem;
+    padding: 0.422rem;    
     cursor: pointer;    }    /* :) This forces the curser into a hand */
 
 .followicon {

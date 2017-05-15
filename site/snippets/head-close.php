@@ -21,10 +21,6 @@
  	<!-- <?php echo css('assets/css/menu-desktop-cascade.css') ?> -->
 
 
- 	<!-- Testing icon sizes set with rems -->
- 	<?php echo css('assets/css/icon-sizing.css') ?>
-
-
  	<!-- Media queries -->
  	<?php echo css('assets/css/mediaqueries.css') ?>
  	<?php echo css('assets/css/text-mediaqueries.css') ?>

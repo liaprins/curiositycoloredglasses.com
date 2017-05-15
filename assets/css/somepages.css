@@ -1,46 +1,45 @@
-/* "1 lineheight" = the height of one lineheight's-worth of m-textface at 1.6 lineheight */
+/* "1 lh" = 2.048rem = the height of one lineheight's-worth of m-textface at 1.6 lineheight (although the base line height on <body> tag is actually set to 1.7; but I am keeping these rem measurements, because they look good) */
 
 /* HOME PAGE -------------------------------------------------- */
 
-header {    /* :) Holds blog name  + tagline */
-    padding-top: 10.714vw;    }    /* :) V-Mobile 2/28 cols */
+header {    /* Holds blog name + tagline */
+    padding-top: 10.714vw;    }    /* 2/28 cols */
 
 #tagline { 
     text-align: center;
-    margin: 1.536rem 0 2.048rem 0;
-    /* margin: 1.024rem 0 1.536rem 0; */    }    /* :) V-Mobile top: 0.5 lineheights, bottom: 0.75 lineheights */
+    margin: 1.536rem 0 2.048rem 0;   }    /* top + bottom: .75 lh */
 
 #homedate {
-    margin-top: 2.048rem;    }    /* :) V-Mobile 0.75 lineheights */
+    margin-top: 2.048rem;    }    /* .75 lh */
 
 #homeintro {
     hyphens: auto;
-    margin: 1.024rem 0 0.512rem 0;    }    /* :) V-Mobile top: 0.5 lineheights, bottom: 0.25 lineheights */
+    margin: 1.024rem 0 0.512rem 0;    }    /* top: .5 lh, bottom: .25 lh */
 
 #readmore {
     display: inline;
-    padding: 0.6em 0.5em 0.5em 0;    }    /* :) Basing on line-height; they would all be 0.6em, but I had to optically finesse R + bottom, so they are 0.5em */
+    padding: 0.6em 0.5em 0.5em 0;    }    /* Basing on line-height; they would all be 0.6em, but I had to optically finesse R + bottom, so they are 0.5em */
 
 #hometag {
-    margin: 0.512rem 0 1.536rem 0;    }    /* :) V-Mobile top: 0.25 lineheights, bottom: 0.75 lineheights */
+    margin: 0.512rem 0 1.536rem 0;    }    /* top: .25 lh, bottom: .75 lh */
 
 
 /* HOME + POST PAGES -------------------------------------------------- */
 
 .date {
-    padding-top: 0.512rem;    /* :) V-Mobile top: 0.25 lineheight */
-    margin-bottom: 1.024rem;    /* :) V-Mobile 0.5 lineheight */
+    padding-top: 0.512rem;    /* top: .25 lh */
+    margin-bottom: 1.024rem;    /* .5 lh */
     border-style: solid none none none; 
-    border-width: 1.71428vw;    }    /* :) This should dynamically match the weight of the line of the postglasses below date, based on their width of 42.857vw (12/28 cols) and the ratio of the postglasses width to their line weight of 25:1; */ 
+    border-width: 1.71428vw;    }    /* This should dynamically match the weight of the line of the postglasses below date, based on their width of 42.857vw (12/28 cols) and the ratio of the postglasses width to their line weight of 25:1 */ 
 
 .postglasses {
-    width: 42.857vw;    /* :) V-Mobile 12/28 cols */
+    width: 42.857vw;    /* 12/28 cols */
     display: block;
-    margin: 1.024rem auto 1.536rem auto;    /* :) V-Mobile top: 0.5 lineheight, bottom: 0.75 lineheight */
+    margin: 1.024rem auto 1.536rem auto;    /* top: .5 lh, bottom: .75 lh */
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 99%;    /* :) Had to make it just under 100% to prevent slightest amount of edges from peeking out from behind mask */
-    -webkit-transition: background-size 0.5s;    /* :)for Safari */
+    background-size: 99%;    /* Had to make it just under 100% to prevent slightest amount of edges from peeking out from behind mask */
+    -webkit-transition: background-size 0.5s;    /* for Safari */
     transition: background-size 0.5s;    
     -webkit-transition-timing-function: ease-out;
     transition-timing-function: ease-out;    }
@@ -48,224 +47,201 @@ header {    /* :) Holds blog name  + tagline */
     background-size: 175%;    }  
 
 .posttitle {
-    margin-top: 2.048rem;
-    /* margin-top: 1.536rem; */    }    /* :) V-Mobile top: 0.5 lineheight, bottom: 3/28 cols | This id was needed because <h2> couldn't hold margins because different margins are needed between post titles and About, etc pages, and <h2> would cascade to override either ids; id that holds margins for About, etc pages' is .extracontentpagetitle */
+    margin-top: 2.048rem;    }    /* 1 lh | This id was needed because <h2> couldn't hold margins because different margins are needed between post titles and About, etc pages, and <h2> would cascade to override either ids; id that holds margins for About, etc pages' is .extracontentpagetitle */
 
 .tag {
-    padding: 0.6em 0.5em 0.5em 0.5em;    }    /* :) Finessing to be perfectly centered */
+    padding: 0.6em 0.5em 0.5em 0.5em;    }    /* Finessing to be perfectly centered */
 
 
 /* POST PAGE -------------------------------------------------- */
 
-#backarrow {    /* :) This is just here in case I put the HTML for it back in! */
-    box-sizing: content-box;    /* :) Preventing the padding from cutting into the yellow hover state */
-    padding: 7.5px;    /* :) All icons should have 7.5px padding for yellow hover state */
-    width: 25px;    }    
+#backarrow {    /* This is just here in case I put the HTML for it back in */
+    box-sizing: content-box;    /* Preventing the padding from cutting into the yellow hover state */
+    width: 1.407rem;
+    padding: 0.422rem;    }    
 
-.mockmain {    /* :) This applies to the article element which holds all the post content and top part of Archive page; it is taking the place of <main> on post page, because there's only one <main> element allowed per page, but it has to split into two to allow wider #relevantreading <section> to fit between, to accomodate RR results with margins that extend beyond <main> */
-    max-width: 1610px;    /* FINALIZE This is is max width that allows menu icon (25px) to have 7.5px padding while hovered on, and beyond that, 30px margin all around (70px/col x 23 cols = 1610px); I can certainly set max width to less than this, but not more, without crowding menu icon so it's not centered in the outermost column. Alternatively, I could also make the very outside columns (only of desktop’s 21-column grid) wider %-wise (just enough to accommodate the glasses icon centering), and also adjusting the middle 19 columns of the grid to be narrower %-wise */
-    width: 78.571%;    /* :) V-Mobile 22/28 cols | Use % here instead of vw because they can be used inside the max-width */
+.mockmain {    /* This applies to the article element which holds all the post content and top part of Archive page; it is taking the place of <main> on post page, because there's only one <main> element allowed per page, but it has to split into two to allow wider #relevantreading <section> to fit between, to accomodate RR results with margins that extend beyond <main> */
+    max-width: 1225px;
+    width: 78.571%;    /* 22/28 cols | Use % here instead of vw because they can be used inside the max-width */
     margin: 0 auto;    }
 
 #pre-rr {
-    padding-top: 10.714vw;    }    /* :) V-Mobile 3/28 cols */
+    padding-top: 10.714vw;    }    /* 3/28 cols */
 
 #postdate {
-    width: calc(78.571vw - 0.957rem - 0.957rem);    }    /* :) V-Mobile This should be [the width of <main> (22/28 cols = 78.571vw)[] minus [the width of menu icon + the space between them (17px + 15px = 32px)] | Making room for the menu icon */
+    width: calc(78.571vw - 1.914rem);    }
 
-#postintro {     /* :) Introductory paragraph of post, on post page only */
-    display: block;    /* :) This is so the margins will be recognized, since margins won't apply to inline elements (at least in this case) */
-    margin: 1.024rem 0 0.512rem 0;    }    /* :) V-Mobile top: .5 lh, bottom: .25 lh */
+#postintro {     /* Introductory paragraph of post, on post page only */
+    display: block;    /* This is so the margins will be recognized, since margins won't apply to inline elements (at least in this case) */
+    margin: 1.024rem 0 0.512rem 0;    }    /* top: .5 lh, bottom: .25 lh */
 
 #postintro p {
-    hyphens: auto;    }    /* :) This applies to intro on the post page; it needs hyphenation but the auto-wrapping <p> tags surrounding text called from the panel is interfering with any potential hyphenation class being applied */
+    hyphens: auto;    }    /* This applies to intro on the post page; it needs hyphenation but the auto-wrapping <p> tags surrounding text called from the panel is interfering with any potential hyphenation class being applied */
 
-#posttagshare {     /* :) Groups the tags and share icons into one div; the HTML id is located in blogarticle.php template, surrounding the tag and share snippets */
-    margin: 0.512rem 0;    }    /* :) V-Mobile top + bottom: .25 lh */
+#posttagshare {     /* Groups the tags and share icons into one div; the HTML id is located in blogarticle.php template, surrounding the tag and share snippets */
+    margin: 0.512rem 0;    }    /* top + bottom: .25 lh */
 
-#posttag {    }    /* :) Applies to each tag in post page */
-
-#share {    /* :) Applies to all the share icons together as a whole */
-    padding-left: 7.5px;
+#share {    /* Applies to all the share icons together as a whole */
+    padding-left: 0.422rem;
     float: right;    }
 
-.shareicon {    }    /* :) Applies to just individual share icons */
+#posttext {    /* The div that holds all text as a whole (and images called within text, galleries, inline vocab words, etc) */
+    margin: 1.024rem 0;    }    /* top + bottom: .5 lh */
 
-#posttext {    /* :) The div that holds all text as a whole (and images called within text, galleries, inline vocab words, etc) */
-    margin: 1.024rem 0;    }    /* :) V-Mobile top + bottom: .5 lh */
+#posttext p {    /* This applies to each paragraph of text */
+    clear: right;    /* This is to push the text all the way down istead of wrapping around share icons, in the instance they are pushed to the next line by tags */
+    hyphens: auto;    /* This applies to content text on the post page; it needs hyphenation but the auto-wrapping <p> tags surrounding text called from the panel is interfering with any potential hyphenation class being applied */
+    margin: 1.024rem 0;    }    /* top + bottom: .5 lh */
 
-#posttext p {    /* :) This applies to each paragraph of text */
-    clear: right;    /* :) V-Mobile | This is to push the text all the way down istead of wrapping around share icons, in the instance they are pushed to the next line by tags */
-    hyphens: auto;    /* :) This applies to content text on the post page; it needs hyphenation but the auto-wrapping <p> tags surrounding text called from the panel is interfering with any potential hyphenation class being applied */
-    margin: 1.024rem 0;    }    /* :) V-Mobile top + bottom: .5 lh */
+#posttext p:last-of-type {    /* This is just the last paragraph of text */
+    display: inline;    }    /* This is to get the last paragraph to be inline, to accept the tiny article end glasses inline */
 
-#posttext p:last-of-type {    /* :) This is just the last paragraph of text */
-    display: inline;    }    /* :) This is to get the last paragraph to be inline, to accept the tiny article end glasses inline */
-
-#articleendglasses {    /* :) The tiny glasses at the end of the article text */
+#articleendglasses {    /* The tiny glasses at the end of the article text */
     display: inline;
-    width: 1.2em;    /* :) For V-Mobile this equates to 15px based on m-textface size of 12.5px, so if I want to maintain text size to articleendglasses size ratio, keep this relative em measurement */
-    margin: 0 0 .15em .25em;    }    /* :) Finessing to be perfectly placed; since ems are relative to text size, these ratios should hold for all screen sizes and text sizes, if I also keep the icon sized via ems, like in above line */
+    width: 1.2em;    /* This equates to 15px based on m-textface size of 12.5px, so if I want to maintain text size to articleendglasses size ratio, keep this relative em measurement */
+    margin: 0 0 0.15em 0.25em;    }    /* Finessing to be perfectly placed; since ems are relative to text size, these ratios should hold for all screen sizes and text sizes, if I also keep the icon sized via ems, like in above line */
 
 .postpagesectionsummary {
-    margin: 2.048rem 0;    }    /* :) V-Mobile top + bottom: 1 lh */
+    margin: 2.048rem 0;    }    /* top + bottom: 1 lh */
 
-.vocabwordinline {    /* :) This applies to just the inline vocab word, via vocab.php in the site/tags folder */
-    padding: 0.6em 0.3em 0.5em 0.5em;    }    /* :) Based on line-height, but had to finesse optically, and pull in L + R a bit because it was too wide of a space between vocab word and other text inline */
+.vocabwordinline {    /* This applies to just the inline vocab word, via vocab.php in the site/tags folder */
+    padding: 0.6em 0.3em 0.5em 0.5em;    }    /* Based on line-height, but had to finesse optically, and pull in L + R a bit because it was too wide of a space between vocab word and other text inline */
 
 #vocabwordanddefinition {
     margin: 1.024rem 0;    }
 
-#glossaryvocabwordandaudio {    /* :) This applies to the vocab word, where it shows up with its definition in the glossary (and optionally, the audio icon next to it) */
-    line-height: 1.2;   /* :) Would be 1.6 to match look of stacked blog name in display font, but had to adjust optically */
-    margin-bottom: 0.256rem;
-    /* margin: 1.024rem 0 0.256rem 0;*/    }    /* :) V-Mobile top: 0.5 lineheight, bottom: 0.125 lineheight */    
-
-.glossaryvocabword {    }    /* :) Has to be a class because id is already taken by some dynamic PHP for the anchor link */
+#glossaryvocabwordandaudio {    /* This applies to the vocab word, where it shows up with its definition in the glossary (and optionally, the audio icon next to it) */
+    line-height: 1.2;   /* Would be 1.6 to match look of stacked blog name in display font, but had to adjust optically */
+    margin-bottom: 0.256rem;    }    /* top: .5 lh, bottom: .125 lh */    
 
 #pronunciation {
     white-space: nowrap;    }
 
 #audioicon { 
     box-sizing: content-box;
-    height: 12.5px;    /* :) Had to make smaller than usual 15px for icons to help it fit inline with potentially long phrases that wrap to next line, otherwise it would affect the text line-height */
-    padding: 0.25em;    /* :) Would be 7.5px like other icons, but has to fit inline (see above line explanation ^^^), and this way it should be relative to the line height */
-    vertical-align: middle;    /* :) This centers the icon with the vocab word text */
-    margin-top: -.1em;    /* :) This is to finesse the vertical centering */
+    height: 0.703rem;    /* Had to make smaller than other icons to help it fit inline with potentially long phrases that wrap to next line, otherwise it would affect the text line-height */
+    padding: 0.25em;
+    vertical-align: middle;    /* This centers the icon with the vocab word text */
+    margin-top: -.1em;    /* This is to finesse the vertical centering */
     cursor: pointer;    }
 
-#definitionandillustration {    }
-
 #definition {
-    margin-bottom: 0.512rem;    }    /* :) V-Mobile .25 lh; would be .125 lh to match space between vocab word and definition, but had to adjust optically */
+    margin-bottom: 0.512rem;    }    /* .25 lh; would be .125 lh to match space between vocab word and definition, but had to adjust optically */
 
 #uparrow {
     box-sizing: content-box;
-    height: 10px;    /* :) Had to make smaller than usual 15px for icons to help it fit inline with potentially long phrases that wrap to next line, otherwise it would affect the text line-height */
-    padding: 0.3em;    /* :) Would be 7.5px like other icons, but has to fit inline (see above line explanation ^^^), and this way it should be relative to the line height */
-    vertical-align: middle;    /* :) This centers the icon with the vocab word text */
-    margin: -.35em 0 0 .25em;    /* :) This is to finesse the vertical centering */
+    height: 0.694rem;    /* :) Had to make smaller than usual 15px for icons to help it fit inline with potentially long phrases that wrap to next line, otherwise it would affect the text line-height */
+    padding: 0.3em;
+    vertical-align: middle;    /* This centers the icon with the vocab word text */
+    margin: -.35em 0 0 .25em;    /* This is to finesse the vertical centering */
     cursor: pointer;    }
 
 #vocabillustration {
     margin-bottom: 0;
-    max-width: 78.571vw;    }    /* :) V-Mobile 22/28 cols */
+    max-width: 78.571vw;    }    /* 22/28 cols */
 
-#rrsectionheader {    /* :) This applies to Relevant Reading's section header, which isn't encapsulated in the .post <article> class (so that the results can have a wider area to accommodate their margins needing to be on both sides for spacing) */
-    max-width: 1610px;    /* FINALIZE This is is max width that allows menu icon (25px) to have 7.5px padding while hovered on, and beyond that, 30px margin all around (70px/col x 23 cols = 1610px); I can certainly set max width to less than this, but not more, without crowding menu icon so it's not centered in the outermost column. Alternatively, I could also make the very outside columns (only of desktop’s 21-column grid) wider %-wise (just enough to accommodate the glasses icon centering), and also adjusting the middle 19 columns of the grid to be narrower %-wise */
-    width: 78.571%;    /* :) V-Mobile 22/28 cols | Use % here instead of vw because they can be used inside the max-width */
-    margin: 2.048rem auto;    }    /* :) V-Mobile 1 lh*/
+#rrsectionheader {    /* This applies to Relevant Reading's section header, which isn't encapsulated in the .post <article> class (so that the results can have a wider area to accommodate their margins needing to be on both sides for spacing) */
+    max-width: 1225px;    
+    width: 78.571%;    /* 22/28 cols | Use % here instead of vw because they can be used inside the max-width */
+    margin: 2.048rem auto;    }    /* top + bottom: 1 lh*/
 #rrdetails[open] #rrsectionheader {
-    margin-bottom: 0;    }    /* :) Making it so the margin below comment section header only applies when it's open */
+    margin-bottom: 0;    }    /* Making it so the margin below comment section header only applies when it's open */
+
 
 
 /* COMMENTS (POST PAGE) -------------------------------------------------- */
 
-.commentssummary {    /* :) Making it so the margin below comment section header only applies when it's open */
+.commentssummary {    /* Making it so the margin below comment section header only applies when it's open */
     margin-bottom: 0px;    }
 .commentsdetails[open] .commentssummary {
-    margin-bottom: 1.536rem;    }    /* :) .75 lh */
+    margin-bottom: 1.536rem;    }    /* .75 lh */
 
-.onecomment {    /* :) For now this applies to already-there comments' name + date + message */
-    overflow: auto;    /* :) This line and the next are to fix a broswer bug wherein this containing element thinks it is 0px tall because it only contains floated elements; see pp373-4 in HTML & CSS book */
-    width: 100%;    /* :) This line and the previous are to fix a broswer bug wherein this containing element thinks it is 0px tall because it only contains floated elements; see pp373-4 in HTML & CSS book */
-    margin-bottom: 1.536rem;    }    /* :) V-Mobile .75 lh | This is needed so the bottom comment has this same space between it and the first "Post a Comment" button */
+.onecomment {    /* This applies to already-posted comments' name + date + message */
+    overflow: auto;    /* This line and the next are to fix a browser bug wherein this containing element thinks it is 0px tall because it only contains floated elements; see pp373-4 in HTML & CSS book */
+    width: 100%;    /* This line and the previous are to fix a broswer bug wherein this containing element thinks it is 0px tall because it only contains floated elements; see pp373-4 in HTML & CSS book */
+    margin-bottom: 1.536rem;    }    /* .75 lh | This is needed so the bottom comment has this same space between it and the first "Post a Comment" button */
 
 #avatar {
     float: left;
-    height: 10.714vw;    /* :) V-Mobile 3/28 cols */
-    width: 10.714vw;    /* :) V-Mobile 3/28 cols */
-    background-color: #e2e43a;    /* :) Currently be overridden by color randomizer code in comments.php, line ~44 */
-    margin-right: 3.571vw;    }    /* V-Mobile right: 1/28 cols */
+    height: 10.714vw;    /* 3/28 cols */
+    width: 10.714vw;    /* 3/28 cols */
+    background-color: #e2e43a;    /* Currently be overridden by color randomizer code in comments.php, line ~44 */
+    margin-right: 3.571vw;    }    /* right: 1/28 cols */
 
 #namedatecomment {
     margin-top: -0.6rem;
     float: left;
-    width: 64.286vw;   }    /* :) V-Mobile 18/28 cols | This should be <main>'s width in cols (22/28) minus avatar (2/28) minus space between this and avatar (2/28) = 18/28 cols */
+    width: 64.286vw;   }    /* 18/28 cols | This should be <main>'s width in cols (22/28) minus avatar (2/28) minus space between this and avatar (2/28) = 18/28 cols */
 
 #commentdate {
     white-space: nowrap;    }
 
 #postedcomment {
-    margin-top: calc(10.714vw - 0.7973rem - 0.7973rem - 0.17rem);    }
+    margin-top: calc(10.714vw - 1.7646rem);    }
 
-.postacommentbutton:hover {    /* :) This applies to all "Post a comment" buttons */
-    height: 20px;
-    background-color: white;    }    /* :) Making the button BG color match the white page background */
+.postacommentbutton:hover {    /* This applies to all "Post a comment" buttons */
+    background-color: white;    }    /* Making the button BG color match the white page background */
 
-#postacommentsummary {    /* :) This is the first "Post a comment" 'button' seen, before clicking it to open to the inputs */
-    display: inline;    /* :) So the background color won't span the whole page */
-    /* height: 30px; */
+#postacommentsummary {    /* This is the first "Post a comment" 'button' seen, before clicking it to open to the inputs */
+    display: inline;    /* So the background color won't span the whole page */
     height: 1.875rem;
-    /* padding: 8.25px 7.5px 0 7.5px; */    /* :) Finessing to be perfectly centered */
-    padding: 0.5159rem 0.469rem 0 0.469rem;
+    padding: 0.5159rem 0.469rem 0 0.469rem;    /* Finessing to be perfectly centered */
     border-style: solid;
-    border-width: 2px;
+    border-width: 0.125rem;
     border-color: black;
     cursor: pointer;    }
 #postacommentsummary:hover {
     color: black;    }
 
-#commentform {    }    /* :) Not sure if this is needed in other screensizes, but not needed for V-Mobile */
-
 abbr {
-    text-decoration: none;    }    /* :) Fixing the weird default dotted underline under the required asterisks (*) */
+    text-decoration: none;    }    /* Fixing the weird default dotted underline under the required asterisks (*) */
 
-.comments input {    /* :) This applies to Name field (and any other comment input fields except "Message" + "Post a comment" button) */
-    border-width: 2px;
+.comments input {    /* This applies to Name field (and any other comment input fields except "Message" + "Post a comment" button) */
+    border-width: 0.125rem;
     border-style: solid;
     border-color: black;    }
 
 #namelabel {    /* :) This applies to just the Name field's "label" which isn't visually shown, but is needed here because the name input id won't apply a top border and this will */
-    margin-top: 1.024rem;    }    /* :) V-Mobile .5 lh */
+    margin-top: 1.024rem;    }    /* .5 lh */
 
 #name {
-    margin-bottom: 15px;    }    /* :) V-Mobile half the height of the name input and button's height of 30px */
-#name::-webkit-input-placeholder {
-    /* color: blue; */    }    /* FINALIZE Replace with whatever color I want the placeholder text to be (not working in FF) */
+    margin-bottom: 0.9375rem;    }    /* Half the height of the name input and button's height of 1.875rem */
 
-#message {    /* :) This applies to only to the actual comment message input field */
-    line-height: 1.7;    /* :) */
-    padding: 0.313rem 0.438rem;    /* :) */
-    /* height: 94px; */    /* :) Should hold exactly four lines of text */
+#message {    /* This applies to only to the actual comment message input field */
+    line-height: 1.7;    
+    padding: 0.313rem 0.438rem;    
     height: 5.877rem;
     resize: none;    }    /* This is to get rid of the ability to resize the field; it should scroll automatically if needed */
-#message::-webkit-input-placeholder {
-    /* color: red; */    }    /* FINALIZE Replace with whatever color I want the placeholder text to be (not working in FF) */ 
 
-#submit {    /* :) This is the id for the second (inside) "Post a comment" button (I'm afraid to change the id in case it messes up the original Kirby comments functionality) */
+#submit {    /* This is the id for the second (inside) "Post a comment" button (I'm afraid to change the id in case it messes up the original Kirby comments functionality) */
     display: block;
-    /* height: 30px; */    /* :) For some reason the height needs to be specified here in addition to in .button (in globalnavfooter.css) to keep this button from freaking out and becoming shorter upon hover */
     height: 1.875rem;
-    margin-top: 6px;    }    /* :) Finessing spacing to optically match 15px space between name and message inputs */
+    margin-top: 0.3752rem;    }    /* Finessing spacing to optically match space between name and message inputs */
 
-#postacommentdetails {    /* :) Setting up the "x" button to replace the default <details> */
+#postacommentdetails {    /* Setting up the "x" button to replace the default <details> */
     position: relative;    }    
 #postacommentdetails summary::-webkit-details-marker {
     display: none;    }
 
-#postacommentdetails[open] summary {    /* :) This is the "x" button */
-    background-image: url('../images/x-comments-original.svg');    /* :) I had to make this a special .SVG with white space built-in so it could fake as padding when hovered on (really the BG color is the yellow) */
+#postacommentdetails[open] summary {    /* This is the "x" button for Post a Comment */
+    background-image: url('../images/x-comments-original.svg');    /* I had to make this a special .SVG with transparent space built-in on the artboard so it could fake as padding when hovered on (really the BG color is the yellow) */
     background-position: center;
     background-repeat: no-repeat;
     background-color: transparent;
-    font-size: 0;    /* :) Trying to get the words "Post a comment" to go away; this is a hack, since screenreaders will still read it, but the "x" really means the opposite ... */
+    font-size: 0;    /* Trying to get the words "Post a comment" to go away; this is a hack, since screenreaders will still read it, but the "x" really means the opposite ... */
     border-style: none;
-    /* height: 30px; */
     height: 1.875rem;
-    /* width: 30px; */    /* :) Width is needed in addition to height or the img will collapse to be too narrow*/
-    width: 1.875rem;
-    position: absolute;    /* :) Moving the "x" down to the level of the second "Post a comment" button */
+    width: 1.875rem;    /* Width is needed in addition to height or the img will collapse to be too narrow*/
+    position: absolute;    /* Moving the "x" down to the level of the second "Post a comment" button */
     bottom: 0;
-    /* left: 134.875px; */
-    left: 8.430rem;    }    /* :) This is finessed to get the x in the exact proper position relative to the "Post a comment" button, leaving 7.5px between them */
+    left: 8.430rem;    }    /* This is finessed to get the "x" in the exact proper position relative to the "Post a comment" button, leaving spacing between them */
 #postacommentdetails[open] summary:hover {
     background-color: #e2e43a;   }
 
 
 /* POST + ABOUT PAGES -------------------------------------------------- */
 
-/* :) This class is assigned in the HTML to About pg img. 
+/* This class is assigned in the HTML to About pg img. 
 This class is assigned via the site/tags/gallery.php kirbytag file to all gallery images (along with id="galleryimage").
 This class is assigned via the site/tags/tag.php kirbytag file to all content images by default.
 If I ever want to use a custom class on a content image, I can do this in the panel (via "class: xxx").
@@ -273,26 +249,24 @@ However, adding a class via the panel REPLACES this .contentimage class entirely
 So for any custom class added via the panel, I need to copy and paste all the properties of .contentimage and just replace the values I would have overridden, and also add new properties I want. */
 .contentimage { 
     display: block;
-    margin: 2.048rem auto 0 auto;    /* :) V-Mobile top: .75 lh | Leaving the bottom margin 0 since it depends if there's a caption (then figcaption specifies its top margin to cover this space) or another image (it's top margin covert the space) or text (figure specifies its bottom margin to cover the space) */
-    max-width: 78.571vw;    /* :) V-Mobile 22/28 cols */
-    max-height: 100vh;    }    /* FINALIZE Making the images never taller than the browser window (1vh = 1% of vertical height of screen) */
+    margin: 2.048rem auto 0 auto;    /* top: .75 lh | Leaving the bottom margin 0 since it depends if there's a caption (then figcaption specifies its top margin to cover this space) or another image (it's top margin covert the space) or text (figure specifies its bottom margin to cover the space) */
+    max-width: 78.571vw;    /* 22/28 cols */
+    max-height: 100vh;    }    /* Making the images never taller than the browser window (1vh = 1% of vertical height of screen) */
 
-#galleryimage {    }    /* :) This is the id for gallery images; they already have the .contentimage class applied in the site/tags/gallery.php kirbytag file */
-
-figure {    /* :) This applies to the image + its caption (if it has one) as a whole */
-    margin: 2.048rem 0 2.048rem 0;    }    /* :) V-Mobile .75 lh | This is needed so the text following a captionless image has this space between it and the image */
+figure {    /* This applies to the image + its caption (if it has one) as a whole */
+    margin: 2.048rem 0;    }    /* top + bottom: .75 lh | This is needed so the text following a captionless image has this space between it and the image */
 
 figcaption {    /* :) This applies to all places captions appear (post page single and/or gallery images, About page) */
-    padding-bottom:  1.024rem;    /* :) V-Mobile .5 lh */
+    padding-bottom:  1.024rem;    /* .5 lh */
     border-style: none none solid none;    
-    border-width: 1.71428vw;    /* :) This should dynamically match the weight of the line of the postglasses below date, based on their width of 42.857vw (12/28 cols) and the ratio of the postglasses width to their line weight of 25:1; */ 
-    margin: 1.024rem 0 2.048rem 0;    }    /* :) V-Mobile top: .5 lh, bottom: .75 lh */
+    border-width: 1.71428vw;    /* :) This should dynamically match the weight of the line of the postglasses below date, based on their width of 42.857vw (12/28 cols) and the ratio of the postglasses width to their line weight of 25:1 */ 
+    margin: 1.024rem 0 2.048rem 0;    }    /* top: .5 lh, bottom: .75 lh */
 
 
 /* ABOUT PAGE -------------------------------------------------- */
 
 #aboutimage {
-    margin-top: -0.512rem;    }    /* :) V-Mobile .25 lh | Counteracting <figure>'s top margin to move top of About image closer to About page name optically */
+    margin-top: -0.512rem;    }    /* .25 lh | Counteracting <figure>'s top margin to move top of About image closer to About page name optically */
 
 #abouttext {
     hyphens: auto;    }
@@ -301,50 +275,47 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
 /* ABOUT + ARCHIVE + LIBRARY PAGES -------------------------------------------------- */
 
 .extracontentpagetitle {
-    padding-right: 30px;
-    padding-top: calc(10.714vw - 1.5px);    /* :) V-Mobile top: 3/28 cols, but finessing to center vertically with menu icon */
-    margin-bottom: 1.536rem;    }    /* :) V-Mobile bottom: .5 lh */
+    padding-right: 1.914rem;
+    padding-top: calc(10.714vw - 0.25rem);    /* top: 3/28 cols, but finessing to center vertically with menu icon */
+    margin-bottom: 1.536rem;    }    /* bottom: .5 lh */
 
 
 /* ARCHIVE PAGE -------------------------------------------------- */
 
 #archivemenu {
-    margin-top: 1.024rem;    }    /* :) V-Mobile top: .5 lh, bottom: .75 lh */
+    margin-top: 1.024rem;    }    /* top: .5 lh, bottom: .75 lh */
 
-#archivemenuyear {    /* :) Applies to the years in the menu; this is only needed if I want to override any properties set by .sectionsummary, which applies to the year headings and section headings on other pages, and is also applied to the element that this is an ide for to get it to be the same size as them */  
-    padding: 0.6em 0.4em 0.4em 0.7em;    }    /* :) Based on line-height, but finessing optically */
+#archivemenuyear {    /* Applies to the years in the menu; this is only needed if I want to override any properties set by .sectionsummary, which applies to the year headings and section headings on other pages, and is also applied to the element that this is an ide for to get it to be the same size as them */  
+    padding: 0.6em 0.4em 0.4em 0.7em;    }    /* Based on line-height, but finessing optically */
 
 #archiveresultarea {
-    padding-bottom: 10.714vw;    }    /* :) V-Mobile 3/28 cols */
+    padding-bottom: 10.714vw;    }    /* 3/28 cols */
 
 .archivemockmain {
     position: relative;
-    top: calc(1.1em + 0.672rem);    /* :) Making identical in height to sectionsummary = padding-top (0.6em) + padding-bottom (0.5em) + height of type (0.672rem) (had to set font-size in line above to match that of sectionsummary in text.css)) */
-    max-width: 1610px;    /* FINALIZE This is is max width that allows menu icon (25px) to have 7.5px padding while hovered on, and beyond that, 30px margin all around (70px/col x 23 cols = 1610px); I can certainly set max width to less than this, but not more, without crowding menu icon so it's not centered in the outermost column. Alternatively, I could also make the very outside columns (only of desktop’s 21-column grid) wider %-wise (just enough to accommodate the glasses icon centering), and also adjusting the middle 19 columns of the grid to be narrower %-wise */
-    width: 78.571vw;    /* :) V-Mobile 22/28 cols | Had to use vw instead of % here because it's already inside class .resultarea which sets a width that's wider than <main> for the results...for desktop/max-width size, maybe calculate the proper %-inside-of-% to get equivalent width, and apply here globally (I'm just not stopping to do that now) */
-    /* margin: 0 auto; */    }    /* :) .75 lh */
+    top: 1.772rem;   /* Making identical in height to sectionsummary = padding-top (0.6em) + padding-bottom (0.5em) + height of type (0.672rem) (had to set font-size in line above to match that of sectionsummary in text.css)) */
+    max-width: 1225px;
+    width: 78.571vw;    /* 22/28 cols | Had to use vw instead of % here because it's already inside class .resultarea which sets a width that's wider than <main> for the results...for desktop/max-width size, maybe calculate the proper %-inside-of-% to get equivalent width, and apply here globally (I'm just not stopping to do that now) */
+    /* margin: 0 auto; */    }    /* .75 lh */
 
-#yearheaderplaceholder {    /* :) This is sort of a hack to get the year sections to have white space above them, since their margins weren't responding for some reason */
-    /* background-color: blue; */    /* :) Keeping this commented out so I can turn it on again for future troubleshooting at other screensizes */
+#yearheaderplaceholder {    /* This is sort of a hack to get the year sections to have white space above them, since their margins weren't responding for some reason */
+    /* background-color: blue; */    /* Keeping this commented out so I can turn it on again for future troubleshooting at other screensizes */
     z-index: -100;
-    height: calc(1.1em + 0.672rem);    }    /* :) Making identical in height to sectionsummary = padding-top (0.6em) + padding-bottom (0.5em) + height of type (0.672rem) (had to set font-size in line above to match that of sectionsummary in text.css)) */
+    height: 1.772rem;    }    /* Making identical in height to sectionsummary = padding-top (0.6em) + padding-bottom (0.5em) + height of type (0.672rem) (had to set font-size in line above to match that of sectionsummary in text.css)) */
 
 
 /* LIBRARY PAGE -------------------------------------------------- */
 
 #librarysection {    /* :) Had to make a new section (24/28 col widths) that is wider than <main> to hold the margins of the library icons */
     overflow: auto;    /* :) This line and the next are to fix a broswer bug wherein this containing element thinks it is 0px tall because it only contains floated elements; see pp373-4 in HTML & CSS book */
-    /* width: 100%; */    /* :) This line and the previous are to fix a broswer bug wherein this containing element thinks it is 0px tall because it only contains floated elements; see pp373-4 in HTML & CSS book; but commenting out the 100% width because I actually want a specific width, and it seems to be working anyway */
     width: 85.77vw;    /* :) V-Mobile 24/28 cols | Had to round up slightly from 85.714vw to get the icons to fit 3-across */
     background-color: white;    
-    margin: 7.143vw auto -3.571vw auto;     }    /* :) V-Mobile top: 2/28 cols, bottom: -1/28 cols | Trying to counteract other margins to make the space between library icon zone and above and below it match the space between library icons themselves */
-
-#libraryentry {    }
+    margin: 7.143vw auto -3.571vw auto;     }    /* top: 2/28 cols, bottom: -1/28 cols | Trying to counteract other margins to make the space between library icon zone and above and below it match the space between library icons themselves */
 
 #libraryentrydetails {    }
 
 #libraryentrydetails[open] #libraryicon {
-    border-width: 3px;    /* FINALIZE */
+    border-width: 0.125rem;
     border-color: black;
     border-style: none none solid none;    }
 
@@ -354,31 +325,23 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
 #libraryentrysummary::-webkit-details-marker {    /* :) Making the default triangle toggle go away */
     display: none;    }
 
-#libraryiconlink {    }
-/*
-#libraryiconlink:hover {
-    border-width: 3px;
-    border-style: none none solid none;
-    border-color: black;    }
-*/
-
 #libraryicon {
     box-sizing: content-box;
-    margin: 7.143vw 7.143vw 0 7.143vw;    /* :) V-Mobile top + L + R: 2/28 cols */
-    padding-bottom: 7.143vw;    /* :) V-Mobile bottom: 2/28 cols | Used padding here instead of margin for just the bottom so the bottom underline on selection would have space between it and the icon, and would only be as long as the icon is wide */
-    max-width: 14.286vw;    /* :) V-Mobile 4/28 cols */
-    max-height: 14.286vw;    /* :) V-Mobile 4/28 cols */
-    border-width: 3px;
+    margin: 7.143vw 7.143vw 0 7.143vw;    /* top + L + R: 2/28 cols */
+    padding-bottom: 7.143vw;    /* bottom: 2/28 cols | Used padding here instead of margin for just the bottom so the bottom underline on selection would have space between it and the icon, and would only be as long as the icon is wide */
+    max-width: 14.286vw;    /* 4/28 cols */
+    max-height: 14.286vw;    /* 4/28 cols */
+    border-width: 0.125rem;
     border-style: none none solid none;
     border-color: transparent;    }
 #libraryicon:hover {
     border-color: #c7c7c7;    }
 
-#libraryentrycontent {    /* :) Holds library entry name, about statement, citation (opt), etc */
-    /* position: absolute; */    }    /* :) Leaving this (but commented out) + these comments for future explorations | Enable this to make the content span the width of all 3 icons, and L-align, but will also pin to top of icon area */
+#libraryentrycontent {    /* Holds library entry name, about statement, citation (opt), etc */
+    /* position: absolute; */    }    /* Leaving this (but commented out) + these comments for future explorations | Enable this to make the content span the width of all 3 icons, and L-align, but will also pin to top of icon area */
 
 #libraryentryname {
-    margin-bottom: 0.256rem;    }    /* :) V-Mobile .125 lh */
+    margin-bottom: 0.256rem;    }    /* .125 lh */
 
 #libraryentryabout {    }
 
@@ -386,25 +349,23 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
 /* SEARCH PAGE -------------------------------------------------- */
 
 #searchpageform {
-    /* margin-bottom: 2.048rem; */
     margin-bottom: 2.560rem;
-    padding-top: calc(10.714vw - 7.5px);    }    /* :) V-Mobile 3/28 cols, but finessing vertical centering of search bar with menu icon */
+    padding-top: calc(10.714vw - 0.469rem);    }    /* 3/28 cols, but finessing vertical centering of search bar with menu icon */
 
 #searchpageinput {
-    padding-bottom: 2.75px;    /* :) Finessed the space between input word and underline bar to match space between input and bottom of field for subscribe + comment name fields (this is a different measurement than nav search's is, because they have different input text sizes, so the line-height (relative sizing) offsets each differently in px for the default spacing)*/
-    /* margin-bottom: 0.512rem; */    /* :) V-Mobile .25 lh | These margin settings don't work on the <form> element that holds this input + search button, so I have to apply the margins to those each of those elements individually */
-    width: calc(78.571vw - 0.957rem - 0.957rem - 0.844rem - 0.844rem);    }    /* :) V-Mobile This should be [the width of <main> (22/28 cols = 78.571vw)[] minus [the width of magnifier icon + its padding + the width of menu icon + the space between them (30px + 17px + 15px = 62px)] */
+    padding-bottom: 0.1719rem;    /* Finessed the space between input word and underline bar to match space between input and bottom of field for subscribe + comment name fields (this is a different measurement than nav search's is, because they have different input text sizes, so the line-height (relative sizing) offsets each differently in px for the default spacing)*/
+    width: calc(78.571vw - 3.602rem);    }    /* This should be [the width of <main> (22/28 cols = 78.571vw)[] minus [the width of magnifier icon + its padding + the width of menu icon + the space between them (30px + 17px + 15px = 62px)] */
 
 #searchpagebutton {
-    height: 30px;
-    padding: 7.5px;    }
+    height: 1.688rem;
+    padding: 0.422rem;    }
 
 #searchpageicon {
     display: inline;
-    height: 15px;    }    
+    height: 0.844rem;    }    
 
 #searchpageintrotext {
-    margin-top: 1.024rem;    }    /* :) V-Mobile .25 lh */
+    margin-top: 1.024rem;    }    /* .25 lh */
 
 
 /* SEARCH + TAG PAGE -------------------------------------------------- */
@@ -412,49 +373,48 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
 #noresultmessage,
 .searchtagresult {
     margin: 0 auto;
-    width:  78.571vw;    }    /* :) Getting the width back to the same as <main>'s when there aren't results */
+    width:  78.571vw;    }    /* Getting the width back to the same as <main>'s when there aren't results */
 
 
 /* TAG PAGE -------------------------------------------------- */
 
 #tagpagename {
-    padding-right: 30px;
-    padding-top: calc(10.714vw - 3.5px);    /* :) V-Mobile top: 3/28 cols, but negative top margin needed to get title aligned with hamburger icon */
-    margin-bottom: 2.560rem;    }    /* :) V-Mobile .5 lh */
+    padding-right: 1.914rem;
+    padding-top: calc(10.714vw - 3.5px);    /* top: 3/28 cols, but negative top margin needed to get title aligned with hamburger icon */
+    margin-bottom: 2.560rem;    }    /* .5 lh */
  
 
 /* RESULTS -------------------------------------------------- */
 
 .resultarea {
-    /* width: 100%; */    /* :) This line is to fix a broswer bug wherein this containing element thinks it is 0px tall because it only contains floated elements; see pp373-4 in HTML & CSS book; but commenting out the 100% width because I actually want a specific width, and it seems to be working anyway */
-    width:  78.571%;    /* :) V-Mobile 24/28 cols | Establishing a separate div so I can make it wider in screens with more than one result wide to accommodate margins I need to put on both L + R sides of all results so they have proper spacing between each other, but don't look like they're extending past the page margins */
+    width:  78.571%;    /* 24/28 cols | Establishing a separate div so I can make it wider in screens with more than one result wide to accommodate margins I need to put on both L + R sides of all results so they have proper spacing between each other, but don't look like they're extending past the page margins */
     margin: 0 auto;    }
 
 #resultdate {
-    padding-top: 0.256rem;    /* :) V-Mobile .125 lh; this is the space between the date and it's top border */
-    margin: 1.536rem 0 0.512rem 0;    /* :) V-Mobile top: .75 lh, bottom: .25 lh */
-    border-width: 1.14284vw;    }    /* :) This should dynamically match the weight of the line of the resultglasses below date, based on their width of 28.571vw (8/28 cols) and the ratio of the resultglasses width to their line weight of 25:1; */ 
+    padding-top: 0.256rem;    /* .125 lh; this is the space between the date and it's top border */
+    margin: 1.536rem 0 0.512rem 0;    /* top: .75 lh, bottom: .25 lh */
+    border-width: 1.14284vw;    }    /* This should dynamically match the weight of the line of the resultglasses below date, based on their width of 28.571vw (8/28 cols) and the ratio of the resultglasses width to their line weight of 25:1; */ 
 
 #resultglasses {
-    width: 28.571vw;    /* :) V-Mobile 8/28 cols */ 
+    width: 28.571vw;    /* 8/28 cols */ 
     display: block;
-    margin: 0.512rem auto 1.024rem auto;    /* :) V-Mobile top: .25 lh, bottom: .5 lh */
+    margin: 0.512rem auto 1.024rem auto;    /* top: .25 lh, bottom: .5 lh */
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 99%;    /* :) Had to make it just under 100% to prevent slightest amount of edges from peeking out from behind mask */
-    -webkit-transition: background-size 0.5s; /* FINALIZE | for Safari */
-    transition: background-size 0.5s;    /* FINALIZE */ 
+    background-size: 99%;    /* Had to make it just under 100% to prevent slightest amount of edges from peeking out from behind mask */
+    -webkit-transition: background-size 0.5s;    /* for Safari */
+    transition: background-size 0.5s;     
     -webkit-transition-timing-function: ease-out;
     transition-timing-function: ease-out;    }
 #resultglasses:hover {
     background-size: 175%;    }
 
 #resulttitle {
-    margin: 1.024rem 0 0.256rem 0;    }    /* :) V-Mobile top: .5 lh, bottom: .125 lh */
+    margin: 1.024rem 0 0.256rem 0;    }    /* top: .5 lh, bottom: .125 lh */
 
 #resulttag {
-    margin: 0.256rem 0 1.536rem 0;    /* :) V-Mobile top: .125 lh, bottom: .75 lh */
-    padding: 0.6em 0.6em 0.5em 0.6em;    }    /* :) Finessing to be perfectly centered */
+    margin: 0.256rem 0 1.536rem 0;    /* top: .125 lh, bottom: .75 lh */
+    padding: 0.6em 0.6em 0.5em 0.6em;    }    /* Finessing to be perfectly centered */
 
 
 

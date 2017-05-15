@@ -104,9 +104,11 @@
 
 
 
-            <article class="mockmain" id="post-rr">    <!-- opening second instance of <article> to make room for RR results that need to be wider than this width, to accommodate their all having margins on L + R -->
+            <!-- <article class="mockmain" id="post-rr"> -->    <!-- opening second instance of <article> to make room for RR results that need to be wider than this width, to accommodate their all having margins on L + R -->
 
-                <div class="desktopcontent">
+            <article class="mockmain" id="postdesktopcontent2">
+
+                <!-- <div class="desktopcontent"> -->
 
                 <!-- Comments via Disqus; trying out custom comments from Kirby instead for now, though -->
                 <!-- <?php snippet('disqus') ?> -->
@@ -118,7 +120,7 @@
                 <!-- I am keeping it there in case of future updates to comments I need to install -->
                 <?php snippet('comments') ?>
 
-                </div>
+                <!-- </div> -->
 
 
             </article>    <!-- closing second instance of <article> to make room for RR results that need to be wider than this width, to accommodate their all having margins on L + R -->

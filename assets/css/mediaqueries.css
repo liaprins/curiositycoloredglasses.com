@@ -539,7 +539,8 @@
     .desktopcontent,
     #archivemenudesktopcontent,
     #aboutdesktopcontent,
-    #postdesktopcontent {
+    #postdesktopcontent,
+    #postdesktopcontent2 {
         position: relative;
         margin: 0 auto;
         width: 52.381vw;    }    /* :) 11/21 cols */
@@ -637,7 +638,8 @@
     .desktopcontent, 
     #archivemenudesktopcontent,
     #aboutdesktopcontent,
-    #postdesktopcontent {
+    #postdesktopcontent,
+    #postdesktopcontent2 {
         width: 641.929px;    }    /* :) 11/21 cols px equivalent at 1225px screen width */
     .postglasses {
         width: 175.071px;    }    /* :) 3/21 cols px equivalent at 1225px screen width */
@@ -799,12 +801,14 @@ nav {
     height: 1.476rem;
     padding: 0.316rem;    }
 
-.desktopcontent:not(#homepagepost) {
+.desktopcontent:not(#homepagepost),
+.desktopcontent:not(##postdesktopcontent2) {
     z-index: -100;    }
 
 #archivemenudesktopcontent'
 #aboutdesktopcontent,
-#postdesktopcontent {
+#postdesktopcontent,
+#postdesktopcontent2 {
     z-index: 100;    }
 
 }    /* Closing the media query */

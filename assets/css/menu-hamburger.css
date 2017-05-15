@@ -1,31 +1,26 @@
-/* THIS HOLDS THE CLASSES AND IDS (AND THEIR STYLES) ISOLATED FOR JUST THE DESKTOP MENU
-TO INCORPORATE RESPONSIVITY, THESE CLASSES AND IDS SHOULD MATCH EXACTLY THE ONES FOR THE DESKTOP MENU.
-THEIR PROPERTIES CAN BE ADJUSTED FOR RESPONSIVITY, BUT ULTIMATELY THEY WILL REFER TO JUST ONE HTML */
-
-nav {   }
-
-#navdetails {    /* :) Holds together home icon, About, Archive, Library, and nav search */
-    float: right;    /* :) Pushes the group as a whole to the right */
+#navdetails {    /* Holds together home icon, About, Archive, Library, and nav search */
+    float: right;    /* Pushes the group as a whole to the right */
     position: absolute;
     top: 0;
     right: 0;
-    padding: 10.714vw 10.714vw 0 0;    }    /* :) V-Mobile top + right 3/28 cols | Aligning the edge of the hamburger icon with right edge of the blog title for Mobile V; also sets the vertical position of the hamburger icon to 3/28 cols down from top of screen; can't set the padding all the way around when closed because it interferes with Archive's year menu being able to be clicked on (the menu padding "covers" it) */
+    padding: 10.714vw 10.714vw 0 0;    }    /* Top + right 3/28 cols | Aligning the edge of the hamburger icon with right edge of the blog title; also sets the vertical position of the hamburger icon to 3/28 cols down from top of screen; can't set the padding all the way around when closed because it interferes with Archive's year menu being able to be clicked on (the menu padding "covers" it) */
 
-#navdetails[open] {    /* :) The style for just when the menu is open */
-    z-index: 1;    /* :) This is to get it to come above the year sections on Archive page */
-    padding: 10.714vw;   /* :) V-Mobile 3/28 cols */
+#navdetails[open] {    /* The style for just when the menu is open */
+    z-index: 1;    /* This is to get it to come above the year sections on Archive page */
+    padding: 10.714vw;   /* 3/28 cols */
     background-color: #e2e43a;
-    width: 89.286vw;    }    /* :) V-Mobile 25/28 cols | Aligning the edge of the menu box with the edge of content for Mobile V (25/28 grid columns) */
+    width: 89.286vw;    }    /* 25/28 cols | Aligning the edge of the menu box with the edge of content */
 
 #navdetails[open] #navsummary {
     background-image: url('../images/x.svg');
     background-position: center;
     background-repeat: no-repeat;
-    box-sizing: content-box; /* :) Over-riding the border-box property I had applied globally, so that the border on hover doesn't cut into the BG img space */
-    height: 15px;
-    border-color: #e2e43a;    /* :) These border properties have to be here in the [open] styles to override the border properties that are set when it's closed (#navsummary, below) */
+    box-sizing: content-box; /* Over-riding the border-box property I had applied globally, so that the border on hover doesn't cut into the BG img space */
+    height: 0.900rem;
+    width: 0.900rem;
+    border-color: #e2e43a;    /* These border properties have to be here in the [open] styles to override the border properties that are set when it's closed (#navsummary, below) */
     border-style: solid;
-    border-width: 0 0 7.5px 7.5px;   /* FINALIZE */
+    border-width: 0 0 0.422rem 0.422rem;
     background-color: #e2e43a;
     float: right;
     cursor: pointer;    }
@@ -35,33 +30,30 @@ nav {   }
     background-position: center;
     background-repeat: no-repeat;
     float: right;
-    box-sizing: content-box; /* :) Over-riding the border-box property I had applied globally, so that the border on hover doesn't cut into the BG img space */
-    height: 15px;
-    width: 17px;    /* :) This is needed or else it will have width of 0 */
+    box-sizing: content-box;    /* Over-riding the border-box property I had applied globally, so that the border on hover doesn't cut into the BG img space */
+    height: 0.900rem;
+    width: 1.013rem;    /* This is needed or else it will have width of 0 */
     content: " ";
-    border-color: white;    /* :) These border properties apply to the bottom + left sides of the menu icon, to give it a white border-buffer where it cuts into the blog title on home page */
+    border-color: white;    /* These border properties apply to the bottom + left sides of the menu icon, to give it a white border-buffer where it cuts into the blog title on home page */
     border-style: solid;
-    border-width: 0 0 7.5px 7.5px;
+    border-width: 0 0 0.422rem 0.422rem;
     background-color: white;    }
 
-#navsummary::-webkit-details-marker {    /* :) Setting up the custom icons instead of default toggles */
+#navsummary::-webkit-details-marker {    /* Setting up the custom icons instead of default toggles */
     display: none;    }
 
 #homeicon {
     box-sizing: content-box;
-    display: block;    /* :) This is so you can select the home button when you are hovering to the right of it, just like the words */
-    width: 25px;
-    padding: 2.5px 7.5px 2.5px 0;    /* :) V-Mobile bottom: This is to account for the extra white space that goes with the menu words, to match the spacing (alternatively, set line-height to 1 for menu words...) */
-    margin-bottom: 1.536rem;    /* :) V-Mobile .75 lh*/
+    display: block;    /* This is so you can select the home button when you are hovering to the right of it, just like the words */
+    width: 1.407rem;
+    padding: 0.156rem 0 0.422rem 0; */    /* top: rem equivalent of 2.5px to get middle of glasses aligned with middle of "x", bottom: this is to account for the extra white space that goes with the menu words, to match the spacing (alternatively, set line-height to 1 for menu words...) */
+    margin-bottom: 1.536rem;    /* .75 lh */
     cursor: pointer;    }
 
-#navlist {    }    /* :) This applies to the group as a whole that holds the menu words (About, Archive, and Library) */
-
-.navnothome {    /* :) The menu items that aren't the home button (About, Archive, Library, and search) */
-    padding: 0;    /* :) Padding needs to be called to override the padding of .sectionsummary, which needed to be applied for the font-size; any padding will add to the space between menu items, which optically needs to remain the same */
-    margin: 1.536rem 0;    }    /* :) V-Mobile top + bottom: .75 lh | This is the space between the nav items */  
+.navnothome {    /* The menu items that aren't the home button (About, Archive, Library, and search) */
+    margin: 1.536rem 0;    }    /* Top + bottom: .75 lh | This is the space between the nav items */  
 
 #navsearch {
-    margin: -0.512rem 0 0 0;    }    /* :) V-Mobile top: -.25 lh to make it look like it has equal spacing optically, bottom is 0 to prevents the search bar from having the extra margin on bottom */
+    margin: -0.512rem 0 0 0;    }    /* Top: -.25 lh to make it look like it has equal spacing optically, bottom is 0 to prevent the search bar from having the extra margin on bottom */
 
 
