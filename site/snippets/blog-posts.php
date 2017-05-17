@@ -5,7 +5,7 @@
                     ->flip() as $article): ?>
       
     <!-- KEEP "ARTICLE" FOR NOW FOR SEMANTIC PURPOSES -->
-    <article class="desktopcontent" id="homepagepost">
+    <article id="homepagepost">
 
         <!-- I'm arranging the pieces by the mobile V design; CSS can re-arrange them; this is according to responsive design principles -->
 

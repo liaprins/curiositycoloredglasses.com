@@ -46,7 +46,7 @@
     box-sizing: content-box;
     display: block;    /* This is so you can select the home button when you are hovering to the right of it, just like the words */
     width: 1.407rem;
-    padding: 0.156rem 0 0.422rem 0; */    /* top: rem equivalent of 2.5px to get middle of glasses aligned with middle of "x", bottom: this is to account for the extra white space that goes with the menu words, to match the spacing (alternatively, set line-height to 1 for menu words...) */
+    padding: 0.156rem 0 0.422rem 0;    /* top: rem equivalent of 2.5px to get middle of glasses aligned with middle of "x", bottom: this is to account for the extra white space that goes with the menu words, to match the spacing (alternatively, set line-height to 1 for menu words...) */
     margin-bottom: 1.536rem;    /* .75 lh */
     cursor: pointer;    }
 
