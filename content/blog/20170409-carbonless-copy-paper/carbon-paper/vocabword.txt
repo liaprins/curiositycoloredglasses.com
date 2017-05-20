@@ -15,7 +15,3 @@ Definition: originally "carbonic" paper, this is a paper coated on one side with
 ----
 
 Illustration: 
-
-----
-
-Title: carbon paper

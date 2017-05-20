@@ -88,7 +88,7 @@ footer {
 .boxbutton {    /* This applies to subscribe button and to comments' "Post a comment" button */
     background-color: black;
     border: solid;
-    border-width: 2px;
+    border-width: 0.125rem;
     border-color: black;    
     padding: 0.125rem 0.469rem 0 0.469rem;
     height: 1.875rem;    }

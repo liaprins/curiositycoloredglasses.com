@@ -15,7 +15,3 @@ Definition: referring to the forces or conditions within the earth that cause mo
 ----
 
 Illustration: tectonic.jpg
-
-----
-
-Title: tectonic

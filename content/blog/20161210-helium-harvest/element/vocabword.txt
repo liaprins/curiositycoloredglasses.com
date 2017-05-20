@@ -15,7 +15,3 @@ Definition: a substance consisting of atoms which all have the same number of pr
 ----
 
 Illustration: helium-element.png
-
-----
-
-Title: element

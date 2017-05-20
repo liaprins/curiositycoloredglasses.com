@@ -15,7 +15,3 @@ Definition: Rocky soil.
 ----
 
 Illustration: 
-
-----
-
-Title: mountainous

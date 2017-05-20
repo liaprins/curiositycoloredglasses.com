@@ -15,7 +15,3 @@ Definition: an instrument for measuring variations in the gravitational field of
 ----
 
 Illustration: gravimeter.jpg
-
-----
-
-Title: tall

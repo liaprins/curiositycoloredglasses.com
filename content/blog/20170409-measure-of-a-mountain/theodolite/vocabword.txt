@@ -1,4 +1,4 @@
-Vocabword: theodolite
+Vocabword: theolodite
 
 ----
 
@@ -15,7 +15,3 @@ Definition: a surveying instrument with a rotating telescope for measuring horiz
 ----
 
 Illustration: theodolite.gif
-
-----
-
-Title: theolodite

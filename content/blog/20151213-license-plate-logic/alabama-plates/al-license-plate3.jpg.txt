@@ -3,3 +3,7 @@ Caption: In 1977 Alabama started issuing plates with the counties represented by
 ----
 
 Alt: In 1977 Alabama started issuing plates with the counties represented by name, via a sticker at the bottom of the plate. This left more characters available on the plate itself, and more unique plates could be generated.
+
+----
+
+Sort: 2

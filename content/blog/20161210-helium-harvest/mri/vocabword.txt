@@ -15,7 +15,3 @@ Definition: magnetic resonance imaging: a noninvasive diagnostic procedure emplo
 ----
 
 Illustration: 
-
-----
-
-Title: MRI

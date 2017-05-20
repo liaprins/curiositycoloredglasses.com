@@ -104,7 +104,7 @@
                         </abbr>
                     </label>
         
-                    <input type="text" name="<?= $comments->nameName() ?>" value="<?= $comments->value($comments->nameName()) ?>" placeholder="Name" id="name" maxlength="<?= $comments->fieldMaxlength() ?>" required class="boxinput m-textface">
+                    <input type="text" name="<?= $comments->nameName() ?>" value="<?= $comments->value($comments->nameName()) ?>" placeholder="Name" id="name" maxlength="<?= $comments->fieldMaxlength() ?>" required class="boxinput s-textface">
     
 
                     <!-- Email -->
@@ -153,7 +153,7 @@
                     </label>
         
                     <!-- I THINK THE CLOSING <textarea> TAG NEEDS TO STAY IN SAME LINE AS OPENING TAG, ELSE THE SPACEBARS WITHIN THE FIELD HAPPENS! -->
-                    <textarea name="<?= $comments->messageName() ?>" placeholder="Comment" id="message" maxlength="<?= $comments->messageMaxlength() ?>" required class="boxinput m-textface"><?= $comments->value($comments->messageName()) ?></textarea>
+                    <textarea name="<?= $comments->messageName() ?>" placeholder="Comment" id="message" maxlength="<?= $comments->messageMaxlength() ?>" required class="boxinput s-textface"><?= $comments->value($comments->messageName()) ?></textarea>
     
 
                     <!-- NOT SURE WHAT THIS GOES WITH??? BUT AFRAID TO DELETE IT YET -->

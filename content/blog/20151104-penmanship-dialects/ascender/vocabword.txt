@@ -15,7 +15,3 @@ Definition: The portion of a minuscule letter in a Latin-derived alphabet that e
 ----
 
 Illustration: ascender.gif
-
-----
-
-Title: ascender

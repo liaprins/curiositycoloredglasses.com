@@ -16,7 +16,6 @@ pages: false
 files: 
 	- audio
 	- image
-  sortable: true
 
 //fields with their field types and options
 fields:

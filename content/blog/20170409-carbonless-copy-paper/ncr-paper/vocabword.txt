@@ -15,7 +15,3 @@ Definition: an acronym standing for no carbon required, taken from the initials 
 ----
 
 Illustration: 
-
-----
-
-Title: NCR paper

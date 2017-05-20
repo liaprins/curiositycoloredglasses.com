@@ -15,7 +15,3 @@ Definition: the science dealing with the study of the annual rings of trees in d
 ----
 
 Illustration: 
-
-----
-
-Title: dendrochronology

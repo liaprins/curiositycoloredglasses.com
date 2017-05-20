@@ -6,3 +6,7 @@ According to the ALPCA archive, in 1969 and 70 letters were added after some cou
 ----
 
 Alt: According to the ALPCA archive, in 1969 and 70 letters were added after some county code numbers to help extend the series.  "A" represents the second set of 100,000; "B" represents the third set of 100,000, etc.
+
+----
+
+Sort: 5

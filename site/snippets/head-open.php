@@ -8,7 +8,7 @@
 
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-  <!-- this is what shows when you bookmark this page, and what's in the browser tab (I think) -->
+  <!-- This is what shows when you bookmark this page, and what's in the browser tab (I think) -->
   <title>
     <?php echo $page->title()->html() ?> | <?php echo $site->title()->html() ?>
   </title>

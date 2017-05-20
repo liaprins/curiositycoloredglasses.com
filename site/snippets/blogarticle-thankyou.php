@@ -1,6 +1,6 @@
-<!-- trying three different ways to surface Thank You image + metadata -->
-<!-- option 2: via markdown in each blogarticle.txt  -->
-<!-- this works for image only, no metadata (field needs to be put back into markdown) -->
+<!-- Trying three different ways to surface Thank You image + metadata -->
+<!-- Option 2: via markdown in each blogarticle.txt  -->
+<!-- This works for image only, no metadata (field needs to be put back into markdown) -->
 <?php if(!$page->thankyou2()->empty()): ?>
     
     <details class="postsectiondetails" open>
@@ -9,11 +9,9 @@
     		</h3>
    		</summary>
 
-
-    <!-- calling the ThankYou field from the blogarticle.txt  -->
+    <!-- Calling the ThankYou field from the blogarticle.txt  -->
     <?php echo kirbytext($page->thankyou()) ?>
 
 	</details>
-
 
 <?php endif ?>

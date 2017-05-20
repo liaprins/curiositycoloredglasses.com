@@ -15,7 +15,3 @@ Definition: A descender is the portion of a letter that extends below the baseli
 ----
 
 Illustration: descender.gif
-
-----
-
-Title: descender

@@ -28,7 +28,7 @@ kirbytext::$tags['gallery'] = array(
 
 
 
-        foreach($gallerypage->images()->sortBy('sort', 'asc') as $slide) {
+        foreach($gallerypage->images() as $slide) {
         $html .= '<li>';
             
             $html .= '<figure>';

@@ -6,9 +6,6 @@
 	<!-- For some reason, this needs to stay for the validation and ability to submit email -->
 	<span class="mc-field-group">
 	
-		<!-- THIS "INPUT" HTML ELEMENT WAS ALREADY HERE WITH THE DEFAULT KIRBY SETUP, 
-		SO I'M LEAVING IT FOR NOW SO THE DEFAULT CSS WORKS -->
-		<!-- KEEP "INPUT" -->
 		<input type="email" value="" name="EMAIL" class="boxinput s-textface" id="mce-EMAIL" placeholder="Email address">
 
 	</span>
@@ -20,7 +17,7 @@
     </span>
 
 
-	 <!-- THIS IS THE SUBMIT/SUBSCRIBE BUTTON -->
+	 <!-- "Subscribe" button -->
     <input type="submit" value="Subscribe" name="subscribe" class="xs-display boxbutton subscribebutton" id="mc-embedded-subscribe">
 	
 
@@ -42,7 +39,6 @@
 </span> -->   <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
    
 
-<!-- NOT SURE IF THIS WILL STAY AS <p> -->
 <p class="xs-textface" id="subscribemessage">
 	I’ll only ever email to let you know about new posts!
 	<a href="http://us14.campaign-archive2.com/home/?u=05f8f85154975a52907f2ce4d&id=086ebe8644" title="View previous campaigns" target="_blank">

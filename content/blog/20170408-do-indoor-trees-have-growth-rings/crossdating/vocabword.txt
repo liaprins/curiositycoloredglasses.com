@@ -15,7 +15,3 @@ Definition: a technique that ensures each individual tree ring is assigned its e
 ----
 
 Illustration: 
-
-----
-
-Title: crossdating

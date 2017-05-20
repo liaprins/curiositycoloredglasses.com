@@ -1,14 +1,10 @@
-		<!-- THIS "FOOTER" HTML ELEMENT WAS ALREADY HERE WITH THE DEFAULT KIRBY SETUP, 
-		SO I'M LEAVING IT FOR NOW SO THE DEFAULT CSS WORKS -->
-		<!-- KEEP "FOOTER" -->
 		<footer role="contentinfo">
 
 			<div id="footercontent">
 
-				<!-- subscribe to go here -->
     			<?php snippet('subscribe') ?>
 
-				<!-- link to my instagram profile + other ways to follow in future -->
+				<!-- Link to my instagram profile + Twitter + portfolio -->
 				<?php snippet('follow') ?>
 
 			</div>
@@ -21,7 +17,7 @@
 			Currently it is in both places. --> 
 			<?php snippet('facebook-sdk') ?>
 			
-		<!-- this is the pinterest script, instructed to place right before closing </body> tag -->
+		<!-- This is the pinterest script, instructed to place right before closing </body> tag -->
 		<script async defer src="//assets.pinterest.com/js/pinit.js">
 		</script>
 

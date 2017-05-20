@@ -15,7 +15,3 @@ Definition: resistance to relative motion
 ----
 
 Illustration: 
-
-----
-
-Title: friction

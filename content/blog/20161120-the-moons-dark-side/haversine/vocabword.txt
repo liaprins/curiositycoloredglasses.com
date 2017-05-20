@@ -15,7 +15,3 @@ Definition: the fictional extra seconds added as needed to account for the Earth
 ----
 
 Illustration: 
-
-----
-
-Title: haversine

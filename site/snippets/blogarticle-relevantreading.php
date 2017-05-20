@@ -1,4 +1,4 @@
-<!-- adding <section> to hold together all of RR -->
+<!-- Adding <section> to hold together all of RR -->
 <section id="relevantreading">
 
     <?php if(!$page->relevantreading1()->empty()): ?>
@@ -14,7 +14,7 @@
         <div class="resultarea">
 
 
-            <!-- THE 1ST OF 3 ALLOWED RELEVANT READING ARTICLES -->
+            <!-- The 1st of 3 allowed Relevant Reading articles -->
             <?php foreach($page->relevantreading1()->pages() as $result): ?>
 
                 <?php snippet('result', array('result' => $result)) ?>
@@ -22,7 +22,7 @@
             <?php endforeach ?>
 
 
-            <!-- THE 2ND OF 3 ALLOWED RELEVANT READING ARTICLES -->
+            <!-- The 2nd of 3 allowed Relevant Reading articles -->
             <?php foreach($page->relevantreading2()->pages() as $result): ?>
 
                 <?php snippet('result', array('result' => $result)) ?>
@@ -30,7 +30,7 @@
             <?php endforeach ?>
 
 
-            <!-- THE 3RD OF 3 ALLOWED RELEVANT READING ARTICLES -->
+            <!-- The 3rd of 3 allowed Relevant Reading articles -->
             <?php foreach($page->relevantreading3()->pages() as $result): ?>
 
                 <?php snippet('result', array('result' => $result)) ?>

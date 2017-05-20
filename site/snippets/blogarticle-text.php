@@ -1,4 +1,3 @@
-<!-- NOT SURE THAT THIS WILL STAY AS <p> -->
 <div id="posttext" class="m-textface hyphenation">	
 
 	<?php echo kirbytext($page->text()) ?>
