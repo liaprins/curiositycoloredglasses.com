@@ -32,12 +32,12 @@
 
 
                 <!-- Setting up the SVG mask randomizer for avatar background colors -->
-                <?php $avatarmask = array('assets/images/audio.svg', 'assets/images/avatar.svg', 'assets/images/backarrow.svg', 'assets/images/menu.svg', 'assets/images/home.svg', 'assets/images/search.svg', 'assets/images/x.svg'); ?>
+                <?php $avatarmask = array('assets/images/avatar.svg'); ?>
                 <?php $rand_mask = $avatarmask[array_rand($avatarmask)]; ?>
 
 
                 <!-- Setting up the color randomizer for avatar background colors -->
-                <?php $background_colors = array('#e2e43a', '#a7e43a', '#4eae9c', '#359cca', '#ff3e76'); ?>
+                <?php $background_colors = array('#e2e43a', '#48D67A', '#28D4E0', '#D68FD6'); ?>
                 <?php $rand_background = $background_colors[array_rand($background_colors)]; ?>
 
                 <!-- Avatar mask -->
