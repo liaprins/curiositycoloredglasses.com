@@ -27,7 +27,6 @@ files: true
       required: true
       placeholder: Brief description of the image (for accessibility via screenreaders or in case the image fails to load)
 
-
 //fields with their field types and options
 fields:
   postcontent:

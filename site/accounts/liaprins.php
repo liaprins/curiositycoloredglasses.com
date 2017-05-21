@@ -7,8 +7,9 @@ email: liajprins@us.ibm.com
 language: en
 role: admin
 history:
-  - blog/license-plate-logic/alabama-plates
-  - blog/measure-of-a-mountain/geoid
+  - >
+    blog/measure-of-a-mountain/comments/comment-3
+  - blog/measure-of-a-mountain/comments/comment-2
+  - blog/measure-of-a-mountain/comments/comment-1
   - blog/measure-of-a-mountain
-  - blog/measure-of-a-mountain/humungous
-  - blog/measure-of-a-mountain/now-what
+  - blog/license-plate-logic/alabama-plates
