@@ -2,7 +2,7 @@
 
   $query   = get('q');
 
-    $results = page('blog')->search($query, 'title|tags|intro|text|caption');
+    $results = $site->index()->visible()->not('template', '!=', 'comment', 'comments', 'about', 'archive', 'library')->search($query, 'title|text|intro|text|caption');
 
   return array(
     'query'   => $query,

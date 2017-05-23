@@ -50,8 +50,6 @@
     <!-- establishing a separate div so I can make it wider in screens with more than one result wide to accommodate margins I need to put on both L + R sides of all results so they have proper spacing between each other, but don't look like they're extending past the page margins -->
     <div class="resultarea"> 
 
-        <div class="resultcolumn">
-
         <!-- establishing the results from the user's search -->
         <?php if($results != "" ): ?>
 
@@ -73,8 +71,6 @@
             </p>
 
             <?php endif ?>
-
-        </div>    <!-- closing #column div -->
 
     </div>    <!-- closing "resultarea" div -->
 

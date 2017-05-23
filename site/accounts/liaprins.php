@@ -7,9 +7,8 @@ email: liajprins@us.ibm.com
 language: en
 role: admin
 history:
-  - >
-    blog/measure-of-a-mountain/comments/comment-3
-  - blog/measure-of-a-mountain/comments/comment-2
-  - blog/measure-of-a-mountain/comments/comment-1
-  - blog/measure-of-a-mountain
-  - blog/license-plate-logic/alabama-plates
+  - blog/myth-busting-mosquito-bites
+  - blog/testing-forrest-gump
+  - blog/penmanship-dialects
+  - blog/license-plate-logic
+  - blog/flourescence-and-phosphorescence
