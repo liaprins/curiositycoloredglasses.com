@@ -224,7 +224,7 @@ abbr {
     display: none;    }
 
 #postacommentdetails[open] summary {    /* This is the "x" button for Post a Comment */
-    background-image: url('../images/x-comments-original.svg');    /* I had to make this a special .SVG with transparent space built-in on the artboard so it could fake as padding when hovered on (really the BG color is the yellow) */
+    background-image: url('../images/x-comments.svg');    /* I had to make this a special .SVG with transparent space built-in on the artboard so it could fake as padding when hovered on (really the BG color is the yellow) */
     background-position: center;
     background-repeat: no-repeat;
     background-color: transparent;
