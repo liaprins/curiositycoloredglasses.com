@@ -438,18 +438,10 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
 
 
 
-#columncontainer {
-  margin: 0 auto;
-  width: 641px;    }
 
-#columns {
-  column-width: 175px;
-  column-gap: 29.175px;    }
 
-.puppy {
-  padding-top: 29.175px;
-  display: block;
-  width: 100%;    }
+
+
 
 
 

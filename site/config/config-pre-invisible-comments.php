@@ -37,9 +37,6 @@ c::set('comments.email.to', array('liajprins@gmail.com'));
 c::set('comments.email.subject', '"New comment on {{ page.title }} by {{ comment.user.name }}."'));
 */
 
-/* MAKING COMMENTS' "PAGES" INVISIBLE AUTOMATICALLY SO THEY DON'T RETURN AS SEARCH RESULTS */
-c::set('pages.comment.visible', false);
-
 
 /* ADDING DEBUGGING ABILITY FOR PHP, WHILE IN CREATION/TESTING MODE ONLY! 
 (SHOULD REMOVE BY DELETING THE LINE COMPLETELY BEFORE PUBLISHING PUBLICILY!) */

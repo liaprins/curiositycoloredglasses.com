@@ -78,33 +78,59 @@
 <!-- __________________________________________________________________________________ -->      
 
 
-<!-- BLOG ARTICLES GROUPED BY YEAR -->
+<!-- BLOG ARTICLES GROUPED BY YEAR: needs to go through the same loops as above -->
+
+    <div id="archiveresultarea" class="resultarea">
 
 
-    <?php function pageYear($p) {
-        return $p->date('Y');    }    // year, e.g. "2016"
-        $posts = page('blog')->children(); ?>
-    
-        <?php foreach ($posts->flip()->group('pageYear') as $year => $yearList): ?>
-    
+        <?php foreach($site->page('blog')
+                           ->children()
+                           ->visible() 
+                           ->flip() as $result): ?>
 
-            <summary class="sectionsummary archivemockmain blackbg" id="<?php echo $year?>"><h3 class="sectionsummary"><?php echo $year ?>
+
+        <?php $date = getdate($result->date());
+        if ($tmpDate['year'] != $date['year']): ?>   
+
+
+
+        <!-- this is what shows up on screen-->
+
+        <details id="archivedetails" open>
+
+            <summary class="sectionsummary archivemockmain blackbg" id="<?php echo $date ['year']?>"><h3>
+        
+                <!-- !!!!!!!!!! (currently the sub-heading for each group of results grouped by year is acting as an anchor link to itself; will remove this in future) -->
+                <!-- <a href="<?php echo url('archive#' . $date['year']) ?>"> -->
+
+                    <!-- KEEP THIS! IT IS THE CONTENT FOR THE YEAR HEADINGS OF EACH GROUPING -->
+                    <?= $date['year'] ?>
+
+                <!-- !!!!!!!!!! (currently the sub-heading for each group of results grouped by year is acting as an anchor link to itself; will remove this in future) -->
+                <!-- </a> -->
                 </h3>
             </summary>
 
-                
-
-            <div id="archiveresultarea" class="resultarea">
-
-                <?php foreach ($yearList as $result): ?>
-
-                    <?php snippet('result', array('result' => $result)) ?>
-
-                <?php endforeach; ?>
-
+            <!-- This is sort of a hack to get the year sections to have white space above them, since their margins weren't responding for some reason -->
+            <div id="yearheaderplaceholder">
             </div>
 
-        <?php endforeach; ?>
+
+        <?php endif ?>
+
+
+
+            <!-- resulting article attributes to be defined in results snippet -->
+            <?php snippet('result', array('result' => $result)) ?>
+
+
+        <!-- this needs to stay or all year group headings will be most recent year; don't know why, it just does! -->
+        <?php $tmpDate = $date; endforeach ?>
+
+
+        </details>
+
+    </div>
 
 
 <!-- __________________________________________________________________________________ -->      

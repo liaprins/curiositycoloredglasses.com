@@ -85,27 +85,29 @@
 
     /* Results 2-across -------------------------------------------------- */
     #searchpageform {
-        margin-bottom: 1.024rem;    }
+        margin-bottom: 2.560rem;    }
     #tagpagename {
-        margin-bottom: 1.024rem;    }
+        margin-bottom: 2.560rem;    }
     .resultarea {
         overflow: auto;    /* This line and the next are to fix a broswer bug wherein this containing element thinks it is 0px tall because it only contains floated elements; see pp373-4 in HTML & CSS book */
         /* width: 100%; */    /* This line and the previous are to fix a broswer bug wherein this containing element thinks it is 0px tall because it only contains floated elements; see pp373-4 in HTML & CSS book; but commenting out the 100% width because I actually want a specific width, and it seems to be working anyway */
         width: 85.714vw;    /* 24/28 cols | Establishing a separate div so I can make it wider in screens with more than one result wide to accommodate margins I need to put on both L + R sides of all results so they have proper spacing between each other, but don't look like they're extending past the page margins */
-        margin: 0 auto;    }
-    
-
-    #resultcolumn {    }
-
-
+        margin: 0 auto;
+        columns: 2;
+        -webkit-column-gap: 0;
+        -moz-column-gap: 0;
+        column-gap: 0;    }
     .result {
-        width: 35.714vw;    /* 6/28 cols | Setting results to 3-column grid */
-        margin: 0 3.571vw;
-        float: left;    }
+        -webkit-column-break-inside: avoid; /* Chrome, Safari, Opera */
+        page-break-inside: avoid; /* Firefox */
+        break-inside: avoid; /* IE 10+ */
+        /* width: 35.714vw; */    /* 6/28 cols | Setting results to 3-column grid */
+        margin: 0 3.571vw 1.536rem 3.571vw;    }
     #resultglasses {
         width: 21.429vw;    }    /* 6/28 cols (6/10 result cols) */ 
     #resultdate {
-        border-width: 0.571vw;    }    /* This should dynamically match the weight of the line of the resultglasses below date, based on their width of 28.571vw (8/28 cols) and the ratio of the resultglasses width to their line weight of 25:1; */ 
+        margin: 0 0 0.512rem 0;
+        border-width: 0.857vw;    }
     #nosearchresults {
         margin-top: 1.024rem;
         margin-left: 3.571vw;    }    /* 1/28 cols */
@@ -299,8 +301,10 @@
     /* RESULTS + RESULTGLASSES -------------------------------------------------- */
 
     /* Results 3-across -------------------------------------------------- */
+    .resultarea {
+        columns: 3;    }
     .result {
-        width: 21.429vw;    }    /* 6/28 cols | Setting results to 3-column grid */
+        /* width: 21.429vw; */    }    /* 6/28 cols | Setting results to 3-column grid */
     #resultglasses {
         width: 14.286vw;    }    /* 4/28 cols (4/6 result cols) */ 
     #resultdate {
@@ -438,8 +442,8 @@
     .resultarea {
         width: 700.283px;    }    /* 24/28 cols px equivalent at 817px screen width */
     .result {
-        width: 175px;    /* 6/28 cols at 817px | Setting results to 3-column grid */
-        margin: 0 29.175px;    }    /* 1/28 cols at 817px | Setting results to 2-column grid */
+        /* width: 175px; */    /* 6/28 cols at 817px | Setting results to 3-column grid */
+        margin: 0 29.175px 1.536rem 29.175px;    }    /* 1/28 cols at 817px | Setting results to 2-column grid */
     #resultdate {
         width: 175px;    }    /* 10/28 cols at 817px | Setting results to 2-column grid */
     #nosearchresults {
@@ -710,7 +714,7 @@
         width: 700px;    }    /* 12/21 cols at 1225px screen width */
     .result {
         width: 175px;    /* 3/21 cols px equivalent at 1225px screen width | Setting results to 3-column grid */
-        margin: 0 29.167px;    }    /* .5/28 cols (1/42) px equivalent at 1225px screen width */
+        margin: 0 29.167px 1.536rem 29.167px;    }    /* .5/28 cols (1/42) px equivalent at 1225px screen width */
     #resultglasses {
         width: 116.667px;    }    /* 2/21 cols px equivalent at 1225px screen width */ 
     #resultdate {
