@@ -87,14 +87,17 @@
     
         <?php foreach ($posts->flip()->group('pageYear') as $year => $yearList): ?>
     
+            
 
-            <summary class="sectionsummary archivemockmain blackbg" id="<?php echo $year?>"><h3 class="sectionsummary"><?php echo $year ?>
+            <div id="archiveheadingarea">
+
+                <h3 class="sectionsummary archivesectionsummary blackbg" id="<?php echo $year?>"><?php echo $year ?>
                 </h3>
-            </summary>
-
+            
+            </div>
                 
 
-            <div id="archiveresultarea" class="resultarea">
+            <div class="resultarea">
 
                 <?php foreach ($yearList as $result): ?>
 

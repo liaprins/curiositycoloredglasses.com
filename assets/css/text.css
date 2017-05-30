@@ -63,6 +63,7 @@ h3 {    /* This is applied for semantic purposes to high-level "parts" of post p
     text-transform: uppercase;
     letter-spacing: 0.25em;
     clear: both;
+    margin-bottom: 1.536rem;
     padding: 0.6em 0.6em 0.5em 1em;    }    /* Finessing to be perfectly centered */
 .postsectiondetails[open] .sectionsummary {
     margin-bottom: 1.536rem;    }

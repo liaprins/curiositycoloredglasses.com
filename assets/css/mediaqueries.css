@@ -101,7 +101,9 @@
         -webkit-column-break-inside: avoid; /* Chrome, Safari, Opera */
         page-break-inside: avoid; /* Firefox */
         break-inside: avoid; /* IE 10+ */
-        /* width: 35.714vw; */    /* 6/28 cols | Setting results to 3-column grid */
+        -webkit-column-fill: balance;
+        -moz-column-fill: balance;
+        column-fill: balance;
         margin: 0 3.571vw 1.536rem 3.571vw;    }
     #resultglasses {
         width: 21.429vw;    }    /* 6/28 cols (6/10 result cols) */ 
@@ -111,8 +113,6 @@
     #nosearchresults {
         margin-top: 1.024rem;
         margin-left: 3.571vw;    }    /* 1/28 cols */
-    .archivemockmain {
-        margin-left: 3.571vw;    }    /* 1/28 cols | For some reason, needs to be pushed over half a column */
 
     /* COMMENT AVATAR -------------------------------------------------- */
 
@@ -362,8 +362,7 @@
         width: 641.929px;    }    /* 22/28 cols px equivalent at 817px screen width */
     .mockmain {
         width: 641.929px;    }    /* 22/28 cols px equivalent at 817px screen width */
-    .archivemockmain {
-        margin-left: 29.179px;    /* 1/28 cols (1/42) px equivalent at 817px screen width | For some reason, needs to be pushed over half a column*/
+    .archivesectionsummary {
         width: 641.929px;    }    /* 22/28 cols px equivalent at 817px screen width */
     #blognametagline {
         width: 641.929px;    }    /* 22/28 cols px equivalent at 817px screen width */

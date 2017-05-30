@@ -38,7 +38,7 @@ c::set('comments.email.subject', '"New comment on {{ page.title }} by {{ comment
 */
 
 /* MAKING COMMENTS' "PAGES" INVISIBLE AUTOMATICALLY SO THEY DON'T RETURN AS SEARCH RESULTS */
-c::set('pages.comment.visible', false);
+c::set('comments.pages.comment.visible', false);
 
 
 /* ADDING DEBUGGING ABILITY FOR PHP, WHILE IN CREATION/TESTING MODE ONLY! 

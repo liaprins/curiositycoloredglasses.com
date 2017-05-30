@@ -144,9 +144,6 @@ header {    /* Holds blog name + tagline */
     max-width: 1225px;    
     width: 78.571%;    /* 22/28 cols | Use % here instead of vw because they can be used inside the max-width */
     margin: 2.048rem auto;    }    /* top + bottom: 1 lh*/
-#rrdetails[open] #rrsectionheader {
-    margin-bottom: 0;    }    /* Making it so the margin below comment section header only applies when it's open */
-
 
 
 /* COMMENTS (POST PAGE) -------------------------------------------------- */
@@ -288,20 +285,13 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
 #archivemenuyear {    /* Applies to the years in the menu; this is only needed if I want to override any properties set by .sectionsummary, which applies to the year headings and section headings on other pages, and is also applied to the element that this is an ide for to get it to be the same size as them */  
     padding: 0.6em 0.4em 0.4em 0.7em;    }    /* Based on line-height, but finessing optically */
 
-#archiveresultarea {
-    padding-bottom: 10.714vw;    }    /* 3/28 cols */
+#archiveheadingarea {
+    width:  78.571%;    /* 24/28 cols | Establishing a separate div so I can make it wider in screens with more than one result wide to accommodate margins I need to put on both L + R sides of all results so they have proper spacing between each other, but don't look like they're extending past the page margins */
+    margin: 0 auto;    }  
 
-.archivemockmain {
-    position: relative;
-    top: 1.772rem;   /* Making identical in height to sectionsummary = padding-top (0.6em) + padding-bottom (0.5em) + height of type (0.672rem) (had to set font-size in line above to match that of sectionsummary in text.css)) */
-    max-width: 1225px;
-    width: 78.571vw;    /* 22/28 cols | Had to use vw instead of % here because it's already inside class .resultarea which sets a width that's wider than <main> for the results...for desktop/max-width size, maybe calculate the proper %-inside-of-% to get equivalent width, and apply here globally (I'm just not stopping to do that now) */
-    /* margin: 0 auto; */    }    /* .75 lh */
-
-#yearheaderplaceholder {    /* This is sort of a hack to get the year sections to have white space above them, since their margins weren't responding for some reason */
-    /* background-color: blue; */    /* Keeping this commented out so I can turn it on again for future troubleshooting at other screensizes */
-    z-index: -100;
-    height: 1.772rem;    }    /* Making identical in height to sectionsummary = padding-top (0.6em) + padding-bottom (0.5em) + height of type (0.672rem) (had to set font-size in line above to match that of sectionsummary in text.css)) */
+.archivesectionsummary {
+    margin: 1.536rem auto 0 auto;
+    display: block;    }    
 
 
 /* LIBRARY PAGE -------------------------------------------------- */
