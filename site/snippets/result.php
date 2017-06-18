@@ -28,17 +28,17 @@
 
                 
     <!-- Tags of article -->
-    
+<div id="resulttaggroup">
     <!-- Split the list in the tag field into individual tags -->
     <?php foreach($result->tags()->split(',') as $tag): ?> 
     
     <!-- Make them link to the tags page -->
-    <a href="<?php echo url('tag/tag:' . $tag)?>" id="resulttag" class="xs-textface yellowhover">
-        <!-- Or replace "html($tag)" with "$tag:", but the "\" from markdown text file will return as its own tag-->  
-        #<?php echo html($tag) ?>     
-    </a>    
+    <!-- Or replace "html($tag)" with "$tag:", but the "\" from markdown text file will return as its own tag-->  
+    <a href="<?php echo url('tag/tag:' . $tag)?>" id="resulttag" class="xs-textface yellowhover">#<?php echo html($tag) ?></a>    
 
     <?php endforeach ?>
+
+</div>
 
 
 

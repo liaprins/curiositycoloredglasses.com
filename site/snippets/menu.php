@@ -38,3 +38,8 @@
     </details>
 
 </nav>
+
+
+<!-- TEST menu script -->
+<script src="assets/js/menu.js">
+</script>

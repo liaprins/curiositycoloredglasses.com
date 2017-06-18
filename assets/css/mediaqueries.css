@@ -77,6 +77,11 @@
         margin-right: 7.143vw;
         margin-bottom: 0;
         width: 36.714vw;    }    /* ~10/28 cols (1/2 grid cols) ...half would really be 35.714vw */
+
+    #fullwidthglossary {
+        width:  78.571vw;
+    }
+
     #vocabillustration {
         display: inline;
         max-width: 34.714vw;    }    /* ~10/28 cols (1/2 cols) ...half would really be 35.714vw */
@@ -648,6 +653,7 @@
     #posttaggroup {
         display: block;    }
     #share {
+        margin-left: -0.3rem;
         display: block;
         float: left;
         padding-left: 0;    }

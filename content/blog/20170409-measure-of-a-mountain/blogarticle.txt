@@ -28,6 +28,10 @@ Official measures put Mount Everest at 29,029 feet (8,848 meters) above sea leve
 
 <iframe src="//player.vimeo.com/video/89886877?title=0&byline=0&portrait=0&color=e2e43a" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
+<iframe src="//player.vimeo.com/video/89886877?title=0&byline=0&portrait=0&color=e2e43a"  width="400" height="300" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+(vimeo: http://vimeo.com/89886877 width: 400 height: 300)
+
 Accurately measuring miniscule changes in a mountain that is more than 5 miles up is no easy feat, but surprisingly, measurements rely on geometric formulas and surveying techniques that haven't changed all that much since the 1800s, said Peter Molnar, a geologist at the University of Colorado, Boulder.
 
 #### Historic effort (H4)

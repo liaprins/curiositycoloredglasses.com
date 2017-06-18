@@ -20,6 +20,9 @@ header {    /* Holds blog name + tagline */
     display: inline;
     padding: 0.6em 0.5em 0.5em 0;    }    /* Basing on line-height; they would all be 0.6em, but I had to optically finesse R + bottom, so they are 0.5em */
 
+#hometaggroup {   
+    margin-left: -0.3rem;     }
+
 #hometag {
     margin: 0.512rem 0 1.536rem 0;    }    /* top: .25 lh, bottom: .75 lh */
 
@@ -80,6 +83,9 @@ header {    /* Holds blog name + tagline */
 
 #posttagshare {     /* Groups the tags and share icons into one div; the HTML id is located in blogarticle.php template, surrounding the tag and share snippets */
     margin: 0.512rem 0;    }    /* top + bottom: .25 lh */
+
+#posttaggroup {   
+    margin-left: -0.3rem;     }
 
 #share {    /* Applies to all the share icons together as a whole */
     padding-left: 0.422rem;
@@ -406,9 +412,11 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
 #resulttitle {
     margin: 1.024rem 0 0.256rem 0;    }    /* top: .5 lh, bottom: .125 lh */
 
+#resulttaggroup {
+    margin: 0.256rem 0 0 -0.3rem;    }    /* top: .125 lh, bottom: .75 lh */
+
 #resulttag {
-    margin: 0.256rem 0 1.536rem 0;    /* top: .125 lh, bottom: .75 lh */
-    padding: 0.6em 0.6em 0.5em 0.6em;    }    /* Finessing to be perfectly centered */
+    padding: 0.3em 0.5em 0.3em 0.5em;    }    /* Finessing to be perfectly centered */
 
 
 

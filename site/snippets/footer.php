@@ -17,6 +17,7 @@
 			Currently it is in both places. --> 
 			<?php snippet('facebook-sdk') ?>
 			
+
 		<!-- This is the pinterest script, instructed to place right before closing </body> tag -->
 		<script async defer src="//assets.pinterest.com/js/pinit.js">
 		</script>

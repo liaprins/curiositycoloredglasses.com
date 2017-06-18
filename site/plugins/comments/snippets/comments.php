@@ -37,7 +37,7 @@
 
 
                 <!-- Setting up the color randomizer for avatar background colors -->
-                <?php $background_colors = array('#e2e43a', '#48D67A', '#28D4E0', '#D68FD6'); ?>
+                <?php $background_colors = array('#e2e43a', '#48D67A', '#28D4E0'); ?>
                 <?php $rand_background = $background_colors[array_rand($background_colors)]; ?>
 
                 <!-- Avatar mask -->
