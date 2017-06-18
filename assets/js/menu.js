@@ -8,5 +8,5 @@ function menuClose() {
     }
 }
 
-window.addEventListener('DOMContentLoaded', menuClose, false);
+menuClose();
 window.addEventListener('resize', menuClose, false);
