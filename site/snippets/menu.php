@@ -40,6 +40,6 @@
 </nav>
 
 
-<!-- TEST menu script -->
+<!-- menu script -->
 <script src="assets/js/menu.js">
 </script>

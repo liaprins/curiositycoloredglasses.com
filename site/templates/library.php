@@ -14,13 +14,6 @@
     <?php snippet('menu') ?>
 
 
-
-
-    <!-- !!!!!!!!!! TESTING COLUMNS 'test' !!!!!!!!!! -->
-
-
-
-
     <main>
 
         <div class="desktopcontent">
@@ -58,46 +51,67 @@
         <article id="<?php echo $librarysubpage ?>" class="libraryentry">
             
 
-            <details id="libraryentrydetails">
+            <div id="libraryentrysummary">
 
-                <summary id="libraryentrysummary">
+                <!-- COMMENTING OUT ANCHOR LINK WHILE I WORK ON THE JAVASCRIPT -->
+                <!-- image/icon of library entry, acting as link to its subpage (to be configured with JavaScript) -->                
+                <!-- 
+                <a href="<?php echo url('library#' . $librarysubpage) ?>" id="libraryiconlink">
+                -->
+                    <img src="<?php echo $libraryresult->url() ?>" alt="<?php echo $libraryresult->alt() ?>" id="libraryicon" class="<?php echo $librarysubpage ?>">
+                <!-- 
+                </a>
+                -->
 
-                    <!-- being within <summary> tag now means clicking just opens/closes the meta information, instead of connecting to anchor link (URL doesn't change on click either) -->
-                    <!-- image/icon of library entry, acting as link to its subpage (to be configured with JavaScript) -->
-                    <a href="<?php echo url('library#' . $librarysubpage) ?>" id="libraryiconlink">
-                        <img src="<?php echo $libraryresult->url() ?>" alt="<?php echo $libraryresult->alt() ?>" id="libraryicon">
-                    </a>
+            </div>
 
-                </summary>
+            
+            <!-- THIS WILL BE PULLED BY THE JAVASCRIPT INSTEAD -->
+            <!--    
+            <div id="libraryentrycontent">
+            -->
 
-                    
-                <div id="libraryentrycontent">
+            <!-- name of library entry -->
+            <!--
+            <p id="libraryentryname" class="s-display">
+                <?php echo html($libraryresult->heading()) ?>
+            </p>
+            -->
 
-                <!-- name of library entry -->
-                <!-- NOT SURE IF THIS WILL STAY AS <h4> -->
-                <p id="libraryentryname" class="s-display">
-                    <?php echo html($libraryresult->heading()) ?>
-                </p>
+            <!-- text for library entry -->
+            <!--
+            <span id="libraryentryabout" class="s-textface">
+                <?php echo $libraryresult->about()->kirbytext() ?>
+            </span>
+            -->
 
-                <!-- text for library entry -->
-                <span id="libraryentryabout" class="s-textface">
-                    <?php echo $libraryresult->about()->kirbytext() ?>
-                </span>
-
-                </div>
-
-
-            </details>
+            <!--
+            </div>
+            -->
 
 
         </article?>
+
+
+
+
+            <!-- TESTING JAVASCRIPT -->
+            <div id="testholder">
+            </div>
+
+
+
+
+
+
 
         <?php endforeach ?>
 
     </div>
 
 
-
+<script src="assets/js/library.js">
+</script>
     
 
 <?php snippet('footer') ?>
