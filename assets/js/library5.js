@@ -7,12 +7,11 @@ function libraryIconClick(e) {
 
 	var selectedIcon = e.target;
 
+	for (var i = 0; i < fieldLength; i++) {
+		iconArticle[i].style.display = 'none';
+	}
+
     if (selectedIcon.nextElementSibling.style.display === 'none') {
-
-		for (var i = 0; i < fieldLength; i++) {
-			iconArticle[i].style.display = 'none';
-		}
-
         selectedIcon.nextElementSibling.style.display = 'block';
     } else {
         selectedIcon.nextElementSibling.style.display = 'none';
