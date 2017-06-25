@@ -1,14 +1,21 @@
 var iconField = document.getElementById('librarysection');
+var iconArticle = document.querySelectorAll('.libraryentry');
+var fieldLength = iconArticle.length;
 
-function libraryClickTest(e) {
-	var target = e.target;
-	var newEl = document.createElement('p');
-	var newText = document.createTextNode(e.target.getAttribute('class'));
-	newEl.appendChild(newText);
-	var position = target.parentNode;
-	position.appendChild(newEl);
-	// var testholder = document.getElementById('testholder');
-	// testholder.innerHTML = e.target.getAttribute('src');
+
+function libraryIconClick(e) {
+
+	var selectedIcon = e.target;
+
+	for (var i = 0; i < fieldLength; i++) {
+		iconArticle[i].style.display = 'none';
+	}
+
+    if (selectedIcon.nextElementSibling.style.display === 'none') {
+        selectedIcon.nextElementSibling.style.display = 'block';
+    } else {
+        selectedIcon.nextElementSibling.style.display = 'none';
+    }
 }
 
-iconField.addEventListener('click', libraryClickTest, false);
+iconField.addEventListener('click', libraryIconClick, false);

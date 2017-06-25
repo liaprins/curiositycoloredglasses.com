@@ -45,30 +45,72 @@
         
         <?php $librarysubpage = $libraryresult->name(); ?>  
 
+
+        <!-- THIS "SECTION" HTML ELEMENT WAS ALREADY HERE WITH THE DEFAULT KIRBY SETUP, 
+        SO I'M LEAVING IT FOR NOW SO THE DEFAULT CSS WORKS -->
+        <article id="<?php echo $librarysubpage ?>" class="libraryentry">
+            
+
+            <div id="libraryentrysummary">
+
                 <!-- COMMENTING OUT ANCHOR LINK WHILE I WORK ON THE JAVASCRIPT -->
                 <!-- image/icon of library entry, acting as link to its subpage (to be configured with JavaScript) -->                
                 <!-- 
                 <a href="<?php echo url('library#' . $librarysubpage) ?>" id="libraryiconlink">
                 -->
-                <img src="<?php echo $libraryresult->url() ?>" alt="<?php echo $libraryresult->alt() ?>" id="libraryicon" class="<?php echo $librarysubpage ?>" data-icon-status="closed">
+                    <img src="<?php echo $libraryresult->url() ?>" alt="<?php echo $libraryresult->alt() ?>" id="libraryicon" class="<?php echo $librarysubpage ?>">
+                <!-- 
+                </a>
+                -->
 
-                <article style="display: none;" class="libraryentry" data-library-name="<?php echo html($libraryresult->heading()) ?>" data-library-entry="<?php echo $libraryresult->about()->kirbytextraw() ?>">
+            </div>
 
-                    <p class="libraryentryname s-display">
-                        <?php echo html($libraryresult->heading()) ?>
-                    </p>
+            
+            <!-- THIS WILL BE PULLED BY THE JAVASCRIPT INSTEAD -->
+            <!--    
+            <div id="libraryentrycontent">
+            -->
 
-                    <span class="libraryentryabout s-textface">
-                        <?php echo html($libraryresult->about()->kirbytextraw()) ?>
-                    </span>
+            <!-- name of library entry -->
+            <!--
+            <p id="libraryentryname" class="s-display">
+                <?php echo html($libraryresult->heading()) ?>
+            </p>
+            -->
 
-                </article>
+            <!-- text for library entry -->
+            <!--
+            <span id="libraryentryabout" class="s-textface">
+                <?php echo $libraryresult->about()->kirbytext() ?>
+            </span>
+            -->
+
+            <!--
+            </div>
+            -->
+
+
+        </article?>
 
 
         <?php endforeach ?>
 
     </div>
 
+
+
+
+
+            <!-- TESTING JAVASCRIPT -->
+            <div id="testholder">
+                <p>TEST!!!</p>
+            </div>
+
+
+
+
+
+            
 
 <script src="assets/js/library.js">
 </script>

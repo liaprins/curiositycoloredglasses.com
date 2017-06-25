@@ -2,7 +2,7 @@ Heading: The best school supply
 
 ----
 
-About: Thanks, Crayola, for bringing millions of kids colorfully artistic opportunities.
+About: Thanks, Crayola, for bringing millions of kids colorfully artistic opportunities. (link: http://localhost:8888/kirby-project/kirby-2.4.0/blog/flourescence-and-phosphorescence text: Fluorescence and phosphorescence).
 
 ----
 

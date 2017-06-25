@@ -44,25 +44,21 @@
         <?php foreach ($page->images()->sortBy('modified', 'desc') as $libraryresult): ?>
         
         <?php $librarysubpage = $libraryresult->name(); ?>  
+            
+
+            <article id="<?php echo $librarysubpage ?>" class="libraryentry" data-library-name="<?php echo html($libraryresult->heading()) ?>" data-library-entry="<?php echo $libraryresult->about()->kirbytextraw() ?>">
 
                 <!-- COMMENTING OUT ANCHOR LINK WHILE I WORK ON THE JAVASCRIPT -->
                 <!-- image/icon of library entry, acting as link to its subpage (to be configured with JavaScript) -->                
                 <!-- 
                 <a href="<?php echo url('library#' . $librarysubpage) ?>" id="libraryiconlink">
                 -->
-                <img src="<?php echo $libraryresult->url() ?>" alt="<?php echo $libraryresult->alt() ?>" id="libraryicon" class="<?php echo $librarysubpage ?>" data-icon-status="closed">
+                    <img src="<?php echo $libraryresult->url() ?>" alt="<?php echo $libraryresult->alt() ?>" id="libraryicon" class="<?php echo $librarysubpage ?>" data-icon-status="closed">
+                <!-- 
+                </a>
+                -->
 
-                <article style="display: none;" class="libraryentry" data-library-name="<?php echo html($libraryresult->heading()) ?>" data-library-entry="<?php echo $libraryresult->about()->kirbytextraw() ?>">
-
-                    <p class="libraryentryname s-display">
-                        <?php echo html($libraryresult->heading()) ?>
-                    </p>
-
-                    <span class="libraryentryabout s-textface">
-                        <?php echo html($libraryresult->about()->kirbytextraw()) ?>
-                    </span>
-
-                </article>
+            </article>
 
 
         <?php endforeach ?>
