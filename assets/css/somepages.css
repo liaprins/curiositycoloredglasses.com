@@ -316,32 +316,55 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
     border-style: none none solid none;    }
 
 .libraryentry {
-    width: 100%;
+    width: 78.571vw;
+    margin: 0 3.571vw;
     float: left;    }
 
 #libraryentrysummary::-webkit-details-marker {    /* :) Making the default triangle toggle go away */
     display: none;    }
 
-#libraryicon {
+.libraryicon {
     box-sizing: content-box;
     /* float: left; */
-    margin: 7.143vw 7.143vw 0 7.143vw;    /* top + L + R: 2/28 cols */
+    margin-top: 7.143vw;
+    margin-bottom: 0;
+    margin-left: calc(7.143vw - 2px);
+    margin-right: calc(7.143vw - 1px);
     padding-bottom: 7.143vw;    /* bottom: 2/28 cols | Used padding here instead of margin for just the bottom so the bottom underline on selection would have space between it and the icon, and would only be as long as the icon is wide */
     max-width: 14.286vw;    /* 4/28 cols */
     max-height: 14.286vw;    /* 4/28 cols */
     border-width: 0.125rem;
     border-style: none none solid none;
     border-color: transparent;    }
-#libraryicon:hover {
+.libraryicon:hover {
     border-color: #c7c7c7;    }
+
+.selected {
+    border-color: black;    }
+
+#library-x {
+    box-sizing: content-box;
+    height: 0.844rem;
+    width: 0.844rem;
+    padding: 0.422rem;
+    margin-left: 0.844rem;
+    float: right;
+}
 
 #libraryentrycontent {    /* Holds library entry name, about statement, citation (opt), etc */
     /* position: absolute; */    }    /* Leaving this (but commented out) + these comments for future explorations | Enable this to make the content span the width of all 3 icons, and L-align, but will also pin to top of icon area */
 
-.libraryentryname {
-    margin-bottom: 0.256rem;    }    /* .125 lh */
+.libraryentry {
+    margin-top: 1.024rem;
+    margin-bottom: 1.024rem;
+}
 
-.libraryentryabout {    }
+.libraryentryname {
+    margin-top: 0.512rem;
+    margin-bottom: 0.768rem;    }    /* .125 lh */
+
+.libraryentryabout {
+    line-height: 2;    }
 
 
 /* SEARCH PAGE -------------------------------------------------- */

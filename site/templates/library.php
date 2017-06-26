@@ -38,29 +38,27 @@
 
     <div id="librarysection">
 
-        <!-- option 3: images + info stored in library folder directly (not library/libraryimages) -->
-        <!-- to get rid of nav images at bottom -->
+        <!-- images + info stored in library folder directly (not library/libraryimages) -->
         <!-- info here is from metadata, info on blog article pages is from blogarticle.txt fields + custom CSS -->
         <?php foreach ($page->images()->sortBy('modified', 'desc') as $libraryresult): ?>
         
         <?php $librarysubpage = $libraryresult->name(); ?>  
 
-                <!-- COMMENTING OUT ANCHOR LINK WHILE I WORK ON THE JAVASCRIPT -->
-                <!-- image/icon of library entry, acting as link to its subpage (to be configured with JavaScript) -->                
-                <!-- 
-                <a href="<?php echo url('library#' . $librarysubpage) ?>" id="libraryiconlink">
-                -->
-                <img src="<?php echo $libraryresult->url() ?>" alt="<?php echo $libraryresult->alt() ?>" id="libraryicon" class="<?php echo $librarysubpage ?>" data-icon-status="closed">
+                <img src="<?php echo $libraryresult->url() ?>" alt="<?php echo $libraryresult->alt() ?>" class="libraryicon" id="<?php echo $librarysubpage ?>">
 
-                <article style="display: none;" class="libraryentry" data-library-name="<?php echo html($libraryresult->heading()) ?>" data-library-entry="<?php echo $libraryresult->about()->kirbytextraw() ?>">
+                <article style="display: none;" class="libraryentry">
+
+                    <a href="<?php echo url('library') ?>">
+                        <img src= "<?php echo url('assets/images/x.svg') ?>" alt="close" id="library-x" class="yellowhover">
+                    </a>
 
                     <p class="libraryentryname s-display">
                         <?php echo html($libraryresult->heading()) ?>
                     </p>
 
-                    <span class="libraryentryabout s-textface">
+                    <p class="libraryentryabout s-textface">
                         <?php echo html($libraryresult->about()->kirbytextraw()) ?>
-                    </span>
+                    </p>
 
                 </article>
 

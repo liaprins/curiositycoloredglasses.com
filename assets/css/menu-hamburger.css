@@ -12,7 +12,7 @@
     width: 89.286vw;    }    /* 25/28 cols | Aligning the edge of the menu box with the edge of content */
 
 #navdetails[open] #navsummary {
-    background-image: url('../images/x.svg');
+    background-image: url('../images/x-menu.svg');
     background-position: center;
     background-repeat: no-repeat;
     box-sizing: content-box; /* Over-riding the border-box property I had applied globally, so that the border on hover doesn't cut into the BG img space */
