@@ -72,6 +72,8 @@
 
     </div>
 
+    <p id="testholder">HOLDER TEST</p>
+
 
 <script src="assets/js/library.js">
 </script>

@@ -1,25 +1,9 @@
 var iconField = document.getElementById('librarysection');
 var iconArticle = document.querySelectorAll('.libraryentry');
 var fieldLength = iconArticle.length;
+
 var libraryURL = window.location;
 
-
-function myFunction() {
-    if (window.location.hash) {
-        var hash = location.hash;
-        for (var i = 0; i < fieldLength; i++) {
-            var currentIcon = iconArticle[i].previousElementSibling;
-            var iconName = '#' + currentIcon.getAttribute('data-id');
-            if (hash == iconName) {
-                iconArticle[i].style.display = 'block';
-                currentIcon.setAttribute('class', 'libraryicon selected');
-                document.getElementById("testholder").innerHTML = 'yes hash ' + hash + iconName;
-            }
-        }
-    } 
-}
-
-window.addEventListener('DOMContentLoaded', myFunction, false);
 
 
 function removeHash() { 
@@ -49,6 +33,33 @@ iconField.addEventListener('click', libraryIconClick, false);
 
 
 
+function myFunction() {
+
+    if (window.location.hash) {
+        var hash = location.hash;
+
+        for (var i = 0; i < fieldLength; i++) {
+            
+            var currentIcon = iconArticle[i].previousElementSibling;
+            var iconName = '#' + currentIcon.getAttribute('data-id');
+
+            if (hash == iconName) {
+
+                iconArticle[i].style.display = 'block';
+                currentIcon.setAttribute('class', 'libraryicon selected');
+                
+                document.getElementById("testholder").innerHTML = 'yes hash ' + hash + iconName;
+
+            }
+        }
+
+    } else {
+        document.getElementById("testholder").innerHTML = 'no hash ';
+    }
+}
+
+
+window.addEventListener('DOMContentLoaded', myFunction, false);
 
 
 

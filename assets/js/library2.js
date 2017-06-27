@@ -2,34 +2,34 @@ var iconField = document.getElementById('librarysection');
 var iconArticle = document.querySelectorAll('.libraryentry');
 var fieldLength = iconArticle.length;
 
+var libraryURL = window.location;
 
 function libraryIconClick(e) {
 
 	var selectedIcon = e.target;
 
-	var insertHere = selectedIcon.nextElementSibling;
-
-	var nameContainer = document.createElement('p');
-	var nameContent = document.createTextNode(insertHere.getAttribute('data-library-name'));
-	var nameContainerExists = document.querySelector('.libraryentryname');
-
-	var entryContainer = document.createElement('p');
-	var entryContent = document.createTextNode(insertHere.getAttribute('data-library-entry') + fieldLength);
-	var entryContainerExists = document.querySelector('.libraryentryabout');
-
-	if (selectedIcon.hasAttribute('data-icon-status')) {
-        selectedIcon.removeAttribute('data-icon-status');
-		nameContainer.className = 'libraryentryname s-display';
-		nameContainer.appendChild(nameContent);
-		entryContainer.className = 'libraryentryabout s-textface';
-		entryContainer.appendChild(entryContent);
-		insertHere.appendChild(nameContainer);
-		insertHere.appendChild(entryContainer);
+    if (selectedIcon.nextElementSibling.style.display === 'none') {
+		for (var i = 0; i < fieldLength; i++) {
+			iconArticle[i].style.display = 'none';
+			iconArticle[i].previousElementSibling.setAttribute('class', 'libraryicon');
+		}
+        selectedIcon.nextElementSibling.style.display = 'block';
+        selectedIcon.setAttribute('class', 'libraryicon selected');
+        
+        var entryURLHash = selectedIcon.getAttribute('id');
+        location.hash = entryURLHash; 
+   
     } else {
-        selectedIcon.setAttribute('data-icon-status', 'closed');
-        insertHere.removeChild(nameContainerExists);
-        insertHere.removeChild(entryContainerExists);
+        selectedIcon.nextElementSibling.style.display = 'none';
+        selectedIcon.setAttribute('class', 'libraryicon');
+        location.hash = '';
+        // libraryURL.replace('#', '');    // NOT WORKING
     }
 }
 
 iconField.addEventListener('click', libraryIconClick, false);
+
+window.addEventListener('DOMContentLoaded', function() {
+    location.hash = '';
+    // libraryURL.replace('#', '');    // NOT WORKING
+}, false);

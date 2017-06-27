@@ -1,32 +1,29 @@
 var iconField = document.getElementById('librarysection');
+var iconArticle = document.querySelectorAll('.libraryentry');
+var fieldLength = iconArticle.length;
+
+var libraryURL = window.location;
 
 function libraryIconClick(e) {
+
 	var selectedIcon = e.target;
 
-	var nameContainer = document.createElement('p');
-	var nameContent = document.createTextNode(selectedIcon.parentNode.getAttribute('data-library-name'));
-	var nameContainerExists = document.querySelector('.libraryentryname');
-
-	var entryContainer = document.createElement('span');
-	var entryContent = document.createTextNode(selectedIcon.parentNode.getAttribute('data-library-entry'));
-	var entryContainerExists = document.querySelector('.libraryentryabout');
-
-	var insertHere = selectedIcon.parentNode;
-
-	if (selectedIcon.hasAttribute('data-icon-status')) {
-        selectedIcon.removeAttribute('data-icon-status');
-		nameContainer.className = 'libraryentryname s-display';
-		nameContainer.appendChild(nameContent);
-		entryContainer.className = 'libraryentryabout s-textface';
-		entryContainer.appendChild(entryContent);
-		insertHere.appendChild(nameContainer);
-		insertHere.appendChild(entryContainer);
+    if (selectedIcon.nextElementSibling.style.display === 'none') {
+		for (var i = 0; i < fieldLength; i++) {
+			iconArticle[i].style.display = 'none';
+			iconArticle[i].previousElementSibling.setAttribute('class', 'libraryicon');
+		}
+        selectedIcon.nextElementSibling.style.display = 'block';
+        selectedIcon.setAttribute('class', 'libraryicon selected');
+        
+        var entryURLHash = selectedIcon.getAttribute('id');
+        location.hash = entryURLHash; 
+   
     } else {
-        selectedIcon.setAttribute('data-icon-status', 'closed');
-        insertHere.removeChild(nameContainerExists);
-        insertHere.removeChild(entryContainerExists);
+        selectedIcon.nextElementSibling.style.display = 'none';
+        selectedIcon.setAttribute('class', 'libraryicon');
+        location.hash = '';
     }
-
 }
 
 iconField.addEventListener('click', libraryIconClick, false);
