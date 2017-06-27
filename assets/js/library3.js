@@ -28,26 +28,19 @@ function removeHash() {
 // Opens the entry when icon is clicked, and closes it if re-clicked
 function libraryIconClick(e) {
 	var selectedIcon = e.target;
-
-    // verifying the area inside the "librarysection" <div> that was clicked was an icon, not an in-between space, which caused problems
-    var selectedIconClass = selectedIcon.getAttribute('data-clickable');
-
-    if (selectedIconClass == 'yes') {
-
-        if (selectedIcon.nextElementSibling.style.display === 'none') {
-	   	    for (var i = 0; i < fieldLength; i++) {
-			    iconArticle[i].style.display = 'none';
-			    iconArticle[i].previousElementSibling.setAttribute('class', 'libraryicon');
-		    }
-            selectedIcon.nextElementSibling.style.display = 'block';
-            selectedIcon.setAttribute('class', 'libraryicon selected');
-            var entryURLHash = selectedIcon.getAttribute('data-id');
-            location.hash = entryURLHash; 
-        } else {
-            selectedIcon.nextElementSibling.style.display = 'none';
-            selectedIcon.setAttribute('class', 'libraryicon');
-            removeHash();
-        }
+    if (selectedIcon.nextElementSibling.style.display === 'none') {
+		for (var i = 0; i < fieldLength; i++) {
+			iconArticle[i].style.display = 'none';
+			iconArticle[i].previousElementSibling.setAttribute('class', 'libraryicon');
+		}
+        selectedIcon.nextElementSibling.style.display = 'block';
+        selectedIcon.setAttribute('class', 'libraryicon selected');
+        var entryURLHash = selectedIcon.getAttribute('data-id');
+        location.hash = entryURLHash; 
+    } else {
+        selectedIcon.nextElementSibling.style.display = 'none';
+        selectedIcon.setAttribute('class', 'libraryicon');
+        removeHash();
     }
 }
 
