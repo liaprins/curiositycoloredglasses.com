@@ -4,7 +4,7 @@ var fieldLength = iconArticle.length;
 var libraryURL = window.location;
 
 
-function myFunction() {
+function libraryLink() {
     if (window.location.hash) {
         var hash = location.hash;
         for (var i = 0; i < fieldLength; i++) {
@@ -13,13 +13,12 @@ function myFunction() {
             if (hash == iconName) {
                 iconArticle[i].style.display = 'block';
                 currentIcon.setAttribute('class', 'libraryicon selected');
-                document.getElementById("testholder").innerHTML = 'yes hash ' + hash + iconName;
             }
         }
     } 
 }
 
-window.addEventListener('DOMContentLoaded', myFunction, false);
+window.addEventListener('DOMContentLoaded', libraryLink, false);
 
 
 function removeHash() { 
