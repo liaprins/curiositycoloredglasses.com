@@ -613,13 +613,9 @@
         border-color: #e2e43a;    }
     #navsearch {
         margin-top: 0;
-        margin-left: 0.422rem;
+        margin-left: 0.844rem;
         margin-right: 0.422rem;
         float: right;    }
-    #searchdecoy {
-        height: 1.476rem;
-        padding: 0.316rem;
-        padding-top: 0;    }
     #navsearchinput {
         width: calc(291.667px - 3.586rem);    }
     #navsearchbutton {    /* This refers to the button element holding the image */

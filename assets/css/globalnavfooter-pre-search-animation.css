@@ -28,14 +28,6 @@ main {    /* :) This is for all content except nav and footer on all pages; "con
 
 /* NAV -------------------------------------------------- */
 
-#searchdecoy {
-    padding-bottom: 0.13rem;    /* Matching bottom padding of yellow menu, when #navsearchinput is open */
-    padding-top: 0.13rem;    }
-#searchdecoy:hover {
-    cursor: pointer;    }
-
-#navsearchform {    }
-
 .underlineinput {    /* Applies to both nav search bar and search page input fields */
     border-style: none none solid none;
     border-width: 0.125rem;    /* This will match the weight of the home glasses icon at any screensize */
@@ -59,7 +51,7 @@ main {    /* :) This is for all content except nav and footer on all pages; "con
     height: 1.688rem;    /* For some reason for search icons/buttons, I had to put the padding on the button and account for its size to fit the img perfectly inside; if I tried to use box-sizing:content-box and put the padding on the img, it raised up the icon and couldn't figure out how to get it level except this method */
     padding: 0.422rem 0 0.422rem 0.422rem;    }
 
-.navsearchicon {    /* :) This refers to the magnifier SVG image, for both the real search button, and the decoy */
+#navsearchicon {    /* :) This refers to just the magnifier SVG image */
     display: inline;
     height: 0.844rem;    }
 

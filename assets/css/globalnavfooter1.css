@@ -28,14 +28,6 @@ main {    /* :) This is for all content except nav and footer on all pages; "con
 
 /* NAV -------------------------------------------------- */
 
-#searchdecoy {
-    padding-bottom: 0.13rem;    /* Matching bottom padding of yellow menu, when #navsearchinput is open */
-    padding-top: 0.13rem;    }
-#searchdecoy:hover {
-    cursor: pointer;    }
-
-#navsearchform {    }
-
 .underlineinput {    /* Applies to both nav search bar and search page input fields */
     border-style: none none solid none;
     border-width: 0.125rem;    /* This will match the weight of the home glasses icon at any screensize */
@@ -43,23 +35,31 @@ main {    /* :) This is for all content except nav and footer on all pages; "con
     background-color: transparent;
     color: black;    }    
 
+.navsearchinputclass {
+    padding-bottom: 0.25rem;    /* :) Finessed the space between input word and underline bar to match space between input and bottom of field for subscribe + comment name fields */
+    width: 0;    } 
+
+#navsearchinput {
+    width: calc(67.857vw - 1.6rem);    }
+
+#navsearchinput::-webkit-input-placeholder {    /* This is to make the placeholder text in Chrome look multiplied (because I can't get it to actually!) */
+   color: #686b31;    }   
+
 .searchbutton {    /* Applies to both nav search bar and search page buttons */
     background-color: transparent;
     border-style: none;
     cursor: pointer;    }    /* This is to force the curser into a hand */
 
-#navsearchinput {
-    padding-bottom: 0.25rem;    /* :) Finessed the space between input word and underline bar to match space between input and bottom of field for subscribe + comment name fields */
-    width: calc(67.857vw - 1.6rem);    }
-
-#navsearchinput::-webkit-input-placeholder {    /* This is to make the placeholder text in Chrome look multiplied (because I can't get it to actually!) */
-   color: #686b31;    }    
+.navsearchbuttonclass {    /* This refers to the button element holding the image */
+    height: 1.688rem;    /* For some reason for search icons/buttons, I had to put the padding on the button and account for its size to fit the img perfectly inside; if I tried to use box-sizing:content-box and put the padding on the img, it raised up the icon and couldn't figure out how to get it level except this method */
+    padding: 0.422rem 0 0.422rem 0.422rem;
+    position: relative;
+    left: 0;    }
 
 #navsearchbutton {    /* This refers to the button element holding the image */
-    height: 1.688rem;    /* For some reason for search icons/buttons, I had to put the padding on the button and account for its size to fit the img perfectly inside; if I tried to use box-sizing:content-box and put the padding on the img, it raised up the icon and couldn't figure out how to get it level except this method */
-    padding: 0.422rem 0 0.422rem 0.422rem;    }
+    left: calc(67.857vw - 1.6rem);    }
 
-.navsearchicon {    /* :) This refers to the magnifier SVG image, for both the real search button, and the decoy */
+#navsearchicon {    /* :) This refers to just the magnifier SVG image */
     display: inline;
     height: 0.844rem;    }
 

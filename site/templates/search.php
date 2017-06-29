@@ -14,7 +14,7 @@
     <?php snippet('menu') ?>
 
 
-        <div id="pre-search">    <!-- Opening <article> to make room for RR results that need to be wider than this width, to accommodate their all having margins on L + R -->
+        <div id="pre-search">    <!-- Opening <div> to make room for RR results that need to be wider than this width, to accommodate their all having margins on L + R -->
 
 
 
