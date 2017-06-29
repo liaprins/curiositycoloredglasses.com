@@ -1,0 +1,27 @@
+title: Archive
+
+//page settings
+deletable: false
+options: 
+	preview: true
+	status: false
+	template: false
+	url: true
+	delete: false
+
+//subpage settings
+pages: false
+
+//file settings
+files: false
+
+//fields with their field types and options
+fields:
+  title:
+    label: Page name
+    type: text
+    placeholder: Title for the 'archive' page
+  text:
+    label: Page description
+    type: textarea
+    placeholder: Optional explanation or instructions to readers about this page

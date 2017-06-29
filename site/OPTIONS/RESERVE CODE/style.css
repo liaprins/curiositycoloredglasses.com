@@ -1,0 +1,279 @@
+/*
+
+Lia Prins's CSS style sheet for Curiosity-Colored Glasses
+
+*/
+
+
+
+/* GLOBAL (STYLES THAT ARE ON ALL PAGES) -------------------------------------------------- */
+
+body {
+    background-color: white;
+    color: black;
+    font-family: 'Sintesi_Sans', 'Courier_New', Courier, Monotype;
+    line-height: 1.6;
+}
+
+main {
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+
+
+/* NAV -------------------------------------------------- */
+
+.navgroup {
+    margin: 25px; /* Need a real measurement for this */
+}
+
+.navitem {
+    display: inline;
+    float: right; /* For some reason this is putting the nav in reverse order!!! */
+}
+
+.search {
+    border-style: none none solid none;
+    border-width: 2px; /* Replace with actual size */
+    border-color: black;
+    color: black;
+}
+
+#navsearchicon {
+    width: 14px;
+    height: 14px; /* No clue why this button is so tall; not the image/SVG's fault! */
+}
+
+
+
+/* FOOTER -------------------------------------------------- */
+
+footer {
+    background-color: #e2e43a;
+    margin-top: 52.78px; /* 1 col-width */
+    padding: 52.78px 0px; /* 1 col-width */
+}
+
+.footercontent { /* Matching <main> style settings */
+    max-width: 950px;
+    margin: 0 auto 52.78px auto;
+}
+
+.email {
+    border-style: solid ;
+    border-width: 2px; /* Replace with actual size */
+    border-color: black;
+    color: black; /* Still looks gray when placeholder only; maybe that's better for the design though */
+    background-color: #e2e43a;
+    padding: 6pt; /* Doesn't seem to make a diff. This space should match the space between multiple lines of this type; so leading = 160%, so space between = just 60% of type size */
+    margin: 0px; /* Doesn't seem to make a diff.*/
+    display: inline; /* Doesn't seem to work!!! */
+}
+
+.button {
+    background-color: black;
+    color: white;
+    padding: auto 14px; /* Doesn't seem to make a diff. Figure out actual size... */
+    border: solid;
+    border-width: 2px;
+    border-color: black;
+    height: 37px; /* Replace with actual size */
+    margin: 0px;
+    display: inline; /* Doesn't seem to work!!! */
+} 
+
+.button:hover {
+    background-color: white;
+    color: black;
+}
+
+#yellowbutton {
+    color: #e2e43a;
+}
+
+#yellowbutton:hover {
+    background-color: #e2e43a;
+    color: black;
+}
+
+.socialicon {
+    width: 15px; /* Replace with actual size */
+    display: inline;
+    margin: 0 7.5px; /* Replace with actual size */
+}
+
+#follow {
+    float: right; /* Somehow this is keeping in the right order, but when used on nav, it reverses the nav items order!!! */
+}
+
+#portfolio {
+    margin-left: 7.5px;
+}
+
+.inlinelist {
+    display: inline;
+}
+
+
+
+/* TEXT
+-------------------------------------------------- */
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+
+h1 {
+    font-family: 'Grotesque_Bold', 'Courier_New', Courier, Monotype;
+    text-transform: uppercase;
+    letter-spacing: 8px; /* Try to use a more relative sizing method */
+    font-size: 23.7pt;
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 14.22pt; /* This space should match the space between multiple lines of this type; so leading = 160%, so space between = just 60% of type size */
+    margin-bottom: 14.22pt; /* This space should match the space between multiple lines of this type; so leading = 160%, so space between = just 60% of type size */
+    margin-top: 52.78px; /* 1 col-width */
+    clear: right; /* This is so it doesn't overlap with the nav (not sure if margin-top is making any difference now, though) */
+}
+
+
+h2 {
+    font-family: 'Grotesque_Bold', 'Courier_New', Courier, Monotype;
+    text-transform: uppercase;
+    letter-spacing: 5px; /* Try to use a more relative sizing method */
+    font-size: 17.8pt;
+    margin-bottom: 26.39px; /* .5 col-width */
+}
+
+
+h3 {
+    font-family: 'Grotesque_Bold', 'Courier_New', Courier, Monotype;
+    text-transform: uppercase;
+    letter-spacing: 8px; /* Try to use a more relative sizing method */
+    font-size: 13.3pt;
+    line-height: 1; /* Resetting to 0 so the visual "padding" won't be affected */
+    background-color: black;
+    color: white;
+    padding: 7.98pt; /* This space should match the space between multiple lines of this type; so leading = 160%, so space between = just 60% of type size */
+    margin-bottom: 52.78px; /* 1 col-width */
+    margin-top: 79.17px; /* 1.5 col-width */
+}
+
+
+.xs-display{ /* For nav text items */
+    font-family: 'Grotesque_Bold', 'Courier_New', Courier, Monotype;
+    text-transform: uppercase;
+    letter-spacing: 3px; /* Try to use a more relative sizing method */
+    font-size: 7.5pt;
+    padding: 5px; /* Need a real measurement for this */
+}
+
+.xs-display:hover {
+    background-color: #e2e43a;
+}
+
+.s-display { /* "Read more */
+    font-family: 'Grotesque_Bold', 'Courier_New', Courier, Monotype;
+    text-transform: uppercase;
+    letter-spacing: 4px; /* Try to use a more relative sizing method */
+    font-size: 10pt;
+    padding: 5px; /* Need a real measurement for this */
+}
+
+.readmore:hover {
+  background-color: #e2e43a;
+}
+
+.tagline { 
+    /* font-family: 'Sintesi_Sans', 'Courier_New', Courier, Monotype; */ /* If want demi-bold, need to create this font, using instructions saved as a hidden project in my Cargo Collective */
+    /* FYI, Line height of 1.6 (set in body) is also affecting the space between tagline and blog name */
+    text-align: center;
+    padding: 0px 100px;
+}
+
+.l-textface { /* This doesn't seem to be applying to post page's intro paragraph, but is to tagline */
+    font-size: 18.7pt;
+}
+
+.m-textface {
+    font-size: 14pt;
+}
+
+.s-textface { /* "Tags */
+    font-size: 10.5pt;
+}
+
+.tag {
+    padding: 5px; /* Need a real measurement for this */
+}
+
+.tag:hover {
+    background-color: #e2e43a;
+}
+
+.xs-textface { /* Email subscribe explanation */
+    font-size: 7.9pt;
+}
+
+.inlinelink { /* Email subscribe explanation */
+    text-decoration: underline;
+}
+
+.bold {
+    font-weight: bold; /* This is a temp solution/placeholder; much better to create the Sintesi Demi-bold typeface and call it here */
+}
+
+.date {
+    margin-top: 79.17px; /* This is 1.5 column-width of 18 cols within max-width of 1050px; will likely change spacing to not be based on col width... */
+    border-style: solid none none none; /* If re-using this .date class for results modules, this is the only property that is relevant to both */
+    border-width: 5px; /* Replace with actual size */
+    padding-top: 13.19px; /* This is .25 column-width; will likely change spacing to not be based on col width... */
+}
+
+.caption {
+    padding-bottom: 26.39px; /* .5 col-width */
+    border-style: none none solid none; /* If re-using this .date class for results modules, this is the only property that is relevant to both */
+    border-width: 5px; /* Replace with actual size */
+    margin-bottom: 52.78px; /* 1 col-width */
+}
+
+
+
+/* SOME PAGES -------------------------------------------------- */
+
+#share {
+    float:right;
+    margin-top: 15px; /* Replace with actual size */
+    margin-bottom: 26.39px; /* .5 col-width */
+}
+
+button {
+    border: none;
+    background-color: white;
+    padding: 0; 
+    margin: 0;
+}
+
+.onecomment {
+    margin-bottom: 52.78px; /* 1 col-width */
+}
+
+
+
+/* IMAGES
+-------------------------------------------------- */
+
+img { /* This just represents the styles needed for postglasses right now */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px; /* This is for the postglasses on home page. There should be 1 col-width between date line and postglasses, so I got this via subtracting 1 col-width from existing space (found via FF Inspector) */
+    margin-bottom: 52.78px; /* 1 col-width */
+    width: 158.25px; /* 3xcol-width */
+}
+
+

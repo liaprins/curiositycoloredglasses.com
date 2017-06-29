@@ -1,0 +1,39 @@
+Postglasses: img_2971.jpg
+
+----
+
+Title: Testing Vocab + Galleries
+
+----
+
+Date: 2016-11-20
+
+----
+
+Tags: 
+
+----
+
+Intro: 
+
+----
+
+Text: 
+
+Testing vocab:
+(vocab: tectonic url: tectonic)
+
+Testing gallery:
+(gallery: gallery1)
+
+----
+
+Relevantreading1: 
+
+----
+
+Relevantreading2: 
+
+----
+
+Relevantreading3: 

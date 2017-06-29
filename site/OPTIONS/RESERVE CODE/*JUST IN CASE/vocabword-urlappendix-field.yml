@@ -1,0 +1,46 @@
+title: Vocab Word
+
+//page settings
+deletable: true
+options: 
+	preview: false
+	status: false
+	template: true
+	url: true
+
+//subpage settings
+pages: false
+
+//file settings
+files: 
+	- audio
+	- image
+
+//fields with their field types and options
+fields:
+  vocabword:
+    label: Vocab word
+    type: text
+    required: true
+    placeholder: Word to be defined
+    help: This needs to match the "vocab:" attribute in the kirbytag
+  urlappendix:
+    label: URL appendix
+    type: text
+    required: true
+    placeholder: Word to be defined without spaces or special characters
+    help: This needs to match the "url:" attribute in the kirbytag
+  pronunciation:
+    label: Pronunciation
+    type: text
+  audiopronunciation:
+    label: Audio Pronunciation
+    type: select
+    options: audio
+  definition:
+  	label: Definition
+  	type: textarea
+  	required: true
+  illustration:
+  	label: Illustration
+  	type: image

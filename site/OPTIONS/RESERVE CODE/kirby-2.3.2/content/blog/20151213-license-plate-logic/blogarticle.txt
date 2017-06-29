@@ -1,0 +1,37 @@
+Postglasses: postglasses.gif
+
+----
+
+Title: License plate logic and secret codes
+
+----
+
+Date: 2015-12-13
+
+----
+
+Tags: states,design,geography
+
+----
+
+Intro: The summer between second and third grade, I took swimming lessons at the pool all the way across town. It was during these fifteen minutes of being ferried around by my (link: library#mom text: mom) that I developed one of my most bizarre obsessions: license plates. And no, not in the (relatively) normal way of trying to see one from every contiguous state: I had already accomplished that the previous summer, plus Puerto Rico, plus eleven Canadian provinces. This time I was tracking specific license plate letter combinations. It seemed that there was a plethora of “MKY”, which I affectionately nick-named Micky in the notebook where I kept track of the three-digit numerical counterparts for each plate. I did this for at least twenty other letter prefixes as well, which seemed to have an unusual prevalence in our town. This was to make sure we weren’t just seeing the same car over and over. It’s a miracle my parents never had me tested for Aspbergers. In any case, the numbers don’t lie: those twenty or so letter combinations occupied far more than their fair share of Walla Walla county cars. It was an observation that would haunt me for the rest of my childhood, until my (link: library#dad text: dad) pretty much solved this cold case for me single-handedly.
+
+----
+
+Text: 
+
+This will be the body copy.
+
+Tem idest ma si sandandus ipsundit viditiis de sedisquam eum etur, offic tem.
+
+----
+
+Relevantreading1: blog/when-to-use-dashes
+
+----
+
+Relevantreading2: blog/the-ugly-cousin
+
+----
+
+Relevantreading3: blog/palm-tree-glories

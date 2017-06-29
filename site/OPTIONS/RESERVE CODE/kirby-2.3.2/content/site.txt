@@ -1,0 +1,17 @@
+Title: Curiosity-Colored Glasses (site.txt)
+
+----
+
+Author: Lia Prins
+
+----
+
+Description: This is Kirby's Starterkit.
+
+----
+
+Keywords: Kirby, CMS, file-based
+
+----
+
+Copyright: © 2009-(date: Year)

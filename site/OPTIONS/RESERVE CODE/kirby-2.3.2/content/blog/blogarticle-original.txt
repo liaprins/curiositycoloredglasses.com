@@ -1,0 +1,38 @@
+PostGlasses:
+
+(image: postglasses.jpg alt: post glasses)
+
+----
+
+Title:
+
+
+
+----
+
+Date:
+
+YYYY-MM-DD
+
+----
+
+Tags:
+
+\#
+
+----
+
+Intro:
+
+
+----
+
+Text:
+
+This will be the body copy.
+
+----
+
+RelevantReading:
+
+- blog/

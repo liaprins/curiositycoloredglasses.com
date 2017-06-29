@@ -1,0 +1,37 @@
+Postglasses: postglasses.gif
+
+----
+
+Title: Are currencies with common names actually common currency?
+
+----
+
+Date: 2016-01-07
+
+----
+
+Year: 2016
+
+----
+
+Tags: language,geography,design
+
+----
+
+Intro: I remember when Canada got their then-new two-dollar coin, because my (link: library#aunt-cathy text: aunt from Vancouver) showed me. It had an outer donut-like ring of silvery-colored metal, and an inner, donut-hole-shaped circle of golden metal. One side had the queen England’s face, and the other had a polar bear or grizzly bear, a Canadian version of the typical heads and tails of a coin. She said some people were joking about it saying the queen had a bear/bare tail (either one is funny). But it was so different from the scarce American $2 bill. I wondered why they were both called dollars at all. Mexico called theirs pesos, which I knew enough Spanish even then to discern that it did not mean “dollar”; it was its own word. So why did Canada have to take our word (and symbol), when they could have used the opportunity to invent some awesome totally arbitrary one…unless maybe both dollars _were_ related somehow, or had been in the past? Same for Australia and New Zealand!
+
+----
+
+Text: This will be the body copy. (vocab: cat)
+
+----
+
+Relevantreading1: blog/when-to-use-dashes
+
+----
+
+Relevantreading2: blog/testing-forrest-gump
+
+----
+
+Relevantreading3: blog/license-plate-logic

@@ -1,0 +1,27 @@
+title: Blog
+
+//page settings
+deletable: false
+options: 
+	preview: true
+	status: true
+	template: false
+	url: true
+	delete: false
+
+//subpage settings
+pages: 
+	template: blogarticle
+	sort: flip
+	limit: 25
+	num: 
+		mode: date
+
+
+fields:
+  title:
+    label: Title
+    type:  text
+  text:
+    label: Text
+    type:  textarea

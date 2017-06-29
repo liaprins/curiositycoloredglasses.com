@@ -1,0 +1,109 @@
+title: Blog Article
+
+//page settings
+deletable: true
+options: 
+	preview: true
+	status: true
+	template: false
+	url: true
+	delete: true
+
+//subpage settings
+pages: 
+  template:
+    - gallery
+    - vocabword
+
+//file settings
+files: true
+  fields:
+    caption:
+      label: Caption
+      type: textarea
+    alttext:
+      label: Alternate text
+      type: text
+      placeholder: Brief description of the image (for accessibility via screenreaders or in case the image fails to load)
+
+
+//fields with their field types and options
+fields:
+  postcontent:
+    label: Post Content
+    type: headline
+  postglasses:
+    label: Glasses .GIF for this post
+    type:  image
+    required: true
+    placeholder: Select the 'curiosity-colored glasses' icon for this post
+  title:
+    label: Post title
+    type:  text
+    required: true
+    placeholder: Title for this blog post
+    help: Title should be sentence case without a period at the end
+  date:
+    label: Date
+    type: date
+    default: today
+    required: true
+  tags:
+  	label: Tags
+  	type: tags
+  intro:
+  	label: Introduction
+  	type: textarea
+  	placeholder: Intro explaining my motivation for creating the post which will appear on the home screen
+  	validate: 
+  		max: 1500
+    help: Must be 1500 characters or less
+  text:
+  	label: Blog post
+  	type: textarea
+  	placeholder: Main body of the post
+  relevantreading1:
+    width: 1/3
+    label: Relevant Reading
+    type: select 
+    options: query
+    query:
+      fetch: visibleSiblings
+      value: 'blog/{{uid}}'
+      text: '{{title}}'
+      flip: true
+  relevantreading2:
+    width: 1/3
+    label: Relevant Reading
+    type: select 
+    options: query
+    query:
+      fetch: visibleSiblings
+      value: 'blog/{{uid}}'
+      text: '{{title}}'
+      flip: true
+  relevantreading3:
+    width: 1/3
+    label: Relevant Reading
+    type: select 
+    options: query
+    query:
+      fetch: visibleSiblings
+      value: 'blog/{{uid}}'
+      text: '{{title}}'
+      flip: true
+  line:
+    type: line
+  Share Settings:
+    label: Share Settings
+    type: headline
+  share:
+    label: Sharing Placeholder Text
+    type: textarea
+    validate: 
+      maxLength: 140
+    help: Must be 140 characters or less
+  twitterimageurl:
+    label: URL for Twitter image
+    type: text
+

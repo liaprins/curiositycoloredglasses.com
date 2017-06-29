@@ -1,0 +1,37 @@
+Postglasses: postglasses.jpg
+
+----
+
+Title: Penmanship dialects of the world
+
+----
+
+Date: 2015-11-04
+
+----
+
+Tags: penmanship,language
+
+----
+
+Intro: My family had (link: library#japanese-schools text: two Japanese exchange students) stay with us when I was in high school. I was still in the process of refining my own handwriting into a delectable print-cursive combo that conveniently doubled as an encryption method that no one else could read. Point being, I was hyper aware of the shapes of other people’s letters, numbers, whether they used an “&” or a “+” or something in between. I noticed that both Japanese girls wrote their “4”s in a most peculiar way. And I also noticed (link: library#cecelia text: my friend from Spain) wrote her lowercase “a” in a completely different way than anything I had seen before: almost a cursive “o” but then adding the tail of the “a”. Of course all this made me very curious.
+
+----
+
+Text: 
+
+This will be the body copy.
+
+Dem etur sunt, quiam essitius et ad mi, simagnima qui apiet ad ex eaquis pedisintur, occabo. Utatibu sandand aecepuda illatenis erchil molorrunt arionseces re pore, que nonsequame sus evelit ipsum qui officto debis acerovi tiberum, autat ped maximen turemporro dita consequissi bearion.
+
+----
+
+Relevantreading1: blog/when-to-use-dashes
+
+----
+
+Relevantreading2: blog/license-plate-logic
+
+----
+
+Relevantreading3: blog/currencies-with-common-names
