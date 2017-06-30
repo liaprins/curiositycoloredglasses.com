@@ -58,10 +58,17 @@ header {    /* Holds blog name + tagline */
 
 /* POST PAGE -------------------------------------------------- */
 
+#backarrowcontainer {
+    z-index: 101;
+    position: absolute;
+    left: 75px;
+    top: 5px;    }
+
 #backarrow {    /* This is just here in case I put the HTML for it back in */
     box-sizing: content-box;    /* Preventing the padding from cutting into the yellow hover state */
     width: 1.407rem;
-    padding: 0.422rem;    }    
+    padding: 0.422rem;
+    cursor: pointer;    }    
 
 .mockmain {    /* This applies to the article element which holds all the post content and top part of Archive page; it is taking the place of <main> on post page, because there's only one <main> element allowed per page, but it has to split into two to allow wider #relevantreading <section> to fit between, to accomodate RR results with margins that extend beyond <main> */
     max-width: 1225px;

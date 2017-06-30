@@ -1,5 +1,0 @@
-Title: Search
-
-----
-
-Text: This page will show search results.

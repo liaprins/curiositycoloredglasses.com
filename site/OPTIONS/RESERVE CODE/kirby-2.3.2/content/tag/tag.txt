@@ -1,9 +1,0 @@
-Title:
-
-Tags
-
-----
-
-Text: 
-
-This page is adjacent to the main blog home page, like About is (it is not a sub-page of the main blog home page, like the articles are)!

@@ -13,9 +13,6 @@
     <!-- I MOVED THE HOME GLASSES ICON INTO THE 'menu' SNIPPET SO CALLING IT NOW INSTEAD OF 'internal-menu' SNIPPET -->
     <?php snippet('menu') ?>
 
-    <!-- for backarrow script (held in menu.php) -->
-    <?php snippet('backarrow') ?>
-
 
     <main>
 

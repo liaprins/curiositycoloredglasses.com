@@ -16,9 +16,6 @@
 
     <?php snippet('menu') ?>
 
-    <!-- for backarrow script (held in menu.php) -->
-    <?php snippet('backarrow') ?>
-
 
         <article class="mockmain" id="pre-rr">    <!-- Opening <article> to make room for RR results that need to be wider than this width, to accommodate their all having margins on L + R -->
 

@@ -1,11 +1,3 @@
-		<div id="testholder"></div>
-
-
-
-
-
-
-
 		<footer role="contentinfo">
 
 			<div id="footercontent">
