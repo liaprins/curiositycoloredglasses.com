@@ -20,7 +20,7 @@
 
         <!-- titling the page after the tag that brought us here -->
         <!-- NOT SURE IF THIS WILL STAY AS <p> -->
-        <p id="tagpagename" class="xl-textface">
+        <p id="tagpagename" class="xl-textface tagnobackarrow">
             #<?php echo param('tag') ?>
         </p>
 

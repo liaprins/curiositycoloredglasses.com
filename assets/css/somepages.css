@@ -59,16 +59,19 @@ header {    /* Holds blog name + tagline */
 /* POST PAGE -------------------------------------------------- */
 
 #backarrowcontainer {
-    z-index: 101;
+    float: right;    /* Pushes the group as a whole to the right */
     position: absolute;
-    left: 75px;
-    top: 5px;    }
+    top: calc(10.714vw - 0.175rem);
+    right: calc(10.714vw + 2.3rem);    }
 
 #backarrow {    /* This is just here in case I put the HTML for it back in */
     box-sizing: content-box;    /* Preventing the padding from cutting into the yellow hover state */
     width: 1.407rem;
-    padding: 0.422rem;
-    cursor: pointer;    }    
+    padding: 0.316rem;
+    cursor: pointer;    }   
+
+.extrarightpadding {    /* This is called by the backarrow JS script for the library and tag page titles, to account for extra space needed by back arrow in the title area  */
+    padding-right: 5.25rem;    } 
 
 .mockmain {    /* This applies to the article element which holds all the post content and top part of Archive page; it is taking the place of <main> on post page, because there's only one <main> element allowed per page, but it has to split into two to allow wider #relevantreading <section> to fit between, to accomodate RR results with margins that extend beyond <main> */
     max-width: 1225px;
@@ -79,7 +82,14 @@ header {    /* Holds blog name + tagline */
     padding-top: 10.714vw;    }    /* 3/28 cols */
 
 #postdate {
+    /* width: calc(78.571vw - 1.914rem); */    }
+
+.postdatewidth {
     width: calc(78.571vw - 1.914rem);    }
+
+.postdatewidthbackarrow {
+    /* width: calc(78.571vw - 1.914rem); */
+    width: calc(78.571vw - 5.25rem);    }
 
 #postintro {     /* Introductory paragraph of post, on post page only */
     display: block;    /* This is so the margins will be recognized, since margins won't apply to inline elements (at least in this case) */
@@ -273,6 +283,14 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
     margin: 1.024rem 0 2.048rem 0;    }    /* top: .5 lh, bottom: .75 lh */
 
 
+/* ABOUT + ARCHIVE + LIBRARY PAGES -------------------------------------------------- */
+
+.extracontentpagetitle {
+    padding-right: 1.914rem;    /* when there's no backarrow */
+    padding-top: calc(10.714vw - 0.25rem);    /* top: 3/28 cols, but finessing to center vertically with menu icon */
+    margin-bottom: 1.536rem;    }    /* bottom: .5 lh */
+
+
 /* ABOUT PAGE -------------------------------------------------- */
 
 #aboutimage {
@@ -280,14 +298,6 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
 
 #abouttext {
     hyphens: auto;    }
-
-
-/* ABOUT + ARCHIVE + LIBRARY PAGES -------------------------------------------------- */
-
-.extracontentpagetitle {
-    padding-right: 1.914rem;
-    padding-top: calc(10.714vw - 0.25rem);    /* top: 3/28 cols, but finessing to center vertically with menu icon */
-    margin-bottom: 1.536rem;    }    /* bottom: .5 lh */
 
 
 /* ARCHIVE PAGE -------------------------------------------------- */
@@ -355,8 +365,7 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
     width: 0.844rem;
     padding: 0.422rem;
     margin-left: 0.844rem;
-    float: right;
-}
+    float: right;    }
 
 #libraryentrycontent {    /* Holds library entry name, about statement, citation (opt), etc */
     /* position: absolute; */    }    /* Leaving this (but commented out) + these comments for future explorations | Enable this to make the content span the width of all 3 icons, and L-align, but will also pin to top of icon area */
@@ -411,9 +420,11 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
 /* TAG PAGE -------------------------------------------------- */
 
 #tagpagename {
-    padding-right: 1.914rem;
     padding-top: calc(10.714vw - 3.5px);    /* top: 3/28 cols, but negative top margin needed to get title aligned with hamburger icon */
     margin-bottom: 2.560rem;    }    /* .5 lh */
+
+.tagnobackarrow {
+    padding-right: 1.914rem;    }    /* pre-backarrow */
  
 
 /* RESULTS -------------------------------------------------- */

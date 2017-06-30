@@ -195,12 +195,6 @@
     #backarrowcontainer {
         right: calc(5.357vw + 1.7rem);
         top: calc(5.357vw - 0.65rem);    }
-    .extrarightpadding,
-    .tagnobackarrow,
-    .extracontentpagetitle {
-        padding-right: 0;    }
-    .postdatewidthbackarrow {
-        width: 78.571vw;    }
 
     /* HAMBURGER ICON LOCATION -------------------------------------------------- */
 
@@ -212,7 +206,7 @@
         position: absolute;
         right: 7.143vw;
         top: 7.143vw;    }
-    .postdatewidth {
+    #postdate {
         width: 78.571vw;    }
 
     /* YELLOW OPEN MENU -------------------------------------------------- */
@@ -412,7 +406,7 @@
     #navdetails[open] #navsummary {    /* This is just the "x" button */
         right: 58.357px;
         top: 58.357px;    }
-    .postdatewidth {    /* 22/28 cols px equivalent at 817px screen width */
+    #postdate {
         width: 641.929px;    }
     #searchpageinput {
         width: calc(641.929px - 1.94rem);    }    /* This should be [the width of <main> (22/28 cols = 78.571vw)[] minus [the width of magnifier icon + its padding + the width of menu icon + the space between them (30px + 17px + 15px = 62px)] */
@@ -428,7 +422,8 @@
     .date, figcaption {
         width: 641.929px;    /* 22/28 cols px equivalent at 817px screen width */
         border-width: 7.003px;    }    /* 6/28 cols divided by 25 (ratio of postglasses' width to their line weight) px equivalent at 817px screen width */
-
+    #postdate {
+        width: 641.929px;    }    /* 22/28 cols px equivalent at 817px screen width */
 
     /* SUBSCRIBE -------------------------------------------------- */
 
@@ -562,16 +557,6 @@
     #pre-search {
         padding-top: calc(97.5px - 1.59rem);    }
 
-    /* BACK ARROW LOCATION -------------------------------------------------- */
-    
-    #backarrowcontainer {
-        position: fixed;
-        left: 0.422rem;
-        top: calc(0.422rem + 1.75rem);    }
-
-    #backarrow {
-    width: 1.301rem;    }
-
     /* NAV -------------------------------------------------- */
 
     nav {
@@ -673,7 +658,7 @@
         top: calc(70px + 2.048rem + 0.4rem);    /* Height of postglasses + space between them and title + title top-offset due to 1.7 lineheight (wouldn't be necesary if lineheight were 1) */
         width: 175px;    /* 3/21 cols px equivalent at 1225px screen width */
         border-width: 7.003px;     }    /* This should dynamically match the weight of the line of the postglasses below date, based on their width of 42.857vw (12/28 cols) and the ratio of the postglasses width to their line weight of 25:1; */ 
-    .postdatewidth {
+    #postdate {
         position: absolute;
         width: 175px;    }    /* 3/21 cols */
 

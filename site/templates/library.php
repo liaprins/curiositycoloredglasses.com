@@ -23,7 +23,7 @@
 
             <!-- title of the page -->
             <!-- NOT SURE IF THIS WILL END UP STAYING AS <h2> -->
-            <h2 class="extracontentpagetitle">
+            <h2 id="librarypagename" class="extracontentpagetitle">
                 <?php echo $page->title()->kirbytext() ?>
             </h2>
 

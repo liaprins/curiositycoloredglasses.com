@@ -16,9 +16,7 @@
     background-position: center;
     background-repeat: no-repeat;
     box-sizing: content-box; /* Over-riding the border-box property I had applied globally, so that the border on hover doesn't cut into the BG img space */
-    /* height: 0.900rem; */
     height: 1.012rem;
-    /* width: 0.900rem; */
     width: 1.012rem;
     border-color: #e2e43a;    /* These border properties have to be here in the [open] styles to override the border properties that are set when it's closed (#navsummary, below) */
     border-style: solid;
