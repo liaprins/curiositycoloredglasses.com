@@ -10,8 +10,10 @@
 <?php snippet('head-close') ?>
 
 
-    <!-- I MOVED THE HOME GLASSES ICON INTO THE 'menu' SNIPPET SO CALLING IT NOW INSTEAD OF 'internal-menu' SNIPPET -->
     <?php snippet('menu') ?>
+
+    <!-- calling the JS scripts used on everypage -->
+    <?php snippet('scripts-sitewide') ?>
 
     <!-- for backarrow script (held in menu.php) -->
     <!-- ARCHIVE DOES NOT NEED A BACKARROW, THIS IS ONLY HERE FOR TESTING! REMOVE ONCE POSTS AND TAG PAGE CAN RN THE BACKARROW SCRIPT! -->

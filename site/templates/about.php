@@ -10,8 +10,10 @@
 <?php snippet('head-close') ?>
 
 
-	<!-- I MOVED THE HOME GLASSES ICON INTO THE 'menu' SNIPPET SO CALLING IT NOW INSTEAD OF 'internal-menu' SNIPPET -->
 	<?php snippet('menu') ?>
+
+	<!-- calling the JS scripts used on everypage -->
+	<?php snippet('scripts-sitewide') ?>
 
 	<main>
 

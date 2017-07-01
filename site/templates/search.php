@@ -10,8 +10,10 @@
 <?php snippet('head-close') ?>
 
 
-    <!-- I MOVED THE HOME GLASSES ICON INTO THE 'menu' SNIPPET SO CALLING IT NOW INSTEAD OF 'internal-menu' SNIPPET -->
     <?php snippet('menu') ?>
+
+    <!-- calling the JS scripts used on everypage -->
+    <?php snippet('scripts-sitewide') ?>
 
 
         <div id="pre-search">    <!-- Opening <div> to make room for RR results that need to be wider than this width, to accommodate their all having margins on L + R -->

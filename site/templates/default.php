@@ -10,7 +10,10 @@
 <?php snippet('head-close') ?>
 
 
-    <?php snippet('menu') ?>        
+    <?php snippet('menu') ?>
+
+    <!-- calling the JS scripts used on everypage -->
+    <?php snippet('scripts-sitewide') ?>        
 
     <main>
 
