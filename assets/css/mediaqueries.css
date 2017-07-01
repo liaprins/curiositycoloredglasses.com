@@ -565,12 +565,31 @@
     /* BACK ARROW LOCATION -------------------------------------------------- */
     
     #backarrowcontainer {
+        z-index: 101;
         position: fixed;
         left: 0.422rem;
-        top: calc(0.422rem + 1.75rem);    }
+        top: 2.172rem;    }
+    #backarrowcontainer:hover {
+        max-width: calc(50vw - 390px);    /* Making the edge match up with the edge of the date and caption areas */
+    }
 
     #backarrow {
-    width: 1.301rem;    }
+        width: 1.301rem;    }
+
+    #backarrowhoverwords {
+        position: absolute;
+        left: calc(1.933rem - 0.316rem);
+        /* padding: 0.220rem 0.316rem 0.412rem 0.316rem; */
+        padding: 0.220rem 0.316rem 0.048rem 0.316rem;
+        /* height: 1.189rem; */
+        display: none;    }
+
+    #backarrowcontainer:hover > #backarrowhoverwords {
+        background-color: #e2e43a;
+        display: inline;    }
+
+    #backarrowcontainer:hover > #backarrow {
+        background-color: #e2e43a;    }
 
     /* NAV -------------------------------------------------- */
 
