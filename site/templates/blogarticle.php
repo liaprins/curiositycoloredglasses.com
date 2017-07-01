@@ -22,7 +22,11 @@
     ...IF I MANIPULATE THE URLS TO GET RID OF "BLOG" AND EXTRA "TAG" THIS MAY CHANGE! MAY JUST NEED 'scripts-sitewide' THEN LIKE THE OTHER PAGES... -->
     <?php snippet('scripts-sitewide-posts-tag') ?>
 
-    <!-- for backarrow script (held in menu.php) -->
+    <!-- backarrow script -->
+    <script src="../assets/js/backarrow.js">
+    </script>
+
+    <!-- for backarrow script ^^^ -->
     <?php snippet('backarrow') ?>
 
 

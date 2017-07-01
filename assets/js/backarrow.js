@@ -11,8 +11,8 @@ function backArrowShow() {
     	(referredLink.includes('library#')) ||    // not picking up on the #hash
     	(referredLink.includes('search')) || 
     	(referredLink.includes('tag'))) &&
-    	(/blog/.test(window.location.href))) ||    // replace "/blog/" with "/blog\//" once post pages can run scripts (right now home page ("/blog/") is a substition for testing)
-    	
+    	(/blog\//.test(window.location.href))) ||
+
         // second bundle, for backarrow appearing on library# pages
         (((referredLink.includes('blog\/')) ||
         (referredLink.includes('search'))) && 
@@ -22,17 +22,16 @@ function backArrowShow() {
         (((referredLink.includes('blog\/')) ||
         (referredLink.includes('archive')) ||
     	(referredLink.includes('search'))) &&
-    	(/archive/.test(window.location.href))) &&        // replace "/archive/" with "/tag/" once tag page can run scripts (right now archive page is a substition for testing)
+        (/tag\//.test(window.location.href))) &&    // if I end up manipulating the URL to not have extra "tag/" in it, I may need to change this from "/tag\//" to "/tag/"
         (referredLink != currentURL)) {
-    	
-    	// this line only for testing
-        // document.getElementById("testholder").innerHTML = '</br> </br> YES ( I am at HOME [post substitute] && came from a POST || ARCHIVE || SEARCH || TAG ) </br> or ( I am at a LIBRARY#entry && came from a POST ) </br> or ( I am at ARCHIVE [tag substitute] && came from a POST || SEARCH ) </br> </br> FROM: </br>' + referredLink + '</br> </br> AT: </br>' + currentURL;
     	
     	// building the back arrow
     	var backArrow = document.createElement('img');
     	var backArrowContainer = document.getElementById('backarrowcontainer');
     	backArrowContainer.appendChild(backArrow);
-    	// this will have to update when I get proper hosting and URL set up! or else construct its shape with CSS (research performance) vvv
+    	// this src attribute vvv will have to update when I get proper hosting and URL set up! 
+        // or store the PHP version in an HTML element's attribute, then collect it in JS as a variable and call it here
+        // or else construct its shape with CSS (research performance) vvv
     	backArrow.setAttribute("src", "http://localhost:8888/kirby-project/kirby-2.4.0/assets/images/backarrow.svg");
     	backArrow.setAttribute("id", "backarrow");
     	backArrow.setAttribute("class", "yellowhover");
@@ -43,24 +42,20 @@ function backArrowShow() {
 
         // add classes to update styles of page titles, to acct for space needed for back arrow
         var postdate = document.getElementById('postdate');
-        if (postdate) {
+        if (postdate) {    // Checking for its existence first, to save resources
             postdate.classList.toggle('postdatewidthbackarrow');
-        }
+        }    // closing checking if-statement
         
         var librarypagename = document.getElementById('librarypagename');
-        if (librarypagename) {
+        if (librarypagename) {    // Checking for its existence first, to save resources
             librarypagename.classList.toggle('extrarightpadding');
-        }
+        }    // closing checking if-statement
         
         var tagpagename = document.getElementById('tagpagename');
-        if (tagpagename) {
+        if (tagpagename) {    // Checking for its existence first, to save resources
             tagpagename.classList.toggle('extrarightpadding');
-        }
-
-    } else {
-    	// this line only for testing
-        // document.getElementById("testholder").innerHTML = '</br> </br> NO ( I am not at HOME [post substitute] && came from a POST || ARCHIVE || SEARCH || TAG ) </br> or ( I am not at a LIBRARY#entry && came from a POST ) </br> or ( I am not at ARCHIVE [tag substitute] && came from a POST || SEARCH ) </br> </br> FROM: </br>' + referredLink + '</br> </br> AT: </br>' + currentURL;
-    }
+        }    // closing checking if-statement
+    } 
 }
 
 window.addEventListener('DOMContentLoaded', backArrowShow, false);

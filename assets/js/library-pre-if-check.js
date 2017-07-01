@@ -8,17 +8,11 @@ function libraryLink() {
     if (window.location.hash) {
         var hash = location.hash;
         for (var i = 0; i < fieldLength; i++) {
-            if (iconArticle) {    // Checking for its existence first, to save resources
                 var currentIcon = iconArticle[i].previousElementSibling;
-            }    // closing checking if-statement
-            if (currentIcon.hasAttribute('data-id')) {    // Checking for its existence first, to save resources
                 var iconName = '#' + currentIcon.getAttribute('data-id');
-            }    // closing checking if-statement
             if (hash == iconName) {
-                if (iconArticle) {    // Checking for its existence first, to save resources
-                    iconArticle[i].style.display = 'block';
-                    currentIcon.setAttribute('class', 'libraryicon selected');
-                }    // closing checking if-statement
+                iconArticle[i].style.display = 'block';
+                currentIcon.setAttribute('class', 'libraryicon selected');
             }
         }
     } 
@@ -42,11 +36,9 @@ function libraryIconClick(e) {
 
         if (selectedIcon.nextElementSibling.style.display === 'none') {
 	   	    for (var i = 0; i < fieldLength; i++) {
-			    if (iconArticle) {    // Checking for its existence first, to save resources
-                    iconArticle[i].style.display = 'none';
-		            iconArticle[i].previousElementSibling.setAttribute('class', 'libraryicon');
-		        }    // closing checking if-statement
-            }
+			    iconArticle[i].style.display = 'none';
+			    iconArticle[i].previousElementSibling.setAttribute('class', 'libraryicon');
+		    }
             selectedIcon.nextElementSibling.style.display = 'block';
             selectedIcon.setAttribute('class', 'libraryicon selected');
             var entryURLHash = selectedIcon.getAttribute('data-id');

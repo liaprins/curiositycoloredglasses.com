@@ -2,9 +2,13 @@ function menuClose() {
     var screenwidth = window.innerWidth;
     var menu = document.getElementById('navdetails');
     if (screenwidth < 1225) {
-        menu.removeAttribute('open');
-    } else {
-        menu.setAttribute('open', 'open');
+    	if (menu) {    // Checking for its existence first, to save resources
+        	menu.removeAttribute('open');
+    	}    // closing checking if-statement
+    } else {    // Checking for its existence first, to save resources
+    	if (menu) {
+	        menu.setAttribute('open', 'open');
+	    }    // closing checking if-statement
     }
 }
 

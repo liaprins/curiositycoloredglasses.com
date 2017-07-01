@@ -15,7 +15,11 @@
     <!-- calling the JS scripts used on everypage -->
     <?php snippet('scripts-sitewide') ?>
 
-    <!-- for backarrow script (held in menu.php) -->
+    <!-- backarrow script -->
+    <script src="assets/js/backarrow.js">
+    </script>
+
+    <!-- for backarrow script ^^^ -->
     <?php snippet('backarrow') ?>
 
 

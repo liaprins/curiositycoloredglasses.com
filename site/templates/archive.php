@@ -15,9 +15,6 @@
     <!-- calling the JS scripts used on everypage -->
     <?php snippet('scripts-sitewide') ?>
 
-    <!-- for backarrow script (held in menu.php) -->
-    <!-- ARCHIVE DOES NOT NEED A BACKARROW, THIS IS ONLY HERE FOR TESTING! REMOVE ONCE POSTS AND TAG PAGE CAN RN THE BACKARROW SCRIPT! -->
-    <?php snippet('backarrow') ?>
 
     <main>
 
