@@ -62,7 +62,16 @@ header {    /* Holds blog name + tagline */
     float: right;    /* Pushes the group as a whole to the right */
     position: absolute;
     top: calc(10.714vw - 0.175rem);
-    right: calc(10.714vw + 2.3rem);    }
+    right: calc(10.714vw + 2.3rem);
+    /* width: 1.407rem; */
+    height: 0;
+    /* height: 0.563rem; */    }    /* Matching height of icon + padding, otherwise it is too big and you can hover on a part that is in this container, but not the icon or its padding, and the hover words show when the icon's padding isn't yellow */
+
+#backarrowhoverwords {
+    display: none;    }
+
+#backarrowcontainer:hover > #backarrowhoverwords {
+    display: none;    }
 
 #backarrow {    /* This is just here in case I put the HTML for it back in */
     box-sizing: content-box;    /* Preventing the padding from cutting into the yellow hover state */
