@@ -37,26 +37,18 @@ function backArrowShow() {
     	backArrow.setAttribute("id", "backarrow");
     	backArrow.setAttribute("class", "yellowhover");
 
-    	// set the link
+    	//set the link
     	var backArrowContainer = document.getElementById('backarrowcontainer');
     	backArrowContainer.setAttribute("href", referredLink);
 
         // add classes to update styles of page titles, to acct for space needed for back arrow
-        var postdate = document.getElementById('postdate');
-        if (postdate) {
-            postdate.classList.toggle('postdatewidthbackarrow');
-        }
-        
+        // NOT WORKING !!!!!
+        // var tagpagename = document.getElementById('tagpagename');
+        // tagpagename.setAttribute('class', 'xl-textface tagnobackarrow extrarightpadding');
         var librarypagename = document.getElementById('librarypagename');
-        if (librarypagename) {
-            librarypagename.classList.toggle('extrarightpadding');
-        }
-        
-        var tagpagename = document.getElementById('tagpagename');
-        if (tagpagename) {
-            tagpagename.classList.toggle('extrarightpadding');
-        }
-
+        librarypagename.setAttribute('class', 'extracontentpagetitle extrarightpadding');
+        // var postdate = document.getElementById('postdate');
+        // postdate.setAttribute('class', 'date m-textface bold postdatewidth postdatewidthbackarrow');
     } else {
     	// this line only for testing
         // document.getElementById("testholder").innerHTML = '</br> </br> NO ( I am not at HOME [post substitute] && came from a POST || ARCHIVE || SEARCH || TAG ) </br> or ( I am not at a LIBRARY#entry && came from a POST ) </br> or ( I am not at ARCHIVE [tag substitute] && came from a POST || SEARCH ) </br> </br> FROM: </br>' + referredLink + '</br> </br> AT: </br>' + currentURL;

@@ -70,9 +70,6 @@ header {    /* Holds blog name + tagline */
     padding: 0.316rem;
     cursor: pointer;    }   
 
-.extrarightpadding {    /* This is called by the backarrow JS script for the library and tag page titles, to account for extra space needed by back arrow in the title area  */
-    padding-right: 5.25rem;    } 
-
 .mockmain {    /* This applies to the article element which holds all the post content and top part of Archive page; it is taking the place of <main> on post page, because there's only one <main> element allowed per page, but it has to split into two to allow wider #relevantreading <section> to fit between, to accomodate RR results with margins that extend beyond <main> */
     max-width: 1225px;
     width: 78.571%;    /* 22/28 cols | Use % here instead of vw because they can be used inside the max-width */
@@ -426,6 +423,8 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
 .tagnobackarrow {
     padding-right: 1.914rem;    }    /* pre-backarrow */
  
+.extrarightpadding {    /* This is called by the backarrow JS script for the library and tag page titles, to account for extra space needed by back arrow in the title area  */
+    padding-right: 5.25rem;    } 
 
 /* RESULTS -------------------------------------------------- */
 
