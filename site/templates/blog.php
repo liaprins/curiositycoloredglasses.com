@@ -1,4 +1,4 @@
- <?php snippet('head-open') ?>
+<?php snippet('head-open') ?>
 
 
 <?php snippet('share-settings-common') ?>

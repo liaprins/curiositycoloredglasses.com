@@ -4,7 +4,7 @@
     .taglinehalf {
         display: inline-block;    }
 }
-
+ 
 @media only screen and (min-width: 284px) {
     .taglinehalf {
         display: inline;    }

@@ -2,7 +2,7 @@
 // ... THIS MEANS LIBRARY HAS BEEN LINKED TO FROM A library# URL (NOT THE REQUIRED blog URL ANYMORE) WHICH WOULD REMOVE THE BACKARROW
 
 var referredLinkPost = document.referrer;
-
+ 
 function backArrowShow() {
     if (((referredLinkPost.includes('blog\/')) || 
     	(referredLinkPost.includes('archive')) ||

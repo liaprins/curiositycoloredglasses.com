@@ -17,7 +17,7 @@ function libraryLink() {
         }
     } 
 }
-
+ 
 window.addEventListener('DOMContentLoaded', libraryLink, false);
 
 // Gets rid of the "#" that would otherwise remain at end of URL after closing an entry by re-clicking the icon

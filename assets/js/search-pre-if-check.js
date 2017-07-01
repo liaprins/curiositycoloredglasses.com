@@ -1,6 +1,6 @@
 var navSearchForm = document.getElementById('navsearchform');
 var searchDecoy = document.getElementById('searchdecoy');
-
+ 
 // The default HTML is set to work if ppl don't have JS;
 // this function sets things up for the search animation if they do hav JS
 function navSearchSetup() {

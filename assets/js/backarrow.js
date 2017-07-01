@@ -3,7 +3,7 @@
 
 var referredLink = document.referrer;
 var currentURL = window.location;    // this var only for testing
-
+ 
 function backArrowShow() {
         // first bundle, for backarrow appearing on blog posts
     if ((((referredLink.includes('blog\/')) || 

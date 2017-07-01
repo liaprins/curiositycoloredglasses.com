@@ -7,6 +7,6 @@ function menuClose() {
         menu.setAttribute('open', 'open');
     }
 }
-
+ 
 menuClose();
 window.addEventListener('resize', menuClose, false);

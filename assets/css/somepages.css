@@ -1,7 +1,7 @@
 /* "1 lh" = 2.048rem = the height of one lineheight's-worth of m-textface at 1.6 lineheight (although the base line height on <body> tag is actually set to 1.7; but I am keeping these rem measurements, because they look good) */
 
 /* HOME PAGE -------------------------------------------------- */
-
+ 
 header {    /* Holds blog name + tagline */
     padding-top: 10.714vw;    }    /* 2/28 cols */
 
