@@ -569,14 +569,13 @@
         position: fixed;
         left: 0.422rem;
         top: 2.172rem;    }
-    #backarrowcontainer:hover {
-        max-width: calc(50vw - 390px);    /* Making the edge match up with the edge of the date and caption areas */
-    }
+    #backarrowcontainer:hover {    /* !!! This is only for backarrow HOVER TEXT */
+        max-width: calc(50vw - 390px);    }    /* Making the edge match up with the edge of the date and caption areas */
 
     #backarrow {
         width: 1.301rem;    }
 
-    #backarrowhoverwords {
+    #backarrowhoverwords {    /* !!! This is only for backarrow HOVER TEXT */
         position: absolute;
         left: calc(1.933rem - 0.316rem);
         /* padding: 0.220rem 0.316rem 0.412rem 0.316rem; */
@@ -584,11 +583,11 @@
         /* height: 1.189rem; */
         display: none;    }
 
-    #backarrowcontainer:hover > #backarrowhoverwords {
+    #backarrowcontainer:hover > #backarrowhoverwords {    /* !!! This is only for backarrow HOVER TEXT */
         background-color: #e2e43a;
         display: inline;    }
 
-    #backarrowcontainer:hover > #backarrow {
+    #backarrowcontainer:hover > #backarrow {    /* !!! This is only for backarrow HOVER TEXT */
         background-color: #e2e43a;    }
 
     /* NAV -------------------------------------------------- */

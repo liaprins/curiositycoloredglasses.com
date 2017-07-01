@@ -32,25 +32,6 @@ function backArrowShow() {
         if (postdate) {    // Checking for its existence first, to save resources
             postdate.classList.toggle('postdatewidthbackarrow');
         }    // closing checking if-statement
-
-        // set hover text for each referred link
-        var backArrowHoverWords = document.getElementById('backarrowhoverwords');
-
-        // !!! THIS DOES NOT WORK!!! 
-        // it can only find elements on the CURRENT page the browser is on, that it has created the DOM of
-        // so this just returns its OWN (current page) title
-        if (referredLinkPost.includes('blog\/')) {
-            var postTitle = document.getElementById('posttitlejs').innerHTML;
-            if (postTitle) {
-                backArrowHoverWords.innerHTML = postTitle;
-            }
-        }
-
-        // this works
-        if (referredLinkPost.includes('archive')) {
-            backArrowHoverWords.innerHTML = 'Archive';
-        }
-
     }    // closing original if-statement
 }    // closing function backArrowShow
 

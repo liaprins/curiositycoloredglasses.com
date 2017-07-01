@@ -1,3 +1,3 @@
-<h2 class="posttitle" id="posttitlejs" data-uid="<?php echo $page->uid() ?>">
+<h2 class="posttitle">
 	<?php echo $page->title()->html() ?>
 </h2>
