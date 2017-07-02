@@ -16,7 +16,7 @@
     <?php snippet('scripts-sitewide') ?>
 
     <!-- backarrow script -->
-    <script src="assets/js/backarrow.js">
+    <script src="assets/js/backarrow-library.js">
     </script>
 
     <!-- for backarrow script ^^^ -->

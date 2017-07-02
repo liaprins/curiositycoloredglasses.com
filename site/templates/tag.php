@@ -19,7 +19,7 @@
     <?php snippet('scripts-sitewide-posts-tag') ?>
 
     <!-- backarrow script -->
-    <script src="../assets/js/backarrow.js">
+    <script src="../assets/js/backarrow-tag.js">
     </script>
 
     <!-- for backarrow script ^^^ -->

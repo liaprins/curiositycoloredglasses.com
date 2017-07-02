@@ -23,7 +23,7 @@
     <?php snippet('scripts-sitewide-posts-tag') ?>
 
     <!-- backarrow script -->
-    <script src="../assets/js/backarrow.js">
+    <script src="../assets/js/backarrow-post.js">
     </script>
 
     <!-- for backarrow script ^^^ -->

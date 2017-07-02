@@ -24,7 +24,7 @@ Intro: The magnitude-7.8 earthquake that rocked Nepal in April 2015 may have cau
 
 Text: 
 
-Official measures put Mount Everest at 29,029 feet (8,848 meters) above sea level, but recent satellite data suggest the sky-scraping peak may have shrunk by about 1 inch (2.54 centimeters), because the underlying (vocab: tectonic url: tectonic) plates have relaxed somewhat.
+Official measures put Mount Everest at 29,029 feet (8,848 meters) above sea level, but recent satellite data suggest the sky-scraping peak may have shrunk by about 1 inch (2.54 centimeters), because the underlying (vocab: tectonic url: tectonic) plates have relaxed somewhat. Even the alpine forests' (link: blog/do-indoor-trees-have-growth-rings text: tree rings) were shaken.
 
 <iframe src="//player.vimeo.com/video/89886877?title=0&byline=0&portrait=0&color=e2e43a" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 

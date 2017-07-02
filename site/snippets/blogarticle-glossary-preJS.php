@@ -9,10 +9,10 @@
 
 
         <!-- Keeping this heading in for now, so it can act like a section like RR, etc, for accessibility purposes -->
-        <div class="postsectiondetails">
-            <div class="sectionsummary postpagesectionsummary blackbg"><h3>Glossary
+        <details class="postsectiondetails" open>
+            <summary class="sectionsummary postpagesectionsummary blackbg"><h3>Glossary
                 </h3>
-            </div>
+            </summary>
 
             <!-- <dl> = "definition list"; using it for semantic purposes -->
             <dl>
@@ -79,7 +79,7 @@
             </dl>
 
 
-        </div>
+        </details>
 
 
     <?php endif ?>
