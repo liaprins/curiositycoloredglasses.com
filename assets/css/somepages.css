@@ -131,6 +131,14 @@ header {    /* Holds blog name + tagline */
 .postpagesectionsummary {
     margin: 2.048rem 0;    }    /* top + bottom: 1 lh */
 
+
+
+.togglesectionoff {
+    display: none;
+    visibility: hidden;    }
+
+
+
 .vocabwordinline {    /* This applies to just the inline vocab word, via vocab.php in the site/tags folder */
     padding: 0.6em 0.3em 0.5em 0.5em;    }    /* Based on line-height, but had to finesse optically, and pull in L + R a bit because it was too wide of a space between vocab word and other text inline */
 
