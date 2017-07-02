@@ -5,12 +5,10 @@ var referredLink = document.referrer;
 var currentURL = window.location;    // this var only for testing
  
 function backArrowShow() {
-    if (
-        (((referredLink.includes('blog\/')) ||
+    if (((referredLink.includes('blog\/')) ||
         (referredLink.includes('archive')) ||
     	(referredLink.includes('search'))) &&
-        (/tag\//.test(window.location.href)))
-        ) {
+        (/tag\//.test(window.location.href))) {
     	
     	// building the back arrow
     	var backArrow = document.createElement('img');

@@ -39,9 +39,10 @@ function libraryIconClick(e) {
     var selectedIconClass = selectedIcon.getAttribute('data-clickable');
 
     if (selectedIconClass == 'yes') {
-
+        // checking if clicked icon was closed when it was clicked
         if (selectedIcon.nextElementSibling.style.display === 'none') {
-	   	    for (var i = 0; i < fieldLength; i++) {
+	   	    // loop through other icons to check that they are not open, and closing them if they are
+            for (var i = 0; i < fieldLength; i++) {
 			    if (iconArticle) {    // Checking for its existence first, to save resources
                     iconArticle[i].style.display = 'none';
 		            iconArticle[i].previousElementSibling.setAttribute('class', 'libraryicon');

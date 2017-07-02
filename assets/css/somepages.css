@@ -326,7 +326,15 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
 
 .archivesectionsummary {
     margin: 1.536rem auto 0 auto;
-    display: block;    }    
+    display: block;    }  
+
+.archivesectiontoggleoff {
+    display: none;    }  
+
+.testred {
+    background-color: blue;
+    color: red;
+}
 
 
 /* LIBRARY PAGE -------------------------------------------------- */
@@ -384,8 +392,7 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
 
 .libraryentry {
     margin-top: 1.024rem;
-    margin-bottom: 1.024rem;
-}
+    margin-bottom: 1.024rem;    }
 
 .libraryentryname {
     margin-top: 0.512rem;

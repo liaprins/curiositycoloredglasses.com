@@ -566,7 +566,8 @@
     
     #backarrowcontainer {
         z-index: 101;
-        position: fixed;
+        /* position: fixed; */
+        position: absolute;
         left: 0.422rem;
         top: 2.172rem;    }
     #backarrowcontainer:hover {    /* !!! This is only for backarrow HOVER TEXT */
@@ -853,6 +854,9 @@
 
 @media only screen and (min-width: 1246px) {  
     #homeicon {
+        position: fixed;    }
+
+    #backarrowcontainer {
         position: fixed;    }
 }
 

@@ -15,10 +15,6 @@
     <!-- calling the JS scripts used on everypage -->
     <?php snippet('scripts-sitewide') ?>
 
-    <!-- archive year section header script -->
-    <script src="assets/js/archive.js">
-    </script>
-
 
     <main>
 
@@ -87,40 +83,35 @@
 
 <!-- BLOG ARTICLES GROUPED BY YEAR -->
 
-    <div id="removemeaftertesting">
 
-        <?php function pageYear($p) {
-            return $p->date('Y');    }    // year, e.g. "2016"
-            $posts = page('blog')->children(); ?>
+    <?php function pageYear($p) {
+        return $p->date('Y');    }    // year, e.g. "2016"
+        $posts = page('blog')->children(); ?>
     
         <?php foreach ($posts->flip()->group('pageYear') as $year => $yearList): ?>
     
-            <!-- year heading -->
+            
+
             <div id="archiveheadingarea">
-                <h3 class="sectionsummary archivesectionsummary blackbg" id="<?php echo $year?>" data-clickable-header="">
-                    <?php echo $year ?>
+
+                <h3 class="sectionsummary archivesectionsummary blackbg" id="<?php echo $year?>"><?php echo $year ?>
                 </h3>
+            
             </div>
                 
 
-            <!-- area where results are per year -->
-            <div class="resultarea archiveresultarea">    <!-- .archivesectiontoggleoff class needs to go here via JS when being turned off -->
-                <?php foreach ($yearList as $result): ?>
-                    <?php snippet('result', array('result' => $result)) ?>
-                <?php endforeach; ?>
-            </div>
+            <div class="resultarea">
 
+                <?php foreach ($yearList as $result): ?>
+
+                    <?php snippet('result', array('result' => $result)) ?>
+
+                <?php endforeach; ?>
+
+            </div>
 
         <?php endforeach; ?>
 
-    </div>    <!-- id="removemeaftertesting" -->
-
-
-<!-- __________________________________________________________________________________ -->      
-<!-- TESTING SCRIPT -->
-
-<div id="archivetest">
-</div>
 
 <!-- __________________________________________________________________________________ -->      
 
