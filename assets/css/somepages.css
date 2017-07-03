@@ -140,7 +140,12 @@ header {    /* Holds blog name + tagline */
     position: absolute;
     left: -233.333px;
     display: block;
-    width: 175px;
+    background-color: white;
+    /* z-index: 105; */
+    width: 175px;    }
+
+.definitiontoggleoff {
+    display: none;
 }
 
 

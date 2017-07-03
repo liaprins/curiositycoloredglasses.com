@@ -52,42 +52,33 @@ function vocabTest(e) {
 	    		// if selected inline vocab word matches one of the definitions being looped through...
 	    		if ((selectedVocab.getAttribute('id')) == ('-' + definitionsList[i].getAttribute('data-definition-id'))) {
 
-
-	    			var containerCheck = selectedVocab.nextElementSibling;
-
-	    			if (containerCheck) {
-	    				containerCheck.parentNode.removeChild(containerCheck);
-	    			} else {
-
 	    			// close out any other open definitions
     				var otherContainer = document.getElementById('definitioncontainer');
-
-	    				if (otherContainer) {
-    						// otherContainer.parentNode.removeChild(otherContainer);
-    						otherContainer.parentNode.removeChild(otherContainer);
-    					}
-
-	    				// build container
-	    				var container = document.createElement('span');
-		    			selectedVocab.parentNode.appendChild(container);
-
-		    			// give it attributes
-	    				// container.setAttribute('class', 'inlinevocabcontainer definitiontoggleoff');
-	    				container.setAttribute('class', 'inlinevocabcontainer');
-	    				container.setAttribute('id', 'definitioncontainer');
-
-	    				// populate the container with the definition HTML
-	    				// container.innerHTML = definitionsList[i].innerHTML;
-    					container.innerHTML = '<p id="vocabclose">CLOSE</p>' + definitionsList[i].innerHTML;    // temporary "X"
-
-    					// toggle visibility
-    					// !!! FIX !!! Need a better way to toggle visibility...
-    					// ... this won't work with the container creation method I set up just above this
-    					// container.classList.toggle('definitiontoggleoff');
-
-	    				// track visibility with existence of data-vocab-visible attribute
-    					// selectedVocab.setAttribute('data-vocab-visible', '');
+    				if (otherContainer) {
+    					// otherContainer.parentNode.removeChild(otherContainer);
+    					otherContainer.parentNode.removeChild(otherContainer);
     				}
+
+	    			// build container
+	    			var container = document.createElement('span');
+	    			selectedVocab.parentNode.appendChild(container);
+
+	    			// give it attributes
+	    			// container.setAttribute('class', 'inlinevocabcontainer definitiontoggleoff');
+	    			container.setAttribute('class', 'inlinevocabcontainer');
+	    			container.setAttribute('id', 'definitioncontainer');
+
+	    			// populate the container with the definition HTML
+    				// container.innerHTML = definitionsList[i].innerHTML;
+    				container.innerHTML = '<p id="vocabclose">CLOSE</p>' + definitionsList[i].innerHTML;    // temporary "X"
+
+    				// toggle visibility
+    				// !!! FIX !!! Need a better way to toggle visibility...
+    				// ... this won't work with the container creation method I set up just above this
+    				// container.classList.toggle('definitiontoggleoff');
+
+    				// track visibility with existence of data-vocab-visible attribute
+    				// selectedVocab.setAttribute('data-vocab-visible', '');
     			} 
     		} // close for loop
     	} // close second if-statement
