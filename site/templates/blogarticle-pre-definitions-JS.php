@@ -26,10 +26,6 @@
     <script src="../assets/js/backarrow-post.js">
     </script>
 
-    <!-- definitions/vocab script -->
-    <script src="../assets/js/definitions.js">
-    </script>
-
     <!-- for backarrow script ^^^ -->
     <?php snippet('backarrow') ?>
 

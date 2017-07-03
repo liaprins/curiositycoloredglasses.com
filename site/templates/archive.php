@@ -104,7 +104,7 @@
                 
 
             <!-- area where results are per year -->
-            <div class="resultarea archiveresultarea">    <!-- .archivesectiontoggleoff class needs to go here via JS when being turned off -->
+            <div class="resultarea archiveresultarea">
                 <?php foreach ($yearList as $result): ?>
                     <?php snippet('result', array('result' => $result)) ?>
                 <?php endforeach; ?>

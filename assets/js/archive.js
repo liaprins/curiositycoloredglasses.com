@@ -1,22 +1,8 @@
 function archiveSectionToggle(e) {
     var selectedHeader = e.target;
     if (selectedHeader.hasAttribute('data-clickable-header')) {
-        
         // sets a toggle upon click that adds/deletes a class (that is styled to hide the content)
         selectedHeader.parentNode.nextElementSibling.classList.toggle('archivesectiontoggleoff');
-
-        /*
-        // !!! THIS WILL CAUSE PAGE TO REFRESH AND JUMP TO TOP !!!
-        // remove URL#yearhash when year section is toggled shut...
-        var selectedHeaderClasses = selectedHeader.getAttribute('class');
-        // if clicked section is (now) toggled shut, AND...
-        if ( !(selectedHeaderClasses.includes('archivesectiontoggleoff')) &&
-            // ...AND URL#hashyear matches tthe clicked section
-            (location.hash == ('#' + selectedHeader.getAttribute('id')))) {
-            document.getElementById("archivetest").innerHTML = selectedHeaderClasses;
-            location.hash = '';
-        }
-        */
     }
 }
 

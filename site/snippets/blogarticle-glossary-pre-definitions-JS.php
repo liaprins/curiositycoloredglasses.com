@@ -34,7 +34,7 @@
 
                             <?php $thisurl = thisUrl(); ?> 
 
-                            <div id="vocabwordanddefinition" class="vocabwordanddefinitionclass" data-definition-id="<?php echo $vocabwordurl ?>">
+                            <div id="vocabwordanddefinition">
 
                                 <!-- <dt> = the name within the <dl> (parent) name-value pair  -->
                                 <dt id="glossaryvocabwordandaudio">
