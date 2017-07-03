@@ -33,6 +33,14 @@ window.addEventListener('resize', vocabResize, false);
 
 
 
+function removeVocabHash() { 
+    history.pushState("", document.title, window.location.pathname + window.location.search);
+}
+
+window.addEventListener('DOMContentLoaded', removeVocabHash, false);
+
+
+
 function vocabTest(e) {
 
 	if (window.innerWidth >= 1225) {
@@ -64,6 +72,9 @@ function vocabTest(e) {
 	    				
 	    				// close it (remove container)
 	    				containerCheck.parentNode.removeChild(containerCheck);
+
+	    				// remove #hash by calling function set up above (outside this function)
+	    				removeVocabHash();
 	    			
 	    			} else {
 
@@ -78,34 +89,19 @@ function vocabTest(e) {
 	    				var container = document.createElement('span');
 		    			selectedVocab.parentNode.appendChild(container);
 
-		    			// var containerInner = document.createElement('span');
-		    			// container.appendChild(containerInner);
-
-		    			// give container attributes
-		    			// containerInner.setAttribute('id', 'containerinner');
+		    			// give it attributes
 	    				container.setAttribute('class', 'inlinevocabcontainer');
 	    				container.setAttribute('id', 'definitioncontainer');
 
-	    				// populate the container with the "X" button + definition HTML
-				    	// this src attribute vvv will have to update when I get proper hosting and URL set up! 
-    	    			// or store the PHP version in an HTML element's attribute, then collect it in JS as a variable and call it here
-			        	// or else construct its shape with CSS (research performance) vvv
-    					// containerInner.innerHTML = '<img src="http://localhost:8888/kirby-project/kirby-2.4.0/assets/images/x.svg" alt="close" id="vocabclose" class="close-x yellowhover" data-vocab-x>' + definitionsList[i].innerHTML;
-    					container.innerHTML = '<img src="http://localhost:8888/kirby-project/kirby-2.4.0/assets/images/x.svg" alt="close" id="vocabclose" class="close-x yellowhover" data-vocab-x>' + definitionsList[i].innerHTML;
+	    				// populate the container with the definition HTML
+	    				// container.innerHTML = definitionsList[i].innerHTML;
+    					container.innerHTML = '<p id="vocabclose" data-vocab-x>CLOSE</p>' + definitionsList[i].innerHTML;    // temporary "X"
+    				
+    					// add #hash 
+    					// this data-* attribute adds "-definition" to the end, which keeps page from jumping
+    					// because no elements have that particular hash as their id (HTML rules: if they did page would jump to them)
+    					location.hash = selectedVocab.getAttribute('data-hash-definition');
 
-    					// remove unneeded elements from original glossary HTML
-    					// remove up arrow that in glossary links to inline vocab word
-    					// var anchorUp = containerInner.lastElementChild.firstElementChild.firstElementChild;
-    					var anchorUp = container.lastElementChild.firstElementChild.firstElementChild;
-    					anchorUp.parentNode.removeChild(anchorUp);
-
-    					// manipulate definition styles to differentiate from HTML pulled in from glossary
-    					// x-button
-    					var definitionX = container.firstElementChild;
-
-    					// <dt>
-    					var wordAndPronunciation = definitionX.nextElementSibling;
-    					wordAndPronunciation.setAttribute('class', 'glossaryvocabwordandaudio wordandpronunciation');
     				}
     			} 
     		} // close for loop
@@ -129,6 +125,8 @@ function vocabXClose(e) {
 		var containerOfX = clickedX.parentNode;
 
 		containerOfX.parentNode.removeChild(containerOfX);
+
+		removeVocabHash();
 
 	}
 }

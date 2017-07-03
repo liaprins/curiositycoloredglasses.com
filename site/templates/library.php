@@ -63,7 +63,7 @@
                 <article style="display: none;" class="libraryentry">
 
                     <a href="<?php echo url('library') ?>">
-                        <img src= "<?php echo url('assets/images/x.svg') ?>" alt="close" id="library-x" class="yellowhover">
+                        <img src= "<?php echo url('assets/images/x.svg') ?>" alt="close" id="library-x" class="yellowhover close-x">
                     </a>
 
                     <p class="libraryentryname s-display">

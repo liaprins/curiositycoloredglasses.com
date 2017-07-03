@@ -37,12 +37,12 @@
                             <div id="vocabwordanddefinition" class="vocabwordanddefinitionclass" data-definition-id="<?php echo $vocabwordurl ?>">
 
                                 <!-- <dt> = the name within the <dl> (parent) name-value pair  -->
-                                <dt id="glossaryvocabwordandaudio">
-                                    <!-- Linking back to the word in context within the post content -->
-                                    <a href="<?php echo url($thisurl . '#' . $vocabwordurl) ?>" id="<?php echo $vocabwordurl ?>" class="glossaryvocabword s-display">
+                                <dt class="glossaryvocabwordandaudio">
+                                    
+                                    <span id="<?php echo $vocabwordurl ?>" class="glossaryvocabword s-display">
                                         <!-- This is the vocab word that appears alongside the definition -->
                                         <?php echo html($subpage->vocabword()) ?>
-                                    </a>
+                                    </span>
 
                                     <!-- Written pronunciation -->
                                     <span id="pronunciation" class="xs-textface">
@@ -64,6 +64,8 @@
                                     <?php if(!$subpage->definition()->empty()): ?>
                                         <p id="definition" class="s-textface">
                                             <?php echo html($subpage->definition()) ?>
+
+                                            <!-- Linking back to the word in context within the post content -->
                                             <a href="<?php echo url($thisurl . '#-' . $vocabwordurl) ?>">
                                                 <img src= "<?php echo url('assets/images/up.svg') ?>" alt="Up to word in context" id="uparrow" class="yellowhover">
                                             </a>

@@ -68,7 +68,7 @@
     /* Vocab image goes to 1/2 */
     #vocabwordanddefinition {
         overflow: auto;    }    /* This line and the next are to fix a broswer bug wherein this containing element thinks it is 0px tall because it only contains floated elements; see pp373-4 in HTML & CSS book */
-    #glossaryvocabwordandaudio {
+    .glossaryvocabwordandaudio {
         float: left;
         margin-right: 7.143vw;
         width: 36.714vw;    }    /* ~10/28 cols (1/2 grid cols) ...half would really be 35.714vw */
@@ -320,7 +320,7 @@
     /* VOCAB IMAGE -------------------------------------------------- */
 
     /* Vocab image goes to 1/3 */
-    #glossaryvocabwordandaudio {
+    .glossaryvocabwordandaudio {
         width: 50vw;    }    /* 14/28 cols (2/3 grid cols) */
     #definition {
         width: 50vw;    }    /* 14/28 cols (2/3 grid cols) */
@@ -457,7 +457,7 @@
 
     #vocabwordanddefinition {
         margin: 1.024rem auto;    }
-    #glossaryvocabwordandaudio {
+    .glossaryvocabwordandaudio {
         margin-right: 58.357px;
         width: 408px;    }    /* 14/28 cols (2/3 grid cols) px equivalent at 817px screenwidth */
     #definition {
@@ -765,11 +765,11 @@
         padding-top:  1.024rem;
         border-style: solid none none none;    }
 
-    /* VOCAB IMAGE -------------------------------------------------- */
+    /* GLOSSARY VOCAB IMAGE -------------------------------------------------- */
 
     #vocabwordanddefinition {
         width: 641.667px;    }
-    #glossaryvocabwordandaudio {
+    .glossaryvocabwordandaudio {
         margin-right: 58.333px;
         width: 408.333px;    }    /* 7/21 (2/3 grid cols) px equivalent at 1225px screenwidth */
     #definition {
@@ -777,6 +777,38 @@
         width: 408.333px;    }    /* 7/21 (2/3 grid cols) px equivalent at 1225px screenwidth */
     #vocabillustration {
         max-width: 175px;    }    /* 3/21 (2/3 grid cols) */
+
+    /* INLINE VOCAB DEFINITION -------------------------------------------------- */
+
+    .inlinevocabcontainer {
+        position: absolute;
+        left: 641.667px;
+        padding: 58.333px;
+        padding-top: calc(58.333px - 0.844rem - 0.844rem);    /* 1col minus height of "x" including its yellow hover padding */
+        display: block;
+        /* background-color: white; */
+        background-color: rgba(200, 200, 200, 0.1);    /* !!! for testing only !!! */
+        z-index: 1;
+        width: 291.667px;    }
+    /*
+    #containerinner {
+        position: relative;
+        top: -158.333px;    }
+    */
+
+    #vocabclose {
+        position: relative;
+        top: calc(-86px - 4.667px - 1.024rem);    /* finessing + top rule's width + accounting for top padding between words and top rule */
+    }
+
+    .wordandpronunciation {
+        width: 175px;
+        position: relative;
+        top: calc(-86px - 4.667px - 1.024rem);    /* finessing + top rule's width + accounting for top padding between words and top rule */
+        padding-top: 1.024rem;
+        border-width: 4.667px;
+        border-style: solid none none none; 
+        border-color: black;    }
 
     /* RESULTS + RESULTGLASSES -------------------------------------------------- */
 

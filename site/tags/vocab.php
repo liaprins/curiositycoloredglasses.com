@@ -23,6 +23,12 @@ kirbytext::$tags['vocab'] = array(
     /* return '<dfn><a href="' . $url . '#' . $urlappendix . '" id="' . '-' . $urlappendix . '" class="vocabwordinline s-display yellowhover" data-definition-id="' . $urlappendix . '" data-vocab="">' . $vocab . '</a><span id="definitioncontainer" class="inlinevocabcontainer definitiontoggleoff"> TEST </span></dfn>'; */
 
     /* removing container from being here by default, since I'm going to build it with JS */
+    /* return '<dfn><a href="' . $url . '#' . $urlappendix . '" id="' . '-' . $urlappendix . '" class="vocabwordinline s-display yellowhover" data-definition-id="' . $urlappendix . '" data-vocab="">' . $vocab . '</a></dfn>'; */
+
+    /* added data-hash-definition to store potential hash# for page */
+    /* return '<dfn><a href="' . $url . '#' . $urlappendix . '" id="' . '-' . $urlappendix . '" class="vocabwordinline s-display yellowhover" data-definition-id="' . $urlappendix . '" data-hash-definition="' . $urlappendix . '-definition' . '" data-vocab="">' . $vocab . '</a></dfn>'; */
+
+    /* decided no need for hash# */
     return '<dfn><a href="' . $url . '#' . $urlappendix . '" id="' . '-' . $urlappendix . '" class="vocabwordinline s-display yellowhover" data-definition-id="' . $urlappendix . '" data-vocab="">' . $vocab . '</a></dfn>';
 
   }
