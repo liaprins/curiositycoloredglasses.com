@@ -51,7 +51,7 @@
 
                                     <!-- Audio pronunciation (optional) -->
                                     <?php if(!$subpage->audiopronunciation()->empty()): ?>
-                                        <a onclick="this.firstChild.play()"><audio src="<?php echo $subpage->audiopronunciation()->audio()->toFile()->url() ?>" type="audio/mpeg"></audio><img src="<?php echo url('assets/images/audio.svg') ?>" alt="play audio pronunciation" class="audioicon yellowhover"></a>
+                                        <a onclick="this.firstChild.play()" data-audiolink><audio src="<?php echo $subpage->audiopronunciation()->audio()->toFile()->url() ?>" type="audio/mpeg"></audio><img src="<?php echo url('assets/images/audio.svg') ?>" alt="play audio pronunciation" class="audioicon yellowhover"></a>
                                     <?php endif ?>
 
                                 </dt>

@@ -1,0 +1,21 @@
+Vocabword: PA
+
+----
+
+Pronunciation: pea-eh
+
+----
+
+Audiopronunciation: gravimeter.mp3
+
+----
+
+Definition: I need to have a spelled **pronunciation** and a functioning **audio** icon.
+
+----
+
+Illustration: 
+
+----
+
+Title: PA

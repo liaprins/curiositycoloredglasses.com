@@ -104,26 +104,26 @@ function vocabTest(e) {
 
     					// manipulate definition styles to differentiate from HTML pulled in from glossary
     					// x-button
-    					// var definitionX = containerInner.firstElementChild;    // innerContainer TEST
-    					var definitionX = container.firstElementChild.firstElementChild;    // innerContainer TEST
+    					var definitionX = containerInner.firstElementChild;    // innerContainer TEST
+    					// var definitionX = container.firstElementChild.firstElementChild;    // innerContainer TEST
     					// var definitionX = container.firstElementChild;
 
     					// <dt>
     					var wordAndPronunciation = definitionX.nextElementSibling;
     					wordAndPronunciation.setAttribute('class', 'glossaryvocabwordandaudio wordandpronunciation');
     				
-    					var audiolink = wordAndPronunciation.lastElementChild;
-    					audiolink.setAttribute('id', 'audiolink');
 
-    					var audioicon = audiolink.lastElementChild;
-    					audioicon.setAttribute('id', 'inlineaudioicon');
+    					if (wordAndPronunciation.lastElementChild.hasAttribute('data-audiolink')) {
+    						
+    						var audiolink = wordAndPronunciation.lastElementChild;
+    						audiolink.setAttribute('id', 'audiolink');
+
+    						var audioicon = audiolink.lastElementChild;
+    						audioicon.setAttribute('id', 'inlineaudioicon');
+    					}
 
     					var definitionText = wordAndPronunciation.nextElementSibling.firstElementChild;
-    					definitionText.setAttribute('id', 'inlinedefinition');
-
-    					var definitionIllustration = definitionText.nextElementSibling;
-    					definitionIllustration.setAttribute('class', 'vocabillustration inlineillustration');
-    					
+    					definitionText.setAttribute('id', 'inlinedefinition');    					
     				}
     			} 
     		} // close for loop

@@ -1,0 +1,21 @@
+Vocabword: PAI
+
+----
+
+Pronunciation: pea-eh-eye
+
+----
+
+Audiopronunciation: gravimeter.mp3
+
+----
+
+Definition: I need to have a spelled **pronunciation**, a functioning **audio** icon, and an **illustration**.
+
+----
+
+Illustration: pai.jpg
+
+----
+
+Title: PAI

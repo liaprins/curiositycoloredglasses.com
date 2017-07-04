@@ -1,0 +1,21 @@
+Vocabword: PI
+
+----
+
+Pronunciation: pea-eye
+
+----
+
+Audiopronunciation: 
+
+----
+
+Definition: I need to have a spelled **pronunciation** and an **illustration**.
+
+----
+
+Illustration: pi.jpg
+
+----
+
+Title: PI
