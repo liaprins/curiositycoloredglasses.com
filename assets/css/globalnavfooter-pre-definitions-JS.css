@@ -21,9 +21,8 @@ main {    /* :) This is for all content except nav and footer on all pages; "con
 *, *:before, *:after {    /* Setting the more intuitive type of box-sizing to the entire site */
     box-sizing: border-box;   }
 
-.yellowhover:hover {    /* For all hover states with a yellow background */
-    background-color: #e2e43a;
-    color: black;    }    /* So the words change to black on hover (if they weren't already) */
+.yellowhover:hover {
+    background-color: #e2e43a;    }    /* For all hover states with a yellow background */
 
 
 
