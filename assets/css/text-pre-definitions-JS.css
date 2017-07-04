@@ -21,7 +21,6 @@ figcaption a,
     border-width: 1px;
     border-color: #c7c7c7;
     cursor: pointer;    }
-
 #homeintro a:hover:not(#readmore),    /* All the links in the home intro paragraph except "Read more" */
 #postintro a:hover, 
 #posttext a:not(.vocabwordinline):hover,    /* All the links in the post's text except vocab words */

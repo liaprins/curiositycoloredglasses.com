@@ -51,7 +51,7 @@
 
                                     <!-- Audio pronunciation (optional) -->
                                     <?php if(!$subpage->audiopronunciation()->empty()): ?>
-                                        <a onclick="this.firstChild.play()"><audio src="<?php echo $subpage->audiopronunciation()->audio()->toFile()->url() ?>" type="audio/mpeg"></audio><img src="<?php echo url('assets/images/audio.svg') ?>" alt="play audio pronunciation" id="audioicon" class="yellowhover"></a>
+                                        <a onclick="this.firstChild.play()"><audio src="<?php echo $subpage->audiopronunciation()->audio()->toFile()->url() ?>" type="audio/mpeg"></audio><img src="<?php echo url('assets/images/audio.svg') ?>" alt="play audio pronunciation" class="audioicon yellowhover"></a>
                                     <?php endif ?>
 
                                 </dt>
@@ -62,7 +62,7 @@
 
                                     <!-- definition (required) appended with up arrow, to take user back to word in context -->
                                     <?php if(!$subpage->definition()->empty()): ?>
-                                        <p id="definition" class="s-textface">
+                                        <p class="s-textface definition">
                                             <?php echo html($subpage->definition()) ?>
 
                                             <!-- Linking back to the word in context within the post content -->
@@ -74,7 +74,7 @@
 
                                     <!-- illustration (optional) -->
                                     <?php if($vocabillustration = $subpage->illustration()->toFile()): ?>
-                                        <img src="<?= url($vocabillustration->url()) ?>" alt="" id="vocabillustration">
+                                        <img src="<?= url($vocabillustration->url()) ?>" alt="" class="vocabillustration">
                                     <?php endif; ?>
 
                                 </dd>

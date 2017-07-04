@@ -78,52 +78,40 @@ function vocabTest(e) {
 	    				var container = document.createElement('span');
 		    			selectedVocab.parentNode.appendChild(container);
 
-		    			var containerInner = document.createElement('span');    // innerContainer TEST
-		    			container.appendChild(containerInner);    // innerContainer TEST
+		    			// var containerInner = document.createElement('span');
+		    			// container.appendChild(containerInner);
 
 		    			// give container attributes
-		    			containerInner.setAttribute('id', 'containerinner');    // innerContainer TEST
+		    			// containerInner.setAttribute('id', 'containerinner');
 	    				container.setAttribute('class', 'inlinevocabcontainer');
 	    				container.setAttribute('id', 'definitioncontainer');
-
 
 	    				// populate the container with the "X" button + definition HTML
 				    	// this src attribute vvv will have to update when I get proper hosting and URL set up! 
     	    			// or store the PHP version in an HTML element's attribute, then collect it in JS as a variable and call it here
 			        	// or else construct its shape with CSS (research performance) vvv
-    					// innerContainer TEST
-    					containerInner.innerHTML = '<img src="http://localhost:8888/kirby-project/kirby-2.4.0/assets/images/x.svg" alt="close" id="vocabclose" class="close-x yellowhover" data-vocab-x>' + definitionsList[i].innerHTML;
     					// containerInner.innerHTML = '<img src="http://localhost:8888/kirby-project/kirby-2.4.0/assets/images/x.svg" alt="close" id="vocabclose" class="close-x yellowhover" data-vocab-x>' + definitionsList[i].innerHTML;
-    					// container.innerHTML = '<img src="http://localhost:8888/kirby-project/kirby-2.4.0/assets/images/x.svg" alt="close" id="vocabclose" class="close-x yellowhover" data-vocab-x>' + definitionsList[i].innerHTML;
+    					container.innerHTML = '<img src="http://localhost:8888/kirby-project/kirby-2.4.0/assets/images/x.svg" alt="close" id="vocabclose" class="close-x yellowhover" data-vocab-x>' + definitionsList[i].innerHTML;
 
     					// remove unneeded elements from original glossary HTML
     					// remove up arrow that in glossary links to inline vocab word
     					// var anchorUp = containerInner.lastElementChild.firstElementChild.firstElementChild;
-    					var anchorUp = containerInner.lastElementChild.firstElementChild.firstElementChild;
+    					var anchorUp = container.lastElementChild.firstElementChild.firstElementChild;
     					anchorUp.parentNode.removeChild(anchorUp);
 
     					// manipulate definition styles to differentiate from HTML pulled in from glossary
     					// x-button
-    					// var definitionX = containerInner.firstElementChild;    // innerContainer TEST
-    					var definitionX = container.firstElementChild.firstElementChild;    // innerContainer TEST
-    					// var definitionX = container.firstElementChild;
+    					var definitionX = container.firstElementChild;
 
     					// <dt>
     					var wordAndPronunciation = definitionX.nextElementSibling;
     					wordAndPronunciation.setAttribute('class', 'glossaryvocabwordandaudio wordandpronunciation');
     				
-    					var audiolink = wordAndPronunciation.lastElementChild;
-    					audiolink.setAttribute('id', 'audiolink');
-
-    					var audioicon = audiolink.lastElementChild;
-    					audioicon.setAttribute('id', 'inlineaudioicon');
-
     					var definitionText = wordAndPronunciation.nextElementSibling.firstElementChild;
     					definitionText.setAttribute('id', 'inlinedefinition');
 
     					var definitionIllustration = definitionText.nextElementSibling;
     					definitionIllustration.setAttribute('class', 'vocabillustration inlineillustration');
-    					
     				}
     			} 
     		} // close for loop
@@ -144,7 +132,7 @@ function vocabXClose(e) {
 
 	if (clickedX.hasAttribute('data-vocab-x')) {
 		
-		var containerOfX = clickedX.parentNode.parentNode;
+		var containerOfX = clickedX.parentNode;
 
 		containerOfX.parentNode.removeChild(containerOfX);
 

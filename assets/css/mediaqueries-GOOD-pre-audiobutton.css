@@ -783,46 +783,44 @@
     .inlinevocabcontainer {
         position: absolute;
         left: 641.667px;
-        padding-right: 58.333px;
+        padding: 0 58.333px;
+        /*
+        border-style: solid none none none;    
+        border-width: 1.71428vw;
+        */
         display: block;
+        /* background-color: white; */
+        background-color: rgba(200, 200, 200, 0.1);    /* !!! for testing only !!! */
         z-index: 1;
-        width: 291.667px;    }    
+        width: 291.667px;    }
+    /*
     #containerinner {
         position: absolute;
-        padding: 58.333px;
-        padding-top: calc(58.333px - 0.844rem - 0.844rem);    /* 1col minus height of "X" with its yellow padding */
-        top: calc(-69px - 4.667px - 1.024rem);    /* finessing + top rule's width + accounting for top padding between words and top rule */
-        background-color: white;
-        width: 291.667px    }
-    #audiolink {
-        position: absolute;
-        top: calc(-1.688rem - 2.333px);
-        left: 0;
-        border-style: none !important;   }
-    #audiolink a {
-        text-decoration: none;    }
-    #inlineaudioicon {
-        height: 0.844rem;
-        width: 0.844rem;
-        padding: 0.422rem;    }
-    #vocabclose {    }
+        top: -158.333px;
+        background-color: red;
+        width: 291.667px
+            }
+    #audiotest {    }
+    */
+    #vocabclose {
+        position: relative;
+        top: calc(-69px - 4.667px - 1.024rem);    }    /* finessing + top rule's width + accounting for top padding between words and top rule */
     .wordandpronunciation {
         width: 175px;
         position: relative;
+        top: calc(-69px - 4.667px - 1.024rem);    /* finessing + top rule's width + accounting for top padding between words and top rule */
         padding-top: 1.024rem;
         border-width: 4.667px;
         border-style: solid none none none; 
         border-color: black;    }
     #inlinedefinition {
         width: 175px;
-        /*
         position: relative;
-        top: calc(-69px - 4.667px - 1.024rem); */    /* finessing + top rule's width + accounting for top padding between words and top rule */
+        top: calc(-69px - 4.667px - 1.024rem);    /* finessing + top rule's width + accounting for top padding between words and top rule */
         margin-top: 0.512rem !important;    }
     .inlineillustration {
-        /*
         position: relative;
-        top: calc(-69px - 4.667px - 1.024rem); */    }    /* finessing + top rule's width + accounting for top padding between words and top rule */
+        top: calc(-69px - 4.667px - 1.024rem);    }    /* finessing + top rule's width + accounting for top padding between words and top rule */
 
     /* RESULTS + RESULTGLASSES -------------------------------------------------- */
 

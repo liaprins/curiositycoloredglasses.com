@@ -144,7 +144,7 @@ header {    /* Holds blog name + tagline */
 #pronunciation {
     white-space: nowrap;    }
 
-#audioicon { 
+.audioicon { 
     box-sizing: content-box;
     height: 0.703rem;    /* Had to make smaller than other icons to help it fit inline with potentially long phrases that wrap to next line, otherwise it would affect the text line-height */
     padding: 0.25em;
@@ -152,7 +152,7 @@ header {    /* Holds blog name + tagline */
     margin-top: -.1em;    /* This is to finesse the vertical centering */
     cursor: pointer;    }
 
-#definition {
+.definition {
     margin-bottom: 0.512rem;    }    /* .25 lh; would be .125 lh to match space between vocab word and definition, but had to adjust optically */
 
 #uparrow {
@@ -163,7 +163,7 @@ header {    /* Holds blog name + tagline */
     margin: -.35em 0 0 .25em;    /* This is to finesse the vertical centering */
     cursor: pointer;    }
 
-#vocabillustration {
+.vocabillustration {
     margin-bottom: 0;
     max-width: 78.571vw;    }    /* 22/28 cols */
 

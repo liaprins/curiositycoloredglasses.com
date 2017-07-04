@@ -144,7 +144,7 @@ function vocabXClose(e) {
 
 	if (clickedX.hasAttribute('data-vocab-x')) {
 		
-		var containerOfX = clickedX.parentNode.parentNode;
+		var containerOfX = clickedX.parentNode;
 
 		containerOfX.parentNode.removeChild(containerOfX);
 
