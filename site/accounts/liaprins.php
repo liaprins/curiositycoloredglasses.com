@@ -7,8 +7,8 @@ email: liajprins@us.ibm.com
 language: en
 role: admin
 history:
+  - blog/license-plate-logic/pi
   - blog/license-plate-logic
+  - blog/measure-of-a-mountain
   - blog/license-plate-logic/i
   - blog/license-plate-logic/nothing-optional
-  - blog/license-plate-logic/a
-  - blog/license-plate-logic/ai
