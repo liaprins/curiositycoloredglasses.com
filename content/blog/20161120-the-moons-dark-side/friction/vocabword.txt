@@ -14,4 +14,8 @@ Definition: resistance to relative motion
 
 ----
 
-Illustration: 
+Illustration: galileo.jpg
+
+----
+
+Title: friction

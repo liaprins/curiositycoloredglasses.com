@@ -14,4 +14,8 @@ Definition: the property of matter by which it retains its state of rest or its 
 
 ----
 
-Illustration: 
+Illustration: moon-watercolor.png
+
+----
+
+Title: inertia

@@ -453,6 +453,12 @@
     .contentimage {
         max-width: 641.929px;     }    /* 22/28 cols px equivalent at 817px screen width */
 
+    /* LIGHTBOX -------------------------------------------------- */
+    
+    #lightboximage {
+        max-width: calc(100vw - 58.333px - 58.333px);
+        max-height: calc(100vh - 58.333px - 58.333px);    }
+
     /* VOCAB IMAGE -------------------------------------------------- */
 
     #vocabwordanddefinition {
@@ -523,7 +529,6 @@
         margin-right: auto;    }
 
 }    /* 817px ++++++++++++++++++++++++++++++++++++++++++++++++++ */
-
 
 
 
@@ -675,10 +680,10 @@
     #archivemenudesktopcontent,
     #aboutdesktopcontent,
     #postdesktopcontent,
-    #postdesktopcontent2,
     #searchdesktopcontent,
     #homepagepost {
         z-index: 100;    }
+    #postdesktopcontent2 {    }
     #navsearchinput {
         width: calc(291.667px - 3.586rem);    }
 
@@ -764,6 +769,14 @@
         top: 0;
         padding-top:  1.024rem;
         border-style: solid none none none;    }
+
+    /* LIGHTBOX -------------------------------------------------- */
+
+    /* moving this to 1108px screenwidth mediaquery */
+    
+    #lightboximage {
+        max-width: 1108.333px;
+        max-height: calc(100vh - 58.333px - 58.333px);    }
 
     /* GLOSSARY VOCAB IMAGE -------------------------------------------------- */
 

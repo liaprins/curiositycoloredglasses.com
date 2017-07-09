@@ -3,3 +3,7 @@ Caption: Did you know palm trees don't form tree rings? This may be a clue to so
 ----
 
 Alt: A chopped down palm tree without any climate-caused rings.
+
+----
+
+Sort: 3

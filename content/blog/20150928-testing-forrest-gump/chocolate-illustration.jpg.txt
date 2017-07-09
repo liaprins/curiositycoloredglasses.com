@@ -2,4 +2,8 @@ Caption:
 
 ----
 
-Alt: 
+Alt: Vintage chocolates had specific shapes for each variety.
+
+----
+
+Sort: 3

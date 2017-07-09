@@ -1,0 +1,21 @@
+Vocabword: dot matrix printer
+
+----
+
+Pronunciation: 
+
+----
+
+Audiopronunciation: 
+
+----
+
+Definition: A printer that applies pressure when rendering.
+
+----
+
+Illustration: dot-matrix-printer.png
+
+----
+
+Title: dot matrix printer

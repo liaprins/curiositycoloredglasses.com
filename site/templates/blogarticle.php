@@ -30,6 +30,10 @@
     <script src="../assets/js/definitions.js">
     </script>
 
+    <!-- supersimplelightbox script (no gallery, no caption) -->
+    <script src="../assets/js/supersimplelightbox.js">
+    </script>
+
     <!-- for backarrow script ^^^ -->
     <?php snippet('backarrow') ?>
 
@@ -126,6 +130,10 @@
 
 
         </article>    <!-- Closing first instance of <article> -->
+
+
+        <!-- TEST FOR LIGHTBOX -->
+        <div id="lightboxtest"></div>
 
 
     <?php snippet('footer') ?>

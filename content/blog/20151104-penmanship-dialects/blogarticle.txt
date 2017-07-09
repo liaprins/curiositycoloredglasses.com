@@ -22,13 +22,13 @@ Text:
 
 It’s very common to see people of Chinese, Taiwanese or Japanese origin writing the cross bar of the ‘t’ character first when they write in English. English natives, in fact the majority of users of the Cyrillic alphabet, will write this stroke last. Most will wait until the word is written before returning to add the cross bar on this character because there’s a tendency not to take the pen off the paper between letters.
 
-(image: pensmanship-chart.jpg)
+(image: Spencerian-workbook.jpg)
 
 In fact, this is the way native English speakers are taught at school; using cursive or ‘joined up’ handwriting whereas characters in Asian languages such as Japanese tend to have a lot of short strokes, with the pen regularly taken off the paper when forming characters.
 
 If you look closely, you’ll see the penmanship of a native Japanese speaker tends to be strikingly neat and precise when writing the English alphabet.
 
-(image: penmanship-chart2.gif)
+(image: Penmans-art-journal.jpg)
 
 You might notice that the top and bottom of the ‘S’ character are very parallel and exact. The cross bar of the ‘t’ character might appear right in the middle of the vertical line, whilst a native writer would be more likely to put it towards the top of the (vocab: ascender url: ascender). Overall the letters appear very balanced, perhaps reflecting the precision required when writing Japanese kanji.
 
@@ -36,13 +36,17 @@ You might notice that the top and bottom of the ‘S’ character are very paral
 
 In fact, precision is often the giveaway when you’re writing in a language that isn’t your first one. When you’re writing in a language that’s less familiar than your mother tongue, you’ll often aim for a degree of precision that identifies you as a foreigner. Native speakers can afford to write more sloppily.
 
-(image: penmanship-real.png)
+(image: covfefe.jpg)
 
 It can also be that we unconsciously shape our handwriting to a form we’re more familiar with. Some Chinese and Taiwanese people often write English characters using sharper angles, whereas a native English speaker might write more rounded characters.
 
 Older people might also have a preference for using block capitals, rather than the tricky cursive style that’s more alien to non-native speakers. For Arabic and Farsi speakers, there’s a tendency to write letters slanted slightly to the left, so the handwriting appears somewhat italic.
 
 Germany had its own unique writing system, the Sütterlin script, taught in German schools for much of the 20th century. Although it’s less common now, it’s easy to identify an older generation of Germans, who learned this until as late as the 1970’s, by their written script. It’s often fairly illegible to non-Germans (as well as some younger Germans). Although Sütterlin is no longer taught, the German handwriting style is still fairly distinctive.
+
+Calligraphy has been used for more than just written communication since it's onset. (vocab: Calligraphic art url: calligraphic-art) is a beautiful form of drawing, especially used to render animals.
+
+(gallery: calligraphic-birds)
 
 ##### The curious differences in how we write numbers
 

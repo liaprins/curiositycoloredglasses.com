@@ -50,6 +50,8 @@ Fluorescence and photoluminescence are further applications of useful doped semi
 
 The electron may take a return path via the donor and acceptor energy levels. These energy differences are smaller than the natural band gap, and correspond to wavelengths in the visible light spectrum. Visible light may be emitted as fluorescence or electroluminescence.
 
+(gallery: naturally-occurring-phosphorescence)
+
 Fluorescence occurs in "phosphor" powders, such as zinc sulfide (ZnS) containing copper (Cu) and other additives. Phosphors were once used inside television screens, activated by a stream of electrons (cathode rays). Again, tailoring the impurity levels enabled the production of fluorescence in a desired color. The colors on early television screens were created by mixing red, green, and blue light from this fluorescence. A phosphor coating is also used in high-power LED lamps. The light emitted by the diode excites the phosphor layer to fluoresce, increasing the output by up to 20%.
 
 To produce electroluminescence, photoluminescent powder is spread between two electrodes. Electrical current passing through the powder excites electrons to the conduction band. As electrons in the donor level are ‘accepted’ by holes in the acceptor level, visible light is emitted. Nightlight panels are made using this technology.

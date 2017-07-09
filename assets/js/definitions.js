@@ -140,9 +140,6 @@ window.addEventListener('click', vocabTest, false);
 
 
 
-// !!! vocabX not being recognized because it doesn't exist until a vocabword is clicked
-// var vocabX = document.getElementById('vocabclose');
-
 function vocabXClose(e) {
 	
 	var clickedX = e.target;
