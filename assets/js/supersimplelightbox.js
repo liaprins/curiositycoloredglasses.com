@@ -1,4 +1,19 @@
-// var contentImageList = document.getElementsByClassName('contentimage');
+function verticallyCenter() {
+    
+    var singleLightbox = document.getElementById('singlelightbox');
+
+    if (singleLightbox) {
+        var lightboxImg = singleLightbox.firstElementChild;
+        var imgHeight = lightboxImg.offsetHeight;
+        singleLightbox.style.height = (window.innerHeight);
+        singleLightbox.style.width = window.innerWidth;
+        var lightboxHeight = singleLightbox.offsetHeight;
+        lightboxImg.style.marginTop = (lightboxHeight - imgHeight)/2 + 'px';
+    }
+}
+
+window.addEventListener('resize', verticallyCenter, false);
+
 
 function openSupersimplelightbox(e) {
     clickedImg = e.target;
@@ -35,16 +50,30 @@ function openSupersimplelightbox(e) {
         lightboxImg.setAttribute('id', 'lightboximage');    // ID FOR TESTING, TO OVERRIDE THE OTHER CLASSES' MEDIAQUERY SIZE SETTINGS
 
         // use JS to vertically center H imgs
-        var imgHeight = lightboxImg.offsetHeight;
-        singleLightbox.style.height = (window.innerHeight);
-        singleLightbox.style.width = window.innerWidth;
-        var lightboxHeight = singleLightbox.offsetHeight;
-        lightboxImg.style.marginTop = (lightboxHeight - imgHeight)/2 + 'px';
-        // lightboxImg.style.top = (lightboxHeight - imgHeight)/2 + 'px';
+        verticallyCenter();
+        
+        // add #hash
+        var imgURL = singleLightbox.firstElementChild.getAttribute('src');
+        var imgURLArray = imgURL.split('/');
+        location.hash = imgURLArray[imgURLArray.length - 1];   
+
+        // stop scrollability
+        document.documentElement.style.overflow = 'hidden';
     }
 }
 
 window.addEventListener('click', openSupersimplelightbox, false);
+
+
+
+
+// Gets rid of the "#" that would otherwise remain at end of URL after closing an entry by re-clicking the icon
+function removeHashReturnScroll() { 
+    // remove #hash
+    history.pushState("", document.title, window.location.pathname + window.location.search);
+    // return scrollability
+    document.documentElement.style.overflow = 'auto';
+}
 
 
 
@@ -54,6 +83,7 @@ function lightboxSpaceClose(e) {
     if (clickedSpace.hasAttribute('data-lightbox-close')) {
         var lightboxToClose = document.getElementById('singlelightbox');
         clickedSpace.parentNode.removeChild(lightboxToClose);
+        removeHashReturnScroll();
     }
 }
 
@@ -67,8 +97,12 @@ function lightboxXClose(e) {
     if (clickedX.hasAttribute('data-lightbox-x')) {
         var lightboxToClose = document.getElementById('singlelightbox');
         clickedX.parentNode.parentNode.removeChild(lightboxToClose);
+        removeHashReturnScroll();
     }
 }
 
 window.addEventListener('click', lightboxXClose, false);
+
+
+
 
