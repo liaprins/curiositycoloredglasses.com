@@ -24,6 +24,8 @@ Intro: When Andrew Ellicott Douglas, director of the University of Arizona's Ste
 
 Text: 
 
+(image: pine.jpg)
+
 While we are yet unable to predict future climate with certainty, the information locked within trees has become a standard scientific gauge, one used to date mysterious ruins, recall times of insect plagues and centuries-long drought, and chronicle distant volcanic eruptions. And, as if to fulfill Douglass' prophecy, scientists are now using their ability to decode the information in trees to successfully forecast the seasonal conditions that lead to severe episodes of wildfire.
 
 (image: annotated-tree-rings.jpg)

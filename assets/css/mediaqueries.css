@@ -455,7 +455,7 @@
 
     /* LIGHTBOX -------------------------------------------------- */
     
-    #lightboximage {
+    .lightboximage {
         max-width: calc(100vw - 58.333px - 58.333px);
         max-height: calc(100vh - 58.333px - 58.333px);    }
 
@@ -485,7 +485,6 @@
         width: 175px;    }    /* 10/28 cols at 817px | Setting results to 2-column grid */
     #nosearchresults {
         margin-left: 29.179px;    }
-
 
     /* COMMENT AVATAR -------------------------------------------------- */
 
@@ -570,7 +569,7 @@
     /* BACK ARROW LOCATION -------------------------------------------------- */
     
     #backarrowcontainer {
-        z-index: 101;
+        /* z-index: 101; */
         /* position: fixed; */
         position: absolute;
         left: 0.422rem;
@@ -771,12 +770,32 @@
         border-style: solid none none none;    }
 
     /* LIGHTBOX -------------------------------------------------- */
-
-    /* moving this to 1108px screenwidth mediaquery */
     
-    #lightboximage {
+    .lightboximage {
         max-width: 1108.333px;
         max-height: calc(100vh - 58.333px - 58.333px);    }
+
+    #lightboxclose {
+        top: calc(0.422rem + 6px);
+        left: calc(100vw - 2.11rem - 6px);    }    /* all the way to the R, but then back the width of itself + padding + margin */
+
+    .lightboxcaption {
+        top: 0;
+        left: 0;
+        margin: 0;
+        padding: 10.714vw;
+        padding-top: calc(58.333px + 1.024rem);
+        width: 291.667px;    }
+
+    #lightboxcaptionbar {
+        width: 175px;
+        height: 3px;
+        top: 58.333px;
+        left: 58.333px;    }
+
+    #captionshowing {
+        top: calc(0.422rem + 6px);
+        left: 58.333px;    }
 
     /* GLOSSARY VOCAB IMAGE -------------------------------------------------- */
 

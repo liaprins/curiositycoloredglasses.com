@@ -30,8 +30,8 @@
     <script src="../assets/js/definitions.js">
     </script>
 
-    <!-- supersimplelightbox script (no gallery, no caption) -->
-    <script src="../assets/js/supersimplelightbox.js">
+    <!-- supersimplelightbox script (no gallery) -->
+    <script src="../assets/js/simplelightbox.js">
     </script>
 
     <!-- for backarrow script ^^^ -->

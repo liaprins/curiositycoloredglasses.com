@@ -7,8 +7,8 @@ email: liajprins@us.ibm.com
 language: en
 role: admin
 history:
+  - blog/do-indoor-trees-have-growth-rings
   - blog/testing-forrest-gump
   - blog/testing-forrest-gump/cross-section
   - blog/penmanship-dialects
   - blog/penmanship-dialects/calligraphic-art
-  - blog/penmanship-dialects/calligraphic-animals
