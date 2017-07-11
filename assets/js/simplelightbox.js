@@ -60,7 +60,7 @@ function openSupersimplelightbox(e) {
         if (caption) {
             
             // give caption attributes
-            caption.setAttribute('class','s-textface lightboxcaption');
+            caption.setAttribute('class','xs-textface lightboxcaption');
             
             // add toggle icon + top rule
             var toggle = document.createElement('img');

@@ -77,14 +77,33 @@
         margin-right: 7.143vw;
         margin-bottom: 0;
         width: 36.714vw;    }    /* ~10/28 cols (1/2 grid cols) ...half would really be 35.714vw */
-
     #fullwidthglossary {
-        width:  78.571vw;
-    }
-
+        width:  78.571vw;    }
     .vocabillustration {
         display: inline;
         max-width: 34.714vw;    }    /* ~10/28 cols (1/2 cols) ...half would really be 35.714vw */
+
+    /* LIGHTBOX CAPTION -------------------------------------------------- */
+
+    #lightboxclose {
+        top: calc(3.571vw - 0.844rem);
+        left: calc(100vw - 3.571vw - 0.844rem);    }    /* all the way to the R, but then back the width of itself + padding + margin */
+    .lightboxcaption {
+        top: 0;
+        left: 46.423vw;    /* 13/28 */
+        padding: 7.143vw;
+        padding-top: calc(7.143vw + 1.024rem);
+        width: 53.565vw;    }    /* 15/28 cols */
+    #lightboxcaptionbar {
+        width: 39.281vw;    /* 13/28 cols */
+        height: 0.125rem;
+        top: 7.143vw;
+        left: 53.565vw;    }    /* 15/28 cols */
+    #captiontoggle {
+        z-index: 103;
+        position: absolute;
+        top: calc(3.571vw - 0.844rem);
+        left: calc(100vw - 3.571vw - 0.844rem - 3.571vw - 0.844rem);    }
 
     /* RESULTS + RESULTGLASSES -------------------------------------------------- */
 
@@ -327,6 +346,25 @@
     .vocabillustration {
         max-width: 21.429vw;    }    /* 6/28 cols (1/3 cols) */
 
+    /* LIGHTBOX CAPTION -------------------------------------------------- */
+
+    .lightboxcaption {
+        top: 0;
+        left: 64.278vw;    /* 18/28 */
+        padding: 7.143vw;
+        padding-top: calc(7.143vw + 1.024rem);
+        width: 35.71vw;    }    /* 10/28 */
+    #lightboxcaptionbar {
+        width: 21.429vw;    /* 6/28 cols */
+        height: 0.125rem;
+        top: 7.143vw;
+        left: 71.42vw;    }    /* 20/28 cols */
+    #captiontoggle {
+        z-index: 103;
+        position: absolute;
+        top: calc(3.571vw - 0.844rem);
+        left: calc(100vw - 3.571vw - 0.844rem - 3.571vw - 0.844rem);    }
+
     /* RESULTS + RESULTGLASSES -------------------------------------------------- */
 
     /* Results 3-across -------------------------------------------------- */
@@ -458,6 +496,25 @@
     .lightboximage {
         max-width: calc(100vw - 58.333px - 58.333px);
         max-height: calc(100vh - 58.333px - 58.333px);    }
+    #lightboxclose {
+        top: calc(29.167px - 0.844rem);
+        left: calc(100vw - 29.167px - 0.844rem);    }    /* all the way to the R, but then back the width of itself + padding + margin */
+    .lightboxcaption {
+        top: 0;
+        left: calc(100vw - 291.667px);
+        padding: 58.333px;
+        padding-top: calc(58.333px + 1.024rem);
+        width: 291.667px;    }
+    #lightboxcaptionbar {
+        width: 175px;
+        height: 0.125rem;
+        top: 58.333px;
+        left: calc(100vw - 233.333px);    }
+    #captiontoggle {
+        z-index: 103;
+        position: absolute;
+        top: calc(29.167px - 0.844rem);
+        left: calc(100vw - 29.167px - 0.844rem - 29.167px - 0.844rem);    }
 
     /* VOCAB IMAGE -------------------------------------------------- */
 
@@ -774,28 +831,25 @@
     .lightboximage {
         max-width: 1108.333px;
         max-height: calc(100vh - 58.333px - 58.333px);    }
-
     #lightboxclose {
-        top: calc(0.422rem + 6px);
-        left: calc(100vw - 2.11rem - 6px);    }    /* all the way to the R, but then back the width of itself + padding + margin */
-
+        top: calc(29.167px - 0.844rem);
+        left: calc(100vw - 29.167px - 0.844rem);    }    /* all the way to the R, but then back the width of itself + padding + margin */
     .lightboxcaption {
         top: 0;
-        left: 0;
-        margin: 0;
-        padding: 10.714vw;
+        left: calc(100vw - 291.667px);
+        padding: 58.333px;
         padding-top: calc(58.333px + 1.024rem);
         width: 291.667px;    }
-
     #lightboxcaptionbar {
         width: 175px;
-        height: 3px;
+        height: 0.125rem;
         top: 58.333px;
-        left: 58.333px;    }
-
-    #captionshowing {
-        top: calc(0.422rem + 6px);
-        left: 58.333px;    }
+        left: calc(100vw - 233.333px);    }
+    #captiontoggle {
+        z-index: 103;
+        position: absolute;
+        top: calc(29.167px - 0.844rem);
+        left: calc(100vw - 29.167px - 0.844rem - 29.167px - 0.844rem);    }
 
     /* GLOSSARY VOCAB IMAGE -------------------------------------------------- */
 

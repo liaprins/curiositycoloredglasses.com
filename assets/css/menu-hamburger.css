@@ -39,7 +39,8 @@
     border-color: white;    /* These border properties apply to the bottom + left sides of the menu icon, to give it a white border-buffer where it cuts into the blog title on home page */
     border-style: solid;
     border-width: 0 0 0.422rem 0.422rem;
-    background-color: white;    }
+    background-color: white;
+    cursor: pointer;    }
 
 #navsummary::-webkit-details-marker {    /* Setting up the custom icons instead of default toggles */
     display: none;    }
