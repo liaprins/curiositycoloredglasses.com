@@ -34,6 +34,10 @@
     <script src="../assets/js/simplelightbox.js">
     </script>
 
+    <!-- slideshow only (no lightbox) -->
+    <script src="../assets/js/slideshow.js">
+    </script>
+
     <!-- for backarrow script ^^^ -->
     <?php snippet('backarrow') ?>
 
@@ -133,7 +137,7 @@
 
 
         <!-- TEST FOR LIGHTBOX -->
-        <div id="lightboxtest"></div>
+        <div id="slideshowtest"></div>
 
 
     <?php snippet('footer') ?>

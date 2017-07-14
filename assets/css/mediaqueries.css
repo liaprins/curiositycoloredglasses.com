@@ -993,9 +993,13 @@
 
 
 
+/* PREVENTING HORIZONTAL SCROLLING (FOR SLIDESHOWS) -------------------------------------------------- */
+/* This is not a mediquery */
 
-
-
+html, body {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+}
 
 
 

@@ -13,6 +13,8 @@ body {    /* This spans the total screen width, 100% */
     font-family: 'Sintesi_Sans_Light', 'Courier_New', Courier, Monotype;
     line-height: 1.7;   }
 
+/* See very end of mediaqueries.css for rules set on "html, body" to prevent horizontal scrolling */
+
 main {    /* :) This is for all content except nav and footer on all pages; "content area" in G-Drive's Responsive Diagrams doc */
     max-width: 1225px;    /* Max width is set with media queries, but this is a backup in case the media queries don't run */
     width: 78.571%;    /* 22/28 cols | Use % here instead of vw because it can be used inside the max-width */

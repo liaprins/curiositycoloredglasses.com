@@ -7,7 +7,7 @@ kirbytext::$tags['gallery'] = array(
     // but I renamed it so the "$gallerypage" term was available for what had been called $page, 
     // so it better represented just the gallery page in my mind.
     // Recap: In example provided by forum, everything (including the comments below) currently called $galleryname had been called $gallerypage, 
-    // and everything currently called $gallerypage had been called $page (in case I need to open the forum thread with a Q again)
+    // and everything currently called $gallerypage had been called $page (in case I need to open the forum thread witha Q again)
 
 
 
@@ -19,7 +19,7 @@ kirbytext::$tags['gallery'] = array(
 
 
 
-    $html = '<ul class="gallery">';
+    $html = '<ul>';
 
 
     if($gallerypage) {    // Added by Lia to "check" first if gallery and images exist; without this, calling a non-existent gallery with (gallery: xxx) kirbytag will throw a breaking error!
