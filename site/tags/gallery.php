@@ -21,6 +21,9 @@ kirbytext::$tags['gallery'] = array(
 
     $html = '<ul class="gallery">';
 
+    // ADDED BY LIA FOR SLIDESHOW VIA JAVASCRIPT PURPOSES
+    // $html = '<div class="advancecontainer">';
+
 
     if($gallerypage) {    // Added by Lia to "check" first if gallery and images exist; without this, calling a non-existent gallery with (gallery: xxx) kirbytag will throw a breaking error!
       if($gallerypage->images() != '') {    // Added by Lia
@@ -62,6 +65,7 @@ kirbytext::$tags['gallery'] = array(
     }    // Closing the if statements from above, part of the if statement above added by Lia
 
 
+    // $html .= '</div>';    // ADDED BY LIA FOR SLIDESHOW VIA JAVASCRIPT PURPOSES
 
     $html .= '</ul>';
 

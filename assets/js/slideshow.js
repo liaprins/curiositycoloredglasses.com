@@ -39,22 +39,12 @@ function slideshow() {
             var slide = galleryList[i].children;
             slide[j].style.position = "absolute";
             slide[j].style.left = 'calc(700px * ' + j + ')';    // this size works for 1225+ only
-            // slide[j].style.top = '-' + slide[0].offsetHeight + 'px';
-            // var rect = slide[0].getBoundingClientRect();    // vertical location
 
-            /*
-            var bodyRect = document.body.getBoundingClientRect(),
-            elemRect = slide[0].getBoundingClientRect(),
-            offset   = elemRect.top - bodyRect.top;
-            slide[j].style.top = (offset - 184) + 'px';
-            */
-
-            var testing = getOffset(slide[j]).top;
-            slide[j].style.top = (testing - slide[0].offsetHeight - 234) + 'px';
+            slide[j].firstElementChild.style.position = "relative";    // styling <figure> to be relatively positioned within <li> which is absolutely positioned
+            slide[j].firstElementChild.style.top = 'calc(-4.1rem - ' + (slide[0].offsetHeight) + 'px)';
 
         }   // close j
     }   // close i
-
 }   // close function
 
 window.addEventListener('DOMContentLoaded', slideshow, false);
