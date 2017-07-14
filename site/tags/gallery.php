@@ -19,7 +19,7 @@ kirbytext::$tags['gallery'] = array(
 
 
 
-    $html = '<ul class="gallery">';
+    $html = '<ul class="gallery" id="' . $galleryname . '">';   // id added by Lia
 
     // ADDED BY LIA FOR SLIDESHOW VIA JAVASCRIPT PURPOSES
     // $html = '<div class="advancecontainer">';

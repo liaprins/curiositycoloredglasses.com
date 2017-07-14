@@ -282,10 +282,17 @@ figure {    /* This applies to the image + its caption (if it has one) as a whol
     margin: 2.048rem 0;    }    /* top + bottom: .75 lh | This is needed so the text following a captionless image has this space between it and the image */
 
 figcaption {    /* :) This applies to all places captions appear (post page single and/or gallery images, About page) */
+    background-color: white;
     padding-bottom:  1.024rem;    /* .5 lh */
     border-style: none none solid none;    
     border-width: 1.71428vw;    /* :) This should dynamically match the weight of the line of the postglasses below date, based on their width of 42.857vw (12/28 cols) and the ratio of the postglasses width to their line weight of 25:1 */ 
     margin: 1.024rem 0 2.048rem 0;    }    /* top: .5 lh, bottom: .75 lh */
+
+
+/* GALLERY (post page) -------------------------------------------------- */
+
+.gallery {
+    position: relative;    }
 
 
 /* LIGHTBOX (POST PAGE) (must come after .contentimage, to override with the cascade, due to how the lightbox JS is written) -------------------------------------------------- */
