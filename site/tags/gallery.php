@@ -17,8 +17,6 @@ kirbytext::$tags['gallery'] = array(
     $gallerypage = $tag->page()->children()->find($galleryname);
 
 
-
-
     $html = '<ul class="gallery" id="' . $galleryname . '">';   // id added by Lia
 
     // ADDED BY LIA FOR SLIDESHOW VIA JAVASCRIPT PURPOSES
@@ -43,7 +41,7 @@ kirbytext::$tags['gallery'] = array(
                 if(!$slide->caption()->empty()):
 
 
-                    $html .= '<figcaption class="s-textface caption">';   
+                    $html .= '<figcaption class="s-textface caption gallerycaption" galleryfigcaption>';   
 
                         $html .= $slide->caption();
  

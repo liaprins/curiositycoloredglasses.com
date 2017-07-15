@@ -6,4 +6,4 @@ Alt: An illustration of chocolate candies' innards.
 
 ----
 
-Sort: 2
+Sort: 1
