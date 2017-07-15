@@ -294,11 +294,17 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
 .gallery {
     position: relative;    }
 
-.dotcontainer {    }
+.dotcontainer {
+    position: absolute;
+    left: 0;    }
+
+.dot {
+    cursor: pointer;
+}
 
 #placeholderbox {
     background-color: rgba(255, 255, 0, 0.5);
-        }
+    z-index: -100;    }
 
 
 /* LIGHTBOX (POST PAGE) (must come after .contentimage, to override with the cascade, due to how the lightbox JS is written) -------------------------------------------------- */
