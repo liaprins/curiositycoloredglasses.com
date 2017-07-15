@@ -81,6 +81,18 @@ function selectOtherSlide(e) {
         var currentSlide = document.getElementById(galleryName + '-current');
         var currentIndex = currentSlide.getAttribute('data-slide-index');
 
+        var dotsContainer = clickedSideSlide.parentNode.lastElementChild.previousElementSibling;
+        var dotsList = dotsContainer.children;
+        // update dots
+        for (k = 0; k < dotsList.length; k++) {
+            if (k == clickedIndex) {
+                dotsList[k].innerHTML = '+';
+            } else {
+                dotsList[k].innerHTML = '-';
+            }
+
+        }    // close k
+
         // moves entire gallery
         gallery.style.right = 'calc(700px * ' + clickedIndex + ')';    // !!! THIS LINE OF CODE WILL NEED TO BE MEDIAQUERIED WITHIN JS, VIA if-statements on window.screenWidth (see menu.js)
         
