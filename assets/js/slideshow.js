@@ -16,6 +16,7 @@ function slideshow() {    // on page load
         var dotsContainer = document.createElement('div');
         galleryList[i].appendChild(dotsContainer);
         dotsContainer.setAttribute('class', 'dotcontainer');
+        dotsContainer.style.position = 'relative';
 
         // establish placeholder box to keep text after img at proper height
         var placeholderBox = document.createElement('div');
@@ -53,6 +54,8 @@ function slideshow() {    // on page load
             slide[0].removeAttribute('data-sideslide');
             slide[0].firstElementChild.style.top = '0';
             slide[0].setAttribute('id', galleryName + '-current');
+            // TEST: making current img clickable to open lightbox
+            slide[0].firstElementChild.firstElementChild.setAttribute('class', 'contentimage clickme');
     
         }   // close j
 
@@ -90,6 +93,8 @@ function advanceOrRetreat(clickedSideSlide, dotsContainer, gallery, clickedIndex
     var placeholderBox = gallery.lastElementChild;
     placeholderBox.style.right = 'calc(-700px * ' + clickedIndex + ')';    // this size works for 1225+ only
     placeholderBox.style.height = 'calc(2.048rem + ' + clickedSideSlide.firstElementChild.offsetHeight + 'px)';        
+    // keeps dotsContainer in current slide position
+    dotsContainer.style.left = 'calc(700px * ' + clickedIndex + ')';    // this size works for 1225+ only
 
     // move caption visibility to clicked slide
     currentCaption = currentSlide.firstElementChild.lastElementChild;
@@ -102,16 +107,13 @@ function advanceOrRetreat(clickedSideSlide, dotsContainer, gallery, clickedIndex
     }
 
     // pass current slide attributes to clicked slide, and vice versa, for identification
+    currentSlide.firstElementChild.firstElementChild.setAttribute('class', 'contentimage');
+    clickedSideSlide.firstElementChild.firstElementChild.setAttribute('class', 'contentimage clickme');
+
     currentSlide.removeAttribute('id');
     clickedSideSlide.setAttribute('id', galleryName + '-current');
     currentSlide.setAttribute('data-sideslide', '');
     clickedSideSlide.removeAttribute('data-sideslide');
-
-    /*
-    // TEST
-    var container = document.getElementById('slideshowtest');    // TEST
-    container.innerHTML = clickedIndex;
-    */
 }
 
 
@@ -129,7 +131,6 @@ function selectOtherSlide(e) {
         var clickedIndex = clickedSideSlide.getAttribute('data-slide-index');
         var galleryName = gallery.getAttribute('id');
         var currentSlide = document.getElementById(galleryName + '-current');
-        // var currentIndex = currentSlide.getAttribute('data-slide-index');    // not needed...
 
         // !!! NAMED FUNCTION
         advanceOrRetreat(clickedSideSlide, dotsContainer, gallery, clickedIndex, galleryName, currentSlide);
@@ -146,24 +147,34 @@ function clickDot(e) {
 
     // if the clicked element is a dot that is not the current dot
     if (clickedDot.hasAttribute('data-dot-index')) {
+
         var dotsContainer = clickedDot.parentNode;
         var gallery = dotsContainer.parentNode;
         var clickedIndex = clickedDot.getAttribute('data-dot-index');
         var galleryName = gallery.getAttribute('id');
         var currentSlide = document.getElementById(galleryName + '-current');
-
+        
         // for loop to be able to define clickedSideSlide, based on currentDotIndex
         for (l = 0; l < dotsContainer.children.length; l++) {
 
             // find slide with matching index to current dot
-            if (gallery.children[l].getAttribute('data-slide-index') == clickedDot.getAttribute('data-dot-index')) {
+            if (clickedDot.getAttribute('data-dot-index') == gallery.children[l].getAttribute('data-slide-index')) {
                 var clickedSideSlide = gallery.children[l];
+
+                // TEST !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                var container = document.getElementById('slideshowtest');    // TEST
+                container.innerHTML = gallery.children[2].getAttribute('data-slide-index') + ' TEST 18';
 
                 // !!! NAMED FUNCTION
                 advanceOrRetreat(clickedSideSlide, dotsContainer, gallery, clickedIndex, galleryName, currentSlide);        
 
+
             }  // close if
         }  // close l
+
+        // set newly clicked dot to filled
+        clickedDot.innerHTML = '+';
+
     }  // close if
 } // close function
 

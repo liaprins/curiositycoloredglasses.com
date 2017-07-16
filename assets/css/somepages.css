@@ -282,7 +282,7 @@ figure {    /* This applies to the image + its caption (if it has one) as a whol
     margin: 2.048rem 0;    }    /* top + bottom: .75 lh | This is needed so the text following a captionless image has this space between it and the image */
 
 figcaption {    /* :) This applies to all places captions appear (post page single and/or gallery images, About page) */
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.95);
     padding-bottom:  1.024rem;    /* .5 lh */
     border-style: none none solid none;    
     border-width: 1.71428vw;    /* :) This should dynamically match the weight of the line of the postglasses below date, based on their width of 42.857vw (12/28 cols) and the ratio of the postglasses width to their line weight of 25:1 */ 
@@ -294,9 +294,7 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
 .gallery {
     position: relative;    }
 
-.dotcontainer {
-    position: absolute;
-    left: 0;    }
+.dotcontainer {    }
 
 .dot {
     cursor: pointer;
@@ -335,7 +333,7 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
     top: 0;
     left: 0;
     z-index: 102;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.95);
     margin: 0;
     padding: 10.714vw;
     padding-top: calc(10.714vw + 1.024rem);

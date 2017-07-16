@@ -31,7 +31,8 @@
     </script>
 
     <!-- supersimplelightbox script (no gallery) -->
-    <script src="../assets/js/simplelightbox.js">
+    <!-- <script src="../assets/js/simplelightbox.js"> -->
+    <script src="../assets/js/lightbox.js">
     </script>
 
     <!-- slideshow only (no lightbox) -->
