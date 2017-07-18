@@ -119,8 +119,8 @@ function advanceOrRetreat(clickedSideSlide, dotsContainer, gallery, clickedIndex
 
 
 function selectOtherSlide(e) {    
-    var clickedImg = e.target;    // <img> element
-    var clickedSideSlide = clickedImg.parentNode.parentNode;    // <li> element
+    var imgToShow = e.target;    // <img> element
+    var clickedSideSlide = imgToShow.parentNode.parentNode;    // <li> element
 
     // if the clicked element is a side slide (not the current slide or any other element)
     if (clickedSideSlide.hasAttribute('data-sideslide')) {
@@ -161,10 +161,6 @@ function clickDot(e) {
             if (clickedDot.getAttribute('data-dot-index') == gallery.children[l].getAttribute('data-slide-index')) {
                 var clickedSideSlide = gallery.children[l];
 
-                // TEST !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                var container = document.getElementById('slideshowtest');    // TEST
-                container.innerHTML = gallery.children[2].getAttribute('data-slide-index') + ' TEST 18';
-
                 // !!! NAMED FUNCTION
                 advanceOrRetreat(clickedSideSlide, dotsContainer, gallery, clickedIndex, galleryName, currentSlide);        
 
@@ -181,6 +177,31 @@ function clickDot(e) {
 window.addEventListener('click', clickDot, false);
 
 
+
+
+
+
+
+// MAKING LIGHTBOX DOTS ADVANCE/RETREAT THE REGULAR VIEW SLIDESHOW BENEATH THEM
+function lightboxDots(e) {
+
+    clickedBoxDot = e.target;
+
+
+
+
+    if (clickedBoxDot.hasAttribute('data-lightbox-dot')) {
+
+        // reset all lightbox dots to unfilled
+
+
+        
+
+    } // close if
+
+} // close function
+
+window.addEventListener('click', lightboxDots, false);
 
 
 
