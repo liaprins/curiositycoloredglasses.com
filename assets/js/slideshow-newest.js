@@ -219,6 +219,7 @@ window.addEventListener('click', clickDot, false);
 
 // USED FUNCTION ----------------------------------------------------------------------------
 // makes lightbox dots advance/retreat the regular view slideshow beneath them
+// creates and populates lightbox for slide corresponding to clicked dot
 function lightboxDots(e) {
 
     clickedThing = e.target;
@@ -229,13 +230,12 @@ function lightboxDots(e) {
         var clickedLightboxDot = clickedThing;
 
         // declare vars for advanceOrRetreat function
-        var dotsContainer = clickedThingParent;
         // mine data-* attribute from dot to get current gallery's name
         var galleryName = clickedLightboxDot.getAttribute('data-galleryname');
         var gallery = document.getElementById(galleryName);
+        var dotsContainer = gallery.lastElementChild.previousElementSibling;
         var clickedIndex = clickedLightboxDot.getAttribute('data-dot-index');
         var currentSlide = document.getElementById(galleryName + '-current');
-
 
         // for loop to be able to define clickedSideSlide, based on currentDotIndex
         for (l = 0; l < dotsContainer.children.length; l++) {
@@ -248,19 +248,32 @@ function lightboxDots(e) {
 
                 // calling NAMED FUNCTION
                 advanceOrRetreat(clickedSideSlide, dotsContainer, gallery, clickedIndex, galleryName, currentSlide);        
-            
-            /*
-            // TEST!!!!! UNABLE TO GET IT TO RECOGNIZE ANY PARENTS ABOVE dotsContainerGrandparent :( NO CLUE WHY
-            var testContainer = document.getElementById('slideshowtest');
-            testContainer.innerHTML = clickedSideSlide.innerHTML + ' TEST 20';
-            */
 
             }  // close if
         }  // close l
 
-        // set newly clicked dot to filled
-        // clickedDot.innerHTML = '+';
+        // all functionality for building lightbox upon lightbox dot click
+        var dotsLightboxContainer = clickedThingParent;
+        
+        // for loop to be able to define imgToShow, based on clickedLightboxDot
+        for (m = 0; m < dotsLightboxContainer.children.length; m++) {
 
+            // find slide with matching index to current dot
+            if (gallery.children[m].getAttribute('data-slide-index') == clickedLightboxDot.getAttribute('data-dot-index')) {
+                var imgToShow = gallery.children[m].firstElementChild.firstElementChild;
+
+                // remove current lightbox
+                var currentLightbox = document.getElementById('singlelightbox');
+                currentLightbox.parentNode.removeChild(currentLightbox);
+
+                // call NAMED lightbox function
+                lightbox(imgToShow);  
+
+                // call NAMED function to populate lightbox dots (defined in lightbox.js)
+                populateLightboxDots(imgToShow);               
+
+            }  // close if
+        }  // close m
     } // close if
 } // close function
 
