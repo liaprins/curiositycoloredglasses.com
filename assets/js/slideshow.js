@@ -39,8 +39,10 @@ function slideshow() {
         for (j = 0; j < (galleryList[i].children.length - 2); j++) {
 
             // create dots + put dots into dots container
-            var dot = document.createElement('span');
-            dot.innerHTML = '-';
+            // var dot = document.createElement('span');
+            var dot = document.createElement('div');
+            // dot.innerHTML = '-';    // TEMPORARY
+            dot.setAttribute('class', 'dot');
             dotsContainer.appendChild(dot);
             dotsList = dotsContainer.children;
             dotsList[j].setAttribute('data-dot-index', (j));
@@ -48,7 +50,8 @@ function slideshow() {
             // storing the gallery name as an attribute so it can be pulled in a later function to find and declare the gallery
             dotsList[j].setAttribute('data-galleryname', galleryName);
             // then override the first dot, to indicate it is the current dot/slide
-            dotsList[0].innerHTML = '+';
+            // dotsList[0].innerHTML = '+';
+            dotsList[0].setAttribute('class', 'dot dotfill');
 
             // position all slides' <li> elements horizontally (absolute) + add data-* attribute to recognize them as side slides if clicked on
             var slide = galleryList[i].children;
@@ -100,9 +103,11 @@ function advanceOrRetreat(clickedSideSlide, dotsContainer, gallery, clickedIndex
     // compare dot index to selected img index
     for (k = 0; k < dotsList.length; k++) {
         if (k == clickedIndex) {
-            dotsList[k].innerHTML = '+';
+            // dotsList[k].innerHTML = '+';
+            dotsList[k].setAttribute('class', 'dot dotfill')
         } else {
-            dotsList[k].innerHTML = '-';
+            // dotsList[k].innerHTML = '-';    // TEMPORARY
+            dotsList[k].setAttribute('class', 'dot')
         } // close if
     } // close k
 
@@ -207,7 +212,8 @@ function clickDot(e) {
         }  // close l
 
         // set newly clicked dot to filled
-        clickedDot.innerHTML = '+';
+        // clickedDot.innerHTML = '+';
+        clickedDot.setAttribute('class', 'dot dotfill')
     }  // close if
 } // close function
 

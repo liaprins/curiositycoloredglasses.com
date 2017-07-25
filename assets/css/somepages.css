@@ -297,8 +297,18 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
 .dotcontainer {    }
 
 .dot {
-    cursor: pointer;
-}
+    width: 10px;    /* UPDATE TO REMS */
+    height: 10px;    /* UPDATE TO REMS */
+    margin: 0 2.5px;    /* UPDATE TO REMS */
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;    /* UPDATE TO REMS */
+    border-radius: 5px;    /* UPDATE TO REMS */
+    display: inline-block;
+    cursor: pointer;    }
+
+.dotfill {
+    background-color: black;    }
 
 #placeholderbox {
     background-color: rgba(255, 255, 0, 0.5);
