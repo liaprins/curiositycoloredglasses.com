@@ -1,3 +1,4 @@
+
 // NAMED FUNCTION ----------------------------------------------------------------------------
 // Gets rid of the "#" that would otherwise remain at end of URL after closing an entry by re-clicking the icon
 // ... and returns the ability to scroll vertically
@@ -7,6 +8,8 @@ function removeHashReturnScroll() {
     // return scrollability
     document.documentElement.style.overflow = 'auto';
 }
+
+
 
 
 
@@ -85,7 +88,7 @@ function lightbox(imgToShow) {
             
         // give caption attributes
         caption.setAttribute('class','xs-textface lightboxcaption');
-        caption.style.display = "block";    // TESTING!!!!!!!!!!!!!!
+        caption.style.display = "block";    
             
         // add toggle icon
         var toggle = document.createElement('img');
@@ -224,13 +227,14 @@ window.addEventListener('click', toggleCaption, false);
 
 
 
-// NAMED + USED FUNCTION ----------------------------------------------------------------------------
+// USED FUNCTION ----------------------------------------------------------------------------
 // close lightbox by clicking white space
 function lightboxSpaceClose(e) {
     clickedSpace = e.target;
     if (clickedSpace.hasAttribute('data-lightbox-close')) {
         var lightboxToClose = document.getElementById('singlelightbox');
         clickedSpace.parentNode.removeChild(lightboxToClose);
+
         // call NAMED function
         removeHashReturnScroll();
     }
@@ -243,7 +247,7 @@ window.addEventListener('click', lightboxSpaceClose, false);
 
 
 
-// NAMED + USED FUNCTION ----------------------------------------------------------------------------
+// USED FUNCTION ----------------------------------------------------------------------------
 // "x" button
 function lightboxXClose(e) {
     clickedX = e.target;

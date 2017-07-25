@@ -125,15 +125,6 @@ function advanceOrRetreat(clickedSideSlide, dotsContainer, gallery, clickedIndex
         currentCaption.style.display = "none";
     }
 
-    /*
-    // TEST
-    var currentCaptionDuringLightbox = currentSlide.firstElementChild.lastElementChild.previousElementSibling;
-    if (currentCaptionDuringLightbox.hasAttribute('data-galleryfigcaption')) {
-        currentCaptionDuringLightbox.style.display = "none";
-    }
-    */
-
-
     clickedSlideCaption = clickedSideSlide.firstElementChild.lastElementChild;
     if (clickedSlideCaption.hasAttribute('data-galleryfigcaption')) {
         clickedSlideCaption.style.display = "block";
@@ -172,13 +163,6 @@ function selectOtherSlide(e) {
 
         // calls NAMED FUNCTION
         advanceOrRetreat(clickedSideSlide, dotsContainer, gallery, clickedIndex, galleryName, currentSlide);
-        
-
-        // TEST
-        var testContainer = document.getElementById('slideshowtest');
-        testContainer.innerHTML = clickedThing.getAttribute('class') + ' test 7';
-
-
 
     }    // close if
 }    // close function
@@ -224,7 +208,6 @@ function clickDot(e) {
 
         // set newly clicked dot to filled
         clickedDot.innerHTML = '+';
-
     }  // close if
 } // close function
 
@@ -255,19 +238,17 @@ function lightboxDots(e) {
         var clickedIndex = clickedLightboxDot.getAttribute('data-dot-index');
         var currentSlide = document.getElementById(galleryName + '-current');
 
+        
+        var currentCaptionDuringLightbox = currentSlide.firstElementChild.lastElementChild.previousElementSibling;
+        
+        // find the current slide's index
+        var currentIndex = currentSlide.getAttribute('data-slide-index');
 
-    var currentCaptionDuringLightbox = currentSlide.firstElementChild.lastElementChild.previousElementSibling;
-    
-    if (currentCaptionDuringLightbox.hasAttribute('data-galleryfigcaption')) {
-        currentCaptionDuringLightbox.style.display = "none";
-    }
-    
-    // TEST
-    var testContainer = document.getElementById('slideshowtest');
-    testContainer.innerHTML = currentCaptionDuringLightbox.getAttribute('class') + ' TEST 1';
-
-
-
+        // if the reg view current slide has a caption && if the clicked do is NOT the current dot, hide the caption
+        if (currentCaptionDuringLightbox.hasAttribute('data-galleryfigcaption')
+            && (clickedIndex != currentIndex)) {
+            currentCaptionDuringLightbox.style.display = "none";
+        }
 
         // for loop to be able to define clickedSideSlide, based on currentDotIndex
         for (l = 0; l < dotsContainer.children.length; l++) {
@@ -306,11 +287,6 @@ function lightboxDots(e) {
 
             }  // close if
         }  // close m
-
-    
-
-
-
     } // close if
 } // close function
 
