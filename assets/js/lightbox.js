@@ -1,3 +1,5 @@
+
+/*
 // NAMED FUNCTION ----------------------------------------------------------------------------
 // Gets rid of the "#" that would otherwise remain at end of URL after closing an entry by re-clicking the icon
 // ... and returns the ability to scroll vertically
@@ -7,6 +9,38 @@ function removeHashReturnScroll() {
     // return scrollability
     document.documentElement.style.overflow = 'auto';
 }
+*/
+
+
+
+
+/*
+// TESTING !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// NAMED FUNCTION ----------------------------------------------------------------------------
+// Gets rid of the "#" that would otherwise remain at end of URL after closing an entry by re-clicking the icon
+// ... and returns the ability to scroll vertically
+function removeHashReturnScroll() { 
+    
+    // remove #hash
+    history.pushState("", document.title, window.location.pathname + window.location.search);
+    // return scrollability
+    document.documentElement.style.overflow = 'auto';
+    
+
+    // TEST !!!!!!!!!!
+    // navigate to gallery <ul>, and collect all it childrens' (<li>s') children that are <figcaption>s as an array
+    // turn them all to display: none; 
+    // then find the "caption to show", and turn it to display: block;
+    // then figure out which vars will need to be defined from within the functions that call this NAMED one, and add them as parameters to this NAMED one
+    // then add these parameters to this NAMED function's (parenthesis) where it is called in the functions that USE this one (lightboxSpaceClose and lightboxXClose)
+    // then within the USED functions, define these parameters according to the context of that function's clicked thing
+
+}
+*/
+
+
+
+
 
 
 
@@ -224,13 +258,14 @@ window.addEventListener('click', toggleCaption, false);
 
 
 
-// NAMED + USED FUNCTION ----------------------------------------------------------------------------
+// USED FUNCTION ----------------------------------------------------------------------------
 // close lightbox by clicking white space
 function lightboxSpaceClose(e) {
     clickedSpace = e.target;
     if (clickedSpace.hasAttribute('data-lightbox-close')) {
         var lightboxToClose = document.getElementById('singlelightbox');
         clickedSpace.parentNode.removeChild(lightboxToClose);
+
         // call NAMED function
         removeHashReturnScroll();
     }
@@ -243,7 +278,7 @@ window.addEventListener('click', lightboxSpaceClose, false);
 
 
 
-// NAMED + USED FUNCTION ----------------------------------------------------------------------------
+// USED FUNCTION ----------------------------------------------------------------------------
 // "x" button
 function lightboxXClose(e) {
     clickedX = e.target;

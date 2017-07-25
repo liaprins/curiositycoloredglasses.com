@@ -41,7 +41,7 @@ kirbytext::$tags['gallery'] = array(
                 if(!$slide->caption()->empty()):
 
 
-                    $html .= '<figcaption class="s-textface caption gallerycaption" galleryfigcaption>';   
+                    $html .= '<figcaption class="s-textface caption gallerycaption" data-galleryfigcaption>';   
 
                         $html .= $slide->caption();
  
