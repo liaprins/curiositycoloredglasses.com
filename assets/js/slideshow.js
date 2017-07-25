@@ -61,18 +61,6 @@ function slideshow() {
             // position <figure> element vertically (relative) within <li> element, so it can be even with top of first slide
             slide[j].firstElementChild.style.position = "relative";    // styling <figure> to be relatively positioned within <li> which is absolutely positioned
             
-
-            // TEST remove id
-            slide[j].removeAttribute('id');
-
-            // TEST
-            var slideSecondSibling = slide[0].firstElementChild.lastElementChild;
-            if (slideSecondSibling.hasAttribute('data-galleryfigcaption')) {
-                slideSecondSibling.setAttribute('id', galleryName + '-caption');
-            }
-
-
-
             // set first slide up as "current slide"
             slide[0].removeAttribute('data-sideslide');
             slide[0].firstElementChild.style.top = '0';
@@ -130,20 +118,25 @@ function advanceOrRetreat(clickedSideSlide, dotsContainer, gallery, clickedIndex
     dotsContainer.style.left = 'calc(700px * ' + clickedIndex + ')';    // this size works for 1225+ only
 
     // move caption visibility to clicked slide
-    currentCaption = currentSlide.firstElementChild.lastElementChild.previousElementSibling;
+    var currentCaption = currentSlide.firstElementChild.lastElementChild;
+    // currentCaption = currentSlide.firstElementChild.lastElementChild.previousElementSibling;
     // first check if it is a caption (slides without captions will have a different element in that specified DOM ^^^ position)
     if (currentCaption.hasAttribute('data-galleryfigcaption')) {
-        // TEST
-        currentCaption.removeAttribute('id');
-
         currentCaption.style.display = "none";
     }
+
+    /*
+    // TEST
+    var currentCaptionDuringLightbox = currentSlide.firstElementChild.lastElementChild.previousElementSibling;
+    if (currentCaptionDuringLightbox.hasAttribute('data-galleryfigcaption')) {
+        currentCaptionDuringLightbox.style.display = "none";
+    }
+    */
+
+
     clickedSlideCaption = clickedSideSlide.firstElementChild.lastElementChild;
     if (clickedSlideCaption.hasAttribute('data-galleryfigcaption')) {
         clickedSlideCaption.style.display = "block";
-
-        // TEST
-        clickedSlideCaption.setAttribute('id', galleryName + '-caption');
     }
 
     // pass current slide attributes to clicked slide, and vice versa, for identification
@@ -180,6 +173,13 @@ function selectOtherSlide(e) {
         // calls NAMED FUNCTION
         advanceOrRetreat(clickedSideSlide, dotsContainer, gallery, clickedIndex, galleryName, currentSlide);
         
+
+        // TEST
+        var testContainer = document.getElementById('slideshowtest');
+        testContainer.innerHTML = clickedThing.getAttribute('class') + ' test 7';
+
+
+
     }    // close if
 }    // close function
 
@@ -255,6 +255,20 @@ function lightboxDots(e) {
         var clickedIndex = clickedLightboxDot.getAttribute('data-dot-index');
         var currentSlide = document.getElementById(galleryName + '-current');
 
+
+    var currentCaptionDuringLightbox = currentSlide.firstElementChild.lastElementChild.previousElementSibling;
+    
+    if (currentCaptionDuringLightbox.hasAttribute('data-galleryfigcaption')) {
+        currentCaptionDuringLightbox.style.display = "none";
+    }
+    
+    // TEST
+    var testContainer = document.getElementById('slideshowtest');
+    testContainer.innerHTML = currentCaptionDuringLightbox.getAttribute('class') + ' TEST 1';
+
+
+
+
         // for loop to be able to define clickedSideSlide, based on currentDotIndex
         for (l = 0; l < dotsContainer.children.length; l++) {
             
@@ -263,20 +277,6 @@ function lightboxDots(e) {
             if (clickedIndex == gallery.children[l].getAttribute('data-slide-index')) {
                 
                 var clickedSideSlide = gallery.children[l];
-
-
-                
-                // TEST
-                // var captionOfInterest = document.getElementById(galleryName + '-caption');
-                var captionOfInterest = document.getElementById(galleryName + '-caption');
-                
-
-                // TEST
-                var testContainer = document.getElementById('slideshowtest');
-                // CAN'T GET ANYTHING DEEPER THAN currentSlide.firstElementChild TO WORK; MAY HAVE TO DEFINE captionOfInterest in a different way
-                testContainer.innerHTML = captionOfInterest.getAttribute('id') + ' TEST 6';
-                
-
 
                 // calling NAMED FUNCTION
                 advanceOrRetreat(clickedSideSlide, dotsContainer, gallery, clickedIndex, galleryName, currentSlide);        
@@ -306,6 +306,11 @@ function lightboxDots(e) {
 
             }  // close if
         }  // close m
+
+    
+
+
+
     } // close if
 } // close function
 
