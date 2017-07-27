@@ -297,21 +297,31 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
 .dotcontainer {    }
 
 .dot {
-    width: 10px;    /* UPDATE TO REMS */
-    height: 10px;    /* UPDATE TO REMS */
-    margin: 0 2.5px;    /* UPDATE TO REMS */
+    /*
+    width: 0.56rem;   
+    height: 0.56rem;  
+    
+    margin: 1rem 0.15rem;
+
     border-style: solid;
     border-color: black;
-    border-width: 2px;    /* UPDATE TO REMS */
-    border-radius: 5px;    /* UPDATE TO REMS */
+    border-width: 0.11rem;
+    border-radius: 0.28rem;
+    */
     display: inline-block;
+    background-color: rgba(255, 0, 255, 0.2);
     cursor: pointer;    }
 
 .dotfill {
-    background-color: black;    }
+    background-color: rgba(0, 255, 255, 0.2);    }
+
+.dotimg {
+    width: 0.56rem;   
+    height: 0.56rem; 
+    margin: 0 0.15rem;    }    /* FINALIZE */
 
 #placeholderbox {
-    background-color: rgba(255, 255, 0, 0.5);
+    /* background-color: rgba(255, 255, 0, 0.5); */
     z-index: -100;    }
 
 

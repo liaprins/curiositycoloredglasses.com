@@ -123,7 +123,8 @@ function populateLightboxDots(imgToShow) {
         lightboxDotContainer.setAttribute('id', 'lightboxdotcontainer');
             
         // fill with contents of non-lightbox (regular view) dot container
-        lightboxDotContainer.innerHTML = imgToShow.parentNode.parentNode.parentNode.lastElementChild.previousElementSibling.innerHTML;
+        // lightboxDotContainer.innerHTML = imgToShow.parentNode.parentNode.parentNode.lastElementChild.previousElementSibling.innerHTML;
+        lightboxDotContainer.innerHTML = imgToShow.parentNode.parentNode.parentNode.lastElementChild.innerHTML;
             
         // attach to lightbox
         var lightboxAgain = document.getElementById('singlelightbox');
