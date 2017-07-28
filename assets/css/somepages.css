@@ -294,38 +294,41 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
 .gallery {
     position: relative;    }
 
-.dotcontainer {    }
+.dotcontainer {
+    margin-top: 0.512rem;    }
 
 .dot {
-    /*
     width: 0.56rem;   
     height: 0.56rem;  
-    
-    margin: 1rem 0.15rem;
-
-    border-style: solid;
-    border-color: black;
-    border-width: 0.11rem;
     border-radius: 0.28rem;
-    */
-    display: inline-block;
-    background-color: rgba(255, 0, 255, 0.2);
-    cursor: pointer;    }
-
-.dotfill {
-    background-color: rgba(0, 255, 255, 0.2);    }
+    display: inline-block;    /* needed so that margins can apply to <span>s */
+    margin: 0 0.14rem;    }
 
 .dotimg {
     width: 0.56rem;   
     height: 0.56rem; 
-    margin: 0 0.15rem;    }    /* FINALIZE */
+    position: relative;
+    top: -0.35rem;    }
+
+.dotimgunfilled:hover {
+    border-radius: 0.28rem;
+    background-color: #e2e43a;
+    cursor: pointer;    }
 
 #placeholderbox {
-    /* background-color: rgba(255, 255, 0, 0.5); */
-    z-index: -100;    }
+    background-color: rgba(255, 255, 0, 0.5);
+    /* z-index: -100; */
+    z-index: 1;    }
+
+.gallerycaption {    }
 
 
 /* LIGHTBOX (POST PAGE) (must come after .contentimage, to override with the cascade, due to how the lightbox JS is written) -------------------------------------------------- */
+
+#lightboxdotcontainer {
+    position: absolute;
+    bottom: 0;
+    left: 0.512rem;    }
 
 #singlelightbox {
     width: 100vw;
