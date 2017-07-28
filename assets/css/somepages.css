@@ -316,9 +316,8 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
     cursor: pointer;    }
 
 #placeholderbox {
-    background-color: rgba(255, 255, 0, 0.5);
-    /* z-index: -100; */
-    z-index: 1;    }
+    /* background-color: rgba(255, 255, 0, 0.5); */
+    z-index: -100;    }
 
 .gallerycaption {    }
 

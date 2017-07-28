@@ -120,21 +120,6 @@ function advanceOrRetreat(clickedSideSlide, dotsContainer, gallery, clickedIndex
     var placeholderBox = gallery.lastElementChild.previousElementSibling;
     // need to move it in the opposite direction and same increment that the slide moved, to offset it otherwise being attached to the first slide
     placeholderBox.style.right = 'calc(-700px * ' + clickedIndex + ')';    // this size works for 1225+ only
-    // placeholderBox.style.height = 'calc(2.048rem + ' + clickedSideSlide.firstElementChild.offsetHeight + 'px)';               
-
-
-    // TEST
-    var testContainer = document.getElementById('slideshowtest');
-    testContainer.innerHTML = clickedSideSlide.firstElementChild.lastElementChild.getAttribute('class') + clickedSideSlide.firstElementChild.lastElementChild.offsetHeight + 'px TEST 1';
-
-
-    // TEST
-    /*
-    var imgHeight = clickedSideSlide.firstElementChild.firstElementChild.offsetHeight;
-    var captionHeight = clickedSideSlide.firstElementChild.lastElementChild.offsetHeight;
-    placeholderBox.style.height = 'calc(2.048rem + ' + imgHeight + captionHeight + 'px)'; 
-    */
-
     
     // keeps dotsContainer in current slide position: need to move it in the opposite direction and same increment that the slide moved, to offset it otherwise being attached to the front of the gallery
     dotsContainer.style.left = 'calc(700px * ' + clickedIndex + ')';    // this size works for 1225+ only
