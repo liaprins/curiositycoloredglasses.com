@@ -30,14 +30,10 @@
     <script src="../assets/js/definitions.js">
     </script>
 
-    <!-- supersimplelightbox script (no gallery) -->
-    <!-- <script src="../assets/js/simplelightbox.js"> -->
-    <script src="../assets/js/lightbox.js">
+    <!-- lightbox and slideshow all in one script -->
+    <script src="../assets/js/lightboxslideshow.js">
     </script>
 
-    <!-- slideshow only (no lightbox) -->
-    <script src="../assets/js/slideshow.js">
-    </script>
 
     <!-- for backarrow script ^^^ -->
     <?php snippet('backarrow') ?>
