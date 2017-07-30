@@ -7,7 +7,7 @@ kirbytext::$tags['gallery'] = array(
     // but I renamed it so the "$gallerypage" term was available for what had been called $page, 
     // so it better represented just the gallery page in my mind.
     // Recap: In example provided by forum, everything (including the comments below) currently called $galleryname had been called $gallerypage, 
-    // and everything currently called $gallerypage had been called $page (in case I need to open the forum thread witha Q again)
+    // and everything currently called $gallerypage had been called $page (in case I need to open the forum thread with a Q again)
 
 
 
@@ -17,9 +17,10 @@ kirbytext::$tags['gallery'] = array(
     $gallerypage = $tag->page()->children()->find($galleryname);
 
 
+    $html = '<ul class="gallery" id="' . $galleryname . '">';   // id added by Lia
 
-
-    $html = '<ul>';
+    // ADDED BY LIA FOR SLIDESHOW VIA JAVASCRIPT PURPOSES
+    // $html = '<div class="advancecontainer">';
 
 
     if($gallerypage) {    // Added by Lia to "check" first if gallery and images exist; without this, calling a non-existent gallery with (gallery: xxx) kirbytag will throw a breaking error!
@@ -40,7 +41,7 @@ kirbytext::$tags['gallery'] = array(
                 if(!$slide->caption()->empty()):
 
 
-                    $html .= '<figcaption class="s-textface caption">';   
+                    $html .= '<figcaption class="s-textface caption gallerycaption" data-galleryfigcaption>';   
 
                         $html .= $slide->caption();
  
@@ -62,6 +63,7 @@ kirbytext::$tags['gallery'] = array(
     }    // Closing the if statements from above, part of the if statement above added by Lia
 
 
+    // $html .= '</div>';    // ADDED BY LIA FOR SLIDESHOW VIA JAVASCRIPT PURPOSES
 
     $html .= '</ul>';
 

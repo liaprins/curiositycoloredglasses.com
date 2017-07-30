@@ -25,7 +25,6 @@ function slideshow() {
         galleryList[i].appendChild(placeholderBox);
         placeholderBox.style.position = 'relative';
         placeholderBox.style.top = '2.048rem';    // this size works for 1225+ only ...see if this can be styled with CSS and mediaqueries instead
-        placeholderBox.style.height = 'calc(2.048rem + ' + galleryList[i].firstElementChild.offsetHeight + 'px)';    // 2.048rem works for 1225+ only ...see if this can be styled with CSS and mediaqueries instead
         placeholderBox.setAttribute('id', 'placeholderbox');
 
         // create dots container for each gallery
@@ -34,6 +33,15 @@ function slideshow() {
         dotsContainer.setAttribute('class', 'dotcontainer');
         dotsContainer.setAttribute('id', 'regviewdotcontainer');
         dotsContainer.style.position = 'relative';
+
+        // show first slide's caption, if it has one
+        var firstCaption = galleryList[i].firstElementChild.firstElementChild.lastElementChild;
+        if (firstCaption.hasAttribute('data-galleryfigcaption')) {
+            firstCaption.style.display = "block";
+        }    // close if
+
+        // the height of placeholderBox has to be moved to render AFTER the caption is made visible in the DOM, otherwise the caption will come in at 0px high since it will still be hidden!
+        placeholderBox.style.height = 'calc(2.048rem + ' + galleryList[i].firstElementChild.firstElementChild.offsetHeight + 'px)';    // 2.048rem works for 1225+ only ...see if this can be styled with CSS and mediaqueries instead
 
         // for each slide within each gallery (but subtract 2 to keep from counting the dotsContainer and placeholderBox as children)
         for (j = 0; j < (galleryList[i].children.length - 2); j++) {
@@ -58,7 +66,13 @@ function slideshow() {
             slide[j].setAttribute('data-sideslide', '');
             slide[j].style.position = "absolute";
             // position slides at increments equal to the post text width + 1 margin
-            slide[j].style.left = 'calc(700px * ' + j + ')';    // this size works for 1225+ only
+            // slide[j].style.left = 'calc(700px * ' + j + ')';    // this size works for 1225+ only
+            var screenWidth = window.innerWidth;
+            if (screenWidth < 817) {
+                slide[j].style.left = 'calc(85.714vw * ' + j + ')';
+            } else {
+                slide[j].style.left = 'calc(700px * ' + j + ')';
+            }
 
             // position <figure> element vertically (relative) within <li> element, so it can be even with top of first slide
             slide[j].firstElementChild.style.position = "relative";    // styling <figure> to be relatively positioned within <li> which is absolutely positioned
@@ -69,15 +83,12 @@ function slideshow() {
             slide[0].setAttribute('id', galleryName + '-current');
             // making current img clickable to open lightbox (in a different function), by adding "clickme" class
             slide[0].firstElementChild.firstElementChild.setAttribute('class', 'contentimage clickme');
-    
+            
+            // position dots container so it is between caption and img (for less than 1225, but still works perfectly for 1225+ also!)
+            dotsContainer.style.position = 'relative';
+            dotsContainer.style.top = 'calc(-' + (placeholderBox.offsetHeight - slide[0].firstElementChild.firstElementChild.offsetHeight) + 'px + 2.048rem)';
+
         }   // close j
-
-        // show first slide's caption, if it has one
-        var firstCaption = galleryList[i].firstElementChild.firstElementChild.lastElementChild;
-        if (firstCaption.hasAttribute('data-galleryfigcaption')) {
-            firstCaption.style.display = "block";
-        }    // close if
-
     }   // close i
 }   // close function
 
@@ -96,37 +107,45 @@ window.addEventListener('DOMContentLoaded', slideshow, false);
 // ...from the perspective of what was clicked for that function (e.g. sideslide, dot, etc)
 // causes slideshow to move to the indicated slide
 function advanceOrRetreat(clickedSideSlide, dotsContainer, gallery, clickedIndex, galleryName, currentSlide) {
-    
+
     // update regular view dots
     var dotsList = dotsContainer.children;
+
     // compare dot index to selected img index
     for (k = 0; k < dotsList.length; k++) {
         if (k == clickedIndex) {
-            // dotsList[k].innerHTML = '+';
             dotsList[k].setAttribute('class', 'dot');
             dotsList[k].innerHTML = '<img src="http://localhost:8888/kirby-project/kirby-2.4.0/assets/images/dot-filled.svg" alt="go to this slide" class="dotimg dotimgfill">';
         } else {
-            // dotsList[k].innerHTML = '-';    // TEMPORARY
             dotsList[k].setAttribute('class', 'dot dotunfilled');
             dotsList[k].innerHTML = '<img src="http://localhost:8888/kirby-project/kirby-2.4.0/assets/images/dot.svg" alt="go to this slide" class="dotimg dotimgunfilled">';
         } // close if
     } // close k
 
-    // moves entire gallery
-    gallery.style.right = 'calc(700px * ' + clickedIndex + ')';    // !!! 1225+ only !!! THIS LINE OF CODE WILL NEED TO BE MEDIAQUERIED WITHIN JS, VIA if-statements on window.screenWidth (see menu.js)
 
-    // keeps placeholderBox in current slide position + reflects its height
-    // var placeholderBox = gallery.lastElementChild;
     var placeholderBox = gallery.lastElementChild.previousElementSibling;
-    // need to move it in the opposite direction and same increment that the slide moved, to offset it otherwise being attached to the first slide
-    placeholderBox.style.right = 'calc(-700px * ' + clickedIndex + ')';    // this size works for 1225+ only
-    
-    // keeps dotsContainer in current slide position: need to move it in the opposite direction and same increment that the slide moved, to offset it otherwise being attached to the front of the gallery
-    dotsContainer.style.left = 'calc(700px * ' + clickedIndex + ')';    // this size works for 1225+ only
+    var screenWidth = window.innerWidth;
+
+    if (screenWidth < 817) {
+        // moves entire gallery
+        gallery.style.right = 'calc(85.714vw * ' + clickedIndex + ')';    // !!! 1225+ only !!! THIS LINE OF CODE WILL NEED TO BE MEDIAQUERIED WITHIN JS, VIA if-statements on window.screenWidth (see menu.js)
+        // keeps placeholderBox in current slide position + reflects its height: need to move it in the opposite direction and same increment that the slide moved, to offset it otherwise being attached to the first slide
+        placeholderBox.style.right = 'calc(-85.714vw * ' + clickedIndex + ')';    // this size works for 1225+ only
+        // keeps dotsContainer in current slide position: need to move it in the opposite direction and same increment that the slide moved, to offset it otherwise being attached to the front of the gallery
+        dotsContainer.style.left = 'calc(85.714vw * ' + clickedIndex + ')';    // this size works for 1225+ only
+    } else {
+        // moves entire gallery
+        gallery.style.right = 'calc(700px * ' + clickedIndex + ')';    // !!! 1225+ only !!! THIS LINE OF CODE WILL NEED TO BE MEDIAQUERIED WITHIN JS, VIA if-statements on window.screenWidth (see menu.js)
+        // keeps placeholderBox in current slide position + reflects its height: need to move it in the opposite direction and same increment that the slide moved, to offset it otherwise being attached to the first slide
+        placeholderBox.style.right = 'calc(-700px * ' + clickedIndex + ')';    // this size works for 1225+ only
+        // keeps dotsContainer in current slide position: need to move it in the opposite direction and same increment that the slide moved, to offset it otherwise being attached to the front of the gallery
+        dotsContainer.style.left = 'calc(700px * ' + clickedIndex + ')';    // this size works for 1225+ only
+    }
+
+
 
     // move caption visibility to clicked slide
     var currentCaption = currentSlide.firstElementChild.lastElementChild;
-    // currentCaption = currentSlide.firstElementChild.lastElementChild.previousElementSibling;
     // first check if it is a caption (slides without captions will have a different element in that specified DOM ^^^ position)
     if (currentCaption.hasAttribute('data-galleryfigcaption')) {
         currentCaption.style.display = "none";
@@ -139,6 +158,10 @@ function advanceOrRetreat(clickedSideSlide, dotsContainer, gallery, clickedIndex
 
     // the height of placeholderBox has to be moved to render AFTER the caption is made visible in the DOM, otherwise the caption will come in at 0px high since it will still be hidden!
     placeholderBox.style.height = 'calc(2.048rem + ' + clickedSideSlide.firstElementChild.offsetHeight + 'px)';               
+
+    // dotsContainer.style.top = 0;    // I DON'T THINK THIS LINE IS NECESSARY
+    // position dots container so it is between caption and img (for less than 1225, but still works perfectly for 1225+ also!)
+    dotsContainer.style.top = 'calc(-' + (placeholderBox.offsetHeight - clickedSideSlide.firstElementChild.firstElementChild.offsetHeight) + 'px + 2.048rem)';
 
     // pass current slide attributes to clicked slide, and vice versa, for identification
     currentSlide.firstElementChild.firstElementChild.setAttribute('class', 'contentimage');

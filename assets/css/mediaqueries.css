@@ -824,7 +824,29 @@
         position: absolute;
         top: 0;
         padding-top:  1.024rem;
-        border-style: solid none none none;    }
+        /* border-style: solid none none none; */
+        border-style: none;    }
+
+    /* GALLERY -------------------------------------------------- */
+
+    .gallerycaption {
+        width: 291.667px;
+        padding-left: 58.333px;
+        padding-right: 58.333px;
+        padding-bottom: 58.333px;
+        left: -350px;
+        border-style: none;
+        margin-top: 0;    }
+
+    .toprule {
+        display: block;
+        /*
+        margin-top: -1.024rem;
+        border-style: solid;
+        border-color: black;
+        border-width: 2px;
+        margin-bottom: 1.024rem;
+        */    }
 
     /* LIGHTBOX -------------------------------------------------- */
     

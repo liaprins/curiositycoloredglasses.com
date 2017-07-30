@@ -43,6 +43,10 @@ kirbytext::$tags['gallery'] = array(
 
                     $html .= '<figcaption class="s-textface caption gallerycaption" data-galleryfigcaption>';   
 
+                        
+                        $html .= '<hr class="toprule">';    // adding top rule
+
+
                         $html .= $slide->caption();
  
 
