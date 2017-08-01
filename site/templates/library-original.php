@@ -58,7 +58,7 @@
                 -->
 
                 <!-- I used a made-up attribute (data-id) instead of the typical id attribute to hold this data, because by definition, if the "id" attribute matches the hash of a page, the page will "jump" to that element when the hash in the URL changes/appears -->
-                <img src="<?php echo $libraryresult->url() ?>" alt="<?php echo $libraryresult->alt() ?>" title="<?php echo html($libraryresult->heading()) ?>" class="libraryicon" data-id="<?php echo $librarysubpage ?>" data-clickable="yes">
+                <img src="<?php echo $libraryresult->url() ?>" alt="<?php echo $libraryresult->alt() ?>" class="libraryicon" data-id="<?php echo $librarysubpage ?>" data-clickable="yes">
 
                 <article style="display: none;" class="libraryentry">
 

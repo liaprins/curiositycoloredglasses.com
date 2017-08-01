@@ -51,7 +51,7 @@
 
                                     <!-- Audio pronunciation (optional) -->
                                     <?php if(!$subpage->audiopronunciation()->empty()): ?>
-                                        <a onclick="this.firstChild.play()" data-audiolink><audio src="<?php echo $subpage->audiopronunciation()->audio()->toFile()->url() ?>" type="audio/mpeg"></audio><img src="<?php echo url('assets/images/audio.svg') ?>" alt="play audio pronunciation" class="audioicon yellowhover"></a>
+                                        <a onclick="this.firstChild.play()" data-audiolink title="Hear audio pronunciation"><audio src="<?php echo $subpage->audiopronunciation()->audio()->toFile()->url() ?>" type="audio/mpeg"></audio><img src="<?php echo url('assets/images/audio.svg') ?>" alt="play audio pronunciation" class="audioicon yellowhover"></a>
                                     <?php endif ?>
 
                                 </dt>
@@ -66,7 +66,7 @@
                                             <?php echo html($subpage->definition()) ?>
 
                                             <!-- Linking back to the word in context within the post content -->
-                                            <a href="<?php echo url($thisurl . '#-' . $vocabwordurl) ?>">
+                                            <a href="<?php echo url($thisurl . '#-' . $vocabwordurl) ?>" title="View word in context">
                                                 <img src= "<?php echo url('assets/images/up.svg') ?>" alt="Up to word in context" id="uparrow" class="yellowhover">
                                             </a>
                                         </p>

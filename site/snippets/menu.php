@@ -6,7 +6,7 @@
         </summary>
 
             <!-- Home glasses icon -->
-        <a href="<?php echo url('blog') ?>">
+        <a href="<?php echo url('blog') ?>" title="Curiosity-Colored Glasses">
             <img src="<?php echo url('assets/images/home.svg') ?>" alt="Curiosity-Colored Glasses" id="homeicon" class="yellowhover">   
         </a>
 

@@ -1,4 +1,4 @@
-<div id="searchdecoy" class="yellowhover" style="display: none;">
+<div id="searchdecoy" title="Search" class="yellowhover" style="display: none;">
 	<img src="<?php echo url('assets/images/search.svg') ?>" alt="search" class="navsearchicon">
 </div>
 
@@ -7,7 +7,7 @@
 
   	<input type="text" placeholder="search" name="q" id="navsearchinput" class="s-textface underlineinput">
 
-  	<button type="submit" value="search" id="navsearchbutton" class="searchbutton yellowhover">
+  	<button type="submit" value="search" title="Search" id="navsearchbutton" class="searchbutton yellowhover">
 	    <img src="<?php echo url('assets/images/search.svg') ?>" alt="search" class="navsearchicon">
   	</button>
 
