@@ -135,8 +135,7 @@
         margin: 0 0 0.512rem 0;
         border-width: 0.857vw;    }
     #nosearchresults {
-        margin-top: 1.024rem;
-        margin-left: 3.571vw;    }    /* 1/28 cols */
+        margin-top: 1.024rem;    }
 
     /* COMMENT AVATAR -------------------------------------------------- */
 
@@ -491,10 +490,12 @@
         max-width: 641.929px;     }    /* 22/28 cols px equivalent at 817px screen width */
 
     .postvideo-4-3-ratio {
+        margin: 1.024rem 0;
         width: 641.929px;
         height: 481.447px;    }
 
     .postvideo-16-9-ratio {
+        margin: 1.024rem 0;
         width: 641.929px;
         height: 361.085px;    }
 
@@ -588,6 +589,11 @@
 
     #searchpageform {
         width: 641.929px;
+        margin-left: auto;
+        margin-right: auto;    }
+
+    #nosearchresults {
+        width: 641.292px;
         margin-left: auto;
         margin-right: auto;    }
 

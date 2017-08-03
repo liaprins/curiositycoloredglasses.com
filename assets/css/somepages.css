@@ -548,6 +548,10 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
 #searchpageintrotext {
     margin-top: 1.024rem;    }    /* .25 lh */
 
+#nosearchresults {
+    margin: 0 10.714vw;
+    width: 78.571vw;    }
+
 
 /* SEARCH + TAG PAGE -------------------------------------------------- */
 
