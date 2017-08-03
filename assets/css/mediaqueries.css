@@ -467,7 +467,6 @@
         width: 641.929px;    /* 22/28 cols px equivalent at 817px screen width */
         border-width: 7.003px;    }    /* 6/28 cols divided by 25 (ratio of postglasses' width to their line weight) px equivalent at 817px screen width */
 
-
     /* SUBSCRIBE -------------------------------------------------- */
 
     #mce-EMAIL {    /* Making subscribe input field account for the "follow" links */
@@ -486,10 +485,18 @@
     body {
         padding-bottom: calc(175.071px + 3.9285rem);    }
 
-    /* IMAGES -------------------------------------------------- */
+    /* IMAGES + VIDEO -------------------------------------------------- */
 
     .contentimage {
         max-width: 641.929px;     }    /* 22/28 cols px equivalent at 817px screen width */
+
+    .postvideo-4-3-ratio {
+        width: 641.929px;
+        height: 481.447px;    }
+
+    .postvideo-16-9-ratio {
+        width: 641.929px;
+        height: 361.085px;    }
 
     /* LIGHTBOX -------------------------------------------------- */
     

@@ -7,9 +7,8 @@ email: liajprins@us.ibm.com
 language: en
 role: admin
 history:
-  - >
-    blog/testing-forrest-gump/chocolate-cross-sections
+  - blog/measure-of-a-mountain
+  - blog/testing-forrest-gump/chocolate-cross-sections
   - blog/do-indoor-trees-have-growth-rings
   - blog/testing-forrest-gump
   - blog/testing-forrest-gump/cross-section
-  - blog/penmanship-dialects

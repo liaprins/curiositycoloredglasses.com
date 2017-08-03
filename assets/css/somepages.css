@@ -130,6 +130,8 @@ header {    /* Holds blog name + tagline */
 
 .postpagesectionsummary {
     margin: 2.048rem 0;    }    /* top + bottom: 1 lh */
+.postpagesectionsummary::-webkit-details-marker {    /* Setting up the custom icons instead of default toggles */
+    display: none;    }
 
 .vocabwordinline {    /* This applies to just the inline vocab word, via vocab.php in the site/tags folder */
     cursor: pointer;
@@ -173,6 +175,13 @@ header {    /* Holds blog name + tagline */
     width: 78.571%;    /* 22/28 cols | Use % here instead of vw because they can be used inside the max-width */
     margin: 2.048rem auto;    }    /* top + bottom: 1 lh*/
 
+.postvideo-4-3-ratio {
+    width: 78.571vw;
+    height: 58.928vw;    }
+
+.postvideo-16-9-ratio {
+    width: 78.571vw;
+    height: 44.196vw;    }
 
 /* COMMENTS (POST PAGE) -------------------------------------------------- */
 
@@ -316,7 +325,7 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
     cursor: pointer;    }
 
 #placeholderbox {
-    background-color: rgba(255, 255, 0, 0.5);
+    /* background-color: rgba(255, 255, 0, 0.5); */
     z-index: -100;    }
 
 .toprule {
@@ -371,7 +380,7 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
     border-style: none;
     width: 100vw;    }    /* 28/28 cols */
 
-#lightboxcaptionbar {
+#lightboxcaptionbar {    /* IS THIS STILL NEEDED? I THINK NOT... TEST */
     z-index: 103;
     width: 78.571vw;    /* 22/28 cols */
     height: 0.125rem;
@@ -443,6 +452,14 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
 
 .archivesectiontoggleoff {
     display: none;    }  
+
+#archiveyeartoggle {
+    /* vertical-align: middle; */
+    position: relative;
+    top: 0.18rem;
+    box-sizing: content-box;
+    padding-right: 0.422rem;
+    width: 0.844rem;    }
 
 
 /* LIBRARY PAGE -------------------------------------------------- */
@@ -578,6 +595,10 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
     background-size: 175%;    }
 
 #resulttitle {
+    text-overflow: ellipsis;    /* making words that are too long truncate with an ellipsis (e.g. PHOSPHORESCENCE) to keep from going outside the div width */
+    /* white-space: nowrap; */    /* NOT ACTUALLY NEEDED this was making all titles truncate with "..." after just one line */
+    overflow: hidden;    /* required for ellipse truncation to happen */
+
     margin: 1.024rem 0 0.256rem 0;    }    /* top: .5 lh, bottom: .125 lh */
 
 #resulttaggroup {

@@ -98,6 +98,7 @@
             <!-- year heading -->
             <div id="archiveheadingarea">
                 <h3 class="sectionsummary archivesectionsummary blackbg" id="<?php echo $year?>" data-clickable-header="">
+                    <!-- <img src= "<?php echo url('assets/images/up-arrowhead-white.svg') ?>" alt="" id="archiveyeartoggle"> -->
                     <?php echo $year ?>
                 </h3>
             </div>
