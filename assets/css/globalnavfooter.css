@@ -31,6 +31,9 @@ main {    /* :) This is for all content except nav and footer on all pages; "con
 
 /* NAV -------------------------------------------------- */
 
+summary {    /* for FF, this hides the triangle toggle! */
+    display: block;    }
+
 #searchdecoy {
     padding-bottom: 0.13rem;    /* Matching bottom padding of yellow menu, when #navsearchinput is open */
     padding-top: 0.13rem;    }

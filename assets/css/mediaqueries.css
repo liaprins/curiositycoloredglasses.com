@@ -146,7 +146,7 @@
     #namedatecomment {
         width: 67.857vw;   }    /* 19/28 cols | This should be <main>'s width in cols (22/28) minus avatar (2/28) minus space between this and avatar (2/28) = 18/28 cols */
     #postedcomment {
-        margin-top: calc(7.143vw - 1.7646rem);    }
+        margin-top: calc(7.143vw - 1.85rem);    }
 
 }    /* 390px ++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
@@ -224,8 +224,13 @@
 
     #navsummary {
         position: absolute;
+        /* if there's no yellow hover (via border) */
+        /*
         right: calc(5.357vw - 0.506rem);
-        top: calc(5.357vw - 0.506rem);    }
+        top: calc(5.357vw - 0.506rem);
+        */
+        right: calc(5.357vw - 0.506rem - 0.422rem);
+        top: calc(5.357vw - 0.506rem - 0.422rem);    }
     #navdetails[open] #navsummary {    /* This is just the "x" button */
         position: absolute;
         right: 7.143vw;
@@ -443,9 +448,11 @@
 
     /* HAMBURGER ICON LOCATION -------------------------------------------------- */
 
+    /*
     #navsummary {
         right: calc(43.768px - 0.506rem);
         top: calc(43.768px - 0.506rem);    }
+        */
     #navdetails[open] #navsummary {    /* This is just the "x" button */
         right: 58.357px;
         top: 58.357px;    }
@@ -490,12 +497,12 @@
         max-width: 641.929px;     }    /* 22/28 cols px equivalent at 817px screen width */
 
     .postvideo-4-3-ratio {
-        margin: 1.024rem 0;
+        /* margin: 1.024rem 0; */
         width: 641.929px;
         height: 481.447px;    }
 
     .postvideo-16-9-ratio {
-        margin: 1.024rem 0;
+        /* margin: 1.024rem 0; */
         width: 641.929px;
         height: 361.085px;    }
 
@@ -697,6 +704,7 @@
         background-color: transparent;    }
     #navsummary::-webkit-details-marker {
         display: none;    }
+
     #homeicon {
         display: inline;
         position: absolute;

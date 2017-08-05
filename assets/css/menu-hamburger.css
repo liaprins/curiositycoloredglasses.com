@@ -21,6 +21,7 @@
     border-color: #e2e43a;    /* These border properties have to be here in the [open] styles to override the border properties that are set when it's closed (#navsummary, below) */
     border-style: solid;
     border-width: 0 0 0.422rem 0.422rem;
+    /* border-width: 0.422rem; */
     background-color: #e2e43a;
     float: right;
     cursor: pointer;    }
@@ -38,9 +39,13 @@
     content: " ";
     border-color: white;    /* These border properties apply to the bottom + left sides of the menu icon, to give it a white border-buffer where it cuts into the blog title on home page */
     border-style: solid;
-    border-width: 0 0 0.422rem 0.422rem;
+    /* border-width: 0 0 0.422rem 0.422rem; */
+    border-width: 0.422rem;
     background-color: white;
     cursor: pointer;    }
+#navsummary:hover {
+    border-color: #e2e43a;
+    background-color: #e2e43a;    }
 
 #navsummary::-webkit-details-marker {    /* Setting up the custom icons instead of default toggles */
     display: none;    }
