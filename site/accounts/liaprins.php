@@ -8,7 +8,7 @@ language: en
 role: admin
 history:
   - blog/measure-of-a-mountain
-  - blog/testing-forrest-gump/chocolate-cross-sections
-  - blog/do-indoor-trees-have-growth-rings
-  - blog/testing-forrest-gump
-  - blog/testing-forrest-gump/cross-section
+  - blog/carbonless-copy-paper
+  - blog/license-plate-logic
+  - blog/myth-busting-mosquito-bites
+  - blog/flourescence-and-phosphorescence

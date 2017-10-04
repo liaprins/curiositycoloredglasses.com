@@ -229,8 +229,12 @@
         right: calc(5.357vw - 0.506rem);
         top: calc(5.357vw - 0.506rem);
         */
+        border-width: 0.422rem;
         right: calc(5.357vw - 0.506rem - 0.422rem);
         top: calc(5.357vw - 0.506rem - 0.422rem);    }
+    #navsummary:hover {
+        border-color: #e2e43a;
+        background-color: #e2e43a;    }
     #navdetails[open] #navsummary {    /* This is just the "x" button */
         position: absolute;
         right: 7.143vw;

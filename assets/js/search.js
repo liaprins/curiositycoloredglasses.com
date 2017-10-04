@@ -18,6 +18,7 @@ function decoyClick() {
 	if (searchDecoy && navSearchForm) {    // Checking for its existence first, to save resources
 		searchDecoy.style.display = 'none';
 		navSearchForm.style.display = 'block';
+		document.getElementById('navsearchinput').focus();
 	}    // closing checking if-statement
 }
 

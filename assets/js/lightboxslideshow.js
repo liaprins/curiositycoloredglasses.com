@@ -361,6 +361,10 @@ function slideshow() {
 
         }   // close j
     }   // close i
+
+    // when page is refreshed, this removes the lightbox's #hash from the URL, since refreshing the page automatically also removes the lightbox view, so this syncs the URL back up with the view onscreen
+    removeHashReturnScroll();
+
 }   // close function
 
 // EVENT LISTENER ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

@@ -1,22 +1,12 @@
-var postTheComment = document.getElementById('submit');
-// var postTheComment = document.getElementById('contentform').lastElementChild;
+// NOT WORKING! NEED TO TEST
 
-function removeHashAfterComment(e) { 
+var postACommentFirst = document.getElementById('postacommentsummary');
 
-    var clickedThing = e.target;
-
-    if (clickedThing.getAttribute('id') == 'submit') {
-
-        history.pushState("", document.title, window.location.pathname + window.location.search);
-
-
-        // TEST
-        var testContainer = document.getElementById('slideshowtest');
-        testContainer.innerHTML = clickedThing.getAttribute('id') + ' TEST 2';
-        // testContainer.innerHTML = 1;
-    
-
-    }
+function commentFocus() {
+	var nameField = document.getElementById('name');
+	nameField.focus();
 }
 
-window.addEventListener('click', removeHashAfterComment, false);
+
+
+postACommentFirst.addEventListener('click', commentFocus, false);

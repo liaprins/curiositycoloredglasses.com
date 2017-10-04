@@ -35,10 +35,10 @@
     </script>
 
     <!-- comment refresh script -->
-    <!--
+    
     <script src="../assets/js/comment.js">
     </script>
-    -->
+    
 
 
     <!-- for backarrow script ^^^ -->

@@ -325,7 +325,7 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
     cursor: pointer;    }
 
 #placeholderbox {
-    /* background-color: rgba(255, 255, 0, 0.5); */
+    background-color: rgba(255, 255, 0, 0.5);
     z-index: -100;    }
 
 .toprule {
@@ -341,6 +341,9 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
 
 
 /* LIGHTBOX (POST PAGE) (must come after .contentimage, to override with the cascade, due to how the lightbox JS is written) -------------------------------------------------- */
+
+.contentimage:hover {
+    cursor: pointer;    }
 
 #lightboxdotcontainer {
     position: absolute;

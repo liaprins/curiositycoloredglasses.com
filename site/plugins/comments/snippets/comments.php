@@ -91,7 +91,10 @@
 
                 <!-- THESE ARE THE FORM FIELDS TO CREATE A COMMENT -->
 
+                <!-- THIS LINE KEEPS THE #comment-number hash IN THE URL AFTER A COMMENT HAS BEEN POSTED -->
                 <form action="#comment-<?= $comments->nextCommentId() ?>" method="post" accept-charset="utf-8" id="commentform">
+                <!-- THIS LINE removes THE #comment-number hash IN THE URL AFTER A COMMENT HAS BEEN POSTED, but send you back to the top of the page -->
+                <!-- <form action="" method="post" accept-charset="utf-8" id="commentform"> -->
     
                     <!-- Name input field -->
                     <label for="name" id="namelabel">

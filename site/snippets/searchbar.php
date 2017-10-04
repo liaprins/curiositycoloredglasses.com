@@ -3,7 +3,11 @@
 </div>
 
 <!-- <form action="<?= $site->find('search')->url() ?>" id="navsearchform" style="display: none;"> -->
+<!-- ORIGINAL! THIS ONE WORKS! vvv -->
 <form action="<?= $site->find('search')->url() ?>" id="navsearchform">
+
+<!-- vvv TRY TO GET THIS TO WORK USING FORUM ANSWER vvv -->
+<!-- <form action="<?= search($pages->index(), '$query', 'title|text') ?>" id="navsearchform"> -->
 
   	<input type="text" placeholder="search" name="q" id="navsearchinput" class="s-textface underlineinput">
 

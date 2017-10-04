@@ -20,10 +20,12 @@ function vocabResize() {
 			inlineVocabWordList[l].setAttribute('href', window.location + '#' + inlineVocabWordList[l].getAttribute('data-definition-id'));
 
 			var openContainer = document.getElementById('definitioncontainer');
-
 			if (openContainer) {
 				openContainer.parentNode.removeChild(openContainer);
 			}
+
+			// TESTING!!!!!
+			inlineVocabWordList[l].setAttribute('class', 'vocabwordinline s-display yellowhover');
 
 		}
 	}
