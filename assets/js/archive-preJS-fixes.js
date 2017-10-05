@@ -1,25 +1,8 @@
-// Removes hash when page is refreshed
-function hashReset() {
-    history.pushState("", document.title, window.location.pathname + window.location.search);
-}
-
-window.addEventListener('DOMContentLoaded', hashReset, false);
-
-
 function archiveSectionToggle(e) {
     var selectedHeader = e.target;
     if (selectedHeader.hasAttribute('data-clickable-header')) {
         // sets a toggle upon click that adds/deletes a class (that is styled to hide the content)
         selectedHeader.parentNode.nextElementSibling.classList.toggle('archivesectiontoggleoff');
-        
-        // remove URL#yearhash when year section is toggled shut...
-        var selectedHeaderClasses = selectedHeader.getAttribute('class');
-        // if clicked section is (now) toggled shut, AND...
-        if ( !(selectedHeaderClasses.includes('archivesectiontoggleoff')) &&
-            // ...AND URL#hashyear matches tthe clicked section
-            (location.hash == ('#' + selectedHeader.getAttribute('id')))) {
-            hashReset();
-        }
     }
 }
 
