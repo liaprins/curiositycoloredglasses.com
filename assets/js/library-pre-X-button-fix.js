@@ -63,22 +63,7 @@ function libraryIconClick(e) {
 iconField.addEventListener('click', libraryIconClick, false);
 
 
-// Closes the entry via the "X" button
-var libraryCloseX = document.getElementById('library-x');
 
-function testFunction(e) {
-
-    var clickedThing = e.target;
-
-    if (clickedThing.getAttribute('id') == 'library-x') {
-
-        clickedThing.parentNode.style.display = 'none';
-        clickedThing.parentNode.previousElementSibling.setAttribute('class', 'libraryicon');
-        removeHash();
-    }
-}
-
-window.addEventListener('click', testFunction, false);
 
 
 

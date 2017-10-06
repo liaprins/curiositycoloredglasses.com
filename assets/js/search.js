@@ -13,6 +13,10 @@ function navSearchSetup() {
 window.addEventListener('DOMContentLoaded', navSearchSetup, false);
 
 
+// This uses the same function from above, but for when the opened nav search bar is clicked OUT of (loses focus/goes to blur)
+window.addEventListener('blur', navSearchSetup, true);
+
+
 // This is the function that happens upon click of the search icon decoy
 function decoyClick() {
 	if (searchDecoy && navSearchForm) {    // Checking for its existence first, to save resources

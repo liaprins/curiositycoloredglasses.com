@@ -4,9 +4,7 @@
 var referredLinkPost = document.referrer;
  
 function backArrowShow() {
-    if (((referredLinkPost.includes('blog\/')) || 
-    	(referredLinkPost.includes('archive')) ||
-    	(referredLinkPost.includes('library#')) ||    // not picking up on the #hash
+    if (((referredLinkPost.includes('archive')) ||
     	(referredLinkPost.includes('search')) || 
     	(referredLinkPost.includes('tag'))) &&
     	(/blog\//.test(window.location.href)) &&    // if I end up manipulating the URL to not have extra "tag/" in it, I may need to change this from "/tag\//" to "/tag/"
