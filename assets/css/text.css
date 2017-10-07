@@ -13,7 +13,7 @@ a {
 figcaption a,
 #postedcomment a,
 #abouttext a,
-#libraryentryabout a {
+.libraryentryabout a {
     /* text-decoration: underline; */    /* Leaving this as an alternative option until I settle on final solution for link styling */
     /* text-underline-position: under; */    /* This places the underline under the text with extra space to prevent crossing descenders |     /* Leaving this as an alternative option until I settle on final solution for link styling */
     /* text-decoration-color: #e2e43a; */    /* Leaving this as an alternative option until I settle on final solution for link styling */
@@ -28,7 +28,7 @@ figcaption a,
 figcaption a:hover,
 #postedcomment a:hover,
 #abouttext a:hover,
-#libraryentryabout a:hover {
+.libraryentryabout a:hover {
     /* text-decoration-style: double; */    /* Leaving this as an alternative option until I settle on final solution for link styling */
     /* background-color: #e2e43a; */    /* Leaving this as an alternative option until I settle on final solution for link styling */
     /* text-decoration-color: black; */    /* Leaving this as an alternative option until I settle on final solution for link styling */
