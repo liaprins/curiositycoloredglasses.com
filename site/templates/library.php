@@ -71,9 +71,9 @@
                         <?php echo html($libraryresult->heading()) ?>
                     </p>
 
-                    <p class="libraryentryabout s-textface">
-                        <?php echo html($libraryresult->about()->kirbytextraw()) ?>
-                    </p>
+                    <div class="libraryentryabout s-textface">
+                        <?php echo html($libraryresult->about()->kirbytext()) ?>
+                    </div>
 
                 </article>
 

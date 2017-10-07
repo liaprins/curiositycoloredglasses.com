@@ -62,9 +62,10 @@
 
                 <article style="display: none;" class="libraryentry">
 
-                    <a href="<?php echo url('library') ?>">
+                    <!-- Taking out the link to the main library page on the "x" button, because I am now just closing the entry with JS for performance reasons, instead of reloading the whole main library page all over again! -->
+                    <!-- <a href="<?php echo url('library') ?>"> -->
                         <img src= "<?php echo url('assets/images/x.svg') ?>" alt="close" id="library-x" class="yellowhover close-x">
-                    </a>
+                    <!-- </a> -->
 
                     <p class="libraryentryname s-display">
                         <?php echo html($libraryresult->heading()) ?>
