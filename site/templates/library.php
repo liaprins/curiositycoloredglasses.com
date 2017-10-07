@@ -19,6 +19,13 @@
     <script src="assets/js/backarrow-library.js">
     </script>
 
+
+    <!-- This encompasses everything within <body> except for <nav>
+    This is so that there is an element that can be clicked on that will be anything except <nav>,
+    that will be recognized in JS menu.js script, that can have an event listener applied when it is clicked on, that will close the <nav> -->
+    <div id="everythingexceptnav">
+
+
     <!-- for backarrow script ^^^ -->
     <?php snippet('backarrow') ?>
 

@@ -40,108 +40,109 @@
     </script>
     
 
+    <!-- This encompasses everything within <body> except for <nav>
+    This is so that there is an element that can be clicked on that will be anything except <nav>,
+    that will be recognized in JS menu.js script, that can have an event listener applied when it is clicked on, that will close the <nav> -->
+    <div id="everythingexceptnav">
 
-    <!-- for backarrow script ^^^ -->
-    <?php snippet('backarrow') ?>
+
+        <!-- for backarrow script ^^^ -->
+        <?php snippet('backarrow') ?>
 
 
-        <article class="mockmain" id="pre-rr">    <!-- Opening <article> to make room for RR results that need to be wider than this width, to accommodate their all having margins on L + R -->
+            <article class="mockmain" id="pre-rr">    <!-- Opening <article> to make room for RR results that need to be wider than this width, to accommodate their all having margins on L + R -->
 
-            <div class="desktopcontent">
+                <div class="desktopcontent">
 
-            <!-- I'm arranging the pieces of the intro part according to the V-mobile design; CSS can re-arrange them; this is according to responsive design principles -->
+                <!-- I'm arranging the pieces of the intro part according to the V-mobile design; CSS can re-arrange them; this is according to responsive design principles -->
             
-            </div>
+                </div>
 
 
-            <div id="postdesktopcontent">
+                <div id="postdesktopcontent">
 
-                <!-- Date of post -->
-                <?php snippet('blogarticle-date') ?>
-
-
-                <!-- Postglasses icon -->
-                <?php snippet('blogarticle-postglasses') ?>
+                    <!-- Date of post -->
+                    <?php snippet('blogarticle-date') ?>
 
 
-
-                <!-- Title of post -->
-                <?php snippet('blogarticle-title') ?>
+                    <!-- Postglasses icon -->
+                    <?php snippet('blogarticle-postglasses') ?>
 
 
 
-                <!-- Intro of post -->
-                <?php snippet('blogarticle-intro') ?>
-
-
-                <div id="posttagshare">
-
-                    <!-- Tags of post -->
-                    <?php snippet('blogarticle-tags') ?>
-
-
-                    <!-- Sharing for this post -->
-                    <?php snippet('blogarticle-share') ?>
-
-                </div>    <!-- Closing id="posttagshare" -->
+                    <!-- Title of post -->
+                    <?php snippet('blogarticle-title') ?>
 
 
 
-                <!-- Text of post -->
-                <?php snippet('blogarticle-text') ?>
+                    <!-- Intro of post -->
+                    <?php snippet('blogarticle-intro') ?>
+
+
+                    <div id="posttagshare">
+
+                        <!-- Tags of post -->
+                        <?php snippet('blogarticle-tags') ?>
+
+
+                        <!-- Sharing for this post -->
+                        <?php snippet('blogarticle-share') ?>
+
+                    </div>    <!-- Closing id="posttagshare" -->
 
 
 
-                <!-- Gloassary of all vocab words; listed after the main text -->
-                <?php snippet('blogarticle-glossary') ?>
+                    <!-- Text of post -->
+                    <?php snippet('blogarticle-text') ?>
+
+
+
+                    <!-- Glossary of all vocab words; listed after the main text -->
+                    <?php snippet('blogarticle-glossary') ?>
     
 
 
-                <!-- * * * * * KEEPING THANK YOU, PROCESS SECTIONS IN HERE IN CASE I WANT TO ADD THEM LATER; THEY WON'T SHOW IN THE BROWSER * * * * * -->
+                    <!-- * * * * * KEEPING THANK YOU, PROCESS SECTIONS IN HERE IN CASE I WANT TO ADD THEM LATER; THEY WON'T SHOW IN THE BROWSER * * * * * -->
 
-                <!-- Thank You section of post -->
-                <?php snippet('blogarticle-thankyou') ?>
-
-
-                <!-- Process section of post -->
-                <?php snippet('blogarticle-process') ?>
-
-                <!-- ^ ^ ^ ^ ^ KEEPING THANK YOU, PROCESS SECTIONS IN HERE IN CASE I WANT TO ADD THEM LATER; THEY WON'T SHOW IN THE BROWSER ^ ^ ^ ^ ^ -->
+                    <!-- Thank You section of post -->
+                    <?php snippet('blogarticle-thankyou') ?>
 
 
+                    <!-- Process section of post -->
+                    <?php snippet('blogarticle-process') ?>
 
-            </div>    <!-- Closing class="desktopcontent" -->
-
-        </article>    <!-- Closing <article> to make room for RR results that need to be wider than this width, to accommodate their all having margins on L + R -->
+                    <!-- ^ ^ ^ ^ ^ KEEPING THANK YOU, PROCESS SECTIONS IN HERE IN CASE I WANT TO ADD THEM LATER; THEY WON'T SHOW IN THE BROWSER ^ ^ ^ ^ ^ -->
 
 
 
-        <!-- Relevant Reading section of post -->
-        <?php snippet('blogarticle-relevantreading') ?>
+                </div>    <!-- Closing class="desktopcontent" -->
+
+            </article>    <!-- Closing <article> to make room for RR results that need to be wider than this width, to accommodate their all having margins on L + R -->
 
 
 
-            <article class="mockmain" id="postdesktopcontent2">    <!-- Opening second instance of <article> to make room for RR results that need to be wider than this width, to accommodate their all having margins on L + R -->
-
-                <!-- Comments via Disqus; trying out custom comments from Kirby instead for now, though -->
-                <!-- <?php snippet('disqus') ?> -->
+            <!-- Relevant Reading section of post -->
+            <?php snippet('blogarticle-relevantreading') ?>
 
 
-                <!-- Comments via Kirby plugin -->
-                <!-- IMPORTANT! This snippet lives in site/plugins/comments/snippets; that is where the plugin calls for it to be -->
-                <!-- I am keeping it there in case of future updates to comments I need to install -->
-                <?php snippet('comments') ?>
+
+                <article class="mockmain" id="postdesktopcontent2">    <!-- Opening second instance of <article> to make room for RR results that need to be wider than this width, to accommodate their all having margins on L + R -->
+
+                    <!-- Comments via Disqus; trying out custom comments from Kirby instead for now, though -->
+                    <!-- <?php snippet('disqus') ?> -->
 
 
-            </article>    <!-- Closing second instance of <article> to make room for RR results that need to be wider than this width, to accommodate their all having margins on L + R -->
+                    <!-- Comments via Kirby plugin -->
+                    <!-- IMPORTANT! This snippet lives in site/plugins/comments/snippets; that is where the plugin calls for it to be -->
+                    <!-- I am keeping it there in case of future updates to comments I need to install -->
+                    <?php snippet('comments') ?>
 
 
-        </article>    <!-- Closing first instance of <article> -->
+                </article>    <!-- Closing second instance of <article> to make room for RR results that need to be wider than this width, to accommodate their all having margins on L + R -->
 
 
-        <!-- TEST FOR LIGHTBOX -->
-        <div id="slideshowtest"></div>
+            </article>    <!-- Closing first instance of <article> -->
 
 
-    <?php snippet('footer') ?>
+        <?php snippet('footer') ?>
 

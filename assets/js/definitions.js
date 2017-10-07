@@ -25,7 +25,7 @@ function vocabResize() {
 			}
 
 			// TESTING!!!!!
-			inlineVocabWordList[l].setAttribute('class', 'vocabwordinline s-display yellowhover');
+			// inlineVocabWordList[l].setAttribute('class', 'vocabwordinline s-display yellowhover');
 
 		}
 	}
@@ -85,11 +85,11 @@ function vocabTest(e) {
 	    				var container = document.createElement('span');
 		    			selectedVocab.parentNode.appendChild(container);
 
-		    			var containerInner = document.createElement('span');    // innerContainer TEST
-		    			container.appendChild(containerInner);    // innerContainer TEST
+		    			var containerInner = document.createElement('span');    // innerContainer 
+		    			container.appendChild(containerInner);    // innerContainer 
 
 		    			// give container attributes
-		    			containerInner.setAttribute('id', 'containerinner');    // innerContainer TEST
+		    			containerInner.setAttribute('id', 'containerinner');    // innerContainer 
 	    				container.setAttribute('class', 'inlinevocabcontainer');
 	    				container.setAttribute('id', 'definitioncontainer');
 
@@ -98,7 +98,7 @@ function vocabTest(e) {
 				    	// this src attribute vvv will have to update when I get proper hosting and URL set up! 
     	    			// or store the PHP version in an HTML element's attribute, then collect it in JS as a variable and call it here
 			        	// or else construct its shape with CSS (research performance) vvv
-    					// innerContainer TEST
+    					// innerContainer 
     					containerInner.innerHTML = '<img src="http://localhost:8888/kirby-project/kirby-2.4.0/assets/images/x.svg" alt="close" id="vocabclose" class="close-x yellowhover" data-vocab-x>' + definitionsList[i].innerHTML;
     					// containerInner.innerHTML = '<img src="http://localhost:8888/kirby-project/kirby-2.4.0/assets/images/x.svg" alt="close" id="vocabclose" class="close-x yellowhover" data-vocab-x>' + definitionsList[i].innerHTML;
     					// container.innerHTML = '<img src="http://localhost:8888/kirby-project/kirby-2.4.0/assets/images/x.svg" alt="close" id="vocabclose" class="close-x yellowhover" data-vocab-x>' + definitionsList[i].innerHTML;
@@ -106,7 +106,7 @@ function vocabTest(e) {
     					// remove unneeded elements from original glossary HTML
     					// remove up arrow that in glossary links to inline vocab word
     					// var anchorUp = containerInner.lastElementChild.firstElementChild.firstElementChild;
-    					var anchorUp = containerInner.lastElementChild.firstElementChild.firstElementChild;
+    					var anchorUp = containerInner.lastElementChild.firstElementChild.lastElementChild;
     					anchorUp.parentNode.removeChild(anchorUp);
 
     					// manipulate definition styles to differentiate from HTML pulled in from glossary

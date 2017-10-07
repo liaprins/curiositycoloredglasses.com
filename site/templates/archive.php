@@ -15,56 +15,63 @@
     <!-- calling the JS scripts used on everypage -->
     <?php snippet('scripts-sitewide') ?>
 
+
     <!-- archive year section header script -->
     <script src="assets/js/archive.js">
     </script>
 
 
-    <main>
+    <!-- This encompasses everything within <body> except for <nav>
+    This is so that there is an element that can be clicked on that will be anything except <nav>,
+    that will be recognized in JS menu.js script, that can have an event listener applied when it is clicked on, that will close the <nav> -->
+    <div id="everythingexceptnav">
 
-        <div class="desktopcontent">
 
-            <!-- title of the page + any intro text -->
-            <!-- NOT SURE IF THIS WILL STAY AS <h2> -->
-            <h2 class="extracontentpagetitle">
-                <?php echo $page->title()->kirbytext() ?>
-            </h2>
+        <main>
 
-            <!-- text for the page -->
-            <!-- NOT SURE IF THIS WILL STAY AS <p> -->
-            <span class="l-textface">
-                <?php echo $page->text()->kirbytext() ?>
-            </span>
+            <div class="desktopcontent">
 
-        </div>
+                <!-- title of the page + any intro text -->
+                <!-- NOT SURE IF THIS WILL STAY AS <h2> -->
+                <h2 class="extracontentpagetitle">
+                    <?php echo $page->title()->kirbytext() ?>
+                </h2>
+
+                <!-- text for the page -->
+                <!-- NOT SURE IF THIS WILL STAY AS <p> -->
+                <span class="l-textface">
+                    <?php echo $page->text()->kirbytext() ?>
+                </span>
+
+            </div>
 
 
 <!-- __________________________________________________________________________________ -->      
 
 <!-- ARCHIVE YEAR MENU -->
 
-        <div id="archivemenudesktopcontent">
+            <div id="archivemenudesktopcontent">
 
-            <p id="archivemenu">
+                <p id="archivemenu">
 
-            <?php $years = $page->years()
-                                ->toStructure()
-                                ->flip() ?>
+                <?php $years = $page->years()
+                                    ->toStructure()
+                                    ->flip() ?>
 
-            <?php foreach($years as $year): ?>
+                    <?php foreach($years as $year): ?>
 
-            <!-- This holds together all the years on one line -->
-                <span>
+                    <!-- This holds together all the years on one line -->
+                    <span>
 
-                    <!-- NOT SURE THAT THE YEAR MENU WILL STAY AS <h3> -->
-                    <a href="<?php echo url('archive#' . $year) ?>" id="archivemenuyear" class="sectionsummary yellowhover">
-                        <?php echo $year ?></a></span><?php endforeach ?>
+                        <!-- NOT SURE THAT THE YEAR MENU WILL STAY AS <h3> -->
+                        <a href="<?php echo url('archive#' . $year) ?>" id="archivemenuyear" class="sectionsummary yellowhover">
+                            <?php echo $year ?></a></span><?php endforeach ?>
 
-            </p>
+                </p>
 
-        </div>
+            </div>
 
-    </main>
+        </main>
 
 <!-- __________________________________________________________________________________ -->      
 
@@ -87,45 +94,36 @@
 
 <!-- BLOG ARTICLES GROUPED BY YEAR -->
 
-    <div id="removemeaftertesting">
+        <div id="removemeaftertesting">
 
-        <?php function pageYear($p) {
-            return $p->date('Y');    }    // year, e.g. "2016"
-            $posts = page('blog')->children(); ?>
+            <?php function pageYear($p) {
+                return $p->date('Y');    }    // year, e.g. "2016"
+                $posts = page('blog')->children(); ?>
     
-        <?php foreach ($posts->flip()->group('pageYear') as $year => $yearList): ?>
+            <?php foreach ($posts->flip()->group('pageYear') as $year => $yearList): ?>
     
-            <!-- year heading -->
-            <div id="archiveheadingarea">
-                <h3 class="sectionsummary archivesectionsummary blackbg" id="<?php echo $year?>" data-clickable-header="">
-                    <!-- <img src= "<?php echo url('assets/images/up-arrowhead-white.svg') ?>" alt="" id="archiveyeartoggle"> -->
-                    <?php echo $year ?>
-                </h3>
-            </div>
+                <!-- year heading -->
+                <div id="archiveheadingarea">
+                    <h3 class="sectionsummary archivesectionsummary blackbg" id="<?php echo $year?>" data-clickable-header="">
+                        <!-- <img src= "<?php echo url('assets/images/up-arrowhead-white.svg') ?>" alt="" id="archiveyeartoggle"> -->
+                        <?php echo $year ?>
+                    </h3>
+                </div>
                 
 
-            <!-- area where results are per year -->
-            <div class="resultarea archiveresultarea">
-                <?php foreach ($yearList as $result): ?>
-                    <?php snippet('result', array('result' => $result)) ?>
-                <?php endforeach; ?>
-            </div>
+                <!-- area where results are per year -->
+                <div class="resultarea archiveresultarea">
+                    <?php foreach ($yearList as $result): ?>
+                        <?php snippet('result', array('result' => $result)) ?>
+                    <?php endforeach; ?>
+                </div>
 
 
-        <?php endforeach; ?>
+            <?php endforeach; ?>
 
-    </div>    <!-- id="removemeaftertesting" -->
-
-
-<!-- __________________________________________________________________________________ -->      
-<!-- TESTING SCRIPT -->
-
-<div id="archivetest">
-</div>
-
-<!-- __________________________________________________________________________________ -->      
+        </div>    <!-- id="removemeaftertesting" -->
 
 
-<?php snippet('footer') ?>
+    <?php snippet('footer') ?>
 
 

@@ -431,6 +431,7 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
 /* ABOUT PAGE -------------------------------------------------- */
 
 #aboutimage {
+    cursor: auto;
     margin-top: -0.512rem;    }    /* .25 lh | Counteracting <figure>'s top margin to move top of About image closer to About page name optically */
 
 #abouttext {

@@ -22,44 +22,51 @@
     <script src="../assets/js/backarrow-tag.js">
     </script>
 
-    <!-- for backarrow script ^^^ -->
-    <?php snippet('backarrow') ?>
+
+    <!-- This encompasses everything within <body> except for <nav>
+    This is so that there is an element that can be clicked on that will be anything except <nav>,
+    that will be recognized in JS menu.js script, that can have an event listener applied when it is clicked on, that will close the <nav> -->
+    <div id="everythingexceptnav">
+
+
+        <!-- for backarrow script ^^^ -->
+        <?php snippet('backarrow') ?>
    
-    <main class="desktopcontent">
+        <main class="desktopcontent">
 
-        <!-- titling the page after the tag that brought us here -->
-        <!-- NOT SURE IF THIS WILL STAY AS <p> -->
-        <p id="tagpagename" class="xl-textface tagnobackarrow">
-            #<?php echo param('tag') ?>
-        </p>
+            <!-- titling the page after the tag that brought us here -->
+            <!-- NOT SURE IF THIS WILL STAY AS <p> -->
+            <p id="tagpagename" class="xl-textface tagnobackarrow">
+                #<?php echo param('tag') ?>
+            </p>
 
-        <!-- pulling any introductory text for the page, if there's any from the panel -->
-        <span class="l-textface">
-            <?php echo $page->text()->kirbytext() ?>
-        </span>
+            <!-- pulling any introductory text for the page, if there's any from the panel -->
+            <span class="l-textface">
+                <?php echo $page->text()->kirbytext() ?>
+            </span>
 
-    </main>
+        </main>
 
 
-    <!-- establishing a separate div so I can make it wider in screens with more than one result wide to accommodate margins I need to put on both L + R sides of all results so they have proper spacing between each other, but don't look like they're extending past the page margins -->
-    <div class="resultarea">
+        <!-- establishing a separate div so I can make it wider in screens with more than one result wide to accommodate margins I need to put on both L + R sides of all results so they have proper spacing between each other, but don't look like they're extending past the page margins -->
+        <div class="resultarea">
 
-        <!-- resulting article attributes defined in results snippet -->
-        <?php foreach($site->page('blog')
-                           ->children()
-                           ->visible() 
-                           ->filterBy('tags', param('tag'), ',')
-                           ->flip() as $result): ?>
+            <!-- resulting article attributes defined in results snippet -->
+            <?php foreach($site->page('blog')
+                               ->children()
+                               ->visible() 
+                               ->filterBy('tags', param('tag'), ',')
+                               ->flip() as $result): ?>
 
-            <?php snippet('result', array('result' => $result)) ?>
+                <?php snippet('result', array('result' => $result)) ?>
     
-        <?php endforeach ?>
+            <?php endforeach ?>
 
-    </div>    <!-- closing .resultarea -->
+        </div>    <!-- closing .resultarea -->
     
 
 
-    <?php snippet('footer') ?>
+        <?php snippet('footer') ?>
 
 
 

@@ -7,6 +7,8 @@ email: liajprins@us.ibm.com
 language: en
 role: admin
 history:
+  - >
+    blog/license-plate-logic/nothing-optional
   - blog/measure-of-a-mountain/mountainous
   - blog/penmanship-dialects
   - blog/penmanship-dialects/chimney-swift-gallery2
