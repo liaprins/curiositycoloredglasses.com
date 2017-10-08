@@ -288,17 +288,14 @@ So for any custom class added via the panel, I need to copy and paste all the pr
     /* max-height: 100vh; */    }    /* Making the images never taller than the browser window (1vh = 1% of vertical height of screen) */
 
 figure {    /* This applies to the image + its caption (if it has one) as a whole */
-    margin: 2.048rem 0 5rem 0;
-    /* margin: 2.048rem 0 0 0; */    }    /* top + bottom: .75 lh | This is needed so the text following a captionless image has this space between it and the image */
+    margin: 2.048rem 0;    }    /* top + bottom: .75 lh | This is needed so the text following a captionless image has this space between it and the image */
 
 figcaption {    /* :) This applies to all places captions appear (post page single and/or gallery images, About page) */
     background-color: rgba(255, 255, 255, 0.95);
-    padding-bottom:  1.024rem;
-    /* padding-bottom:  1.024rem; */    /* .5 lh */
+    padding-bottom:  1.024rem;    /* .5 lh */
     border-style: none none solid none;    
     border-width: 1.71428vw;    /* :) This should dynamically match the weight of the line of the postglasses below date, based on their width of 42.857vw (12/28 cols) and the ratio of the postglasses width to their line weight of 25:1 */ 
-    margin: 1.024rem 0 0 0;
-    /* margin: 1.024rem 0 2.048rem 0; */    }    /* top: .5 lh, bottom: .75 lh */
+    margin: 1.024rem 0 2.048rem 0;    }    /* top: .5 lh, bottom: .75 lh */
 
 
 /* GALLERY (post page) -------------------------------------------------- */
@@ -331,10 +328,6 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
     background-color: rgba(255, 255, 0, 0.5);
     z-index: -100;    }
 
-#placeholderbox~.gallerycaption {
-    padding-bottom: 10rem;
-    }
-
 .toprule {
     display: none;
     margin-top: -1.024rem;
@@ -344,8 +337,7 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
     margin-bottom: 1.024rem;    }
 
 .gallerycaption {
-    margin-top: 1.584rem;
-    /* margin-top: 1.584rem; */    }
+    margin-top: 1.584rem;    }
 
 
 /* LIGHTBOX (POST PAGE) (must come after .contentimage, to override with the cascade, due to how the lightbox JS is written) -------------------------------------------------- */

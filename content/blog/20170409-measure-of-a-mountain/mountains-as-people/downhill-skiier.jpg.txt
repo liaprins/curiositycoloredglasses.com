@@ -7,6 +7,13 @@ Downhill night skiing is probably one of the best things on earth; I just haven'
 <em>Em text</em> </br>
 <strong>Strong text</strong> </br>
 <a href="https://ed.ted.com/lessons/is-math-discovered-or-invented-jeff-dekofsky">href text</a>
+Downhill night skiing is probably one of the best things on earth; I just haven't yet experienced it. 
+*Italic text* </br>
+**Bold text** </br>
+(link: https://ed.ted.com/lessons/is-math-discovered-or-invented-jeff-dekofsky text: Link text) </br>
+<em>Em text</em> </br>
+<strong>Strong text</strong> </br>
+<a href="https://ed.ted.com/lessons/is-math-discovered-or-invented-jeff-dekofsky">href text</a>
 
 ----
 

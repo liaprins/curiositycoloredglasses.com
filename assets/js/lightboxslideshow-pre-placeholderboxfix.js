@@ -278,9 +278,6 @@ function slideshow() {
     
     // find any/all galleries in the blogpost
     var galleryList = document.getElementsByClassName('gallery');
-
-    // get screen width
-    var screenWidth = window.innerWidth;
       
     // hide all captions
     var galleryCaptionList = document.getElementsByClassName('gallerycaption');
@@ -298,7 +295,6 @@ function slideshow() {
         var placeholderBox = document.createElement('div');
         galleryList[i].appendChild(placeholderBox);
         placeholderBox.style.position = 'relative';
-        // (1.) HERE ?!?!?! vvvvv
         placeholderBox.style.top = '2.048rem';    // this size works for 1225+ only ...see if this can be styled with CSS and mediaqueries instead
         placeholderBox.setAttribute('id', 'placeholderbox');
 
@@ -313,20 +309,10 @@ function slideshow() {
         var firstCaption = galleryList[i].firstElementChild.firstElementChild.lastElementChild;
         if (firstCaption.hasAttribute('data-galleryfigcaption')) {
             firstCaption.style.display = "block";
-        }
-
-        // if the first slide has a caption & the screen is less than 1225px wide
-        if ((firstCaption.hasAttribute('data-galleryfigcaption')) && (screenWidth < 1225)) {
-            // if there is a caption, set this as the placeholder box's height (just the height of the <figure> element)
-            placeholderBox.style.height = 'calc(' + galleryList[i].firstElementChild.firstElementChild.offsetHeight + 'px)';    
-        } else {
-            placeholderBox.style.height = 'calc(1.072rem + ' + galleryList[i].firstElementChild.firstElementChild.offsetHeight + 'px)';   
-        }
+        }    // close if
 
         // the height of placeholderBox has to be moved to render AFTER the caption is made visible in the DOM, otherwise the caption will come in at 0px high since it will still be hidden!
-        // (2.) HERE ?!?!?! vvvvv
-        // placeholderBox.style.height = 'calc(2.048rem + ' + galleryList[i].firstElementChild.firstElementChild.offsetHeight + 'px)';    // 2.048rem works for 1225+ only ...see if this can be styled with CSS and mediaqueries instead
-        // placeholderBox.style.height = 'calc(' + galleryList[i].firstElementChild.firstElementChild.offsetHeight + 'px)';    
+        placeholderBox.style.height = 'calc(2.048rem + ' + galleryList[i].firstElementChild.firstElementChild.offsetHeight + 'px)';    // 2.048rem works for 1225+ only ...see if this can be styled with CSS and mediaqueries instead
 
         // for each slide within each gallery (but subtract 2 to keep from counting the dotsContainer and placeholderBox as children)
         for (j = 0; j < (galleryList[i].children.length - 2); j++) {
@@ -371,7 +357,6 @@ function slideshow() {
             
             // position dots container so it is between caption and img (for less than 1225, but still works perfectly for 1225+ also!)
             dotsContainer.style.position = 'relative';
-            // (3.) HERE ?!?!?! vvvvv
             dotsContainer.style.top = 'calc(-' + (placeholderBox.offsetHeight - slide[0].firstElementChild.firstElementChild.offsetHeight) + 'px + 2.048rem)';
 
         }   // close j
@@ -446,22 +431,11 @@ function advanceOrRetreat(clickedSideSlide, dotsContainer, gallery, clickedIndex
         clickedSlideCaption.style.display = "block";
     }
 
-    // if the selected slide has a caption & the screen is less than 1225px wide
-    if ((clickedSlideCaption.hasAttribute('data-galleryfigcaption')) && (screenWidth < 1225)) {
-        // if there is a caption, set this as the placeholder box's height (just the height of the <figure> element)
-        placeholderBox.style.height = 'calc(' + clickedSideSlide.firstElementChild.offsetHeight + 'px)';               
-    } else {
-        placeholderBox.style.height = 'calc(1.072rem + ' + clickedSideSlide.firstElementChild.offsetHeight + 'px)';               
-    }
-
     // the height of placeholderBox has to be moved to render AFTER the caption is made visible in the DOM, otherwise the caption will come in at 0px high since it will still be hidden!
-    // (4.) HERE ?!?!?! vvvvv ***** EDITED TO REMOVE 2.048rem *****
-    // placeholderBox.style.height = 'calc(2.048rem + ' + clickedSideSlide.firstElementChild.offsetHeight + 'px)';               
-    // placeholderBox.style.height = 'calc(' + clickedSideSlide.firstElementChild.offsetHeight + 'px)';               
+    placeholderBox.style.height = 'calc(2.048rem + ' + clickedSideSlide.firstElementChild.offsetHeight + 'px)';               
 
     // dotsContainer.style.top = 0;    // I DON'T THINK THIS LINE IS NECESSARY
     // position dots container so it is between caption and img (for less than 1225, but still works perfectly for 1225+ also!)
-    // (5.) HERE ?!?!?! vvvvv
     dotsContainer.style.top = 'calc(-' + (placeholderBox.offsetHeight - clickedSideSlide.firstElementChild.firstElementChild.offsetHeight) + 'px + 2.048rem)';
 
     // pass current slide attributes to clicked slide, and vice versa, for identification
