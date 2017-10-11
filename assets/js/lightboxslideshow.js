@@ -299,7 +299,8 @@ function slideshow() {
         galleryList[i].appendChild(placeholderBox);
         placeholderBox.style.position = 'relative';
         // (1.) HERE ?!?!?! vvvvv
-        placeholderBox.style.top = '2.048rem';    // this size works for 1225+ only ...see if this can be styled with CSS and mediaqueries instead
+        placeholderBox.style.top = '1.024rem';    // this size works for 1225+ only ...see if this can be styled with CSS and mediaqueries instead
+        // placeholderBox.style.top = 0;
         placeholderBox.setAttribute('id', 'placeholderbox');
 
         // create dots container for each gallery
@@ -372,7 +373,8 @@ function slideshow() {
             // position dots container so it is between caption and img (for less than 1225, but still works perfectly for 1225+ also!)
             dotsContainer.style.position = 'relative';
             // (3.) HERE ?!?!?! vvvvv
-            dotsContainer.style.top = 'calc(-' + (placeholderBox.offsetHeight - slide[0].firstElementChild.firstElementChild.offsetHeight) + 'px + 2.048rem)';
+            // dotsContainer.style.top = 'calc(-' + (placeholderBox.offsetHeight - slide[0].firstElementChild.firstElementChild.offsetHeight) + 'px + 2.048rem)';
+            dotsContainer.style.top = 'calc(-' + (placeholderBox.offsetHeight - slide[0].firstElementChild.firstElementChild.offsetHeight) + 'px + 1.024rem)';
 
         }   // close j
     }   // close i
@@ -462,6 +464,7 @@ function advanceOrRetreat(clickedSideSlide, dotsContainer, gallery, clickedIndex
     // dotsContainer.style.top = 0;    // I DON'T THINK THIS LINE IS NECESSARY
     // position dots container so it is between caption and img (for less than 1225, but still works perfectly for 1225+ also!)
     // (5.) HERE ?!?!?! vvvvv
+    // dotsContainer.style.top = 'calc(-' + (placeholderBox.offsetHeight - clickedSideSlide.firstElementChild.firstElementChild.offsetHeight) + 'px + 2.048rem)';
     dotsContainer.style.top = 'calc(-' + (placeholderBox.offsetHeight - clickedSideSlide.firstElementChild.firstElementChild.offsetHeight) + 'px + 2.048rem)';
 
     // pass current slide attributes to clicked slide, and vice versa, for identification

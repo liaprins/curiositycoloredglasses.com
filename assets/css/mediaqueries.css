@@ -447,8 +447,10 @@
     /* BACK ARROW LOCATION -------------------------------------------------- */
     
     #backarrowcontainer {
+        /*
         right: calc(43.768px + 1.7rem);
-        top: calc(43.768px - 0.675rem);    }
+        top: calc(43.768px - 0.675rem);
+        */    }
 
     /* HAMBURGER ICON LOCATION -------------------------------------------------- */
 

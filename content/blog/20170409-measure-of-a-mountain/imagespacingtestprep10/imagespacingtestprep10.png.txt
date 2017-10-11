@@ -1,0 +1,5 @@
+Caption: Only adding captions to the first and third in this slideshow!
+
+----
+
+Alt: Alt text of course

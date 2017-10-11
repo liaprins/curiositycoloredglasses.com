@@ -1,0 +1,5 @@
+Caption: Only adding caption to the first and third slides.
+
+----
+
+Alt: Alt text of course
