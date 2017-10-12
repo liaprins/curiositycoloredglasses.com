@@ -370,6 +370,13 @@ function slideshow() {
             // making current img clickable to open lightbox (in a different function), by adding "clickme" class
             slide[0].firstElementChild.firstElementChild.setAttribute('class', 'contentimage clickme');
             
+            // make first slide's caption NOT have a white left edge (so it won't cover home glasses)
+            // but subsequent slides need the white left edge as a border with previous image behind, so this only applies to first image
+            if (slide[0].firstElementChild.lastElementChild.hasAttribute('data-galleryfigcaption')) {
+                var firstGalleryCaption = slide[0].firstElementChild.lastElementChild;
+                firstGalleryCaption.setAttribute('class', 's-textface caption gallerycaption whiteedge');
+            }
+
             // position dots container so it is between caption and img (for less than 1225, but still works perfectly for 1225+ also!)
             dotsContainer.style.position = 'relative';
             // (3.) HERE ?!?!?! vvvvv
@@ -465,7 +472,7 @@ function advanceOrRetreat(clickedSideSlide, dotsContainer, gallery, clickedIndex
     // position dots container so it is between caption and img (for less than 1225, but still works perfectly for 1225+ also!)
     // (5.) HERE ?!?!?! vvvvv
     // dotsContainer.style.top = 'calc(-' + (placeholderBox.offsetHeight - clickedSideSlide.firstElementChild.firstElementChild.offsetHeight) + 'px + 2.048rem)';
-    dotsContainer.style.top = 'calc(-' + (placeholderBox.offsetHeight - clickedSideSlide.firstElementChild.firstElementChild.offsetHeight) + 'px + 2.048rem)';
+    dotsContainer.style.top = 'calc(-' + (placeholderBox.offsetHeight - clickedSideSlide.firstElementChild.firstElementChild.offsetHeight) + 'px + 1.024rem)';
 
     // pass current slide attributes to clicked slide, and vice versa, for identification
     currentSlide.firstElementChild.firstElementChild.setAttribute('class', 'contentimage');

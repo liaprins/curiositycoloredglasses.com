@@ -865,6 +865,11 @@
         border-style: none;
         margin-top: 0;    }
 
+    .whiteedge {    /* This applies to just the first gallery slide's caption: it needs to have no white left edge (it would cover the home glasses); but all other gallery captions needs it because THEY sit atop another image and need the buffer */
+        padding-left: 0;
+        left: calc(-350px + 58.333px);
+        width: 233.333px;    }
+
     .toprule {
         display: block;
         /*
