@@ -329,6 +329,14 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
     background-color: #e2e43a;
     cursor: pointer;    }
 
+.galleryarrows {
+    box-sizing: content-box;
+    height: 0.844rem;
+    width: 0.844rem;
+    padding: 0.422rem;
+    cursor: pointer;
+    float: left;    }
+
 #placeholderbox {
     background-color: rgba(255, 255, 0, 0.5);
     z-index: -100;    }

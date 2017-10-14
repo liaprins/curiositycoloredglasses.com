@@ -294,6 +294,16 @@ function slideshow() {
         // declare its name, so it can be identified later vs other galleries on the page
         var galleryName = galleryList[i].getAttribute('id');
 
+        /*
+        // ARROWS!!!
+        // create advance/retreat arrows for each gallery
+        var arrowContainer = document.createElement('div');
+        galleryList[i].appendChild(arrowContainer);
+        arrowContainer.setAttribute('class', 'arrowcontainer');
+        arrowContainer.style.position = 'relative';
+        arrowContainer.innerHTML = '<img src="http://localhost:8888/kirby-project/kirby-2.4.0/assets/images/left-arrowhead.svg" alt="retreat" class="galleryarrows" data-retreatarrow>' + '<img src="http://localhost:8888/kirby-project/kirby-2.4.0/assets/images/right-arrowhead.svg" alt="advance" class="galleryarrows" data-advancearrow>';
+        */
+
         // establish placeholder box to keep text after img at proper height
         var placeholderBox = document.createElement('div');
         galleryList[i].appendChild(placeholderBox);
@@ -331,6 +341,8 @@ function slideshow() {
 
         // for each slide within each gallery (but subtract 2 to keep from counting the dotsContainer and placeholderBox as children)
         for (j = 0; j < (galleryList[i].children.length - 2); j++) {
+        // for each slide within each gallery (but subtract 3 to keep from counting the arrowContainer, dotsContainer and placeholderBox as children)
+        // for (j = 0; j < (galleryList[i].children.length - 3); j++) {
 
             // create dots + put dots into dots container
             var dot = document.createElement('span');
@@ -370,6 +382,13 @@ function slideshow() {
             // making current img clickable to open lightbox (in a different function), by adding "clickme" class
             slide[0].firstElementChild.firstElementChild.setAttribute('class', 'contentimage clickme');
             
+            // make first slide's caption NOT have a white left edge (so it won't cover home glasses)
+            // but subsequent slides need the white left edge as a border with previous image behind, so this only applies to first image
+            if (slide[0].firstElementChild.lastElementChild.hasAttribute('data-galleryfigcaption')) {
+                var firstGalleryCaption = slide[0].firstElementChild.lastElementChild;
+                firstGalleryCaption.setAttribute('class', 's-textface caption gallerycaption whiteedge');
+            }
+
             // position dots container so it is between caption and img (for less than 1225, but still works perfectly for 1225+ also!)
             dotsContainer.style.position = 'relative';
             // (3.) HERE ?!?!?! vvvvv
@@ -403,6 +422,8 @@ function advanceOrRetreat(clickedSideSlide, dotsContainer, gallery, clickedIndex
     // update regular view dots
     var dotsList = dotsContainer.children;
 
+    var arrowContainer = 
+
     // compare dot index to selected img index
     for (k = 0; k < dotsList.length; k++) {
         if (k == clickedIndex) {
@@ -425,6 +446,9 @@ function advanceOrRetreat(clickedSideSlide, dotsContainer, gallery, clickedIndex
         placeholderBox.style.right = 'calc(-85.714vw * ' + clickedIndex + ')';    // this size works for 1225+ only
         // keeps dotsContainer in current slide position: need to move it in the opposite direction and same increment that the slide moved, to offset it otherwise being attached to the front of the gallery
         dotsContainer.style.left = 'calc(85.714vw * ' + clickedIndex + ')';    // this size works for 1225+ only
+        // ARROWS!!!
+        // keeps arrows in current slide position: need to move it in the opposite direction and same increment that the slide moved, to offset it otherwise being attached to the front of the gallery
+        // arrowContainer.style.left = 'calc(85.714vw * ' + clickedIndex + ')';    // this size works for 1225+ only    
     } else {
         // moves entire gallery
         gallery.style.right = 'calc(700px * ' + clickedIndex + ')';    // !!! 1225+ only !!! THIS LINE OF CODE WILL NEED TO BE MEDIAQUERIED WITHIN JS, VIA if-statements on window.screenWidth (see menu.js)
@@ -432,6 +456,9 @@ function advanceOrRetreat(clickedSideSlide, dotsContainer, gallery, clickedIndex
         placeholderBox.style.right = 'calc(-700px * ' + clickedIndex + ')';    // this size works for 1225+ only
         // keeps dotsContainer in current slide position: need to move it in the opposite direction and same increment that the slide moved, to offset it otherwise being attached to the front of the gallery
         dotsContainer.style.left = 'calc(700px * ' + clickedIndex + ')';    // this size works for 1225+ only
+        // ARROWS!!!
+        // keeps arrows in current slide position: need to move it in the opposite direction and same increment that the slide moved, to offset it otherwise being attached to the front of the gallery
+        // arrowContainer.style.left = 'calc(700px * ' + clickedIndex + ')';    // this size works for 1225+ only    
     }
 
 
@@ -465,7 +492,7 @@ function advanceOrRetreat(clickedSideSlide, dotsContainer, gallery, clickedIndex
     // position dots container so it is between caption and img (for less than 1225, but still works perfectly for 1225+ also!)
     // (5.) HERE ?!?!?! vvvvv
     // dotsContainer.style.top = 'calc(-' + (placeholderBox.offsetHeight - clickedSideSlide.firstElementChild.firstElementChild.offsetHeight) + 'px + 2.048rem)';
-    dotsContainer.style.top = 'calc(-' + (placeholderBox.offsetHeight - clickedSideSlide.firstElementChild.firstElementChild.offsetHeight) + 'px + 2.048rem)';
+    dotsContainer.style.top = 'calc(-' + (placeholderBox.offsetHeight - clickedSideSlide.firstElementChild.firstElementChild.offsetHeight) + 'px + 1.024rem)';
 
     // pass current slide attributes to clicked slide, and vice versa, for identification
     currentSlide.firstElementChild.firstElementChild.setAttribute('class', 'contentimage');

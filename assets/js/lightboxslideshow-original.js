@@ -218,8 +218,7 @@ function toggleCaption(e) {
         captionToggleIcon.classList.toggle('turn180');
         captionToggleIcon.previousElementSibling.previousElementSibling.removeAttribute('style');
         captionToggleIcon.previousElementSibling.previousElementSibling.classList.toggle('hide');
-        // if I want dots to hide at same time vvv
-        // captionToggleIcon.nextElementSibling.classList.toggle('hide');
+        captionToggleIcon.nextElementSibling.classList.toggle('hide');
     }
 }
 
@@ -294,20 +293,6 @@ function slideshow() {
         
         // declare its name, so it can be identified later vs other galleries on the page
         var galleryName = galleryList[i].getAttribute('id');
-
-
-
-        ////////////////////////////////////////////////////////////////////////////////////////////////////
-        // ARROWS!!!
-        // create advance/retreat arrows for each gallery
-        var arrowContainer = document.createElement('div');
-        galleryList[i].appendChild(arrowContainer);
-        arrowContainer.setAttribute('class', 'arrowcontainer');
-        arrowContainer.style.position = 'relative';
-        arrowContainer.innerHTML = '<img src="http://localhost:8888/kirby-project/kirby-2.4.0/assets/images/left-arrowhead.svg" alt="retreat" class="galleryarrows" data-retreatarrow>' + '<img src="http://localhost:8888/kirby-project/kirby-2.4.0/assets/images/right-arrowhead.svg" alt="advance" class="galleryarrows" data-advancearrow>';
-        ////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
 
         // establish placeholder box to keep text after img at proper height
         var placeholderBox = document.createElement('div');
@@ -393,23 +378,10 @@ function slideshow() {
             }
 
             // position dots container so it is between caption and img (for less than 1225, but still works perfectly for 1225+ also!)
-            // dotsContainer.style.position = 'relative';
+            dotsContainer.style.position = 'relative';
             // (3.) HERE ?!?!?! vvvvv
             // dotsContainer.style.top = 'calc(-' + (placeholderBox.offsetHeight - slide[0].firstElementChild.firstElementChild.offsetHeight) + 'px + 2.048rem)';
             dotsContainer.style.top = 'calc(-' + (placeholderBox.offsetHeight - slide[0].firstElementChild.firstElementChild.offsetHeight) + 'px + 1.024rem)';
-
-
-
-
-            ////////////////////////////////////////////////////////////////////////////////////////////////////
-            // ARROWS!!!
-            arrowContainer.style.top = 'calc(' + (slide[0].firstElementChild.firstElementChild.offsetHeight) + 'px + 3.072rem)';
-            arrowContainer.style.left = 0;
-            ////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-
-
 
         }   // close j
     }   // close i
@@ -450,14 +422,6 @@ function advanceOrRetreat(clickedSideSlide, dotsContainer, gallery, clickedIndex
     } // close k
 
 
-
-    ////////////////////////////////////////////////////////////////////////////////////////////////////
-    // ARROWS!!!
-    var arrowContainer = gallery.lastElementChild.previousElementSibling.previousElementSibling;
-    ////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-
     var placeholderBox = gallery.lastElementChild.previousElementSibling;
     var screenWidth = window.innerWidth;
 
@@ -468,17 +432,6 @@ function advanceOrRetreat(clickedSideSlide, dotsContainer, gallery, clickedIndex
         placeholderBox.style.right = 'calc(-85.714vw * ' + clickedIndex + ')';    // this size works for 1225+ only
         // keeps dotsContainer in current slide position: need to move it in the opposite direction and same increment that the slide moved, to offset it otherwise being attached to the front of the gallery
         dotsContainer.style.left = 'calc(85.714vw * ' + clickedIndex + ')';    // this size works for 1225+ only
-
-
-
-        ////////////////////////////////////////////////////////////////////////////////////////////////////
-        // ARROWS!!!
-        // keeps arrows in current slide position: need to move it in the opposite direction and same increment that the slide moved, to offset it otherwise being attached to the front of the gallery
-        arrowContainer.style.left = 'calc(85.714vw * ' + clickedIndex + ')';    // this size works for 1225+ only
-        ////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-
     } else {
         // moves entire gallery
         gallery.style.right = 'calc(700px * ' + clickedIndex + ')';    // !!! 1225+ only !!! THIS LINE OF CODE WILL NEED TO BE MEDIAQUERIED WITHIN JS, VIA if-statements on window.screenWidth (see menu.js)
@@ -486,19 +439,6 @@ function advanceOrRetreat(clickedSideSlide, dotsContainer, gallery, clickedIndex
         placeholderBox.style.right = 'calc(-700px * ' + clickedIndex + ')';    // this size works for 1225+ only
         // keeps dotsContainer in current slide position: need to move it in the opposite direction and same increment that the slide moved, to offset it otherwise being attached to the front of the gallery
         dotsContainer.style.left = 'calc(700px * ' + clickedIndex + ')';    // this size works for 1225+ only
-    
-
-
-        ////////////////////////////////////////////////////////////////////////////////////////////////////
-        // ARROWS!!!
-        // keeps arrows in current slide position: need to move it in the opposite direction and same increment that the slide moved, to offset it otherwise being attached to the front of the gallery
-        arrowContainer.style.left = 'calc(700px * ' + clickedIndex + ')';    // this size works for 1225+ only
-        
-        arrowContainer.style.top = 'calc(' + clickedSideSlide.firstElementChild.offsetHeight + 'px + 3.072rem)';
-        ////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-
     }
 
 
@@ -651,7 +591,7 @@ function lightboxDots(e) {
         // find the current slide's index
         var currentIndex = currentSlide.getAttribute('data-slide-index');
 
-        // if the reg view current slide has a caption && if the clicked dot is NOT the current dot, hide the caption
+        // if the reg view current slide has a caption && if the clicked do is NOT the current dot, hide the caption
         if (currentCaptionDuringLightbox.hasAttribute('data-galleryfigcaption')
             && (clickedIndex != currentIndex)) {
             currentCaptionDuringLightbox.style.display = "none";
