@@ -38,6 +38,9 @@ Known as (vocab: dendrochronology url: dendrochronology), the science of tree ri
 
 (gallery: tree-ring-prints)
 
+<div id="paneltest">
+</div>
+
 The dendrochronologist, says Munro, reads the distinctive patterns of wide and narrow rings which appear in pieces of wood from different trees. It is more than simply a matter of counting rings. Patterns from different trees must be matched to pinpoint the year a tree produced a particular ring, a process known as (vocab: crossdating url: crossdating).
 
 Year-to-year changes in the weather create the patterns, says Munro. Trees respond to temperature, rainfall and other environmental conditions by altering growth. In boom years, the tree adds extra tissue and the ring will be correspondingly thick. During lean years, growth is slowed and rings are thinner. While that sounds like a straightforward way to get at the issue of climate, Munro notes that it is not all that simple. Trees grow better or worse in response to a combination of weather conditions, depending on their physiology and where they are growing.

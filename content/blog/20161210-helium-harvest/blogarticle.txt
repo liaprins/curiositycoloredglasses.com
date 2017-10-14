@@ -28,6 +28,9 @@ The federal government, which sets helium prices, announced in April of 2012 tha
 
 (gallery: helium-balloons)
 
+<div id="paneltest">
+</div>
+
 ##### Helium hotspot
 
 Although helium is the second most abundant element in the universe, most of it in the Earth's atmosphere bleeds off into space. Helium used for industrial purposes is a byproduct of natural gas production, and the Texas Panhandle is the United States' helium capital. In the natural gas fields near Amarillo, the U.S. government maintains the country's largest helium storehouse. The government put it there back in 1925 because natural gas produced at the gas fields between Amarillo and Hugoton, Kansas, has a very high helium concentration—up to 1.9%.

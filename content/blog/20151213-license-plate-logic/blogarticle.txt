@@ -54,6 +54,10 @@ Indiana and Ohio display two-number county codes, while Kansas plates display tw
 
 ##### Skipped characters and visibility
 
+<div id="paneltest">
+</div>
+
+
 For various reasons related to visibility and readability, some states and territories exclude certain letters from use in their license plate serial formats. The most commonly skipped characters are I, O, and Q, with some states using only one or two of the three while others will skip all three of these letters. Others states, such as Colorado and Georgia have gradually adopted one or more of these letters over a course of years after previously skipping them in order to accommodate the demands of population growth and depletion of available serial combinations. The most common argument behind skipping I, O, and Q is that they can be too easily confused with 0, 1, and other characters, particularly when there isn't adequate spacing or divider between numbers and letters. For this reason, California currently only uses I, O, and Q in between two other letters, an example would be "1AQA000". A unique example of character use is Texas, which used to issue serials using all 26 letters but currently skips all vowels along with the letter Q.
 
 In Amateur radio license plate issues, all states that have them available, except Pennsylvania, use a unique slashed zero character in place of the standard "0" character due to lack of spacing between letters and numbers. Iowa is a unique example in the use of this character, which began using the slashed zero beginning in 2012 on all standard passenger plates as opposed to the traditional symbol for zero to differentiate it from the letter "O" which is also used.

@@ -7,8 +7,8 @@ email: liajprins@us.ibm.com
 language: en
 role: admin
 history:
+  - blog/the-moons-dark-side
+  - blog/helium-harvest
+  - blog/do-indoor-trees-have-growth-rings
   - blog/measure-of-a-mountain
-  - blog/measure-of-a-mountain/imagespacingtestprep20a
-  - blog/measure-of-a-mountain/imagespacingtestprep19b
-  - blog/measure-of-a-mountain/imagespacingtestprep19a
-  - blog/measure-of-a-mountain/imagespacingtestprep18b
+  - blog/license-plate-logic

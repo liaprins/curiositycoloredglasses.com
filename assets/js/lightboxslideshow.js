@@ -345,7 +345,19 @@ function slideshow() {
         // placeholderBox.style.height = 'calc(' + galleryList[i].firstElementChild.firstElementChild.offsetHeight + 'px)';    
 
         // for each slide within each gallery (but subtract 2 to keep from counting the dotsContainer and placeholderBox as children)
-        for (j = 0; j < (galleryList[i].children.length - 2); j++) {
+        // for (j = 0; j < (galleryList[i].children.length - 2); j++) {
+        
+
+
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+        // ARROWS!!!
+        // for each slide within each gallery (but subtract 3 to keep from counting the arrowContainer, dotsContainer and placeholderBox as children)
+        for (j = 0; j < (galleryList[i].children.length - 3); j++) {
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
 
             // create dots + put dots into dots container
             var dot = document.createElement('span');
@@ -541,7 +553,126 @@ function advanceOrRetreat(clickedSideSlide, dotsContainer, gallery, clickedIndex
     clickedSideSlide.setAttribute('id', galleryName + '-current');
     currentSlide.setAttribute('data-sideslide', '');
     clickedSideSlide.removeAttribute('data-sideslide');
+}    // close advanceOrRetreat function
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+// ARROWS!!!
+// USED FUNCTION ----------------------------------------------------------------------------
+// for clicking on arrows in regular view
+
+function clickGalleryArrow(e) {
+
+    var clickedThing = e.target;
+
+    // TEST!!!
+    var panelTest = document.getElementById('paneltest');
+    // TEST!!!
+
+    if (clickedThing.getAttribute('class') == ('galleryarrows')) {
+
+        var dotsContainer = clickedThing.parentNode.parentNode.lastElementChild;
+        var gallery = clickedThing.parentNode.parentNode;
+        var galleryName = gallery.getAttribute('id');
+        var currentSlide = document.getElementById(galleryName + '-current');
+
+        // PLACEHOLDER FOR TESTING!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        // var clickedSideSlide = clickedThing.parentNode.parentNode.firstElementChild;
+
+        // get total number of slides in gallery; subtract 3 to prevent counting arrowContainer, dotsContainer, and placeholderBox
+        var slideCount = gallery.children.length - 3;
+        
+        if (clickedThing.hasAttribute('data-advancearrow')) {
+
+            // if current slide is not the last slide
+            // (slideCount - 1) because the index starts at 0, not 1, so need to subtract 1 from count to match them up
+            if (currentSlide.getAttribute('data-slide-index') != (slideCount - 1)) {
+
+                // id'ing the next slide
+                var clickedSideSlide = currentSlide.nextElementSibling;
+
+                // var clickedIndex = clickedSideSlide.getAttribute('data-slide-index');
+                var clickedIndex = clickedSideSlide.getAttribute('data-slide-index');
+
+                // TEST!!!
+                // panelTest.innerHTML = clickedSideSlide.getAttribute('data-slide-index') + ' ADVANCE arrow clicked on ANYTHING BUT last slide';
+                // TEST!!!
+
+                // calls NAMED FUNCTION
+                advanceOrRetreat(clickedSideSlide, dotsContainer, gallery, clickedIndex, galleryName, currentSlide);
+
+
+            } else {    // implied that advance arrow was clicked when last slide was current
+
+                // id'ing the first slide
+                var clickedSideSlide = currentSlide.parentNode.firstElementChild;
+
+                // MAYBE WILL NEED TO JUST BE slidecount
+                // var clickedIndex = -(slideCount - 1);
+                var clickedIndex = clickedSideSlide.getAttribute('data-slide-index');
+
+                // TEST!!!
+                // panelTest.innerHTML = clickedIndex + ' ADVANCE arrow clicked on LAST slide';
+                // TEST!!!
+
+                // calls NAMED FUNCTION
+                advanceOrRetreat(clickedSideSlide, dotsContainer, gallery, clickedIndex, galleryName, currentSlide);
+             
+
+            } // closing inner if/else statement
+
+        } else {    // implied that retreat arrow was clicked
+
+            // if current slide is not the first slide
+            if (currentSlide.getAttribute('data-slide-index') != 0) {
+
+                // id'ing previous slide
+                var clickedSideSlide = currentSlide.previousElementSibling;
+
+                // var clickedIndex = -1;
+                var clickedIndex = clickedSideSlide.getAttribute('data-slide-index');
+
+                // TEST!!!
+                // panelTest.innerHTML = clickedIndex + ' RETREAT arrow clicked on ANYTHING BUT first slide';
+                // TEST!!! 
+
+                // calls NAMED FUNCTION
+                advanceOrRetreat(clickedSideSlide, dotsContainer, gallery, clickedIndex, galleryName, currentSlide);
+
+
+            } else {    // implied that retreat arrow was clicked when first slide was current
+
+                // id'ing the last slide
+                var clickedSideSlide = currentSlide.parentNode.lastElementChild.previousElementSibling.previousElementSibling.previousElementSibling;
+
+                // MAYBE WILL NEED TO JUST BE slidecount
+                // var clickedIndex = (slideCount - 1);
+                var clickedIndex = clickedSideSlide.getAttribute('data-slide-index');
+
+                // TEST!!!
+                // panelTest.innerHTML = clickedIndex + ' RETREAT arrow clicked on FIRST slide';
+                // TEST!!! 
+
+                // calls NAMED FUNCTION
+                advanceOrRetreat(clickedSideSlide, dotsContainer, gallery, clickedIndex, galleryName, currentSlide);
+
+
+            } // closing inner if/else statement
+
+        } // closing semi-outer if/else statement
+
+        // TEST!!!
+        // panelTest.innerHTML = slideCount;
+        // TEST!!!
+
+    }
 }
+
+// EVENT LISTENER ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// responds to click in regular view on a left or right arrow
+window.addEventListener('click', clickGalleryArrow, false);
+////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 

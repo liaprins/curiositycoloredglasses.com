@@ -68,6 +68,9 @@ Regular text below 6. Legend has it that when the team took the average of all o
 
 (gallery: imagespacingtestprep8)
 
+<div id="paneltest">
+</div>
+
 Regular text below 8. The official height of Mount Everest is based on a survey conducted in 1955.
 
 (gallery: imagespacingtestprep9)

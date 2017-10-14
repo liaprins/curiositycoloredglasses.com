@@ -32,6 +32,9 @@ You’ll note, though, that I said we actually get to see about 59% of the surfa
 
 (gallery: photos-of-the-dark-side)
 
+<div id="paneltest">
+</div>
+
 The other side of this, as you may have guessed, is that the Moon has the same effect on the Earth and is gradually slowing the Earth’s rotation in the exact same way the Moon became tidally locked with the Earth. Further, as the Moon slows the Earth’s rotation, a small portion of the Earth’s rotational momentum gets transferred to the Moon’s orbital momentum, with the result being that the average radius of the Moon’s orbit increases at about 3.8 centimeters per year with the current continental positions and barring major geological events. (Contrary to what you’ll often read, the Moon isn’t getting all the energy here, most of it is being converted to heat via friction, with only an estimated 3% of the energy in the interaction being “stolen” by the Moon.)
 
 Thus, the distance between the Moon and the Earth changes gradually and is more or less in step with the rotational period change. It should be noted, though, that it’s not a constant change as things like major earthquakes, glacial changes, continental drift, and other such geological events play a role here, which is why leap seconds aren’t always added at regular intervals, but sometimes when needed. Other times extra leap seconds, called (vocab: haversines url: haversine), are also added as needed. But the overall effect is that over time, the Moon is getting farther and farther away from the Earth every year, while the Earth’s rotation is slowing down.
