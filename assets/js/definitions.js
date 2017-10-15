@@ -23,10 +23,6 @@ function vocabResize() {
 			if (openContainer) {
 				openContainer.parentNode.removeChild(openContainer);
 			}
-
-			// TESTING!!!!!
-			// inlineVocabWordList[l].setAttribute('class', 'vocabwordinline s-display yellowhover');
-
 		}
 	}
 }

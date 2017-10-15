@@ -15,7 +15,8 @@ function removeHashReturnScroll() {
 
 
 
-
+/*
+// TRYING IT LOWER DOWN IN SCRIPT TO SEE IF IT PERFORMS MORE CONSISTENTLY
 // NAMED + USED FUNCTION ----------------------------------------------------------------------------
 // vertically centers lightbox img
 // used on resize + on click of an img to open lightbox
@@ -34,7 +35,7 @@ function verticallyCenter() {
 // EVENT LISTENER ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // vertically centers lightbox img upon screen resize
 window.addEventListener('resize', verticallyCenter, false);
-
+*/
 
 
 
@@ -857,4 +858,40 @@ function lightboxArrows(e) {
 // responds to clicks on lightbox arrows
 window.addEventListener('click', lightboxArrows, false);
 
-////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+// TRYING IT LOWER DOWN IN SCRIPT TO SEE IF IT PERFORMS MORE CONSISTENTLY
+// NAMED + USED FUNCTION ----------------------------------------------------------------------------
+// vertically centers lightbox img
+// used on resize + on click of an img to open lightbox
+function verticallyCenter() {
+    var singleLightbox = document.getElementById('singlelightbox');
+    if (singleLightbox) {
+        var lightboxImg = singleLightbox.firstElementChild;
+        var imgHeight = lightboxImg.offsetHeight;
+        singleLightbox.style.height = (window.innerHeight);
+        singleLightbox.style.width = window.innerWidth;
+        var lightboxHeight = singleLightbox.offsetHeight;
+        lightboxImg.style.marginTop = (lightboxHeight - imgHeight)/2 + 'px';
+    }
+}
+
+// EVENT LISTENER ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// vertically centers lightbox img upon screen resize
+window.addEventListener('resize', verticallyCenter, false);
+
+
+
+
+function lightboxSlideshowResize() {
+
+    // this will reload the page as it is resized, and will keep its relative height the same; reloading the page will force it to run through all the existing (above) functions, so it will be resetting placeholderBox height, dotsContainer location, etc as resizing happens
+    location.reload();
+
+}
+
+window.addEventListener('resize', lightboxSlideshowResize, false);
+
+
+
