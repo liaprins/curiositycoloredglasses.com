@@ -218,7 +218,8 @@ function toggleCaption(e) {
         captionToggleIcon.classList.toggle('turn180');
         captionToggleIcon.previousElementSibling.previousElementSibling.removeAttribute('style');
         captionToggleIcon.previousElementSibling.previousElementSibling.classList.toggle('hide');
-        captionToggleIcon.nextElementSibling.classList.toggle('hide');
+        // if I want dots to hide at same time vvv
+        // captionToggleIcon.nextElementSibling.classList.toggle('hide');
     }
 }
 
@@ -294,7 +295,9 @@ function slideshow() {
         // declare its name, so it can be identified later vs other galleries on the page
         var galleryName = galleryList[i].getAttribute('id');
 
-        /*
+
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
         // ARROWS!!!
         // create advance/retreat arrows for each gallery
         var arrowContainer = document.createElement('div');
@@ -302,7 +305,9 @@ function slideshow() {
         arrowContainer.setAttribute('class', 'arrowcontainer');
         arrowContainer.style.position = 'relative';
         arrowContainer.innerHTML = '<img src="http://localhost:8888/kirby-project/kirby-2.4.0/assets/images/left-arrowhead.svg" alt="retreat" class="galleryarrows" data-retreatarrow>' + '<img src="http://localhost:8888/kirby-project/kirby-2.4.0/assets/images/right-arrowhead.svg" alt="advance" class="galleryarrows" data-advancearrow>';
-        */
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
 
         // establish placeholder box to keep text after img at proper height
         var placeholderBox = document.createElement('div');
@@ -340,9 +345,19 @@ function slideshow() {
         // placeholderBox.style.height = 'calc(' + galleryList[i].firstElementChild.firstElementChild.offsetHeight + 'px)';    
 
         // for each slide within each gallery (but subtract 2 to keep from counting the dotsContainer and placeholderBox as children)
-        for (j = 0; j < (galleryList[i].children.length - 2); j++) {
+        // for (j = 0; j < (galleryList[i].children.length - 2); j++) {
+        
+
+
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+        // ARROWS!!!
         // for each slide within each gallery (but subtract 3 to keep from counting the arrowContainer, dotsContainer and placeholderBox as children)
-        // for (j = 0; j < (galleryList[i].children.length - 3); j++) {
+        for (j = 0; j < (galleryList[i].children.length - 3); j++) {
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
 
             // create dots + put dots into dots container
             var dot = document.createElement('span');
@@ -390,10 +405,23 @@ function slideshow() {
             }
 
             // position dots container so it is between caption and img (for less than 1225, but still works perfectly for 1225+ also!)
-            dotsContainer.style.position = 'relative';
+            // dotsContainer.style.position = 'relative';
             // (3.) HERE ?!?!?! vvvvv
             // dotsContainer.style.top = 'calc(-' + (placeholderBox.offsetHeight - slide[0].firstElementChild.firstElementChild.offsetHeight) + 'px + 2.048rem)';
             dotsContainer.style.top = 'calc(-' + (placeholderBox.offsetHeight - slide[0].firstElementChild.firstElementChild.offsetHeight) + 'px + 1.024rem)';
+
+
+
+
+            ////////////////////////////////////////////////////////////////////////////////////////////////////
+            // ARROWS!!!
+            arrowContainer.style.top = 'calc(' + (slide[0].firstElementChild.firstElementChild.offsetHeight) + 'px + 3.072rem)';
+            arrowContainer.style.left = 0;
+            ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
 
         }   // close j
     }   // close i
@@ -422,8 +450,6 @@ function advanceOrRetreat(clickedSideSlide, dotsContainer, gallery, clickedIndex
     // update regular view dots
     var dotsList = dotsContainer.children;
 
-    var arrowContainer = 
-
     // compare dot index to selected img index
     for (k = 0; k < dotsList.length; k++) {
         if (k == clickedIndex) {
@@ -436,6 +462,14 @@ function advanceOrRetreat(clickedSideSlide, dotsContainer, gallery, clickedIndex
     } // close k
 
 
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////
+    // ARROWS!!!
+    var arrowContainer = gallery.lastElementChild.previousElementSibling.previousElementSibling;
+    ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
     var placeholderBox = gallery.lastElementChild.previousElementSibling;
     var screenWidth = window.innerWidth;
 
@@ -446,9 +480,17 @@ function advanceOrRetreat(clickedSideSlide, dotsContainer, gallery, clickedIndex
         placeholderBox.style.right = 'calc(-85.714vw * ' + clickedIndex + ')';    // this size works for 1225+ only
         // keeps dotsContainer in current slide position: need to move it in the opposite direction and same increment that the slide moved, to offset it otherwise being attached to the front of the gallery
         dotsContainer.style.left = 'calc(85.714vw * ' + clickedIndex + ')';    // this size works for 1225+ only
+
+
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
         // ARROWS!!!
         // keeps arrows in current slide position: need to move it in the opposite direction and same increment that the slide moved, to offset it otherwise being attached to the front of the gallery
-        // arrowContainer.style.left = 'calc(85.714vw * ' + clickedIndex + ')';    // this size works for 1225+ only    
+        arrowContainer.style.left = 'calc(85.714vw * ' + clickedIndex + ')';    // this size works for 1225+ only
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
     } else {
         // moves entire gallery
         gallery.style.right = 'calc(700px * ' + clickedIndex + ')';    // !!! 1225+ only !!! THIS LINE OF CODE WILL NEED TO BE MEDIAQUERIED WITHIN JS, VIA if-statements on window.screenWidth (see menu.js)
@@ -456,9 +498,19 @@ function advanceOrRetreat(clickedSideSlide, dotsContainer, gallery, clickedIndex
         placeholderBox.style.right = 'calc(-700px * ' + clickedIndex + ')';    // this size works for 1225+ only
         // keeps dotsContainer in current slide position: need to move it in the opposite direction and same increment that the slide moved, to offset it otherwise being attached to the front of the gallery
         dotsContainer.style.left = 'calc(700px * ' + clickedIndex + ')';    // this size works for 1225+ only
+    
+
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
         // ARROWS!!!
         // keeps arrows in current slide position: need to move it in the opposite direction and same increment that the slide moved, to offset it otherwise being attached to the front of the gallery
-        // arrowContainer.style.left = 'calc(700px * ' + clickedIndex + ')';    // this size works for 1225+ only    
+        arrowContainer.style.left = 'calc(700px * ' + clickedIndex + ')';    // this size works for 1225+ only
+        
+        arrowContainer.style.top = 'calc(' + clickedSideSlide.firstElementChild.offsetHeight + 'px + 3.072rem)';
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
     }
 
 
@@ -501,7 +553,126 @@ function advanceOrRetreat(clickedSideSlide, dotsContainer, gallery, clickedIndex
     clickedSideSlide.setAttribute('id', galleryName + '-current');
     currentSlide.setAttribute('data-sideslide', '');
     clickedSideSlide.removeAttribute('data-sideslide');
+}    // close advanceOrRetreat function
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+// ARROWS!!!
+// USED FUNCTION ----------------------------------------------------------------------------
+// for clicking on arrows in regular view
+
+function clickGalleryArrow(e) {
+
+    var clickedThing = e.target;
+
+    // TEST!!!
+    var panelTest = document.getElementById('paneltest');
+    // TEST!!!
+
+    if (clickedThing.getAttribute('class') == ('galleryarrows')) {
+
+        var dotsContainer = clickedThing.parentNode.parentNode.lastElementChild;
+        var gallery = clickedThing.parentNode.parentNode;
+        var galleryName = gallery.getAttribute('id');
+        var currentSlide = document.getElementById(galleryName + '-current');
+
+        // PLACEHOLDER FOR TESTING!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        // var clickedSideSlide = clickedThing.parentNode.parentNode.firstElementChild;
+
+        // get total number of slides in gallery; subtract 3 to prevent counting arrowContainer, dotsContainer, and placeholderBox
+        var slideCount = gallery.children.length - 3;
+        
+        if (clickedThing.hasAttribute('data-advancearrow')) {
+
+            // if current slide is not the last slide
+            // (slideCount - 1) because the index starts at 0, not 1, so need to subtract 1 from count to match them up
+            if (currentSlide.getAttribute('data-slide-index') != (slideCount - 1)) {
+
+                // id'ing the next slide
+                var clickedSideSlide = currentSlide.nextElementSibling;
+
+                // var clickedIndex = clickedSideSlide.getAttribute('data-slide-index');
+                var clickedIndex = clickedSideSlide.getAttribute('data-slide-index');
+
+                // TEST!!!
+                // panelTest.innerHTML = clickedSideSlide.getAttribute('data-slide-index') + ' ADVANCE arrow clicked on ANYTHING BUT last slide';
+                // TEST!!!
+
+                // calls NAMED FUNCTION
+                advanceOrRetreat(clickedSideSlide, dotsContainer, gallery, clickedIndex, galleryName, currentSlide);
+
+
+            } else {    // implied that advance arrow was clicked when last slide was current
+
+                // id'ing the first slide
+                var clickedSideSlide = currentSlide.parentNode.firstElementChild;
+
+                // MAYBE WILL NEED TO JUST BE slidecount
+                // var clickedIndex = -(slideCount - 1);
+                var clickedIndex = clickedSideSlide.getAttribute('data-slide-index');
+
+                // TEST!!!
+                // panelTest.innerHTML = clickedIndex + ' ADVANCE arrow clicked on LAST slide';
+                // TEST!!!
+
+                // calls NAMED FUNCTION
+                advanceOrRetreat(clickedSideSlide, dotsContainer, gallery, clickedIndex, galleryName, currentSlide);
+             
+
+            } // closing inner if/else statement
+
+        } else {    // implied that retreat arrow was clicked
+
+            // if current slide is not the first slide
+            if (currentSlide.getAttribute('data-slide-index') != 0) {
+
+                // id'ing previous slide
+                var clickedSideSlide = currentSlide.previousElementSibling;
+
+                // var clickedIndex = -1;
+                var clickedIndex = clickedSideSlide.getAttribute('data-slide-index');
+
+                // TEST!!!
+                // panelTest.innerHTML = clickedIndex + ' RETREAT arrow clicked on ANYTHING BUT first slide';
+                // TEST!!! 
+
+                // calls NAMED FUNCTION
+                advanceOrRetreat(clickedSideSlide, dotsContainer, gallery, clickedIndex, galleryName, currentSlide);
+
+
+            } else {    // implied that retreat arrow was clicked when first slide was current
+
+                // id'ing the last slide
+                var clickedSideSlide = currentSlide.parentNode.lastElementChild.previousElementSibling.previousElementSibling.previousElementSibling;
+
+                // MAYBE WILL NEED TO JUST BE slidecount
+                // var clickedIndex = (slideCount - 1);
+                var clickedIndex = clickedSideSlide.getAttribute('data-slide-index');
+
+                // TEST!!!
+                // panelTest.innerHTML = clickedIndex + ' RETREAT arrow clicked on FIRST slide';
+                // TEST!!! 
+
+                // calls NAMED FUNCTION
+                advanceOrRetreat(clickedSideSlide, dotsContainer, gallery, clickedIndex, galleryName, currentSlide);
+
+
+            } // closing inner if/else statement
+
+        } // closing semi-outer if/else statement
+
+        // TEST!!!
+        // panelTest.innerHTML = slideCount;
+        // TEST!!!
+
+    }
 }
+
+// EVENT LISTENER ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// responds to click in regular view on a left or right arrow
+window.addEventListener('click', clickGalleryArrow, false);
+////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 
@@ -611,7 +782,7 @@ function lightboxDots(e) {
         // find the current slide's index
         var currentIndex = currentSlide.getAttribute('data-slide-index');
 
-        // if the reg view current slide has a caption && if the clicked do is NOT the current dot, hide the caption
+        // if the reg view current slide has a caption && if the clicked dot is NOT the current dot, hide the caption
         if (currentCaptionDuringLightbox.hasAttribute('data-galleryfigcaption')
             && (clickedIndex != currentIndex)) {
             currentCaptionDuringLightbox.style.display = "none";

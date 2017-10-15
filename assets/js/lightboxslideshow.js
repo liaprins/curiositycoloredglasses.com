@@ -42,7 +42,8 @@ window.addEventListener('resize', verticallyCenter, false);
 // lightbox screen shows img corresponding to clicked indicator of img
 // the functions that later call this function define the "imgToShow" according to the perspective of what was clicked in their corresponding event listener
 // e.g. the clicked indicator of the "imgToShow" could be a non-current slide in regular view...
-// or (not yet coded), a lightbox dot corresponding to a non-current img
+// or a lightbox dot corresponding to a non-current img
+// or (not yet coded) a < or > arrow in lightbox view
 function lightbox(imgToShow) {
 
     // create lightbox container
@@ -126,16 +127,41 @@ function populateLightboxDots(imgToShow) {
     // if imgToShow is a gallery img
     if (imgToShow.getAttribute('id') == ('galleryimage')) {
             
+        // DOTS
         // create container to hold dots, within lightbox
         var lightboxDotContainer = document.createElement('div');
         lightboxDotContainer.setAttribute('id', 'lightboxdotcontainer');
-            
         // fill with contents of non-lightbox (regular view) dot container
         lightboxDotContainer.innerHTML = imgToShow.parentNode.parentNode.parentNode.lastElementChild.innerHTML;
-            
         // attach to lightbox
         var lightboxAgain = document.getElementById('singlelightbox');
         lightboxAgain.appendChild(lightboxDotContainer);
+
+
+
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+        // ARROWS
+
+        // create container to hold dots, within lightbox
+        var lightboxArrowContainer = document.createElement('div');
+        lightboxAgain.appendChild(lightboxArrowContainer);
+        lightboxArrowContainer.setAttribute('class', 'arrowcontainer lightboxarrowcontainer');
+        // lightboxArrowContainer.style.position = 'relative';
+        lightboxArrowContainer.innerHTML = '<img src="http://localhost:8888/kirby-project/kirby-2.4.0/assets/images/left-arrowhead.svg" alt="retreat" class="galleryarrows lightboxarrows" data-retreatlightboxarrow>' + '<img src="http://localhost:8888/kirby-project/kirby-2.4.0/assets/images/right-arrowhead.svg" alt="advance" class="galleryarrows lightboxarrows" data-advancelightboxarrow>';
+
+
+        // TEST!!!
+        var panelLightboxTest = document.createElement('div');
+        panelLightboxTest.setAttribute('id', 'panellightboxtest');
+        lightboxAgain.appendChild(panelLightboxTest);
+        panelLightboxTest.innerHTML = 'HOLA!';
+        // TEST!!!
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
 
     } // close gallery-if
 } // close function
@@ -171,13 +197,13 @@ window.addEventListener('click', clickRegularViewFocusImg, false);
 
 
 
-
+// !!!!!!!!!!!!!!!!!!! IS THIS "FUNCTION" REALLY NEEDED IN CODE? I CANNOT FIND THAT IT IS CALLED ANYWHERE!
+// MAY NEED TO BE REMOVED! vvvvv
 // USED FUNCTION ----------------------------------------------------------------------------
 // invoked when a lightbox dot is clicked
 function clickLightboxDot(e) {
     
     var clickedThing = e.target;
-    // var clickedLightboxDot = e.target;
 
     if (clickedThing.parentNode.getAttribute('id') == 'lightboxdotcontainer') {
 
@@ -206,6 +232,8 @@ function clickLightboxDot(e) {
         }  // close m
     } // close if
 } // close function
+// !!!!!!!!!!!!!!!!!!! IS THIS "FUNCTION" REALLY NEEDED IN CODE? I CANNOT FIND THAT IT IS CALLED ANYWHERE!
+// MAY NEED TO BE REMOVED! ^^^^^
 
 
 
@@ -567,7 +595,7 @@ function clickGalleryArrow(e) {
     var clickedThing = e.target;
 
     // TEST!!!
-    var panelTest = document.getElementById('paneltest');
+    // var panelTest = document.getElementById('paneltest');
     // TEST!!!
 
     if (clickedThing.getAttribute('class') == ('galleryarrows')) {
@@ -576,9 +604,6 @@ function clickGalleryArrow(e) {
         var gallery = clickedThing.parentNode.parentNode;
         var galleryName = gallery.getAttribute('id');
         var currentSlide = document.getElementById(galleryName + '-current');
-
-        // PLACEHOLDER FOR TESTING!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-        // var clickedSideSlide = clickedThing.parentNode.parentNode.firstElementChild;
 
         // get total number of slides in gallery; subtract 3 to prevent counting arrowContainer, dotsContainer, and placeholderBox
         var slideCount = gallery.children.length - 3;
@@ -831,3 +856,179 @@ function lightboxDots(e) {
 // responds to clicks on lightbox dots
 window.addEventListener('click', lightboxDots, false);
 
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+// ARROWS
+// USED FUNCTION ----------------------------------------------------------------------------
+// makes lightbox dots advance/retreat the regular view slideshow beneath them
+// creates and populates lightbox for slide corresponding to clicked dot
+function lightboxArrows(e) {
+
+    var clickedThing = e.target;
+
+    if (clickedThing.getAttribute('class') == ('galleryarrows lightboxarrows')) {
+
+        
+        // TEST!!!
+        var panelLightboxTest = document.getElementById('panellightboxtest');
+        // TEST!!!
+
+
+        var clickedLightboxArrow = clickedThing;
+
+        // declare vars for advanceOrRetreat function
+        // mine data-* attribute from last dot right before arrows to get current gallery's name
+        var galleryName = clickedLightboxArrow.parentNode.previousElementSibling.firstElementChild.getAttribute('data-galleryname');
+        var gallery = document.getElementById(galleryName);
+        var dotsContainer = gallery.lastElementChild;
+        var currentSlide = document.getElementById(galleryName + '-current');
+        // var clickedIndex = clickedLightboxDot.getAttribute('data-dot-index');
+
+        // get total number of slides in gallery; subtract 3 to prevent counting arrowContainer, dotsContainer, and placeholderBox
+        var slideCount = gallery.children.length - 3;
+
+        if (clickedThing.hasAttribute('data-advancelightboxarrow')) {
+
+            // if current img is not the last one in gallery
+            // (slideCount - 1) because the index starts at 0, not 1, so need to subtract 1 from count to match them up
+            if (currentSlide.getAttribute('data-slide-index') != (slideCount - 1)) {
+
+                // id'ing the next slide
+                var clickedSideSlide = currentSlide.nextElementSibling;
+
+                // var clickedIndex = clickedSideSlide.getAttribute('data-slide-index');
+                var clickedIndex = clickedSideSlide.getAttribute('data-slide-index');
+
+                // TEST!!!
+                panelLightboxTest.innerHTML = clickedIndex + ' ADVANCE arrow clicked on ANYTHING BUT last slide';
+                // TEST!!!
+
+                // calls NAMED FUNCTION
+                // advanceOrRetreat(clickedSideSlide, dotsContainer, gallery, clickedIndex, galleryName, currentSlide);
+
+
+            } else {    // implied that advance arrow was clicked when last slide was current
+
+                // id'ing the first slide
+                var clickedSideSlide = currentSlide.parentNode.firstElementChild;
+
+                // MAYBE WILL NEED TO JUST BE slidecount
+                // var clickedIndex = -(slideCount - 1);
+                var clickedIndex = clickedSideSlide.getAttribute('data-slide-index');
+
+                // TEST!!!
+                panelLightboxTest.innerHTML = clickedIndex + ' ADVANCE arrow clicked on LAST slide';
+                // TEST!!!
+
+                // calls NAMED FUNCTION
+                // advanceOrRetreat(clickedSideSlide, dotsContainer, gallery, clickedIndex, galleryName, currentSlide);
+             
+
+            } // closing inner if/else statement
+
+        } else {    // implied that retreat arrow was clicked
+
+            // if current slide is not the first slide
+            if (currentSlide.getAttribute('data-slide-index') != 0) {
+
+                // id'ing previous slide
+                var clickedSideSlide = currentSlide.previousElementSibling;
+
+                // var clickedIndex = -1;
+                var clickedIndex = clickedSideSlide.getAttribute('data-slide-index');
+
+                // TEST!!!
+                panelLightboxTest.innerHTML = clickedIndex + ' RETREAT arrow clicked on ANYTHING BUT first slide';
+                // TEST!!! 
+
+                // calls NAMED FUNCTION
+                // advanceOrRetreat(clickedSideSlide, dotsContainer, gallery, clickedIndex, galleryName, currentSlide);
+
+
+            } else {    // implied that retreat arrow was clicked when first slide was current
+
+                // id'ing the last slide
+                var clickedSideSlide = currentSlide.parentNode.lastElementChild.previousElementSibling.previousElementSibling.previousElementSibling;
+
+                // MAYBE WILL NEED TO JUST BE slidecount
+                // var clickedIndex = (slideCount - 1);
+                var clickedIndex = clickedSideSlide.getAttribute('data-slide-index');
+
+                // TEST!!!
+                panelLightboxTest.innerHTML = clickedIndex + ' RETREAT arrow clicked on FIRST slide';
+                // TEST!!!
+
+                // calls NAMED FUNCTION
+                // advanceOrRetreat(clickedSideSlide, dotsContainer, gallery, clickedIndex, galleryName, currentSlide);
+
+
+            } // closing inner if/else statement
+
+        } // closing semi-outer if/else statement
+
+
+        
+        // var currentCaptionDuringLightbox = currentSlide.firstElementChild.lastElementChild.previousElementSibling;
+        
+        // find the current slide's index
+        // var currentIndex = currentSlide.getAttribute('data-slide-index');
+
+        // if the reg view current slide has a caption && if the clicked dot is NOT the current dot, hide the caption
+        // if (currentCaptionDuringLightbox.hasAttribute('data-galleryfigcaption')
+            // && (clickedIndex != currentIndex)) {
+            // currentCaptionDuringLightbox.style.display = "none";
+        // }
+
+        // for loop to be able to define clickedSideSlide, based on currentDotIndex
+        // for (l = 0; l < dotsContainer.children.length; l++) {
+            
+            // find slide with matching index to current dot
+            // if (clickedIndex == gallery.children[l].getAttribute('data-slide-index')) {
+                
+                // var clickedSideSlide = gallery.children[l];
+
+                // calling NAMED FUNCTION
+                // advanceOrRetreat(clickedSideSlide, dotsContainer, gallery, clickedIndex, galleryName, currentSlide);        
+
+            // }  // close if
+        // }  // close l
+
+        // all functionality for building lightbox upon lightbox dot click
+        // var dotsLightboxContainer = clickedThingGrandparent;
+        
+        // for loop to be able to define imgToShow, based on clickedLightboxDot
+        // for (m = 0; m < dotsLightboxContainer.children.length; m++) {
+
+            // find slide with matching index to current dot
+            // if (gallery.children[m].getAttribute('data-slide-index') == clickedLightboxDot.getAttribute('data-dot-index')) {
+                // var imgToShow = gallery.children[m].firstElementChild.firstElementChild;
+
+                // remove current lightbox
+                // var currentLightbox = document.getElementById('singlelightbox');
+                // currentLightbox.parentNode.removeChild(currentLightbox);
+
+                // call NAMED lightbox function
+                // lightbox(imgToShow);  
+
+                // call NAMED function to populate lightbox dots (defined in lightbox.js)
+                // populateLightboxDots(imgToShow);               
+
+            // }  // close if
+        // }  // close m
+
+
+        // TEST!!!
+        // var panelLightboxTest = document.getElementById('panellightboxtest');
+        // panelLightboxTest.innerHTML = currentSlide.getAttribute('id');
+        // TEST!!!
+
+
+    } // close if
+} // close function
+
+// EVENT LISTENER ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// responds to clicks on lightbox dots
+window.addEventListener('click', lightboxArrows, false);
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
