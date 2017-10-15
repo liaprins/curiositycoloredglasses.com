@@ -883,10 +883,31 @@ function lightboxArrows(e) {
         var gallery = document.getElementById(galleryName);
         var dotsContainer = gallery.lastElementChild;
         var currentSlide = document.getElementById(galleryName + '-current');
-        // var clickedIndex = clickedLightboxDot.getAttribute('data-dot-index');
+        
+
+
+        // *******************************************************************************************************
+        // MIGHT NEED TO TRY MOVING THIS ABOVE THE NESTED IF STATEMENTS, IF THINGS AREN'T WORKING
+        var currentCaptionDuringLightbox = currentSlide.firstElementChild.lastElementChild.previousElementSibling;
+        
+        // find the current slide's index
+        var currentIndex = currentSlide.getAttribute('data-slide-index');
+
+        // if the reg view current slide has a caption
+        if (currentCaptionDuringLightbox.hasAttribute('data-galleryfigcaption')) {
+            currentCaptionDuringLightbox.style.display = "none";
+        }
+
+        // all functionality for building lightbox upon lightbox arrow click
+        var dotsLightboxContainer = clickedThing.parentNode.previousElementSibling;
+        // *******************************************************************************************************
+
+
 
         // get total number of slides in gallery; subtract 3 to prevent counting arrowContainer, dotsContainer, and placeholderBox
         var slideCount = gallery.children.length - 3;
+
+        var currentLightbox = document.getElementById('singlelightbox');
 
         if (clickedThing.hasAttribute('data-advancelightboxarrow')) {
 
@@ -900,13 +921,29 @@ function lightboxArrows(e) {
                 // var clickedIndex = clickedSideSlide.getAttribute('data-slide-index');
                 var clickedIndex = clickedSideSlide.getAttribute('data-slide-index');
 
-                // TEST!!!
-                panelLightboxTest.innerHTML = clickedIndex + ' ADVANCE arrow clicked on ANYTHING BUT last slide';
-                // TEST!!!
-
                 // calls NAMED FUNCTION
-                // advanceOrRetreat(clickedSideSlide, dotsContainer, gallery, clickedIndex, galleryName, currentSlide);
+                advanceOrRetreat(clickedSideSlide, dotsContainer, gallery, clickedIndex, galleryName, currentSlide);
 
+                // define imgToShow for NAMED functions called within the following nested if-statements
+                var imgToShow = clickedSideSlide.firstElementChild.firstElementChild;
+
+
+                
+                // remove current lightbox
+                currentLightbox.parentNode.removeChild(currentLightbox);
+
+                // call NAMED lightbox function
+                lightbox(imgToShow);  
+
+                // call NAMED function to populate lightbox dots (defined in lightbox.js)
+                populateLightboxDots(imgToShow); 
+                
+
+
+
+                // TEST!!!
+                panelLightboxTest.innerHTML = clickedIndex + ' ADVANCE arrow clicked on ANYTHING BUT last slide ' + imgToShow.getAttribute('src');
+                // TEST!!!
 
             } else {    // implied that advance arrow was clicked when last slide was current
 
@@ -917,13 +954,28 @@ function lightboxArrows(e) {
                 // var clickedIndex = -(slideCount - 1);
                 var clickedIndex = clickedSideSlide.getAttribute('data-slide-index');
 
-                // TEST!!!
-                panelLightboxTest.innerHTML = clickedIndex + ' ADVANCE arrow clicked on LAST slide';
-                // TEST!!!
-
                 // calls NAMED FUNCTION
-                // advanceOrRetreat(clickedSideSlide, dotsContainer, gallery, clickedIndex, galleryName, currentSlide);
+                advanceOrRetreat(clickedSideSlide, dotsContainer, gallery, clickedIndex, galleryName, currentSlide);
              
+                var imgToShow = clickedSideSlide.firstElementChild.firstElementChild;
+
+
+                
+                // remove current lightbox
+                currentLightbox.parentNode.removeChild(currentLightbox);
+
+                // call NAMED lightbox function
+                lightbox(imgToShow);  
+
+                // call NAMED function to populate lightbox dots (defined in lightbox.js)
+                populateLightboxDots(imgToShow); 
+                
+
+
+
+                // TEST!!!
+                panelLightboxTest.innerHTML = clickedIndex + ' ADVANCE arrow clicked on LAST slide ' + imgToShow.getAttribute('src');
+                // TEST!!!
 
             } // closing inner if/else statement
 
@@ -938,13 +990,28 @@ function lightboxArrows(e) {
                 // var clickedIndex = -1;
                 var clickedIndex = clickedSideSlide.getAttribute('data-slide-index');
 
-                // TEST!!!
-                panelLightboxTest.innerHTML = clickedIndex + ' RETREAT arrow clicked on ANYTHING BUT first slide';
-                // TEST!!! 
-
                 // calls NAMED FUNCTION
-                // advanceOrRetreat(clickedSideSlide, dotsContainer, gallery, clickedIndex, galleryName, currentSlide);
+                advanceOrRetreat(clickedSideSlide, dotsContainer, gallery, clickedIndex, galleryName, currentSlide);
 
+                var imgToShow = clickedSideSlide.firstElementChild.firstElementChild;
+
+
+                
+                // remove current lightbox
+                currentLightbox.parentNode.removeChild(currentLightbox);
+
+                // call NAMED lightbox function
+                lightbox(imgToShow);  
+
+                // call NAMED function to populate lightbox dots (defined in lightbox.js)
+                populateLightboxDots(imgToShow); 
+                
+
+
+
+                // TEST!!!
+                panelLightboxTest.innerHTML = clickedIndex + ' RETREAT arrow clicked on ANYTHING BUT first slide ' + imgToShow.getAttribute('src');
+                // TEST!!! 
 
             } else {    // implied that retreat arrow was clicked when first slide was current
 
@@ -955,47 +1022,40 @@ function lightboxArrows(e) {
                 // var clickedIndex = (slideCount - 1);
                 var clickedIndex = clickedSideSlide.getAttribute('data-slide-index');
 
-                // TEST!!!
-                panelLightboxTest.innerHTML = clickedIndex + ' RETREAT arrow clicked on FIRST slide';
-                // TEST!!!
-
                 // calls NAMED FUNCTION
-                // advanceOrRetreat(clickedSideSlide, dotsContainer, gallery, clickedIndex, galleryName, currentSlide);
+                advanceOrRetreat(clickedSideSlide, dotsContainer, gallery, clickedIndex, galleryName, currentSlide);
 
+                var imgToShow = clickedSideSlide.firstElementChild.firstElementChild;
+
+
+
+                
+                // remove current lightbox
+                currentLightbox.parentNode.removeChild(currentLightbox);
+
+                // call NAMED lightbox function
+                lightbox(imgToShow);  
+
+                // call NAMED function to populate lightbox dots (defined in lightbox.js)
+                populateLightboxDots(imgToShow); 
+                
+
+
+
+                // TEST!!!
+                panelLightboxTest.innerHTML = clickedIndex + ' RETREAT arrow clicked on FIRST slide ' + imgToShow.getAttribute('src');
+                // TEST!!!
 
             } // closing inner if/else statement
 
         } // closing semi-outer if/else statement
 
 
-        
-        // var currentCaptionDuringLightbox = currentSlide.firstElementChild.lastElementChild.previousElementSibling;
-        
-        // find the current slide's index
-        // var currentIndex = currentSlide.getAttribute('data-slide-index');
 
-        // if the reg view current slide has a caption && if the clicked dot is NOT the current dot, hide the caption
-        // if (currentCaptionDuringLightbox.hasAttribute('data-galleryfigcaption')
-            // && (clickedIndex != currentIndex)) {
-            // currentCaptionDuringLightbox.style.display = "none";
-        // }
+        // TEST!!!
+        // panelLightboxTest.innerHTML = dotsLightboxContainer.getAttribute('id');
+        // TEST!!!
 
-        // for loop to be able to define clickedSideSlide, based on currentDotIndex
-        // for (l = 0; l < dotsContainer.children.length; l++) {
-            
-            // find slide with matching index to current dot
-            // if (clickedIndex == gallery.children[l].getAttribute('data-slide-index')) {
-                
-                // var clickedSideSlide = gallery.children[l];
-
-                // calling NAMED FUNCTION
-                // advanceOrRetreat(clickedSideSlide, dotsContainer, gallery, clickedIndex, galleryName, currentSlide);        
-
-            // }  // close if
-        // }  // close l
-
-        // all functionality for building lightbox upon lightbox dot click
-        // var dotsLightboxContainer = clickedThingGrandparent;
         
         // for loop to be able to define imgToShow, based on clickedLightboxDot
         // for (m = 0; m < dotsLightboxContainer.children.length; m++) {
@@ -1019,7 +1079,6 @@ function lightboxArrows(e) {
 
 
         // TEST!!!
-        // var panelLightboxTest = document.getElementById('panellightboxtest');
         // panelLightboxTest.innerHTML = currentSlide.getAttribute('id');
         // TEST!!!
 
