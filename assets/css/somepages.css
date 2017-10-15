@@ -329,6 +329,9 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
     background-color: #e2e43a;
     cursor: pointer;    }
 
+.arrowcontainer {
+    float: right;    }
+
 .galleryarrows {
     box-sizing: content-box;
     height: 0.844rem;
@@ -420,6 +423,11 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
     -ms-transform: rotate(180deg);
     -o-transform: rotate(180deg);
     transform: rotate(180deg);    }
+
+.lightboxarrowcontainer {
+    position: absolute;
+    bottom: 0.322rem;
+    right: 0.422rem;    }
 
 
 /* POST + LIBRARY PAGES -------------------------------------------------- */

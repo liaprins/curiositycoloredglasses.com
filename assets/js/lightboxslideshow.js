@@ -137,31 +137,13 @@ function populateLightboxDots(imgToShow) {
         var lightboxAgain = document.getElementById('singlelightbox');
         lightboxAgain.appendChild(lightboxDotContainer);
 
-
-
-
-        ////////////////////////////////////////////////////////////////////////////////////////////////////
         // ARROWS
-
-        // create container to hold dots, within lightbox
+        // create container to hold arrows, within lightbox
         var lightboxArrowContainer = document.createElement('div');
         lightboxAgain.appendChild(lightboxArrowContainer);
         lightboxArrowContainer.setAttribute('class', 'arrowcontainer lightboxarrowcontainer');
         // lightboxArrowContainer.style.position = 'relative';
-        lightboxArrowContainer.innerHTML = '<img src="http://localhost:8888/kirby-project/kirby-2.4.0/assets/images/left-arrowhead.svg" alt="retreat" class="galleryarrows lightboxarrows" data-retreatlightboxarrow>' + '<img src="http://localhost:8888/kirby-project/kirby-2.4.0/assets/images/right-arrowhead.svg" alt="advance" class="galleryarrows lightboxarrows" data-advancelightboxarrow>';
-
-
-        // TEST!!!
-        var panelLightboxTest = document.createElement('div');
-        panelLightboxTest.setAttribute('id', 'panellightboxtest');
-        lightboxAgain.appendChild(panelLightboxTest);
-        panelLightboxTest.innerHTML = 'HOLA!';
-        // TEST!!!
-
-        ////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-
+        lightboxArrowContainer.innerHTML = '<img src="http://localhost:8888/kirby-project/kirby-2.4.0/assets/images/left-arrowhead.svg" alt="retreat" class="galleryarrows lightboxarrows yellowhover" data-retreatlightboxarrow>' + '<img src="http://localhost:8888/kirby-project/kirby-2.4.0/assets/images/right-arrowhead.svg" alt="advance" class="galleryarrows lightboxarrows yellowhover" data-advancelightboxarrow>';
 
     } // close gallery-if
 } // close function
@@ -196,7 +178,7 @@ function clickRegularViewFocusImg(e) {
 window.addEventListener('click', clickRegularViewFocusImg, false);
 
 
-
+/*
 // !!!!!!!!!!!!!!!!!!! IS THIS "FUNCTION" REALLY NEEDED IN CODE? I CANNOT FIND THAT IT IS CALLED ANYWHERE!
 // MAY NEED TO BE REMOVED! vvvvv
 // USED FUNCTION ----------------------------------------------------------------------------
@@ -234,7 +216,7 @@ function clickLightboxDot(e) {
 } // close function
 // !!!!!!!!!!!!!!!!!!! IS THIS "FUNCTION" REALLY NEEDED IN CODE? I CANNOT FIND THAT IT IS CALLED ANYWHERE!
 // MAY NEED TO BE REMOVED! ^^^^^
-
+*/
 
 
 
@@ -323,19 +305,12 @@ function slideshow() {
         // declare its name, so it can be identified later vs other galleries on the page
         var galleryName = galleryList[i].getAttribute('id');
 
-
-
-        ////////////////////////////////////////////////////////////////////////////////////////////////////
-        // ARROWS!!!
         // create advance/retreat arrows for each gallery
         var arrowContainer = document.createElement('div');
         galleryList[i].appendChild(arrowContainer);
         arrowContainer.setAttribute('class', 'arrowcontainer');
         arrowContainer.style.position = 'relative';
-        arrowContainer.innerHTML = '<img src="http://localhost:8888/kirby-project/kirby-2.4.0/assets/images/left-arrowhead.svg" alt="retreat" class="galleryarrows" data-retreatarrow>' + '<img src="http://localhost:8888/kirby-project/kirby-2.4.0/assets/images/right-arrowhead.svg" alt="advance" class="galleryarrows" data-advancearrow>';
-        ////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
+        arrowContainer.innerHTML = '<img src="http://localhost:8888/kirby-project/kirby-2.4.0/assets/images/left-arrowhead.svg" alt="retreat" class="galleryarrows yellowhover" data-retreatarrow>' + '<img src="http://localhost:8888/kirby-project/kirby-2.4.0/assets/images/right-arrowhead.svg" alt="advance" class="galleryarrows yellowhover" data-advancearrow>';
 
         // establish placeholder box to keep text after img at proper height
         var placeholderBox = document.createElement('div');
@@ -347,7 +322,8 @@ function slideshow() {
         placeholderBox.setAttribute('id', 'placeholderbox');
 
         // create dots container for each gallery
-        var dotsContainer = document.createElement('div');
+        // var dotsContainer = document.createElement('div');
+        var dotsContainer = document.createElement('span');
         galleryList[i].appendChild(dotsContainer);
         dotsContainer.setAttribute('class', 'dotcontainer');
         dotsContainer.setAttribute('id', 'regviewdotcontainer');
@@ -368,24 +344,10 @@ function slideshow() {
         }
 
         // the height of placeholderBox has to be moved to render AFTER the caption is made visible in the DOM, otherwise the caption will come in at 0px high since it will still be hidden!
-        // (2.) HERE ?!?!?! vvvvv
         // placeholderBox.style.height = 'calc(2.048rem + ' + galleryList[i].firstElementChild.firstElementChild.offsetHeight + 'px)';    // 2.048rem works for 1225+ only ...see if this can be styled with CSS and mediaqueries instead
-        // placeholderBox.style.height = 'calc(' + galleryList[i].firstElementChild.firstElementChild.offsetHeight + 'px)';    
 
-        // for each slide within each gallery (but subtract 2 to keep from counting the dotsContainer and placeholderBox as children)
-        // for (j = 0; j < (galleryList[i].children.length - 2); j++) {
-        
-
-
-
-        ////////////////////////////////////////////////////////////////////////////////////////////////////
-        // ARROWS!!!
         // for each slide within each gallery (but subtract 3 to keep from counting the arrowContainer, dotsContainer and placeholderBox as children)
         for (j = 0; j < (galleryList[i].children.length - 3); j++) {
-        ////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-
 
             // create dots + put dots into dots container
             var dot = document.createElement('span');
@@ -432,24 +394,13 @@ function slideshow() {
                 firstGalleryCaption.setAttribute('class', 's-textface caption gallerycaption whiteedge');
             }
 
-            // position dots container so it is between caption and img (for less than 1225, but still works perfectly for 1225+ also!)
-            // dotsContainer.style.position = 'relative';
-            // (3.) HERE ?!?!?! vvvvv
-            // dotsContainer.style.top = 'calc(-' + (placeholderBox.offsetHeight - slide[0].firstElementChild.firstElementChild.offsetHeight) + 'px + 2.048rem)';
-            dotsContainer.style.top = 'calc(-' + (placeholderBox.offsetHeight - slide[0].firstElementChild.firstElementChild.offsetHeight) + 'px + 1.024rem)';
-
-
-
+            dotsContainer.style.top = 'calc(-' + (placeholderBox.offsetHeight - slide[0].firstElementChild.firstElementChild.offsetHeight) + 'px + 1.536rem)';
 
             ////////////////////////////////////////////////////////////////////////////////////////////////////
-            // ARROWS!!!
-            arrowContainer.style.top = 'calc(' + (slide[0].firstElementChild.firstElementChild.offsetHeight) + 'px + 3.072rem)';
+            // ARROWS!!! STYLE THEM HERE vvvvv
+            arrowContainer.style.top = 'calc(' + (slide[0].firstElementChild.firstElementChild.offsetHeight) + 'px + 1.024rem)';
             arrowContainer.style.left = 0;
             ////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-
-
 
         }   // close j
     }   // close i
@@ -488,16 +439,8 @@ function advanceOrRetreat(clickedSideSlide, dotsContainer, gallery, clickedIndex
             dotsList[k].innerHTML = '<img src="http://localhost:8888/kirby-project/kirby-2.4.0/assets/images/dot.svg" alt="go to this slide" class="dotimg dotimgunfilled">';
         } // close if
     } // close k
-
-
-
-    ////////////////////////////////////////////////////////////////////////////////////////////////////
-    // ARROWS!!!
+    
     var arrowContainer = gallery.lastElementChild.previousElementSibling.previousElementSibling;
-    ////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-
     var placeholderBox = gallery.lastElementChild.previousElementSibling;
     var screenWidth = window.innerWidth;
 
@@ -508,17 +451,10 @@ function advanceOrRetreat(clickedSideSlide, dotsContainer, gallery, clickedIndex
         placeholderBox.style.right = 'calc(-85.714vw * ' + clickedIndex + ')';    // this size works for 1225+ only
         // keeps dotsContainer in current slide position: need to move it in the opposite direction and same increment that the slide moved, to offset it otherwise being attached to the front of the gallery
         dotsContainer.style.left = 'calc(85.714vw * ' + clickedIndex + ')';    // this size works for 1225+ only
-
-
-
-        ////////////////////////////////////////////////////////////////////////////////////////////////////
-        // ARROWS!!!
         // keeps arrows in current slide position: need to move it in the opposite direction and same increment that the slide moved, to offset it otherwise being attached to the front of the gallery
         arrowContainer.style.left = 'calc(85.714vw * ' + clickedIndex + ')';    // this size works for 1225+ only
-        ////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-
+        // ARROWS!!! STYLE THEM HERE vvvvv
+        arrowContainer.style.top = 'calc(' + clickedSideSlide.firstElementChild.offsetHeight + 'px + 1.024rem)';
     } else {
         // moves entire gallery
         gallery.style.right = 'calc(700px * ' + clickedIndex + ')';    // !!! 1225+ only !!! THIS LINE OF CODE WILL NEED TO BE MEDIAQUERIED WITHIN JS, VIA if-statements on window.screenWidth (see menu.js)
@@ -526,22 +462,11 @@ function advanceOrRetreat(clickedSideSlide, dotsContainer, gallery, clickedIndex
         placeholderBox.style.right = 'calc(-700px * ' + clickedIndex + ')';    // this size works for 1225+ only
         // keeps dotsContainer in current slide position: need to move it in the opposite direction and same increment that the slide moved, to offset it otherwise being attached to the front of the gallery
         dotsContainer.style.left = 'calc(700px * ' + clickedIndex + ')';    // this size works for 1225+ only
-    
-
-
-        ////////////////////////////////////////////////////////////////////////////////////////////////////
-        // ARROWS!!!
         // keeps arrows in current slide position: need to move it in the opposite direction and same increment that the slide moved, to offset it otherwise being attached to the front of the gallery
         arrowContainer.style.left = 'calc(700px * ' + clickedIndex + ')';    // this size works for 1225+ only
-        
-        arrowContainer.style.top = 'calc(' + clickedSideSlide.firstElementChild.offsetHeight + 'px + 3.072rem)';
-        ////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-
+        // ARROWS!!! STYLE THEM HERE vvvvv
+        arrowContainer.style.top = 'calc(' + clickedSideSlide.firstElementChild.offsetHeight + 'px + 1.024rem)';
     }
-
-
 
     // move caption visibility to clicked slide
     var currentCaption = currentSlide.firstElementChild.lastElementChild;
@@ -564,15 +489,11 @@ function advanceOrRetreat(clickedSideSlide, dotsContainer, gallery, clickedIndex
     }
 
     // the height of placeholderBox has to be moved to render AFTER the caption is made visible in the DOM, otherwise the caption will come in at 0px high since it will still be hidden!
-    // (4.) HERE ?!?!?! vvvvv ***** EDITED TO REMOVE 2.048rem *****
     // placeholderBox.style.height = 'calc(2.048rem + ' + clickedSideSlide.firstElementChild.offsetHeight + 'px)';               
     // placeholderBox.style.height = 'calc(' + clickedSideSlide.firstElementChild.offsetHeight + 'px)';               
 
-    // dotsContainer.style.top = 0;    // I DON'T THINK THIS LINE IS NECESSARY
     // position dots container so it is between caption and img (for less than 1225, but still works perfectly for 1225+ also!)
-    // (5.) HERE ?!?!?! vvvvv
-    // dotsContainer.style.top = 'calc(-' + (placeholderBox.offsetHeight - clickedSideSlide.firstElementChild.firstElementChild.offsetHeight) + 'px + 2.048rem)';
-    dotsContainer.style.top = 'calc(-' + (placeholderBox.offsetHeight - clickedSideSlide.firstElementChild.firstElementChild.offsetHeight) + 'px + 1.024rem)';
+    dotsContainer.style.top = 'calc(-' + (placeholderBox.offsetHeight - clickedSideSlide.firstElementChild.firstElementChild.offsetHeight) + 'px + 1.536rem)';
 
     // pass current slide attributes to clicked slide, and vice versa, for identification
     currentSlide.firstElementChild.firstElementChild.setAttribute('class', 'contentimage');
@@ -585,20 +506,14 @@ function advanceOrRetreat(clickedSideSlide, dotsContainer, gallery, clickedIndex
 
 
 
-////////////////////////////////////////////////////////////////////////////////////////////////////
-// ARROWS!!!
+
 // USED FUNCTION ----------------------------------------------------------------------------
 // for clicking on arrows in regular view
-
 function clickGalleryArrow(e) {
 
     var clickedThing = e.target;
 
-    // TEST!!!
-    // var panelTest = document.getElementById('paneltest');
-    // TEST!!!
-
-    if (clickedThing.getAttribute('class') == ('galleryarrows')) {
+    if (clickedThing.getAttribute('class') == ('galleryarrows yellowhover')) {
 
         var dotsContainer = clickedThing.parentNode.parentNode.lastElementChild;
         var gallery = clickedThing.parentNode.parentNode;
@@ -616,34 +531,19 @@ function clickGalleryArrow(e) {
 
                 // id'ing the next slide
                 var clickedSideSlide = currentSlide.nextElementSibling;
-
                 // var clickedIndex = clickedSideSlide.getAttribute('data-slide-index');
                 var clickedIndex = clickedSideSlide.getAttribute('data-slide-index');
-
-                // TEST!!!
-                // panelTest.innerHTML = clickedSideSlide.getAttribute('data-slide-index') + ' ADVANCE arrow clicked on ANYTHING BUT last slide';
-                // TEST!!!
-
                 // calls NAMED FUNCTION
                 advanceOrRetreat(clickedSideSlide, dotsContainer, gallery, clickedIndex, galleryName, currentSlide);
-
 
             } else {    // implied that advance arrow was clicked when last slide was current
 
                 // id'ing the first slide
                 var clickedSideSlide = currentSlide.parentNode.firstElementChild;
-
-                // MAYBE WILL NEED TO JUST BE slidecount
                 // var clickedIndex = -(slideCount - 1);
                 var clickedIndex = clickedSideSlide.getAttribute('data-slide-index');
-
-                // TEST!!!
-                // panelTest.innerHTML = clickedIndex + ' ADVANCE arrow clicked on LAST slide';
-                // TEST!!!
-
                 // calls NAMED FUNCTION
                 advanceOrRetreat(clickedSideSlide, dotsContainer, gallery, clickedIndex, galleryName, currentSlide);
-             
 
             } // closing inner if/else statement
 
@@ -654,50 +554,29 @@ function clickGalleryArrow(e) {
 
                 // id'ing previous slide
                 var clickedSideSlide = currentSlide.previousElementSibling;
-
                 // var clickedIndex = -1;
                 var clickedIndex = clickedSideSlide.getAttribute('data-slide-index');
-
-                // TEST!!!
-                // panelTest.innerHTML = clickedIndex + ' RETREAT arrow clicked on ANYTHING BUT first slide';
-                // TEST!!! 
-
                 // calls NAMED FUNCTION
                 advanceOrRetreat(clickedSideSlide, dotsContainer, gallery, clickedIndex, galleryName, currentSlide);
-
 
             } else {    // implied that retreat arrow was clicked when first slide was current
 
                 // id'ing the last slide
                 var clickedSideSlide = currentSlide.parentNode.lastElementChild.previousElementSibling.previousElementSibling.previousElementSibling;
-
-                // MAYBE WILL NEED TO JUST BE slidecount
                 // var clickedIndex = (slideCount - 1);
                 var clickedIndex = clickedSideSlide.getAttribute('data-slide-index');
-
-                // TEST!!!
-                // panelTest.innerHTML = clickedIndex + ' RETREAT arrow clicked on FIRST slide';
-                // TEST!!! 
-
                 // calls NAMED FUNCTION
                 advanceOrRetreat(clickedSideSlide, dotsContainer, gallery, clickedIndex, galleryName, currentSlide);
-
 
             } // closing inner if/else statement
 
         } // closing semi-outer if/else statement
-
-        // TEST!!!
-        // panelTest.innerHTML = slideCount;
-        // TEST!!!
-
     }
 }
 
 // EVENT LISTENER ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // responds to click in regular view on a left or right arrow
 window.addEventListener('click', clickGalleryArrow, false);
-////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 
@@ -858,8 +737,7 @@ window.addEventListener('click', lightboxDots, false);
 
 
 
-////////////////////////////////////////////////////////////////////////////////////////////////////
-// ARROWS
+
 // USED FUNCTION ----------------------------------------------------------------------------
 // makes lightbox dots advance/retreat the regular view slideshow beneath them
 // creates and populates lightbox for slide corresponding to clicked dot
@@ -867,13 +745,7 @@ function lightboxArrows(e) {
 
     var clickedThing = e.target;
 
-    if (clickedThing.getAttribute('class') == ('galleryarrows lightboxarrows')) {
-
-        
-        // TEST!!!
-        var panelLightboxTest = document.getElementById('panellightboxtest');
-        // TEST!!!
-
+    if (clickedThing.getAttribute('class') == ('galleryarrows lightboxarrows yellowhover')) {
 
         var clickedLightboxArrow = clickedThing;
 
@@ -884,10 +756,6 @@ function lightboxArrows(e) {
         var dotsContainer = gallery.lastElementChild;
         var currentSlide = document.getElementById(galleryName + '-current');
         
-
-
-        // *******************************************************************************************************
-        // MIGHT NEED TO TRY MOVING THIS ABOVE THE NESTED IF STATEMENTS, IF THINGS AREN'T WORKING
         var currentCaptionDuringLightbox = currentSlide.firstElementChild.lastElementChild.previousElementSibling;
         
         // find the current slide's index
@@ -900,9 +768,6 @@ function lightboxArrows(e) {
 
         // all functionality for building lightbox upon lightbox arrow click
         var dotsLightboxContainer = clickedThing.parentNode.previousElementSibling;
-        // *******************************************************************************************************
-
-
 
         // get total number of slides in gallery; subtract 3 to prevent counting arrowContainer, dotsContainer, and placeholderBox
         var slideCount = gallery.children.length - 3;
@@ -917,65 +782,34 @@ function lightboxArrows(e) {
 
                 // id'ing the next slide
                 var clickedSideSlide = currentSlide.nextElementSibling;
-
                 // var clickedIndex = clickedSideSlide.getAttribute('data-slide-index');
                 var clickedIndex = clickedSideSlide.getAttribute('data-slide-index');
-
                 // calls NAMED FUNCTION
                 advanceOrRetreat(clickedSideSlide, dotsContainer, gallery, clickedIndex, galleryName, currentSlide);
-
                 // define imgToShow for NAMED functions called within the following nested if-statements
                 var imgToShow = clickedSideSlide.firstElementChild.firstElementChild;
-
-
-                
                 // remove current lightbox
                 currentLightbox.parentNode.removeChild(currentLightbox);
-
                 // call NAMED lightbox function
                 lightbox(imgToShow);  
-
                 // call NAMED function to populate lightbox dots (defined in lightbox.js)
                 populateLightboxDots(imgToShow); 
-                
-
-
-
-                // TEST!!!
-                panelLightboxTest.innerHTML = clickedIndex + ' ADVANCE arrow clicked on ANYTHING BUT last slide ' + imgToShow.getAttribute('src');
-                // TEST!!!
 
             } else {    // implied that advance arrow was clicked when last slide was current
 
                 // id'ing the first slide
                 var clickedSideSlide = currentSlide.parentNode.firstElementChild;
-
-                // MAYBE WILL NEED TO JUST BE slidecount
                 // var clickedIndex = -(slideCount - 1);
                 var clickedIndex = clickedSideSlide.getAttribute('data-slide-index');
-
                 // calls NAMED FUNCTION
                 advanceOrRetreat(clickedSideSlide, dotsContainer, gallery, clickedIndex, galleryName, currentSlide);
-             
                 var imgToShow = clickedSideSlide.firstElementChild.firstElementChild;
-
-
-                
                 // remove current lightbox
                 currentLightbox.parentNode.removeChild(currentLightbox);
-
                 // call NAMED lightbox function
                 lightbox(imgToShow);  
-
                 // call NAMED function to populate lightbox dots (defined in lightbox.js)
                 populateLightboxDots(imgToShow); 
-                
-
-
-
-                // TEST!!!
-                panelLightboxTest.innerHTML = clickedIndex + ' ADVANCE arrow clicked on LAST slide ' + imgToShow.getAttribute('src');
-                // TEST!!!
 
             } // closing inner if/else statement
 
@@ -986,108 +820,41 @@ function lightboxArrows(e) {
 
                 // id'ing previous slide
                 var clickedSideSlide = currentSlide.previousElementSibling;
-
                 // var clickedIndex = -1;
                 var clickedIndex = clickedSideSlide.getAttribute('data-slide-index');
-
                 // calls NAMED FUNCTION
                 advanceOrRetreat(clickedSideSlide, dotsContainer, gallery, clickedIndex, galleryName, currentSlide);
-
                 var imgToShow = clickedSideSlide.firstElementChild.firstElementChild;
-
-
-                
                 // remove current lightbox
                 currentLightbox.parentNode.removeChild(currentLightbox);
-
                 // call NAMED lightbox function
                 lightbox(imgToShow);  
-
                 // call NAMED function to populate lightbox dots (defined in lightbox.js)
                 populateLightboxDots(imgToShow); 
-                
-
-
-
-                // TEST!!!
-                panelLightboxTest.innerHTML = clickedIndex + ' RETREAT arrow clicked on ANYTHING BUT first slide ' + imgToShow.getAttribute('src');
-                // TEST!!! 
 
             } else {    // implied that retreat arrow was clicked when first slide was current
 
                 // id'ing the last slide
                 var clickedSideSlide = currentSlide.parentNode.lastElementChild.previousElementSibling.previousElementSibling.previousElementSibling;
-
-                // MAYBE WILL NEED TO JUST BE slidecount
                 // var clickedIndex = (slideCount - 1);
                 var clickedIndex = clickedSideSlide.getAttribute('data-slide-index');
-
                 // calls NAMED FUNCTION
                 advanceOrRetreat(clickedSideSlide, dotsContainer, gallery, clickedIndex, galleryName, currentSlide);
-
                 var imgToShow = clickedSideSlide.firstElementChild.firstElementChild;
-
-
-
-                
                 // remove current lightbox
                 currentLightbox.parentNode.removeChild(currentLightbox);
-
                 // call NAMED lightbox function
                 lightbox(imgToShow);  
-
                 // call NAMED function to populate lightbox dots (defined in lightbox.js)
                 populateLightboxDots(imgToShow); 
-                
-
-
-
-                // TEST!!!
-                panelLightboxTest.innerHTML = clickedIndex + ' RETREAT arrow clicked on FIRST slide ' + imgToShow.getAttribute('src');
-                // TEST!!!
 
             } // closing inner if/else statement
-
         } // closing semi-outer if/else statement
-
-
-
-        // TEST!!!
-        // panelLightboxTest.innerHTML = dotsLightboxContainer.getAttribute('id');
-        // TEST!!!
-
-        
-        // for loop to be able to define imgToShow, based on clickedLightboxDot
-        // for (m = 0; m < dotsLightboxContainer.children.length; m++) {
-
-            // find slide with matching index to current dot
-            // if (gallery.children[m].getAttribute('data-slide-index') == clickedLightboxDot.getAttribute('data-dot-index')) {
-                // var imgToShow = gallery.children[m].firstElementChild.firstElementChild;
-
-                // remove current lightbox
-                // var currentLightbox = document.getElementById('singlelightbox');
-                // currentLightbox.parentNode.removeChild(currentLightbox);
-
-                // call NAMED lightbox function
-                // lightbox(imgToShow);  
-
-                // call NAMED function to populate lightbox dots (defined in lightbox.js)
-                // populateLightboxDots(imgToShow);               
-
-            // }  // close if
-        // }  // close m
-
-
-        // TEST!!!
-        // panelLightboxTest.innerHTML = currentSlide.getAttribute('id');
-        // TEST!!!
-
-
     } // close if
 } // close function
 
 // EVENT LISTENER ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-// responds to clicks on lightbox dots
+// responds to clicks on lightbox arrows
 window.addEventListener('click', lightboxArrows, false);
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
