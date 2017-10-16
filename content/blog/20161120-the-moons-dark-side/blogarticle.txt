@@ -14,7 +14,7 @@ Tags: rocky,all
 
 ----
 
-Intro: One Moon “day” is approximately 29 1/2 Earth days. This rotation coincides with its orbit around the Earth so that we only see about 59% of the surface of the Moon from Earth. When the Moon first formed, its rotational speed and orbit were very different than they are now. Over time, the Earth’s gravitational field gradually slowed the Moon’s rotation until the orbital period and the rotational speed stabilized, making one side of the Moon always face the Earth. How does this work? Simply put: tidal friction. For a slightly less simple explanation, we’ll have to put our science caps on. But stick with me; it’s fascinating. I promise.
+Intro: One Moon “day” is approximately 29 1/2 Earth days. This rotation coincides with its orbit around the Earth so that we only see about 59% of the surface of the Moon from Earth. When the Moon first formed, its rotational speed and orbit were very different than they are now. Over time, the Earth’s gravitational field gradually slowed the Moon’s rotation until the orbital period and the rotational speed stabilized, making one side of the moon always face the Earth. How does this work? Simply put: tidal friction. For a slightly less simple explanation, we’ll have to put our science caps on. But stick with me; it’s fascinating. I promise.
 
 ----
 

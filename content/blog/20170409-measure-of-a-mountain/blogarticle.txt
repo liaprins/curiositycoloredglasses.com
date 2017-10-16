@@ -26,6 +26,13 @@ Text:
 
 I love (link: library#earth text: this planet). That's why I have such a cool (link: library#globe text: globe). Official measures put Mount Everest at 29,029 feet (8,848 meters) above sea level, but recent satellite data suggest the sky-scraping peak may have shrunk by about 1 inch (2.54 centimeters), because the underlying (vocab: tectonic url: tectonic) plates have relaxed somewhat. Even the alpine forests' (link: blog/do-indoor-trees-have-growth-rings text: tree rings) were shaken. Regular text above 1.
 
+(image: creations.png)
+
+(text: Unfortunately, sea level is not level. The distance from the center of the Earth to the coastline is different around the world, not only because of winds and weather, but also as a result of the Earth's midsection bulge, which causes water {and everything else} to spread out at the equator. In addition, Earth is lumpy, with massive topographical features {such as mountains} altering the gravity in surrounding areas. class: l-textface pullquote)
+
+Official measures put Mount Everest at 29,029 feet (8,848 meters) above sea level, but recent satellite data suggest the sky-scraping peak may have shrunk by about 1 inch (2.54 centimeters), because the underlying (vocab: tectonic url: tectonic) plates have relaxed somewhat. Even the alpine forests' (link: blog/do-indoor-trees-have-growth-rings text: tree rings) were shaken. Regular text above 1.
+
+
 (image: ImageSpacingTestPrep1.png)
 
 ##### Heading below 1

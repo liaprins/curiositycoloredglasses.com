@@ -112,6 +112,29 @@ header {    /* Holds blog name + tagline */
     padding-left: 0.422rem;
     float: right;    }
 
+.pullquotesquare {
+    background-color: #e2e43a;
+    /*
+    width: 14.286vw;
+    height: 14.286vw;
+    */
+    width: 3.55rem;
+    height: 3.55rem;
+    position: absolute;
+    left: 3.571vw;    }
+
+.pullquotecircle {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 2rem;   }
+
+.pullquote {
+    position: relative;
+    /* left: -7.143vw; */
+    width: 78.571vw;
+    padding: 0.95rem 0;
+    font-family: 'Sintesi_Sans_Demi-Bold', 'Courier_New', Courier, Monotype;    }
+
 #posttext {    /* The div that holds all text as a whole (and images called within text, galleries, inline vocab words, etc) */
     margin: 1.024rem 0;    }    /* top + bottom: .5 lh */
 
@@ -341,7 +364,7 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
     float: left;    }
 
 #placeholderbox {
-    background-color: rgba(255, 255, 0, 0.5);
+    /* background-color: rgba(255, 255, 0, 0.5); */
     z-index: -100;    }
 
 .toprule {

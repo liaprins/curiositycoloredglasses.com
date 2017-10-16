@@ -32,7 +32,8 @@
 
 
                 <!-- Setting up the SVG mask randomizer for avatar background colors -->
-                <?php $avatarmask = array('assets/images/avatar.svg'); ?>
+                <!-- <?php $avatarmask = array('assets/images/avatar.svg', 'assets/images/avatar-cat-eye.svg', 'assets/images/avatar-half-moon.svg', 'assets/images/avatar-rimless.svg', 'assets/images/avatar-rectangle.svg', 'assets/images/avatar-square.svg'); ?> -->
+                <?php $avatarmask = array('assets/images/avatar.svg', 'assets/images/avatar-cat-eye.svg', 'assets/images/avatar-square.svg'); ?>
                 <?php $rand_mask = $avatarmask[array_rand($avatarmask)]; ?>
 
 

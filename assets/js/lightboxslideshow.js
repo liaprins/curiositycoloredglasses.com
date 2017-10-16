@@ -90,7 +90,7 @@ function lightbox(imgToShow) {
     // this var distinguishes lightbox caption from a regular caption, because no where else would <figcaption> be direct child of a <div>
     var caption = document.querySelector('div>figcaption');
     if (caption) {
-            
+
         // give caption attributes
         caption.setAttribute('class','xs-textface lightboxcaption');
         caption.style.display = "block";    

@@ -344,6 +344,23 @@
     #navsearchinput {
         width: 238px;    }    /* Closest I can get length to be to push out search icon without it going to next line */
 
+    /* PULLQUOTES -------------------------------------------------- */
+
+    .pullquotesquare {
+        width: 14.286vw;
+        height: 14.286vw;
+        left: 3.571vw;    }
+
+    .pullquotecircle {
+        width: 14.286vw;
+        height: 14.286vw;
+        border-radius: 58.333px;   }
+
+    .pullquote {
+        position: relative;
+        width: 78.571vw;
+        padding: 0.95rem 0;    }
+
     /* VOCAB IMAGE -------------------------------------------------- */
 
     /* Vocab image goes to 1/3 */
@@ -478,6 +495,24 @@
     .date, figcaption {
         width: 641.929px;    /* 22/28 cols px equivalent at 817px screen width */
         border-width: 7.003px;    }    /* 6/28 cols divided by 25 (ratio of postglasses' width to their line weight) px equivalent at 817px screen width */
+
+    /* PULLQUOTES -------------------------------------------------- */
+
+    .pullquotesquare {
+        width: 116.667px;
+        height: 116.667px;
+        left: calc(50vw - 320.964px - 58.357px);    }
+
+    .pullquotecircle {
+        width: 116.667px;
+        height: 116.667px;
+        border-radius: 58.333px;   }
+
+    .pullquote {
+        position: relative;
+        /* left: -7.143vw; */
+        width: 641.929px;
+        padding: 0.95rem 0;    }
 
     /* SUBSCRIBE -------------------------------------------------- */
 
@@ -812,6 +847,27 @@
         display: block;
         float: left;
         padding-left: 0;    }
+
+    /* PULLQUOTES -------------------------------------------------- */
+
+    .pullquotesquare {
+        background-color: #e2e43a;
+        width: 116.667px;
+        height: 116.667px;
+        position: absolute;
+        left: calc(-175px - 58.333px);    }
+
+    .pullquotecircle {
+        background-color: #e2e43a;
+        width: 116.667px;
+        height: 116.667px;
+        border-radius: 58.333px;
+        position: absolute;
+        left: calc(-175px - 58.333px);    }
+    .pullquote {
+        left: -175px;
+        width: 816.667px;
+        padding: 1.536rem 0;    }
 
     /* SUBSCRIBE -------------------------------------------------- */
 

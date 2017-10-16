@@ -34,9 +34,17 @@ So how exactly does a fluorescent color fluoresce? It’s all about energy. A fl
 
 Fluorescent paint, or black light paint, glows in ultraviolet light. This is an example of photoluminescence. Phosphorescent paints also emit light when excited by visible or ultraviolet light, but do so over extended periods. This long-lasting effect of phosphorescents also allows kids to enjoy “glow-in-the-dark” adhesive stars on the ceilings of their rooms.
 
+<div class="pullquotesquare pullquotecircle">
+</div>
+(text: Over time, the Earth’s gravitational field gradually slowed the Moon’s rotation until the orbital period and the rotational speed stabilized, making one side of the Moon always face the Earth. class: l-textface pullquote bold)
+
 Common phosphorescents include petroleum jelly, glow-in-the-dark paints, the quinine in tonic water, and some detergents. Clocks and watches have their faces or numbers and hands coated with phosphorescent paints so that we can see the time in the dark. Emergency routes, doors, and stairways are often marked with theses paints so we can find our way out of buildings when the power fails.
 
 One of the most familiar applications is the fluorescent light bulb. When the light bulb is turned on, an electrical current passes through mercury vapor in the light bulb. The current excites the mercury atoms. As electrons in the mercury atoms drop back from their excited state to their ground state, they emit photons of ultraviolet light. The inner surface of the glass tube is coated with a fluorescent chemical, which emits light when excited by this ultraviolet light. These tubes are more efficient and longer lasting than incandescent bulbs.
+
+<div class="pullquotesquare">
+</div>
+(text: Over time, the Earth’s gravitational field gradually slowed the Moon’s rotation until the orbital period and the rotational speed stabilized, making one side of the Moon always face the Earth. class: l-textface pullquote bold)
 
 Other applications of fluorescence in safety equipment include marine buoys and road signs, which also make use of fluorescent paints. Fluorescent or black light paints tend to be bright in color, with yellow, green, orange, and red being common hues.
 
@@ -44,7 +52,7 @@ Fluorescence is used to enhance various kinds of investigation, from the study o
 
 Medical research makes widespread use of fluorescence to understand biological processes and in diagnosis. Fluorescent dyes may be used to mark antibodies, for example, or can reveal the flow of body fluids like blood or tears.
 
-##### Fluorescence and photoluminescence
+#### Fluorescence and photoluminescence
 
 Fluorescence and photoluminescence are further applications of useful doped semiconductors. Dopants are used to reduce the energy band gap and produce visible light in substances that would normally emit ultraviolet light. In semiconductor materials containing donor and acceptor impurities, ultraviolet or electrical energy may be absorbed to excite an electron from the valence band directly to the conduction band.
 
