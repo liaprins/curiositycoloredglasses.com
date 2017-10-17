@@ -36,6 +36,10 @@ Scientists do know that genetics account for a whopping 85% of our susceptibilit
 
 Mosquitoes also target people who produce excess amounts of certain acids, such as uric acid, explains entomologist John Edman, PhD, spokesman for the Entomological Society of America. These substances can trigger mosquitoes' sense of smell, luring them to land on unsuspecting victims.
 
+<div class="pullquotesquare">
+</div>
+(text:  There's a tremendous amount of research being conducted on what compounds and odors people exude that might be attractive to mosquitoes. With 400 different compounds to examine, researchers are just beginning to scratch the surface. class: l-textface pullquote bold)
+
 But the process of attraction begins long before the landing. Mosquitoes can smell their dinner from an impressive distance of up to 50 meters, explains Edman. This doesn't bode well for people who emit large quantities of carbon dioxide.
 
 "Any type of carbon dioxide is attractive, even over a long distance," Conlon says. Larger people tend to give off more carbon dioxide, which is why mosquitoes typically prefer munching on adults to small children. Pregnant women are also at increased risk, as they produce a greater-than-normal amount of exhaled carbon dioxide. Movement and heat also attract mosquitoes.
@@ -65,3 +69,7 @@ Share: Knowledge is the first step to preventing mosquito bites.
 ----
 
 Twitterimageurl: 
+
+----
+
+Guestwriter: Off, with 100% real Deet

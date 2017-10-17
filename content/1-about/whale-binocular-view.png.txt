@@ -1,4 +1,7 @@
-Caption: You can find me at the intersection of Mediterranean vacations and zoologically savvy watercolor paintings.
+Caption: 
+
+<hr class="toprule">
+You can find me at the intersection of Mediterranean vacations and zoologically savvy watercolor paintings.
 
 ----
 

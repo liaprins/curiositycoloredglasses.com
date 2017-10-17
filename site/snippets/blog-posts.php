@@ -34,6 +34,15 @@
         </a>
 
 
+        <!-- If there is a guest writer -->
+        <?php if(!$article->guestwriter()->empty()): ?>
+            <span class="guestwriter s-display">
+                <span class="guestwriterbanner xxs-display">guest writer</span>
+                <?php echo kirbytext($article->guestwriter()) ?>
+            </span>
+        <?php endif ?>
+
+
         <!-- Intro for each article -->
 
         <!-- I used a plug-in to elimnate the <p> tags Kirby automatically generates with Kirbytext markdown for each section in content files. 

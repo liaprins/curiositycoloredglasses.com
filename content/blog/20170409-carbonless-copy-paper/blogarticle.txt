@@ -40,13 +40,17 @@ Carbonless copy paper was first produced by the NCR Corporation. Formerly, the o
 
 (image: paper-crane.jpg)
 
-##### Dyes and chemicals
+#### Dyes and chemicals
 
 The first dye used commercially in this application was crystal violet lactone, which is widely used today. Other dyes and supporting chemicals used are PTSMH (p-toluene sulfinate of Michler's hydrol), TMA (trimellitic anhydride), phenol-formaldehyde resins, azo dyes, DIPN (diisopropyl naphthalenes), formaldehyde isocyanates, hydrocarbon-based solvents, polycyclic aromatic hydrocarbons, polyoxypropylene diamine, epoxy resins, aliphatic isocyanates, Bisphenol A, diethylene triamine, and others. The dyes in carbonless copy papers may cause contact dermatitis in sensitive persons.
 
-##### Health and environmental concerns
+#### Health and environmental concerns
 
 Until the 1970s, when the use of polychlorinated biphenyls (PCBs) was banned due to health and environmental concerns, PCBs were used as a transfer agent in carbonless copy paper. PCBs are readily transferred to human skin during handling of such papers, and it is difficult to achieve decontamination by ordinary washing with soap and water. In Japan, carbonless copy paper is still treated as a PCB-contaminated waste.
+
+<div class="pullquotesquare">
+</div>
+(text: When the sheets are written on with a ball-point pen, the pressure causes the micro-capsules to break and release their dye. class: l-textface pullquote bold)
 
 Exposure to certain types of carbonless copy paper or its components has resulted, under some conditions, in mild to moderate symptoms of skin irritation and irritation of the mucosal membranes of the eyes and upper respiratory tract. A 2000 review found no irritation or sensitization on contact with carbonless copy paper produced after 1987. In most cases, good industrial hygiene and work practices should be adequate to reduce or eliminate symptoms. These include adequate ventilation, humidity, and temperature controls; proper housekeeping; minimal hand-to-mouth and hand-to-eye contact; and periodic cleansing of hands.
 

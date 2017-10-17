@@ -350,12 +350,11 @@
         width: 14.286vw;
         height: 14.286vw;
         left: 3.571vw;    }
-
     .pullquotecircle {
         width: 14.286vw;
         height: 14.286vw;
+        left: 3.571vw;
         border-radius: 58.333px;   }
-
     .pullquote {
         position: relative;
         width: 78.571vw;
@@ -502,15 +501,13 @@
         width: 116.667px;
         height: 116.667px;
         left: calc(50vw - 320.964px - 58.357px);    }
-
     .pullquotecircle {
         width: 116.667px;
         height: 116.667px;
+        left: calc(50vw - 320.964px - 58.357px);
         border-radius: 58.333px;   }
-
     .pullquote {
         position: relative;
-        /* left: -7.143vw; */
         width: 641.929px;
         padding: 0.95rem 0;    }
 
@@ -856,7 +853,6 @@
         height: 116.667px;
         position: absolute;
         left: calc(-175px - 58.333px);    }
-
     .pullquotecircle {
         background-color: #e2e43a;
         width: 116.667px;
@@ -899,7 +895,6 @@
     /* CAPTIONS -------------------------------------------------- */
 
     figcaption {
-        border-width: 7.003px;
         margin: 0 58.333px 58.333px 58.333px;
         left: -291.667px;
         width: 175px;    /* 3/21 cols px equivalent at 1225px screen width */

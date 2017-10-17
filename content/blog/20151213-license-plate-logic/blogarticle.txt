@@ -38,11 +38,15 @@ In some states, the month of expiration or the county of registration is incorpo
 
 (gallery: eu-plates)
 
-##### County of issuance
+#### County of issuance
 
 Although increasingly few states place the full name of the county of registration explicitly on their standard-issue plates but not as part of the plate serial, Florida, Georgia, Iowa, Kentucky, Mississippi, and Tennessee continue the practice.
 
 In Alabama, Montana, Nebraska, South Dakota, and Wyoming, a one- or two-digit number representing the county of issue begins a license plate number. Standard-issue Idaho license plate numbers begin with a single-letter or a number-letter code representing the county of issue. County codes have been based on historical population figures, the county names in alphabetical order, or some combination thereof.
+
+<div class="pullquotesquare">
+</div>
+(text: License plate numbers are usually assigned in ascending order, beginning with a starting point such as AAA-001. Thus, an observer familiar with the sequence can determine roughly when the plate was issued. class: l-textface pullquote bold)
 
 Only three places in the United States use letters to designate a residence where a vehicle was registered. In Hawaii, the license plates have a unique letter designation based on the island counties that residents purchased or registered the vehicles from; a vehicle with a registration number beginning with H or Z is registered in Hawai‘i County, one beginning with K is registered in Kaua‘i County, one beginning with M or L is registered in Maui County, and one beginning with any other letter (and not containing H, K, L, M, or Z) is registered in the City and County of Honolulu. In the State of Idaho the first one or two characters are used to designate the county of residence/registration. For example, all vehicles registered in Ada county start with 1A, vehicles in Twin Falls County start with 2T and vehicles in Valley county start with V (as there is only one county that starts with the letter V). In the US territory of Guam, the license plates use the first two letters that are coded by village of issuance, for example, "TM-1234" refers to a vehicle that was registered by a person who lives the village of Tamuning.
 

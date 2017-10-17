@@ -28,12 +28,13 @@ The federal government, which sets helium prices, announced in April of 2012 tha
 
 (gallery: helium-balloons)
 
-<div id="paneltest">
-</div>
-
 ##### Helium hotspot
 
 Although helium is the second most abundant element in the universe, most of it in the Earth's atmosphere bleeds off into space. Helium used for industrial purposes is a byproduct of natural gas production, and the Texas Panhandle is the United States' helium capital. In the natural gas fields near Amarillo, the U.S. government maintains the country's largest helium storehouse. The government put it there back in 1925 because natural gas produced at the gas fields between Amarillo and Hugoton, Kansas, has a very high helium concentration—up to 1.9%.
+
+<div class="pullquotesquare">
+</div>
+(text: Although helium is the second most abundant element in the universe, most of it in the Earth's atmosphere bleeds off into space. class: l-textface pullquote bold)
 
 Although other countries produce helium, the natural gas fields elsewhere around the globe are much less helium-rich than those near Amarillo. Because helium was critical to military reconnaissance and space exploration in the mid-20th Century, Congress mandated that the government encourage private helium producers nationwide to sell their helium to the government and store it near Amarillo as part of the Federal Helium Program.
 
@@ -58,6 +59,10 @@ Under the federal system, those prices are unstable partly because they have les
 As helium reserves tighten, the greatest impact could be on healthcare and small-scale scientific research. For example, a shortage could restrict the ability to obtain an (vocab: MRI url: mri), too, if scanners become difficult to maintain with little helium to be found.
 
 "Helium is absolutely essential to MRI production," says Tom Rauch, global sourcing manager for GE Healthcare, one of the largest manufacturers of MRI systems. The most important component of an MRI system is a large magnet containing superconducting wire cooled to 4.2 Kelvin, or minus 452 F. "Helium is currently the only (vocab: element url: element) on Earth that can effectively keep the magnet this cold and consequently allow for the high field strength, and stable and uniform magnetic fields that make modern MRI systems possible," he says.
+
+<div class="pullquotesquare">
+</div>
+(text: If the supply constraint on helium continues unabated, it could be very harmful to patient care. class: l-textface pullquote bold)
 
 And, he says, though companies like GE are trying to conserve as much helium as possible during the manufacturing process, MRI machines need a lot of it: up to 10,000 liters of helium, with up to 2,000 liters remaining in a sealed vacuum system around the magnet.
 
@@ -100,3 +105,7 @@ Share: Haven't you always wondered how us humans manage to capture helium and is
 ----
 
 Twitterimageurl: 
+
+----
+
+Guestwriter: 

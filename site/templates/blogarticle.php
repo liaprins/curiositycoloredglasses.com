@@ -69,10 +69,12 @@
                     <?php snippet('blogarticle-postglasses') ?>
 
 
-
                     <!-- Title of post -->
                     <?php snippet('blogarticle-title') ?>
 
+
+                    <!-- OPTIONAL GUEST WRITER -->
+                    <?php snippet('blogarticle-guestwriter') ?>
 
 
                     <!-- Intro of post -->

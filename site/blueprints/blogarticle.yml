@@ -44,10 +44,16 @@ fields:
     placeholder: Title for this blog post
     help: Title should be sentence case without a period at the end
   date:
+    width: 1/2
     label: Date
     type: date
     default: today
     required: true
+  guestwriter:
+    width: 1/2
+    label: Guest writer
+    type:  text
+    required: false
   tags:
   	label: Tags
   	type: tags

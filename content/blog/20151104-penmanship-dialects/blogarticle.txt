@@ -54,6 +54,10 @@ Traditionally the 7 was written with a serif stroke at the upper left, and the h
 
 Some cultures add a crossbar, which helps distinguish it from the number one. That’s especially common in cultures where the one is written with an upstroke on the top, such as in France. You’ll see the cross bar used when the writer comes from France or other parts of Europe, and it’s also seen in Australian penmanship. Sometimes writers from Taiwan will even use two horizontal crossbars.
 
+<div class="pullquotesquare">
+</div>
+(text: Germany had its own unique writing system, the Sütterlin script, taught in German schools for much of the 20th century. Although it’s less common now, it’s easy to identify an older generation of Germans by their written script. Although Sütterlin is no longer taught, the German handwriting style is still fairly distinctive. class: l-textface pullquote bold)
+
 The number 9 is also written differently by people from different cultures. Some parts of Europe add a curved hook underneath the character, making it somewhat resemble (link: library#g text:  the letter "g") with its (vocab: descender url: descender). Elsewhere it tends to be written with a straight vertical line and no hook at the bottom.
 
 In some parts of Asia the number 9 is written with other striking differences: in South Korea the looped part of the number is uniquely located either above the vertical stroke, or even to the right of it (making it resemble the letter ‘p’). To most other parts of the world this makes the number appear as if written backwards.

@@ -48,7 +48,8 @@ h1 {    /* This exclusively applies to the blog name; so I include padding, etc 
 
 h2 {     /* This applies to post names (home and post pages), and page names (About, Archive, Library) */
     font-size: 14.688px;    /* Based on 1.2 ratio (5:6, Minor Third) typescale with 8.5px base at level 0, and this at level 3 | Fallback for browser's not processing rems */
-    font-size: 0.918rem;    
+    font-size: 0.918rem;
+    /* font-size: 1.111rem; */
     font-family: 'Grotesque_Bold', 'Courier_New', Courier, Monotype;
     text-transform: uppercase;
     letter-spacing: 0.2em;    }    /* All other display faces use .25em, but it looked far too big in this case, so I adjusted it optically to 0.2em */
@@ -88,6 +89,14 @@ h3 {    /* This is applied for semantic purposes to high-level "parts" of post p
 .xs-display {
     font-size: 7.083px;    /* Mobile-V based on 1.2 ratio (5:6, Minor Third) typescale with 8.5px base at level 0, and this at level -1 | Fallback for browser's not processing rems */
     /* font-size: 0.443rem; */    /* This should be the proper rem, but in Chrome it's rendering much larger than the px measurement, so commenting it out, but leaving for future reference */
+    font-family: 'Grotesque_Bold', 'Courier_New', Courier, Monotype;
+    text-transform: uppercase;
+    letter-spacing: .25em;    }
+
+.xxs-display {    /* TESTING FOR GUEST WRITER BANNER */
+    /* font-size: 5.903px; */    /* Mobile-V based on 1.2 ratio (5:6, Minor Third) typescale with 8.5px base at level 0, and this at level -1 | Fallback for browser's not processing rems */
+    /* font-size: 6px; */
+    font-size: 0.369rem;    /* This should be the proper rem, but in Chrome it's rendering much larger than the px measurement, so commenting it out, but leaving for future reference */
     font-family: 'Grotesque_Bold', 'Courier_New', Courier, Monotype;
     text-transform: uppercase;
     letter-spacing: .25em;    }

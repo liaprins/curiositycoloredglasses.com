@@ -26,14 +26,15 @@ So, as the mass of the Moon is attempting to go one way (in a straight line), th
 
 This combination essentially stretches the Earth and Moon, creating tidal bulges on both celestial bodies. This occurs on both sides of each, with the bulge on the sides closest together from gravity and on the sides farthest away from (vocab: inertia url: inertia). In the latter case, the matter is less affected by the gravitational force with inertia dominating in this instance. To put it another way, the matter is trying to move in a straight line away from the Earth and the gravitational forces here aren’t as strongly able to overcome this, which creates the bulge on that side.
 
+<div class="pullquotesquare">
+</div>
+(text: Over time, the Earth’s gravitational field gradually slowed the Moon’s rotation until the orbital period and the rotational speed stabilized, making one side of the moon always face the Earth. How does this work?  class: l-textface pullquote bold)
+
 So back before the Moon was tidally locked with the Earth, the bulge on the side of the Moon nearest to Earth ended up slightly leading thanks to (vocab: friction url: friction) and the fact that the Moon rotated faster than its orbital period around the Earth. So with this slightly leading bulge being offset from the line of gravitational pull between the Moon and Earth, this created a torque, which overtime resulted in the Moon’s rotation slowing until it became tidally locked with the Earth; thus, only one side faces the Earth. (Note: the bulge on the far side of the Moon had the opposite effect, but the bulge closest to the Earth dominated the interaction.)
 
 You’ll note, though, that I said we actually get to see about 59% of the surface of the Moon from Earth, not 50%. The discrepancy comes from the fact that the Moon’s orbit around the Earth isn’t perfectly circular, more of an ellipse. As the Moon’s distance from the Earth increases and decreases, its angular speed changes, while its rotational speed stays the same. The result is that we get to see an extra 9% of its surface than we would if it had a perfectly circular orbit.
 
 (gallery: photos-of-the-dark-side)
-
-<div id="paneltest">
-</div>
 
 The other side of this, as you may have guessed, is that the Moon has the same effect on the Earth and is gradually slowing the Earth’s rotation in the exact same way the Moon became tidally locked with the Earth. Further, as the Moon slows the Earth’s rotation, a small portion of the Earth’s rotational momentum gets transferred to the Moon’s orbital momentum, with the result being that the average radius of the Moon’s orbit increases at about 3.8 centimeters per year with the current continental positions and barring major geological events. (Contrary to what you’ll often read, the Moon isn’t getting all the energy here, most of it is being converted to heat via friction, with only an estimated 3% of the energy in the interaction being “stolen” by the Moon.)
 
@@ -74,3 +75,7 @@ Hashtag: #
 ----
 
 Twitterimageurl: pic.twitter.com/0vMN46RRAJ
+
+----
+
+Guestwriter: Franklin Narum
