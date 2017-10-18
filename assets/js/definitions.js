@@ -155,3 +155,33 @@ function vocabXClose(e) {
 }
 
 window.addEventListener('click', vocabXClose, false);
+
+
+
+
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// FIX TO GLOSSARY: MAKING DEFINITIONS WITHOUT AN ILLUSTRATION FILL THE FULL-WIDTH !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+function glossaryDefinitionWidth() {
+
+	var glossaryList = document.querySelector('dl').children;
+	var glossaryListCount = glossaryList.length;
+
+	// loop through all vocab words within glossary only
+	for (var i = 0; i < glossaryListCount; i++) {
+		
+		// for each vocab word in glossary, if there is not an illustration...
+		if (glossaryList[i].lastElementChild.lastElementChild.getAttribute('class') != 'vocabillustration') {
+
+			// assign special classes to these elements to allow them to be wider, since they have no illustrations
+			glossaryList[i].firstElementChild.setAttribute('class', 'glossaryvocabwordandaudio lonedefinitionwidth');
+			glossaryList[i].lastElementChild.firstElementChild.setAttribute('class', 's-textface definition lonedefinitionwidth');
+
+		}
+	}	
+}
+
+window.addEventListener('DOMContentLoaded', glossaryDefinitionWidth, false);
+
+

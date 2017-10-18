@@ -96,17 +96,3 @@
 </section>
 
 
-<!-- FOR TESTING!!!!! -->
-<div id="glossarytestcontainer"></div>
-
-
-
-
-
-
-
-
-
-
-
-

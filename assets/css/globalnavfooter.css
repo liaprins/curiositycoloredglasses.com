@@ -23,9 +23,18 @@ main {    /* :) This is for all content except nav and footer on all pages; "con
 *, *:before, *:after {    /* Setting the more intuitive type of box-sizing to the entire site */
     box-sizing: border-box;   }
 
+:focus {    /* Getting rid of browser's default focus ring (for now), since it automatically applies to nav search when clicked on, and yellow x when menu is opened */ 
+    outline: none;    }
+
 .yellowhover:hover {    /* For all hover states with a yellow background */
     background-color: #e2e43a;
-    color: black;    }    /* So the words change to black on hover (if they weren't already) */
+    color: black;    } 
+
+.yellowhover {    /* For all hover states with a yellow background */
+  -webkit-transition: background-color .2s ease-out;
+  -moz-transition: background-color .2s ease-out;
+  -o-transition: background-color .2s ease-out;
+  transition: background-color .2s ease-out;    }    /* So the words change to black on hover (if they weren't already) */
 
 
 
@@ -105,14 +114,22 @@ footer {
     border-width: 0.125rem;
     border-color: black;    
     padding: 0.125rem 0.469rem 0 0.469rem;
-    height: 1.875rem;    }
+    height: 1.875rem;
+    -webkit-transition: color .2s ease-out;    /* for hover ease-in on Subscribe button's text */
+    -moz-transition: color .2s ease-out;
+    -o-transition: color .2s ease-out;
+    transition: color .2s ease-out;    }
 .boxbutton:hover {
     color: black;    }
 
 .subscribebutton {
     width: 78.571vw;    /* 22/28 cols */
     margin: 0.9375rem 0;    /* Half the height of the input field and of the button */
-    color: #e2e43a;    }    /* Making the text match the yellow footer background */ 
+    color: #e2e43a;    /* Making the text match the yellow footer background */ 
+    -webkit-transition: background-color .2s ease-out;    /* for hover ease-in on Subscribe button's BG */
+    -moz-transition: background-color .2s ease-out;
+    -o-transition: background-color .2s ease-out;
+    transition: background-color .2s ease-out;    }
 .subscribebutton:hover {    /* For some reason this needs to be a class; id's aren't working for this element with hover (including it's id assigned by MailChimp: mc-embedded-subscribe) */
     background-color: #e2e43a;    }    /* Making the button BG color match the yellow footer background */
 
