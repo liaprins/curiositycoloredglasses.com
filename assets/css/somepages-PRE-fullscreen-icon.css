@@ -480,18 +480,6 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
     bottom: 0.322rem;
     right: 0.422rem;    }
 
-#to-regview,
-.to-fullscreen {
-    box-sizing: content-box;
-    height: 0.844rem;
-    width: 0.844rem;
-    padding: 0.422rem;
-    cursor: pointer;
-    /* float: left; */
-    float: right;    }
-
-#to-regview-single
-
 
 /* POST + LIBRARY PAGES -------------------------------------------------- */
 
@@ -699,12 +687,8 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
 #resulttag {
     padding: 0.3em 0.5em 0.3em 0.5em;    }    /* Finessing to be perfectly centered */
 
-/* ERROR PAGE -------------------------------------------------- */
 
-#brokenglasses {
-    width: 100%;
-    margin-top: 2.048rem;
-    float: right;    }
+
 
 
 

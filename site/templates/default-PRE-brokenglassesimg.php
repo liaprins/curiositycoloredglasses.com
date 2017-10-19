@@ -35,18 +35,10 @@
             <span class="l-textface">
                 <?php echo $page->text()->kirbytext() ?>
             </span>
-    
 
-            <!-- Image of broken glasses -->
-
-            <!-- <img src= "<?php echo url('assets/images/broken-glasses.gif') ?>" alt="Illustration of broken glasses" id="brokenglasses"> -->
-            <img src= "<?php echo url('content/error/broken-glasses.gif') ?>" alt="Illustration of broken glasses" id="brokenglasses">
-
-            <!--
-            <?php if(!$page->illustration()->empty()): ?>
-                <?php echo kirbytext($page->illustration()) ?>
-            <?php endif ?>
-            -->
+            <div id="testingerrorpage">
+                <img src= "<?php echo url('assets/images/broken-glasses.gif') ?>" alt="Illustration of broken glasses" id="brokenglasses">    
+            </div>
 
         </div>
 

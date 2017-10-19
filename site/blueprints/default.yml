@@ -8,3 +8,6 @@ fields:
   text:
     label: Text
     type:  textarea
+  illustration:
+    label: Illustration
+    type:  image
