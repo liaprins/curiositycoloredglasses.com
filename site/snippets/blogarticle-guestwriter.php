@@ -8,10 +8,4 @@
 
 	</span>
 
-	<!-- FOR TESTING ONLY -->
-	<div id="testinsideguestwriter">
-		YOHOHO AND A BOTTLE OF CRUMBS
-	</div>
-
-
 <?php endif ?>

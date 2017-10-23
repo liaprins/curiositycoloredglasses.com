@@ -6,11 +6,14 @@
       
     <article id="homepagepost">
 
-        <!-- I'm arranging the pieces by the V-mobile design; CSS can re-arrange them with "position:" property for desktop layout; 
-        this is according to responsive design principles -->
+        <!-- This sets a link across all post-related elements (except its tags)
+        that links to the post, and activates zoom on its postglasses  -->
+        <!--
+        <a href="<?php echo $article->url() ?>" id="postlink">
+        -->
+            <!-- I'm arranging the pieces by the V-mobile design; CSS can re-arrange them with "position:" property for desktop layout; 
+            this is according to responsive design principles -->
 
-        <!-- Grouping all but the intro paragraph into one link -->
-        <a href="<?php echo $article->url() ?>">
         
             <!-- Date for each article -->
             <p id="homedate" class="date m-textface bold">
@@ -20,44 +23,57 @@
             </p>
 
 
-            <!-- Post glasses icon -->
-            <?php if($homepostglasses = $article->postglasses()->toFile()): ?>
-                <img src="<?= url('assets/images/mask.svg') ?>" style="background-image: url(<?= $homepostglasses->url() ?>)" alt="" class="postglasses">
-            <?php endif; ?>
+            <!-- If I decide I don't like intro being a link, comment out holistic link above ^^^ (and it's closing tag towards bottom),
+            then un-comment this link below and its closing tag, just for postglasses, date, and title.
+            If I want the zoom effect even when hover on title and date, keep the id="postglasses", otherwise remove it.
+            Also un-comment the <a> tag surrounding "read more", below, and comment out its current <span> -->
+            <!-- Grouping all but the intro paragraph into one link -->
+            <a href="<?php echo $article->url() ?>" id="postlink">
+
+                <!-- Post glasses icon -->
+                <?php if($homepostglasses = $article->postglasses()->toFile()): ?>
+                    <img src="<?= url('assets/images/mask.svg') ?>" style="background-image: url(<?= $homepostglasses->url() ?>)" alt="" class="postglasses">
+                <?php endif; ?>
 
 
-            <!-- Name of post -->
-            <h2 class="posttitle">
-                <?php echo $article->title()->html() ?>
-            </h2>
-        
-        </a>
+                <!-- Name of post -->
+                <h2 class="posttitle">
+                    <?php echo $article->title()->html() ?>
+                </h2>
 
-
-        <!-- If there is a guest writer -->
-        <?php if(!$article->guestwriter()->empty()): ?>
-            <span class="guestwriter s-display">
-                <span class="guestwriterbanner xxs-display">guest writer</span>
-                <?php echo kirbytext($article->guestwriter()) ?>
-            </span>
-        <?php endif ?>
-
-
-        <!-- Intro for each article -->
-
-        <!-- I used a plug-in to elimnate the <p> tags Kirby automatically generates with Kirbytext markdown for each section in content files. 
-        I just changed what had been "kirbytext" below to "kirbytextraw". 
-        Here's the link to the plug-in: https://github.com/jbeyerstedt/kirby-plugin-kirbytextRaw-->
-        <p id="homeintro" class="m-textface hyphenate">
-            
-            <?php echo kirbytextraw ($article->intro())?>            
-            <!-- "Read more" --> 
-            <!-- I put "&nbsp" between "Read" and "more" so they would never split onto separate lines -->   
-            <a href="<?php echo $article->url() ?>" id="readmore" class="s-display yellowhover">
-                &nbspRead&nbspmore
             </a>
-        </p>
 
+
+            <!-- If there is a guest writer -->
+            <?php if(!$article->guestwriter()->empty()): ?>
+                <span class="guestwriter s-display">
+                    <span class="guestwriterbanner xxs-display">guest writer</span>
+                    <?php echo kirbytext($article->guestwriter()) ?>
+                </span>
+            <?php endif ?>
+
+
+            <!-- Intro for each article -->
+
+            <!-- I used a plug-in to elimnate the <p> tags Kirby automatically generates with Kirbytext markdown for each section in content files. 
+            I just changed what had been "kirbytext" below to "kirbytextraw". 
+            Here's the link to the plug-in: https://github.com/jbeyerstedt/kirby-plugin-kirbytextRaw-->
+            <p id="homeintro" class="m-textface hyphenate">
+            
+                <?php echo kirbytextraw ($article->intro())?>            
+                <!-- "Read more" --> 
+                <!-- I put "&nbsp" between "Read" and "more" so they would never split onto separate lines -->   
+                <!-- Adding a script inline so that hovering on "Read only" makes postglasses zoom -->
+                <a href="<?php echo $article->url() ?>" id="readmore" class="s-display yellowhover">
+
+                    &nbspRead&nbspmore
+
+                </a>
+
+            </p>
+        <!--
+        </a>
+        -->
 
 
         <div id="hometaggroup">
@@ -83,7 +99,6 @@
 
 
   <?php endforeach ?>
-
 
 
 

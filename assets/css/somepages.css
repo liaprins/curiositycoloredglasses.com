@@ -33,7 +33,8 @@ header {    /* Holds blog name + tagline */
     padding-top: 0.512rem;    /* top: .25 lh */
     margin-bottom: 1.024rem;    /* .5 lh */
     border-style: solid none none none; 
-    border-width: 1.71428vw;    }    /* This should dynamically match the weight of the line of the postglasses below date, based on their width of 42.857vw (12/28 cols) and the ratio of the postglasses width to their line weight of 25:1 */ 
+    /* border-width: 1.71428vw; */    /* This should dynamically match the weight of the line of the postglasses below date, based on their width of 42.857vw (12/28 cols) and the ratio of the postglasses width to their line weight of 25:1 */ 
+    border-width: 0.125rem;    }    /* This should match the weight of the icons, e.g. home icon */
 
 .postglasses {
     width: 42.857vw;    /* 12/28 cols */
@@ -47,6 +48,9 @@ header {    /* Holds blog name + tagline */
     -webkit-transition-timing-function: ease-out;
     transition-timing-function: ease-out;    }
 .postglasses:hover {
+    background-size: 175%;    }  
+
+#postlink:hover > .postglasses {
     background-size: 175%;    }  
 
 .posttitle {
@@ -95,11 +99,8 @@ header {    /* Holds blog name + tagline */
     /* width: calc(78.571vw - 1.914rem); */
     width: calc(78.571vw - 5.25rem);    }
 
-.guestwriter {    }
-
 .guestwriter p {
-    display: inline;
-}
+    display: inline;    }
 
 .guestwriterbanner {
     background-color: black;
@@ -170,14 +171,14 @@ header {    /* Holds blog name + tagline */
 
 .vocabwordinline {    /* This applies to just the inline vocab word, via vocab.php in the site/tags folder */
     cursor: pointer;
-    padding: 0.6em 0.3em 0.5em 0.5em;    }    /* Based on line-height, but had to finesse optically, and pull in L + R a bit because it was too wide of a space between vocab word and other text inline */
+    padding: 0.1em 0.2em;
+    /* padding: 0.6em 0.3em 0.5em 0.5em; */    }    /* Based on line-height, but had to finesse optically, and pull in L + R a bit because it was too wide of a space between vocab word and other text inline */
 
 #vocabwordanddefinition {
     margin: 1.024rem 0;    }
 
 .glossaryvocabwordandaudio {    /* This applies to the vocab word, where it shows up with its definition in the glossary (and optionally, the audio icon next to it) */
-    line-height: 1.2;   /* Would be 1.6 to match look of stacked blog name in display font, but had to adjust optically */
-    margin-bottom: 0.256rem;    }    /* top: .5 lh, bottom: .125 lh */    
+    line-height: 1.6;   }    /* Would be 1.6 to match look of stacked blog name in display font, but had to adjust optically */
 
 #pronunciation {
     white-space: nowrap;    }
@@ -344,7 +345,7 @@ figure {    /* This applies to the image + its caption (if it has one) as a whol
 figcaption {    /* :) This applies to all places captions appear (post page single and/or gallery images, About page) */
     background-color: rgba(255, 255, 255, 0.95);
     padding-bottom:  1.024rem;    /* .5 lh */
-    border-style: none none solid none;    
+    border-style: none none solid none;    /* For the non-desktop screens with a rule on the bottom */
     border-width: 1.71428vw;    /* :) This should dynamically match the weight of the line of the postglasses below date, based on their width of 42.857vw (12/28 cols) and the ratio of the postglasses width to their line weight of 25:1 */ 
     margin: 1.024rem 0 2.048rem 0;    }    /* top: .5 lh, bottom: .75 lh */
 
@@ -479,18 +480,6 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
     position: absolute;
     bottom: 0.322rem;
     right: 0.422rem;    }
-
-#to-regview,
-.to-fullscreen {
-    box-sizing: content-box;
-    height: 0.844rem;
-    width: 0.844rem;
-    padding: 0.422rem;
-    cursor: pointer;
-    /* float: left; */
-    float: right;    }
-
-#to-regview-single
 
 
 /* POST + LIBRARY PAGES -------------------------------------------------- */
@@ -670,7 +659,8 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
 #resultdate {
     padding-top: 0.256rem;    /* .125 lh; this is the space between the date and it's top border */
     margin: 1.536rem 0 0.512rem 0;    /* top: .75 lh, bottom: .25 lh */
-    border-width: 1.14284vw;    }    /* This should dynamically match the weight of the line of the resultglasses below date, based on their width of 28.571vw (8/28 cols) and the ratio of the resultglasses width to their line weight of 25:1; */ 
+    border-width: 0.15rem;
+    /* border-width: 1.14284vw; */    }    /* This should dynamically match the weight of the line of the resultglasses below date, based on their width of 28.571vw (8/28 cols) and the ratio of the resultglasses width to their line weight of 25:1; */ 
 
 #resultglasses {
     width: 28.571vw;    /* 8/28 cols */ 
@@ -699,12 +689,15 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
 #resulttag {
     padding: 0.3em 0.5em 0.3em 0.5em;    }    /* Finessing to be perfectly centered */
 
+
 /* ERROR PAGE -------------------------------------------------- */
 
 #brokenglasses {
     width: 100%;
     margin-top: 2.048rem;
     float: right;    }
+
+
 
 
 

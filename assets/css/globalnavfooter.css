@@ -26,6 +26,13 @@ main {    /* :) This is for all content except nav and footer on all pages; "con
 :focus {    /* Getting rid of browser's default focus ring (for now), since it automatically applies to nav search when clicked on, and yellow x when menu is opened */ 
     outline: none;    }
 
+#loadbg{
+    width:100%;
+    height:100%;
+    position:fixed;
+    z-index:9999;
+    background:url("../images/loader.gif") no-repeat center center rgba(226,228,58,0.75)    }
+
 .yellowhover:hover {    /* For all hover states with a yellow background */
     background-color: #e2e43a;
     color: black;    } 

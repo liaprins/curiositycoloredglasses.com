@@ -1,4 +1,4 @@
-<?php snippet('head-open') ?>
+<?php snippet('head-open-sitewide') ?>
 
 
 <?php snippet('share-settings-common') ?>
@@ -40,7 +40,7 @@
             <!-- Image of broken glasses -->
 
             <!-- <img src= "<?php echo url('assets/images/broken-glasses.gif') ?>" alt="Illustration of broken glasses" id="brokenglasses"> -->
-            <img src= "<?php echo url('content/error/broken-glasses.gif') ?>" alt="Illustration of broken glasses" id="brokenglasses">
+            <img src= "<?php echo url('content/error/broken-glasses.jpg') ?>" alt="Illustration of broken glasses" id="brokenglasses">
 
             <!--
             <?php if(!$page->illustration()->empty()): ?>

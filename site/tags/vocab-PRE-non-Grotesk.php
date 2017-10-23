@@ -11,7 +11,7 @@ kirbytext::$tags['vocab'] = array(
     $urlappendix = $tag->attr('url');
 
     /* decided no need for hash# */
-    return '<dfn><a href="' . $url . '#' . $urlappendix . '" title="Learn more" id="' . '-' . $urlappendix . '" class="vocabwordinline m-textface bold yellowhover" data-definition-id="' . $urlappendix . '" data-vocab="">' . $vocab . '</a></dfn>';
+    return '<dfn><a href="' . $url . '#' . $urlappendix . '" title="Learn more" id="' . '-' . $urlappendix . '" class="vocabwordinline s-display yellowhover" data-definition-id="' . $urlappendix . '" data-vocab="">' . $vocab . '</a></dfn>';
 
   }
 );

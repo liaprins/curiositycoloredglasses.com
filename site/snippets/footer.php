@@ -31,10 +31,6 @@
     that will be recognized in JS menu.js script, that can have an event listener applied when it is clicked on, that will close the <nav> -->
     </div>
 
-
-
-
-
 	</body>
 
 </html>

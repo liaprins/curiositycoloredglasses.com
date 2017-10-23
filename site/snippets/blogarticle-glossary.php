@@ -39,7 +39,7 @@
                                 <!-- <dt> = the name within the <dl> (parent) name-value pair  -->
                                 <dt class="glossaryvocabwordandaudio">
                                     
-                                    <span id="<?php echo $vocabwordurl ?>" class="glossaryvocabword s-display">
+                                    <span id="<?php echo $vocabwordurl ?>" class="glossaryvocabword m-textface bold">
                                         <!-- This is the vocab word that appears alongside the definition -->
                                         <?php echo html($subpage->vocabword()) ?>
                                     </span>

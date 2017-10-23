@@ -60,20 +60,20 @@ function vocabTest(e) {
 	    			// it is already open
 	    			if (containerCheck) {
 	    				// remove black box from inline vocab word
-	    				containerCheck.previousElementSibling.setAttribute('class', 'vocabwordinline s-display yellowhover');
+	    				containerCheck.previousElementSibling.setAttribute('class', 'vocabwordinline m-textface bold yellowhover');
 	    				// close it (remove container)
 	    				containerCheck.parentNode.removeChild(containerCheck);
 	    			
 	    			} else {
 
 	    				// style inline vocab word in black box
-	    				selectedVocab.setAttribute('class', 'vocabwordinline s-display yellowhover blackbg');
+	    				selectedVocab.setAttribute('class', 'vocabwordinline m-textface bold yellowhover blackbg');
 
     					var otherContainer = document.getElementById('definitioncontainer');
 
     					// close out any other open definitions and remove black box on its vocab word
 	    				if (otherContainer) {
-	    					otherContainer.previousElementSibling.setAttribute('class', 'vocabwordinline s-display yellowhover');
+	    					otherContainer.previousElementSibling.setAttribute('class', 'vocabwordinline m-textface bold yellowhover');
     						otherContainer.parentNode.removeChild(otherContainer);
     					}
 
@@ -147,7 +147,7 @@ function vocabXClose(e) {
 		var containerOuter = clickedX.parentNode.parentNode;
 
 		// remove black box from inline vocab word
-	    containerOuter.previousElementSibling.setAttribute('class', 'vocabwordinline s-display yellowhover');
+	    containerOuter.previousElementSibling.setAttribute('class', 'vocabwordinline m-textface bold yellowhover');
 	    
 	    // remove definition
 		containerOuter.parentNode.removeChild(containerOuter);

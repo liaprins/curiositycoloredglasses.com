@@ -19,4 +19,7 @@
 <!-- Adding opening body tag here, since all templates call this head-close.php snippet -->
 <body>
 
+	<!-- holds the loading animation -->
+	<div id="loadbg"></div>
+
 

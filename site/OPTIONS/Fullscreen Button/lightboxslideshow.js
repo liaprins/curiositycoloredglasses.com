@@ -64,7 +64,8 @@ function lightbox(imgToShow) {
     // !!! or store the PHP version in an HTML element's attribute, then collect it in JS as a variable and call it here
     // !!! or else construct its shape with CSS (research performance) vvv
     singleLightbox.innerHTML = singleLightbox.parentNode.innerHTML + '<img src="http://localhost:8888/kirby-project/kirby-2.4.0/assets/images/x.svg" alt="close" id="lightboxclose" class="close-x yellowhover" data-lightbox-x>';
-        
+    // singleLightbox.innerHTML = singleLightbox.parentNode.innerHTML + '<img src="http://localhost:8888/kirby-project/kirby-2.4.0/assets/images/to-regular-view.svg" alt="close" id="lightboxclose" class="close-x yellowhover" data-lightbox-x>';
+
     // remove unintentionally duplicated lightbox element from original
     // (duplicated when call the HTML of <figure> element it is attached to was duplicated as lightbox's content)
     var duplicate = singleLightbox.lastElementChild.previousElementSibling;
@@ -144,7 +145,8 @@ function populateLightboxDots(imgToShow) {
         lightboxAgain.appendChild(lightboxArrowContainer);
         lightboxArrowContainer.setAttribute('class', 'arrowcontainer lightboxarrowcontainer');
         // lightboxArrowContainer.style.position = 'relative';
-        lightboxArrowContainer.innerHTML = '<img src="http://localhost:8888/kirby-project/kirby-2.4.0/assets/images/left-arrowhead.svg" alt="retreat" class="galleryarrows lightboxarrows yellowhover" data-retreatlightboxarrow>' + '<img src="http://localhost:8888/kirby-project/kirby-2.4.0/assets/images/right-arrowhead.svg" alt="advance" class="galleryarrows lightboxarrows yellowhover" data-advancelightboxarrow>';
+        // add "back to regular view" icon + 2 x arrows
+        lightboxArrowContainer.innerHTML = '<img src="http://localhost:8888/kirby-project/kirby-2.4.0/assets/images/left-arrowhead.svg" alt="retreat" class="galleryarrows lightboxarrows yellowhover" data-retreatlightboxarrow>' + '<img src="http://localhost:8888/kirby-project/kirby-2.4.0/assets/images/right-arrowhead.svg" alt="advance" class="galleryarrows lightboxarrows yellowhover" data-advancelightboxarrow>' + '<img src="http://localhost:8888/kirby-project/kirby-2.4.0/assets/images/to-regular-view.svg" alt="Back to regular view" id="to-regview" class="yellowhover">';
 
     } // close gallery-if
 } // close function
@@ -177,6 +179,8 @@ function clickRegularViewFocusImg(e) {
 
 // EVENT LISTENER ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 window.addEventListener('click', clickRegularViewFocusImg, false);
+
+
 
 
 /*
@@ -279,6 +283,49 @@ window.addEventListener('click', lightboxXClose, false);
 
 
 
+// USED FUNCTION ----------------------------------------------------------------------------
+// THIS REFERENCES AN ELEMENT THAT IS NOT ACTUALLY CREATED UNTIL THE NEXT FUNCTION: function slideshow() ...
+// ... SO IF THIS FUNCTION DOESN'T WORK, TRY MOVING IT TO AFTER THAT FUNCTION
+// called when single image's to-fullscreen icon is clicked
+function clickSingleImgFullscreenIcon(e) {
+
+    var clickedThing = e.target;
+
+    if (clickedThing.classList.contains('singlefullscreenicon')) {
+
+        /*
+        // change itself into the "back to regular view icon"!
+        clickedThing.setAttribute('src', 'http://localhost:8888/kirby-project/kirby-2.4.0/assets/images/to-regular-view.svg');
+        clickedThing.setAttribute('alt', 'Back to regular view');
+        // clickedThing.setAttribute('id', 'to-regview');    // for some reason this id making it so you cannot leave the lightbox unless you refresh the whole page?!?!
+        clickedThing.setAttribute('id', 'to-regview-single');
+        */
+
+        // define imgToShow
+        var imgToShow = clickedThing.parentNode.firstElementChild;
+
+        // call NAMED lightbox function
+        lightbox(imgToShow);
+
+        var singleLightbox = document.getElementById('singlelightbox');
+
+        singleLightbox.lastElementChild.previousElementSibling.previousElementSibling.style.display = "none";
+
+        // TEST *********************************************************************
+        var testInsideGuestWriter = document.getElementById('testinsideguestwriter');
+        testInsideGuestWriter.innerHTML = 'wazy!';
+        // TEST *********************************************************************
+
+    }
+
+}
+
+window.addEventListener('click', clickSingleImgFullscreenIcon, false);
+
+
+
+
+
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 // SLIDESHOW SCRIPTS BEGIN !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -311,7 +358,7 @@ function slideshow() {
         galleryList[i].appendChild(arrowContainer);
         arrowContainer.setAttribute('class', 'arrowcontainer');
         arrowContainer.style.position = 'relative';
-        arrowContainer.innerHTML = '<img src="http://localhost:8888/kirby-project/kirby-2.4.0/assets/images/left-arrowhead.svg" alt="retreat" class="galleryarrows yellowhover" data-retreatarrow>' + '<img src="http://localhost:8888/kirby-project/kirby-2.4.0/assets/images/right-arrowhead.svg" alt="advance" class="galleryarrows yellowhover" data-advancearrow>';
+        arrowContainer.innerHTML = '<img src="http://localhost:8888/kirby-project/kirby-2.4.0/assets/images/left-arrowhead.svg" alt="retreat" class="galleryarrows yellowhover" data-retreatarrow>' + '<img src="http://localhost:8888/kirby-project/kirby-2.4.0/assets/images/right-arrowhead.svg" alt="advance" class="galleryarrows yellowhover" data-advancearrow>' + '<img src="http://localhost:8888/kirby-project/kirby-2.4.0/assets/images/to-full-screen.svg" alt="View full screen" class="to-fullscreen yellowhover">';
 
         // establish placeholder box to keep text after img at proper height
         var placeholderBox = document.createElement('div');
@@ -409,13 +456,31 @@ function slideshow() {
     // when page is refreshed, this removes the lightbox's #hash from the URL, since refreshing the page automatically also removes the lightbox view, so this syncs the URL back up with the view onscreen
     removeHashReturnScroll();
 
+
+    // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    // LIGHTBOX SCRIPT INSERTED !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    // this doesn't apply to slideshows, but it does apply to whenever DOMContent is loaded, so I am including it here to avoid conflicts if I made a separate function on this page calling DOMContentLoaded
+    // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    // ADDING FULLSCREEN BUTTON TO ALL SINGLE IMAGES
+
+    var allImages = document.querySelectorAll('figure');
+
+    for (k = 0; k < (allImages.length); k++) {
+
+        if (allImages[k].firstElementChild.classList.contains('singleimage')) {
+
+            var singleImage = allImages[k].innerHTML;
+            allImages[k].innerHTML = singleImage + '<img src="http://localhost:8888/kirby-project/kirby-2.4.0/assets/images/to-full-screen.svg" alt="View full screen" class="to-fullscreen singlefullscreenicon yellowhover">';
+        } // close if
+
+    } // close for loop
+
 }   // close function
 
 // EVENT LISTENER ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // creates slideshow from galleries on page/DOM content load
 // window.addEventListener('load', slideshow, false);
 window.addEventListener('DOMContentLoaded', slideshow, false);
-
 
 
 

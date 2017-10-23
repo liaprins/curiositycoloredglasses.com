@@ -162,11 +162,11 @@ kirbytext::$tags['image'] = array(
 
       // ADDED BY LIA Ensures that images without captions will not have the border (horizontal bar)
       if(!$metacaption->empty()) {
-        $figure->append('<figcaption class="s-textface">' . '<hr class="toprule">' . $file->caption() . '</figcaption>');
+        $figure->append('<figcaption class="s-textface">' . $file->caption() . '</figcaption>');
       
 
       } elseif(($metacaption->empty()) and (!empty($caption))) {
-        $figure->append('<figcaption class="s-textface">' . '<hr class="toprule">' . html($caption) . '</figcaption>');
+        $figure->append('<figcaption class="s-textface">' . html($caption) . '</figcaption>');
       
       }
       return $figure;
