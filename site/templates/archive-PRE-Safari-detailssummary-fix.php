@@ -10,6 +10,12 @@
 <?php snippet('head-close') ?>
 
 
+    <?php snippet('menu') ?>
+
+    <!-- calling the JS scripts used on everypage -->
+    <?php snippet('scripts-sitewide') ?>
+
+
     <!-- archive year section header script -->
     <script src="assets/js/archive.js">
     </script>
@@ -118,6 +124,6 @@
         </div>    <!-- id="removemeaftertesting" -->
 
 
-    <?php snippet('footer-sitewide') ?>
+    <?php snippet('footer') ?>
 
 

@@ -9,6 +9,11 @@
 
 <?php snippet('head-close') ?>
 
+        
+    <?php snippet('menu') ?>
+
+    <!-- calling the JS scripts used on everypage -->
+    <?php snippet('scripts-sitewide') ?>
 
     <!-- backarrow script -->
     <script src="assets/js/backarrow-library.js">
@@ -89,6 +94,6 @@
 </script>
     
 
-<?php snippet('footer-sitewide') ?>
+<?php snippet('footer') ?>
 
 
