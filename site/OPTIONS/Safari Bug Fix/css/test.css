@@ -82,6 +82,33 @@
 
 /* set mediaqueries of YES-mediaqueries */
 
+@media only screen and (min-width: 200px) {
+    /*
+    .html {
+        font-size: 3.62vw;    }
+    */
+    #rems-yes-mq {
+        width: 30rem;    }
+    #ems-yes-mq {
+        width: 15em;    }
+    #vw-yes-mq {
+        width: 9vw;    }
+    #px-yes-mq {
+        width: 45px;    }
+
+    #text-rems-yes-mq {
+        font-size: 3rem;    }
+    #text-ems-yes-mq {
+        font-size: 3em;    }
+    #text-vw-yes-mq {
+        font-size: 3vw;    }
+    #text-px-yes-mq {
+        font-size: 30px;    }
+
+} /* close 442 */
+
+
+
 @media only screen and (min-width: 442px) {
     /*
     .html {

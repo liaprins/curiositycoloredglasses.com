@@ -214,8 +214,39 @@
 
     html {
         font-size: 3.620vw;    }
+    /*
     .xs-display {
         font-size: 0.443rem;    }
+    */
+
+
+
+    h1 {
+        font-size: 4.867vw;    }
+    h2 {
+        font-size: 3.323vw;    }
+    .sectionsummary {
+        font-size: 2.769vw;    }
+    .m-display {
+        font-size: 2.31vw;    }
+    .s-display {
+        font-size: 1.922vw;    }
+    .xs-display {    /* this may not actually need to be called here...above it uses px only, so check carefully how it responds to vw! */
+        font-size: 1.604vw;    }
+    .xxs-display {
+        font-size: 1.336vw;    }
+    h4, .xl-textface {
+        font-size: 4.072vw;    }
+    h5, .l-textface {
+        font-size: 3.395vw;    }
+    h6, .m-textface {
+        font-size: 2.827vw;    }
+    .s-textface {
+        font-size: 2.357vw;    }
+    .xs-textface {
+        font-size: 1.966vw;    }
+
+
 
     /* BACK ARROW LOCATION -------------------------------------------------- */
     
@@ -351,6 +382,36 @@
 
     html {
         font-size: 23.529px;    }
+
+
+    h1 {
+        font-size: 31.105px;    }
+    h2 {
+        font-size: 21.6px;    }
+    .sectionsummary {
+        font-size: 18px;    }
+    .m-display {
+        font-size: 15.012px;    }
+    .s-display {
+        font-size: 12.494px;    }
+    .xs-display {     /* this may not actually need to be called here...above it uses px only, so check carefully how it responds to vw! */
+        font-size: 10.423px;    }
+    .xxs-display {
+        font-size: 8.682px;    }
+    h4, .xl-textface {
+        font-size: 26.47px;    }
+    h5, .l-textface {
+        font-size: 22.07px;    }
+    h6, .m-textface {
+        font-size: 18.376px;    }
+    .s-textface {
+        font-size: 15.317px;    }
+    .xs-textface {
+        font-size: 12.776px;    }
+
+
+
+
 
     /* YELLOW OPEN MENU -------------------------------------------------- */
 
@@ -738,10 +799,7 @@
     /* NAV -------------------------------------------------- */
 
     nav {
-        z-index: 100;
-        position: absolute;
-        top: 0;
-        right: 0;    }
+        z-index: 100;    }
     #navdetails {
         float: none;
         position: static;
@@ -758,7 +816,7 @@
         border-width: 0;
         background-color: transparent;
         float: none;
-        cursor: auto;    }
+       cursor: auto;    }
     #navsummary {
         background-image: none;
         float: none;
@@ -770,6 +828,7 @@
         background-color: transparent;    }
     #navsummary::-webkit-details-marker {
         display: none;    }
+
     #homeicon {
         display: inline;
         position: absolute;

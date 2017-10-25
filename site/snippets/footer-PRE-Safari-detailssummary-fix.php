@@ -31,18 +31,6 @@
     that will be recognized in JS menu.js script, that can have an event listener applied when it is clicked on, that will close the <nav> -->
     </div>
 
-
-
-<!-- !!!!!! TESTING 'menu' SNIPPET WITHIN FOOTER HERE !!!!!! -->
-<?php snippet('menu') ?>
-
-
-<!-- !!!!!! TESTING 'scripts-sitewide' SNIPPET WITHIN FOOTER HERE !!!!!! -->
-<?php snippet('scripts-sitewide') ?>
-
-
-
-
 	</body>
 
 </html>

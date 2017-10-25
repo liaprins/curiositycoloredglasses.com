@@ -10,20 +10,10 @@
 <?php snippet('head-close') ?>
 
 
-
-
-
-<!-- !!!!!! 'menu' SNIPPET WOULD GO HERE
-REMOVING IT FOR TESTING IT WITHIN FOOTER !!!!!! -->
-
-
-
-
+<?php snippet('menu') ?>
 
 <!-- calling the JS scripts used on everypage -->
-<!-- !!!!!! 'scripts-sitewide' SNIPPET WOULD GO HERE
-REMOVING IT FOR TESTING IT WITHIN FOOTER !!!!!! -->
-
+<?php snippet('scripts-sitewide') ?>
 
 
 <!-- This encompasses everything within <body> except for <nav>
