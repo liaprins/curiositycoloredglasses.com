@@ -10,7 +10,7 @@ Date: 2015-11-04
 
 ----
 
-Tags: penmanship,language,all
+Tags: penmanship,language,all,design
 
 ----
 
@@ -86,3 +86,7 @@ Share: What would we learn if we looked at handwriting the way we listen to lang
 ----
 
 Twitterimageurl: 
+
+----
+
+Guestwriter: 

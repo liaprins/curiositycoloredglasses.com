@@ -137,5 +137,9 @@
             </article>    <!-- Closing first instance of <article> -->
 
 
+        <!-- within the footer, the JS scripts used on everypage are called, 
+        but they need to be called in a special format for blog article and tag page, 
+        since they appear lower in the folder structure at least according to their URLs' "/"s...
+        ...IF I MANIPULATE THE URLS TO GET RID OF "BLOG" AND EXTRA "TAG" THIS MAY CHANGE! MAY JUST NEED 'scripts-sitewide' THEN LIKE THE OTHER PAGES... -->
         <?php snippet('footer-sitewide-posts-tag') ?>
 

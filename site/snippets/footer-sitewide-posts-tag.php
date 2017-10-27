@@ -33,14 +33,19 @@
 
 
 
-	<!-- !!!!!! TESTING 'menu' SNIPPET WITHIN FOOTER HERE !!!!!! -->
+    <!-- menu has to be called here, to account for a major Safari bug:
+    Safar renders anything measured in rems at 1px, if it comes after a <details> tag...
+    ... and my menu is within a <details> tag, so it was messing up everything with rems in Safari
+    Moving menu to the very bottom means there is nothing in the html after it, so it is fine.
+    The menu is styled in css to position it absolutely at the top -->
 	<?php snippet('menu') ?>
 
 
     <!-- calling the JS scripts used on everypage, 
     but they need to be called in a special format for blog article and tag page, 
     since they appear lower in the folder structure at least according to their URLs' "/"s...
-    ...IF I MANIPULATE THE URLS TO GET RID OF "BLOG" AND EXTRA "TAG" THIS MAY CHANGE! MAY JUST NEED 'scripts-sitewide' THEN LIKE THE OTHER PAGES... -->
+    ...IF I MANIPULATE THE URLS TO GET RID OF "BLOG" AND EXTRA "TAG" THIS MAY CHANGE! MAY JUST NEED 'scripts-sitewide' THEN LIKE THE OTHER PAGES... 
+    they need to come after the menu is called, to else they will have no effect on the menu items they are intended for -->
 	<?php snippet('scripts-sitewide-posts-tag') ?>
 
 
