@@ -1,5 +1,0 @@
-Caption: Here is a caption!
-
-----
-
-Alt: Alt text of course

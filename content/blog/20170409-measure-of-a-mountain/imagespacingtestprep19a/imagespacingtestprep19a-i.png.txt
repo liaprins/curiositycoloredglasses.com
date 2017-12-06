@@ -1,5 +1,0 @@
-Caption: Caption only going on the first and third to test what happens to the middle one without it.
-
-----
-
-Alt: Alt text of course

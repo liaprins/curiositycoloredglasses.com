@@ -7,8 +7,4 @@ email: liajprins@us.ibm.com
 language: en
 role: admin
 history:
-  - blog/the-study-of-life
-  - blog/the-moons-dark-side
-  - blog/penmanship-dialects
-  - blog/do-indoor-trees-have-growth-rings
-  - error
+  - blog/measure-of-a-mountain

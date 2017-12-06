@@ -2,7 +2,7 @@ Heading: The best school supply
 
 ----
 
-About: Thanks, Crayola, for bringing millions of kids colorfully artistic opportunities. (link: http://localhost:8888/kirby-project/kirby-2.4.0/blog/flourescence-and-phosphorescence text: Fluorescence and phosphorescence).
+About: (link: http://localhost:8888/kirby-project/kirby-2.4.0/blog/flourescence-and-phosphorescence text: Crayola) crayons were my tool of choice from age 4 through at least age 10. I still instinctively describe colors according to their Crayola counterparts, like radical raspberry. And I know the real hue of cerulean is the one of the Crayola crayon. So thanks, Crayola, for getting off to a creative start.
 
 ----
 

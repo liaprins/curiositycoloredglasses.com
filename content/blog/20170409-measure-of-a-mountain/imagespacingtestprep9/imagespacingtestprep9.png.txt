@@ -1,5 +1,0 @@
-Caption: Here is a caption! Only giving it to the first and third images in this slideshow, though, for testing.
-
-----
-
-Alt: Alt text of course

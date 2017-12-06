@@ -1,5 +1,0 @@
-Caption: Adding caption for testing
-
-----
-
-Alt: Alt text of course

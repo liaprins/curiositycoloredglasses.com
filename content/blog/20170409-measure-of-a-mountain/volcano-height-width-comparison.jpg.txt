@@ -1,5 +1,0 @@
-Caption: This chart accounts for the area of mountains, not just the height of their peaks. I'd like to recreate it at the accurate-to-life aspect ratio.
-
-----
-
-Alt: Olympus Mons, Mauna Loa, and Tamu's heights and widths are compared.

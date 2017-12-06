@@ -888,9 +888,7 @@ window.addEventListener('resize', verticallyCenter, false);
 function lightboxSlideshowResize() {
 
     // this will reload the page as it is resized, and will keep its relative height the same; reloading the page will force it to run through all the existing (above) functions, so it will be resetting placeholderBox height, dotsContainer location, etc as resizing happens
-    
-    // TRYING THIS COMMENTED OUT UNTIL SAFARI'S CACHE CLEARS, TO SEE IF IT FIXES THE MINISCULE FONT ISSUE
-    // location.reload();
+    location.reload();
 
 }
 

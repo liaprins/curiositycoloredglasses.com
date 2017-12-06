@@ -1,5 +1,0 @@
-Caption: Testing caption in the middle only
-
-----
-
-Alt: Alt text of course
