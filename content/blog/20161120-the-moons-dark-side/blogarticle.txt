@@ -42,8 +42,6 @@ Thus, the distance between the Moon and the Earth changes gradually and is more 
 
 In theory, at some point tens of billions of years from now (with the exact timeframe being extremely difficult to nail down due to so many unknowable factors) the same side of the Earth will always face the Moon, with the Earth only rotating once per lunar cycle, which at that point most estimates indicate should be about 47 current Earth days long.
 
-(image: moon-diagram.png)
-
 “In theory”… but this will likely never happen. Why? In about 1 to 2 billion years or so, the Sun’s brightness will have increased sufficiently to vaporize all water on the surface of the Earth, getting rid of the ocean tides altogether, which is a huge factor in this interaction. However, there still would be some bulging of the Earth’s crust to continue the process to a much lesser extent.
 
 (image: solar-system-traffic.jpg)

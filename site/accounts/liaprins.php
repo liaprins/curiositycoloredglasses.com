@@ -7,4 +7,5 @@ email: liajprins@us.ibm.com
 language: en
 role: admin
 history:
+  - blog/the-moons-dark-side
   - blog/measure-of-a-mountain

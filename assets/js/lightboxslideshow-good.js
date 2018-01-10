@@ -393,8 +393,7 @@ function slideshow() {
             // but subsequent slides need the white left edge as a border with previous image behind, so this only applies to first image
             if (slide[0].firstElementChild.lastElementChild.hasAttribute('data-galleryfigcaption')) {
                 var firstGalleryCaption = slide[0].firstElementChild.lastElementChild;
-                // firstGalleryCaption.setAttribute('class', 's-textface caption gallerycaption whiteedge');
-                firstGalleryCaption.setAttribute('class', 'xs-textface caption gallerycaption whiteedge');
+                firstGalleryCaption.setAttribute('class', 's-textface caption gallerycaption whiteedge');
             }
 
             dotsContainer.style.top = 'calc(-' + (placeholderBox.offsetHeight - slide[0].firstElementChild.firstElementChild.offsetHeight) + 'px + 1.536rem)';
