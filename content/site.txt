@@ -1,4 +1,4 @@
-Title: Curiosity-Colored Glasses (site.txt)
+Title: Lia Prins (site.txt)
 
 ----
 
@@ -6,11 +6,11 @@ Author: Lia Prins
 
 ----
 
-Description: REPLACE WITH DESCRIPTION OF OVERALL BLOG/SITE
+Description: REPLACE WITH DESCRIPTION OF OVERALL PORTFOLIO/SITE
 
 ----
 
-Keywords: REPLACE WITH KEYWORDS FOR OVERALL BLOG/SITE
+Keywords: REPLACE WITH KEYWORDS FOR OVERALL PORTFOLIO/SITE
 
 ----
 

@@ -1,0 +1,5 @@
+Caption: The speed of the user’s swipe controls the rate at which the flipbook frames animate: a fast flick reveals cilia’s efficiency and elegance as a biological device for movement, while a slower drag of the finger affords the opportunity to more closely study the motion’s mechanics.
+
+----
+
+Alt: An animated .GIF shows the cilia illustration in action.

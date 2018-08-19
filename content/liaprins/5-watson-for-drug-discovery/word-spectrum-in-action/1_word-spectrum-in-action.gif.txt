@@ -1,0 +1,10 @@
+Caption: 
+
+Typing into the search bar highlights terms with matching character strings. 
+<!--
+[The list of terms can be sorted by their overall strength—as determined by the word’s overall likelihood to be co-mentioned with a selected entity in literature—or by specific association strength to either of the user's chosen entities.]
+-->
+
+----
+
+Alt: The characters "pho" are typed into the search bar and a list of suggested available terms pops up.

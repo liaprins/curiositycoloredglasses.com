@@ -1,0 +1,9 @@
+Caption: 
+
+----
+
+Alt: Edge width can show the weight of the relationship; different ways to calculate weight, depends on what is important to communicate in the data.
+
+----
+
+Sort: 10

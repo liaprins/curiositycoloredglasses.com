@@ -1,0 +1,5 @@
+Caption: Each uploaded image has its own sub-page within the CMS, which I coded to include fields for an optional caption and mandatory alt text.
+
+----
+
+Alt: Individual files’ metadata can be edited, including the alt tags (which I am doing at this very moment!).

@@ -1,0 +1,9 @@
+Caption: Users found the butterfly chart we tested to be intuitive. It listed all significant found terms, their strengths to the selected entities indicated by bars stretching to either side. Additionally, they could sort by terms’ overall strength or by their strength to one of the selected entities.
+
+----
+
+Alt: A butterfly chart is shown to be sorted by total strength.
+
+----
+
+Sort: 2

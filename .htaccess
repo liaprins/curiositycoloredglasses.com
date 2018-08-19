@@ -16,6 +16,13 @@ RewriteEngine on
 #
 # RewriteBase /mysite
 
+#LIA: I am forcing http:// to redirect to httpS://... 
+#as explained by NameCheap here: https://www.namecheap.com/support/knowledgebase/article.aspx/9770/38/how-to-force-https-using-htaccess-file-in-cpanel
+#IN PRDER FOR MY LOCALHOST TO RUN, THOUGH, I NEED TO COMMENT IT OUT JUST FOR LOCALHOST
+#WHEN GO LIVE,BE SURE TO UN-COMMENT OUT THE FOLLOWING 2 LINES!!! vvv
+#RewriteCond %{HTTPS} off
+#RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R,L]
+
 # block text files in the content folder from being accessed directly
 RewriteRule ^content/(.*)\.(txt|md|mdown)$ index.php [L]
 

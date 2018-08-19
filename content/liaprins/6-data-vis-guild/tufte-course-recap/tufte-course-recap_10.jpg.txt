@@ -1,0 +1,9 @@
+Caption: 
+
+----
+
+Alt: Keep your standards of evidence high: there may be incentives to misrepresent data. For example, "scientific" (and other) papers sometimes intentionally mislead and skew results to get grants. Changing a dataset’s scale from logarithmic to linear or vice versa can change the interpretation of results without actually changing the raw data per se.
+
+----
+
+Sort: 10

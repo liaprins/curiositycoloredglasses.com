@@ -1,0 +1,5 @@
+Caption: I built a short series of conceptual illustrations walking new users through the technological processes that go on behind the screen, drawing upon sketches I had made for my own sake in an earlier effort to understand the data model myself.
+
+----
+
+Alt: "SOX9"'s term list is shown next to two known genes' term lists, proving it is most alike them, resulting in "SOX9" taking the top position in the ranked list of candidate inputs.

@@ -1,0 +1,5 @@
+Caption: Using the ratios found through the previous normalization step, Watson determines each input gene’s most significant terms.
+
+----
+
+Alt: All input entities list their most commonly co-mentioned terms.

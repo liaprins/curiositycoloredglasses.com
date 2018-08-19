@@ -1,0 +1,5 @@
+Caption: I mocked up a rough .GIF in Photoshop too get a better sense of whether my idea for a loading animation would communicate properly.
+
+----
+
+Alt: An animated .GIF demos the concept of the loader animation.

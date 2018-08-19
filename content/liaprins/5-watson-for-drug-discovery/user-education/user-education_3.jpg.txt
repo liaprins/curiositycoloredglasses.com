@@ -1,0 +1,5 @@
+Caption: I built a short series of conceptual illustrations walking new users through the technological processes that go on behind the screen, drawing upon sketches I had made for my own sake in an earlier effort to understand the data model myself.
+
+----
+
+Alt: A specific term, "phosphorylization", is illustrated to have occurred alongside the input entity "IL6" twice, but without "IL6" only once.

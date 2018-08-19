@@ -1,0 +1,9 @@
+Caption: 
+
+----
+
+Alt: Use brightness and value to establish visual hierarchy, but be careful: using only bright colors reduces their effectiveness to draw attention and overwhelms the viewer.
+
+----
+
+Sort: 13

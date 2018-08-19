@@ -1,0 +1,17 @@
+Caption: 
+
+For each found term independently, Watson determines the likelihood above mere chance that it occurs with each gene Ms. Carassius had entered:
+<p class="figcaptionspacer"></p>
+1. For the found term <em>gills</em>, Watson looks at how often it appears on average in documents that also mention the input gene <em>PH15H</em>.
+<p class="figcaptionspacer"></p>
+2. Then Watson looks at the average occurrence of <em>gills</em> within documents that do <em>not</em> make any mention of <em>PH15H</em>.
+<p class="figcaptionspacer"></p>
+3. Next, Watson compares these rates of occurrence. <em>Gills</em> are written about very rarely, only showing up in 5 documents. However, in 4 of those documents, the gene <em>PH15H</em> also appears. This means <em>gills</em> and <em>PH15H</em> correlate strongly in the literature.
+<p class="figcaptionspacer"></p>
+4. Watson repeats this process for all the remaining genes Ms. Carassius had entered, comparing their rates of occurrence with <em>gills</em> versus without <em>gills</em>. Now Watson has established ratios representing the likelihood for <em>gills</em> to co-occur with each input gene.
+<p class="figcaptionspacer"></p>
+5. This entire process of comparing <em>gills</em>’ co-occurrence with every input and collecting their resulting ratios is repeated for all found terms. Several ratios indicate <em>no</em> significance between a term and a gene. <em>Tails</em> occurs with <em>5C4LES</em> in 719 documents, but <em>without</em> <em>5C4LES</em> in 736, meaning that regardless of how often <em>tails</em> is talked about in literature, it is not more likely to occur with <em>5C4LES</em> than without <em>5C4LES</em>.
+
+----
+
+Alt: Four documents contain both the term "gills" and the entity "PH15H"; only one document contains "gills" without a mention of "PH15H".

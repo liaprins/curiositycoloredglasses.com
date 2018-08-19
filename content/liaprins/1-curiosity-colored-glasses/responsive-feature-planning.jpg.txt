@@ -1,0 +1,5 @@
+Caption: I created <a href="https://docs.google.com/document/d/1I9U1EirdvroHSvzlnR8KnaW7TG4GynG09FaetVK2EsA/edit?usp=sharing" target="blank">another Google Doc</a> to track individual components’ behaviors across breakpoints, helping me ensure I’d accounted for every detail in my design.
+
+----
+
+Alt: Table with 5 columns, one for each breakpoint, hold lists of components that change with various media queries. Cells merge across columns when the component does not change for a media query.

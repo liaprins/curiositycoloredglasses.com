@@ -1,0 +1,5 @@
+Caption: The Dear Data postcard exchange for the Watson Health studios was set to be a success … until every participant (myself included) accidentally skipped step number 4, and then the mail ate our postcards.
+
+----
+
+Alt: How Dear Data for the Watson Health Studios works: (1) A prompt and send-off date will be assigned (2) Each participant will collect their own data related to the prompt (3) Everyone will create a data vis by-hand on a blank postcard based on the data they've collected (4) The creator will take a photo of their creation before putting it in the mail.

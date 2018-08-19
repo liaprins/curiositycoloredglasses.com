@@ -1,0 +1,9 @@
+Caption: Typical word spectrums use a term’s height to stand for its strength. However, a word’s <em>length</em> intuitively contributes to its interpreted size as well, which can throw off the reading of its strength. I hypothesized that assigning a shape to stand for each entity might eliminate the confusion. We also experimented with a “line of best fit”, so to speak, that could help to suss out patterns in relationships between selected entities: if terms clustered toward the center, their two entities shared more in common than pairs with terms that tended to stick to the edges, indicating less overlap in literature. Users responded positively to the bubbles symbolizing terms’ strengths, but didn’t intuitively make sense of the line intended to surface similarity patterns.
+
+----
+
+Alt: A bubble-based word spectrum features an arcing line emphasizing the pattern the terms have formed.
+
+----
+
+Sort: 1

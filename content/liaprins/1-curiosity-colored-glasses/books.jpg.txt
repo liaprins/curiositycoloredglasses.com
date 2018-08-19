@@ -1,0 +1,5 @@
+Caption: Learning by book is my preferred method for intaking this kind of information: <em>HTML & CSS</em> and <em>Javascript & JQuery</em> by Jon Duckett; <em>Learning Responsive Web Design</em> by Clarissa Peterson, published by O’Reilly; and <em>Designing Interface Interaction</em> by Val Head.
+
+----
+
+Alt: "HTML & CSS" and "Javascript & JQuery" by Jon Duckett; "Learning Responsive Web Design" by Clarissa Peterson, published by O'Reilly; "Designing Interface Interaction" by Val Head.

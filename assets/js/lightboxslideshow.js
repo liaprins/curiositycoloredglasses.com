@@ -63,7 +63,7 @@ function lightbox(imgToShow) {
     // !!! the src attributes (for "x" and "^" icons) vvv will have to update when I get proper hosting and URL set up! 
     // !!! or store the PHP version in an HTML element's attribute, then collect it in JS as a variable and call it here
     // !!! or else construct its shape with CSS (research performance) vvv
-    singleLightbox.innerHTML = singleLightbox.parentNode.innerHTML + '<img src="http://localhost:8888/kirby-project/kirby-2.4.0/assets/images/x.svg" alt="close" id="lightboxclose" class="close-x yellowhover" data-lightbox-x>';
+    singleLightbox.innerHTML = singleLightbox.parentNode.innerHTML + '<img src="https://liaprins.com/assets/images/x.svg" alt="close" id="lightboxclose" class="close-x yellowhover" data-lightbox-x>';
         
     // remove unintentionally duplicated lightbox element from original
     // (duplicated when call the HTML of <figure> element it is attached to was duplicated as lightbox's content)
@@ -92,8 +92,9 @@ function lightbox(imgToShow) {
     if (caption) {
 
         // give caption attributes
-        caption.setAttribute('class','xs-textface lightboxcaption');
-        caption.style.display = "block";    
+        caption.setAttribute('class','xs-textface lightboxcaption hide');
+        // caption.style.display = "block";    
+        caption.style.display = "none";    
 
         // make caption's top rule able to be visible at all sizes when lightbox, but only above 1225 when not in lightbox
         var lightboxTopRule = caption.firstElementChild;
@@ -104,7 +105,8 @@ function lightbox(imgToShow) {
         // !!! the src attributes (for "x" and "^" icons) vvv will have to update when I get proper hosting and URL set up! 
         // !!! or store the PHP version in an HTML element's attribute, then collect it in JS as a variable and call it here
         // !!! or else construct its shape with CSS (research performance) vvv
-        toggle.setAttribute('src', 'http://localhost:8888/kirby-project/kirby-2.4.0/assets/images/up-arrowhead.svg');
+        // toggle.setAttribute('src', 'http://localhost:8888/kirby-project/portfolio/assets/images/up-arrowhead.svg');
+        toggle.setAttribute('src', 'https://liaprins.com/assets/images/up-arrowhead.svg');
         toggle.setAttribute('title', 'Toggle caption visibility');
         toggle.setAttribute('alt', 'Toggle caption visibility');
         toggle.setAttribute('id', 'captiontoggle');
@@ -145,7 +147,7 @@ function populateLightboxDots(imgToShow) {
         lightboxAgain.appendChild(lightboxArrowContainer);
         lightboxArrowContainer.setAttribute('class', 'arrowcontainer lightboxarrowcontainer');
         // lightboxArrowContainer.style.position = 'relative';
-        lightboxArrowContainer.innerHTML = '<img src="http://localhost:8888/kirby-project/kirby-2.4.0/assets/images/left-arrowhead.svg" alt="retreat" title="Previous image" class="galleryarrows lightboxarrows yellowhover" data-retreatlightboxarrow>' + '<img src="http://localhost:8888/kirby-project/kirby-2.4.0/assets/images/right-arrowhead.svg" alt="advance" title="Next image" class="galleryarrows lightboxarrows yellowhover" data-advancelightboxarrow>';
+        lightboxArrowContainer.innerHTML = '<img src="https://liaprins.com/assets/images/left-arrowhead.svg" alt="retreat" title="Previous image" class="galleryarrows lightboxarrows yellowhover" data-retreatlightboxarrow>' + '<img src="https://liaprins.com/assets/images/right-arrowhead.svg" alt="advance" title="Next image" class="galleryarrows lightboxarrows yellowhover" data-advancelightboxarrow>';
 
     } // close gallery-if
 } // close function
@@ -312,15 +314,25 @@ function slideshow() {
         galleryList[i].appendChild(arrowContainer);
         arrowContainer.setAttribute('class', 'arrowcontainer');
         arrowContainer.style.position = 'relative';
-        arrowContainer.innerHTML = '<img src="http://localhost:8888/kirby-project/kirby-2.4.0/assets/images/left-arrowhead.svg" alt="retreat" title="Previous image" class="galleryarrows yellowhover" data-retreatarrow>' + '<img src="http://localhost:8888/kirby-project/kirby-2.4.0/assets/images/right-arrowhead.svg" alt="advance" title="Next image" class="galleryarrows yellowhover" data-advancearrow>';
+        arrowContainer.innerHTML = '<img src="https://liaprins.com/assets/images/left-arrowhead.svg" alt="retreat" title="Previous image" class="galleryarrows yellowhover" data-retreatarrow>' + '<img src="https://liaprins.com/assets/images/right-arrowhead.svg" alt="advance" title="Next image" class="galleryarrows yellowhover" data-advancearrow>';
 
         // establish placeholder box to keep text after img at proper height
         var placeholderBox = document.createElement('div');
         galleryList[i].appendChild(placeholderBox);
         placeholderBox.style.position = 'relative';
         // (1.) HERE ?!?!?! vvvvv
-        placeholderBox.style.top = '1.024rem';    // this size works for 1225+ only ...see if this can be styled with CSS and mediaqueries instead
-        // placeholderBox.style.top = 0;
+        // placeholderBox.style.top = '27.5px';    // based on <figure> element's top margin in styles.css JANUARY 2018 !!! THIS SIZE WORKS FOR 0-442PX SCREENWIDTH ONLY
+        
+        if (screenWidth < 442) {
+            placeholderBox.style.top = '27.5px';    // based on <figure> element's top margin in styles.css JANUARY 2018 !!! THIS SIZE WORKS FOR 0-442PX SCREENWIDTH ONLY
+        } else {
+            if (screenWidth < 650) {
+                placeholderBox.style.top = '6.215vw';    // based on <figure> element's top margin in mediaqueries.css JANUARY 2018 !!! THIS SIZE WORKS FOR 442-650PX SCREENWIDTH ONLY
+            } else {     // then screenwidth must be above 650px
+                placeholderBox.style.top = '40.4px';    // based on <figure> element's top margin in mediaqueries.css JANUARY 2018 !!! THIS SIZE WORKS FOR 442-650PX SCREENWIDTH ONLY
+            }
+        }
+
         placeholderBox.setAttribute('id', 'placeholderbox');
 
         // create dots container for each gallery
@@ -338,11 +350,41 @@ function slideshow() {
         }
 
         // if the first slide has a caption & the screen is less than 1225px wide
-        if ((firstCaption.hasAttribute('data-galleryfigcaption')) && (screenWidth < 1225)) {
+        // if ((firstCaption.hasAttribute('data-galleryfigcaption')) && (screenWidth < 1225)) {
+
+        // if (firstCaption.hasAttribute('data-galleryfigcaption')) {
             // if there is a caption, set this as the placeholder box's height (just the height of the <figure> element)
-            placeholderBox.style.height = 'calc(' + galleryList[i].firstElementChild.firstElementChild.offsetHeight + 'px)';    
+            // placeholderBox.style.height = 'calc(10px + ' + galleryList[i].firstElementChild.firstElementChild.offsetHeight + 'px)';    
+        // } else {
+            // placeholderBox.style.height = 'calc(32.5px + ' + galleryList[i].firstElementChild.firstElementChild.offsetHeight + 'px)';   
+        // }
+
+        if (screenWidth < 442) {
+
+            if (firstCaption.hasAttribute('data-galleryfigcaption')) {
+                placeholderBox.style.height = 'calc(10px + ' + galleryList[i].firstElementChild.firstElementChild.offsetHeight + 'px)';    
+            } else {
+                placeholderBox.style.height = 'calc(32.5px + ' + galleryList[i].firstElementChild.firstElementChild.offsetHeight + 'px)';   
+            }
+
         } else {
-            placeholderBox.style.height = 'calc(1.072rem + ' + galleryList[i].firstElementChild.firstElementChild.offsetHeight + 'px)';   
+            if (screenWidth < 650) {
+
+                if (firstCaption.hasAttribute('data-galleryfigcaption')) {
+                    placeholderBox.style.height = 'calc(2.26vw + ' + galleryList[i].firstElementChild.firstElementChild.offsetHeight + 'px)';    
+                } else {
+                    placeholderBox.style.height = 'calc(7.345vw + ' + galleryList[i].firstElementChild.firstElementChild.offsetHeight + 'px)';   
+                }
+
+            } else {
+
+                if (firstCaption.hasAttribute('data-galleryfigcaption')) {
+                    placeholderBox.style.height = 'calc(14.69px + ' + galleryList[i].firstElementChild.firstElementChild.offsetHeight + 'px)';    
+                } else {
+                    placeholderBox.style.height = 'calc(47.743px + ' + galleryList[i].firstElementChild.firstElementChild.offsetHeight + 'px)';   
+                }
+
+            }
         }
 
         // the height of placeholderBox has to be moved to render AFTER the caption is made visible in the DOM, otherwise the caption will come in at 0px high since it will still be hidden!
@@ -354,7 +396,7 @@ function slideshow() {
             // create dots + put dots into dots container
             var dot = document.createElement('span');
             dot.setAttribute('class', 'dot dotunfilled');
-            dot.innerHTML = '<img src="http://localhost:8888/kirby-project/kirby-2.4.0/assets/images/dot.svg" alt="go to this slide" class="dotimg dotimgunfilled">';
+            dot.innerHTML = '<img src="https://liaprins.com/assets/images/dot.svg" alt="go to this slide" class="dotimg dotimgunfilled">';
             dotsContainer.appendChild(dot);
             dotsList = dotsContainer.children;
             dotsList[j].setAttribute('data-dot-index', (j));
@@ -363,7 +405,7 @@ function slideshow() {
             dotsList[j].setAttribute('data-galleryname', galleryName);
             // then override the first dot, to indicate it is the current dot/slide
             dotsList[0].setAttribute('class', 'dot');
-            dotsList[0].innerHTML = '<img src="http://localhost:8888/kirby-project/kirby-2.4.0/assets/images/dot-filled.svg" alt="go to this slide" class="dotimg dotimgfill">';
+            dotsList[0].innerHTML = '<img src="https://liaprins.com/assets/images/dot-filled.svg" alt="go to this slide" class="dotimg dotimgfill">';
 
             // position all slides' <li> elements horizontally (absolute) + add data-* attribute to recognize them as side slides if clicked on
             var slide = galleryList[i].children;
@@ -373,10 +415,12 @@ function slideshow() {
             // position slides at increments equal to the post text width + 1 margin
             // slide[j].style.left = 'calc(700px * ' + j + ')';    // this size works for 1225+ only
             var screenWidth = window.innerWidth;
-            if (screenWidth < 817) {
+            // if (screenWidth < 817) {
+            if (screenWidth < 973) {
                 slide[j].style.left = 'calc(85.714vw * ' + j + ')';
+                // slide[j].style.left = 'calc(82.143vw * ' + j + ')';
             } else {
-                slide[j].style.left = 'calc(700px * ' + j + ')';
+                slide[j].style.left = 'calc(834px * ' + j + ')';
             }
 
             // position <figure> element vertically (relative) within <li> element, so it can be even with top of first slide
@@ -396,11 +440,37 @@ function slideshow() {
                 firstGalleryCaption.setAttribute('class', 's-textface caption gallerycaption whiteedge');
             }
 
-            dotsContainer.style.top = 'calc(-' + (placeholderBox.offsetHeight - slide[0].firstElementChild.firstElementChild.offsetHeight) + 'px + 1.536rem)';
+            // dotsContainer.style.top = 'calc(-' + (placeholderBox.offsetHeight - slide[0].firstElementChild.firstElementChild.offsetHeight) + 'px + 1.536rem)';
+            // dotsContainer.style.top = 'calc(-' + (placeholderBox.offsetHeight - slide[0].firstElementChild.firstElementChild.offsetHeight) + 'px + 23px)';
+
+            if (screenWidth < 442) {
+                dotsContainer.style.top = 'calc(-' + (placeholderBox.offsetHeight - slide[0].firstElementChild.firstElementChild.offsetHeight) + 'px + 23px)';
+                arrowContainer.style.top = 'calc(' + (slide[0].firstElementChild.firstElementChild.offsetHeight) + 'px + 15px)';
+            } else {
+                if (screenWidth < 650) {
+                    // dotsContainer.style.top = 'calc(-' + (placeholderBox.offsetHeight - slide[0].firstElementChild.firstElementChild.offsetHeight) + 'px + 5.2vw)';
+                    dotsContainer.style.top = 'calc(-' + (placeholderBox.offsetHeight - slide[0].firstElementChild.firstElementChild.offsetHeight) + 'px + 6.215vw - 1vw)';
+                    arrowContainer.style.top = 'calc(' + (slide[0].firstElementChild.firstElementChild.offsetHeight) + 'px + 3.39vw)';
+                } else {     // then screenwidth must be above 650px
+                    // dotsContainer.style.top = 'calc(-' + (placeholderBox.offsetHeight - slide[0].firstElementChild.firstElementChild.offsetHeight) + 'px + 33.79px)';
+                    dotsContainer.style.top = 'calc(-' + (placeholderBox.offsetHeight - slide[0].firstElementChild.firstElementChild.offsetHeight) + 'px + 43px)';
+                    arrowContainer.style.top = 'calc(' + (slide[0].firstElementChild.firstElementChild.offsetHeight) + 'px + 22.035px)';
+                }
+            }
 
             ////////////////////////////////////////////////////////////////////////////////////////////////////
             // ARROWS!!! STYLE THEM HERE vvvvv
-            arrowContainer.style.top = 'calc(' + (slide[0].firstElementChild.firstElementChild.offsetHeight) + 'px + 1.024rem)';
+            // arrowContainer.style.top = 'calc(' + (slide[0].firstElementChild.firstElementChild.offsetHeight) + 'px + 15px)';
+
+            // if (screenWidth < 442) {
+                // arrowContainer.style.top = 'calc(' + (slide[0].firstElementChild.firstElementChild.offsetHeight) + 'px + 15px)';
+            // } else {
+                // if (screenWidth < 650) {
+                    // arrowContainer.style.top = 'calc(' + (slide[0].firstElementChild.firstElementChild.offsetHeight) + 'px + 3.39vw)';
+                // } else {     // then screenwidth must be above 650px
+                    // arrowContainer.style.top = 'calc(' + (slide[0].firstElementChild.firstElementChild.offsetHeight) + 'px + 22.035px)';
+                // }
+            // }
             arrowContainer.style.left = 0;
             ////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -414,8 +484,8 @@ function slideshow() {
 
 // EVENT LISTENER ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // creates slideshow from galleries on page/DOM content load
-// window.addEventListener('load', slideshow, false);
-window.addEventListener('DOMContentLoaded', slideshow, false);
+window.addEventListener('load', slideshow, false);
+// window.addEventListener('DOMContentLoaded', slideshow, false);
 
 
 
@@ -435,10 +505,10 @@ function advanceOrRetreat(clickedSideSlide, dotsContainer, gallery, clickedIndex
     for (k = 0; k < dotsList.length; k++) {
         if (k == clickedIndex) {
             dotsList[k].setAttribute('class', 'dot');
-            dotsList[k].innerHTML = '<img src="http://localhost:8888/kirby-project/kirby-2.4.0/assets/images/dot-filled.svg" alt="go to this slide" class="dotimg dotimgfill">';
+            dotsList[k].innerHTML = '<img src="https://liaprins.com/assets/images/dot-filled.svg" alt="go to this slide" class="dotimg dotimgfill">';
         } else {
             dotsList[k].setAttribute('class', 'dot dotunfilled');
-            dotsList[k].innerHTML = '<img src="http://localhost:8888/kirby-project/kirby-2.4.0/assets/images/dot.svg" alt="go to this slide" class="dotimg dotimgunfilled">';
+            dotsList[k].innerHTML = '<img src="https://liaprins.com/assets/images/dot.svg" alt="go to this slide" class="dotimg dotimgunfilled">';
         } // close if
     } // close k
     
@@ -446,7 +516,7 @@ function advanceOrRetreat(clickedSideSlide, dotsContainer, gallery, clickedIndex
     var placeholderBox = gallery.lastElementChild.previousElementSibling;
     var screenWidth = window.innerWidth;
 
-    if (screenWidth < 817) {
+    if (screenWidth < 973) {
         // moves entire gallery
         gallery.style.right = 'calc(85.714vw * ' + clickedIndex + ')';    // !!! 1225+ only !!! THIS LINE OF CODE WILL NEED TO BE MEDIAQUERIED WITHIN JS, VIA if-statements on window.screenWidth (see menu.js)
         // keeps placeholderBox in current slide position + reflects its height: need to move it in the opposite direction and same increment that the slide moved, to offset it otherwise being attached to the first slide
@@ -456,18 +526,28 @@ function advanceOrRetreat(clickedSideSlide, dotsContainer, gallery, clickedIndex
         // keeps arrows in current slide position: need to move it in the opposite direction and same increment that the slide moved, to offset it otherwise being attached to the front of the gallery
         arrowContainer.style.left = 'calc(85.714vw * ' + clickedIndex + ')';    // this size works for 1225+ only
         // ARROWS!!! STYLE THEM HERE vvvvv
-        arrowContainer.style.top = 'calc(' + clickedSideSlide.firstElementChild.offsetHeight + 'px + 1.024rem)';
+        // arrowContainer.style.top = 'calc(' + clickedSideSlide.firstElementChild.offsetHeight + 'px + 15px)';
     } else {
         // moves entire gallery
-        gallery.style.right = 'calc(700px * ' + clickedIndex + ')';    // !!! 1225+ only !!! THIS LINE OF CODE WILL NEED TO BE MEDIAQUERIED WITHIN JS, VIA if-statements on window.screenWidth (see menu.js)
+        gallery.style.right = 'calc(834px * ' + clickedIndex + ')';    // !!! 1225+ only !!! THIS LINE OF CODE WILL NEED TO BE MEDIAQUERIED WITHIN JS, VIA if-statements on window.screenWidth (see menu.js)
         // keeps placeholderBox in current slide position + reflects its height: need to move it in the opposite direction and same increment that the slide moved, to offset it otherwise being attached to the first slide
-        placeholderBox.style.right = 'calc(-700px * ' + clickedIndex + ')';    // this size works for 1225+ only
+        placeholderBox.style.right = 'calc(-834px * ' + clickedIndex + ')';    // this size works for 1225+ only
         // keeps dotsContainer in current slide position: need to move it in the opposite direction and same increment that the slide moved, to offset it otherwise being attached to the front of the gallery
-        dotsContainer.style.left = 'calc(700px * ' + clickedIndex + ')';    // this size works for 1225+ only
+        dotsContainer.style.left = 'calc(834px * ' + clickedIndex + ')';    // this size works for 1225+ only
         // keeps arrows in current slide position: need to move it in the opposite direction and same increment that the slide moved, to offset it otherwise being attached to the front of the gallery
-        arrowContainer.style.left = 'calc(700px * ' + clickedIndex + ')';    // this size works for 1225+ only
+        arrowContainer.style.left = 'calc(834px * ' + clickedIndex + ')';    // this size works for 1225+ only
         // ARROWS!!! STYLE THEM HERE vvvvv
-        arrowContainer.style.top = 'calc(' + clickedSideSlide.firstElementChild.offsetHeight + 'px + 1.024rem)';
+        // arrowContainer.style.top = 'calc(' + clickedSideSlide.firstElementChild.offsetHeight + 'px + 1.024rem)';
+    }
+
+    if (screenWidth < 442) {
+        arrowContainer.style.top = 'calc(' + clickedSideSlide.firstElementChild.offsetHeight + 'px + 15px)';
+    } else {
+        if (screenWidth < 650) {
+            arrowContainer.style.top = 'calc(' + clickedSideSlide.firstElementChild.offsetHeight + 'px + 3.39vw)';
+        } else {     // then screenwidth must be above 650px
+            arrowContainer.style.top = 'calc(' + clickedSideSlide.firstElementChild.offsetHeight + 'px + 22.035px)';
+        }
     }
 
     // move caption visibility to clicked slide
@@ -483,19 +563,62 @@ function advanceOrRetreat(clickedSideSlide, dotsContainer, gallery, clickedIndex
     }
 
     // if the selected slide has a caption & the screen is less than 1225px wide
-    if ((clickedSlideCaption.hasAttribute('data-galleryfigcaption')) && (screenWidth < 1225)) {
-        // if there is a caption, set this as the placeholder box's height (just the height of the <figure> element)
-        placeholderBox.style.height = 'calc(' + clickedSideSlide.firstElementChild.offsetHeight + 'px)';               
+    // if ((clickedSlideCaption.hasAttribute('data-galleryfigcaption')) && (screenWidth < 1225)) {
+    // if (clickedSlideCaption.hasAttribute('data-galleryfigcaption')) {
+        // placeholderBox.style.height = 'calc(10px + ' + clickedSideSlide.firstElementChild.offsetHeight + 'px)';               
+    // } else {
+        // placeholderBox.style.height = 'calc(32.5px + ' + clickedSideSlide.firstElementChild.offsetHeight + 'px)';               
+    // }
+
+
+
+    if (screenWidth < 442) {
+
+        if (clickedSlideCaption.hasAttribute('data-galleryfigcaption')) {
+            placeholderBox.style.height = 'calc(10px + ' + clickedSideSlide.firstElementChild.offsetHeight + 'px)';               
+        } else {
+            placeholderBox.style.height = 'calc(32.5px + ' + clickedSideSlide.firstElementChild.offsetHeight + 'px)';               
+        }
+
     } else {
-        placeholderBox.style.height = 'calc(1.072rem + ' + clickedSideSlide.firstElementChild.offsetHeight + 'px)';               
+        if (screenWidth < 650) {
+
+            if (clickedSlideCaption.hasAttribute('data-galleryfigcaption')) {
+                placeholderBox.style.height = 'calc(2.26vw + ' + clickedSideSlide.firstElementChild.offsetHeight + 'px)';               
+            } else {
+                placeholderBox.style.height = 'calc(7.345vw + ' + clickedSideSlide.firstElementChild.offsetHeight + 'px)';               
+            }
+
+        } else {
+
+            if (clickedSlideCaption.hasAttribute('data-galleryfigcaption')) {
+                placeholderBox.style.height = 'calc(14.69px + ' + clickedSideSlide.firstElementChild.offsetHeight + 'px)';               
+            } else {
+                // placeholderBox.style.height = 'calc(47.743px + ' + clickedSideSlide.firstElementChild.offsetHeight + 'px)';               
+                placeholderBox.style.height = 'calc(47.743px + ' + clickedSideSlide.firstElementChild.offsetHeight + 'px)';               
+            }
+
+        }
     }
+
+
 
     // the height of placeholderBox has to be moved to render AFTER the caption is made visible in the DOM, otherwise the caption will come in at 0px high since it will still be hidden!
     // placeholderBox.style.height = 'calc(2.048rem + ' + clickedSideSlide.firstElementChild.offsetHeight + 'px)';               
     // placeholderBox.style.height = 'calc(' + clickedSideSlide.firstElementChild.offsetHeight + 'px)';               
 
     // position dots container so it is between caption and img (for less than 1225, but still works perfectly for 1225+ also!)
-    dotsContainer.style.top = 'calc(-' + (placeholderBox.offsetHeight - clickedSideSlide.firstElementChild.firstElementChild.offsetHeight) + 'px + 1.536rem)';
+    // dotsContainer.style.top = 'calc(-' + (placeholderBox.offsetHeight - clickedSideSlide.firstElementChild.firstElementChild.offsetHeight) + 'px + 23px)';
+
+    if (screenWidth < 442) {
+        dotsContainer.style.top = 'calc(-' + (placeholderBox.offsetHeight - clickedSideSlide.firstElementChild.firstElementChild.offsetHeight) + 'px + 23px)';
+    } else {
+        if (screenWidth < 650) {
+            dotsContainer.style.top = 'calc(-' + (placeholderBox.offsetHeight - clickedSideSlide.firstElementChild.firstElementChild.offsetHeight) + 'px + 6.215vw - 1vw)';
+        } else {     // then screenwidth must be above 650px
+            dotsContainer.style.top = 'calc(-' + (placeholderBox.offsetHeight - clickedSideSlide.firstElementChild.firstElementChild.offsetHeight) + 'px + 43px)';
+        }
+    }
 
     // pass current slide attributes to clicked slide, and vice versa, for identification
     currentSlide.firstElementChild.firstElementChild.setAttribute('class', 'contentimage');
@@ -650,7 +773,7 @@ function clickDot(e) {
 
         // set newly clicked dot to filled
         clickedDot.setAttribute('class', 'dot')
-        // clickedDot.innerHTML = '<img src="http://localhost:8888/kirby-project/kirby-2.4.0/assets/images/dot-filled.svg" alt="go to this slide" class="dotimg">';
+        // clickedDot.innerHTML = '<img src="https://liaprins.com/assets/images/dot-filled.svg" alt="go to this slide" class="dotimg">';
     }  // close if
 } // close function
 
@@ -892,7 +1015,8 @@ function lightboxSlideshowResize() {
 
 }
 
-window.addEventListener('resize', lightboxSlideshowResize, false);
+// window.addEventListener('resize', lightboxSlideshowResize, false);
+window.addEventListener('orientationchange', lightboxSlideshowResize, false);
 
 
 

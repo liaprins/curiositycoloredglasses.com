@@ -1,0 +1,9 @@
+Caption: 
+
+----
+
+Alt: A node's shape or symbol can be used in conjunction with color to represent classification for visual reinforcement and accessibility, or it can be used in conjunction with color to layer in a different type of classification.
+
+----
+
+Sort: 7

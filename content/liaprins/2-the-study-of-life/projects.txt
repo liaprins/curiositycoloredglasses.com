@@ -1,0 +1,120 @@
+Title: The Study of Life
+
+----
+
+Intro: Isaac Newton summed up the self-effacing secret to scientific discovery when (link: https://digitallibrary.hsp.org/index.php/Detail/objects/9792 text: he declared target: blank), “If I have seen further, it is by standing on the shoulders of giants.” **Providing effective and well-placed footholds for the next generation of titan-scaling scientific explorers is one of formal education’s  gravest responsibilities—and most significant challenges**: my more dire high school memories find me defeatedly measuring my reading assignments in fractions of book-spine inches and reaching aimlessly for any sort of relevance to the route that my future might take. Some distance down that route, my college capstone project presented the perfect opportunity to investigate this dilemma from a design perspective. **I planned to overhaul the contemporary textbook, exploring how its usual static, text-heavy approach to lessons could be enhanced with imagery and interactivity to deliver understanding at scale.**
+
+----
+
+Opportunities: 
+
+- I wanted to **reveal the relevance of science** by reducing the degrees of separation between lessons and their bearing on my would-be readers’ futures.
+
+- The physicality of textbooks poses problems: **their sheer size inhibits them from becoming part of regular routines**—like bus rides and coffee shop stops—where their content could otherwise be consumed more efficiently and enjoyably. **They’re also dense by design**, necessarily packing as much as possible into fewer physical pages, resulting in a high text-to-imagery ratio. It seemed to me that tablets, combined with thoughtful design, held the potential to liberate textbooks from these particular issues.
+
+- Materials like textbooks reach a multitude of students. But if they’re ever to educate effectively at this scale, **their approaches must be diverse enough to broach all of these students’ varied learning styles**.
+
+----
+
+Process: 
+
+I started by examining several existing biology books, both physical and digital. The photos and diagrams alongside their text-filled pages pulled me in, but once they had my attention, their chaotically arranged elements distracted me. Visual information was bottlenecked by the limitations of the static page it inhabited, forced to appear—overwhelmingly—all at once, rather than reveal itself as a carefully paced sequence.
+
+(image: external-examples.jpg)
+
+Visual storytelling, then, could potentially play a crucial role in improving the intake of information, but so might narrative. A podcast episode I’d heard many months earlier eloquently and compellingly summed up the values intrinsic to the pursuit of scientific discovery, and had instantly crystalized my personal motive to make the resulting knowledge more consumable. I decided to open my book with an audio clip and transcript of the talk, as an introduction to the scientific process.
+
+<figure>
+<audio controls style="width:100%;">
+  <source src="podcast.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+<figcaption class="s-textface">
+<hr class="toprule">
+Listen for yourself to neuroscientist Doug Fields’ inspiring account as told to the <em><a href="https://www.storycollider.org/stories/2016/1/6/doug-fields-reaching-for-discovery" target="blank">Story Collider</a></em> podcast.
+</figcaption>
+</figure>
+
+I located a chapter’s worth of open-source text introducing cells as the building blocks of life, and set to work restructuring it in an ardent attempt to ward off the feared *re-re-reading syndrome*&ast; to which I frequently succumb when faced with unfamiliar information lacking a logical and clear structure. Once I had sorted the text into a roughly linear framework, I began to identify areas that would benefit from some sort of visual assistance in order to be better understood or engaged with. 
+
+(text: *Re-re-reading syndrome, as I irritatingly call it, is a common condition in which the reader repeats what they’ve just read several times, due to lack of comprehension. class: asterisk)
+
+(image: pacing.jpg)
+
+I used Adobe InDesign’s Digital Publishing Suite to design and export my book chapter, taking advantage of the technology to bring my illustrations to life with interaction. Some single-celled organisms use small hair-like structures called cilia to navigate their environment; this movement-centric concept seemed to beg to be animated in some way. I decided to build the motion of these cilia into a flipbook-like module that the user could flick through.
+
+(image: interactive.jpg)
+
+(image: interactivity.gif)
+
+After designing each interactive element for my book chapter, I identified the tablet gestures they necessitated from the user, and explored how to visually indicate which gesture was required where. I wanted each action to be clear, but also for the icons’ styles to fit together cohesively.
+
+(image: sketch.jpg)
+
+(image: nav-icons-artboard-black.png)
+
+----
+
+Thumbnail: the-study-of-life.jpg
+
+----
+
+Outcomes: 
+
+Biology is, at its very essence, the study of life. My awareness and appreciation of this informed not only my book’s title, but also its imagery, interactions, and visual style. Life grows, adapts, changes, and moves; such a stimulating subject matter practically implored me to present it vibrantly and vigorously.
+
+<figure>
+<iframe src="//player.vimeo.com/video/269395770?title=0&byline=0&portrait=0&color=2caeb3" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen class="postvideo-16-9-ratio"></iframe>
+<figcaption class="s-textface">
+<hr class="toprule">
+A biology textbook designed for a tablet, <em>The Study of Life</em> enlightens high school students through a range of approaches including stories, interviews with professionals in the field, interactive diagrams, and videos.
+</figcaption>
+</figure>
+
+When explained effectively, biology becomes a topic that everyone can relate to, as it reveals insights into every bit of the world around us. The butterfly wing on the cover exemplifies how a seemingly simple subject can reveal delightful details when examined more closely.
+
+(gallery: ipad-pairings)
+
+I structured the text to act as a tour of the cell, its concepts tangibly rooted in and organized by the responsibilities and functions managed by each of the cell’s organelles. An interactive map of the cell allows students to see how the next idea they’ll be learning fits into the bigger picture of the cell and its systems as a whole.
+
+(image: cell-map.gif)
+
+I chose high-resolution photos whenever I could, building in pan-and-zoom functionalities to mimic the operations of a microscope.
+
+(image: pan-and-zoom.gif)
+
+Several cell-related concepts, such as osmosis and protein transport, were too abstract or even imperceptibly microscopic to benefit from found photography. In these cases I created step-by-step illustrations, giving the user the control to move through each stage at their own pace.
+
+(image: illustration.gif)
+
+Unfamiliar, multisyllabic terms give any reader pause. Rather than break the flow of reading to look up vocabulary, students can tap on the word in question to open its definition. The root parts and related terms appear as well, to help students develop an understanding of similar words on their own over time.
+
+(image: definition.gif)
+
+A complete education enables students to understand how the content they’re taught applies to the bigger picture of their lives, and the world. The icons below can be found throughout *The Study of Life*, linking to a range of mediums that explore the main lesson from real-world perspectives.
+
+(image: supplementary-media.jpg)
+
+(text: <span class="inlinesubhead">ASPIRE</span> Students can listen to interviews with professionals from various industries such as medicine, life sciences, and ecology, to develop a more comprehensive picture of possible careers in the science sector. class: asterisk)
+
+(text: <span class="inlinesubhead">INVESTIGATE</span> Knowledge is never static. The latest findings from scientific journals are introduced here—and in theory, could be updated regularly—adding depth and context to the curriculum. class: asterisk)
+
+(text: <span class="inlinesubhead">EXAMINE</span> Observable wonders of the natural world are everywhere: did you know a chicken egg is considered a single cell by most scientists? <em>The Study of Life</em> presents this assertion in detail, and explores other instances of perceptible science in the everyday world. class: asterisk)
+
+(text: <span class="inlinesubhead">EXPERIMENT</span> Digital tablets are portable and easy to use, making them the perfect lab partner. These recipe-like experiments walk students through each step with images and straight-forward instructions. class: asterisk)
+
+----
+
+Livelearn: 
+
+- **Nearly all of the opportunities I chose to explore for this project were based on my own past experience as a textbook-laden biology student.** The visual design program I was in at the time didn’t place any emphasis on research, and focused primarily on visual outcomes. But after having worked as an interaction and UX designer in the software industry for a while, I’ve developed a huge respect for and reliance on user research. **I’d love to have tested this design and other iterations with real students. Short of that, developing a domain understanding around learning styles would have helped to inform and validate my designs.**
+
+- I love the art of illuminating ideas through illustrations, and wish I could have dedicated more effort to the ones I created for this project. At the same time, I acknowledge that creating over a dozen scientific renderings could have been a capstone project all its own, so in hindsight I wonder if **I could have instead incorporated existing illustrations**—several impeccable portrayals of the very concepts I sought to communicate accompanied the open-source text I used. **An approach like this could have made concepts explained via visuals even more engaging, while allowing me to fully focus on the bigger picture of structuring the information and designing interactions.**
+
+----
+
+Stats: 
+
+**Project pretext:** Academic
+**Assignment:** Create a capstone project of my own design
+**Timeframe:** 10 weeks

@@ -1,0 +1,5 @@
+Caption: Ms. Carassius is a microbiologist researching potential genetic causes for chronic goldfish hiccups. She is already confident of several genes linked to the condition: these she puts into PA’s <em>known entities</em> field. She’s also gathered a long list of potential genes (with the aid of other WDD apps) that she suspects <em>might</em> have a bearing on the disease as well. She lists these in PA’s <em>candidate entities</em> field.
+
+----
+
+Alt: A Venn diagram portrays a set of known genes and a set of candidate genes, with a hiccuping goldfish in the middle.

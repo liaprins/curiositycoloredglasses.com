@@ -1,0 +1,9 @@
+Caption: 
+
+----
+
+Alt: Networks can use algorithms replicate physics, in which nodes are assigned attraction based on a given criteria, and edges act as springs: the strength can also be based on assigned criteria.
+
+----
+
+Sort: 19

@@ -1,0 +1,5 @@
+Caption: 
+
+----
+
+Alt: A sketch I made as shorthand for myself while talking to our data scientists, featuring documents, terms, and input entities, and how these fit together to form the data model behind Predictive Analytics.

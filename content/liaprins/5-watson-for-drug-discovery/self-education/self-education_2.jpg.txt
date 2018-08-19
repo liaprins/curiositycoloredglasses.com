@@ -1,0 +1,5 @@
+Caption: The Predictive Analytics algorithms filter through Watson’s corpus of scientific journals, patents, and proprietary databases, identifying documents in which at least one of Ms. Carassius’ input entities—known or candidate—occurs.
+
+----
+
+Alt: Several drawn documents contain the names of the candidate and known genes.

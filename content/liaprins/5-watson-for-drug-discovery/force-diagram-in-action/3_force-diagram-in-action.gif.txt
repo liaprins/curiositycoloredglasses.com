@@ -1,0 +1,5 @@
+Caption: An entity pair’s similarity is evidenced by a word spectrum that visualizes terms that the two co-occur with in literature.
+
+----
+
+Alt: The "View Text Similarity Evidence" button is clicked, opening up the word spectrum.

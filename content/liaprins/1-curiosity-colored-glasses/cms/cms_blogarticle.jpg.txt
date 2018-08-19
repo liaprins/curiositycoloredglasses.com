@@ -1,0 +1,5 @@
+Caption: My CMS’s interface lists sub-pages and uploaded files, and helps direct content input. Common tags across multiple posts are easy to apply thanks to a type-ahead function that searches for tag names already employed on other posts, ensuring consistency.
+
+----
+
+Alt: A left panel lists all sub-pages and files, while the right side of the CMS screen holds the content in organized fields.

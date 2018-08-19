@@ -1,35 +1,82 @@
-/* FONTS -------------------------------------------------- */
-/* FOR CHROME AND FF, ONLY WORKS WHEN .WOFF IS THE ONLY ONE THERE... */
-
+@font-face {
+    font-family: 'IBM-Plex_Mono_Bold';
+    src: url(../fonts/ibmplexmono-bold-v01-webfont.woff) format('woff');    }    
 
 @font-face {
-    font-family: 'Grotesque_Bold';
-    src: url(../fonts/GROTESQUE_BOLD_smooth.woff) format('woff');    }    
-
-
-@font-face {
-    font-family: 'Sintesi_Sans';
-    src: url(../fonts/SINTESI_SANS_native.woff) format('woff');    }
-
-
-/* This font is to replace "bold" and "strong"; the .woff was made with Font Squirrel from my existing .ttf file */
-@font-face {    
-    font-family: 'Sintesi_Sans_Demi-Bold';
-    src: url(../fonts/sintesi_sans_demi-bold-webfont.woff) format('woff');    }
+    font-family: 'IBM-Plex_Mono_Regular';
+    src: url(../fonts/ibmplexmono-regular-v01-webfont.woff) format('woff');    }
     
-
-/* :) This font is to replace "italic" and "em"; the .woff was made with Font Squirrel from my existing .ttf file */
 @font-face {    
-    font-family: 'Sintesi_Sans_Italic';
-    src: url(../fonts/sintesi_sans_italic-webfont.woff) format('woff');    }
+    font-family: 'IBM-Plex_Sans_Regular';
+    src: url(../fonts/ibmplexsans-regular-v01.1-webfont.woff) format('woff');    }
 
-/* TESTING A LIGHTER WEIGHT BODY COPY */
 @font-face {    
-    font-family: 'Sintesi_Sans_Light';
-    src: url(../fonts/sintesisanslight-webfont.woff) format('woff');    }
+    font-family: 'IBM-Plex_Sans_Italic';
+    src: url(../fonts/ibmplexsans-italic-v01.1-webfont.woff) format('woff');    }
 
-/* TESTING A LIGHTER WEIGHT ITALIC TO GO WITH THE LIGHTER BODY COPY FONT I'M ALSO TESTING */
 @font-face {    
-    font-family: 'Sintesi_Sans_Light_Italic';
-    src: url(../fonts/sintesisanslight-italic-webfont.woff) format('woff');    }
+    font-family: 'IBM-Plex_Sans_Bold';
+    src: url(../fonts/ibmplexsans-bold-v01.1-webfont.woff) format('woff');    }
 
+@font-face {    
+    font-family: 'IBM-Plex_Sans_Medium';
+    src: url(../fonts/IBMPlexSans-Medium.woff) format('woff');    }
+
+@font-face {    
+    font-family: 'IBM-Plex_Sans_Medium_Italic';
+    src: url(../fonts/IBMPlexSans-MediumItalic.woff) format('woff');    }
+
+@font-face {    
+    font-family: 'IBM-Plex_Sans_Semi-Bold';
+    src: url(../fonts/IBMPlexSans-SemiBold.woff) format('woff');    }
+
+@font-face {    
+    font-family: 'IBM-Plex_Mono_Medium';
+    src: url(../fonts/IBMPlexMono-Medium.woff) format('woff');    }
+
+@font-face {    
+    font-family: 'IBM-Plex_Mono_Medium_Italic';
+    src: url(../fonts/IBMPlexMono-MediumItalic.woff) format('woff');    }
+
+
+
+body {
+    font-family: 'IBM-Plex_Sans_Regular';
+}
+
+/*
+#stats strong {
+    font-family: 'IBM-Plex_Sans_Semi-Bold';
+}
+*/
+
+#stats strong, .inlinesubhead {
+    font-family: 'IBM-Plex_Sans_Bold', 'Courier_New', Courier, Monotype;
+}
+
+h1, h3, h4, h6, #email, #instagram, #resume, #instagram-text, .current {
+    font-family: 'IBM-Plex_Mono_Bold', 'Courier_New', Courier, Monotype;
+}
+
+h2, .menuitem, .pullquote, .pullquoter {
+    font-family: 'IBM-Plex_Mono_Regular', 'Courier_New', Courier, Monotype;
+}
+
+.attribution {
+    font-family: 'IBM-Plex_Mono_Medium', 'Courier_New', Courier, Monotype;
+}
+
+.attribution em {
+    font-family: 'IBM-Plex_Mono_Medium_Italic', 'Courier_New', Courier, Monotype;
+}
+
+figcaption {
+    font-family: 'IBM-Plex_Sans_Medium', 'Courier_New', Courier, Monotype;
+}
+
+figcaption em {
+    font-family: 'IBM-Plex_Sans_Medium_Italic', 'Courier_New', Courier, Monotype;
+
+
+
+    

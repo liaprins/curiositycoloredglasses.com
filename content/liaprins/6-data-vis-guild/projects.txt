@@ -1,0 +1,110 @@
+Title: Data Vis Guild
+
+----
+
+Thumbnail: data-vis-guild.jpg
+
+----
+
+Intro: The end users of IBM Watson Health products are physicians, patients, biologists, and hospital administrators. **They’re not data scientists, and don’t have the skills (or time) required to render and interpret enormous data sets. So how can we best use this very data and the insights waiting within it to inform and guide our users at scale?** It was this question, coupled with a strong interest in data visualization more generally, that led me to launch a series of guild meetings and activities for the Watson Health design community.
+
+----
+
+Opportunities: 
+
+- Other product teams in IBM had reached out to me for feedback on their data vis designs, and I realized **many basic best practices were not being followed**; in talking to designers, I realized they were not aware of them. Guild meetings could be a chance to get us all on the same page.
+
+- Designing with data feels intimidating and unfamiliar at first. **Intentionally examining effective data visualizations can inspire and provide the context needed to take the first step.**
+
+- There are nearly 35 offerings within the Watson Health portfolio. Several employ similar user task models that would benefit from visualization, so **sharing our products and patterns could prevent us from repeatedly reinventing the wheel**.
+
+----
+
+Process: 
+
+Guilds are groups that reach across teams within an organization, allowing common interests, skill sets, and practices to be developed. They’re also intended to break down silos between teams and encourage collaboration and pattern sharing, ultimately serving as an investment in the organization’s efficiency and agility. As such, a guild seemed like a perfect solution to the data vis disparities I’d observed across Watson Health.
+
+(image: guild-model.jpg)
+
+The guild needed goals if we were ever to produce tangible outcomes for our products and users. In preparation of the first guild meeting, I identified three high-level objectives to help align our activities. I based these on our users’ needs, our own internal needs as designers spread across distinct teams, and IBM Design’s motto: “works together, works the same, works for me”.
+
+(image: goals.jpg)
+
+I held the first guild meeting with the intention of collecting others’ input and feedback on these preliminary goals and learning what they wanted to get out of a data vis-themed guild. Mural provided a remote platform with which to collect attendees’ ideas across three dimensions: what they hoped the guild would provide, ways they might be able to contribute, and other ideas for how we could accomplish our intents. After assimilating everyone’s input, it was clear that some themes had surfaced:
+
+<ul class="processbullets">
+<li>learning data vis best practices and principles</li>
+<li>getting feedback on designs</li>
+<li>establishing consistency across Watson Health products and our practices</li>
+<li>understanding our users’ needs with regard to data</li>
+<li>and maybe my favorite—“nerding out over data vis together” as “one big happy family of visual awesomeness”.</li>
+</ul>
+
+(image: hopes-helps-how.jpg)
+
+----
+
+Outcomes: 
+
+In the following meetings, I attempted to address these themes through a variety of presentation types. I researched and shared data vis-specific topics to more deeply develop our understanding of when and how to employ certain visualization types and organized pattern reviews to keep our teams in alignment. 
+
+(image: grid.jpg)
+
+I’d become particularly familiar with and fond of network visualizations while working on (link: liaprins/watson-for-drug-discovery text: Watson for Drug Discovery popup: yes), a Life Sciences offering that makes good use of networks as querying tools, so I happily made them the subject of my first guild presentation. 
+
+(gallery: networks-in-a-nutshell)
+
+I also arranged for other Watson Health teams to present, whose products included or could benefit from visualizations. This way we could provide feedback and collaborate together on potential solutions. These “case studies”, as I called them, were intended to simply be point-in-time presentations so as to minimize the preparation required. I established a Mural template to help guide these sessions and help the presenting product team to provide the proper context for the rest of us in the guild.
+
+(image: mural-template.jpg)
+
+IBM’s Design Language team had begun work on a set of guidelines to help designers more effectively communicate and visualize aggregate data, calling on Accurat—a design firm specializing in data vis—as consultants. I met with Accurat team member and renowned data vis designer Giorgia Lupi a number of times to share real use cases and act as an ambassador of the AI and healthcare product spaces. The principles that went into our company’s data vis guidelines needed to account for the complexity that our design teams and our users dealt with daily.
+
+(image: ibm-guidelines.jpg)
+
+The Accurat team gave a talk at IBM’s Austin studio about their vision for the data vis guidelines and also showed some of their own inspiring work, all of which I recorded to share with the other Watson Health locations.
+
+(image: accurat-visit.jpg)
+
+During Accurat’s presentation, Giorgia Lupi had shown a passion project she’d done with a friend that had come to be called “Dear Data”. They’d mailed each other weekly, hand-made postcards featuring visualized data collected from the seemingly innocuous minutiae of their everyday lives. The incredibly detailed yet organic visualizations revealed subtle traits of their creators through both their content and form.
+
+I wished to have a fellow data vis adorer with which to share such creations, too … and then I realized that I did—potentially a whole guild full of them. A project like this held the potential to unite our members across the distance that physically divided us. So I implemented a Dear Data postcard exchange for the Watson Health studios, featuring prompts relevant to our collective everyday lives like the tools we use to do our jobs and what we listen to when we work or commute.
+
+(image: dear-data-prep.jpg)
+
+Unfortunately, I’d made a huge mistake in trusting the IBM internal mail system, which is intended to enable the free and safe sending of documents between all of the corporation’s international and seemingly infinite locations. It had seemed so handy at the time—no treks to the post office; no pricey purchases of international stamps. But the cost of convenience turned out to be high: not a single postcard found its way to its addressee, nor back to its sender. And somehow every single one of us had forgotten to photograph our customized creations. The lone survivor was an example postcard I had made to share in advance of the project.
+
+(gallery: dear-data-postcard)
+
+When I learned that Edward Tufte—an acclaimed communicator in the realm of data and information design—would be visiting Austin to give a lecture, I lobbied the Design Director of Watson Health to allow me to attend, promising I’d present my subsequent learnings to the rest of the designers in our department. My pitch resulted in success, and I dutifully recorded all that I could during the day-long session.
+
+(image: tufte-notes.jpg)
+
+After the course, I went to work distilling my notes into insights relevant to the artificial intelligence and healthcare spaces. I presented my takeaways to all Watson Health designers, hoping to raise more interest and awareness in the field of information visualization.
+
+(gallery: tufte-course-recap)
+
+As part of the seminar, I received four books by Tufte. I’d read a few other books centered around data and info vis, and had been sharing my learnings on the Slack channel I’d set up for the guild. I liked the idea of a book club to hold me and others interested accountable. As a community of mutually committed learners, we could discuss what we’d read and how it applied to our projects.
+
+(image: tufte-books.jpg)
+
+Tufte’s books—as well as others I’ve read within the information visualization genre—are dense. I eventually established a sustainable pace, committing to read a single spread per workday in detail. I’d take thorough notes and assess the content’s relevance to my responsibilities as a UX designer. Rather than posting my takeaways on the guild’s Slack channel everyday, I decided to share (link: https://dataviscliffsnotes.tumblr.com/ text: these observations popup: yes) online via Tumblr where anyone could easily access them in a simple, organized format. My posts relied on a single, telling image along with a brief explanation or provocation, and aimed to make the insights contained in these heady tomes more approachable for all my fellow data vis designers or those new to the field.
+
+(gallery: data-vis-cliffsnotes-tumblr)
+
+----
+
+Livelearn: 
+
+- In addition to the small matter of our handmade visualizations going missing, the postcard exchange I organized across Watson Health encountered another obstacle. Nearly everyone in the guild (and others who didn’t regularly attend) signed up to participate, but far fewer actually followed through and created postcards. **Rather than simply assigning a send-off date, pitching the idea as a workshop would have been far more fun**: we could all gather in our respective studios to make by hand together, bounce ideas off of each other, and get inspiration. 
+
+- Learning a new skill or staying up to speed with an existing one can be cumbersome within the hectic walls of the workplace. In my attempt to make data vis a part of my regular routine, I discovered several extremely ineffective methods and abandoned my quest more than once. But **everything is a prototype, requiring failure, iteration, and refinement**. I finally found an approach that worked for me: whenever a meeting starts late or I need a break from my work routine, I seize a few minutes to read just one spread of a book on the topic I’m trying to master at the moment. Over the course of the past year, intentionally allocating my spare moments in this way has provided the time I needed to finish three books.
+
+----
+
+Stats: 
+
+**Project pretext:** Professional + personal
+**Assignment:** Provide and guide a forum aimed at data vis skill development
+**Role:** Guild lead
+**Guild members:** About 40 at its peak

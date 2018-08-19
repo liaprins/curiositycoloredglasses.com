@@ -1,0 +1,9 @@
+Caption: 
+
+----
+
+Alt: Networks can be configured to occupy 1-, 2-, or 3-dimensions visually, but 2-D networks are the most intuitive.
+
+----
+
+Sort: 21

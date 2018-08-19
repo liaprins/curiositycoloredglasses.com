@@ -1,0 +1,5 @@
+Caption: I built a short series of conceptual illustrations walking new users through the technological processes that go on behind the screen, drawing upon sketches I had made for my own sake in an earlier effort to understand the data model myself.
+
+----
+
+Alt: A sampling of two known and three candidate inputs' most commonly co-occurring terms are listed.

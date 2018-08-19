@@ -15,7 +15,7 @@ for more information: http://getkirby.com/license
 
 */
 
-c::set('license', 'put your license key here');
+c::set('license', 'K2-PERSONAL-fdada1c0afcc423b250087458443fd20');
 
 /*
 
@@ -28,22 +28,31 @@ make Kirby work. For more fine-grained configuration
 of the system, please check out http://getkirby.com/docs/advanced/options
 */
 
+/* Make liaprins.com go straight to the main page, instead of liaprins.com/liaprins */
+c::set('home','liaprins');
 
-/* SETTING UP EMAIL ALERTS FOR COMMENTS VIA KIRBY PLUGIN */
-/*
-c::set('comments.use.email', true);
-c::set('comments.email.to', array('liajprins@gmail.com'));
+c::set('routes', array(
+  array(
+    'pattern' => '(:any)',
+    'action'  => function($uid) {
 
-c::set('comments.email.subject', '"New comment on {{ page.title }} by {{ comment.user.name }}."'));
-*/
+      $page = page($uid);
 
-/* MAKING COMMENTS' "PAGES" INVISIBLE AUTOMATICALLY SO THEY DON'T RETURN AS SEARCH RESULTS */
-c::set('comments.pages.comment.visible', false);
+      if(!$page) $page = page('liaprins/' . $uid);
+      if(!$page) $page = site()->errorPage();
 
+      return site()->visit($page);
 
-/* ADDING DEBUGGING ABILITY FOR PHP, WHILE IN CREATION/TESTING MODE ONLY! 
-(SHOULD REMOVE BY DELETING THE LINE COMPLETELY BEFORE PUBLISHING PUBLICILY!) */
-c::set('debug', true);
+    }
+  ),
+  array(
+    'pattern' => 'liaprins/(:any)',
+    'action'  => function($uid) {
+      go($uid);
+    }
+  )
+));
+
 
 
 

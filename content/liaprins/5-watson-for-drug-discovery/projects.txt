@@ -1,0 +1,147 @@
+Title: Watson for Drug Discovery
+
+----
+
+Thumbnail: watson-for-drug-discovery.jpg
+
+----
+
+Intro: More than nearly any other field of study, **science is cumulative: each new breakthrough is built upon the understanding established by those that came before it**, and therefore has value not only in itself and its applications, but also as an investment in the foundation from which future findings will inevitably spawn. But before they even set foot in the lab, this fractal nature of discovery poses a paradox to biologists searching for cures to genetic diseases like cancer. **Their roles require them to have the most recent relevant knowledge available; without it they risk investing millions of dollars and man-hours in an uncertain direction.** And in a world where less than 1 in 5,000 explored drugs make it to market, and those that do take over a decade to get there,* researchers cannot afford to set sail in the wrong direction. The irony lies in the fact that to keep up in the rapidly changing realm of biochemistry, researchers would have to spend more time reading than there are hours in the day—**the very discoveries they depend on drown them.** Fortunately, **with the arrival of cognitive computing, the sheer quantity of data is the opposite of a problem: it is an opportunity**. Watson for Drug Discovery uses machine learning to parse  data sources, surfacing relationships between genes, drugs, and diseases with the goal of guiding researchers in selecting potential drug candidates to explore and invest in.
+
+----
+
+Opportunities: 
+
+- IBM’s Watson does not know biology. The results it surfaces are a product of the technology’s ability to parse sentences and identify patterns in text. **Introducing Watson-derived data to biological researchers—themselves accustomed to obtaining information empirically—would mean establishing an entirely new epistemological model at the same time.**
+
+- By the same measure, information gleaned by artificial intelligence might feel arbitrary and untrustworthy to our users. **The design would need to surface the evidence supporting Watson’s suggestions and make the methods used apparent.**
+
+----
+
+Process: 
+
+Opening the wet lab to a long list of genes suspected to be connected to a disease is expensive. One way to filter down the collection is to compare it to known genes—those with relationships to the disease that the research team is already aware of. Predictive Analytics (PA) is one of several tools available within the Watson for Drug Discovery (WDD) offering, and it aims to provide just that capability by searching for similarities between the way candidate and known entities* appear in publications. The way its results and the evidence that back them were originally conveyed, however, often left users more baffled about what to do next than they were before they opened the app. I was brought onto the WDD team to redesign the way this data and its insights were visually communicated.
+
+(text: *When it concerns Watson, an entity refers to a single biological concept consisting of various synonyms in literature. Aspirin and acetylsalicylic acid both represent the same molecule, so they are synonyms of the same entity. The cognitive services that make up Watson look only at entities in order to make accurate but otherwise easily missed connections. The algorithms used for this project recognize entities resolved from synonyms that refer to a gene, a chemical, or a disease. class: asterisk)
+
+The data science behind PA is complex; it goes far beyond simply surfacing sources wherein searched entities co-occur. Before I could design a way to better present the results of the data model to users, I needed to understand it myself.
+
+(image: data-understanding.jpg)
+
+I met with the data scientists who’d created PA’s data model and its original visualizations. Once I had an abstract understanding of the steps that happen behind the screen, I came up with a simple scenario and sketched out conceptual illustrations. This helped me gain a more tangible grasp on the way results were generated.
+ 
+(gallery: self-education)
+
+And that was about as far as I got with my understanding of Predictive Analytics’ as-is state. Its tree visualization felt suspiciously arbitrary on several levels. It was built on the idea that similar entities would accumulate near each other—but nodes within each layer were stretched so far apart to accommodate their own children nodes that physical proximity was not a valid metric of measurement at all. 
+
+(image: tree-as-is.jpg)
+
+It came as no surprise that the tree routinely intimidated and perplexed users. Its focus on hierarchy seemed to them to suggest natural order. Nature branches as it evolves, conceptually leaving tree-like fractals of change in its wake. From taxonomies of living organisms to the structural similarities between chemical molecules, humans organize newfound knowledge of the natural world into nested sub-divisions. To a biologist, a branching framework intuitively suggested results of empirical origin.
+
+(text: “Given that it [the tree] only has these two-way splits at every node leaves open the possibility that things that wind up far apart on this tree are actually not so dissimilar, or maybe they have a closer relationship than it would appear … I became really quite confused about how I was to properly interpret the tree and discouraged that I might be missing things.” class: pullquote)
+(text: —biologist, after having had access to Predictive Analytics in its original form for 30 days class: pullquoter)
+
+Furthermore, a hierarchy fundamentally failed to communicate the data accurately. It forced the results into a veritable corporate reporting structure, whereas the actual data model used to find similarity treated all inputs equally throughout the process, comparing them round-robin style. A network or force diagram would more accurately reflect these relationships in the data, while allowing the user to explore their inputs’ relative similarities. A quantitative method like a list could be used to rank the candidates genes based on their similarities to the known genes, and would more directly inform users as to which entities might be worth pursuing further.
+
+(image: force-diagram-prototype.jpg)
+
+Our users might need to assess several facets of the data simultaneously, to accurately compare and gain context. My favorite part of designing a data visualization is working out which “visual variables” (as I affectionately and alliteratively call them) to employ together, in order to provide these layers of meaning to the user. Sketching allowed me to quickly explore all sorts of shapes, colors, and other visual aspects that could be layered onto the nodes, thereby conveying multiple attributes of the data simultaneously.
+
+(image: node-explorations.jpg)
+
+Some aspects of the data could not be encoded visually, such as the evidence specifically supporting an entity’s particular location in the visualization. In the original design, if users had wanted this information, they would have had to select exactly three entities from the tree. They’d then be greeted by a spinning 3-D cloud of colored pixels symbolizing individual documents that mentioned one of the selected entities. The only way to actually drill into the supporting literature itself was to click on a swirling colored speck at random, which opened the document it represented.
+
+(image: 3d-scatterplot.jpg)
+
+A far more accurate depiction of the data seemed to be in the form of a word spectrum. Typical word spectrums place two concepts being compared at opposite ends of an x-axis, while terms common to both fall on the spectrum between them, their left-to-right location dictated by their relative association strength to each of the two concepts.
+
+(image: external-examples.jpg)
+
+Armed with inspiration from my research about word spectrums, I turned to the drawing board to help me think divergently, exploring every manifestation of the data I could come up with.
+
+(image: sketches.jpg)
+
+I consulted a fellow UX designer for feedback on my sketched ideas to narrow them down for concept testing with users. We built out three of the most promising ideas and asked five WDD users for their thoughts.
+
+(gallery: user-test)
+
+The initial pass with users helped us to narrow down our direction further. I wanted to know how the terms would communicate their occurrence strength if we rendered them as bubbles versus simply relying on their font size. I worked with our developer to mockup prototypes connected to real data, which my teammate and I tested with three more WDD users.
+
+(gallery: prototypes)
+
+Both renderings had strengths and weaknesses, but in ways that complemented each other: it seemed to me that success might be found by combining the distinct outline afforded by the bubbles with the more economical shape of the words.
+
+----
+
+Outcomes: 
+
+Predictive Analytics is a tool within the Watson for Drug Discovery offering that analyzes semantic similarities between genes, drugs, and diseases. It outputs a ranked list of inputs to help researchers narrow down long lineups of potential targets and determine which are worthy of further exploration. Additional visualizations allow users to analyze specific similarity relationships as well as the reasoning and evidence backing them.
+
+(image: final-list-force-diagram.jpg)
+
+The collection of technology and algorithms that make up “Watson” interpret data differently than humans do; in the case of Predictive Analytics, rather than using empirical evidence, Watson looks for patterns in the way entities appear in literature. The potential value to this approach lies in the idea that the author of a paper or patent may embed biological attributes within the phrases they use to describe entities. 
+
+This is a completely different method than most life sciences researchers are accustomed to. Given the historical confusion caused by Predictive Analytics, coupled with its users’ natural inclinations as scientists to question how all things work, I felt it was imperative to educate users upon entry.
+
+(gallery: user-education)
+
+Hovering on a node in the distance network reveals the top five inputs most similar to it. Selecting a pair allows the user to dig deeper into the nature of their semantic similarity via a word spectrum.
+
+(gallery: force-diagram-in-action)
+
+Words appear along the spectrum’s x-axis according to their relative occurrence in literature with the selected entities, which occupy either end of the x-axis. A term’s height symbolizes its likelihood above mere chance of co-occurring with either entity in the literature, relative to the other terms in the spectrum.
+
+(image: word-spectrum-dimensions.jpg)
+
+Patterns formed by the collection of terms in the word spectrum can be significant. A gathering of terms near the center indicates that the selected entities notably overlap in the literature; terms that stick to the fringes suggest less similarity.
+
+(image: word-spectrum-patterns.jpg)
+
+A modified butterfly chart accompanies the word spectrum; the user can search for a specific word or word-part and see matches highlighted in both visualizations. Selecting a term from the list or spectrum drills down into the supporting literature.
+
+(gallery: word-spectrum-in-action)
+
+Although Predictive Analytics follows a vastly different epistemological model than the traditional, empirical approach to drug discovery, the unique perspective it offers has proven to be helpful. Scientists at Baylor used it along with other WDD tools to validate two p53 kinases* in just two weeks, when the industry average is just one per year, globally. Up to this point, only 28 of these specific proteins had been discovered in the past 35 years. Meanwhile, to quote IBM’s 2016 Annual Report, researchers studying amyotrophic lateral sclerosis (ALS) at Barrow Neurological Institute “employed Watson for Drug Discovery to study nearly 1,500 genes in the human genome, and found five that had never before been associated with ALS.”
+
+(text: *According to the <a href="https://www.ibm.com/blogs/research/2015/10/a-rapid-rate-of-discovery/" target="blank">IBM Research blog </a>“the p53 protein reacts to the detection of genomic problems by increasing the expression of hundreds of other proteins to try and fix these issues, and can even instruct potentially harmful cells to destroy themselves. It gets these calls-to-arms from another set of proteins that chemically modify p53 in response to particular biological conditions.” class: asterisk)
+
+(text: “So, it’s [Predictive Analytics] really been a sort of hypothesis generating tool for us. But, a very useful hypothesis generating tool because it’s led us … in quite reasonable directions.” class: pullquote)
+(text: —biological researcher, after having used the newly designed Predictive Analytics visualizations for 30 days class: pullquoter)
+
+As such, Watson for Drug Discovery has been mentioned in a number of news articles and has been the subject of several scientific publications.
+
+####Press
+
+(link: https://www.pfizer.com/files/investors/financial_reports/annual_reports/2016/ceo-letter/index.html text: Pfizer’s 2016 Annual Report popup: yes)
+
+(link: http://www.ibtimes.com/here-ibms-blueprint-winning-ai-race-2686752 text: International Business Times: *Here Is IBM’s Blueprint For Winning The AI Race* popup: yes)
+
+(link: https://www.informationweek.com/big-data/big-data-analytics/ibm-watson-speeds-drug-research/d/d-id/1306783 text: Information Week: *IBM Watson Speeds Drug Research* popup: yes)
+
+####Scientific publications
+
+(link: https://www-01.ibm.com/common/ssi/cgi-bin/ssialias?htmlfid=HLW03040USEN& text: *Artificial intelligence in neurodegenerative disease research: use of IBM Watson to identify additional RNA‑binding proteins altered in amyotrophic lateral sclerosis* popup: yes)
+
+(link: https://www-01.ibm.com/common/ssi/cgi-bin/ssialias?htmlfid=HLW03045USEN& text: *IBM Watson: How Cognitive Computing Can Be Applied to Big Data Challenges in Life Sciences Research* popup: yes)
+
+(link: https://www-01.ibm.com/common/ssi/cgi-bin/ssialias?htmlfid=HLW03046USEN& text: *Automated Hypothesis Generation Based on Mining Scientific Literature* popup: yes)
+
+----
+
+Livelearn: 
+
+- **The layers of complexity intrinsic to this tool**—in the process through which it arrives at results, the inherently different approach it takes to chipping away at the problem of drug discovery, and the specific needs demanded by the user in order for it to produce useful outcomes—**require an equally robust system of education and onboarding**. Currently this is solved in a very unscalable way: individual subject matter experts from IBM work full-time with new and potential clients to bring them up to speed until they can use the tool productively on their own. This inhibits the product within the market, and leaves the end user wholly dependent upon another human being to learn. The educational materials I built for PA aren’t fully fledged enough to support an untrained user, but they have proven to help trained users recall what they’ve already been taught in-person. **This led me to successfully lobby WDD’s offering management and development teams for a more comprehensive, guided onboarding experience over the addition new features, and provided the fodder for my next project on the team.**
+
+- Subsequent user testing has revealed the desire for drilling into the evidence of more than just two input entities at a time: users want the ability to select a sub-group of results to see their relative similarity and its reasoning visualized. In hindsight, it seems obvious that limiting the comparison of common terms to just two entities at a time is restrictive. **Even though the current design most accurately reflects Watson’s true data model, I do wonder if a different visualization that accommodates more simultaneous entity selections may have ultimately helped our users to gain a more complete understanding of their inputs’ similarities.**
+
+----
+
+Stats: 
+
+(text: *As documented in MedicineNet’s <em><a href="https://www.medicinenet.com/script/main/art.asp?articlekey=9877" target="_blank">Drug Approvals—From Invention to Market ... A 12-Year Trip</a></em> article. class: asterisk)
+
+**Project pretext:** Professional
+**Assignment:** Design a data visualization to increase user understanding and productivity
+**Timeframe:** 6 weeks
+**Role:** Lead data visualization designer
+**Additional team members:** 1 UX designer part-time, 1 developer part-time

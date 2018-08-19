@@ -1,0 +1,9 @@
+Caption: Incoming and outgoing edges can always keep a consistent value or color when applying gradients edges, or they can fade between colors of involved nodes.
+
+----
+
+Alt: alt
+
+----
+
+Sort: 17

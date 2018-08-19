@@ -10,7 +10,7 @@ use Kirby\Urls;
 
 class Kirby {
 
-  static public $version = '2.4.0';
+  static public $version = '2.5.8';
   static public $instance;
   static public $hooks = array();
   static public $triggered = array();
@@ -30,7 +30,8 @@ class Kirby {
   public $request;
   public $components = [];
   public $registry;
-  public $errorHandling;
+
+  protected $configuring = false;
 
   static public function instance($class = null) {
     if(!is_null(static::$instance)) return static::$instance;
@@ -70,6 +71,7 @@ class Kirby {
       'roles'                           => array(),
       'cache'                           => false,
       'debug'                           => 'env',
+      'whoops'                          => true,
       'ssl'                             => false,
       'cache.driver'                    => 'file',
       'cache.options'                   => array(),
@@ -110,8 +112,8 @@ class Kirby {
     return $this->registry;
   }
 
-  public function url() {
-    return $this->urls->index();
+  public function url($url = null) {
+    return $this->urls->index($url);
   }
 
   public function options() {
@@ -150,6 +152,11 @@ class Kirby {
 
   public function configure() {
 
+    // prevent loading configuration twice
+    // this prevents issues if config is loaded indirectly from the config
+    if($this->configuring) return;
+    $this->configuring = true;
+
     // load all available config files
     $root    = $this->roots()->config();
     $configs = array(
@@ -165,14 +172,14 @@ class Kirby {
     foreach($configs as $config) {
       $file = $root . DS . $config;
       if(in_array($config, $allowed, true) and file_exists($file)) include_once($file);
-    } 
+    }
 
     // apply the options
     $this->options = array_merge($this->options, c::$data);
 
     // overwrite the autodetected url
-    if($this->options['url']) {
-      $this->urls->index = $this->options['url'];
+    if($url = $this->options['url']) {
+      $this->url($url);
     }
 
     // connect the url class with its handlers
@@ -189,7 +196,7 @@ class Kirby {
         case '.':
           return page()->url() . '/' . $url;
           break;
-        default:                            
+        default:
           if($page = page($url)) {
             // use the "official" page url
             return $page->url($lang);
@@ -213,9 +220,6 @@ class Kirby {
     email::$defaults['subject'] = $this->option('email.subject');
     email::$defaults['body']    = $this->option('email.body');
     email::$defaults['options'] = $this->option('email.options');
-
-    // start the error handler
-    $this->errorHandling = new ErrorHandling($this);
 
   }
 
@@ -247,7 +251,7 @@ class Kirby {
           $language = $kirby->route->lang;
           s::set('kirby_language', $language->code());
         } else if(s::get('kirby_language') and $language = $site->sessionLanguage()) {
-          // $language is already set but the user wants to 
+          // $language is already set but the user wants to
           // select another language
           $referer = r::referer();
           if(!empty($referer) && str::startsWith($referer, $this->urls()->index())) {
@@ -258,9 +262,14 @@ class Kirby {
           $language = $site->detectedLanguage();
         }
 
+        // build language homepage URL including params and/or query
+        $url = $language->url();
+        if($params = url::params()) $url .= '/' . url::paramsToString($params);
+        if($query  = url::query())  $url .= '/?' . url::queryToString($query);
+
         // redirect to the language homepage
-        if($language && rtrim(url::current(), '/') !== rtrim($language->url(), '/')) {
-          return go($language->url());
+        if($language && rtrim(url::current(), '/') !== rtrim($url, '/')) {
+          return go($url);
         }
 
       }
@@ -297,34 +306,6 @@ class Kirby {
 
     };
 
-    if($site->multilang()) {
-
-      // first register all languages that are not at the root of the domain
-      // otherwise they would capture all requests
-      foreach($site->languages()->sortBy('isRoot', 'asc') as $lang) {
-        
-        $pattern = ($lang->path())? $lang->path() . '/(:all?)' : '(:all)';
-        $routes[] = array(
-          'pattern' => $pattern,
-          'host'    => $lang->host(),
-          'method'  => 'ALL',
-          'lang'    => $lang,
-          'action'  => $otherRoute
-        );
-
-      }
-
-      // fallback if no language is at the root
-      $routes[] = array(
-        'pattern' => '/',
-        'method'  => 'ALL',
-        'action'  => function() use($site) {
-          return go($site->defaultLanguage()->url());
-        }
-      );
-
-    }
-
     // tinyurl handling
     $routes['tinyurl'] = $this->component('tinyurl')->route();
 
@@ -334,9 +315,10 @@ class Kirby {
       'action'  => function($extension = null) {
         // ignore invalid extensions
         if($extension === '.') $extension = '';
-        if($extension) $extension = '/' . $extension;
 
-        redirect::send(site()->homepage()->url() . $extension, 307);
+        redirect::send(url::build([
+          'fragments' => ($extension)? [$extension] : null
+        ]), 307);
       }
     );
 
@@ -345,27 +327,70 @@ class Kirby {
       'pattern' => 'assets/plugins/(:any)/(:all)',
       'method'  => 'GET',
       'action'  => function($plugin, $path) use($kirby) {
-        $root = $kirby->roots()->plugins() . DS . $plugin . DS . 'assets' . DS . $path;
-        $file = new Media($root);
+        $errorResponse = new Response('The file could not be found', 'txt', 404);
 
-        if($file->exists()) {
-          return new Response(f::read($root), f::extension($root));
-        } else {          
-          return new Response('The file could not be found', f::extension($path), 404);
-        }
+        // filter out plugin names that contain directory traversal attacks
+        if(preg_match('{[\\\\/]}', urldecode($plugin))) return $errorResponse;
+        if(preg_match('{^[.]+$}', $plugin))             return $errorResponse;
 
+        // build the path to the requested file
+        $pluginRoot = $kirby->roots()->plugins() . DS . $plugin . DS . 'assets';
+        $fileRoot   = $pluginRoot . DS . str_replace('/', DS, $path);
+        if(!is_file($fileRoot)) return $errorResponse;
 
+        // make sure that we are still in the plugin's asset dir
+        if(!str::startsWith(realpath($fileRoot), realpath($pluginRoot))) return $errorResponse;
+
+        // success, serve the file
+        return new Response(f::read($fileRoot), f::extension($fileRoot));
       }
     );
 
     // all other urls
-    if(!$site->multilang()) {
+    if($site->multilang()) {
+
+      // first register all languages that are not at the root of the domain
+      // otherwise they would capture all requests
+      foreach($site->languages()->sortBy('isRoot', 'asc') as $lang) {
+        $pattern = ($lang->path())? $lang->path() . '/(:all?)' : '(:all)';
+        $routes[] = array(
+          'pattern' => $pattern,
+          'host'    => $lang->host(),
+          'method'  => 'ALL',
+          'lang'    => $lang,
+          'action'  => $otherRoute
+        );
+      }
+
+      // fallback if no language is at the root
+      $routes['others'] = array(
+        'pattern' => '(.*)', // this can't be (:all) to avoid overriding the actual language route
+        'method'  => 'ALL',
+        'action'  => function($uri) use($site) {
+          if($uri && $uri !== '/') {
+            // first try to find a page with the given URI
+            $page = page($uri);
+            if($page) return go($page);
+
+            // the URI is not a valid page -> error page
+            return $site->errorPage();
+          } else {
+            // no URI is given, redirect to the homepage of the default language
+            return go($site->defaultLanguage()->url());
+          }
+        }
+      );
+
+    } else {
+
+      // all other urls for single-language installations
       $routes['others'] = array(
         'pattern' => '(:all)',
         'method'  => 'ALL',
         'lang'    => false,
         'action'  => $otherRoute
       );
+
     }
 
     return $routes;
@@ -426,7 +451,7 @@ class Kirby {
     if(file_exists($file)) return $this->plugins[$name] = include_once($file);
 
     return false;
-  
+
   }
 
   /**
@@ -477,12 +502,12 @@ class Kirby {
 
     if($site->multilang() and !$site->language()) {
       $site->language = $site->languages()->findDefault();
-    }    
+    }
 
     // set the local for the specific language
     if(is_array($site->locale())) {
       foreach($site->locale() as $key => $value) {
-        setlocale($key, $value);        
+        setlocale($key, $value);
       }
     } else {
       setlocale(LC_ALL, $site->locale());
@@ -530,6 +555,16 @@ class Kirby {
 
     // load all options
     $this->configure();
+
+    // check for an existing site directory
+    if(!is_dir($this->roots()->site())) {
+      trigger_error('The site directory is missing', E_USER_ERROR);
+    }
+
+    // check for an existing content directory
+    if(!is_dir($this->roots()->content())) {
+      trigger_error('The content directory is missing', E_USER_ERROR);
+    }
 
     // setup the cache
     $this->cache();
@@ -587,7 +622,7 @@ class Kirby {
     pagination::$defaults['url'] = $page->url() . r($params, '/') . $params;
 
     // cache the result if possible
-    if($this->options['cache'] and $page->isCachable()) {
+    if($this->options['cache'] && $page->isCachable() && in_array(r::method(), ['GET', 'HEAD'])) {
 
       // try to read the cache by cid (cache id)
       $cacheId = md5(url::current() . $page->representation());
@@ -659,6 +694,9 @@ class Kirby {
     // this will trigger the configuration
     $site = $this->site();
 
+    // start the error handler
+    new ErrorHandling($this);
+
     // force secure connections if enabled
     if($this->option('ssl') and !r::secure()) {
       // rebuild the current url with https
@@ -679,7 +717,7 @@ class Kirby {
 
     // start the router
     $this->router = new Router($this->routes());
-    $this->route  = $this->router->run($this->path());
+    $this->route  = $this->router->run(trim($this->path(), '/'));
 
     // check for a valid route
     if(is_null($this->route)) {
@@ -705,9 +743,9 @@ class Kirby {
     // store the current language in the session
     if(
         $this->option('language.detect') &&
-        $this->site()->multilang() && 
+        $this->site()->multilang() &&
         $this->site()->language()
-      ) {      
+      ) {
       s::set('kirby_language', $this->site()->language()->code());
     }
 
@@ -717,7 +755,7 @@ class Kirby {
 
   /**
    * Register a new hook
-   * 
+   *
    * @param string/array $hook The name of the hook
    * @param closure $callback
    */
@@ -738,7 +776,7 @@ class Kirby {
 
   /**
    * Trigger a hook
-   * 
+   *
    * @param Event $event Event object or a string with the event name
    * @param mixed $args Additional arguments for the hook
    * @return mixed
@@ -764,9 +802,14 @@ class Kirby {
 
         static::$triggered[$pattern][] = $key;
 
+        // make sure that we always have a Closure object
+        if(is_string($callback)) {
+          $callback = (new ReflectionFunction($callback))->getClosure();
+        }
+
         try {
           $callback = $callback->bindTo($event);
-          call($callback, $args);        
+          call($callback, $args);
         } catch(Exception $e) {
           // caught callback error
         }
@@ -788,7 +831,7 @@ class Kirby {
         if(file_exists(__DIR__ . DS . 'kirby' . DS . 'component' . DS . strtolower($name) . '.php')) {
           $this->component($name, 'Kirby\\Component\\' . $name);
         } else {
-          throw new Exception('The component "' . $name . '" does not exist');          
+          throw new Exception('The component "' . $name . '" does not exist');
         }
       }
       return $this->components[$name];
@@ -816,7 +859,7 @@ class Kirby {
       $object->configure();
 
       // register the component
-      $this->components[$name] = $object;       
+      $this->components[$name] = $object;
 
     }
   }

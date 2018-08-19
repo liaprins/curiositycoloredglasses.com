@@ -1,0 +1,5 @@
+Caption: My first thought was to increase the number of entities being compared at once, from a pair to a trio, as seen in the top left sketch featuring pie charts, the diameter and breakdown of which represent occurrence. But this concept muddied the true data model upon which the list and force diagram results were built: it did not transparently communicate the fact that each entity was compared to every single other entity at an <em>individual</em> level. Keeping the word spectrum to just a pair of inputs enforced this, so I continued to explore. Another idea I had featured a scrubber that allowed the user to scan resulting terms by their polarity along the x-axis.
+
+----
+
+Alt: Twelve sketches iterating on the concept of a word spectrum, more or less.

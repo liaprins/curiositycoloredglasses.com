@@ -1,0 +1,5 @@
+Caption: The central location of terms associated to the entities PIM1 and PIM3 indicates that the genes share several common words and ratios of occurrence. EPHA3’s and DYRK2’s terms are more clearly clustered into two groups on either end of the spectrum, revealing that the way these genes are written about in literature differs significantly.
+
+----
+
+Alt: Two examples of the Predictive Analytics word spectrum featuring real data: one in which terms gather near the center, and one in which they disperse toward the sides.

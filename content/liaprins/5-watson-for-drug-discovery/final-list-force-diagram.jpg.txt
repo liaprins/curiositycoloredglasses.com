@@ -1,0 +1,9 @@
+Caption: 
+
+The list on the left ranks candidate entities by their similarity to all known entities, the relative strength of which is visualized by horizontal percentage bars. This same similarity measurement for each candidate is surfaced in the distance network: fully saturated red nodes represent entities most like their green counterparts, while nodes with white fills are least alike. 
+<p></p>
+Each node possesses attractive forces correlating to the similarity between it and every other node. The relative strengths of these forces draw some nodes together and distance others, resulting in a landscape that symbolizes the inputs’ collective similarities.
+
+----
+
+Alt: A list of candidate entities with their relative ranks revealed as a bar chart and the distance network with all inputs, both candidate and known, clustered according to similarity.

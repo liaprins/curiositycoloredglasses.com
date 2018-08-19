@@ -2,9 +2,15 @@
 
 username: liaprins
 password: >
-  $2a$10$EB66MK5zRR/bD7Z1aXmBDuK/kDVDB0eN1rLgRAvc6W716nQ3vGR7a
-email: liajprins@us.ibm.com
+  $2a$10$POddkqjLWsKSno1wHY4sj.dpoaa6dotS66uFk.byRixOSVO5EFjG2
+email: liajprins@gmail.com
 language: en
 role: admin
 history:
-  - blog/measure-of-a-mountain
+  - liaprins/watson-for-drug-discovery
+  - liaprins/data-vis-guild
+  - liaprins/worldly-birds
+  - liaprins/curiosity
+  - liaprins/the-study-of-life
+firstname: Lia
+lastname: Prins

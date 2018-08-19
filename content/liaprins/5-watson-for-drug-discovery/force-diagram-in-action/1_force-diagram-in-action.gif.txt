@@ -1,0 +1,5 @@
+Caption: Due to the push-and-pull nature of the nodes’ attractive forces, the distances between them won’t always perfectly reflect their actual similarities. A user can get a more accurate output by hovering on a specific node to see its top five similarity scores quantified.
+
+----
+
+Alt: Nodes in the distance network are hovered on, revealing a small table of the other entities they’re most similar to, with their similarity scores.

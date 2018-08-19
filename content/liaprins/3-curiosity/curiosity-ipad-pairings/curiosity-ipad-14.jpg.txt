@@ -1,0 +1,9 @@
+Caption: 
+
+----
+
+Alt: Two still screens side-by-side demonstrate the behavior of an animating diagram when swiped, this time of the moon's orbit around Earth with respect to the sun.
+
+----
+
+Sort: 14

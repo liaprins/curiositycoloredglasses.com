@@ -1,0 +1,5 @@
+Caption: The user can select two entities from either the list or the 2-D visualization in order to drill down into the pair’s similarity evidence.
+
+----
+
+Alt: Two nodes are selected from the distance matrix, enabling the "View text similarity evidence" button.

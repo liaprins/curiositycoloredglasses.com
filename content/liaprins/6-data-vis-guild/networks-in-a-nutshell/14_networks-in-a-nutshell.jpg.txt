@@ -1,0 +1,9 @@
+Caption: 
+
+----
+
+Alt: Network diagrams can be un-directed (in which relationships are neutral or don't matter), or they can be directed (in which the relationships have a direction that matters).
+
+----
+
+Sort: 14

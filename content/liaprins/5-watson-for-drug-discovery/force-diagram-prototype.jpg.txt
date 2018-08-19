@@ -1,0 +1,5 @@
+Caption: I worked with a developer to prototype a force diagram, using real data. Attractive forces are programmed into each entity’s node, based on their similarities to every single other entity. The nodes, with their physics-mimicking forces, jostle and sort themselves out accordingly. In order for every node to be in the perfect position as demanded by its similarity measurements, the visualization would have to exist in a world with <em>n</em>-1 dimensions (where <em>n</em> = number of nodes). That means that this design functions as a flattened approximation, potentially useful for our users as an exploratory starting point.
+
+----
+
+Alt: A force diagram features all inputs, both candidate and known, clustered according to their attractive forces, which are informed by their relative similarities.

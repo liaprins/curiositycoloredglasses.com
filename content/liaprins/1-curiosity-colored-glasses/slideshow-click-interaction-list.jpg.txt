@@ -1,0 +1,9 @@
+Caption: The interactions within my designs for galleries and lightboxes resulted in the most complex script I’ve ever written. I could have used any of the plethora of pre-existing libraries, but I was stubbornly determined to figure out how to do this all on my own!) Once again, my 10-colored ballpoint came to my rescue, assisting me in identifying which common interactions could reference the same chunks of code, and ultimately saving me several lines of redundant characters.
+
+----
+
+Alt: I printed a list of all interactions and subsequent behaviors my gallery and lightbox modules would need to accommodate. Then I took colored ballpoint pens and encoded those list items that accomplished the same effect, and could thereby use the same Javascript function.
+
+----
+
+Sort: 2

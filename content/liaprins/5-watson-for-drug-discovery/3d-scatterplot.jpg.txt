@@ -1,0 +1,5 @@
+Caption: In addition to being inaccessible to color-blind users, the swirling mass of colored pixels standing in for documents didn’t portray the data model accurately or transparently: no mention was made of the found terms that formed the basis of the similarities between entities.
+
+----
+
+Alt: Three circles, each representing a selected entity, are surrounded by a mass of colored pixels representing individual documents.

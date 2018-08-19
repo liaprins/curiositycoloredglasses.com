@@ -1,0 +1,5 @@
+Caption: 
+
+----
+
+Alt: The word "hydrophilic" is tapped from within the main text, bringing up a small modal with its definition, root parts, and linked related terms. Its related term "hydrophobic" is then tapped, bringing up its own modal.

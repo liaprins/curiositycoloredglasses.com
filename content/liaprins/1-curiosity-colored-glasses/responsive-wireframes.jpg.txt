@@ -1,0 +1,5 @@
+Caption: My ever-present quiver of colorful writing utensils helped me chart out possible layouts at each breakpoint. Here I explored how to render images of differing aspect ratios on vertically and horizontally oriented screens.
+
+----
+
+Alt: Notebook pages with wireframe sketches explore possible permutations of image and caption layouts.

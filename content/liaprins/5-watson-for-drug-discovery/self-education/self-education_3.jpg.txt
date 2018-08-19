@@ -1,0 +1,5 @@
+Caption: Within the filtered down set of documents that contain input entities, Watson finds other terms that occur. These terms need not be genes, drugs, or diseases, but they can be.
+
+----
+
+Alt: The same documents that include candidate and known genes also contain terms, some of which are entities themselves.

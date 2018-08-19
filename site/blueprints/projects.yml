@@ -1,0 +1,68 @@
+title: Projects
+
+//page settings
+deletable: true
+options: 
+	preview: true
+	status: true
+	template: false
+	url: true
+	delete: true
+
+//subpage settings
+pages: 
+  template:
+    - gallery
+
+//file settings
+files: true
+  fields:
+    caption:
+      label: Caption
+      type: textarea
+    alt:
+      label: Alternate text
+      type: text
+      placeholder: Brief description of the image (for accessibility via screenreaders or in case the image fails to load)
+
+//fields with their field types and options
+fields:
+  title:
+    label: Project name
+    type:  text
+    required: true
+    help: Title should be title case without a period at the end
+  thumbnail:
+    label: Thumbnail
+    type: image
+    required: true
+    help: (Insert details about minimum size for resolution)
+  intro:
+    label: Introduction
+    type: textarea
+    placeholder: Intro explaining my motivation for creating this project
+    help: Can use spans with classes for highlights
+  stats:
+    label: Project stats
+    type: textarea
+    placeholder: Project pretext and other project-specific stats
+    help: Use bold for labels and regular for values
+  opportunities:
+    label: Opportunities
+    type: textarea
+    placeholder: If leaving this section blank go to projects.txt doc and delete Opportunities label entirely to prevent it showing in site
+    help: Format content with bullets
+  process:
+    label: Process
+    type: textarea
+    placeholder: If leaving this section blank go to projects.txt doc and delete Process label entirely to prevent it showing in site
+  outcomes:
+    label: Outcomes
+    type: textarea
+    placeholder: If leaving this section blank go to projects.txt doc and delete Outcomes label entirely to prevent it showing in site
+  livelearn:
+    label: Live + learn
+    type: textarea
+    placeholder: If leaving this section blank go to projects.txt doc and delete Livelearn label entirely to prevent it showing in site
+    help: Format content with bullets
+

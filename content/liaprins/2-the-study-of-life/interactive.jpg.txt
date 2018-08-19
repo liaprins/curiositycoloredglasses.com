@@ -1,0 +1,5 @@
+Caption: I was fortunate enough to find a diagram mapping out the motion of a single cilium, step-by-step. I traced each of its phases to an individual artboard before exporting as a series of images, uploading to InDesign, and creating the flipbook interaction.
+
+----
+
+Alt: An illustrated cilium overlays a diagram mapping the motion of a single cilium. Next to it is a series of panels of all cilia, each representing a single step of the previously mentioned diagram.

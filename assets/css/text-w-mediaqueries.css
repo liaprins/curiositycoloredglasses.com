@@ -1,0 +1,642 @@
+/* TEXT STYLES ---------------------------------------------------- */
+
+/* MOBILE FIRST: PRE-MEDIAQUERIES (scroll down further for text-related mediaqueries) ---------------------------------------------------- */
+
+em {
+    font-family: 'IBM-Plex_Sans_Italic', 'Courier_New', Courier, Monotype;    }
+
+h1 {
+    font-size: 46.295px;
+    letter-spacing: 0.5px;
+    line-height: 1.25;
+    margin-bottom: 25px;    }
+
+h1 .smaller {
+    /* font-size: 32.149px; */
+    font-size: 37px;    }
+
+/*
+h4 {
+    font-size: 22.326px;
+    margin-bottom: 12.5px;
+    letter-spacing: 0px;    }
+*/
+
+h2,
+h3,
+h4,
+h6 {
+    font-size: 18.605px;    }
+
+h2 {
+    letter-spacing: 0.15px;
+    line-height: 1.5;
+    margin-bottom: 35px;    }
+
+h3 {
+    letter-spacing: 0.4px;
+    line-height: 1;
+    display: inline;
+    cursor: pointer;    }
+
+h4 {
+    margin-bottom: 13.5px;
+    margin-top: 17.5px;     }
+
+h6 {
+    letter-spacing: 0.75px;
+    line-height: 1.5;
+    padding: 2.25vw 3.571vw;
+    color: transparent;
+    display: block;
+    height: calc(39.28vw - 3px);    /* 2 grid cols - thin margin space */
+    box-sizing: border-box;    }
+h6:hover {
+    background-color: rgba(74, 174, 179, 0.8);
+    color: white;    }
+
+h6 .smaller,
+.pullquote,
+#intro,
+#aboutoverview,
+#aboutcurrent {
+    font-size: 15.504px !important;    }
+
+.pullquote,
+#intro {
+    letter-spacing: 0.08px !important;    }
+
+#intro p {
+    margin-bottom: 17.5px;    }
+
+#intro p:last-of-type {
+    margin-bottom: 0;    }
+
+#intro strong {
+    box-shadow:
+        inset 0 0px white,
+        inset 0 -5px rgba(74, 174, 179, 0.4);
+    display: inline;    }
+
+#stats {
+    font-size: 10.767px;
+    margin-top: 13.125px;    }    /* 3/4 of #intro p bottom margin */
+
+#abouttext,
+#opportunities li,
+#livelearn li,
+#process p,
+#outcomes p,
+.pullquoter,
+#email,
+#resume,
+.contactpipe,
+#process ul,
+#instagram-text {
+    font-size: 12.92px;
+    letter-spacing: 0.15px;    }
+
+.processbullets {
+    margin-top: -6.75px;    /* half of space between paragraphs, negative */
+    margin-left: 4.1vw;    /* match this attribute and the styles below to #opportunities li and #livelearn li */
+    padding-left: 2.5px;
+    width: 74.471vw;
+    list-style-type: disc;    }
+
+.processbullets li {
+    margin-top: 6.75px;    }    /* half of space between paragraphs */
+
+#opportunities li strong,
+#livelearn li strong {
+    box-shadow:
+        inset 0 0px white,
+        inset 0 -3.75px rgba(74, 174, 179, 0.4);
+    /*
+    box-shadow:
+        inset 0 6px white,
+        inset 0 12.5px rgba(74, 174, 179, 0.35);
+    display: inline; */    }
+
+#process p,
+#outcomes p,
+#abouttext p {
+    /* hyphens: auto; */
+    margin-bottom: 13.5px;    }
+
+#abouttext .asterisk,
+#stats .asterisk {
+    margin-bottom: 35px;    }
+
+.pullquote {
+    margin-top: 27px !important;
+    margin-bottom: 6.75px !important;    }    /* half of #process p bottom margin */
+
+.pullquoter {
+    margin-bottom: 27px !important;    }
+
+#abouttext {
+    margin: 13.5px 0 35px 0;    }
+
+#opportunities li,
+#livelearn li {
+    /* hyphens: auto; */
+    margin-top: 13.5px;
+    margin-left: 4.1vw;
+    padding-left: 2.5px;
+    width: 74.471vw;    /* 78.571vw - 4.1vw (22/28cols - margin-left) */
+    list-style: disc;    }
+
+/* figcaption, */
+.asterisk {
+    font-size: 10.767px !important;    }
+
+figcaption /*,
+.attribution*/ {
+    font-size: 8.972px;    }
+
+.figcaptionspacer {
+    margin: -4.486px;    /* half of figcaption font-size */
+    line-height: 1;    }
+
+.attribution {
+    font-size: 7.477px !important;    }
+
+.asterisk {
+    /* margin-bottom: 32.5px !important; */    }
+
+#livelearn > ul > li > .asterisk {
+    margin-top: 15px;    }
+
+a {
+    text-decoration: none;    }
+
+#abouttext a,
+#stats a,
+#intro a,
+#process a,
+#outcomes a,
+#opportunities li a,
+#livelearn li a {
+    color: black;
+    opacity: 0.5;
+    cursor: pointer;    }
+
+#abouttext a:hover,
+#stats a:hover,
+#intro a:hover,
+#process a:hover,
+#outcomes a:hover,
+#opportunities li a:hover,
+#livelearn li a:hover {
+    opacity: 1;
+    cursor: pointer;    }
+
+
+
+
+/* 442px ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+@media only screen and (min-width: 442px) {
+
+    /* TEXT STYLES ---------------------------------------------------- */
+
+    h1 {
+        font-size: 10.474vw;
+        letter-spacing: 0.113vw;
+        margin-bottom: 5.65vw;    }
+
+    h1 .smaller {
+        /* font-size: 7.273vw; */
+        font-size: 9.9vw;    }
+
+    /*
+    h4 {
+        font-size: 5.051vw;
+        margin-bottom: 2.825vw;
+        letter-spacing: 0px;    }
+    */
+
+    h2,
+    h3,
+    h4,
+    h6 {
+        font-size: 4.209vw;    }
+
+    h2 {
+        letter-spacing: 0.03vw;
+        margin-bottom: 7.91vw;    }
+
+    h3 {
+        letter-spacing: 0.09vw;    }
+
+
+    h4 {
+        margin-bottom: 3.051vw;
+        margin-top: 4vw;     }
+
+    h6 {
+        letter-spacing: 0.17vw;
+        height: calc(39.28vw - 0.68vw);    }    /* 2 grid cols - thin margin space */
+
+    h6 .smaller,
+    .pullquote,
+    #intro,
+    #aboutoverview,
+    #aboutcurrent {
+        font-size: 3.508vw !important;    }
+
+    .pullquote,
+    #intro {
+        letter-spacing: 0.002vw !important;    }
+
+    #intro p {
+        margin-bottom: 4vw;    }
+
+    #intro strong {
+        box-shadow:
+            inset 0 0vw white,
+            inset 0 -1vw rgba(74, 174, 179, 0.4);    }
+
+    #stats {
+        font-size: 2.436vw;
+        margin-top: 3vw;    }    /* 3/4 of #intro p bottom margin */
+
+    #abouttext,
+    #opportunities li,
+    #livelearn li,
+    #process p,
+    #outcomes p,
+    .pullquoter,
+    #email,
+    #resume,
+    .contactpipe,
+    #process ul,
+    #instagram-text {
+        font-size: 2.923vw;
+        letter-spacing: 0.03vw;    }
+
+    .processbullets {
+        margin-top: -1.5vw;    /* half of space between paragraphs, negative */
+        margin-left: 4.1vw;    /* match this attribute and the styles below to #opportunities li and #livelearn li */
+        padding-left: 0.565vw;
+        width: 74.471vw;    /* 78.571vw - 4.1vw (22/28cols - margin-left) */
+        list-style: disc;    }
+
+    .processbullets li {
+        margin-top: 1.5vw;    }    /* half of space between paragraphs */
+
+    #opportunities li strong,
+    #livelearn li strong {
+        box-shadow:
+            inset 0 0vw white,
+            inset 0 -0.9vw rgba(74, 174, 179, 0.4);
+        display: inline;    }
+
+    #process p,
+    #outcomes p,
+    #abouttext p {
+        margin-bottom: 3.051vw;    }
+
+    #abouttext {
+        margin: 3.051vw 0 7.91vw 0;    }
+
+    #abouttext .asterisk {
+        margin-bottom: 7.91vw;    }
+
+    #opportunities li,
+    #livelearn li {
+        margin-top: 3.051vw;
+        margin-left: 4.1vw;
+        padding-left: 0.565vw;
+        width: 74.471vw;    /* 78.571vw - 4.1vw (22/28cols - margin-left) */
+        list-style: disc;    }
+
+    /* figcaption, */
+    .asterisk {
+        font-size: 2.436vw !important;    }
+
+    figcaption /*,
+    .attribution*/ {
+        font-size: 2.03vw;    }
+
+    .figcaptionspacer {
+        margin: -1.015vw;    /* half of figcaption font-size */
+        line-height: 1;    }
+
+    .attribution {
+        font-size: 1.692vw !important;    }
+
+}    /* 442px ++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+
+
+
+/* 650px ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* @media only screen and (min-width: 650px) { */
+
+@media (min-width: 650px) { 
+
+    h1 {
+        font-size: 68.08px;
+        letter-spacing: 0.735px;
+        margin-bottom: 36.725px;    }
+
+    h1 .smaller {
+        /* font-size: 47.276px; */
+        font-size: 64.38px;     }
+
+    /*
+    h4 {
+        font-size: 32.832px;
+        margin-bottom: 18.363px;
+        letter-spacing: 0px;    }
+    */
+
+    h2,
+    h3,
+    h4 {
+        font-size: 27.36px;    }
+
+    h2 {
+        letter-spacing: 0.2px;
+        margin-bottom: 51.42px;    }
+
+    h3 {
+        letter-spacing: 0.585px;    }
+
+    h4 {  
+        margin-bottom: 19.83px;
+        margin-top: 26px;     }
+
+    h6 {
+        /* font-size: 19px; */
+        font-size: 2.923vw;
+        letter-spacing: 1.105px;
+        height: calc(26.19vw - 4.42px);    }    /* 2 grid cols - thin margin space */
+
+    h6 .smaller {
+        /* font-size: 15.833px; */
+        /* font-size: 2.436vw; */
+        /* font-size: 2.246vw; */
+        font-size: 2.15vw;    }
+
+    .pullquote,
+    #intro,
+    #aboutoverview,
+    #aboutcurrent {
+        font-size: 22.8px !important;    }
+
+    .pullquote,
+    #intro {
+        letter-spacing: 0.013px !important;    }
+
+    #intro p {
+        margin-bottom: 26px;    }
+
+    #intro strong {
+        box-shadow:
+            inset 0 0px white,
+            inset 0 -6px rgba(74, 174, 179, 0.4);    }
+
+    #stats {
+        font-size: 15.833px;
+        margin-top: 19.5px;    }    /* 3/4 of #intro p bottom margin */
+
+    #abouttext,
+    #opportunities li,
+    #livelearn li,
+    #process p,
+    #outcomes p,
+    .pullquoter,
+    #email,
+    #resume,
+    .contactpipe,
+    #process ul,
+    #instagram-text {
+        font-size: 19px;
+        letter-spacing: 0.2px;    }
+
+    .processbullets {
+        margin-top: -9.915px;    /* half of space between paragraphs, negative */
+        margin-left: 26px;    /* match this attribute and the styles below to #opportunities li and #livelearn li */
+        padding-left: 3.67px;
+        width: 74.471vw;    /* 78.571vw - 4.1vw (22/28cols - margin-left) */
+        list-style: disc;    }
+
+    .processbullets li {
+        width: 74.471vw;    /* 78.571vw - 4.1vw (22/28cols - margin-left) */
+        margin-top: 9.915px;    }    /* half of space between paragraphs */
+
+    #opportunities li strong,
+    #livelearn li strong {
+        box-shadow:
+            inset 0 0px white,
+            inset 0 -5px rgba(74, 174, 179, 0.4);
+        display: inline;    }
+
+    #process p,
+    #outcomes p,
+    #abouttext p {
+        margin-bottom: 19.83px;    }
+
+    #abouttext {
+        margin: 19.83px 0 51.415px 0;    }
+
+    #abouttext .asterisk {
+        margin-bottom: 54.415px;    }
+
+    #opportunities li,
+    #livelearn li {
+        margin-top: 19.83px;
+        margin-left: 26px;
+        padding-left: 3.67px;
+        width: 74.471vw;    /* 78.571vw - 4.1vw (22/28cols - margin-left) */
+        list-style: disc;    }
+
+    /* figcaption, */
+    .asterisk {
+        font-size: 15.833px !important;    }
+
+    figcaption /*,
+    .attribution*/ {
+        font-size: 13.194px;    }
+
+    .attribution {
+        font-size: 11px !important;    }
+
+    .figcaptionspacer {
+        margin: -6.597px;    /* half of figcaption font-size */
+        line-height: 1;    }
+
+}    /* 650px ++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+
+
+
+
+/* 935px ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+@media only screen and (min-width: 935px) {
+
+    h6 {
+        padding: 21.8925px 34.746px;
+        font-size: 27.359px;    }
+
+    h6 .smaller {
+        /* font-size: 22.775px; */
+        font-size: 21px;    }
+    
+}    /* 935px ++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+
+
+
+/* 973px ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+@media only screen and (min-width: 973px) {
+
+    #abouttext p {
+        margin-top: 2px;    /* TEST!!! TRYING TO REFINE THE LINE HEIGHT BETWEEN THE FULL-WIDTH REMAINDER TEXT OF THE MAIN BIO WITH THE NARROWER FIRST PART OF MAIN BIO*/
+        /* margin-bottom: 27px; */
+        margin-bottom: 0;    }
+
+    #aboutpassion p:not(h4),
+    #aboutpassion p:not(.asterisk) {
+        margin-bottom: 27px;    }
+    
+    #aboutoverview {
+        float: right;
+        margin-top: -13px;
+        margin-bottom: -8px;
+        display: inline-block;
+        font-size: 22.8px;
+        width: calc(510.172px - 38.375px);    }
+ 
+    /* THIS EXTRA SPACING ONLY NEEDED TO BE FIXED FOR CHROME; THE CODE BELOW SQUASHED ALL THE TEXT TOGETHER IN FF AND SAFARI! SO AM NOT BOTHERING WITH TRYING TO FIX CHROME RIGHT NOW... */
+    /*
+    h4 > .introheader {
+        margin-top: -65px !important;    }
+    */
+
+    #abouttext {
+        /* display: inline-block; */
+        display: inline;
+        margin-top: -10px;
+        width: calc(510.172px - 38.375px);
+        /* padding-left: 34.773px; */    /* if not accounting for the pixels between each column of thumbnails in the grid */
+        padding-left: 38.375px;    }
+
+    #abouttext > .asterisk {
+        margin-top: 19.83px;    }
+
+    h6 {
+        height: calc(254.828px - 4.42px);    }
+
+    #text404 {
+        font-size: 45.5px;    }
+
+    h1 .htac {
+        font-size: 64.38px;    } 
+
+    #opportunities li,
+    #livelearn li {
+        width: 724.603px;    /* 78.571vw - 4.1vw (22/28cols - margin-left) at 973px screenwidth equivalent */
+        list-style: disc;    }
+
+    .processbullets li {
+        width: 724.603px;    }    /* 78.571vw - 4.1vw (22/28cols - margin-left) at 973px screenwidth equivalent */
+
+}    /* 973px ++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+
+
+
+/* 1240px ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+@media only screen and (min-width: 1240px) {
+
+    .menuitem {
+        font-size: 15.833px;
+        color: black;
+        opacity: 0.5;
+        padding-bottom: 7.917px;    }
+    .menuitem:hover {
+        opacity: 1;    }
+    
+    .current {
+        font-family: 'IBM-Plex_Mono_Bold';    /* This must come at end of styles for some reason; it won't render otherwise (even though I also call it in regular, pre-mediaqueries styles */
+        opacity: 1;    }
+    
+}    /* 1240px ++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,5 @@
+Caption: Searching for a specific term in the list scrolls to its location in the spectrum.
+
+----
+
+Alt: "Phosphopeptide" is selected from the suggested list, which auto-scrolls the word spectrum to the location at which the term can be found.

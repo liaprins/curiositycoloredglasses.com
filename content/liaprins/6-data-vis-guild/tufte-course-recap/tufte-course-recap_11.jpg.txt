@@ -1,0 +1,9 @@
+Caption: 
+
+----
+
+Alt: Actively document and surface metadata: who/where it comes from, when it was collected or produced, if it's been processed through algorithms, etc. if you can consume data as a skeptic, you can use this to design better visualizations.
+
+----
+
+Sort: 11
