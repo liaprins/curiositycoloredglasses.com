@@ -1,0 +1,521 @@
+/* body { */
+#bodysub {
+    /* margin: 8.024vw 10.714vw 10.714vw 10.714vw; */
+    margin: 8.024vw 10.714vw 0vw 10.714vw;
+    line-height: 1.75;
+    max-width: 765px;    }
+
+/* See very end of mediaqueries.css for rules set on "html" to prevent horizontal scrolling */
+
+
+/* TEXT STYLES ---------------------------------------------------- */
+
+em {
+    font-family: 'IBM-Plex_Sans_Italic';    }
+
+h1 {
+    font-size: 46.295px;
+    letter-spacing: 0.5px;
+    line-height: 1.25;
+    margin-bottom: 25px;    }
+
+h1 .smaller {
+    /* font-size: 32.149px; */
+    font-size: 37px;    }
+
+/*
+h4 {
+    font-size: 22.326px;
+    margin-bottom: 12.5px;
+    letter-spacing: 0px;    }
+*/
+
+h2,
+h3,
+h4,
+h6 {
+    font-size: 18.605px;    }
+
+h2 {
+    letter-spacing: 0.15px;
+    line-height: 1.5;
+    margin-bottom: 35px;    }
+
+h3 {
+    letter-spacing: 0.4px;
+    line-height: 1;
+    display: inline;
+    cursor: pointer;    }
+
+h4 {
+    margin-bottom: 13.5px;
+    margin-top: 17.5px;     }
+
+h6 {
+    letter-spacing: 0.75px;
+    line-height: 1.5;
+    padding: 2.25vw 3.571vw;
+    color: transparent;
+    display: block;
+    height: calc(39.28vw - 3px);    /* 2 grid cols - thin margin space */
+    box-sizing: border-box;    }
+h6:hover {
+    background-color: rgba(74, 174, 179, 0.8);
+    color: white;    }
+
+h6 .smaller,
+.pullquote,
+#intro,
+#aboutoverview,
+#aboutcurrent {
+    font-size: 15.504px !important;    }
+
+.pullquote,
+#intro {
+    letter-spacing: 0.08px !important;    }
+
+#intro p {
+    margin-bottom: 17.5px;    }
+
+#intro p:last-of-type {
+    margin-bottom: 0;    }
+
+#intro strong {
+    box-shadow:
+        inset 0 0px white,
+        inset 0 -5px rgba(74, 174, 179, 0.4);
+    display: inline;    }
+
+#stats {
+    font-size: 10.767px;
+    margin-top: 13.125px;    }    /* 3/4 of #intro p bottom margin */
+
+#abouttext,
+#opportunities li,
+#livelearn li,
+#process p,
+#outcomes p,
+.pullquoter,
+#email,
+#resume,
+.contactpipe,
+#process ul,
+#instagram-text {
+    font-size: 12.92px;
+    letter-spacing: 0.15px;    }
+
+.processbullets {
+    margin-top: -6.75px;    /* half of space between paragraphs, negative */
+    margin-left: 4.1vw;    /* match this attribute and the styles below to #opportunities li and #livelearn li */
+    padding-left: 2.5px;
+    width: 74.471vw;
+    list-style-type: disc;    }
+
+.processbullets li {
+    margin-top: 6.75px;    }    /* half of space between paragraphs */
+
+#opportunities li strong,
+#livelearn li strong {
+    box-shadow:
+        inset 0 0px white,
+        inset 0 -3.75px rgba(74, 174, 179, 0.4);
+    /*
+    box-shadow:
+        inset 0 6px white,
+        inset 0 12.5px rgba(74, 174, 179, 0.35);
+    display: inline; */    }
+
+#process p,
+#outcomes p,
+#abouttext p {
+    /* hyphens: auto; */
+    margin-bottom: 13.5px;    }
+
+#abouttext .asterisk {
+    margin-bottom: 35px;    }
+
+.pullquote {
+    margin-top: 27px !important;
+    margin-bottom: 6.75px !important;    }    /* half of #process p bottom margin */
+
+.pullquoter {
+    margin-bottom: 27px !important;    }
+
+#abouttext {
+    margin: 13.5px 0 35px 0;    }
+
+#opportunities li,
+#livelearn li {
+    /* hyphens: auto; */
+    margin-top: 13.5px;
+    margin-left: 4.1vw;
+    padding-left: 2.5px;
+    width: 74.471vw;    /* 78.571vw - 4.1vw (22/28cols - margin-left) */
+    list-style: disc;    }
+
+/* figcaption, */
+.asterisk {
+    font-size: 10.767px !important;    }
+
+figcaption /*,
+.attribution*/ {
+    font-size: 8.972px;    }
+
+.figcaptionspacer {
+    margin: -4.486px;    /* half of figcaption font-size */
+    line-height: 1;    }
+
+.attribution {
+    font-size: 7.477px !important;    }
+
+.asterisk {
+    /* margin-bottom: 32.5px !important; */    }
+
+#livelearn > ul > li > .asterisk {
+    margin-top: 15px;    }
+
+a {
+    text-decoration: none;    }
+
+#abouttext a,
+#intro a,
+#process a,
+#outcomes a,
+#opportunities li a,
+#livelearn li a {
+    color: black;
+    opacity: 0.5;
+    cursor: pointer;    }
+
+#abouttext a:hover,
+#intro a:hover,
+#process a:hover,
+#outcomes a:hover,
+#opportunities li a:hover,
+#livelearn li a:hover {
+    opacity: 1;
+    cursor: pointer;    }
+
+/* OTHER STYLES (not text) ---------------------------------------------------- */
+
+#photogroup {
+    margin-bottom: 15px;    }
+
+#mobilepic {
+    margin-bottom: 20px;
+    height: calc(39.28vw - 3px);    /* match width/height of project tile image */
+    width: 78.571vw;
+    background-size: 78.571vw calc(39.28vw - 3px);
+    /* background-image: url('../images/lia-1.jpg'); */
+    background-image: url('../../content/liaprins/lia-1.jpg');
+    background-position: center;
+    background-repeat: no-repeat;    }
+
+#email, 
+#resume,
+#instagram-text {
+    color: black;
+    letter-spacing: 0.75px;    }
+
+#instagram {
+    height: 15px;
+    margin: 0 3px -3px 3px;    }
+
+#resume {
+    margin-left: 3px;    }
+
+#aboutsummary {
+    cursor: pointer;
+    display: block;    }
+#aboutsummary::-webkit-details-marker {    
+    display: none;    }
+
+#aboutsummary:focus {    /* Getting rid of browser's default focus ring (for now) */
+    outline: none;    }
+
+#abouttoggle {
+    position: relative;
+    background-image: url('../images/+x.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 27.5px;
+    width: 27.5px;
+    background-size: 27.5px 27.5px;
+    float: right;
+    margin-top: 17.5px;    }
+details[open] #abouttoggle {
+    background-image: url('../images/x.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 27.5px;
+    width: 27.5px;
+    background-size: 27.5px 27.5px;
+    float: right;
+    margin-top: 17.5px;    }
+
+.projecttile {
+    height: calc(39.28vw - 3px);    /* 11/28cols - thin margin */
+    width: calc(39.28vw - 3px);
+    float: left;
+    margin: 3px 3px 0 0;
+    background-repeat: no-repeat;
+    background-size: calc(39.28vw - 3px) calc(39.28vw - 3px);    }
+
+.aboutproject {
+    height: 17.5px;
+    float: right;
+    vertical-align: bottom;
+    opacity: 0;
+    position: relative;
+    top: calc(35.709vw - 21.5px);    /* 39.28vw - 3.571vw - 17.5px + 3px) (height of tile - tile's bottom inner padding - height of "+" itself + thin margin width) */
+    left: -3.571vw;    }
+
+a:hover > .aboutproject {
+    opacity: 1;    }
+
+.aboutproject:hover ~ h6 {
+    background-color: rgba(74, 174, 179, 0.8);
+    color: white;    }
+
+#back {
+    width: 27.5px;
+    /* position: absolute; */
+    position: fixed;
+    left: calc(5.357vw - 13.75px);    /* half of body's left margin - half of backarrow width */
+    top: calc(5.357vw - 8.02px);    }
+
+#error-backlink {
+    position: fixed;
+    left: calc(5.357vw - 13.75px);
+    top: calc(5.357vw - 8.02px);    }
+
+#error-backarrow {
+    width: 27.5px;    }
+
+#error-backtext {
+    color: black;
+    opacity: 0.5;
+    padding-left: 10px;
+    position: relative;
+    top: -2px;    }
+
+#error-backlink:hover > #error-backtext {
+    opacity: 1;    }
+
+#group404 {
+    margin-top: calc(50vh - 13.925vw);    }
+
+#text404 {
+    margin-top: 20px;
+    font-size: 4.65vw;
+}
+
+#menu {
+    display: none;    }
+
+#opportunities,
+#process,
+#outcomes,
+#livelearn {
+    padding-top: 0.1px;    }
+
+.sectionheader::-webkit-details-marker {    
+    display: none;    }
+.sectionheader {
+    display: block;
+    padding-top: 5px;
+    border-width: 3px;
+    border-color: black;
+    border-style: solid none none none;
+    margin: 35px 0 12.5px 0;
+    cursor: pointer;
+    /* margin-bottom: 12.5px; */    }
+.sectionheader:focus {    /* Getting rid of browser's default focus ring (for now) */
+    outline: none;    }
+
+.sectionplus {
+    background-image: url('../images/+x.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 16.5px;
+    width: 16.5px;
+    background-size: 16.5px 16.5px;
+    float: right;
+    padding-top: 9px;
+    cursor: pointer;   }
+details[open] .sectionplus {
+    background-image: url('../images/x.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 17.5px;
+    width: 17.5px;
+    background-size: 17.5px 17.5px;
+    float: right;
+    padding-top: 10px;    }
+
+#gridseparator {
+    margin: 35px 0 45px 0;
+    border-width: 1.5px;
+    border-style: solid;
+    background-color: black;    }
+
+#bottomspacer {
+    height: calc((3 * 39.28vw) + 10.714vw);    }    /* (number of tiles high at this screenwidth [adjust if project count changes!] * height of tile INCLUDING THIN MARGIN HEIGHT) + 3/28cols */
+
+.postvideo-4-3-ratio {
+    width: 78.571vw;
+    height: 58.928vw;    }
+
+.postvideo-16-9-ratio {
+    width: 78.571vw;
+    height: 44.196vw;    }
+
+
+/* LIGHTBOXSLIDESHOW STYLES ---------------------------------------------------- */
+
+.yellowhover:hover {
+    background-color: white;    }
+
+.contentimage { 
+    max-width: 78.571vw;
+    display: block;
+    margin: 27.5px auto 0 auto;    }
+
+figure {    /* This applies to the image + its caption (if it has one) as a whole */
+    margin: 27.5px 0;    }    /* placeholderBox's style.top is dependent on/matches this measurement within lightboxslideshow.js */
+
+figcaption {    /* This applies to all places captions appear (post page single and/or gallery images, About page) */
+    margin-top: 17.5px;    }
+
+.gallery {
+    position: relative;    }
+
+#galleryimage {
+    /* opacity: 0.5; */
+    margin-top: -12.5px;    }
+
+.dot {
+    width: 5px;   
+    height: 5px;  
+    border-radius: 2.5px;
+    display: inline-block;    /* needed so that margins can apply to <span>s */
+    margin: 0 2.25px;    }
+
+.dotimg {
+    width: 5px;   
+    height: 5px; 
+    position: relative;
+    top: -11px;    }
+
+.dotimgunfilled:hover {
+    border-radius: 2.5px;
+    background-color: rgba(74, 174, 179, 0.8);
+    cursor: pointer;    }
+
+.arrowcontainer {
+    float: right;    }
+
+.galleryarrows {
+    box-sizing: content-box;
+    height: 15.5px;
+    width: 15.5px;
+    padding: 5px;
+    cursor: pointer;
+    margin-top: 2px;
+    float: left;    }
+
+#placeholderbox {
+    /* background-color: rgba(255, 255, 0, 0.5); */
+    z-index: -100;    }
+
+.toprule {
+    display: none;    }
+
+.gallerycaption {
+    margin-top: 30px;    }
+
+
+/* LIGHTBOX ---------------------------------------------------- */
+
+.contentimage:hover {
+    cursor: pointer;    }
+
+#lightboxdotcontainer {
+    position: absolute;
+    margin-bottom: -11px;
+    bottom: calc(5.357vw - 8.75px);
+    left: calc(5.357vw - 8.75px);    }
+
+#singlelightbox {    /* WHITE BACKGROUND OF LIGHTBOX */
+    cursor: pointer;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;    }
+
+.lightboximage {
+    cursor: auto !important;
+    z-index: 101;
+    max-width: 100vw;
+    max-height: 100vh;
+    margin-top: 0;    }
+
+#lightboxclose {
+    z-index: 103;
+    position: absolute;
+    top: calc(5.357vw - 8.75px);
+    left: calc(100vw - 5.357vw - 8.75px);    }
+
+.lightboxcaption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 102;
+    background-color: rgba(255, 255, 255, 0.95);
+    margin: 0;
+    padding: 10.714vw;
+    border-style: none;
+    width: 78.571vw;    }    /* 28/28 cols */
+
+.hide {
+    display: none;    }
+
+.turn180 {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);    }
+
+.lightboxarrowcontainer {
+    position: absolute;
+    bottom: calc(5.357vw - 8.75px);
+    right: calc(5.357vw - 8.75px);    }
+
+.close-x {
+    box-sizing: content-box;
+    height: 17.5px;
+    width: 17.5px;
+    padding: 0;
+    cursor: pointer;
+    float: right;    }
+
+#captiontoggle {
+    box-sizing: content-box;
+    height: 17.5px;
+    width: 17.5px;
+    padding: 0;
+    cursor: pointer;
+    float: right; 
+    z-index: 103;
+    position: absolute;
+    top: calc(5.357vw - 8.75px);
+    left: calc(100vw - 5.357vw - 36.25px);    }
+
+
+
+
+

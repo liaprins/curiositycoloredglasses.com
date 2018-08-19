@@ -1,0 +1,2 @@
+
+To use Disqus for comments, copy and paste the disqus.php file adjacent to this readme file into the site/snippets folder. Then Uncomment the place the disqus comment is called, toward the bottom of site/templates/blogarticle.php.

@@ -23,6 +23,10 @@ RewriteEngine on
 #RewriteCond %{HTTPS} off
 #RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R,L]
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/master
 # block text files in the content folder from being accessed directly
 RewriteRule ^content/(.*)\.(txt|md|mdown)$ index.php [L]
 

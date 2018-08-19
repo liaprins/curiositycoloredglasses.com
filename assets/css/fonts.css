@@ -3,6 +3,7 @@
     src: url(../fonts/ibmplexmono-bold-v01-webfont.woff) format('woff');    }    
 
 @font-face {
+<<<<<<< HEAD
     font-family: 'IBM-Plex_Mono_Regular';
     src: url(../fonts/ibmplexmono-regular-v01-webfont.woff) format('woff');    }
     
@@ -21,20 +22,53 @@
 @font-face {    
     font-family: 'IBM-Plex_Sans_Medium';
     src: url(../fonts/IBMPlexSans-Medium.woff) format('woff');    }
+=======
+    font-family: 'Grotesque_Bold';
+    src: url(../fonts/GROTESQUE_BOLD_smooth.woff) format('woff');
+    display: swap;    }    
+
+/* NOT BEING USED ANYMORE, IN FAVOR OF LIGHTER VERSION */
+/*
+@font-face {
+    font-family: 'Sintesi_Sans';
+    src: url(../fonts/SINTESI_SANS_native.woff) format('woff');
+    display: swap;    }
+*/
+>>>>>>> origin/master
 
 @font-face {    
+<<<<<<< HEAD
     font-family: 'IBM-Plex_Sans_Medium_Italic';
     src: url(../fonts/IBMPlexSans-MediumItalic.woff) format('woff');    }
+=======
+    font-family: 'Sintesi_Sans_Demi-Bold';
+    src: url(../fonts/sintesi_sans_demi-bold-webfont.woff) format('woff');
+    display: swap;    }
+    
+>>>>>>> origin/master
 
 @font-face {    
+<<<<<<< HEAD
     font-family: 'IBM-Plex_Sans_Semi-Bold';
     src: url(../fonts/IBMPlexSans-SemiBold.woff) format('woff');    }
+=======
+    font-family: 'Sintesi_Sans_Italic';
+    src: url(../fonts/sintesi_sans_italic-webfont.woff) format('woff');
+    display: swap;    }
+>>>>>>> origin/master
 
 @font-face {    
+<<<<<<< HEAD
     font-family: 'IBM-Plex_Mono_Medium';
     src: url(../fonts/IBMPlexMono-Medium.woff) format('woff');    }
+=======
+    font-family: 'Sintesi_Sans_Light';
+    src: url(../fonts/sintesisanslight-webfont.woff) format('woff');
+    display: swap;    }
+>>>>>>> origin/master
 
 @font-face {    
+<<<<<<< HEAD
     font-family: 'IBM-Plex_Mono_Medium_Italic';
     src: url(../fonts/IBMPlexMono-MediumItalic.woff) format('woff');    }
 
@@ -78,5 +112,20 @@ figcaption em {
     font-family: 'IBM-Plex_Sans_Medium_Italic', 'Courier_New', Courier, Monotype;
 
 
+=======
+    font-family: 'Sintesi_Sans_Light_Italic';
+    src: url(../fonts/sintesisanslight-italic-webfont.woff) format('woff');
+    display: swap;    }
+
+/* A BOLDER WEIGHT FOR THE "BY" [INSERT WRITER'S NAME] */
+/* NOTE: I ONLY EXPORETED THE LETTERS "B" + "Y" WITH FONTSQUIRREL FOR THIS, 
+TO SAVE FROM THE BROWSER NEEDING TO DOWNLOAD ALL OTHER LETTERS SLOWLY!
+IF WANT TO CHANGE TO "written by", "illustrated by", OR "written and illustrated by" ETC IN FUTURE 
+WILL NEED TO RETURN TO FONTSQUIRREL AND OVERRIDE */
+@font-face {    
+    font-family: 'Sintesi_Sans_True_Bold';
+    src: url(../fonts/sintesi-sans-bold-webfont.woff) format('woff');
+    display: swap;    }
+>>>>>>> origin/master
 
     

@@ -2,11 +2,16 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
  "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
 <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+<<<<<<< HEAD
  width="261.000000pt" height="261.000000pt" viewBox="0 0 261.000000 261.000000"
+=======
+ width="542.000000pt" height="542.000000pt" viewBox="0 0 542.000000 542.000000"
+>>>>>>> origin/master
  preserveAspectRatio="xMidYMid meet">
 <metadata>
 Created by potrace 1.11, written by Peter Selinger 2001-2013
 </metadata>
+<<<<<<< HEAD
 <g transform="translate(0.000000,261.000000) scale(0.100000,-0.100000)"
 fill="#000000" stroke="none">
 <path d="M17 2532 c-16 -3 -17 -90 -17 -1223 0 -670 3 -1219 8 -1220 9 -1
@@ -19,5 +24,9 @@ fill="#000000" stroke="none">
 0 1223 c0 1112 -2 1222 -16 1223 -30 1 -943 4 -944 3z m428 -779 l0 -350 -195
 1 c-205 0 -253 8 -311 47 -31 21 -92 97 -84 106 2 1 -1 15 -7 30 -14 37 -13
 286 2 341 14 53 60 115 102 136 55 28 143 39 319 39 l174 0 0 -350z"/>
+=======
+<g transform="translate(0.000000,542.000000) scale(0.100000,-0.100000)"
+fill="#000000" stroke="none">
+>>>>>>> origin/master
 </g>
 </svg>

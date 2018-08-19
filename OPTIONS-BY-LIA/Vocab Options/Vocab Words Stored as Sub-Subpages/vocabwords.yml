@@ -1,0 +1,17 @@
+title: Vocab Words
+
+//page settings
+options: 
+	preview: false
+	status: false
+	template: false
+	url: false
+
+//subpage settings
+pages: 
+	template: 
+		- vocabword
+
+//file settings
+files: false
+
