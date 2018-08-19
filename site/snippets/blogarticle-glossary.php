@@ -42,10 +42,9 @@
                                     <span id="<?php echo $vocabwordurl ?>" class="glossaryvocabword m-textface bold">
                                         <!-- This is the vocab word that appears alongside the definition -->
                                         <?php echo html($subpage->vocabword()) ?>
-                                    </span>
-
-                                    <!-- Written pronunciation -->
-                                    <span id="pronunciation" class="xs-textface">
+                                    </span>&ensp;<span id="pronunciation" class="xs-textface">
+                                    <!-- ^^^ Written pronunciation -->
+                                    <!-- <span id="pronunciation" class="s-textface"> -->
                                         <?php echo html($subpage->pronunciation()) ?>
                                     </span>
 
@@ -62,6 +61,7 @@
 
                                     <!-- definition (required) appended with up arrow, to take user back to word in context -->
                                     <?php if(!$subpage->definition()->empty()): ?>
+                                        <!-- <p class="xs-textface definition"> -->
                                         <p class="s-textface definition">
                                             <?php echo html($subpage->definition()) ?>
 

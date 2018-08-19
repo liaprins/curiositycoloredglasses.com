@@ -26,8 +26,16 @@ document.onreadystatechange = function () {
 }
 */
 
+/* DOM readyState property returns one of five values:
+uninitialized - Has not started loading yet
+loading - Is loading
+loaded - Has been loaded
+interactive - Has loaded enough and the user can interact with it
+complete - Fully loaded */
+
+
 document.onreadystatechange = function () {
-  var state = document.readyState
+  var state = document.readyState;
   if (state == 'interactive') {
        document.getElementById('contents').style.visibility="hidden";
   } else if (state == 'complete') {

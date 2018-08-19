@@ -14,11 +14,11 @@ Date: 2016-04-26
 
 ----
 
-Tags: light,all
+Tags: light,all,science
 
 ----
 
-Intro: The production of light from heat, or incandescence, is familiar to everyone. But other processes can also yield light – without ever using heat. The term photoluminescence describes a process that produces light using light energy. Two forms of photoluminescence: fluorescence and phosphorescence, are defined by the length of time the emitted light continues to glow. Fluorescence refers to the immediate release of light, where light is emitted within a fraction of a second after excitation. Phosphorescence refers to the release of light that lasts longer – seconds or even hours after the excitation has stopped. Phosphorescence is a longer-lasting process than fluorescence because of the structure of the molecules at the quantum level. The energy transitions from excited, higher energy states to stable ground states are “forbidden” by quantum rules. In real terms, they do in fact occur, but at such low probabilities that these energy transitions last a very long time.
+Intro: The production of light from heat, or incandescence, is familiar to everyone. But other processes can also yield light – without ever using heat. The term photoluminescence describes a process that produces light using light energy. Two forms of photoluminescence: fluorescence and phosphorescence, are defined by the length of time the emitted light continues to glow. Fluorescence refers to the immediate release of light, where light is emitted within a fraction of a second after excitation. Phosphorescence refers to the release of light that lasts longer – sec&shy;onds or even hours after the excitation has stopped. Phosphorescence is a longer-lasting process than fluorescence because of the structure of the molecules at the quantum level. The energy transitions from excited, higher energy states to stable ground states are “forbidden” by quantum rules. In real terms, they do in fact occur, but at such low probabilities that these energy transitions last a very long time.
 
 ----
 
@@ -91,3 +91,11 @@ Share: Find out what makes flourescent colors so special.
 ----
 
 Twitterimageurl: 
+
+----
+
+Guestwriter: Sheriff of Chopping&shy;ham (looks like a wolf)
+
+----
+
+Guestwriterlink: 

@@ -18,7 +18,7 @@ Guestwriter: Hannity O'Lemon
 
 ----
 
-Tags: mountains,measurements,geology,Mars,volcanoes
+Tags: mountains,measurements,geology,Mars,volcanoes,science,super duper trooper,supercalafragalisticexpialidocious
 
 ----
 
@@ -30,11 +30,11 @@ Text:
 
 <div class="pullquotesquare">
 </div>
-(text: Unfortunately, sea level is not level. The distance from the center of the Earth to the coastline is different around the world, not only because of winds and weather, but also as a result of the Earth's midsection bulge, which causes water {and everything else} to spread out at the equator. In addition, Earth is lumpy, with massive topographical features {such as mountains} altering the gravity in surrounding areas. class: l-textface pullquote)
+(text: Unfortunately, sea level is not level. The distance from the center of the Earth to the coast&shy;line is different around the world, not only because of winds and weather, but also as a result of the Earth's midsection bulge, which causes water {and everything else} to spread out at the equator. In addition, Earth is lumpy, with massive topographical features {such as mountains} altering the gravity in surrounding areas. class: l-textface pullquote)
 
 I love (link: library#earth text: this planet). That's why I have such a cool (link: library#globe text: globe). The magnitude-7.8 earthquake that rocked Nepal in April 2015 may have changed the Himalayas' heights buy a couple of inches at most. But just how do scientists measure that miniscule level of change?
 
-Official measures put Mount Everest at 29,029 feet (8,848 meters) above sea level, but recent satellite data suggest the sky-scraping peak may have shrunk by about 1 inch (2.54 centimeters), because the underlying (vocab: tectonic url: tectonic) plates have relaxed somewhat. Even the alpine forests' (link: blog/do-indoor-trees-have-growth-rings text: tree rings) were shaken. Regular text above 1.
+Official measures put Mount Everest at 29,029 feet (8,848 meters) above sea level, but recent satellite data suggest the sky-scraping peak may have shrunk by about 1 inch (2.54 centimeters), because the un&shy;derly&shy;ing (vocab: tectonic url: tectonic) plates have relaxed somewhat. Even the alpine forests' (link: blog/do-indoor-trees-have-growth-rings text: tree rings) were shaken. Regular text above 1.
 
 Official measures put Mount Everest at 29,029 feet (8,848 meters) above sea level, but recent satellite data suggest the sky-scraping peak may have shrunk by about 1 inch (2.54 centimeters), because the underlying (vocab: tectonic url: tectonic) plates have relaxed somewhat. Even the alpine forests' (link: blog/do-indoor-trees-have-growth-rings text: tree rings) were shaken. Regular text above 1.
 
@@ -213,3 +213,15 @@ Share: Is Everest really 29,029 feet tall? Or just that many feet above sea leve
 ----
 
 Twitterimageurl: 
+
+----
+
+Guestwriterlink: 
+
+----
+
+Facebookshareimage: mountain-measurement-original.png
+
+----
+
+Pinterestverticalimage: tall-pin-size.png

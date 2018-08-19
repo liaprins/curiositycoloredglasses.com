@@ -1,21 +1,25 @@
 /* TAGLINE (customizing line breaks) -------------------------------------------------- */
 
-@media only screen and (min-width: 268px) {
+/* @media only screen and (min-width: 268px) { */
+@media (min-width: 268px) {
     .taglinehalf {
         display: inline-block;    }
 }
  
-@media only screen and (min-width: 284px) {
+/* @media only screen and (min-width: 284px) { */
+@media (min-width: 284px) {
     .taglinehalf {
         display: inline;    }
 }
 
-@media only screen and (min-width: 343px) {
+/* @media only screen and (min-width: 343px) { */
+@media (min-width: 343px) {
     .taglinehalf {
         display: inline-block;    }
 }
 
-@media only screen and (min-width: 427px) {
+/* @media only screen and (min-width: 427px) { */
+@media (min-width: 427px) {
     .taglinehalf {
         display: inline;    }
 }
@@ -26,11 +30,13 @@
 /* YELLOW OPEN MENU -------------------------------------------------- */
 
 /* When it gets to perfect square width, making it hold */
-@media only screen and (min-width: 276px) {
+/* @media only screen and (min-width: 276px) { */
+@media (min-width: 276px) {
     #navdetails[open] {
         width: calc(189.310px + 21.429vw);    }    /* 19/28 cols in px equivalent at 276px screenwidth for content + 6/28 cols for padding */
+
     #navsearchinput {
-        width: 164px;    }    /* Closest I can get length to be to push out search icon without it going to next line */
+        width: 163px;    }    /* Closest I can get length to be to push out search icon without it going to next line */
 }
 
 
@@ -38,18 +44,20 @@
 
 /* 295px ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
-@media only screen and (min-width: 295px) {
+/* @media only screen and (min-width: 295px) { */
+@media (min-width: 295px) {
     
     /* POSTGLASSES -------------------------------------------------- */
 
     .postglasses {
-        width: 126.289px;    }
-    .date, figcaption {
-        /* border-width: 5.052px; */    /* This should dynamically match the weight of the line of the postglasses below date, based on their width of 42.857vw (12/28 cols) and the ratio of the postglasses width to their line weight of 25:1 */ 
-        border-width: 0.25rem;    }
+        /* width: 126.289px; */
+        /* width: 147.5px; */    /* 14/28 cols px-equivalent at 295px screenwidth */
+        width: 173.64px;    }    /* 14/28 cols px-equivalent at 442px screenwidth: the NEXT postglasses breakpoint! */
+    /* Setting the stroke weight for the lines above date, and below captions */
+    .date,
     figcaption {
-        border-width: 0.125rem;    }    /* This should match the weight of the icons, e.g. home icon */
-
+        border-width: 0.29rem;
+        /* border-width: 6.25px; */    }    /* This should match 9/10 (to account for optical illusion) of the weight of the main postglasses' outline; the ratio of postglasses' width to stroke weight is 25:1; */
 
     /* RESULTS + RESULTGLASSES -------------------------------------------------- */
     
@@ -66,7 +74,8 @@
 
 /* 390px ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
-@media only screen and (min-width: 390px) {
+/* @media only screen and (min-width: 390px) { */
+@media (min-width: 390px) {
 
     /* VOCAB IMAGE -------------------------------------------------- */
 
@@ -123,25 +132,27 @@
         overflow: auto;    /* This line and the next are to fix a broswer bug wherein this containing element thinks it is 0px tall because it only contains floated elements; see pp373-4 in HTML & CSS book */
         /* width: 100%; */    /* This line and the previous are to fix a broswer bug wherein this containing element thinks it is 0px tall because it only contains floated elements; see pp373-4 in HTML & CSS book; but commenting out the 100% width because I actually want a specific width, and it seems to be working anyway */
         width: 85.714vw;    /* 24/28 cols | Establishing a separate div so I can make it wider in screens with more than one result wide to accommodate margins I need to put on both L + R sides of all results so they have proper spacing between each other, but don't look like they're extending past the page margins */
-        margin: 0 auto;
-        columns: 2;
-        -webkit-column-gap: 0;
-        -moz-column-gap: 0;
-        column-gap: 0;    }
+        margin: 0 auto;    }
     .result {
-        -webkit-column-break-inside: avoid; /* Chrome, Safari, Opera */
-        page-break-inside: avoid; /* Firefox */
-        break-inside: avoid; /* IE 10+ */
-        -webkit-column-fill: balance;
-        -moz-column-fill: balance;
-        column-fill: balance;
-        margin: 0 3.571vw 1.536rem 3.571vw;    }
-    #resultglasses {
+        background-color: white;
+        float: left;
+        width: calc(42.857vw - 7.143vw);
+        height: calc(7.94rem - 1.5rem + 37.143px);    /* total of all measurements within a single result, allowing the title to be 4 lines tall */
+        /* border-top: solid 1.5rem white; */
+        margin: 0 3.571vw 1.5rem 3.571vw;    }
+    .resultarea .result:nth-last-child(-n + 2) {
+        margin-bottom: none;    }
+        #resultglasses {
         width: 21.429vw;    }    /* 6/28 cols (6/10 result cols) */ 
     #resultdate {
         margin: 0 0 0.512rem 0;
-        border-width: 0.15rem;
-        /* border-width: 0.857vw; */    }
+        border-width: 0.15rem;    }
+    #resulttitle {
+        max-height: calc(0.51rem * 4 * 1.7);
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;    }
     #nosearchresults {
         margin-top: 1.024rem;    }
 
@@ -163,7 +174,8 @@
 
 /* 408px ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
-@media only screen and (min-width: 408px) {
+/* @media only screen and (min-width: 408px) { */
+@media (min-width: 408px) {
     
     /* FOOTER HEIGHT (set by body's bottom padding) -------------------------------------------------- */
 
@@ -195,12 +207,12 @@
 
 /* RESULTS + RESULTGLASSES -------------------------------------------------- */
 
-@media only screen and (min-width: 433px) {
+/* @media only screen and (min-width: 433px) { */
+@media (min-width: 433px) {
     #resultglasses {
         width: 92.857px;    }    /* 6/28 cols (6/10 result cols) */ 
     #resultdate {
-        border-width: 0.15rem;
-        /* border-width: 3.714px; */    }    /* This should dynamically match the weight of the line of the resultglasses below date, based on their width of 28.571vw (8/28 cols) and the ratio of the resultglasses width to their line weight of 25:1; */ 
+        border-width: 0.15rem;    }    /* This should dynamically match the weight of the line of the resultglasses below date, based on their width of 28.571vw (8/28 cols) and the ratio of the resultglasses width to their line weight of 25:1; */ 
 }  
 
 
@@ -208,7 +220,8 @@
 
 /* 442px ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
-@media only screen and (min-width: 442px) {
+/* @media only screen and (min-width: 442px) { */
+@media (min-width: 442px) {
 
     /* TEXT -------------------------------------------------- */
 
@@ -216,6 +229,8 @@
         font-size: 3.620vw;    }
     .xs-display {
         font-size: 0.443rem;    }
+    .xxs-display {
+        font-size: 0.369rem;    }
 
     /* BACK ARROW LOCATION -------------------------------------------------- */
     
@@ -261,17 +276,18 @@
         /* width: calc(41.922vw + 14.286vw); */
         /* width: calc(15.527rem + 4px); */    }    /* :) Height of menu when open: width needs to be this so it can match */
     #navsearchinput {
-        width: calc(14.127rem - 14.286vw);    }    /* Closest I can get length to be to push out search icon without it going to next line */
+        /* width: calc(14.127rem - 14.286vw); */
+        width: calc(14rem - 15vw);    }    /* Closest I can get length to be to push out search icon without it going to next line */
 
     /* POSTGLASSES -------------------------------------------------- */
 
     .postglasses {
-        width: 28.571vw;    } /* 8/28 cols */
-    .date, figcaption {
-        /* border-width: 1.143vw; */    /* This should dynamically match the weight of the line of the postglasses below date, based on their width of 42.857vw (12/28 cols) and the ratio of the postglasses width to their line weight of 25:1 */ 
-        border-width: 0.25rem;    }
+        /* width: 28.571vw; */    /* 8/28 cols */
+        width: 39.286vw;    }    /* 11/28 cols */
+    /* Setting the stroke weight for the lines above date, and below captions */
+    .date,
     figcaption {
-        border-width: 0.125rem;    }    /* This should match the weight of the icons, e.g. home icon */
+        /* border-width: 1.413vw; */    }    /* This should match 9/10 (to account for optical illusion) of the weight of the main postglasses' outline; the ratio of postglasses' width to stroke weight is 25:1; */
 
     /* SUBSCRIBE -------------------------------------------------- */
 
@@ -297,7 +313,10 @@
     /* SEARCH PAGE -------------------------------------------------- */
 
     #searchpageinput {
-        width: calc(78.571vw - 2.05rem);    }    /* This should be [the width of <main> (22/28 cols = 78.571vw)[] minus [the width of magnifier icon + its padding + the width of menu icon + the space between them (30px + 17px + 15px = 62px)] */
+        width: calc(78vw - 2.05rem);    }    /* This should be [the width of <main> (22/28 cols = 78.571vw)[] minus [the width of magnifier icon + its padding + the width of menu icon + the space between them (30px + 17px + 15px = 62px)] */
+
+    #searchpagebutton {
+        float: right;    }
 
 }    /* 442px ++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
@@ -308,7 +327,8 @@
 /* LIBRARY ICONS -------------------------------------------------- */
 
 /* Library icons switch from 4- to 6-across -------------------------------------------------- */
-@media only screen and (min-width: 544px) {    /* This is for the library entries to switch to being 6-across */
+/* @media only screen and (min-width: 544px) { */    /* This is for the library entries to switch to being 6-across */
+@media (min-width: 544px) {    /* This is for the library entries to switch to being 6-across */
     #librarysection {    /* Setting up the library entries to go 6-across */ 
         width: 85.77vw;    /* 24/28 cols | Had to round up slightly from 85.714vw to get the icons to fit 3-across */
         margin: 3.571vw auto -3.571vw auto;     }    /* top: 1/28 cols, bottom: -1/28 cols | Trying to counteract other margins to make the space between library icon zone and above and below it match the space between library icons themselves */
@@ -330,14 +350,15 @@
 
 /* POSTGLASSES -------------------------------------------------- */
 
-@media only screen and (min-width: 613px) {
+/* @media only screen and (min-width: 613px) { */
+@media (min-width: 613px) {
     .postglasses {
-        width: 175px;    }
-    .date, figcaption {
-        /* border-width: 7px; */    /* This should dynamically match the weight of the line of the postglasses below date, based on their width of 42.857vw (12/28 cols) and the ratio of the postglasses width to their line weight of 25:1 */ 
-        border-width: 0.25rem;    }
+        /* width: 175px; */    /* 8/28 cols px-equivalent at 613px screenwidth */
+        width: 240.82px;    }    /* 11/28 cols px-equivalent at 613px screenwidth */
+    /* Setting the stroke weight for the lines above date, and below captions */
+    .date,
     figcaption {
-        border-width: 0.125rem;    }    /* This should match the weight of the icons, e.g. home icon */
+        /* border-width: 8.67px; */    }    /* This should match 9/10 (to account for optical illusion) of the weight of the main postglasses' outline; the ratio of postglasses' width to stroke weight is 25:1; */
 }
 
 
@@ -345,7 +366,8 @@
 
 /* 650px ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
-@media only screen and (min-width: 650px) {
+/* @media only screen and (min-width: 650px) { */
+@media (min-width: 650px) {
 
     /* TEXT -------------------------------------------------- */
 
@@ -357,8 +379,8 @@
     #navdetails[open] {    
         width: calc(274.129px + 14.286vw);    }    /* Height of menu when open: width needs to be this so it can match */
     #navsearchinput {
-        width: 238px;    }    /* Closest I can get length to be to push out search icon without it going to next line */
-
+        /* width: 238px; */
+        width: 234px;    }    /* Closest I can get length to be to push out search icon without it going to next line */
     /* PULLQUOTES -------------------------------------------------- */
 
     .pullquotesquare {
@@ -409,10 +431,12 @@
     /* RESULTS + RESULTGLASSES -------------------------------------------------- */
 
     /* Results 3-across -------------------------------------------------- */
-    .resultarea {
-        columns: 3;    }
+    .resultarea {    }
     .result {
-        /* width: 21.429vw; */    }    /* 6/28 cols | Setting results to 3-column grid */
+        height: calc(7.94rem - 1.5rem + 5.714vw);
+        width: calc(28.571vw - 7.143vw);    }    /* 6/28 cols | Setting results to 3-column grid */
+    .resultarea .result:nth-last-child(-n + 3) {
+        margin-bottom: none;    }
     #resultglasses {
         width: 14.286vw;    }    /* 4/28 cols (4/6 result cols) */ 
     #resultdate {
@@ -424,9 +448,26 @@
 
 
 
+/* 756px ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* @media only screen and (min-width: 756px) { */
+@media (min-width: 756px) {
+
+    /* TEXT -------------------------------------------------- */
+
+    h1 {
+        font-size: 1.586rem;    /* Bumping up to level 6, relative to the base */
+
+
+}    /* 756px ++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+
+
+
 /* 783px ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
-@media only screen and (min-width: 783px) {    /* This is the content-width equivalent of 1175px screenwidth's content width */
+/* @media only screen and (min-width: 783px) { */    /* This is the content-width equivalent of 1175px screenwidth's content width */
+@media (min-width: 783px) {
     
     /* SUBSCRIBE -------------------------------------------------- */
 
@@ -442,6 +483,8 @@
         width: 78.571vw;    }    /* 22/28 cols */
     #subscribemessage {
         margin-bottom: 0;    }
+    #instagramlogo {
+        padding-left: 0.422rem;    }
 
     /* FOOTER HEIGHT (set by body's bottom padding -------------------------------------------------- */
 
@@ -464,7 +507,8 @@
 
 /* 817px ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
-@media only screen and (min-width: 817px) {
+/* @media only screen and (min-width: 817px) { */
+@media (min-width: 817px) {
 
     /* CONTENT AREA WIDTH -------------------------------------------------- */
 
@@ -500,7 +544,7 @@
     .postdatewidth {    /* 22/28 cols px equivalent at 817px screen width */
         width: 641.929px;    }
     #searchpageinput {
-        width: calc(641.929px - 1.94rem);    }    /* This should be [the width of <main> (22/28 cols = 78.571vw)[] minus [the width of magnifier icon + its padding + the width of menu icon + the space between them (30px + 17px + 15px = 62px)] */
+        width: calc(641px - 1.94rem);    }    /* This should be [the width of <main> (22/28 cols = 78.571vw)[] minus [the width of magnifier icon + its padding + the width of menu icon + the space between them (30px + 17px + 15px = 62px)] */
 
     /* YELLOW OPEN MENU -------------------------------------------------- */
 
@@ -513,10 +557,10 @@
     .date, figcaption {
         width: 641.929px;    /* 22/28 cols px equivalent at 817px screen width */
         /* border-width: 7.003px; */    /* 6/28 cols divided by 25 (ratio of postglasses' width to their line weight) px equivalent at 817px screen width */
-        border-width: 0.25rem;    }
+        /* border-width: 0.25rem; */    }
 
     figcaption {
-        border-width: 0.125rem;    }    /* This should match the weight of the icons, e.g. home icon */
+        /* border-width: 0.125rem; */    }    /* This should match the weight of the icons, e.g. home icon */
 
     /* PULLQUOTES -------------------------------------------------- */
 
@@ -614,7 +658,8 @@
     .resultarea {
         width: 700.283px;    }    /* 24/28 cols px equivalent at 817px screen width */
     .result {
-        /* width: 175px; */    /* 6/28 cols at 817px | Setting results to 3-column grid */
+        height: calc(7.94rem - 1.5rem + 44.8px);
+        width: 175px;    /* 6/28 cols at 817px | Setting results to 3-column grid */
         margin: 0 29.175px 1.536rem 29.175px;    }    /* 1/28 cols at 817px | Setting results to 2-column grid */
     #resultdate {
         width: 175px;    }    /* 10/28 cols at 817px | Setting results to 2-column grid */
@@ -673,12 +718,16 @@
 
 /* 1225px ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
-@media only screen and (min-width: 1225px) {
+/* @media only screen and (min-width: 1225px) { */
+@media (min-width: 1225px) {
 
     /* TEXT -------------------------------------------------- */
 
     html {
         font-size: 24.531px;    }
+
+    #tagline {
+        font-size: 1.024rem;    }    /* Bumping tagline's font-size up ~ (almost) half a step from .l-textface size, relative to textface base, just at 1225+ to make it as wide as CCG title banner exactly  */
 
     /* CONTENT AREA WIDTH -------------------------------------------------- */    
 
@@ -773,13 +822,18 @@
     #homeicon {
         display: inline;
         position: absolute;
-        left: 0.422rem;
+        left: calc(-100vw + 440px + 0.422rem);    /* middle number (will be 667px if add in Question Queue) is the width of the navigation menu with the words (use inspector to measure at 1225px) */
         top: 0.422rem;
         width: 1.301rem;    
         padding: 0.316rem;    }
     #navlist {    /* Holds together nav search, About, Archive, and Library items */
         display: inline;
         float: right;    }    /* Pushes the group as a whole to the right */
+
+    #navlist a {
+        position: relative;
+        top: 6.5px;    }
+
     .navnothome {
         display: inline;
         position: relative;
@@ -791,7 +845,8 @@
         padding-bottom: 0.422rem;    }
     #menuword {
         position: relative;
-        top: 10px;
+        /* top: 10px; */
+        top: -1px;
         display: inline;
         padding: 0.422rem 0 0.422rem 0.422rem;
         margin-top: 0;
@@ -809,9 +864,9 @@
         float: right;    }
     #searchdecoy {
         height: 1.476rem;
-        padding: 0.316rem;
-        padding-top: 0;    }
+        padding: 0 0.316rem 0.316rem 0.316rem;    }
     #navsearchinput {
+        /* width: calc(291.667px - 3.586rem); */
         width: calc(291.667px - 3.586rem);    }
     #navsearchbutton {    /* This refers to the button element holding the image */
         height: 1.476rem;
@@ -836,10 +891,11 @@
     .date {       
         position: absolute;
         left: -233.333px;    /* 4/21 cols px equivalent at 1225px screen width */
-        top: calc(70px + 2.048rem + 0.4rem);    /* Height of postglasses + space between them and title + title top-offset due to 1.7 lineheight (wouldn't be necesary if lineheight were 1) */
+        /* top: calc(70px + 2.048rem + 0.4rem); */    /* Height of postglasses + space between them and title + title top-offset due to 1.7 lineheight (wouldn't be necesary if lineheight were 1) */
+        top: calc(96px + 2.048rem + 0.4rem + 1px);
         width: 175px;    /* 3/21 cols px equivalent at 1225px screen width */
         /* border-width: 7.003px; */    /* This should dynamically match the weight of the line of the postglasses below date, based on their width of 42.857vw (12/28 cols) and the ratio of the postglasses width to their line weight of 25:1; */ 
-        border-width: 4px;    }    /* This should match the weight of the icons, e.g. home icon */
+        /* border-width: 4px; */    }    /* This should match the weight of the icons, e.g. home icon */
     .postdatewidth {
         position: absolute;
         width: 175px;    }    /* 3/21 cols */
@@ -849,7 +905,17 @@
     .postglasses {
         margin-top: 3.072rem;
         margin-bottom: 2.048rem;
-        width: 175px;    }    /* 3/21 cols */
+        /* width: 175px; */    /* 8/28 cols px-equivalent at 613px screenwidth */
+        /* width: 240.82px; */    }    /* 11/28 cols px-equivalent at 613px screenwidth */
+    /* Setting the stroke weight for the line above caption and sidebar vocab (the lines above date have already been set in a previous mediaquery) */
+    .toprule {
+        border-width: 0.14rem;
+        /* border-width: 8.67px; */    }    /* This should match 9/10 (to account for optical illusion) of the weight of the main postglasses' outline; the ratio of postglasses' width to stroke weight is 25:1; */
+    .wordandpronunciation
+    /* .date,
+    figcaption */ {
+        border-width: 0.29rem;
+        /* border-width: calc(8.67px * 0.667 * 0.8); */    }    /* This should match 9/10 (to account for optical illusion) of the weight of the main postglasses' outline; the ratio of postglasses' width to stroke weight is 25:1; */
 
     /* TAGS + SHARE -------------------------------------------------- */
 
@@ -857,18 +923,21 @@
         position: absolute;
         display: block;
         left: -233.333px;    /* 4/21 cols px equivalent at 1225px screen width */
-        top: calc(77px + 4.288rem);    
+        /* top: calc(77px + 4.288rem); */
+        top: calc(96px + 4.288rem + 0.4rem + 1px);
         width: 175px;     }
     #posttagshare {
         position: absolute;
         margin: 0 58.333px 58.333px 58.333px;
         left: -291.667px;
-        top: calc(77px + 4.288rem);            
+        /* top: calc(77px + 4.288rem); */
+        top: calc(96px + 4.288rem + 0.4rem + 1px);
         width: 175px;    }    /* 3/21 cols */
     #posttaggroup {
         display: block;    }
     #share {
         margin-left: -0.3rem;
+        margin-top: 0.25rem;
         display: block;
         float: left;
         padding-left: 0;    }
@@ -926,7 +995,7 @@
         margin: 0 58.333px 58.333px 58.333px;
         left: -291.667px;
         width: 175px;    /* 3/21 cols px equivalent at 1225px screen width */
-        border-width: 7.003px;    /* 3/28 cols divided by 25 (ratio of postglasses' width to their line weight) px equivalent at 1225px screen width */
+        /* border-width: 7.003px; */    /* 3/28 cols divided by 25 (ratio of postglasses' width to their line weight) px equivalent at 1225px screen width */
         position: absolute;
         top: 0;
         padding-top:  1.024rem;
@@ -951,6 +1020,7 @@
 
     .toprule {
         display: block;
+        background-color: black;
         /*
         margin-top: -1.024rem;
         border-style: solid;
@@ -1013,7 +1083,7 @@
         padding: 58.333px;
         padding-top: calc(58.333px - 0.844rem - 0.844rem);    /* 1col minus height of "X" with its yellow padding */
         /* top: calc(-85px - 4.667px - 1.024rem); */    /* this works if .wordandpronunciation's top-padding matches that of caption's | finessing + top rule's width + accounting for top padding between words and top rule */
-        top: calc(-72px - 4.667px - 1.024rem);    /* this works if .wordandpronunciation's top-padding matches that of date's | finessing + top rule's width + accounting for top padding between words and top rule */
+        top: calc(-72px - 4.667px - 4.667px - 1.1rem);    /* this works if .wordandpronunciation's top-padding matches that of date's | finessing + top rule's width + accounting for top padding between words and top rule */
         background-color: white;
         width: 291.667px    }
     #audiolink {
@@ -1033,7 +1103,7 @@
         position: relative;
         /* padding-top: 1.024rem; */    /* this matches caption's top-padding between it and top rule */
         padding-top: 0.512rem;    /* this matches date's top-padding between it and top rule */
-        border-width: 4px;
+        /* border-width: 4px; */
         border-style: solid none none none; 
         border-color: black;    }
     #inlinedefinition {
@@ -1093,7 +1163,7 @@
         margin-left: calc(29.167px - 3px);
         margin-right: calc(29.167px - 2px);
         padding-bottom: 29.167px;    /* bottom: .5/21 cols (1/42) px equivalent at 1225px screen width | Used padding here instead of margin for just the bottom so the bottom underline on selection would have space between it and the icon, and would only be as long as the icon is wide */
-        max-width: 58.333px;    /* 1/21 cols px equivalent at 1225px screen width */
+        max-width: 58px;    /* 1/21 cols px equivalent at 1225px screen width */
         max-height: 58.333px;    }    /* 1/21 cols px equivalent at 1225px screen width */
     .libraryentry {
         width: 641.667px;
@@ -1117,14 +1187,14 @@
 
 /* HOME ICON FIXED TO TOP LEFT CORNER OF SCREEN -------------------------------------------------- */
 
-@media only screen and (min-width: 1246px) {  
+/* @media only screen and (min-width: 1246px) {   */
+@media (min-width: 1246px) {  
     #homeicon {
-        position: fixed;    }
-
+        position: fixed;
+        left: 0.422rem;    }
     #backarrowcontainer {
         position: fixed;    }
 }
-
 
 
 

@@ -14,7 +14,7 @@ Date: 2017-04-08
 
 ----
 
-Tags: trees,biology,all
+Tags: trees,biology,all,tree_rings,science,botany,plants,forestry,wood
 
 ----
 
@@ -93,4 +93,8 @@ Twitterimageurl:
 
 ----
 
-Guestwriter: Sheriff of Choppingham (looks like a wolf)
+Guestwriter: Sheriff of Chopping&shy;ham (looks like a wolf)
+
+----
+
+Guestwriterlink: https://www.furaffinity.net/view/22528918/

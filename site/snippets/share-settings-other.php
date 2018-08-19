@@ -19,7 +19,7 @@
 <!-- <meta name="keywords" 				   content="<?php echo $site->keywords()->html() ?>"> -->
 
 <!-- comma,separated,without,commas -->
-<meta name="keywords" 				   content="KEYWORDS,GO,HERE,COMMA,SEPARATED,WITHOUT,SPACES,AFTER,COMMAS" />
+<meta name="keywords" 				   content="learning,curiosity,critical thinking,questions,education,investigation,facts,science,nature,illustration" />
 
 <!-- ********************************************* -->
 
@@ -29,7 +29,8 @@
 <meta property="og:description"        content="<?php echo $site->find('blog')->text()->html() ?>" />
 
 <!-- For now using a single image stored in assets/images to represent all pages -->
-<meta property="og:image"              content="<?php echo url('assets/images/curiositycoloredglasses-placeholder.gif') ?>" />
+<meta property="og:image"              content="<?php echo url('assets/images/curiositycoloredglasses-facebook.jpg') ?>" />
 
 <meta property="og:type"               content="website" />
 
+<meta property="fb:app_id"             content="1816213758596939" />

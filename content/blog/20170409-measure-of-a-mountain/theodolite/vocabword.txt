@@ -10,8 +10,12 @@ Audiopronunciation: theodolite.mp3
 
 ----
 
-Definition: a surveying instrument with a rotating telescope for measuring horizontal and vertical angles
+Definition: a surveying instrument with a rotating telescope for measuring horizontal and vertical angels
 
 ----
 
 Illustration: theodolite.gif
+
+----
+
+Title: theodolite

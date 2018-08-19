@@ -46,9 +46,27 @@
 
             <!-- If there is a guest writer -->
             <?php if(!$article->guestwriter()->empty()): ?>
-                <span class="guestwriter s-display">
-                    <span class="guestwriterbanner xxs-display">guest writer</span>
-                    <?php echo kirbytext($article->guestwriter()) ?>
+                <span class="guestpostbanner xxs-display">Guest post</span>
+
+                <!-- If there is a LINK for the guest writer -->
+                <?php if(!$article->guestwriterlink()->empty()): ?>
+                    <span id="writtenby" class="xs-textface bold">by</span><span class="writer s-display"><a href="<?php echo html($article->guestwriterlink()) ?>" target="_blank" class="yellowhover">&nbsp<?php echo kirbytext($article->guestwriter()) ?>
+                        </a>
+                    </span>
+                <?php endif ?>
+
+                <!-- If there is NOT a LINK for the guest writer -->
+                <?php if($article->guestwriterlink()->empty()): ?>
+                    <span id="writtenby" class="xs-textface bold">by</span><span class="writer s-display">&nbsp<?php echo kirbytext($article->guestwriter()) ?>
+                    </span>
+                <?php endif ?>
+
+            <?php endif ?>
+
+            <!-- "Lia Prins" to show up as default author unless a guest writer is applied in panel -->
+            <?php if($article->guestwriter()->empty()): ?>
+                <span id="writtenby" class="xs-textface bold">by</span><span class="writer s-display"><a href="https://liaprins.com" target="_blank" class="yellowhover">&nbspLia Prins
+                    </a>
                 </span>
             <?php endif ?>
 
@@ -76,7 +94,7 @@
         -->
 
 
-        <div id="hometaggroup">
+        <div id="hometaggroup" class="s-textface">
 
         <!-- foreach loop pulling in the tags for each article -->
         <?php foreach($article->tags()
@@ -84,9 +102,9 @@
 
         <!-- Tags -->   
         <!-- Using "$tag:" instead of "html($tag)" because the "\" from markdown text file will return as its own tag-->                   
-            <a href="<?php echo url('tag/tag:' . $tag)?>" id="hometag" class="s-textface tag yellowhover">
+            <a href="<?php echo url('tag/tag:' . $tag)?>" id="hometag" class="xs-textface tag yellowhover">
                 <!-- Adding the 2 x "no break spaces" (&nbsp) to act as L-padding (like for "Read more" button), because using actual padding-left measurements can separate the padding from the word if the word starts on a new line -->
-                <!-- &nbsp&nbsp -->     #<?php echo html($tag) ?>
+                &nbsp&nbsp#<?php echo html($tag) ?>
             </a>
         
         <?php endforeach ?>

@@ -1,4 +1,7 @@
-<?php snippet('head-open-posts-tag') ?>
+<?php snippet('head-open') ?>
+
+
+<?php snippet('head-title-all-but-home') ?>
 
  
 <?php snippet('share-settings-common') ?>
@@ -8,6 +11,12 @@
 
 
 <?php snippet('head-close') ?>
+
+
+    <!-- holds the loading animation; all pages get it except default.php template, 
+    because it holds the 404 page, and when a non-existant page is requested (and 404 page shows), 
+    it cannot load by definition, and the animation never stops! -->
+    <div id="loadbg"></div>
 
 
     <!-- CONFLICT!!! Does this 'facebook-sdk' snippet go here, "directly after the opening <body> tag on each page you want to load it"
@@ -122,12 +131,16 @@
                 <article class="mockmain" id="postdesktopcontent2">    <!-- Opening second instance of <article> to make room for RR results that need to be wider than this width, to accommodate their all having margins on L + R -->
 
                     <!-- Comments via Disqus; trying out custom comments from Kirby instead for now, though -->
-                    <!-- <?php snippet('disqus') ?> -->
+                    <?php snippet('disqus') ?>
 
 
                     <!-- Comments via Kirby plugin -->
                     <!-- IMPORTANT! This snippet lives in site/plugins/comments/snippets; that is where the plugin calls for it to be -->
                     <!-- I am keeping it there in case of future updates to comments I need to install -->
+                    
+                    <!-- 1. TO RE-ACTIVATE ORIGINAL COMMENTS, MUST UN-COMMENT LINE BELOW && REMOVE THE SPACE [ ] BETWEEN "c" AND "omments" !!! -->
+                    <!-- 2. THEN, IF LIVE ON REAL INTERNET, MUST COMMENT OUT THE RE-ROUTING IN site/config/config.php THAT RE-ROUTES HOME URL TO SKIP OVER "blog/" -->
+                    <!-- 3. ONLY THEN WILL THESE CUSTOM COMMENTS WORK -->
                     <?php snippet('comments') ?>
 
 
@@ -135,6 +148,10 @@
 
 
             </article>    <!-- Closing first instance of <article> -->
+
+
+            <!-- adding a div to hold (with a class to hide) a vertical image for Pinterest, to be populated via the panel -->
+            <div class="hidepinnable"><?php echo $page->pinterestverticalimage()->toFile() ?></div>
 
 
         <!-- within the footer, the JS scripts used on everypage are called, 

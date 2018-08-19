@@ -6,7 +6,8 @@
 
 
 <!-- The url of the current page -->
-<meta property="og:url"                content="<?php echo rawurlencode($page->url()); ?>" /> 
+<!-- <meta property="og:url"                content="<?php echo rawurlencode($page->url()); ?>" /> -->
+<meta property="og:url"                content="<?php echo ($page->url()); ?>" /> 
 
 <!-- This one was found on Pinterest, may not be supported by Facebook -->
 <meta property="og:site_name"          content="Curiosity-Colored Glasses" />

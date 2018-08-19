@@ -1,4 +1,7 @@
-<?php snippet('head-open-sitewide') ?>
+<?php snippet('head-open') ?>
+
+
+<?php snippet('head-title-all-but-home') ?>
 
  
 <?php snippet('share-settings-common') ?>
@@ -8,6 +11,12 @@
 
 
 <?php snippet('head-close') ?>
+
+
+    <!-- holds the loading animation; all pages get it except default.php template, 
+    because it holds the 404 page, and when a non-existant page is requested (and 404 page shows), 
+    it cannot load by definition, and the animation never stops! -->
+    <div id="loadbg"></div>
 
 
     <!-- backarrow script -->
@@ -38,7 +47,7 @@
 
             <!-- intro text for the page -->
             <!-- NOT SURE IF THIS WILL STAY AS <p> -->
-            <span class="l-textface">
+            <span id="libraryintro" class="l-textface">
                 <?php echo $page->text()->kirbytext() ?>
             </span>
 
@@ -69,12 +78,16 @@
                         <img src= "<?php echo url('assets/images/x.svg') ?>" alt="close" id="library-x" class="yellowhover close-x">
                     <!-- </a> -->
 
-                    <p class="libraryentryname s-display">
-                        <?php echo html($libraryresult->heading()) ?>
-                    </p>
+                    <!-- <p class="libraryentryname s-display"> -->
+                    <span class="libraryentryname s-display">
+                        <!-- <?php echo html($libraryresult->heading()) ?> -->
+                        <?php echo kirbytext($libraryresult->heading()) ?>
+                    </span>
+                    <!-- </p> -->
 
                     <div class="libraryentryabout s-textface">
-                        <?php echo html($libraryresult->about()->kirbytext()) ?>
+                        <!-- <?php echo html($libraryresult->about()->kirbytext()) ?> -->
+                        <?php echo kirbytext($libraryresult->about()->kirbytext()) ?>
                     </div>
 
                 </article>

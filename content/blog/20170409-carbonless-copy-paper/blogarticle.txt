@@ -36,7 +36,12 @@ Carbonless copy paper was also available in a self-contained version that had bo
 
 ##### Uses
 
-Carbonless copy paper was first produced by the NCR Corporation. Formerly, the options were to write documents more than once or use (vocab: carbon paper url: carbon-paper), which was inserted between the sheet being written upon and the copy. Carbonless paper was used as business stationery requiring one or more copies of the original, such as invoices and receipts. The copies were often paper of different colors (e.g. white original for customer, yellow copy for supplier's records, and other colors for subsequent copies). Stationery with carbonless copy paper can be supplied collated either in pads or books bound into sets, or as loose sets, or as continuous stationery for printers designed to use it.
+Carbonless copy paper was first produced by the NCR Corporation. Formerly, the options were to write documents more than once or use (vocab: carbon paper url: carbon-paper), which was inserted between the sheet being written upon and the copy:
+- pink
+- yellow, ochre, lemon, sunny, school bus, Dixon Ticonderoga, buttercup, sunflower, daisy
+- white
+
+Carbonless paper was used as business stationery requiring one or more copies of the original, such as invoices and receipts. The copies were often paper of different colors (e.g. white original for customer, yellow copy for supplier's records, and other colors for subsequent copies). Stationery with carbonless copy paper can be supplied collated either in pads or books bound into sets, or as loose sets, or as continuous stationery for printers designed to use it.
 
 (image: paper-crane.jpg)
 
@@ -87,3 +92,15 @@ Share: Uncovering the magic behind the seemingly innocuous office supply that is
 ----
 
 Twitterimageurl: 
+
+----
+
+Guestwriter: 
+
+----
+
+Guestwriterlink: 
+
+----
+
+Facebookshareimge: paper-crane.jpg

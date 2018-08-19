@@ -95,9 +95,9 @@ function vocabTest(e) {
     	    			// or store the PHP version in an HTML element's attribute, then collect it in JS as a variable and call it here
 			        	// or else construct its shape with CSS (research performance) vvv
     					// innerContainer 
-    					containerInner.innerHTML = '<img src="http://localhost:8888/kirby-project/kirby-2.4.0/assets/images/x.svg" alt="close" id="vocabclose" class="close-x yellowhover" data-vocab-x>' + definitionsList[i].innerHTML;
-    					// containerInner.innerHTML = '<img src="http://localhost:8888/kirby-project/kirby-2.4.0/assets/images/x.svg" alt="close" id="vocabclose" class="close-x yellowhover" data-vocab-x>' + definitionsList[i].innerHTML;
-    					// container.innerHTML = '<img src="http://localhost:8888/kirby-project/kirby-2.4.0/assets/images/x.svg" alt="close" id="vocabclose" class="close-x yellowhover" data-vocab-x>' + definitionsList[i].innerHTML;
+    					containerInner.innerHTML = '<img src="https://curiositycoloredglasses.com/assets/images/x.svg" alt="close" id="vocabclose" class="close-x yellowhover" data-vocab-x>' + definitionsList[i].innerHTML;
+    					// containerInner.innerHTML = '<img src="http://localhost:8888/kirby-project/kirby-2.5.8/assets/images/x.svg" alt="close" id="vocabclose" class="close-x yellowhover" data-vocab-x>' + definitionsList[i].innerHTML;
+    					// container.innerHTML = '<img src="http://localhost:8888/kirby-project/kirby-2.5.8/assets/images/x.svg" alt="close" id="vocabclose" class="close-x yellowhover" data-vocab-x>' + definitionsList[i].innerHTML;
 
     					// remove unneeded elements from original glossary HTML
     					// remove up arrow that in glossary links to inline vocab word
@@ -126,7 +126,11 @@ function vocabTest(e) {
     					}
 
     					var definitionText = wordAndPronunciation.nextElementSibling.firstElementChild;
-    					definitionText.setAttribute('id', 'inlinedefinition');    					
+    					definitionText.setAttribute('id', 'inlinedefinition');
+    					definitionText.setAttribute('class', 'xs-textface definition');
+
+    					// TEST!!!
+    					var pronunciationSidebar = document.getElementById('pronunciation');   					
     				}
     			} 
     		} // close for loop

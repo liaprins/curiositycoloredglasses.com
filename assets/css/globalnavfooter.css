@@ -59,6 +59,11 @@ summary {    /* for FF, this hides the triangle toggle! */
 #navsearchform {    }
 
 .underlineinput {    /* Applies to both nav search bar and search page input fields */
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0!important;
+    border-bottom-left-radius: 0!important;
+    border-bottom-right-radius: 0!important;
+    -webkit-appearance: none !important;
     border-style: none none solid none;
     border-width: 0.125rem;    /* This will match the weight of the home glasses icon at any screensize */
     border-color: black;
@@ -71,6 +76,11 @@ summary {    /* for FF, this hides the triangle toggle! */
     cursor: pointer;    }    /* This is to force the curser into a hand */
 
 #navsearchinput {
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+    -webkit-appearance: none  !important;
     padding-bottom: 0.25rem;    /* :) Finessed the space between input word and underline bar to match space between input and bottom of field for subscribe + comment name fields */
     width: calc(67.857vw - 1.6rem);    }
 
@@ -102,6 +112,11 @@ footer {
     margin: 0 auto;    }
 
 .boxinput {    /* This applies to subscribe + comment's input fields */
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+    -webkit-appearance: none !important;
     font-family: 'Sintesi_Sans', 'Courier_New', Courier, Monotype;
     border-style: solid ;
     border-width: 0.125rem;
@@ -116,6 +131,11 @@ footer {
    color: #686b31;   }    /* This color is to make the placeholder text in Chrome look multiplied (because I can't get it to actually!) */
 
 .boxbutton {    /* This applies to subscribe button and to comments' "Post a comment" button */
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+    -webkit-appearance: none !important;
     background-color: black;
     border: solid;
     border-width: 0.125rem;
@@ -130,6 +150,7 @@ footer {
     color: black;    }
 
 .subscribebutton {
+    -webkit-appearance: none !important;
     width: 78.571vw;    /* 22/28 cols */
     margin: 0.9375rem 0;    /* Half the height of the input field and of the button */
     color: #e2e43a;    /* Making the text match the yellow footer background */ 
@@ -163,6 +184,9 @@ footer {
 .followicon {
     display: inline;
     float: left;    }
+
+#instagramlogo {
+    padding-left: 0;    }
 
 #portfolio {    /* "liaprins.com" */
     margin-left: 0.422rem;    }

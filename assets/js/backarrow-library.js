@@ -16,7 +16,7 @@ function backArrowShow() {
     	// this src attribute vvv will have to update when I get proper hosting and URL set up! 
         // or store the PHP version in an HTML element's attribute, then collect it in JS as a variable and call it here
         // or else construct its shape with CSS (research performance) vvv
-    	backArrow.setAttribute("src", "http://localhost:8888/kirby-project/kirby-2.4.0/assets/images/backarrow.svg");
+    	backArrow.setAttribute("src", "https://curiositycoloredglasses.com/assets/images/backarrow.svg");
     	backArrow.setAttribute("id", "backarrow");
     	backArrow.setAttribute("class", "yellowhover");
 

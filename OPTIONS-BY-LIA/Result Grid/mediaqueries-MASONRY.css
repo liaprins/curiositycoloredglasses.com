@@ -1,0 +1,1164 @@
+/* TAGLINE (customizing line breaks) -------------------------------------------------- */
+
+@media only screen and (min-width: 268px) {
+    .taglinehalf {
+        display: inline-block;    }
+}
+ 
+@media only screen and (min-width: 284px) {
+    .taglinehalf {
+        display: inline;    }
+}
+
+@media only screen and (min-width: 343px) {
+    .taglinehalf {
+        display: inline-block;    }
+}
+
+@media only screen and (min-width: 427px) {
+    .taglinehalf {
+        display: inline;    }
+}
+
+
+
+
+/* YELLOW OPEN MENU -------------------------------------------------- */
+
+/* When it gets to perfect square width, making it hold */
+@media only screen and (min-width: 276px) {
+    #navdetails[open] {
+        width: calc(189.310px + 21.429vw);    }    /* 19/28 cols in px equivalent at 276px screenwidth for content + 6/28 cols for padding */
+
+    #navsearchinput {
+        width: 163px;    }    /* Closest I can get length to be to push out search icon without it going to next line */
+}
+
+
+
+
+/* 295px ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+@media only screen and (min-width: 295px) {
+    
+    /* POSTGLASSES -------------------------------------------------- */
+
+    .postglasses {
+        width: 126.289px;    }
+    .date, figcaption {
+        /* border-width: 5.052px; */    /* This should dynamically match the weight of the line of the postglasses below date, based on their width of 42.857vw (12/28 cols) and the ratio of the postglasses width to their line weight of 25:1 */ 
+        border-width: 0.25rem;    }
+    figcaption {
+        border-width: 0.125rem;    }    /* This should match the weight of the icons, e.g. home icon */
+
+
+    /* RESULTS + RESULTGLASSES -------------------------------------------------- */
+    
+    #resultglasses {
+        width: 84.571px;    }    /* 6/28 cols (6/10 result cols) */ 
+    #resultdate {
+        border-width: 0.15rem;
+        /* border-width: 3.383px; */    }    /* This should dynamically match the weight of the line of the resultglasses below date */
+
+}    /* 295px ++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+
+
+
+/* 390px ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+@media only screen and (min-width: 390px) {
+
+    /* VOCAB IMAGE -------------------------------------------------- */
+
+    /* Vocab image goes to 1/2 */
+    #vocabwordanddefinition {
+        overflow: auto;    }    /* This line and the next are to fix a broswer bug wherein this containing element thinks it is 0px tall because it only contains floated elements; see pp373-4 in HTML & CSS book */
+    .glossaryvocabwordandaudio {
+        float: left;
+        margin-right: 7.143vw;
+        width: 36.714vw;    }    /* ~10/28 cols (1/2 grid cols) ...half would really be 35.714vw */
+    .definition {
+        float: left;
+        margin-right: 7.143vw;
+        margin-bottom: 0;
+        width: 36.714vw;    }    /* ~10/28 cols (1/2 grid cols) ...half would really be 35.714vw */
+    .lonedefinitionwidth {
+        width: 78.571vw;    }
+    #fullwidthglossary {
+        width:  78.571vw;    }
+    .vocabillustration {
+        display: inline;
+        max-width: 34.714vw;    }    /* ~10/28 cols (1/2 cols) ...half would really be 35.714vw */
+
+    /* LIGHTBOX CAPTION -------------------------------------------------- */
+
+    #lightboxclose {
+        top: calc(3.571vw - 0.844rem);
+        left: calc(100vw - 3.571vw - 0.844rem);    }    /* all the way to the R, but then back the width of itself + padding + margin */
+    .lightboxcaption {
+        top: 0;
+        left: 46.423vw;    /* 13/28 */
+        padding: 7.143vw;
+        padding-top: calc(7.143vw + 1.024rem);
+        width: 53.565vw;    }    /* 15/28 cols */
+    #lightboxcaptionbar {
+        width: 39.281vw;    /* 13/28 cols */
+        height: 0.125rem;
+        top: 7.143vw;
+        left: 53.565vw;    }    /* 15/28 cols */
+    #captiontoggle {
+        z-index: 103;
+        position: absolute;
+        top: calc(3.571vw - 0.844rem);
+        left: calc(100vw - 3.571vw - 0.844rem - 3.571vw - 0.844rem);    }
+
+    /* RESULTS + RESULTGLASSES -------------------------------------------------- */
+
+    /* Results 2-across -------------------------------------------------- */
+    #searchpageform {
+        margin-bottom: 2.560rem;    }
+    #tagpagename {
+        margin-bottom: 2.560rem;    }
+    .resultarea {
+        overflow: auto;    /* This line and the next are to fix a broswer bug wherein this containing element thinks it is 0px tall because it only contains floated elements; see pp373-4 in HTML & CSS book */
+        /* width: 100%; */    /* This line and the previous are to fix a broswer bug wherein this containing element thinks it is 0px tall because it only contains floated elements; see pp373-4 in HTML & CSS book; but commenting out the 100% width because I actually want a specific width, and it seems to be working anyway */
+        width: 85.714vw;    /* 24/28 cols | Establishing a separate div so I can make it wider in screens with more than one result wide to accommodate margins I need to put on both L + R sides of all results so they have proper spacing between each other, but don't look like they're extending past the page margins */
+        margin: 0 auto;
+        columns: 2;
+        -webkit-column-gap: 0;
+        -moz-column-gap: 0;
+        column-gap: 0;    }
+    .result {
+        -webkit-column-break-inside: avoid; /* Chrome, Safari, Opera */
+        page-break-inside: avoid; /* Firefox */
+        break-inside: avoid; /* IE 10+ */
+        -webkit-column-fill: balance;
+        -moz-column-fill: balance;
+        column-fill: balance;
+        margin: 0 3.571vw 1.536rem 3.571vw;    }
+    #resultglasses {
+        width: 21.429vw;    }    /* 6/28 cols (6/10 result cols) */ 
+    #resultdate {
+        margin: 0 0 0.512rem 0;
+        border-width: 0.15rem;
+        /* border-width: 0.857vw; */    }
+    #nosearchresults {
+        margin-top: 1.024rem;    }
+
+    /* COMMENT AVATAR -------------------------------------------------- */
+
+    #avatar {
+        height: 7.143vw;    /* 2/28 cols */
+        width: 7.143vw;    /* 2/28 cols */
+        margin-right: 3.571vw;    }    /* right: 1/28 cols */
+    #namedatecomment {
+        width: 67.857vw;   }    /* 19/28 cols | This should be <main>'s width in cols (22/28) minus avatar (2/28) minus space between this and avatar (2/28) = 18/28 cols */
+    #postedcomment {
+        margin-top: calc(7.143vw - 1.85rem);    }
+
+}    /* 390px ++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+
+
+
+/* 408px ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+@media only screen and (min-width: 408px) {
+    
+    /* FOOTER HEIGHT (set by body's bottom padding) -------------------------------------------------- */
+
+    body {
+        padding-bottom: calc(32.142vw + 9.453rem);    }
+
+    /* LIBRARY ICONS -------------------------------------------------- */
+
+    /* Library icons switch from 3- to 4-across -------------------------------------------------- */
+    #librarysection {    /* Setting up the library entries to go 4-across */
+        width: 89.31vw;    /* 25/28 cols | Had to account for icon margins cutting into .5/28 cols (1/56) of side margins, leaving only a total of 5/28 cols total on both sides, also had to round up slightly to accomodate all 4 icons across + their margins */
+        margin: 3.571vw auto -3.571vw auto;     }    /* top: 1.5/28 cols (3/56), bottom: -1.5/28 cols (-3/56) | Trying to counteract other margins to make the space between library icon zone and above and below it match the space between library icons themselves */
+    .libraryicon {    /* Setting up the library entries to go 4-across */
+        margin-top: 5.357vw;
+        margin-bottom: 0;
+        margin-left: calc(5.357vw - 2px);
+        margin-right: calc(5.357vw - 2px);
+        padding-bottom: 5.357vw;    /* bottom: 1.5/28 cols (3/56) | Used padding here instead of margin for just the bottom so the bottom underline on selection would have space between it and the icon, and would only be as long as the icon is wide */
+        max-width: 11.607vw;    /* 3.25/28 cols: splitting the extra column evenly between the 4 icons across; */
+        max-height: 11.607vw;    }    /* 3.25/28 cols: splitting the extra column evenly between the 4 icons across; */
+    .libraryentry {
+        margin-left: 5.357vw;
+        margin-right: 5.357vw;    }
+
+}    /* 408px ++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+
+
+
+/* RESULTS + RESULTGLASSES -------------------------------------------------- */
+
+@media only screen and (min-width: 433px) {
+    #resultglasses {
+        width: 92.857px;    }    /* 6/28 cols (6/10 result cols) */ 
+    #resultdate {
+        border-width: 0.15rem;
+        /* border-width: 3.714px; */    }    /* This should dynamically match the weight of the line of the resultglasses below date, based on their width of 28.571vw (8/28 cols) and the ratio of the resultglasses width to their line weight of 25:1; */ 
+}  
+
+
+
+
+/* 442px ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+@media only screen and (min-width: 442px) {
+
+    /* TEXT -------------------------------------------------- */
+
+    html {
+        font-size: 3.620vw;    }
+    .xs-display {
+        font-size: 0.443rem;    }
+    .xxs-display {
+        font-size: 0.369rem;    }
+
+    /* BACK ARROW LOCATION -------------------------------------------------- */
+    
+    #backarrowcontainer {
+        right: calc(5.357vw + 1.7rem);
+        top: calc(5.357vw - 0.65rem);    }
+    .extrarightpadding,
+    .tagnobackarrow,
+    .extracontentpagetitle {
+        padding-right: 0;    }
+    .postdatewidthbackarrow {
+        width: 78.571vw;    }
+
+    /* HAMBURGER ICON LOCATION -------------------------------------------------- */
+
+    #navsummary {
+        position: absolute;
+        /* if there's no yellow hover (via border) */
+        /*
+        right: calc(5.357vw - 0.506rem);
+        top: calc(5.357vw - 0.506rem);
+        */
+        border-width: 0.422rem;
+        right: calc(5.357vw - 0.506rem - 0.422rem);
+        top: calc(5.357vw - 0.506rem - 0.422rem);    }
+    #navsummary:hover {
+        border-color: #e2e43a;
+        background-color: #e2e43a;    }
+    #navdetails[open] #navsummary {    /* This is just the "x" button */
+        position: absolute;
+        right: 7.143vw;
+        top: 7.143vw;    }
+    .postdatewidth {
+        width: 78.571vw;    }
+
+    /* YELLOW OPEN MENU -------------------------------------------------- */
+
+    /* Switching to 2-col margins and accounting for text growing instead of staying static */
+    #navdetails[open] {
+        padding: 7.143vw;
+        width: calc(57.113vw * 0.996);
+        /* width: calc(42.827vw + 14.286vw); */
+        /* width: calc(41.922vw + 14.286vw); */
+        /* width: calc(15.527rem + 4px); */    }    /* :) Height of menu when open: width needs to be this so it can match */
+    #navsearchinput {
+        /* width: calc(14.127rem - 14.286vw); */
+        width: calc(14rem - 15vw);    }    /* Closest I can get length to be to push out search icon without it going to next line */
+
+    /* POSTGLASSES -------------------------------------------------- */
+
+    .postglasses {
+        width: 28.571vw;    } /* 8/28 cols */
+    .date, figcaption {
+        /* border-width: 1.143vw; */    /* This should dynamically match the weight of the line of the postglasses below date, based on their width of 42.857vw (12/28 cols) and the ratio of the postglasses width to their line weight of 25:1 */ 
+        border-width: 0.25rem;    }
+    figcaption {
+        border-width: 0.125rem;    }    /* This should match the weight of the icons, e.g. home icon */
+
+    /* SUBSCRIBE -------------------------------------------------- */
+
+    /* Subscribe input field + button on same line  */
+    .subscribebutton {
+        border-left: 0;
+        position: relative;
+        top: -1px;
+        margin-top: 0;
+        width: 5.3125rem;    }
+    #mce-EMAIL {    /* Making subscribe input field 2/3 */
+        float: left;
+        width: calc(78.571vw - 5.3125rem);    }
+
+    /* FOOTER HEIGHT (set by body's bottom padding) -------------------------------------------------- */
+
+    footer {
+        padding: 7.143vw 0;    /* 3/28 cols to pad top and bottom of yellow BG */
+        margin-top: 7.143vw;    }
+    body {
+        padding-bottom: calc(21.429vw + 6.641rem);    }
+
+    /* SEARCH PAGE -------------------------------------------------- */
+
+    #searchpageinput {
+        width: calc(78vw - 2.05rem);    }    /* This should be [the width of <main> (22/28 cols = 78.571vw)[] minus [the width of magnifier icon + its padding + the width of menu icon + the space between them (30px + 17px + 15px = 62px)] */
+
+    #searchpagebutton {
+        float: right;    }
+
+}    /* 442px ++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+
+
+
+
+/* LIBRARY ICONS -------------------------------------------------- */
+
+/* Library icons switch from 4- to 6-across -------------------------------------------------- */
+@media only screen and (min-width: 544px) {    /* This is for the library entries to switch to being 6-across */
+    #librarysection {    /* Setting up the library entries to go 6-across */ 
+        width: 85.77vw;    /* 24/28 cols | Had to round up slightly from 85.714vw to get the icons to fit 3-across */
+        margin: 3.571vw auto -3.571vw auto;     }    /* top: 1/28 cols, bottom: -1/28 cols | Trying to counteract other margins to make the space between library icon zone and above and below it match the space between library icons themselves */
+    .libraryicon {    /* Setting up the library entries to go 6-across */
+        margin-top: 3.571vw;
+        margin-bottom: 0;
+        margin-left: calc(3.571vw - 3px);
+        margin-right: calc(3.571vw - 2px);
+        padding-bottom: 3.571vw;    /* bottom: 1/28 cols | Used padding here instead of margin for just the bottom so the bottom underline on selection would have space between it and the icon, and would only be as long as the icon is wide */
+        max-width: 7.143vw;    /* 2/28 cols */
+        max-height: 7.143vw;    }    /* 2/28 cols */
+    .libraryentry {
+        margin-left: 3.571vw;
+        margin-right: 3.571vw;    }
+}
+
+
+
+
+/* POSTGLASSES -------------------------------------------------- */
+
+@media only screen and (min-width: 613px) {
+    .postglasses {
+        width: 175px;    }
+    .date, figcaption {
+        /* border-width: 7px; */    /* This should dynamically match the weight of the line of the postglasses below date, based on their width of 42.857vw (12/28 cols) and the ratio of the postglasses width to their line weight of 25:1 */ 
+        border-width: 0.25rem;    }
+    figcaption {
+        border-width: 0.125rem;    }    /* This should match the weight of the icons, e.g. home icon */
+}
+
+
+
+
+/* 650px ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+@media only screen and (min-width: 650px) {
+
+    /* TEXT -------------------------------------------------- */
+
+    html {
+        font-size: 23.529px;    }
+
+    /* YELLOW OPEN MENU -------------------------------------------------- */
+
+    #navdetails[open] {    
+        width: calc(274.129px + 14.286vw);    }    /* Height of menu when open: width needs to be this so it can match */
+    #navsearchinput {
+        /* width: 238px; */
+        width: 234px;    }    /* Closest I can get length to be to push out search icon without it going to next line */
+    /* PULLQUOTES -------------------------------------------------- */
+
+    .pullquotesquare {
+        width: 14.286vw;
+        height: 14.286vw;
+        left: 3.571vw;    }
+    .pullquotecircle {
+        width: 14.286vw;
+        height: 14.286vw;
+        left: 3.571vw;
+        border-radius: 58.333px;   }
+    .pullquote {
+        position: relative;
+        width: 78.571vw;
+        padding: 0.95rem 0;    }
+
+    /* VOCAB IMAGE -------------------------------------------------- */
+
+    /* Vocab image goes to 1/3 */
+    .glossaryvocabwordandaudio {
+        width: 50vw;    }    /* 14/28 cols (2/3 grid cols) */
+    .definition {
+        width: 50vw;    }    /* 14/28 cols (2/3 grid cols) */
+    .lonedefinitionwidth {
+        width: 78.571vw;    }
+    .vocabillustration {
+        max-width: 21.429vw;    }    /* 6/28 cols (1/3 cols) */
+
+    /* LIGHTBOX CAPTION -------------------------------------------------- */
+
+    .lightboxcaption {
+        top: 0;
+        left: 64.278vw;    /* 18/28 */
+        padding: 7.143vw;
+        padding-top: calc(7.143vw + 1.024rem);
+        width: 35.71vw;    }    /* 10/28 */
+    #lightboxcaptionbar {
+        width: 21.429vw;    /* 6/28 cols */
+        height: 0.125rem;
+        top: 7.143vw;
+        left: 71.42vw;    }    /* 20/28 cols */
+    #captiontoggle {
+        z-index: 103;
+        position: absolute;
+        top: calc(3.571vw - 0.844rem);
+        left: calc(100vw - 3.571vw - 0.844rem - 3.571vw - 0.844rem);    }
+
+    /* RESULTS + RESULTGLASSES -------------------------------------------------- */
+
+    /* Results 3-across -------------------------------------------------- */
+    .resultarea {
+        columns: 3;    }
+    .result {
+        /* width: 21.429vw; */    }    /* 6/28 cols | Setting results to 3-column grid */
+    #resultglasses {
+        width: 14.286vw;    }    /* 4/28 cols (4/6 result cols) */ 
+    #resultdate {
+        border-width: 0.15rem;
+       /* border-width: 0.571vw; */    }    /* This should dynamically match the weight of the line of the resultglasses below date */
+
+}    /* 650px ++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+
+
+
+/* 783px ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+@media only screen and (min-width: 783px) {    /* This is the content-width equivalent of 1175px screenwidth's content width */
+    
+    /* SUBSCRIBE -------------------------------------------------- */
+
+    /* Subscribe + follow on same line */
+    #mce-EMAIL {    /* Making subscribe input field account for the "follow" links */
+        float: left;
+        width: calc(78.571vw - 14.0545rem);    }    
+    #follow {
+        position: absolute;
+        top: 7.143vw;
+        left: calc(50% + 39.286vw - 8.32rem);    }
+    #footercontent {
+        width: 78.571vw;    }    /* 22/28 cols */
+    #subscribemessage {
+        margin-bottom: 0;    }
+    #instagramlogo {
+        padding-left: 0.422rem;    }
+
+    /* FOOTER HEIGHT (set by body's bottom padding -------------------------------------------------- */
+
+    body {
+        padding-bottom: calc(21.429vw + 3.9285rem);    }
+
+
+    /* RESULTS + RESULTGLASSES -------------------------------------------------- */
+
+    #resultglasses {
+        width: 112px;    }    /* Same width they will be at 1175px when they are 3/21 cols; so holding this width constant until 1175px screenwidth */
+    #resultdate {
+        border-width: 0.15rem;
+        /* border-width: 4.476px; */    }    /* This should dynamically match the weight of the line of the resultglasses below date, based on their width of 28.571vw (8/28 cols) and the ratio of the resultglasses width to their line weight of 25:1; */ 
+
+}    /* 783px ++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+
+
+
+/* 817px ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+@media only screen and (min-width: 817px) {
+
+    /* CONTENT AREA WIDTH -------------------------------------------------- */
+
+    main {
+        width: 641.929px;    }    /* 22/28 cols px equivalent at 817px screen width */
+    .mockmain {
+        width: 641.929px;    }    /* 22/28 cols px equivalent at 817px screen width */
+    .archivesectionsummary {
+        width: 641.929px;    }    /* 22/28 cols px equivalent at 817px screen width */
+    #blognametagline {
+        width: 641.929px;    }    /* 22/28 cols px equivalent at 817px screen width */
+    #pre-rr {
+        padding-top: 87.536px;    }
+
+    /* BACK ARROW LOCATION -------------------------------------------------- */
+    
+    #backarrowcontainer {
+        /*
+        right: calc(43.768px + 1.7rem);
+        top: calc(43.768px - 0.675rem);
+        */    }
+
+    /* HAMBURGER ICON LOCATION -------------------------------------------------- */
+
+    /*
+    #navsummary {
+        right: calc(43.768px - 0.506rem);
+        top: calc(43.768px - 0.506rem);    }
+        */
+    #navdetails[open] #navsummary {    /* This is just the "x" button */
+        right: 58.357px;
+        top: 58.357px;    }
+    .postdatewidth {    /* 22/28 cols px equivalent at 817px screen width */
+        width: 641.929px;    }
+    #searchpageinput {
+        width: calc(641px - 1.94rem);    }    /* This should be [the width of <main> (22/28 cols = 78.571vw)[] minus [the width of magnifier icon + its padding + the width of menu icon + the space between them (30px + 17px + 15px = 62px)] */
+
+    /* YELLOW OPEN MENU -------------------------------------------------- */
+
+   #navdetails[open] {    
+        padding: 58.357px;
+        width: calc(274.129px + 116.714px);    }    /* Height of menu when open: width needs to be this so it can match */    
+
+    /* DATES -------------------------------------------------- */
+
+    .date, figcaption {
+        width: 641.929px;    /* 22/28 cols px equivalent at 817px screen width */
+        /* border-width: 7.003px; */    /* 6/28 cols divided by 25 (ratio of postglasses' width to their line weight) px equivalent at 817px screen width */
+        border-width: 0.25rem;    }
+
+    figcaption {
+        border-width: 0.125rem;    }    /* This should match the weight of the icons, e.g. home icon */
+
+    /* PULLQUOTES -------------------------------------------------- */
+
+    .pullquotesquare {
+        width: 116.667px;
+        height: 116.667px;
+        left: calc(50vw - 320.964px - 58.357px);    }
+    .pullquotecircle {
+        width: 116.667px;
+        height: 116.667px;
+        left: calc(50vw - 320.964px - 58.357px);
+        border-radius: 58.333px;   }
+    .pullquote {
+        position: relative;
+        width: 641.929px;
+        padding: 0.95rem 0;    }
+
+    /* SUBSCRIBE -------------------------------------------------- */
+
+    #mce-EMAIL {    /* Making subscribe input field account for the "follow" links */
+        width: calc(641.929px - 14.0545rem);    }    
+    #follow {
+        top: 58.357px;
+        left: calc(50% + 320.964px - 8.32rem);    }
+    #footercontent {
+        width: 641.929px;    }    /* 22/28 cols px equivalent at 817px screenwidth */
+
+    /* FOOTER HEIGHT (set by body's bottom padding) -------------------------------------------------- */
+
+    footer {
+        padding: 58.357px 0;    /* 3/28 cols to pad top and bottom of yellow BG */
+        margin-top: 58.357px;    }
+    body {
+        padding-bottom: calc(175.071px + 3.9285rem);    }
+
+    /* IMAGES + VIDEO -------------------------------------------------- */
+
+    .contentimage {
+        max-width: 641.929px;     }    /* 22/28 cols px equivalent at 817px screen width */
+
+    .postvideo-4-3-ratio {
+        /* margin: 1.024rem 0; */
+        width: 641.929px;
+        height: 481.447px;    }
+
+    .postvideo-16-9-ratio {
+        /* margin: 1.024rem 0; */
+        width: 641.929px;
+        height: 361.085px;    }
+
+    /* LIGHTBOX -------------------------------------------------- */
+    
+    .lightboximage {
+        max-width: calc(100vw - 58.333px - 58.333px);
+        max-height: calc(100vh - 58.333px - 58.333px);    }
+    #lightboxclose {
+        top: calc(29.167px - 0.844rem);
+        left: calc(100vw - 29.167px - 0.844rem);    }    /* all the way to the R, but then back the width of itself + padding + margin */
+    .lightboxcaption {
+        top: 0;
+        left: calc(100vw - 291.667px);
+        padding: 58.333px;
+        padding-top: calc(58.333px + 1.024rem);
+        width: 291.667px;    }
+    #lightboxcaptionbar {
+        width: 175px;
+        height: 0.125rem;
+        top: 58.333px;
+        left: calc(100vw - 233.333px);    }
+    #captiontoggle {
+        z-index: 103;
+        position: absolute;
+        top: calc(29.167px - 0.844rem);
+        left: calc(100vw - 29.167px - 0.844rem - 29.167px - 0.844rem);    }
+
+    /* VOCAB IMAGE -------------------------------------------------- */
+
+    #vocabwordanddefinition {
+        margin: 1.024rem auto;    }
+    .glossaryvocabwordandaudio {
+        margin-right: 58.357px;
+        width: 408px;    }    /* 14/28 cols (2/3 grid cols) px equivalent at 817px screenwidth */
+    .definition {
+        margin-right: 58.357px;
+        width: 408px;    }    /* 14/28 cols (2/3 grid cols) px equivalent at 817px screenwidth */
+    .lonedefinitionwidth {
+        width: 641.929px;    }
+    .vocabillustration {
+        max-width: 175px;    }    /* 6/28 cols (1/3 cols) */
+
+    /* RESULTS + RESULTGLASSES -------------------------------------------------- */
+    
+    #rrsectionheader {
+        width: 641.929px;    }    /* 22/28 cols px equivalent at 817px screen width */
+    .resultarea {
+        width: 700.283px;    }    /* 24/28 cols px equivalent at 817px screen width */
+    .result {
+        /* width: 175px; */    /* 6/28 cols at 817px | Setting results to 3-column grid */
+        margin: 0 29.175px 1.536rem 29.175px;    }    /* 1/28 cols at 817px | Setting results to 2-column grid */
+    #resultdate {
+        width: 175px;    }    /* 10/28 cols at 817px | Setting results to 2-column grid */
+    #nosearchresults {
+        margin-left: 29.179px;    }
+
+    /* COMMENT AVATAR -------------------------------------------------- */
+
+    #avatar {
+        height: 58.357px;    /* 2/28 cols px equivalent at 817px screenwidth */
+        width: 58.357px;    /* 2/28 cols px equivalent at 817px screenwidth */
+        margin-right: 27.179px;    }    /* right: 1/28 cols px equivalent at 817px screenwidth */
+    #namedatecomment {
+        width: 554.392px;   }    /* 19/28 cols px equivalent at 817px screenwidth | This should be <main>'s width in cols (22/28) minus avatar (2/28) minus space between this and avatar (2/28) = 18/28 cols */
+    #postedcomment {
+        margin-top: calc(58.357px - 1.7646rem);    }
+
+    /* COMMENT INPUT FIELD WIDTH -------------------------------------------------- */
+
+    .boxinput {
+        width: 641.919px;    }    /* 22/28 cols px equivalent at 817px screenwidth */
+
+    /* LIBRARY ICONS -------------------------------------------------- */
+
+    #librarysection {    /* Setting up the library entries to go 6-across */ 
+        width: 701px;    /* 24/28 cols at 817px | Had to round up slightly from 700.286px to get the icons to fit 6-across */
+        margin: 29.179px auto -29.179px auto;     }    /* 1/28 cols, bottom: -1/28 cols at 817px | Trying to counteract other margins to make the space between library icon zone and above and below it match the space between library icons themselves */
+    .libraryicon {    /* Setting up the library entries to go 6-across */
+        margin-top: 29.179px;
+        margin-bottom: 0;
+        margin-left: calc(29.179px - 3px);
+        margin-right: calc(29.179px - 2px);
+        padding-bottom: 29.179px;    /* bottom: 1/28 cols at 817px | Used padding here instead of margin for just the bottom so the bottom underline on selection would have space between it and the icon, and would only be as long as the icon is wide */
+        max-width: 58.357px;    /* 2/28 cols at 817px */
+        max-height: 58.357px;    }    /* 2/28 cols at 817px */
+    .libraryentry {
+        width: 641.929px;
+        margin-left: 27.179px;
+        margin-right: 27.179px;    }
+
+    /* SEARCH PAGE -------------------------------------------------- */
+
+    #searchpageform {
+        width: 641.929px;
+        margin-left: auto;
+        margin-right: auto;    }
+
+    #nosearchresults {
+        width: 641.292px;
+        margin-left: auto;
+        margin-right: auto;    }
+
+}    /* 817px ++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+
+
+/* 1225px ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+@media only screen and (min-width: 1225px) {
+
+    /* TEXT -------------------------------------------------- */
+
+    html {
+        font-size: 24.531px;    }
+
+    /* CONTENT AREA WIDTH -------------------------------------------------- */    
+
+    main {
+        margin: 0 auto;
+        width: 1108.333px;    }    /* 19/21 cols */
+    .mockmain {
+        width: 1108.333px;    }    /* 19/21 cols */
+    .archivemockmain {
+        margin-left: 29.167px;     /* .5/28 cols (1/42) px equivalent at 1225px screen width | For some reason, needs to be pushed over half a column*/
+        width: 641.667px;    }    /* 11/21 cols */
+    #blognametagline {
+        width: 1108.333px;    }    /* 19/21 cols */
+    .desktopcontent,
+    #archivemenudesktopcontent,
+    #aboutdesktopcontent,
+    #postdesktopcontent,
+    #postdesktopcontent2,
+    #searchdesktopcontent,
+    #homepagepost {
+        position: relative;
+        margin: 0 auto;
+        width: 641.929px;    }    /* 11/21 cols */
+    #pre-rr,
+    #pre-search {
+        padding-top: calc(97.5px - 1.59rem);    }
+
+    /* BACK ARROW LOCATION -------------------------------------------------- */
+    
+    #backarrowcontainer {
+        /* z-index: 101; */
+        /* position: fixed; */
+        position: absolute;
+        left: 0.422rem;
+        top: 2.172rem;    }
+    #backarrowcontainer:hover {    /* !!! This is only for backarrow HOVER TEXT */
+        max-width: calc(50vw - 390px);    }    /* Making the edge match up with the edge of the date and caption areas */
+
+    #backarrow {
+        width: 1.301rem;    }
+
+    #backarrowhoverwords {    /* !!! This is only for backarrow HOVER TEXT */
+        position: absolute;
+        left: calc(1.933rem - 0.316rem);
+        /* padding: 0.220rem 0.316rem 0.412rem 0.316rem; */
+        padding: 0.220rem 0.316rem 0.048rem 0.316rem;
+        /* height: 1.189rem; */
+        display: none;    }
+
+    #backarrowcontainer:hover > #backarrowhoverwords {    /* !!! This is only for backarrow HOVER TEXT */
+        background-color: #e2e43a;
+        display: inline;    }
+
+    #backarrowcontainer:hover > #backarrow {    /* !!! This is only for backarrow HOVER TEXT */
+        background-color: #e2e43a;    }
+
+    /* NAV -------------------------------------------------- */
+
+    nav {
+        z-index: 100;
+        position: absolute;
+        top: 0;
+        right: 0;    }
+    #navdetails {
+        float: none;
+        position: static;
+        padding: 0;    }
+    #navdetails[open] {
+        background-color: transparent;
+        padding: 0;
+        width: 100%;    }
+    #navdetails[open] #navsummary {
+        background-image: none;
+        height: 0;
+        border-color: transparent;
+        border-style: none;
+        border-width: 0;
+        background-color: transparent;
+        float: none;
+        cursor: auto;    }
+    #navsummary {
+        background-image: none;
+        float: none;
+        height: 0;
+        width: 0;
+        border-color: transparent;
+        border-style: none;
+        border-width: 0;
+        background-color: transparent;    }
+    #navsummary::-webkit-details-marker {
+        display: none;    }
+    #homeicon {
+        display: inline;
+        position: absolute;
+        left: calc(-100vw + 461.94px + 0.422rem);
+        top: 0.422rem;
+        width: 1.301rem;    
+        padding: 0.316rem;    }
+    #navlist {    /* Holds together nav search, About, Archive, and Library items */
+        display: inline;
+        float: right;    }    /* Pushes the group as a whole to the right */
+    .navnothome {
+        display: inline;
+        position: relative;
+        top: 0.422rem;    }
+    .active2 {
+        border-style: none none solid none;
+        border-color: black;
+        border-width: 0.125rem;  
+        padding-bottom: 0.422rem;    }
+    #menuword {
+        position: relative;
+        top: 10px;
+        display: inline;
+        padding: 0.422rem 0 0.422rem 0.422rem;
+        margin-top: 0;
+        margin-right: 0.422rem;
+        box-sizing: border-box;
+        padding-right: 0.422rem;
+        border-color: transparent;
+        border-right-width: 0.422rem;    }
+    #menuword:hover {
+        border-color: #e2e43a;    }
+    #navsearch {
+        margin-top: 0;
+        margin-left: 0.422rem;
+        margin-right: 0.422rem;
+        float: right;    }
+    #searchdecoy {
+        height: 1.476rem;
+        padding: 0.316rem;
+        padding-top: 0;    }
+    #navsearchinput {
+        /* width: calc(291.667px - 3.586rem); */
+        width: calc(291.667px - 3.586rem);    }
+    #navsearchbutton {    /* This refers to the button element holding the image */
+        height: 1.476rem;
+        padding: 0.316rem;    }
+    .desktopcontent:not(#postdesktopcontent2),
+    #searchdesktopcontent {
+        z-index: -100;    }
+    #archivemenudesktopcontent,
+    #aboutdesktopcontent,
+    #postdesktopcontent,
+    #searchdesktopcontent,
+    #homepagepost {
+        z-index: 100;    }
+    #postdesktopcontent2 {    }
+    #navsearchinput {
+        width: calc(291.667px - 3.586rem);    }
+
+    /* DATES -------------------------------------------------- */
+
+    #homedate {
+        margin-top: 0;    }    /* Resetting to 0 so the calc() function is less complicated to get date to right height, and can apply to post page's date too */
+    .date {       
+        position: absolute;
+        left: -233.333px;    /* 4/21 cols px equivalent at 1225px screen width */
+        top: calc(70px + 2.048rem + 0.4rem);    /* Height of postglasses + space between them and title + title top-offset due to 1.7 lineheight (wouldn't be necesary if lineheight were 1) */
+        width: 175px;    /* 3/21 cols px equivalent at 1225px screen width */
+        /* border-width: 7.003px; */    /* This should dynamically match the weight of the line of the postglasses below date, based on their width of 42.857vw (12/28 cols) and the ratio of the postglasses width to their line weight of 25:1; */ 
+        border-width: 4px;    }    /* This should match the weight of the icons, e.g. home icon */
+    .postdatewidth {
+        position: absolute;
+        width: 175px;    }    /* 3/21 cols */
+
+    /* POSTGLASSES -------------------------------------------------- */
+
+    .postglasses {
+        margin-top: 3.072rem;
+        margin-bottom: 2.048rem;
+        width: 175px;    }    /* 3/21 cols */
+
+    /* TAGS + SHARE -------------------------------------------------- */
+
+    #hometaggroup {
+        position: absolute;
+        display: block;
+        left: -233.333px;    /* 4/21 cols px equivalent at 1225px screen width */
+        top: calc(77px + 4.288rem);    
+        width: 175px;     }
+    #posttagshare {
+        position: absolute;
+        margin: 0 58.333px 58.333px 58.333px;
+        left: -291.667px;
+        top: calc(77px + 4.288rem);            
+        width: 175px;    }    /* 3/21 cols */
+    #posttaggroup {
+        display: block;    }
+    #share {
+        margin-left: -0.3rem;
+        display: block;
+        float: left;
+        padding-left: 0;    }
+
+    /* PULLQUOTES -------------------------------------------------- */
+
+    .pullquotesquare {
+        background-color: #e2e43a;
+        width: 116.667px;
+        height: 116.667px;
+        position: absolute;
+        left: calc(-175px - 58.333px);    }
+    .pullquotecircle {
+        background-color: #e2e43a;
+        width: 116.667px;
+        height: 116.667px;
+        border-radius: 58.333px;
+        position: absolute;
+        left: calc(-175px - 58.333px);    }
+    .pullquote {
+        left: -175px;
+        width: 816.667px;
+        padding: 1.536rem 0;    }
+
+    /* SUBSCRIBE -------------------------------------------------- */
+
+    #mce-EMAIL {    /* Making subscribe input field account for the "follow" links */
+        width: calc(641.667px - 14.0545rem);    }
+    #follow {
+        top: 58.333px;
+        left: calc(50% + 320.833px - 8.32rem);    }
+    #footercontent {
+        width: 641.667px;    }    /* 22/28 cols px equivalent at 817px screenwidth */
+    .subscribebutton {
+        top: 0;    }
+
+    /* FOOTER HEIGHT (set by body's bottom padding) -------------------------------------------------- */
+
+    footer {
+        padding: 58.333px 0;    /* 3/28 cols to pad top and bottom of yellow BG */
+        margin-top: 58.333px;    }
+    body {
+        padding-bottom: calc(175px + 3.9285rem);    }
+
+    /* IMAGES -------------------------------------------------- */
+
+    figure {
+        position: relative;    }
+    .contentimage {
+        max-width: 641.929px;    }
+
+    /* CAPTIONS -------------------------------------------------- */
+
+    figcaption {
+        margin: 0 58.333px 58.333px 58.333px;
+        left: -291.667px;
+        width: 175px;    /* 3/21 cols px equivalent at 1225px screen width */
+        border-width: 7.003px;    /* 3/28 cols divided by 25 (ratio of postglasses' width to their line weight) px equivalent at 1225px screen width */
+        position: absolute;
+        top: 0;
+        padding-top:  1.024rem;
+        /* border-style: solid none none none; */
+        border-style: none;    }
+
+    /* GALLERY -------------------------------------------------- */
+
+    .gallerycaption {
+        width: 291.667px;
+        padding-left: 58.333px;
+        padding-right: 58.333px;
+        padding-bottom: 58.333px;
+        left: -350px;
+        border-style: none;
+        margin-top: 0;    }
+
+    .whiteedge {    /* This applies to just the first gallery slide's caption: it needs to have no white left edge (it would cover the home glasses); but all other gallery captions needs it because THEY sit atop another image and need the buffer */
+        padding-left: 0;
+        left: calc(-350px + 58.333px);
+        width: 233.333px;    }
+
+    .toprule {
+        display: block;
+        /*
+        margin-top: -1.024rem;
+        border-style: solid;
+        border-color: black;
+        border-width: 2px;
+        margin-bottom: 1.024rem;
+        */    }
+
+    /* LIGHTBOX -------------------------------------------------- */
+    
+    .lightboximage {
+        max-width: 1108.333px;
+        max-height: calc(100vh - 58.333px - 58.333px);    }
+    #lightboxclose {
+        top: calc(29.167px - 0.844rem);
+        left: calc(100vw - 29.167px - 0.844rem);    }    /* all the way to the R, but then back the width of itself + padding + margin */
+    .lightboxcaption {
+        top: 0;
+        left: calc(100vw - 291.667px);
+        padding: 58.333px;
+        padding-top: calc(58.333px + 1.024rem);
+        width: 291.667px;    }
+    #lightboxcaptionbar {
+        width: 175px;
+        height: 0.125rem;
+        top: 58.333px;
+        left: calc(100vw - 233.333px);    }
+    #captiontoggle {
+        z-index: 103;
+        position: absolute;
+        top: calc(29.167px - 0.844rem);
+        left: calc(100vw - 29.167px - 0.844rem - 29.167px - 0.844rem);    }
+
+    /* GLOSSARY VOCAB IMAGE -------------------------------------------------- */
+
+    #vocabwordanddefinition {
+        width: 641.667px;    }
+    .glossaryvocabwordandaudio {
+        margin-right: 58.333px;
+        width: 408.333px;    }    /* 7/21 (2/3 grid cols) px equivalent at 1225px screenwidth */
+    .definition {
+        margin-right: 58.333px;
+        width: 408.333px;    }    /* 7/21 (2/3 grid cols) px equivalent at 1225px screenwidth */
+    .lonedefinitionwidth {
+        width: 641.667px;    }
+    .vocabillustration {
+        max-width: 175px;    }    /* 3/21 (2/3 grid cols) */
+
+    /* INLINE VOCAB DEFINITION -------------------------------------------------- */
+
+    .inlinevocabcontainer {
+        position: absolute;
+        left: 641.667px;
+        padding-right: 58.333px;
+        display: block;
+        z-index: 1;
+        width: 291.667px;    }    
+    #containerinner {
+        position: absolute;
+        padding: 58.333px;
+        padding-top: calc(58.333px - 0.844rem - 0.844rem);    /* 1col minus height of "X" with its yellow padding */
+        /* top: calc(-85px - 4.667px - 1.024rem); */    /* this works if .wordandpronunciation's top-padding matches that of caption's | finessing + top rule's width + accounting for top padding between words and top rule */
+        top: calc(-72px - 4.667px - 1.024rem);    /* this works if .wordandpronunciation's top-padding matches that of date's | finessing + top rule's width + accounting for top padding between words and top rule */
+        background-color: white;
+        width: 291.667px    }
+    #audiolink {
+        position: absolute;
+        top: calc(-1.688rem - 3px);
+        left: 0;
+        border-style: none !important;   }
+    #audiolink a {
+        text-decoration: none;    }
+    #inlineaudioicon {
+        height: 0.844rem;
+        width: 0.844rem;
+        padding: 0.422rem;    }
+    #vocabclose {    }
+    .wordandpronunciation {
+        width: 175px;
+        position: relative;
+        /* padding-top: 1.024rem; */    /* this matches caption's top-padding between it and top rule */
+        padding-top: 0.512rem;    /* this matches date's top-padding between it and top rule */
+        border-width: 4px;
+        border-style: solid none none none; 
+        border-color: black;    }
+    #inlinedefinition {
+        width: 175px;
+        /*
+        position: relative;
+        top: calc(-69px - 4.667px - 1.024rem); */    /* finessing + top rule's width + accounting for top padding between words and top rule */
+        margin-top: 0.512rem !important;    }
+
+    /* RESULTS + RESULTGLASSES -------------------------------------------------- */
+
+    #rrsectionheader{
+        width: 641.667px;    }    /* 11/21 cols px equivalent at 1225px screen width */
+    .resultarea {
+        width: 700px;    }    /* 12/21 cols at 1225px screen width */
+    .result {
+        width: 175px;    /* 3/21 cols px equivalent at 1225px screen width | Setting results to 3-column grid */
+        margin: 0 29.167px 1.536rem 29.167px;    }    /* .5/28 cols (1/42) px equivalent at 1225px screen width */
+    #resultglasses {
+        width: 116.667px;    }    /* 2/21 cols px equivalent at 1225px screen width */ 
+    #resultdate {
+        position: static;
+        border-width: 4px;
+        width: 175px;    }    /* 3/21 cols px equivalent at 1225px screen width | Setting results to 3-column grid */
+
+    /* COMMENT AVATAR -------------------------------------------------- */
+
+    #avatar {
+        height: 58.333px;    /* 1/21 cols px equivalent at 1225 px screenwidth */
+        width: 58.333px;    /* 1/21 cols px equivalent at 1225 px screenwidth */
+        margin-right: 29.167px;    }    /* right: 1/21 cols px equivalent at 1225 px screenwidth */
+    #namedatecomment {
+        width: 554.167px;   }    /* 9/21 cols px equivalent at 1225 px screenwidth | This should be <main>'s width in cols (22/28) minus avatar (2/28) minus space between this and avatar (2/28) = 18/28 cols */
+    #postedcomment {
+        margin-top: calc(58.333px - 1.7646rem);    }
+
+    /* COMMENT INPUT FIELD WIDTH -------------------------------------------------- */
+
+    .boxinput {
+        width: 641.667px;    }    /* 11/21 cols */
+
+    /* PAGE NAMES -------------------------------------------------- */
+
+    .extracontentpagetitle,
+    header,
+    #tagpagename {
+        padding-top: calc(97.5px + 1.482rem);    }
+
+    /* LIBRARY ICONS -------------------------------------------------- */
+
+    #librarysection {    /* Setting up the library entries to go 6-across */ 
+        width: 701px;    /* 12/21 cols px equivalent at 1225px screen width | Had to round up slightly from 700px to get the icons to fit 6-across */
+        margin: 29.167px auto -29.167px auto;     }    /* .5/21 cols, bottom: -.5/21 cols (1/42) px equivalent at 1225px screen width | Trying to counteract other margins to make the space between library icon zone and above and below it match the space between library icons themselves */
+    .libraryicon {    /* Setting up the library entries to go 6-across px equivalent at 1225px screen width */
+        margin-top: 29.167px;
+        margin-bottom: 0;
+        margin-left: calc(29.167px - 3px);
+        margin-right: calc(29.167px - 2px);
+        padding-bottom: 29.167px;    /* bottom: .5/21 cols (1/42) px equivalent at 1225px screen width | Used padding here instead of margin for just the bottom so the bottom underline on selection would have space between it and the icon, and would only be as long as the icon is wide */
+        max-width: 58px;    /* 1/21 cols px equivalent at 1225px screen width */
+        max-height: 58.333px;    }    /* 1/21 cols px equivalent at 1225px screen width */
+    .libraryentry {
+        width: 641.667px;
+        margin-left: 29.167px;
+        margin-right: 29.167px;    }
+
+    /* SEARCH -------------------------------------------------- */
+
+    #searchpageform {
+        padding-top: 3.1rem;
+        z-index: 100;    }
+    #searchpageinput {
+        width: calc(641.667px - 1.94rem);    }    /* This should be [the width of <main> (22/28 cols = 78.571vw)[] minus [the width of magnifier icon + its padding + the width of menu icon + the space between them (30px + 17px + 15px = 62px)] */
+    #searchdesktopcontent {
+        z-index: 100;    }
+
+}    /* 1225px ++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+
+
+
+/* HOME ICON FIXED TO TOP LEFT CORNER OF SCREEN -------------------------------------------------- */
+
+@media only screen and (min-width: 1246px) {  
+    #homeicon {
+        position: fixed;
+        left: 0.422rem;    }
+
+    #backarrowcontainer {
+        position: fixed;    }
+}
+
+
+
+
+/* PREVENTING HORIZONTAL SCROLLING (FOR SLIDESHOWS) -------------------------------------------------- */
+/* This is not a mediquery */
+
+html, body {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

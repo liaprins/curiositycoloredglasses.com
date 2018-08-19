@@ -30,7 +30,7 @@ fields:
     label: Pronunciation
     type: text
   audiopronunciation:
-    label: Audio Pronunciation
+    label: Audio pronunciation
     type: select
     options: audio
   definition:

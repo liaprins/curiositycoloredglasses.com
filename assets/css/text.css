@@ -39,17 +39,19 @@ figcaption a:hover,
 h1 {    /* This exclusively applies to the blog name; so I include padding, etc */
     font-size: 21.151px;    /* Based on 1.2 ratio (5:6, Minor Third) typescale with 8.5px base at level 0, and this at level 5 | Fallback for browser's not processing rems */
     font-size: 1.322rem;    /* This is the rem equivalent of the px size */
+    /* font-size: 1.586rem; */    /* Bumping up to level 6, relative to the base */
     font-family: 'Grotesque_Bold', 'Courier_New', Courier, Monotype;
     text-transform: uppercase;
     letter-spacing: 0.25em;
     text-align: center;
-    padding: 0.6em 0.8em 0.4em 0.8em;    /* :) This space should match the space between multiple lines of this type; leading = 160%, so space between = just 60% of type size */
+    /* padding: 0.6em 0.8em 0.4em 0.8em; */    /* :) This space should match the space between multiple lines of this type; leading = 160%, so space between = just 60% of type size */
+    padding: 0.6em 0.6em 0.4em 0.5em;
     margin-bottom: 0.6em;    }    /* :) V-Mobile should match the space between multiple lines of this type; so leading = 160%, so space between = just 60% of type size */
 
 h2 {     /* This applies to post names (home and post pages), and page names (About, Archive, Library) */
     font-size: 14.688px;    /* Based on 1.2 ratio (5:6, Minor Third) typescale with 8.5px base at level 0, and this at level 3 | Fallback for browser's not processing rems */
-    font-size: 0.918rem;
-    /* font-size: 1.111rem; */
+    /* font-size: 0.918rem; */
+    font-size: 1.102rem;    /* Bumping up to level 4, relative to the base */
     font-family: 'Grotesque_Bold', 'Courier_New', Courier, Monotype;
     text-transform: uppercase;
     letter-spacing: 0.2em;    }    /* All other display faces use .25em, but it looked far too big in this case, so I adjusted it optically to 0.2em */
@@ -76,7 +78,7 @@ h3 {    /* This is applied for semantic purposes to high-level "parts" of post p
     cursor: pointer;
     font-family: 'Grotesque_Bold', 'Courier_New', Courier, Monotype;
     text-transform: uppercase;
-    letter-spacing: 0.25em;
+    letter-spacing: 0.2em;
     clear: both;    }
 
 .s-display {
@@ -84,7 +86,7 @@ h3 {    /* This is applied for semantic purposes to high-level "parts" of post p
     font-size: 0.531rem;    /* This is the rem equivalent of the px size */
     font-family: 'Grotesque_Bold', 'Courier_New', Courier, Monotype;
     text-transform: uppercase;
-    letter-spacing: .25em;    }
+    letter-spacing: .2em;    }
 
 .xs-display {
     font-size: 7.083px;    /* Mobile-V based on 1.2 ratio (5:6, Minor Third) typescale with 8.5px base at level 0, and this at level -1 | Fallback for browser's not processing rems */
@@ -94,9 +96,8 @@ h3 {    /* This is applied for semantic purposes to high-level "parts" of post p
     letter-spacing: .25em;    }
 
 .xxs-display {    /* TESTING FOR GUEST WRITER BANNER */
-    /* font-size: 5.903px; */    /* Mobile-V based on 1.2 ratio (5:6, Minor Third) typescale with 8.5px base at level 0, and this at level -1 | Fallback for browser's not processing rems */
-    /* font-size: 6px; */
-    font-size: 0.369rem;    /* This should be the proper rem, but in Chrome it's rendering much larger than the px measurement, so commenting it out, but leaving for future reference */
+    font-size: 5.903px;    /* Mobile-V based on 1.2 ratio (5:6, Minor Third) typescale with 8.5px base at level 0, and this at level -1 | Fallback for browser's not processing rems */
+    /* font-size: 0.369rem; */    /* This should be the proper rem, but in Chrome it's rendering much larger than the px measurement, so commenting it out, but leaving for future reference */
     font-family: 'Grotesque_Bold', 'Courier_New', Courier, Monotype;
     text-transform: uppercase;
     letter-spacing: .25em;    }
@@ -141,6 +142,12 @@ h6 {    /* This is reserved for sub-headings within post content */
     font-size: 8.681px;    /* Based on 1.2 ratio (5:6, Minor Third) typescale with 12.5px base at level 0, and this at level -2 | Fallback for browser's not processing rems */
     font-size: 0.543rem;    }    /* This is the rem equivalent of the px size */
 
+.figcaptionspacer {
+    display: block !important;
+    line-height: 1;
+    margin-top: -0.543rem !important;
+    font-size: 0;    }    /* Half of caption's font-size (xs-textface) */    
+
 .bold {
     font-family: 'Sintesi_Sans_Demi-Bold', 'Courier_New', Courier, Monotype;    }
 
@@ -156,4 +163,32 @@ em {    /* This is the lighter italic; if I switch back to a heavier body copy, 
 
 .zerotracking {
     letter-spacing: -0.25em;    }
+
+#posttext ul:not(.gallery) {
+    list-style: disc;
+    margin-left: 1.25em;
+    margin-top: -0.65rem;    }
+
+#posttext ul li:not(:first-child), {
+    margin-top: 0.26rem;    }
+
+#writtenby {
+    font-family: 'Sintesi_Sans_True_Bold', 'Courier_New', Courier, Monotype;    }
+
+.pullquote {
+    font-family: 'Sintesi_Sans_Demi-Bold', 'Courier_New', Courier, Monotype;    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

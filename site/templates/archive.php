@@ -1,4 +1,7 @@
-<?php snippet('head-open-sitewide') ?>
+<?php snippet('head-open') ?>
+
+
+<?php snippet('head-title-all-but-home') ?>
 
  
 <?php snippet('share-settings-common') ?>
@@ -8,6 +11,12 @@
 
 
 <?php snippet('head-close') ?>
+
+
+    <!-- holds the loading animation; all pages get it except default.php template, 
+    because it holds the 404 page, and when a non-existant page is requested (and 404 page shows), 
+    it cannot load by definition, and the animation never stops! -->
+    <div id="loadbg"></div>
 
 
     <!-- archive year section header script -->

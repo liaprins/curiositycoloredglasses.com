@@ -2,10 +2,15 @@
 
 username: liaprins
 password: >
-  $2a$10$EB66MK5zRR/bD7Z1aXmBDuK/kDVDB0eN1rLgRAvc6W716nQ3vGR7a
-email: liajprins@us.ibm.com
+  $2a$10$sr8nxw/Z4VtyJP1z7Tvs8.5YV3xc8vu2nuJCih6UOUVg1.wMVc66y
+email: liajprins@gmail.com
 language: en
 role: admin
 history:
-  - blog/the-moons-dark-side
+  - blog/measure-of-a-mountain/theodolite
   - blog/measure-of-a-mountain
+  - blog/carbonless-copy-paper
+  - hello
+  - library
+firstname: Lia
+lastname: Prins

@@ -29,6 +29,37 @@ of the system, please check out http://getkirby.com/docs/advanced/options
 */
 
 
+/* Make curiositycoloredglasses.com go straight to the main page, instead of curiositycoloredglasses.com/blog */
+/* UN-comment the segment below when launch */
+/*
+c::set('home','blog');
+
+c::set('routes', array(
+  array(
+    'pattern' => '(:any)',
+    'method' => 'GET|POST',
+    'action'  => function($uid) {
+
+      $page = page($uid);
+
+      if(!$page) $page = page('blog/' . $uid);
+      if(!$page) $page = site()->errorPage();
+
+      return site()->visit($page);
+
+    }
+  ),
+  array(
+    'pattern' => 'blog/(:any)',
+    'method' => 'GET|POST',
+    'action'  => function($uid) {
+      go($uid);
+    }
+  )
+));
+*/
+
+
 /* SETTING UP EMAIL ALERTS FOR COMMENTS VIA KIRBY PLUGIN */
 /*
 c::set('comments.use.email', true);

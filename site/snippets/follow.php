@@ -1,8 +1,8 @@
 <span id="follow">
 
 	<!-- Link to my instagram page -->
-	<a href="https://www.instagram.com/liaprins/" title="Follow on Instagram" target="_blank"> 
-		<img src= "<?php echo url('assets/images/Instagram.svg') ?>" alt="Follow me on Instagram" class="followicon socialicon">
+	<a href="https://www.instagram.com/curiositycoloredglasses/" title="Follow on Instagram" target="_blank"> 
+		<img src= "<?php echo url('assets/images/Instagram.svg') ?>" alt="Follow me on Instagram" id="instagramlogo" class="followicon socialicon">
 	</a>
 
 

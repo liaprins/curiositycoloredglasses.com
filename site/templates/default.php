@@ -1,4 +1,7 @@
-<?php snippet('head-open-sitewide') ?>
+<?php snippet('head-open') ?>
+
+
+<?php snippet('head-title-all-but-home') ?>
 
 
 <?php snippet('share-settings-common') ?>
@@ -21,9 +24,8 @@
         <div class="desktopcontent">
 
             <!-- NOT SURE THAT THIS WILL STAY AS <h2> -->
-            <h2 class="extracontentpagetitle">
-                <?php echo $page->title()->html() ?>
-            </h2>
+            <h2 id="pagetitle" class="extracontentpagetitle"><?php echo $page->title()->html() ?></h2>
+
 
             <!-- text for the page -->
             <span class="l-textface">

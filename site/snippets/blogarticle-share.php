@@ -22,7 +22,7 @@ KEEP ARTBOARD THE SAME SIZE, THOUGH! -->
 <!-- ... but adding ability to dynamically include a visualized image... -->
 <!-- ... a call for a field in panel that references the properly-formatted URL for an image to be included in Tweet -->
 <!-- Right now pulling the tags from the tags field of the panel. May need it's own tag field to pull from instead, if I want less or shorter or none. -->
-<a href="https://twitter.com/intent/tweet?text=<?php echo rawurlencode ($page->share()); ?>%20<?php echo rawurlencode ($page->twitterimageurl()); ?>&url=<?php echo rawurlencode($page->tinyurl()); ?>&hashtags=<?php foreach($page->tags()->split(', ') as $tag): ?>%20<?php echo ($tag); ?><?php endforeach ?>&via=CuriosityColoredGlasses" title="Share on Twitter" target="_blank">
+<a href="https://twitter.com/intent/tweet?text=<?php echo rawurlencode ($page->share()); ?>&url=<?php echo rawurlencode($page->url()); ?>&hashtags=<?php foreach($page->tags()->split(', ') as $tag): ?>%20<?php echo ($tag); ?><?php endforeach ?>&via=CuriosityColor" title="Share on Twitter" target="_blank">
     <img src= "<?php echo url('assets/images/Twitter.svg') ?>" alt="Share on Twitter" class="socialicon shareicon yellowhover">
 </a>
 <!-- This script needs to stay or there won't be a popup; it will open a new tab instead -->

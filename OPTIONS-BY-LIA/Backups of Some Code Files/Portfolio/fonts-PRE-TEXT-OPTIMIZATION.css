@@ -1,0 +1,78 @@
+@font-face {
+    font-family: 'IBM-Plex_Mono_Bold';
+    src: url(../fonts/ibmplexmono-bold-v01-webfont.woff) format('woff');    }    
+
+@font-face {
+    font-family: 'IBM-Plex_Mono_Regular';
+    src: url(../fonts/ibmplexmono-regular-v01-webfont.woff) format('woff');    }
+    
+@font-face {    
+    font-family: 'IBM-Plex_Sans_Regular';
+    src: url(../fonts/ibmplexsans-regular-v01.1-webfont.woff) format('woff');    }
+
+@font-face {    
+    font-family: 'IBM-Plex_Sans_Italic';
+    src: url(../fonts/ibmplexsans-italic-v01.1-webfont.woff) format('woff');    }
+
+@font-face {    
+    font-family: 'IBM-Plex_Sans_Bold';
+    src: url(../fonts/ibmplexsans-bold-v01.1-webfont.woff) format('woff');    }
+
+@font-face {    
+    font-family: 'IBM-Plex_Sans_Medium';
+    src: url(../fonts/IBMPlexSans-Medium.woff) format('woff');    }
+
+@font-face {    
+    font-family: 'IBM-Plex_Sans_Medium_Italic';
+    src: url(../fonts/IBMPlexSans-MediumItalic.woff) format('woff');    }
+
+@font-face {    
+    font-family: 'IBM-Plex_Sans_Semi-Bold';
+    src: url(../fonts/IBMPlexSans-SemiBold.woff) format('woff');    }
+
+@font-face {    
+    font-family: 'IBM-Plex_Mono_Medium';
+    src: url(../fonts/IBMPlexMono-Medium.woff) format('woff');    }
+
+@font-face {    
+    font-family: 'IBM-Plex_Mono_Medium_Italic';
+    src: url(../fonts/IBMPlexMono-MediumItalic.woff) format('woff');    }
+
+
+
+body {
+    font-family: 'IBM-Plex_Sans_Regular';
+}
+
+/*
+#stats strong {
+    font-family: 'IBM-Plex_Sans_Semi-Bold';
+}
+*/
+
+#stats strong, .inlinesubhead {
+    font-family: 'IBM-Plex_Sans_Bold';
+}
+
+h1, h3, h4, h6, #email, #instagram, #resume, #instagram-text {
+    font-family: 'IBM-Plex_Mono_Bold';
+}
+
+h2, .menuitem, .pullquote, .pullquoter {
+    font-family: 'IBM-Plex_Mono_Regular';
+}
+
+.attribution {
+    font-family: 'IBM-Plex_Mono_Medium';
+}
+
+.attribution em {
+    font-family: 'IBM-Plex_Mono_Medium_Italic';
+}
+
+figcaption {
+    font-family: 'IBM-Plex_Sans_Medium';
+}
+
+figcaption em {
+    font-family: 'IBM-Plex_Sans_Medium_Italic';

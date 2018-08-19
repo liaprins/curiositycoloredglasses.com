@@ -13,14 +13,18 @@ header {    /* Holds blog name + tagline */
     margin-top: 2.048rem;    }    /* .75 lh */
 
 #homeintro {
-    hyphens: auto;
+    hyphens: manual;
     margin: 1.024rem 0 0.512rem 0;    }    /* top: .5 lh, bottom: .25 lh */
 
 #readmore {
     display: inline;
     padding: 0.6em 0.5em 0.5em 0;    }    /* Basing on line-height; they would all be 0.6em, but I had to optically finesse R + bottom, so they are 0.5em */
 
-#hometaggroup {   
+#hometaggroup {  
+    /* line-height: 2.63; */
+    line-height: 2.2;
+    overflow: hidden;
+    text-overflow: ellipsis; 
     margin-left: -0.3rem;     }
 
 #hometag {
@@ -34,10 +38,18 @@ header {    /* Holds blog name + tagline */
     margin-bottom: 1.024rem;    /* .5 lh */
     border-style: solid none none none; 
     /* border-width: 1.71428vw; */    /* This should dynamically match the weight of the line of the postglasses below date, based on their width of 42.857vw (12/28 cols) and the ratio of the postglasses width to their line weight of 25:1 */ 
-    border-width: 0.125rem;    }    /* This should match the weight of the icons, e.g. home icon */
+    /* border-width: 0.125rem; */    /* This should match the weight of the icons, e.g. home icon */
+    /* border-width: 2vw; */    }    /* This should match the weight of the main postglasses' outline; the ratio of postglasses' width to stroke weight is 25:1; */
+
+/* Setting the stroke weight for the lines above date, and below captions */
+.date,
+figcaption {
+    /* border-width: 1.8vw; */    /* This should match 9/10 (to account for optical illusion) of the weight of the main postglasses' outline; the ratio of postglasses' width to stroke weight is 25:1; */
+    border-width: 0.22rem;    }
 
 .postglasses {
-    width: 42.857vw;    /* 12/28 cols */
+    /* width: 42.857vw; */    /* 12/28 cols */
+    width: 50vw;    /* 14/28 cols */
     display: block;
     margin: 1.024rem auto 1.536rem auto;    /* top: .5 lh, bottom: .75 lh */
     background-position: center;
@@ -54,10 +66,32 @@ header {    /* Holds blog name + tagline */
     background-size: 175%;    }  
 
 .posttitle {
+    /* hyphens: manual; */    /* This did not work; the "&shy;" showed us as characters on the screen regardless of what I did */
     margin-top: 2.048rem;    }    /* 1 lh | This id was needed because <h2> couldn't hold margins because different margins are needed between post titles and About, etc pages, and <h2> would cascade to override either ids; id that holds margins for About, etc pages' is .extracontentpagetitle */
 
+#writtenby {
+    margin-right: 0.2em;
+    letter-spacing: 0.1em;    }
+
+.writer {
+    letter-spacing: 0.175em !important;    }
+
+.writer a {
+    padding: 0.6em 0.5em 0.3em 0;    }
+
+.writer p {
+    display: inline;    }
+
+.guestpostbanner {
+    background-color: black;
+    color: white;
+    margin-right: 0.4em;
+    padding: 0.2rem 0.2rem 0.1rem 0.2rem;    }
+    
 .tag {
-    padding: 0.6em 0.5em 0.5em 0.5em;    }    /* Finessing to be perfectly centered */
+    white-space: nowrap;
+    padding: 0.6em 0.5em 0.5em 0;
+    /* padding: 0.6em 0.5em 0.5em 0.5em; */    }    /* Finessing to be perfectly centered */
 
 
 /* POST PAGE -------------------------------------------------- */
@@ -113,12 +147,16 @@ header {    /* Holds blog name + tagline */
     margin: 1.024rem 0 0.512rem 0;    }    /* top: .5 lh, bottom: .25 lh */
 
 #postintro p {
-    hyphens: auto;    }    /* This applies to intro on the post page; it needs hyphenation but the auto-wrapping <p> tags surrounding text called from the panel is interfering with any potential hyphenation class being applied */
+    hyphens: manual;    }    /* This applies to intro on the post page; it needs hyphenation but the auto-wrapping <p> tags surrounding text called from the panel is interfering with any potential hyphenation class being applied */
 
 #posttagshare {     /* Groups the tags and share icons into one div; the HTML id is located in blogarticle.php template, surrounding the tag and share snippets */
     margin: 0.512rem 0;    }    /* top + bottom: .25 lh */
 
-#posttaggroup {   
+#posttaggroup {  
+    /* line-height: 2.63; */
+    line-height: 2.2;
+    overflow: hidden;
+    text-overflow: ellipsis; 
     margin-left: -0.3rem;     }
 
 #share {    /* Applies to all the share icons together as a whole */
@@ -143,17 +181,17 @@ header {    /* Holds blog name + tagline */
     border-radius: 2rem;   }
 
 .pullquote {
+    hyphens: manual;
     position: relative;
     width: 78.571vw;
-    padding: 0.95rem 0;
-    font-family: 'Sintesi_Sans_Demi-Bold', 'Courier_New', Courier, Monotype;    }
+    padding: 0.95rem 0;    }
 
 #posttext {    /* The div that holds all text as a whole (and images called within text, galleries, inline vocab words, etc) */
     margin: 1.024rem 0;    }    /* top + bottom: .5 lh */
 
 #posttext p {    /* This applies to each paragraph of text */
     clear: right;    /* This is to push the text all the way down istead of wrapping around share icons, in the instance they are pushed to the next line by tags */
-    hyphens: auto;    /* This applies to content text on the post page; it needs hyphenation but the auto-wrapping <p> tags surrounding text called from the panel is interfering with any potential hyphenation class being applied */
+    hyphens: manual;    /* This applies to content text on the post page; it needs hyphenation but the auto-wrapping <p> tags surrounding text called from the panel is interfering with any potential hyphenation class being applied */
     margin: 1.024rem 0;    }    /* top + bottom: .5 lh */
 
 #posttext p:last-of-type {    /* This is just the last paragraph of text */
@@ -219,6 +257,9 @@ header {    /* Holds blog name + tagline */
     width: 78.571vw;
     height: 44.196vw;    }
 
+.hidepinnable {
+    display: none;    }
+
 /* COMMENTS (POST PAGE) -------------------------------------------------- */
 
 .commentssummary {    /* Making it so the margin below comment section header only applies when it's open */
@@ -261,7 +302,11 @@ header {    /* Holds blog name + tagline */
 #postacommentsummary {    /* This is the first "Post a comment" 'button' seen, before clicking it to open to the inputs */
     display: inline;    /* So the background color won't span the whole page */
     height: 1.875rem;
-    padding: 0.5159rem 0.469rem 0 0.469rem;    /* Finessing to be perfectly centered */
+    /* padding: 0.5159rem 0.469rem 0rem 0.469rem; */    /* Finessing to be perfectly centered */
+    padding-top: 0.5159rem;
+    padding-right: 0.469rem;
+    padding-bottom: 0.4rem;
+    padding-left: 0.469rem;
     border-style: solid;
     border-width: 0.125rem;
     border-color: black;
@@ -343,10 +388,11 @@ figure {    /* This applies to the image + its caption (if it has one) as a whol
     margin: 2.048rem 0;    }    /* top + bottom: .75 lh | This is needed so the text following a captionless image has this space between it and the image */
 
 figcaption {    /* :) This applies to all places captions appear (post page single and/or gallery images, About page) */
+    hyphens: manual;
     background-color: rgba(255, 255, 255, 0.95);
     padding-bottom:  1.024rem;    /* .5 lh */
     border-style: none none solid none;    /* For the non-desktop screens with a rule on the bottom */
-    border-width: 1.71428vw;    /* :) This should dynamically match the weight of the line of the postglasses below date, based on their width of 42.857vw (12/28 cols) and the ratio of the postglasses width to their line weight of 25:1 */ 
+    /* border-width: 1.71428vw; */    /* :) This should dynamically match the weight of the line of the postglasses below date, based on their width of 42.857vw (12/28 cols) and the ratio of the postglasses width to their line weight of 25:1 */ 
     margin: 1.024rem 0 2.048rem 0;    }    /* top: .5 lh, bottom: .75 lh */
 
 
@@ -401,7 +447,7 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
     margin-top: -1.024rem;
     border-style: solid;
     border-color: black;
-    border-width: 2px;
+    /* border-width: 2px; */
     margin-bottom: 1.024rem;    }
 
 .gallerycaption {
@@ -419,6 +465,7 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
     left: 0.512rem;    }
 
 #singlelightbox {
+    cursor: pointer;
     width: 100vw;
     height: 100vh;
     background-color: white;
@@ -428,6 +475,7 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
     top: 0;    }
 
 .lightboximage {
+    cursor: auto !important;
     z-index: 101;
     max-width: 100vw;
     max-height: 100vh;
@@ -440,6 +488,7 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
     left: calc(100vw - 5.357vw - 0.844rem);    }    /* all the way to the R, but then back the width of itself + padding + margin */
 
 .lightboxcaption {
+    cursor: auto;
     position: absolute;
     top: 0;
     left: 0;
@@ -450,6 +499,9 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
     padding-top: calc(10.714vw + 1.024rem);
     border-style: none;
     width: 100vw;    }    /* 28/28 cols */
+
+.lightboxcaption > .toprule {
+    display: block;    }
 
 #lightboxcaptionbar {    /* IS THIS STILL NEEDED? I THINK NOT... TEST */
     z-index: 103;
@@ -508,7 +560,7 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
     margin-top: -0.512rem;    }    /* .25 lh | Counteracting <figure>'s top margin to move top of About image closer to About page name optically */
 
 #abouttext {
-    hyphens: auto;    }
+    hyphens: manual;    }
 
 
 /* ARCHIVE PAGE -------------------------------------------------- */
@@ -540,6 +592,9 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
 
 
 /* LIBRARY PAGE -------------------------------------------------- */
+
+#libraryintro {
+    hyphens: manual;    }
 
 #librarysection {    /* :) Had to make a new section (24/28 col widths) that is wider than <main> to hold the margins of the library icons */
     overflow: auto;    /* :) This line and the next are to fix a broswer bug wherein this containing element thinks it is 0px tall because it only contains floated elements; see pp373-4 in HTML & CSS book */
@@ -586,13 +641,14 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
     float: right;    }
 
 #libraryentrycontent {    /* Holds library entry name, about statement, citation (opt), etc */
+    hyphens: manual;
     /* position: absolute; */    }    /* Leaving this (but commented out) + these comments for future explorations | Enable this to make the content span the width of all 3 icons, and L-align, but will also pin to top of icon area */
 
 .libraryentry {
     margin-top: 1.024rem;
     margin-bottom: 1.024rem;    }
 
-.libraryentryname {
+.libraryentryname > p {
     margin-top: 0.512rem;
     margin-bottom: 0.768rem;    }    /* .125 lh */
 
@@ -610,6 +666,7 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
     padding-top: calc(10.714vw - 0.469rem);    }    /* 3/28 cols, but finessing vertical centering of search bar with menu icon */
 
 #searchpageinput {
+    -webkit-appearance: none;
     padding-bottom: 0.1719rem;    /* Finessed the space between input word and underline bar to match space between input and bottom of field for subscribe + comment name fields (this is a different measurement than nav search's is, because they have different input text sizes, so the line-height (relative sizing) offsets each differently in px for the default spacing)*/
     width: calc(78.571vw - 3.602rem);    }    /* This should be [the width of <main> (22/28 cols = 78.571vw)[] minus [the width of magnifier icon + its padding + the width of menu icon + the space between them (30px + 17px + 15px = 62px)] */
 
@@ -677,10 +734,10 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
     background-size: 175%;    }
 
 #resulttitle {
+    hyphens: auto;
     text-overflow: ellipsis;    /* making words that are too long truncate with an ellipsis (e.g. PHOSPHORESCENCE) to keep from going outside the div width */
     /* white-space: nowrap; */    /* NOT ACTUALLY NEEDED this was making all titles truncate with "..." after just one line */
     overflow: hidden;    /* required for ellipse truncation to happen */
-
     margin: 1.024rem 0 0.256rem 0;    }    /* top: .5 lh, bottom: .125 lh */
 
 #resulttaggroup {
