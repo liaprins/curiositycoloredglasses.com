@@ -1,0 +1,782 @@
+
+/* 442px ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+@media only screen and (min-width: 442px) {
+
+    /* TEXT STYLES ---------------------------------------------------- */
+
+    h1 {
+        font-size: 10.474vw;
+        letter-spacing: 0.113vw;
+        margin-bottom: 5.65vw;    }
+
+    h1 .smaller {
+        /* font-size: 7.273vw; */
+        font-size: 9.9vw;    }
+
+    /*
+    h4 {
+        font-size: 5.051vw;
+        margin-bottom: 2.825vw;
+        letter-spacing: 0px;    }
+    */
+
+    h2,
+    h3,
+    h4,
+    h6 {
+        font-size: 4.209vw;    }
+
+    h2 {
+        letter-spacing: 0.03vw;
+        margin-bottom: 7.91vw;    }
+
+    h3 {
+        letter-spacing: 0.09vw;    }
+
+
+    h4 {
+        margin-bottom: 3.051vw;
+        margin-top: 4vw;     }
+
+    h6 {
+        letter-spacing: 0.17vw;
+        height: calc(39.28vw - 0.68vw);    }    /* 2 grid cols - thin margin space */
+
+    h6 .smaller,
+    .pullquote,
+    #intro,
+    #aboutoverview,
+    #aboutcurrent {
+        font-size: 3.508vw !important;    }
+
+    .pullquote,
+    #intro {
+        letter-spacing: 0.002vw !important;    }
+
+    #intro p {
+        margin-bottom: 4vw;    }
+
+    #intro strong {
+        box-shadow:
+            inset 0 0vw white,
+            inset 0 -1vw rgba(74, 174, 179, 0.4);    }
+
+    #stats {
+        font-size: 2.436vw;
+        margin-top: 3vw;    }    /* 3/4 of #intro p bottom margin */
+
+    #abouttext,
+    #opportunities li,
+    #livelearn li,
+    #process p,
+    #outcomes p,
+    .pullquoter,
+    #email,
+    #resume,
+    .contactpipe,
+    #process ul,
+    #instagram-text {
+        font-size: 2.923vw;
+        letter-spacing: 0.03vw;    }
+
+    .processbullets {
+        margin-top: -1.5vw;    /* half of space between paragraphs, negative */
+        margin-left: 4.1vw;    /* match this attribute and the styles below to #opportunities li and #livelearn li */
+        padding-left: 0.565vw;
+        width: 74.471vw;    /* 78.571vw - 4.1vw (22/28cols - margin-left) */
+        list-style: disc;    }
+
+    .processbullets li {
+        margin-top: 1.5vw;    }    /* half of space between paragraphs */
+
+    #opportunities li strong,
+    #livelearn li strong {
+        box-shadow:
+            inset 0 0vw white,
+            inset 0 -0.9vw rgba(74, 174, 179, 0.4);
+        display: inline;    }
+
+    #process p,
+    #outcomes p,
+    #abouttext p {
+        margin-bottom: 3.051vw;    }
+
+    #abouttext {
+        margin: 3.051vw 0 7.91vw 0;    }
+
+    #abouttext .asterisk {
+        margin-bottom: 7.91vw;    }
+
+    #opportunities li,
+    #livelearn li {
+        margin-top: 3.051vw;
+        margin-left: 4.1vw;
+        padding-left: 0.565vw;
+        width: 74.471vw;    /* 78.571vw - 4.1vw (22/28cols - margin-left) */
+        list-style: disc;    }
+
+    /* figcaption, */
+    .asterisk {
+        font-size: 2.436vw !important;    }
+
+    figcaption /*,
+    .attribution*/ {
+        font-size: 2.03vw;    }
+
+    .figcaptionspacer {
+        margin: -1.015vw;    /* half of figcaption font-size */
+        line-height: 1;    }
+
+    .attribution {
+        font-size: 1.692vw !important;    }
+
+    /* OTHER STYLES (not text) ---------------------------------------------------- */
+
+    #photogroup {
+        margin-bottom: 3.7vw;    }
+
+    #mobilepic {
+        margin-bottom: 4.52vw;
+        height: calc(39.28vw - 0.68vw);    }    /* match width/height of project tile image */
+
+    #email, 
+    #resume,
+    #instagram-text {
+        letter-spacing: 0.17vw;    }
+
+    #instagram {
+        height: 3.39vw;
+        margin: 0 0.678vw -0.678vw 0.678vw;    }
+
+    #resume {
+        margin-left: 0.678vw;    }
+
+    #abouttoggle {
+        height: 6.215vw;
+        width: 6.215vw;
+        background-size: 6.215vw 6.215vw;
+        margin-top: 4vw;    }
+    details[open] #abouttoggle {
+        height: 6.215vw;
+        width: 6.215vw;
+        background-size: 6.215vw 6.215vw;
+        margin-top: 4vw;    }
+
+    .projecttile {
+        height: calc(39.28vw - 0.68vw);    /* 11/28cols - thin margin */
+        width: calc(39.28vw - 0.68vw);
+        margin: 0.68vw 0.68vw 0 0;
+        background-size: calc(39.28vw - 0.68vw) calc(39.28vw - 0.68vw);    }
+
+    .aboutproject {
+        height: 4vw;
+        top: calc(35.709vw - 4.68vw);    }    /* 39.28vw - 3.571vw - 17.5px + 3px) (height of tile - tile's bottom inner padding - height of "+" itself + thin margin width) */
+
+    .sectionheader {
+        padding-top: 1.13vw;
+        border-width: 0.68vw;
+        margin: 7.91vw 0 2.83vw 0;    }
+
+    .sectionplus {
+        height: 4.4vw;
+        width: 4.4vw;
+        background-size: 4.4vw 4.4vw;
+        padding-top: 2.034vw;   }
+    details[open] .sectionplus {
+        height: 4vw;
+        width: 4vw;
+        background-size: 4vw 4vw;
+        padding-top: 2.26vw;    }
+
+    #gridseparator {
+        margin: 7.91vw 0 10.71vw 0;
+        border-width: 0.27vw;    }
+
+    /* LIGHTBOXSLIDESHOW STYLES ---------------------------------------------------- */
+
+    .contentimage { 
+        margin: 6.215vw auto 0 auto;    }
+
+    figure {    /* This applies to the image + its caption (if it has one) as a whole */
+        margin: 6.215vw 0;    }    /* placeholderBox's style.top is dependent on/matches this measurement within lightboxslideshow.js */
+
+    figcaption {    /* This applies to all places captions appear (post page single and/or gallery images, About page) */
+        margin-top: 4vw;    }
+
+    #galleryimage {
+        margin-top: -2.83vw;    }
+
+    .dot {
+        width: 1.13vw;   
+        height: 1.13vw;  
+        border-radius: 0.565vw;
+        margin: 0 0.509vw;    }
+
+    .dotimg {
+        width: 1.13vw;   
+        height: 1.13vw; 
+        top: -2.49vw;    }
+
+    .dotimgunfilled:hover {
+        border-radius: 0.565vw;    }
+
+    .galleryarrows {
+        height: 3.503vw;
+        width: 3.503vw;
+        padding: 1.13vw;
+        margin-top: 0.452vw;    }
+
+    .gallerycaption {
+        margin-top: 6.78vw;    }
+
+    /* LIGHTBOX ---------------------------------------------------- */
+
+    #lightboxdotcontainer {
+        margin-bottom: -2.49vw;
+        bottom: calc(5.357vw - 2vw);
+        left: calc(5.357vw - 2vw);    }
+
+    #lightboxclose {
+        top: calc(5.357vw - 2vw);
+        left: calc(100vw - 5.357vw - 2vw);    }
+
+    .lightboxarrowcontainer {
+        bottom: calc(5.357vw - 2vw);
+        right: calc(5.357vw - 2vw);    }
+
+    .close-x {
+        height: 4vw;
+        width: 4vw;    }
+
+    #captiontoggle {
+        height: 4vw;
+        width: 4vw;
+        top: calc(5.357vw - 2vw);
+        left: calc(100vw - 5.357vw - 8.19vw);    }
+
+}    /* 442px ++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+
+
+
+
+/* 650px ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* @media only screen and (min-width: 650px) { */
+
+@media (min-width: 650px) { 
+
+    h1 {
+        font-size: 68.08px;
+        letter-spacing: 0.735px;
+        margin-bottom: 36.725px;    }
+
+    h1 .smaller {
+        /* font-size: 47.276px; */
+        font-size: 64.38px;     }
+
+    /*
+    h4 {
+        font-size: 32.832px;
+        margin-bottom: 18.363px;
+        letter-spacing: 0px;    }
+    */
+
+    h2,
+    h3,
+    h4 {
+        font-size: 27.36px;    }
+
+    h2 {
+        letter-spacing: 0.2px;
+        margin-bottom: 51.42px;    }
+
+    h3 {
+        letter-spacing: 0.585px;    }
+
+    h4 {  
+        margin-bottom: 19.83px;
+        margin-top: 26px;     }
+
+    h6 {
+        /* font-size: 19px; */
+        font-size: 2.923vw;
+        letter-spacing: 1.105px;
+        height: calc(26.19vw - 4.42px);    }    /* 2 grid cols - thin margin space */
+
+    h6 .smaller {
+        /* font-size: 15.833px; */
+        /* font-size: 2.436vw; */
+        /* font-size: 2.246vw; */
+        font-size: 2.15vw;    }
+
+    .pullquote,
+    #intro,
+    #aboutoverview,
+    #aboutcurrent {
+        font-size: 22.8px !important;    }
+
+    .pullquote,
+    #intro {
+        letter-spacing: 0.013px !important;    }
+
+    #intro p {
+        margin-bottom: 26px;    }
+
+    #intro strong {
+        box-shadow:
+            inset 0 0px white,
+            inset 0 -6px rgba(74, 174, 179, 0.4);    }
+
+    #stats {
+        font-size: 15.833px;
+        margin-top: 19.5px;    }    /* 3/4 of #intro p bottom margin */
+
+    #abouttext,
+    #opportunities li,
+    #livelearn li,
+    #process p,
+    #outcomes p,
+    .pullquoter,
+    #email,
+    #resume,
+    .contactpipe,
+    #process ul,
+    #instagram-text {
+        font-size: 19px;
+        letter-spacing: 0.2px;    }
+
+    .processbullets {
+        margin-top: -9.915px;    /* half of space between paragraphs, negative */
+        margin-left: 26px;    /* match this attribute and the styles below to #opportunities li and #livelearn li */
+        padding-left: 3.67px;
+        width: 74.471vw;    /* 78.571vw - 4.1vw (22/28cols - margin-left) */
+        list-style: disc;    }
+
+    .processbullets li {
+        width: 74.471vw;    /* 78.571vw - 4.1vw (22/28cols - margin-left) */
+        margin-top: 9.915px;    }    /* half of space between paragraphs */
+
+    #opportunities li strong,
+    #livelearn li strong {
+        box-shadow:
+            inset 0 0px white,
+            inset 0 -5px rgba(74, 174, 179, 0.4);
+        display: inline;    }
+
+    #process p,
+    #outcomes p,
+    #abouttext p {
+        margin-bottom: 19.83px;    }
+
+    #abouttext {
+        margin: 19.83px 0 51.415px 0;    }
+
+    #abouttext .asterisk {
+        margin-bottom: 54.415px;    }
+
+    #opportunities li,
+    #livelearn li {
+        margin-top: 19.83px;
+        margin-left: 26px;
+        padding-left: 3.67px;
+        width: 74.471vw;    /* 78.571vw - 4.1vw (22/28cols - margin-left) */
+        list-style: disc;    }
+
+    /* figcaption, */
+    .asterisk {
+        font-size: 15.833px !important;    }
+
+    figcaption /*,
+    .attribution*/ {
+        font-size: 13.194px;    }
+
+    .attribution {
+        font-size: 11px !important;    }
+
+    .figcaptionspacer {
+        margin: -6.597px;    /* half of figcaption font-size */
+        line-height: 1;    }
+
+    /* OTHER STYLES (not text) ---------------------------------------------------- */
+
+    #photogroup {
+        margin-bottom: 20px;    }
+
+    #mobilepic {
+        margin-bottom: 29.38px;
+        height: calc(26.19vw - 4.42px);
+        width: 78.571vw;
+        background-size: 78.571vw calc(26.19vw - 4.42px);
+        /* background-image: url('../images/lia-2.jpg'); */
+        background-image: url('../../content/liaprins/lia-2.jpg');    }    /* match width/height of project tile image */
+
+    #email, 
+    #resume,
+    #instagram-text {
+        letter-spacing: 1.105px;    }
+
+    #instagram {
+        height: 22.035px;
+        margin: 0 4.407px -4.407px 4.407px;    }
+
+    #resume {
+        margin-left: 4.407px;    }
+
+    #abouttoggle {
+        height: 40.4px;
+        width: 40.4px;
+        background-size: 40.4px 40.4px;
+        margin-top: 26px;    }
+    details[open] #abouttoggle {
+        height: 40.4px;
+        width: 40.4px;
+        background-size: 40.4px 40.4px;
+        margin-top: 26px;    }
+
+    .projecttile {
+        height: calc(26.19vw - 4.42px);    /* 7.3/28cols - thin margin */    
+        width: calc(26.19vw - 4.42px);
+        margin: 4.42px 4.42px 0 0;
+        background-size: calc(26.19vw - 4.42px) calc(26.19vw - 4.42px);    }
+
+    .aboutproject {
+        /* height: 26px; */
+        height: 2.67vw;
+        top: calc(22.619vw - 2.67vw);    }    /* 26.19vw - 3.571vw - 17.5px + 3px) (height of tile - tile's bottom inner padding - height of "+" itself + thin margin width) */
+
+    .sectionheader {
+        padding-top: 7.35px;
+        border-width: 4.42px;
+        margin: 51.415px 0 18.4px 0;    }
+
+    .sectionplus {
+        height: 28.6px;
+        width: 28.6px;
+        background-size: 28.6px 28.6px;
+        padding-top: 13.221px;   }
+    details[open] .sectionplus {
+        height: 26px;
+        width: 26px;
+        background-size: 26px 26px;
+        padding-top: 14.69px;    }
+
+    #gridseparator {
+        margin: 51.415px 0 69.615px 0;
+        border-width: 1.755px;    }
+
+    #bottomspacer {
+        height: calc((2 * 26.19vw) + 10.714vw);    }    /* (number of tiles high at this screenwidth [adjust if project count changes!] * height of tile INCLUDING THIN MARGIN HEIGHT) + 3/28cols */
+
+    /* LIGHTBOXSLIDESHOW STYLES ---------------------------------------------------- */
+
+    .contentimage { 
+        margin: 40.4px auto 0 auto;    }
+
+    figure {    /* This applies to the image + its caption (if it has one) as a whole */
+        margin: 40.4px 0;    }    /* placeholderBox's style.top is dependent on/matches this measurement within lightboxslideshow.js */
+
+    figcaption {    /* This applies to all places captions appear (post page single and/or gallery images, About page) */
+        margin-top: 26px;    }
+
+    #galleryimage {
+        margin-top: -18.4px;    }
+
+    .dot {
+        width: 7.345px;   
+        height: 7.345px;  
+        border-radius: 3.67px;
+        margin: 0 3.31px;    }
+
+    .dotimg {
+        width: 7.345px;   
+        height: 7.345px; 
+        top: -16.19px;    }
+
+    .dotimgunfilled:hover {
+        border-radius: 3.67px;    }
+
+    .galleryarrows {
+        height: 22.77px;
+        width: 22.77px;
+        padding: 7.345px;
+        margin-top: 2.94px;    }
+
+    .gallerycaption {
+        margin-top: 44.07px;    }
+
+    /* LIGHTBOX ---------------------------------------------------- */
+
+    #lightboxdotcontainer {
+        margin-bottom: -16.19px;
+        bottom: calc(23.225px - 0px);
+        left: calc(23.225px - 0px);            }
+
+    #lightboxclose {
+        top: calc(23.225px - 0px);
+        left: calc(100vw - 23.225px - 26px);    }
+
+    .lightboxcaption {
+        padding: 69.641px 69.641px 34.821px 69.641px;
+        width: calc(100vw - 139.282px);    }    /* 28/28 cols */
+
+    .lightboxarrowcontainer {
+        bottom: calc(23.225px - 0px);
+        right: calc(23.225px - 0px);            }
+
+    .close-x {
+        height: 26px;
+        width: 26px;    }
+
+    #captiontoggle {
+        height: 26px;
+        width: 26px;
+        top: calc(23.225px - 0px);
+        left: calc(100vw - 23.225px - 66.235px);    }
+
+}    /* 650px ++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+
+
+
+
+/* 935px ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+@media only screen and (min-width: 935px) {
+
+    h6 {
+        padding: 21.8925px 34.746px;
+        font-size: 27.359px;    }
+
+    h6 .smaller {
+        /* font-size: 22.775px; */
+        font-size: 21px;    }
+    
+}    /* 935px ++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+
+
+
+/* 973px ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+@media only screen and (min-width: 973px) {
+
+    /* body { */
+    #bodysub {
+        margin: 78.073px auto 104.25px auto;    }
+
+    #photogroup {
+        /* display: inline-block; */
+        /* padding-bottom: calc(23px * 1.5); */    /* TEST!!! */
+        /* padding-bottom: 27px; */
+        margin-bottom: 15px;
+        display: inline-block;
+        vertical-align: top;    }
+
+    #mobilepic {
+        /*
+        display: inline-block;
+        vertical-align: top;
+        */
+        margin-top: 0;
+        height: calc(254.828px - 4.42px);    /* match width/height of project tile image */
+        width: calc(254.828px - 4.42px); 
+        background-size: calc(254.828px - 4.42px) calc(254.828px - 4.42px);
+        /* background-image: url('../images/lia.jpg'); */
+        background-image: url('../../content/liaprins/lia.jpg');    }
+
+    #email /*, 
+    #resume */ {
+        display: block;
+        color: black;
+        margin-top: -14px;
+        margin-left: 0;     }
+
+    #firstcontactpipe {
+        display: none;    }
+
+    #resume {
+        line-height: 2.45;    }    /* aligning bottom of "resume" text perfectly with a line of bio text */
+
+    /*
+    .contactpipe {
+        display: none;    }
+    */
+
+    #instagram {
+        /* display: block; */
+        /* margin: 7.5px 0 3.5px 0;*/
+        margin-left: 0;    }
+
+    #abouttext p {
+        margin-top: 2px;    /* TEST!!! TRYING TO REFINE THE LINE HEIGHT BETWEEN THE FULL-WIDTH REMAINDER TEXT OF THE MAIN BIO WITH THE NARROWER FIRST PART OF MAIN BIO*/
+        /* margin-bottom: 27px; */
+        margin-bottom: 0;    }
+
+    #aboutpassion p:not(h4),
+    #aboutpassion p:not(.asterisk) {
+        margin-bottom: 27px;    }
+    
+    #aboutoverview {
+        float: right;
+        margin-top: -13px;
+        margin-bottom: -8px;
+        display: inline-block;
+        font-size: 22.8px;
+        width: calc(510.172px - 38.375px);    }
+ 
+    /* THIS EXTRA SPACING ONLY NEEDED TO BE FIXED FOR CHROME; THE CODE BELOW SQUASHED ALL THE TEXT TOGETHER IN FF AND SAFARI! SO AM NOT BOTHERING WITH TRYING TO FIX CHROME RIGHT NOW... */
+    /*
+    h4 > .introheader {
+        margin-top: -65px !important;    }
+    */
+
+    #abouttext {
+        /* display: inline-block; */
+        display: inline;
+        margin-top: -10px;
+        width: calc(510.172px - 38.375px);
+        /* padding-left: 34.773px; */    /* if not accounting for the pixels between each column of thumbnails in the grid */
+        padding-left: 38.375px;    }
+
+    #abouttext > .asterisk {
+        margin-top: 19.83px;    }
+
+    .projecttile {
+        height: calc(254.828px - 4.42px);    /* 7.3/28cols (at 973 screenwidth equivalent) - thin margin */    
+        width: calc(254.828px - 4.42px);
+        margin: 4.42px 4.42px 0 0;
+        background-size: calc(254.828px - 4.42px) calc(254.828px - 4.42px);    }
+
+    .aboutproject {
+        height: 26px;
+        left: -34.75px;
+        top: calc(220.083px - 30.42px);    }    /* 26.19vw - 3.571vw - 17.5px + 3px) (height of tile - tile's bottom inner padding - height of "+" itself + thin margin width) */
+
+    h6 {
+        height: calc(254.828px - 4.42px);    }
+
+    #back {
+        width: 27.3px;
+        left: calc(52.125px - 13.75px);
+        top: calc(52.125px - 8.02px);    }
+
+    #error-backlink {
+        position: fixed;
+        left:calc(52.125px - 13.75px);
+        top: calc(52.125px - 13.75px);    }
+
+    #error-backarrow {
+        width: 27.3px;    }
+
+    #text404 {
+        font-size: 45.5px;    }
+
+    h1 .htac {
+        font-size: 64.38px;    } 
+
+    #opportunities li,
+    #livelearn li {
+        width: 724.603px;    /* 78.571vw - 4.1vw (22/28cols - margin-left) at 973px screenwidth equivalent */
+        list-style: disc;    }
+
+    .processbullets li {
+        width: 724.603px;    }    /* 78.571vw - 4.1vw (22/28cols - margin-left) at 973px screenwidth equivalent */
+
+    #bottomspacer {
+        /* height: calc((3 * 254.828px) + 104.247px); */    /* (number of tiles high at this screenwidth [adjust if project count changes!] * height of tile INCLUDING THIN MARGIN HEIGHT) + 3/28cols */
+        /* height: 1px; */
+        height: calc(2 * 254.828px);    }
+
+    .contentimage { 
+        max-width: 765px;    }    /* 22/28 cols at 973px screenwidth */
+
+    .lightboximage {
+        max-width: 100vw;    }
+
+    .lightboxcaption {
+        /* background-color: yellow; */
+        position: absolute;
+        top: 0;
+        left: calc(100vw - 765px - 69.641px - 69.641px);
+        padding: 69.641px 69.641px 34.821px 69.641px;
+        width: 765px;    }    /* 28/28 cols */
+
+    .postvideo-4-3-ratio {
+        width: 765px;
+        height: 573.75px;    }
+
+    .postvideo-16-9-ratio {
+        width: 765px;
+        height: 430.31px;    }
+
+
+}    /* 973px ++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+
+
+
+/* 1240px ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+@media only screen and (min-width: 1240px) {
+
+    #menu {
+        display: block;
+        position: fixed;
+        left: calc(52.125px - 13.75px);
+        top: 93px;    }
+
+    .menuitem {
+        font-size: 15.833px;
+        color: black;
+        opacity: 0.5;
+        padding-bottom: 7.917px;    }
+    .menuitem:hover {
+        opacity: 1;    }
+    
+    .current {
+        opacity: 1;
+        font-family: 'IBM-Plex_Mono_Bold';    }
+    
+    .lightboximage {
+        max-width: 1240px;    }
+
+}    /* 1240px ++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+
+
+
+html, body {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

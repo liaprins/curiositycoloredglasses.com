@@ -1,0 +1,64 @@
+#navdetails {    /* Holds together home icon, About, Archive, Library, and nav search */
+    float: right;    /* Pushes the group as a whole to the right */
+    position: absolute;
+    top: -0.056rem;   /* Accounting for the extra space on the SVG's artboard */
+    right: -0.056rem;   /* Accounting for the extra space on the SVG's artboard */
+    padding: 10.714vw 10.714vw 0 0;    }    /* Top + right 3/28 cols | Aligning the edge of the hamburger icon with right edge of the blog title; also sets the vertical position of the hamburger icon to 3/28 cols down from top of screen; can't set the padding all the way around when closed because it interferes with Archive's year menu being able to be clicked on (the menu padding "covers" it) */
+
+#navdetails[open] {    /* The style for just when the menu is open */
+    z-index: 1;    /* This is to get it to come above the year sections on Archive page */
+    padding: 10.714vw;   /* 3/28 cols */
+    background-color: #e2e43a;
+    width: 89.286vw;    }    /* 25/28 cols | Aligning the edge of the menu box with the edge of content */
+
+#navdetails[open] #navsummary {
+    background-image: url('../images/x-menu.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    box-sizing: content-box; /* Over-riding the border-box property I had applied globally, so that the border on hover doesn't cut into the BG img space */
+    height: 1.012rem;
+    width: 1.012rem;
+    border-color: #e2e43a;    /* These border properties have to be here in the [open] styles to override the border properties that are set when it's closed (#navsummary, below) */
+    border-style: solid;
+    border-width: 0 0 0.422rem 0.422rem;
+    /* border-width: 0.422rem; */
+    background-color: #e2e43a;
+    float: right;
+    cursor: pointer;    }
+
+#navsummary {
+    background-image: url('../images/menu.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    float: right;
+    box-sizing: content-box;    /* Over-riding the border-box property I had applied globally, so that the border on hover doesn't cut into the BG img space */
+    /* height: 0.900rem; */
+    height: 1.012rem;
+    /* width: 1.013rem; */    /* This is needed or else it will have width of 0 */
+    width: 1.124rem;
+    content: " ";
+    border-color: white;    /* These border properties apply to the bottom + left sides of the menu icon, to give it a white border-buffer where it cuts into the blog title on home page */
+    border-style: solid;
+    border-width: 0 0 0.422rem 0.422rem;
+    /* border-width: 0.422rem; */
+    background-color: white;
+    cursor: pointer;    }
+
+#navsummary::-webkit-details-marker {    /* Setting up the custom icons instead of default toggles */
+    display: none;    }
+
+#homeicon {
+    box-sizing: content-box;
+    display: block;    /* This is so you can select the home button when you are hovering to the right of it, just like the words */
+    width: 1.407rem;
+    padding: 0.23rem 0 0.422rem 0;    /* top: rem equivalent of 2.5px to get middle of glasses aligned with middle of "x", bottom: this is to account for the extra white space that goes with the menu words, to match the spacing (alternatively, set line-height to 1 for menu words...) */
+    margin-bottom: 1.536rem;    /* .75 lh */
+    cursor: pointer;    }
+
+.navnothome {    /* The menu items that aren't the home button (About, Archive, Library, and search) */
+    margin: 1.536rem 0;    }    /* Top + bottom: .75 lh | This is the space between the nav items */  
+
+#navsearch {
+    margin: -0.512rem 0 0 0;    }    /* Top: -.25 lh to make it look like it has equal spacing optically, bottom is 0 to prevent the search bar from having the extra margin on bottom */
+
+

@@ -1,0 +1,29 @@
+Vocabword: mountainous
+
+----
+
+Pronunciation: /ˈmaʊn tn əs/
+
+----
+
+Audiopronunciation: mountainous.mp3
+
+----
+
+Definition: 
+
+Rocky soil. 
+*Italic text* 
+**Bold text** 
+(link: https://ed.ted.com/lessons/is-math-discovered-or-invented-jeff-dekofsky text: Link text) 
+<em>Em text</em> 
+<strong>Strong text</strong> 
+<a href="https://ed.ted.com/lessons/is-math-discovered-or-invented-jeff-dekofsky">href text</a>
+
+----
+
+Illustration: breckenridge.jpg
+
+----
+
+Title: mountainous
