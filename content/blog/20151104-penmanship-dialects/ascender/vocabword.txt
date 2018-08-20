@@ -1,0 +1,17 @@
+Vocabword: ascender
+
+----
+
+Pronunciation: 
+
+----
+
+Audiopronunciation: 
+
+----
+
+Definition: The portion of a minuscule letter in a Latin-derived alphabet that extends above the mean line of a font.
+
+----
+
+Illustration: ascender.gif

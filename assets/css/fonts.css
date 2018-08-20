@@ -1,0 +1,52 @@
+/* FONTS -------------------------------------------------- */
+/* FOR CHROME AND FF, ONLY WORKS WHEN .WOFF IS THE ONLY ONE THERE... */
+
+
+@font-face {
+    font-family: 'Grotesque_Bold';
+    src: url(../fonts/GROTESQUE_BOLD_smooth.woff) format('woff');
+    display: swap;    }    
+
+/* NOT BEING USED ANYMORE, IN FAVOR OF LIGHTER VERSION */
+/*
+@font-face {
+    font-family: 'Sintesi_Sans';
+    src: url(../fonts/SINTESI_SANS_native.woff) format('woff');
+    display: swap;    }
+*/
+
+/* This font is to replace "bold" and "strong"; the .woff was made with Font Squirrel from my existing .ttf file */
+@font-face {    
+    font-family: 'Sintesi_Sans_Demi-Bold';
+    src: url(../fonts/sintesi_sans_demi-bold-webfont.woff) format('woff');
+    display: swap;    }
+    
+
+/* :) This font is to replace "italic" and "em"; the .woff was made with Font Squirrel from my existing .ttf file */
+@font-face {    
+    font-family: 'Sintesi_Sans_Italic';
+    src: url(../fonts/sintesi_sans_italic-webfont.woff) format('woff');
+    display: swap;    }
+
+/* TESTING A LIGHTER WEIGHT BODY COPY */
+@font-face {    
+    font-family: 'Sintesi_Sans_Light';
+    src: url(../fonts/sintesisanslight-webfont.woff) format('woff');
+    display: swap;    }
+
+/* TESTING A LIGHTER WEIGHT ITALIC TO GO WITH THE LIGHTER BODY COPY FONT I'M ALSO TESTING */
+@font-face {    
+    font-family: 'Sintesi_Sans_Light_Italic';
+    src: url(../fonts/sintesisanslight-italic-webfont.woff) format('woff');
+    display: swap;    }
+
+/* A BOLDER WEIGHT FOR THE "BY" [INSERT WRITER'S NAME] */
+/* NOTE: I ONLY EXPORETED THE LETTERS "B" + "Y" WITH FONTSQUIRREL FOR THIS, 
+TO SAVE FROM THE BROWSER NEEDING TO DOWNLOAD ALL OTHER LETTERS SLOWLY!
+IF WANT TO CHANGE TO "written by", "illustrated by", OR "written and illustrated by" ETC IN FUTURE 
+WILL NEED TO RETURN TO FONTSQUIRREL AND OVERRIDE */
+@font-face {    
+    font-family: 'Sintesi_Sans_True_Bold';
+    src: url(../fonts/sintesi-sans-bold-webfont.woff) format('woff');
+    display: swap;    }
+

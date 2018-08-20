@@ -1,0 +1,29 @@
+Vocabword: P
+
+----
+
+Pronunciation: pea
+
+----
+
+Audiopronunciation: 
+
+----
+
+Definition: 
+
+I need to have a spelled **pronunciation** only.
+*Italic text* 
+**Bold text** 
+(link: https://ed.ted.com/lessons/is-math-discovered-or-invented-jeff-dekofsky text: Link text) 
+<em>Em text</em> 
+<strong>Strong text</strong> 
+<a href="https://ed.ted.com/lessons/is-math-discovered-or-invented-jeff-dekofsky">href text</a>
+
+----
+
+Illustration: 
+
+----
+
+Title: P
