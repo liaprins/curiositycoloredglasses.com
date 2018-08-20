@@ -1,5 +1,0 @@
-Caption: To demonstrate one interpretation of the "audio" prompt, I designed a network visualization that revealed the methods by which I’d discovered my favorite podcasts. Possible podcast origins include the radio, browsing my podcast app, and getting a suggestion from a friend. More likely, though, a podcast itself informed me of another podcast—in the form of a featured story or mention by the host—as indicated by the rings that spiral out from some nodes and connect to others.
-
-----
-
-Alt: A hand-drawn network diagram connecting nodes that represent podcasts to each other and to radio, search bar, face illustrations.

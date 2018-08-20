@@ -1,9 +1,0 @@
-Caption: 
-
-----
-
-Alt: A node's color or hue can represent classification, assigned manually; can be programmed by algorithm, according to found groupings of similar entities (“community detection algorithm”); or can sometimes can act as a heat map  (with similar data attributes as node size and value).
-
-----
-
-Sort: 6

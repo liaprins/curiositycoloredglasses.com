@@ -1,9 +1,0 @@
-Caption: 
-
-----
-
-Alt: A natural human tendency is to focus on most recent metric in time-based charts. Design can combat this by calling out the earliest reported measurement, the latest (most recent) reported measurement, the highest reported measurement, and the lowest reported measurement.
-
-----
-
-Sort: 12

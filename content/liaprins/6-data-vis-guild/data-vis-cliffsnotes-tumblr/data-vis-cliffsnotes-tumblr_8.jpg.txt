@@ -1,9 +1,0 @@
-Sort: 8
-
-----
-
-Caption: 
-
-----
-
-Alt: An example post about showing extremes as the darkest colors and middling ranges as the lightest.

@@ -1,5 +1,0 @@
-Caption: When several buttons are on, it can be difficult to distinguish specific species’ patterns. Hovering on a button enlarges its associated dots, making it easy to track.
-
-----
-
-Alt: An animated .GIF of the Worldly Birds app, wherein the ruby-throated hummingbird's and gold-crested flicker's buttons are hovered on, embiggening their sighting's dots on the map. (Embiggening is a real word, yo! So of course I had to use it somewhere.)

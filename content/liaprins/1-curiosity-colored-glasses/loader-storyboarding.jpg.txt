@@ -1,5 +1,0 @@
-Caption: Storyboarding helped me document ideas for a custom loading animation. My initial thought had been to use two typical loading wheels side-by-side, suggesting spectacles. After continuing to iterate, I landed on a more imaginative idea: a pair of glasses’ arms would open, only to be occupied by curious, roving eyes that blinked expectantly.
-
-----
-
-Alt: Two notebook pages filled with eyeglasses sketches in various states of blinking, winking, and roving function as storyboards for my loader animation concept.

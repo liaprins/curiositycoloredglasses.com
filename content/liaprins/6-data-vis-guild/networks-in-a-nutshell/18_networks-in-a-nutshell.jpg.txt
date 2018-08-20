@@ -1,9 +1,0 @@
-Caption: 
-
-----
-
-Alt: Arcs that spiral out from a node in a clockwise manner indicate out-going edges.
-
-----
-
-Sort: 18

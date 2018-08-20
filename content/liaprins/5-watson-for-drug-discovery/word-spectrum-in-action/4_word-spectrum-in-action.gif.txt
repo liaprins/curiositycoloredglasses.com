@@ -1,5 +1,0 @@
-Caption: The user can opt to view or hide entities that Watson found within any document.
-
-----
-
-Alt: One of the documents is selected, opening a new browser tab. Checkboxes for "genes" and "chemicals" are turned on, highlighting them in the document text.

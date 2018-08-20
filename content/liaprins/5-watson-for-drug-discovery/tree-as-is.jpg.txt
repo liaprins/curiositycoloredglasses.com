@@ -1,5 +1,0 @@
-Caption: The original visualization was a branching tree, the primary node of which represents the entity whose found terms and ratios are most similar to those of the known inputs. From there, its children nodes consist of the genes—candidate or known—most similar to the the primary node specifically. Subsequent nodes follow, chosen exclusively for their similarities to the previous layer’s nodes. It seemed like a stretch to claim that this format helped researchers narrow down which genes to study in more depth.
-
-----
-
-Alt: A massive tree diagram contains all input entities, forcing early-placed nodes apart from one another to accommodate their children nodes.

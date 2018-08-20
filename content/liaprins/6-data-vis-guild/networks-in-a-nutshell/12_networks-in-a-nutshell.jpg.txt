@@ -1,9 +1,0 @@
-Caption: 
-
-----
-
-Alt: Edge color can correlate to the color of the node it's coming from or going to, or it can indicate the types/classifications of relationships.
-
-----
-
-Sort: 12

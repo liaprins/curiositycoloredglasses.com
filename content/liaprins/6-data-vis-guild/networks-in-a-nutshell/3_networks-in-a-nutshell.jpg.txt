@@ -1,9 +1,0 @@
-Caption: 
-
-----
-
-Alt: The parts and pieces of network diagrams includes nodes (also called entities), and edges (representing relationships).
-
-----
-
-Sort: 3

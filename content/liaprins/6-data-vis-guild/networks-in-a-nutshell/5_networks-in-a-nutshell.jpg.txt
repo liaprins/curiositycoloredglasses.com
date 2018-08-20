@@ -1,9 +1,0 @@
-Caption: 
-
-----
-
-Alt: The shade, tint or hue, or transparency of nodes can indicate the same values that node size can, like the number of connected edges.
-
-----
-
-Sort: 5

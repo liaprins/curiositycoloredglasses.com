@@ -1,9 +1,0 @@
-Caption: 
-
-----
-
-Alt: Data viz should answer the question:  “Compared to what?” This means designers need to provide these comparisons.
-
-----
-
-Sort: 5

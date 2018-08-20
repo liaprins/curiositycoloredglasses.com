@@ -1,9 +1,0 @@
-Caption: 
-
-----
-
-Alt: outlines/halos can add another layer  to call out specific entities or types.
-
-----
-
-Sort: 8

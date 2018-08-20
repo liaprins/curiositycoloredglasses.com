@@ -1,9 +1,0 @@
-Caption: 
-
-----
-
-Alt: In networks mimicking physical forces, other preferences can be applied, such as minimizing edge crossings to feel less chaotic, or assigning a given margin around nodes to avoid overlap.
-
-----
-
-Sort: 20

@@ -1,5 +1,0 @@
-Caption: A single swipe allows the user to observe a wing lifting and lowering based on changing speed and angle of attack.
-
-----
-
-Alt: alt

@@ -1,9 +1,0 @@
-Caption: 
-
-----
-
-Alt: The cover slide of my "Networks in a Nutshell" presentation is orange!
-
-----
-
-Sort: 1

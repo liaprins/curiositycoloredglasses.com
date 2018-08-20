@@ -1,9 +1,0 @@
-Caption: 
-
-----
-
-Alt: Tapering edges are used to indicate the origins versus the receiving ends.
-
-----
-
-Sort: 16

@@ -1,9 +1,0 @@
-Caption: 
-
-----
-
-Alt: Two still screens side-by-side demonstrate the behavior of an animating wing illustration when swiped: it lifts and then lowers.
-
-----
-
-Sort: 13

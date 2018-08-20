@@ -1,5 +1,0 @@
-Caption: An overview of all uploaded files makes it easy to find and place the right one.
-
-----
-
-Alt: All files can be viewed together in a grid for quicker scanning.

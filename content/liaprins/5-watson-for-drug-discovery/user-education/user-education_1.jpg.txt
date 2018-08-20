@@ -1,5 +1,0 @@
-Caption: I built a short series of conceptual illustrations walking new users through the technological processes that go on behind the screen, drawing upon sketches I had made for my own sake in an earlier effort to understand the data model myself.
-
-----
-
-Alt: A modal greets first-time users of the Predictive Analytics app, explaining that Watson looks through its corpus for input entities.

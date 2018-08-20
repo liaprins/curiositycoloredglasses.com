@@ -1,9 +1,0 @@
-Caption: 
-
-----
-
-Alt: Node size can represent connected edges or it can represent another value nodes  have been assigned, such as monetary value or population.
-
-----
-
-Sort: 4

@@ -1,5 +1,0 @@
-Caption: These pages log my plan of attack against—and eventual vanquishing of—a particularly nasty bug of the Safari-only strain. In an attempt to discern what was causing my content to render invisibly small at just 1 pixel tall, I systematically manipulated my CSS, HTML, and mediaqueries. Once I’d narrowed down the combination of variables causing the issue, it was just a matter of reconfiguring part of my code, thereby restoring my content to its proper height.
-
-----
-
-Alt: I listed out a plan to test what was causing the issue. I sketched out my findings of three overlapping variables as a Venn diagram.

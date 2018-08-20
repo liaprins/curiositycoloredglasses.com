@@ -1,9 +1,0 @@
-Caption: 
-
-----
-
-Alt: An example post about referencing the context to which the data applies.
-
-----
-
-Sort: 6

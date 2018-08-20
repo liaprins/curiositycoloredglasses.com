@@ -1,5 +1,0 @@
-Caption: Labels and lines crowded the white space of an illustration I found within a bound book. But the tablet-specific textbook I looked at offered no improvement: arrows galore attempted to illustrate a sequential biochemical process in a single static image that left me wondering where to look first.
-
-----
-
-Alt: A cell map from a print book is covered in labels and connecting lines. Next to it, a chemical cell process map contains more than 20 arrows and as many labels as it attempts to convey all parts of the process simultaneously.

@@ -1,5 +1,0 @@
-Caption: 
-
-----
-
-Alt: Curiosity-Colored Glasses' responsivity is shown in an animated .GIF of the browser being dragged from the full width of a desktop to the narrower width of a mobile device, while onscreen elements shift accordingly.

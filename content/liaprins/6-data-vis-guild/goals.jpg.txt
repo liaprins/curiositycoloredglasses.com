@@ -1,5 +1,0 @@
-Caption: As a guild we would need to establish <em>consistency</em> in our data vis designs across Watson Health, create <em>intuitive</em> visualizations, and most of all, use the available data to <em>answer our users’ needs</em>.
-
-----
-
-Alt: "Works together" means having consistency across our designs. "Works the same" means our designs are intuitive to use, and that they work the way our users expect them to. "Works for me" means that our designs and the outcomes they produce answer our users' needs.

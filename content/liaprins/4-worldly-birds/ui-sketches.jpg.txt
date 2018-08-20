@@ -1,5 +1,0 @@
-Caption: I start all my projects on paper, sketching to iterate quickly and cheaply, before I get too invested in a single solution. Here I examined how filtered species could be displayed as tags in the upper left, how zooming could be controlled, and a possible method to visualize time passing via a circular clock in the center of the screen.
-
-----
-
-Alt: Two side-by-side sketches with notes, both showing a large circle in the center. In the first, the circle frames a globe, in the second it frames the Florida peninsula.

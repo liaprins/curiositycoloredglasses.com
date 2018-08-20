@@ -1,9 +1,0 @@
-Caption: 
-
-----
-
-Alt: The IBM Design language was in the process of updating to new colors, to help us be consistent with brightness across colors.
-
-----
-
-Sort: 14
