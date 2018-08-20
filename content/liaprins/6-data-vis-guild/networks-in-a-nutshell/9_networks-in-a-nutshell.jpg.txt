@@ -1,9 +1,0 @@
-Caption: 
-
-----
-
-Alt: Sometimes only the nodes or only the edges are needed to communicate the intended message of the data; it can sometimes be too noisy to show both nodes and edges simultaneously.
-
-----
-
-Sort: 9

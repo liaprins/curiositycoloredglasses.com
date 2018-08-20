@@ -1,9 +1,0 @@
-Caption: The typical word spectrum layout made sense to users we tested with. I’d experimented with it a bit further, adding a graded bar next to each word to theoretically help distinguish its total strength, in addition to its height: the more red that showed on a bar, the more that term occurred in the documents with either selected entity than without. However, this detail proved not to be apparent or intuitive to users.
-
-----
-
-Alt: A customary word spectrum albeit with a small bar next to each word featuring a gradient.
-
-----
-
-Sort: 3

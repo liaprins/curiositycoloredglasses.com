@@ -1,9 +1,0 @@
-Caption: Colors helped me identify reusable functions when I drew out this decision-filled Javascript flow. Ultimately, my investment in sketching before going to the keyboard resulted in much more performant code.
-
-----
-
-Alt: A decision tree maps out a Javascript function, making ample use of variously colored highlighters to encode reusable methods.
-
-----
-
-Sort: 1

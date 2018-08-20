@@ -1,5 +1,0 @@
-Caption: This small sampling of the data for albatrosses alone reveals the abundance of included metadata, much of which was irrelevant to my needs. I cleaned the data by deleting all columns except those listing species, date, and location in latitude and longitude.
-
-----
-
-Alt: An expansive spreadsheet showing albatross data organized by dozens of columns containing various metadata.

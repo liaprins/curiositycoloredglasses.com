@@ -1,5 +1,0 @@
-Caption: Merging columns and rows as needed, I used the table functionality of  <a href="https://docs.google.com/document/d/1CDo1fxy3FleJGFHQiQNBwkCSxee1Ls5fE-sKb_PSje4/edit?usp=sharing" target="blank">a Google Doc</a> as a medium with which to diagram the grid-structure that held my design together at each breakpoint.
-
-----
-
-Alt: Diagrams of my grid designs for four major breakpoints.

@@ -1,5 +1,0 @@
-Caption: I built each frame of the flipbook individually before loading them all into InDesign and building the swipe-sensitive interaction.
-
-----
-
-Alt: alt

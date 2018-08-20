@@ -1,5 +1,0 @@
-Caption: Hovering on a button even after it’s been turned off surfaces its species’ data points, enabling quick comparison to other birds on a whim.
-
-----
-
-Alt: The arctic tern's button is turned off, but is being hovered on, resulting in its sighting dots being enlarged but only shown as outline with an empty fill, correlating to the treatment of buttons when they are off.

@@ -1,5 +1,0 @@
-Caption: I wrote one large primary code file that referenced two other tabs holding named variables: one for colors and sizes, and another for species-related content.
-
-----
-
-Alt: Three side-by-side Processing interfaces: the first holds the primary code for my app, and the last two contain the named variables and values for visual treatments and species-related content respectively.

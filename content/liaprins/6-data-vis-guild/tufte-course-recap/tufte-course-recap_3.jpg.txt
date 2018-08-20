@@ -1,9 +1,0 @@
-Caption: 
-
-----
-
-Alt: Despite the data type, it’s easiest for users when it lives together with its label adjacently, rather than relying on a separated legend or key. Galileo used mini illustrations in-line with text to contextually describe his discovery of Saturn, like the first-ever emojis!
-
-----
-
-Sort: 3

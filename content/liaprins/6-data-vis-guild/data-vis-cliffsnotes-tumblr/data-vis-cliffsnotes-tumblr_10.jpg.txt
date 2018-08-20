@@ -1,9 +1,0 @@
-Sort: 10
-
-----
-
-Caption: 
-
-----
-
-Alt: An example post about using color to layer labels onto diagrams.

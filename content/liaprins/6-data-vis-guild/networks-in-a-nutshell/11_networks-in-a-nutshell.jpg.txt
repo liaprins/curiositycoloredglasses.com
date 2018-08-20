@@ -1,9 +1,0 @@
-Caption: 
-
-----
-
-Alt: Usually darker edges are associated as having more weight,  like wider edges are.
-
-----
-
-Sort: 11

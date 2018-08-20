@@ -1,9 +1,0 @@
-Caption: 
-
-----
-
-Alt: alt
-
-----
-
-Sort: 18

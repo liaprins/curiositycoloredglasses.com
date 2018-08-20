@@ -1,9 +1,0 @@
-Caption: My tried and true method for mapping out a site’s HTML structure involves a brief hiatus from the computer. I draw and label boxes representing HTML elements atop printouts of the design, applying color-coding to better keep track of layers.
-
-----
-
-Alt: I drew colored boxes around planned HTML elements on a printout of Curiosity-Colored Glasses' home page design.
-
-----
-
-Sort: 1

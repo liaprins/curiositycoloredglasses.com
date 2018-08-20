@@ -1,5 +1,0 @@
-Caption: Our more customary word spectrum iteration relied on font-size to communicate occurrence and was therefore much more economical in its use of space compared to the bubble option. However, this proved to also be a detriment: terms mashed up against each other making them difficult to discern and scan.
-
-----
-
-Alt: This typical word spectrum includes a candidate term and a known term, respectively represented by red and green, which results in a gradient of terms.

@@ -1,9 +1,0 @@
-Caption: 
-
-----
-
-Alt: In network diagrams, arrows assume causality, so default to non-directional link unless the direction is known.
-
-----
-
-Sort: 8

@@ -1,5 +1,0 @@
-Caption: The bubble-based visualization helpfully provided distinct, easily scannable shapes with which to measure terms relative to each other. However, they also crowded the space, meaning users had to scroll much more to skim the collection of terms as a whole.
-
-----
-
-Alt: A word spectrum features terms surrounded by bubbles, the sizes of which correlates to their strengths.

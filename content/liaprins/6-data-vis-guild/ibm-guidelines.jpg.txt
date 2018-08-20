@@ -1,5 +1,0 @@
-Caption: The <a href="http://ibm-design-language.mybluemix.net/design/language/experience/data-visualization/" target="blank">final guidelines</a> cover principles and process, as well as best practices for animation, interaction, visual style, and other aspects of data design.
-
-----
-
-Alt: The principles section of the IBM Data Vis Design Language focuses on human-centered reflection.

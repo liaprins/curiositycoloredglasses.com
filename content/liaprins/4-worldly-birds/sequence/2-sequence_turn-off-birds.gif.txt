@@ -1,5 +1,0 @@
-Caption: Buttons can be toggled off to minimize the number of species shown at a time, allowing for easier comparisons.
-
-----
-
-Alt: Another animated .GIF of the app, with the sandhill crane's, gold-crested flicker's, and northern pintail's buttons being turned off, leaving only three remaining buttons on (and therefore only three colors of dots on the map for easy tracking).

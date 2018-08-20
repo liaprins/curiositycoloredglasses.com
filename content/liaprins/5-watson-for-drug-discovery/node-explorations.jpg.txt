@@ -1,5 +1,0 @@
-Caption: The user would need to quickly differentiate their known entities apart from their candidate entities, to easily identify similarity patterns between them. They might also want to know at a glimpse which candidates ranked highly in the list, or if a node represented a gene, a drug, or a disease. These attributes of the data could be represented at once through the layering of "visual variables".
-
-----
-
-Alt: Sixteen sketches exploring all sorts of node embodiments.

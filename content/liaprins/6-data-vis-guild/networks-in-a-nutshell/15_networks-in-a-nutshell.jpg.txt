@@ -1,9 +1,0 @@
-Caption: 
-
-----
-
-Alt: If there are many in-coming edges coalescing on one node, the arrow tips can overlap. This makes it hard to distinguish those edges and possible out-going edges from the same node.
-
-----
-
-Sort: 15

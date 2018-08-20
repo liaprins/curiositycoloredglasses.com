@@ -1,5 +1,0 @@
-Caption: Choosing a specific term reveals a comprehensive list of the publications in which both the selected term and at least one of the user’s two chosen entities are mentioned.
-
-----
-
-Alt: "Phosphopeptide" is selected from the word spectrum, opening a page that lists the documents it occurs in alongside at least one of the selected entities.

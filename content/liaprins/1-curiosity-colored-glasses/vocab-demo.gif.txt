@@ -1,5 +1,0 @@
-Caption: The pop-up definitions include space for written and audio pronunciations, as well as an illustration.
-
-----
-
-Alt: An animated .GIF shows how the definition feature of Curiosity-Colored Glasses' posts works: the user simply clicks a terms (stylized to indicate it has a definition attached), and its pronunciation (both written and as as an audioclip), definition, and illustration pop out as a sidebar.

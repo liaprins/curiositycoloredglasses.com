@@ -1,5 +1,0 @@
-Caption: A stylized pair of glasses to represents each post, filled with photos and diagrams alluding to its content. Hovering triggers a zoom effect on the background images, implying the notion of looking closer.
-
-----
-
-Alt: An animated .GIF demonstrates the zoom effect of a blog post's eyeglasses icon when hovered.

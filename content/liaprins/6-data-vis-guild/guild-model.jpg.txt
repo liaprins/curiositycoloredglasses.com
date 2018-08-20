@@ -1,5 +1,0 @@
-Caption: Guilds are amoeba-like, cutting across otherwise hierarchically structured organizations.
-
-----
-
-Alt: A snake-like shape representing a guild overlays teams, nested within departments, nested within organizations.

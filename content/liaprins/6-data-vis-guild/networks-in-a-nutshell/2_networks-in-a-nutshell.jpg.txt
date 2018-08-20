@@ -1,9 +1,0 @@
-Caption: 
-
-----
-
-Alt: A slide about the history of network diagrams.
-
-----
-
-Sort: 2

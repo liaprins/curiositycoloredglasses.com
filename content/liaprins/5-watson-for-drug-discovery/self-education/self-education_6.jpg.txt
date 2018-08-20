@@ -1,5 +1,0 @@
-Caption: Some of these significant terms appear across multiple input genes. Watson looks at the terms and ratios listed with Ms. Carassius’ known genes and compares them to the candidate genes’ terms. The candidate gene <em>SPL45H</em> has more terms in common—and at similar ratios of occurrence—with known genes than any of the other candidates. Watson finds the two input genes that are most similar to <em>SPL45H</em>: <em>SPL15H</em> and <em>5W1M</em>. Then Watson looks amongst the remaining genes for those most similar to <em>SPL15H</em> and <em>5W1M</em> respectively, continuing this pattern until all genes are placed into a tree-like diagram visualizing these relationships.
-
-----
-
-Alt: "SPL45H" is the candidate gene with the most terms in common with the known set as a whole, so it is placed in the tree diagram as the primary node.

@@ -1,5 +1,0 @@
-Caption: Readers can open the cell map from any section of text to see the associated anatomical component highlighted and can interact with the map’s legend to explore other organelles.
-
-----
-
-Alt: A stylized animal cell map highlights its various organelles as the buttons that control them are tapped.

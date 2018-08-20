@@ -1,9 +1,0 @@
-Caption: 
-
-----
-
-Alt: The cover of my recap presentation about Edward Tufte's "Presenting Data and Information" course is purple!
-
-----
-
-Sort: 1
