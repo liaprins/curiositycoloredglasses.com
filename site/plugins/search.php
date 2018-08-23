@@ -40,7 +40,9 @@ function search($collection, $query, $params = array()) {
       // check for full matches
       // if($matches = preg_match_all('!' . preg_quote($query) . '!i', $data[$key], $r)) {
       // trying to fix the "wHIch" issue vvv
-      if($matches = preg_match_all('!\b' . preg_quote($query) . '\b!i', $data[$key], $r)) {
+      // if($matches = preg_match_all('!\b' . preg_quote($query) . '\b!i', $data[$key], $r)) {
+      // trying to fix the issue of searching for a tag with a "#" at the start of the search word
+      if($matches = preg_match_all('!\b' . ltrim(preg_quote($query), '#') . '\b!i', $data[$key], $r)) {
 
         $page->searchHits  += $matches;
         $page->searchScore += $matches * $score;

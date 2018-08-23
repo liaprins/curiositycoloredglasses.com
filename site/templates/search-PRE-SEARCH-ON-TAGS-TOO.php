@@ -65,12 +65,11 @@
                 <div class="resultarea"> 
 
                     <!-- return blog posts according to results.php snippet -->
-                    <!-- no longer needed as long as controller/search.php has 'hello' instead of 'about' -->
-                    <!-- <?php foreach($results->filterBy('template', '!=', 'hello') as $result): ?> -->
+                    <?php foreach($results->filterBy('template', '!=', 'hello') as $result): ?>
 
                         <?php snippet('result', array('result' => $result)) ?>
 
-                    <!-- <?php endforeach ?> -->
+                    <?php endforeach ?>	
 
                 </div>    <!-- closing "resultarea" div -->
 

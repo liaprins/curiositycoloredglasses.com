@@ -10,7 +10,7 @@ Date: 2016-05-07
 
 ----
 
-Tags: chocolates,design,all
+Tags: chocolates,design,all,lollipop
 
 ----
 
@@ -58,3 +58,15 @@ Twitterimageurl:
 ----
 
 Guestwriter: 
+
+----
+
+Guestwriterlink: 
+
+----
+
+Facebookshareimage: chocolates.png
+
+----
+
+Pinterestverticalimage: 
