@@ -280,11 +280,11 @@ figcaption {
     margin-right: 3.571vw;    }    /* right: 1/28 cols */
 
 #namedatecomment {
-    /*
-    line-height: 0.75;
-    margin-top: -0.3rem;
-    */
-    margin-top: -0.6em;
+    
+    line-height: 1;
+    margin-top: -0.3em;
+    
+    /* margin-top: -0.6em; */
     float: left;
     width: 64.286vw;   }    /* 18/28 cols | This should be <main>'s width in cols (22/28) minus avatar (2/28) minus space between this and avatar (2/28) = 18/28 cols */
 
@@ -292,7 +292,9 @@ figcaption {
     white-space: nowrap;    }
 
 #postedcomment {
-    margin-top: calc(10.714vw - 1.7646rem);    }
+    line-height: 1.7;
+    margin-top: calc(10.714vw - 1.45rem);
+    /* margin-top: calc(10.714vw - 1.7646rem); */   }
 
 .postacommentbutton {
     -webkit-transition: background-color .2s ease-out;    /* for hover ease-in on inner-most Post a comment button's BG */
