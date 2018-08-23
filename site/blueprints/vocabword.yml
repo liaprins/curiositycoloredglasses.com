@@ -36,7 +36,9 @@ fields:
   definition:
   	label: Definition
   	type: textarea
-  	required: true
+  	help: Image must be exactly 350px wide
   illustration:
   	label: Illustration
   	type: image
+
+

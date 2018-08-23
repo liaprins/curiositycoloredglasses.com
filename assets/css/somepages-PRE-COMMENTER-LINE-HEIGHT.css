@@ -280,11 +280,7 @@ figcaption {
     margin-right: 3.571vw;    }    /* right: 1/28 cols */
 
 #namedatecomment {
-    /*
-    line-height: 0.75;
-    margin-top: -0.3rem;
-    */
-    margin-top: -0.6em;
+    margin-top: -0.6rem;
     float: left;
     width: 64.286vw;   }    /* 18/28 cols | This should be <main>'s width in cols (22/28) minus avatar (2/28) minus space between this and avatar (2/28) = 18/28 cols */
 
