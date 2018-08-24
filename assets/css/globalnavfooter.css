@@ -146,7 +146,8 @@ footer {
     border-width: 0.125rem;
     border-color: black;    
     padding: 0.125rem 0.469rem 0 0.469rem;
-    height: 1.875rem;
+    /* height: 1.875rem; */
+    height: 1.8rem;
     -webkit-transition: color .2s ease-out;    /* for hover ease-in on Subscribe button's text */
     -moz-transition: color .2s ease-out;
     -o-transition: color .2s ease-out;

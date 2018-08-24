@@ -5,6 +5,11 @@ html {
     font-size: 1em;    }
 
 body {    /* This spans the total screen width, 100% */
+    overflow-x: hidden;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;    /* overflow-x: hidden; width: 100%; and the border-box's are to prevent side-scrolling */
     position: relative;         /* This is for the fixed-to-the-bottom footer */
     min-height: 100%;
     padding-bottom: calc(32.142vw + 10.272rem);    

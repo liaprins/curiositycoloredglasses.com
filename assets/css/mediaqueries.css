@@ -294,14 +294,25 @@
 
     /* Subscribe input field + button on same line  */
     .subscribebutton {
-        border-left: 0;
-        position: relative;
-        top: -1px;
+        /* fixing button alignment with form via optical illusion */
+        border: none;
+        position: absolute;
+        right: 10.714vw;
+        bottom: calc(3.6rem + 7.143vw + 1px);    /* Adding together height of button + space between it and "I'll only ever email..." + height of "I'll only ever email..." + space between it and social icons + height of social icons + distance between them and bottom of screen */
+        border-left-style: solid;
+        border-left-color: black;
+        border-left-width: 0.125rem;
         margin-top: 0;
         width: 5.3125rem;    }
+    .subscribebutton:hover {
+        color: black;
+        background: transparent;    }
     #mce-EMAIL {    /* Making subscribe input field 2/3 */
-        float: left;
-        width: calc(78.571vw - 5.3125rem);    }
+        /* fixing button alignment with form via optical illusion */
+        width: 78.571vw;
+        margin-bottom: 0.9375rem;
+        /* width: calc(78.571vw - 5.3125rem); */
+        float: left;    }
 
     /* FOOTER HEIGHT (set by body's bottom padding) -------------------------------------------------- */
 
@@ -321,6 +332,17 @@
 
 }    /* 442px ++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
+
+
+
+
+
+/* SUBSCRIBE BUTTON ALIGNMENT -------------------------------------------------- */
+@media (min-width: 539px) {
+    .subscribebutton {
+        bottom: calc(3.6rem + 7.143vw + 1.5px);    /* Adding together height of button + space between it and "I'll only ever email..." + height of "I'll only ever email..." + space between it and social icons + height of social icons + distance between them and bottom of screen */
+    }
+}
 
 
 
@@ -473,9 +495,14 @@
     /* SUBSCRIBE -------------------------------------------------- */
 
     /* Subscribe + follow on same line */
-    #mce-EMAIL {    /* Making subscribe input field account for the "follow" links */
+    #mce-EMAIL {    /* Making subscribe input field account for the "follow" links and the subscribe button */
         float: left;
-        width: calc(78.571vw - 14.0545rem);    }    
+        margin-right: calc(14.0545rem + 5.3125rem);
+        width: calc(78.571vw - 14.0545rem + 5.3125rem);    }    
+    .subscribebutton {
+        /* fixing button alignment with form via optical illusion */
+        bottom: calc(7.143vw + 0.844rem + 2.5px);
+        right: calc(12.4rem);    }
     #follow {
         position: absolute;
         top: 7.143vw;
@@ -582,7 +609,12 @@
     /* SUBSCRIBE -------------------------------------------------- */
 
     #mce-EMAIL {    /* Making subscribe input field account for the "follow" links */
-        width: calc(641.929px - 14.0545rem);    }    
+        /* width: calc(641.929px - 14.0545rem); */
+        width: calc(641.929px - 14.0545rem + 5.3125rem)    }   
+    .subscribebutton {
+        /* fixing button alignment with form via optical illusion */
+        left: calc(50vw - 320.96px + 14.0545rem - 0.9rem);
+        bottom: calc(58.357px + 0.844rem + 0.125rem);    } 
     #follow {
         top: 58.357px;
         left: calc(50% + 320.964px - 8.32rem);    }
@@ -714,6 +746,19 @@
         margin-right: auto;    }
 
 }    /* 817px ++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+
+
+
+
+/* SUBSCRIBE BUTTON ALIGNMENT -------------------------------------------------- */
+@media (min-width: 973px) {
+    .subscribebutton {
+        left: calc(50vw - 320.96px + 14.0545rem - 0.9rem);
+        bottom: calc(58.357px + 0.844rem + 0.1rem);    /* Adding together height of button + space between it and "I'll only ever email..." + height of "I'll only ever email..." + space between it and social icons + height of social icons + distance between them and bottom of screen */
+    }
+}
+
 
 
 
@@ -966,14 +1011,17 @@
     /* SUBSCRIBE -------------------------------------------------- */
 
     #mce-EMAIL {    /* Making subscribe input field account for the "follow" links */
-        width: calc(641.667px - 14.0545rem);    }
+        /* width: calc(641.667px - 14.0545rem); */
+        width: calc(641.667px - 14.0545rem + 5.3125rem)    }
     #follow {
         top: 58.333px;
         left: calc(50% + 320.833px - 8.32rem);    }
     #footercontent {
         width: 641.667px;    }    /* 22/28 cols px equivalent at 817px screenwidth */
     .subscribebutton {
-        top: 0;    }
+        /* fixing button alignment with form via optical illusion */
+        left: calc(50vw - 320.96px + 14.0545rem - 50px);
+        bottom: calc(58.357px + 0.844rem + 0.1rem);    }
 
     /* FOOTER HEIGHT (set by body's bottom padding) -------------------------------------------------- */
 
