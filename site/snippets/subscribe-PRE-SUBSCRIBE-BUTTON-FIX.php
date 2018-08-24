@@ -3,15 +3,11 @@
 <form action="//curiositycoloredglasses.us14.list-manage.com/subscribe/post?u=05f8f85154975a52907f2ce4d&amp;id=086ebe8644" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 
 
-
-	 <!-- "Subscribe" button -->
-	 <!-- moving to be before the email input form so that I can use the adjacent element rule in the CSS to get the email form to chagne states when button is hovered on -->
-    <!-- <input type="submit" value="Subscribe" name="subscribe" class="xs-display boxbutton subscribebutton" id="mc-embedded-subscribe"> -->
-
-
 	<!-- For some reason, this needs to stay for the validation and ability to submit email -->
 	<span class="mc-field-group">
+	
 		<input type="email" value="" name="EMAIL" class="boxinput s-textface" id="mce-EMAIL" placeholder="Email address">
+
 	</span>
 
 	
