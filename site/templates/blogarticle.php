@@ -18,10 +18,6 @@
     it cannot load by definition, and the animation never stops! -->
     <div id="loadbg"></div>
 
-
-    <!-- CONFLICT!!! Does this 'facebook-sdk' snippet go here, "directly after the opening <body> tag on each page you want to load it"
-    OR "right before closing </body> tag" (in the footer.php snippet)? Currently it is in both places.-->
-
     <!-- backarrow script -->
     <script src="../assets/js/backarrow-post.js">
     </script>
