@@ -14,7 +14,7 @@ Date: 2017-04-09
 
 ----
 
-Tags: paper,technology,office supplies,all
+Tags: paper,technology,all,officesupplies
 
 ----
 
@@ -104,3 +104,11 @@ Guestwriterlink:
 ----
 
 Facebookshareimge: paper-crane.jpg
+
+----
+
+Facebookshareimage: carbonless-original.png
+
+----
+
+Pinterestverticalimage: 

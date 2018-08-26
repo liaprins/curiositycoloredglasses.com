@@ -14,7 +14,7 @@ Date: 2017-04-08
 
 ----
 
-Tags: trees,biology,all,tree_rings,science,botany,plants,forestry,wood
+Tags: trees,biology,all,science,botany,plants,forestry,wood,treerings
 
 ----
 
@@ -98,3 +98,11 @@ Guestwriter: Sheriff of Chopping&shy;ham (looks like a wolf)
 ----
 
 Guestwriterlink: https://www.furaffinity.net/view/22528918/
+
+----
+
+Facebookshareimage: annotated-tree-rings-1-b.jpg
+
+----
+
+Pinterestverticalimage: 
