@@ -127,7 +127,7 @@
                 <article class="mockmain" id="postdesktopcontent2">    <!-- Opening second instance of <article> to make room for RR results that need to be wider than this width, to accommodate their all having margins on L + R -->
 
                     <!-- Comments via Disqus; trying out custom comments from Kirby instead for now, though -->
-                    <?php snippet('disqus') ?>
+                    <?php snippet('d i s q u s') ?>
 
 
                     <!-- Comments via Kirby plugin -->
