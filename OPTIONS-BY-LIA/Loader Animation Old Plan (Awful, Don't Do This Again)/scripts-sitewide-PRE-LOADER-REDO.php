@@ -9,7 +9,5 @@
 
 <!-- loading animation script -->
 <!-- may need to move to right before footer is called (this one withOUT ".../" for all pages except tag and blogarticle) -->
-<!--
 <script src="assets/js/loader.js">
 </script>
--->
