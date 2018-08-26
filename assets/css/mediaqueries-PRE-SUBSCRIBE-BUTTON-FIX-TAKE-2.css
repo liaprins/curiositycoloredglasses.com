@@ -371,25 +371,6 @@
 
 
 
-/* SUBSCRIBE BUTTON FOR HORIZONTAL MOBILE ONLY -------------------------------------------------- */
-/* 
-@media (min-width: 667px) {
-     .subscribebutton {
-        bottom: calc(2.3em + 3.057rem + 7.143vw + 1.5px);
-    }
-}
-*/
-
-/* PUTTING SUBSCRIBE BUTTON BACK TO NORMAL -------------------------------------------------- */
-@media (min-width: 668px) {
-     .subscribebutton {
-        bottom: calc(3.6rem + 7.143vw + 1.5px);
-    }
-}
-
-
-
-
 /* POSTGLASSES -------------------------------------------------- */
 
 /* @media only screen and (min-width: 613px) { */

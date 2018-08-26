@@ -44,7 +44,7 @@
    
 
 <p class="xs-textface" id="subscribemessage">
-	Find out about new posts!
+	I’ll only ever email to let you know about new posts!
 	<a href="http://us14.campaign-archive2.com/home/?u=05f8f85154975a52907f2ce4d&id=086ebe8644" title="View previous campaigns" target="_blank">
 		See an example email first.
 	</a>
