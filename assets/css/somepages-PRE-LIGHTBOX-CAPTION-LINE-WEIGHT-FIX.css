@@ -453,8 +453,7 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
     margin-top: -1.024rem;
     border-style: solid;
     border-color: black;
-    border-width: 0.14rem;
-    background-color: black;
+    /* border-width: 2px; */
     margin-bottom: 1.024rem;    }
 
 .gallerycaption {
