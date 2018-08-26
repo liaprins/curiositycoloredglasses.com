@@ -572,7 +572,6 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
 /* ARCHIVE PAGE -------------------------------------------------- */
 
 #archivemenu {
-    margin-bottom: 1.536rem;
     margin-top: 1.024rem;    }    /* top: .5 lh, bottom: .75 lh */
 
 #archivemenuyear {    /* Applies to the years in the menu; this is only needed if I want to override any properties set by .sectionsummary, which applies to the year headings and section headings on other pages, and is also applied to the element that this is an ide for to get it to be the same size as them */  
@@ -583,7 +582,7 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
     margin: 0 auto;    }  
 
 .archivesectionsummary {
-    margin: 0 auto;
+    margin: 1.536rem auto 0 auto;
     display: block;    }  
 
 .archivesectiontoggleoff {
