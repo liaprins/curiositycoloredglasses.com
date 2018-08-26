@@ -81,3 +81,11 @@ Guestwriter: Franklin Narum
 ----
 
 Guestwriterlink: https://vimeo.com/250113878
+
+----
+
+Facebookshareimage: moon.png
+
+----
+
+Pinterestverticalimage: 
