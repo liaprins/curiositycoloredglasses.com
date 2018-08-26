@@ -16,7 +16,7 @@
 	<!-- holds the loading animation; all pages get it except default.php template, 
 	because it holds the 404 page, and when a non-existant page is requested (and 404 page shows), 
 	it cannot load by definition, and the animation never stops! -->
-	<div id="loadbg" style="width:100%; height:100%; position:fixed; z-index:9999; background:url("../images/loader.gif") no-repeat center center rgba(226,228,58,0.75)    }"></div>
+	<div id="loadbg"></div>
 
 
 
