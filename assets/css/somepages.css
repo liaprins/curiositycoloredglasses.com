@@ -263,6 +263,7 @@ figcaption {
 /* COMMENTS (POST PAGE) -------------------------------------------------- */
 
 .commentssummary {    /* Making it so the margin below comment section header only applies when it's open */
+    margin-top: 0;
     margin-bottom: 0px;    }
 .commentsdetails[open] .commentssummary {
     margin-bottom: 1.536rem;    }    /* .75 lh */
