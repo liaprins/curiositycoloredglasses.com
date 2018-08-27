@@ -453,7 +453,8 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
     margin-top: -1.024rem;
     border-style: solid;
     border-color: black;
-    /* border-width: 2px; */
+    border-width: 0.14rem;
+    background-color: black;
     margin-bottom: 1.024rem;    }
 
 .gallerycaption {
@@ -490,8 +491,10 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
 #lightboxclose {
     z-index: 103;
     position: absolute;
-    top: calc(5.357vw - 0.844rem);
-    left: calc(100vw - 5.357vw - 0.844rem);    }    /* all the way to the R, but then back the width of itself + padding + margin */
+    top: calc(0.844rem - 0.422rem);
+    left: calc(100vw - 0.844rem - 1.266rem);
+    /* top: calc(5.357vw - 0.844rem); */
+    /* left: calc(100vw - 5.357vw - 0.844rem); */    }    /* all the way to the R, but then back the width of itself + padding + margin */
 
 .lightboxcaption {
     cursor: auto;
@@ -501,8 +504,9 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
     z-index: 102;
     background-color: rgba(255, 255, 255, 0.95);
     margin: 0;
-    padding: 10.714vw;
-    padding-top: calc(10.714vw + 1.024rem);
+    padding: 2.11rem;
+    /* padding-top: calc(10.714vw + 1.024rem); */
+    padding-top: 3.13rem;
     border-style: none;
     width: 100vw;    }    /* 28/28 cols */
 
@@ -521,8 +525,10 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
 #captiontoggle {
     z-index: 103;
     position: absolute;
-    top: calc(5.357vw - 0.844rem);
-    left: calc(100vw - 5.357vw - 0.844rem - 5.357vw - 0.844rem);    }
+    /*  top: calc(5.357vw - 0.844rem);
+    left: calc(100vw - 5.357vw - 0.844rem - 5.357vw - 0.844rem); */
+    top: 0.422rem;
+    left: calc(100vw - 1.266rem - 0.844rem - 1.266rem - 0.422rem);    }
 
 .hide {
     display: none;    }

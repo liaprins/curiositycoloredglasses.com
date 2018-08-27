@@ -73,14 +73,6 @@ fields:
     label: Blog post
     type: textarea
     placeholder: Main body of the post
-  thankyou:
-    label: Thank you
-    type: textarea
-    placeholder: Cite my sources and attributions
-  process:
-    label: The method to my madness
-    type: textarea
-    placeholder: My process
   relevantreading1:
     width: 1/3
     label: Relevant reading

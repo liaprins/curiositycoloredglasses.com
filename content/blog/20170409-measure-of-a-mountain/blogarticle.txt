@@ -225,3 +225,11 @@ Facebookshareimage: mountain-measurement-original.png
 ----
 
 Pinterestverticalimage: tall-pin-size.png
+
+----
+
+Thankyou: Thanks, Mom!
+
+----
+
+Process: Am I crazy,  or is it you?

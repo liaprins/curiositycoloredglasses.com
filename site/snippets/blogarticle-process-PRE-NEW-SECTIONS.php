@@ -6,9 +6,7 @@
     		</h3>
    		</summary>
 
-   		<span class="s-textface">
-	    	<?php echo kirbytext($page->process()) ?>
-	    </span>
+	    <?php echo kirbytext($page->process()) ?>
 
 	</details>
 
