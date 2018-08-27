@@ -6,12 +6,12 @@ Author: Lia Prins
 
 ----
 
-Description: REPLACE WITH DESCRIPTION OF OVERALL BLOG/SITE
+Description: Looking at life's little mysteries through the same lens that killed the cat, and living to tell the tale.
 
 ----
 
-Keywords: REPLACE WITH KEYWORDS FOR OVERALL BLOG/SITE
+Keywords: learning,curiosity,critical thinking,questions,education,investigation,facts,science,nature,illustration
 
 ----
 
-Copyright: © 2009-(date: Year)
+Copyright: ©2016-present

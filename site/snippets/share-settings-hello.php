@@ -13,13 +13,15 @@
 <!-- Or could pull each page's bit of text (more for About) to be specific to page, with "<?php echo ($page->text()); ?>" -->
 <!-- Should test that this is directing properly -->
 <!-- If want more characters (limit is 155; search engine won't parse or display more), could build a field into panel to hold description -->
-<meta name="description"        	   content="<?php echo $site->find('blog')->text()->html() ?>" />
+<!-- <meta name="description"        	   content="<?php echo $site->find('blog')->text()->html() ?>" /> -->
+<meta name="description" 				content="<?php echo $site->description()->html() ?>">
+
 
 <!-- The kirby starter kit directs the keywords to come from here (content/site.txt) -->
-<!-- <meta name="keywords" 				   content="<?php echo $site->keywords()->html() ?>"> -->
+<meta name="keywords" 				   content="<?php echo $site->keywords()->html() ?>">
 
 <!-- comma,separated,without,commas -->
-<meta name="keywords" 				   content="learning,curiosity,critical thinking,questions,education,investigation,facts,science,nature,illustration" />
+<!-- <meta name="keywords" 				   content="learning,curiosity,critical thinking,questions,education,investigation,facts,science,nature,illustration" /> -->
 
 <!-- ********************************************* -->
 
