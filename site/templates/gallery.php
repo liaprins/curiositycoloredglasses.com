@@ -32,7 +32,7 @@
 
             <!-- text for the page -->
             <span class="l-textface">
-                ??? <?php echo $page->text()->kirbytext() ?>
+                <?php echo $page->text()->kirbytext() ?>
             </span>
     
 

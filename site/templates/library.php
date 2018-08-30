@@ -60,7 +60,7 @@
 
         <!-- images + info stored in library folder directly (not library/libraryimages) -->
         <!-- info here is from metadata, info on blog article pages is from blogarticle.txt fields + custom CSS -->
-        <?php foreach ($page->images()->sortBy('modified', 'desc') as $libraryresult): ?>
+        <?php foreach ($page->images()->sortBy('sort', 'asc') as $libraryresult): ?>
         
         <?php $librarysubpage = $libraryresult->name(); ?>  
 

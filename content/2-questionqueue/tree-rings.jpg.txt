@@ -1,0 +1,13 @@
+Sort: 11
+
+----
+
+Question: Does the hyper-controlled atmosphere of a greenhouse prevent its trees from forming tree rings?
+
+----
+
+Explanation: Also applies to indoor trees.
+
+----
+
+Category: large

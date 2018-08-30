@@ -3,11 +3,11 @@ title: Library
 //page settings
 deletable: false
 options: 
-	preview: true
-	status: false
-	template: false
-	url: true
-	delete: false
+  preview: true
+  status: false
+  template: false
+  url: true
+  delete: false
 
 //subpage settings
 pages: 
@@ -21,7 +21,8 @@ pages:
 
 //file settings 
 files: 
-  type: image
+  type: 
+    - image
   fields:
     heading:
       label: Entry name

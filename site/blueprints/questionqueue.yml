@@ -1,0 +1,49 @@
+title: Question Queue
+
+//page settings
+deletable: true
+options: 
+	preview: true
+	status: false
+	template: false
+	url: false
+	delete: false
+
+//subpage settings
+pages: false
+
+//file settings
+files:
+  type: 
+    - image
+  fields:
+    question:
+      label: Question
+      type: text
+      required: true
+    explanation:
+      label: Explanation
+      type: textarea
+      required: true
+      placeholder: Brief description of the image (for accessibility via screenreaders or in case the image fails to load)
+    category:
+      label: Category
+      type: radio
+      default: false
+      required: true
+      options:
+        large: Large
+        medium: Medium
+        small: Small
+      columns: 3
+
+//fields with their field types and options
+fields:
+  title:
+    label: Page name
+    type: text
+    placeholder: Title for the 'question queue' page
+  text:
+    label: Page description
+    type: textarea
+    placeholder: Optional explanation or instructions to readers about this page
