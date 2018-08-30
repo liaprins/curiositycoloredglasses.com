@@ -1,0 +1,17 @@
+Sort: 1
+
+----
+
+Sortable: Yoyoyoyo
+
+----
+
+Question: How were the original SOHCAHTOA discovered?
+
+----
+
+Explanation: SOHCAHTOA in the pre-TI-83 landscape
+
+----
+
+Category: small

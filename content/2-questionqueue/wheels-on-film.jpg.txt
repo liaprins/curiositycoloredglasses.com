@@ -1,0 +1,13 @@
+Sort: 3
+
+----
+
+Question: Why do wheels look like they're spinning backwards on film?
+
+----
+
+Explanation: Is framespeed part of it?
+
+----
+
+Category: small

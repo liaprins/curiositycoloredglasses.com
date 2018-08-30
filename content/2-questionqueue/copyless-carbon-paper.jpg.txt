@@ -1,0 +1,13 @@
+Sort: 6
+
+----
+
+Question: How does carbonless copy paper work?
+
+----
+
+Explanation: Gotchas.
+
+----
+
+Category: medium

@@ -770,6 +770,128 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
 
 
 
+/* QQ PAGE -------------------------------------------------- */
+
+.qqparent:nth-child(3n+0) {
+}
+
+.qqpiece {
+    /* position: absolute; */
+    position: relative;
+    display: inline-block;
+}
+
+.qqglassescontainer {
+    position: relative;
+}
+
+.circle,
+.stem {
+    border-color: black;
+    border-style: solid;
+    display: inline-block;
+    position: relative;
+}
+
+.largeqqglasses {
+    width: 241px;
+    height: 96.4px;
+}
+
+.mediumqqglasses {
+    width: calc(241px * 0.75);
+    height: calc(96.4px * 0.75);
+}
+
+.smallqqglasses {
+    width: calc(241px * 0.5);
+    height: calc(96.4px * 0.5);
+}
+
+.largeqqglasses .circle,
+.largeqqglasses .stem { 
+    border-width: calc(241px * 0.04 * 0.833);    /* PLAN: Use CSS variable to hold width or height of glasses in combo with calc() to easily change all border-widths at each breakpoint-size-change */
+}
+
+.mediumqqglasses .circle,
+.mediumqqglasses .stem {
+    border-width: calc(241px * 0.75 * 0.04 * 0.833);
+}
+
+.smallqqglasses .circle,
+.smallqqglasses .stem {
+    border-width: calc(241px * 0.5 * 0.04 * 0.833);
+}
+
+.circle {
+    height: 100%;
+    width: 40%;
+    border-radius: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* background-size: 100%; */    /* Had to make it just under 100% to prevent slightest amount of edges from peeking out from behind mask */
+    background-size: 250%;    /* ONLY IF ZOOMING FROM CTR OF GLASSES AS A WHOLE RATHER THAN INTO THE CTR OF EACH LENS */
+    -webkit-transition: background-size 0.5s;    /* for Safari */
+    transition: background-size 0.5s;    
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;    }
+.qqglassescontainer:hover > .circle {
+    /* background-size: 175%; */
+    background-size: calc(175% * 2.5);    /* ONLY IF ZOOMING FROM CTR OF GLASSES AS A WHOLE RATHER THAN INTO THE CTR OF EACH LENS */
+    }
+
+.stem {
+    display: inline-block;
+    border-style: solid none none none;
+    position: relative;
+    top: -50%;
+}
+
+.leftstem {
+    width: 6%;
+}
+
+.leftcircle {
+    background-position-x: 92.5%;    /* ONLY IF ZOOMING FROM CTR OF GLASSES AS A WHOLE RATHER THAN INTO THE CTR OF EACH LENS */
+    right: 1%;
+}
+
+.centerstem {
+    width: 12%;
+    right: 2%;
+}
+
+.rightcircle {
+    /* background-position-x: 7.5%; */    /* ONLY IF ZOOMING FROM CTR OF GLASSES AS A WHOLE RATHER THAN INTO THE CTR OF EACH LENS */
+    background-position-x: 7%;    /* ONLY IF ZOOMING FROM CTR OF GLASSES AS A WHOLE RATHER THAN INTO THE CTR OF EACH LENS */
+    right: 3%;
+}
+
+.rightstem {
+    width: 6%;
+    position: absolute;
+    top: 42%;
+    left: 94%;
+}
+
+.qqcontents {
+    display: none;
+}
+
+.qqselected {
+    background-color: red;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 

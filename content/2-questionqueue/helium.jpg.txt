@@ -1,0 +1,13 @@
+Sort: 4
+
+----
+
+Question: How is helium harvested?
+
+----
+
+Explanation: Is it snatched from space?
+
+----
+
+Category: large

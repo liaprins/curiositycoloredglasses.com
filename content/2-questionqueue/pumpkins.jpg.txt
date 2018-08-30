@@ -1,0 +1,13 @@
+Sort: 9
+
+----
+
+Question: How do pumpkins get the air inside them?
+
+----
+
+Explanation: Or is that hollow just a vacuum?
+
+----
+
+Category: medium
