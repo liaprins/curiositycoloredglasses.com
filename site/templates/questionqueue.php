@@ -65,6 +65,7 @@
 					</div>
 
 					<div class="qqcontents" style="display: none;">
+						<img src= "<?php echo url('assets/images/x.svg') ?>" alt="close" id="qq-x" class="yellowhover close-x">
 						<div class="qqquestion"><?php echo $qqfile->question() ?></div>
 						<div class="qqdescription"><?php echo $qqfile->explanation() ?></div>
 					</div>

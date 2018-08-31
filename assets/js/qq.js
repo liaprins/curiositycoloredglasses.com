@@ -27,7 +27,6 @@ function qqLink() {
 window.addEventListener('DOMContentLoaded', qqLink, false);
 
 
-
 // Gets rid of the "#" that would otherwise remain at end of URL after closing an entry by re-clicking the icon
 function removeHash() { 
     history.pushState("", document.title, window.location.pathname + window.location.search);
@@ -61,8 +60,6 @@ function qqIconClick(e) {
             location.hash = qqURLHash; 
         } else {
             selectedLens.parentNode.nextElementSibling.style.display = 'none';
-            var qqSelectedClasses = selectedLens.parentNode.getAttribute('class');
-            // selectedLens.parentNode.setAttribute('class', qqSelectedClasses);
             selectedLens.parentNode.classList.remove('qqselected');
             removeHash();
         } // close inner if
@@ -74,26 +71,23 @@ function qqIconClick(e) {
 document.addEventListener('click', qqIconClick, false);
 
 
-// NEXT: SOLVE THE X vvv
-// AND MAYBE CLOSE VIA WHITE SPACE TOO?
-/*
 // Closes the entry via the "X" button
-var libraryCloseX = document.getElementById('library-x');
+var qqCloseX = document.getElementById('qq-x');
 
-function testFunction(e) {
+function qqXOut(e) {
 
     var clickedThing = e.target;
 
-    if (clickedThing.getAttribute('id') == 'library-x') {
-
+    if (clickedThing.getAttribute('id') == 'qq-x') {
         clickedThing.parentNode.style.display = 'none';
-        clickedThing.parentNode.previousElementSibling.setAttribute('class', 'libraryicon');
+        var selectedLens = clickedThing.parentNode.previousElementSibling;
+        var qqSelectedClasses = selectedLens.classList.remove('qqselected');
         removeHash();
     }
 }
 
-window.addEventListener('click', testFunction, false);
-*/
+window.addEventListener('click', qqXOut, false);
+
 
 
 
