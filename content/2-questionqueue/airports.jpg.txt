@@ -1,0 +1,13 @@
+Question: How are airports funded?
+
+----
+
+Explanation: TBD
+
+----
+
+Category: small
+
+----
+
+Sort: 10

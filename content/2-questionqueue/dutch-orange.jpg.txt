@@ -1,8 +1,8 @@
-Sort: 5
+Sort: 4
 
 ----
 
-Question: Why is orange the color of the Netherlands?
+Question: Why is the color orange associated to the Netherlands even though it's not in their flag?
 
 ----
 
@@ -10,4 +10,4 @@ Explanation: Despite it not being in their flag?
 
 ----
 
-Category: small
+Category: large

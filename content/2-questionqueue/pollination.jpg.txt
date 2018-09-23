@@ -1,0 +1,13 @@
+Question: Why haven’t flowers evolved to self-pollinate exclusively?
+
+----
+
+Explanation: TBD
+
+----
+
+Category: medium
+
+----
+
+Sort: 21

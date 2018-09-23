@@ -1,0 +1,13 @@
+Question: How do cameras “know” how far away something is in order to focus on it?
+
+----
+
+Explanation: TBD
+
+----
+
+Category: medium
+
+----
+
+Sort: 18

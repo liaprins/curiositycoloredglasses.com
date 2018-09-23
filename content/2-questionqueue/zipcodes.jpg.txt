@@ -1,0 +1,13 @@
+Question: How are zipcodes assigned?
+
+----
+
+Explanation: TBD
+
+----
+
+Category: medium
+
+----
+
+Sort: 28

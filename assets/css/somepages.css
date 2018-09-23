@@ -772,114 +772,173 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
 
 /* QQ PAGE -------------------------------------------------- */
 
-.qqparent:nth-child(3n+0) {
-}
-
-.qqpiece {
-    /* position: absolute; */
-    position: relative;
-    display: inline-block;
-}
-
 .qqglassescontainer {
-    position: relative;
-}
-
-.circle,
-.stem {
-    border-color: black;
-    border-style: solid;
-    display: inline-block;
-    position: relative;
-}
-
-.largeqqglasses {
-    width: 241px;
-    height: 96.4px;
-}
-
-.mediumqqglasses {
-    width: calc(241px * 0.75);
-    height: calc(96.4px * 0.75);
-}
-
-.smallqqglasses {
-    width: calc(241px * 0.5);
-    height: calc(96.4px * 0.5);
-}
-
-.largeqqglasses .circle,
-.largeqqglasses .stem { 
-    border-width: calc(241px * 0.04 * 0.833);    /* PLAN: Use CSS variable to hold width or height of glasses in combo with calc() to easily change all border-widths at each breakpoint-size-change */
-}
-
-.mediumqqglasses .circle,
-.mediumqqglasses .stem {
-    border-width: calc(241px * 0.75 * 0.04 * 0.833);
-}
-
-.smallqqglasses .circle,
-.smallqqglasses .stem {
-    border-width: calc(241px * 0.5 * 0.04 * 0.833);
-}
-
-.circle {
-    height: 100%;
-    width: 40%;
-    border-radius: 50%;
+    position: absolute;    /* MAY BE NEEDED TO MAKE PARALLAX FUNCTIONAL... */
+    display: block;    /* MAY BE NEEDED TO MAKE PARALLAX FUNCTIONAL... */
+    /* margin: 1.024rem auto 1.536rem auto; */    /* JUST COMMENTING OUT WHILE I TEST CSS VERSION OF BINOCS */
     background-position: center;
     background-repeat: no-repeat;
-    /* background-size: 100%; */    /* Had to make it just under 100% to prevent slightest amount of edges from peeking out from behind mask */
-    background-size: 250%;    /* ONLY IF ZOOMING FROM CTR OF GLASSES AS A WHOLE RATHER THAN INTO THE CTR OF EACH LENS */
+    background-size: 99%;    /* Had to make it just under 100% to prevent slightest amount of edges from peeking out from behind mask */
     -webkit-transition: background-size 0.5s;    /* for Safari */
     transition: background-size 0.5s;    
     -webkit-transition-timing-function: ease-out;
     transition-timing-function: ease-out;    }
-.qqglassescontainer:hover > .circle {
-    /* background-size: 175%; */
-    background-size: calc(175% * 2.5);    /* ONLY IF ZOOMING FROM CTR OF GLASSES AS A WHOLE RATHER THAN INTO THE CTR OF EACH LENS */
-    }
+.qqglassescontainer:hover {
+    background-size: 175%;    }  
 
-.stem {
-    display: inline-block;
-    border-style: solid none none none;
-    position: relative;
-    top: -50%;
+.largeqqglasses {
+    /* width: 241px; */
+    width: 210.773px;
+    height: 96.4px;
+    opacity: 0.3;
 }
 
-.leftstem {
-    width: 6%;
+.mediumqqglasses {
+    width: calc(210.773px * 0.75);
+    height: calc(96.4px * 0.75);
 }
 
-.leftcircle {
-    background-position-x: 92.5%;    /* ONLY IF ZOOMING FROM CTR OF GLASSES AS A WHOLE RATHER THAN INTO THE CTR OF EACH LENS */
-    right: 1%;
-}
-
-.centerstem {
-    width: 12%;
-    right: 2%;
-}
-
-.rightcircle {
-    /* background-position-x: 7.5%; */    /* ONLY IF ZOOMING FROM CTR OF GLASSES AS A WHOLE RATHER THAN INTO THE CTR OF EACH LENS */
-    background-position-x: 7%;    /* ONLY IF ZOOMING FROM CTR OF GLASSES AS A WHOLE RATHER THAN INTO THE CTR OF EACH LENS */
-    right: 3%;
-}
-
-.rightstem {
-    width: 6%;
-    position: absolute;
-    top: 42%;
-    left: 94%;
-}
-
-.qqcontents {
-    display: none;
+.smallqqglasses {
+    width: calc(210.773px * 0.5);
+    height: calc(96.4px * 0.5);
 }
 
 .qqselected {
     background-color: red;
+}
+
+.qqpiece {
+    position: absolute;
+}
+
+
+:root {
+    --container-width-big: 209px; 
+    --container-height-big: 96.4px; 
+}
+
+
+.testcontainer-large,
+.testcontainer-medium,
+.testcontainer-small {
+    position: absolute;
+}
+
+.testcontainer-large {
+    /* width: 209px; */
+    width: var(--container-width-big);
+    height: var(--container-height-big);
+    top: 250px;
+    left: 700px;
+}
+
+.testcontainer-medium {
+    width: calc(var(--container-width-big) * 0.75);
+    height: calc(var(--container-height-big) * 0.75);
+    top: 250px;
+    left: 150px;
+}
+
+.testcontainer-small {
+    width: calc(var(--container-width-big) * 0.5);
+    height: calc(var(--container-height-big) * 0.5);
+    top: 100px;
+    left: 400px;
+}
+
+.lens {
+    box-sizing: border-box;
+    display: inline-block;
+    position: absolute;
+    border-color: black;
+    border-style: solid;
+    height: 100%;
+    width: 46.124%;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;    /* ONLY IF ZOOMING FROM CTR OF GLASSES AS A WHOLE RATHER THAN INTO THE CTR OF EACH LENS */
+    -webkit-transition: background-size 0.5s;    /* for Safari */
+    transition: background-size 0.5s;    
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;    }
+.testcontainer:hover > .lens {
+    background-size: 175%;
+    background-position: 43% 50%;
+}
+
+.testcontainer > .l-lens {
+    background-image: url(../images/test-1.jpg);
+}
+
+.testcontainer > .r-lens {
+    background-image: url(../images/test-2.jpg);
+}
+
+.testcontainer-large > .lens {
+    border-width: calc(var(--container-width-big) * 0.045 * 0.833);    /* PLAN: Use CSS variable to hold width or height of glasses in combo with calc() to easily change all border-widths at each breakpoint-size-change */
+}
+
+.testcontainer-medium > .lens {
+    border-width: calc(var(--container-width-big) * 0.045 * 0.833 * 0.75);    /* PLAN: Use CSS variable to hold width or height of glasses in combo with calc() to easily change all border-widths at each breakpoint-size-change */
+}
+
+.testcontainer-small > .lens {
+    border-width: calc(var(--container-width-big) * 0.045 * 0.833 * 0.5);    /* PLAN: Use CSS variable to hold width or height of glasses in combo with calc() to easily change all border-widths at each breakpoint-size-change */
+}
+
+.testcontainer-small > .l-lens {
+}
+
+.knob {
+    box-sizing: border-box;
+    display: inline-block;
+    position: absolute;
+    left: 42.3%;
+    background-color: black;
+    height: 33.9%;
+    width: 15.636%;
+    border-radius: 50%;
+}
+
+.trapezoid-large,
+.trapezoid-medium,
+.trapezoid-small {
+    height: 0;
+    position: absolute;
+    display: inline-block;
+}
+
+.trapezoid-large {
+    left: 35.55%;
+    top: 8.71%;
+    border-top: calc(var(--container-width-big) * 0.145) solid black;    /* TRAPEZOID NEEDS PIXELS! */
+    border-left: calc(var(--container-width-big) * 0.072) solid transparent;
+    border-right: calc(var(--container-width-big) * 0.072) solid transparent;
+    width: 14.46%;
+}
+
+.trapezoid-medium {
+    left: 35.55%;
+    top: 8.71%;
+    border-top: calc(var(--container-width-big) * 0.145 * 0.75) solid black;
+    border-left: calc(var(--container-width-big) * 0.072 * 0.75) solid transparent;
+    border-right: calc(var(--container-width-big) * 0.072 * 0.75) solid transparent;
+    width: 14.46%;
+}
+
+.trapezoid-small {
+    left: 35.55%;
+    top: 8.71%;
+    border-top: calc(var(--container-width-big) * 0.145 * 0.5) solid black;
+    border-left: calc(var(--container-width-big) * 0.072 * 0.5) solid transparent;
+    border-right: calc(var(--container-width-big) * 0.072 * 0.5) solid transparent;
+    width: 14.46%;
+}
+
+.r-lens {
+    position: absolute;
+    left: 53.94%;
 }
 
 

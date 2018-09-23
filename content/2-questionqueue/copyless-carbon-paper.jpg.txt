@@ -1,8 +1,8 @@
-Sort: 6
+Sort: 15
 
 ----
 
-Question: How does carbonless copy paper work?
+Question: How does that old-school yellow and pink pressure-sensitive carbon paper work?
 
 ----
 
@@ -10,4 +10,4 @@ Explanation: Gotchas.
 
 ----
 
-Category: medium
+Category: large

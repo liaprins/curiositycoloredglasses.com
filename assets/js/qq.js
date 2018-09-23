@@ -39,7 +39,8 @@ function qqIconClick(e) {
     var selectedLensVerify = selectedLens.getAttribute('data-clickable');
     if (selectedLensVerify == 'yes') {
         // checking if clicked icon was closed when it was clicked
-        var contentOfInterest = selectedLens.parentNode.nextElementSibling;
+        // var contentOfInterest = selectedLens.parentNode.nextElementSibling;
+        var contentOfInterest = selectedLens.nextElementSibling;
         // if (selectedLens.parentNode.nextElementSibling.style.display === 'none') {
         if (contentOfInterest.style.display === 'none') {
             var qqContent = document.querySelectorAll('.qqcontents');
@@ -53,14 +54,19 @@ function qqIconClick(e) {
                     qqContent[i].previousElementSibling.classList.remove('qqselected');
 		        }    // closing checking if-statement
             }
-            selectedLens.parentNode.nextElementSibling.style.display = 'block';
-            var qqSelectedClasses = selectedLens.parentNode.getAttribute('class');
-            selectedLens.parentNode.setAttribute('class', qqSelectedClasses + ' ' + 'qqselected');            
+            // selectedLens.parentNode.nextElementSibling.style.display = 'block';
+            selectedLens.nextElementSibling.style.display = 'block';
+            // var qqSelectedClasses = selectedLens.parentNode.getAttribute('class');
+            var qqSelectedClasses = selectedLens.getAttribute('class');
+            // selectedLens.parentNode.setAttribute('class', qqSelectedClasses + ' ' + 'qqselected');            
+            selectedLens.setAttribute('class', qqSelectedClasses + ' ' + 'qqselected');            
             var qqURLHash = selectedLens.parentNode.getAttribute('data-id');
             location.hash = qqURLHash; 
         } else {
-            selectedLens.parentNode.nextElementSibling.style.display = 'none';
-            selectedLens.parentNode.classList.remove('qqselected');
+            // selectedLens.parentNode.nextElementSibling.style.display = 'none';
+            selectedLens.nextElementSibling.style.display = 'none';
+            // selectedLens.parentNode.classList.remove('qqselected');
+            selectedLens.classList.remove('qqselected');
             removeHash();
         } // close inner if
         

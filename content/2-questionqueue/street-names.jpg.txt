@@ -1,8 +1,8 @@
-Sort: 10
+Sort: 11
 
 ----
 
-Question: How are roads named?
+Question: How are streets named?
 
 ----
 
@@ -10,4 +10,4 @@ Explanation: And how do neighborhoods get their names officialized?
 
 ----
 
-Category: small
+Category: large

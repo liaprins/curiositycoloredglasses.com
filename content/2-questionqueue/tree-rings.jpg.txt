@@ -1,8 +1,8 @@
-Sort: 11
+Sort: 9
 
 ----
 
-Question: Does the hyper-controlled atmosphere of a greenhouse prevent its trees from forming tree rings?
+Question: Indoor trees don't experience annual weather patterns like their counterparts in the wild; does this mean they don't exhibit cross-sectional growth rings?
 
 ----
 

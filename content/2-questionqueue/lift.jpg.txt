@@ -1,0 +1,13 @@
+Question: Is equal transit time real: does air really flow over the top of a wing faster, thereby generating lift? If so, what makes it do this?
+
+----
+
+Explanation: TBD
+
+----
+
+Category: small
+
+----
+
+Sort: 6

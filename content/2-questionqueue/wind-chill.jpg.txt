@@ -1,0 +1,13 @@
+Question: How is wind chill calculated?
+
+----
+
+Explanation: TBD
+
+----
+
+Category: medium
+
+----
+
+Sort: 20

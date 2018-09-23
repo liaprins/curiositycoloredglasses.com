@@ -1,0 +1,13 @@
+Question: Which part of the plant are bananas? The seed?
+
+----
+
+Explanation: TBD
+
+----
+
+Category: medium
+
+----
+
+Sort: 23
