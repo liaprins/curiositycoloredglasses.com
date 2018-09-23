@@ -1,8 +1,8 @@
-Sort: 3
+Sort: 17
 
 ----
 
-Question: Why do wheels look like they're spinning backwards on film?
+Question: Why do wheels sometimes look like they're turning backwards on film?
 
 ----
 
@@ -10,4 +10,4 @@ Explanation: Is framespeed part of it?
 
 ----
 
-Category: small
+Category: large

@@ -1,8 +1,8 @@
-Sort: 12
+Sort: 14
 
 ----
 
-Question: How do we see the primary color yellow without yellow cones in our eyes?
+Question: How do we see the primary color yellow when we don’t have yellow cones in our eyes?
 
 ----
 
@@ -10,4 +10,4 @@ Explanation: If primary colors can't be made from any other colors by definition
 
 ----
 
-Category: medium
+Category: large

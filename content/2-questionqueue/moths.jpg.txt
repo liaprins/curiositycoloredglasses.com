@@ -1,8 +1,8 @@
-Sort: 8
+Sort: 7
 
 ----
 
-Question: If moths are nocternal, why do they flock to light?
+Question: If moths flock to lights, why are they nocturnal?
 
 ----
 
@@ -10,4 +10,4 @@ Explanation: Replace my butterfly painting with a moth.
 
 ----
 
-Category: small
+Category: large

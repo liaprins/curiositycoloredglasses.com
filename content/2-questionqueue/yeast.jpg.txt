@@ -1,8 +1,8 @@
-Sort: 2
+Sort: 16
 
 ----
 
-Question: Yeast is alive! But how?
+Question: Yeast is living! But how?
 
 ----
 
@@ -10,4 +10,4 @@ Explanation: What is it?
 
 ----
 
-Category: medium
+Category: large

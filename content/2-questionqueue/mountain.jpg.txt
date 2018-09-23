@@ -1,0 +1,13 @@
+Question: How is a mountain’s height measured?
+
+----
+
+Explanation: TBD
+
+----
+
+Category: medium
+
+----
+
+Sort: 26

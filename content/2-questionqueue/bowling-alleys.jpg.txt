@@ -1,0 +1,13 @@
+Question: Why are bowling alleys seemingly always windowless?
+
+----
+
+Explanation: TBD
+
+----
+
+Category: medium
+
+----
+
+Sort: 31

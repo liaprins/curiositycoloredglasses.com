@@ -1,0 +1,13 @@
+Question: Why do candles only smoke after their flame is extinguished, but not while burning?
+
+----
+
+Explanation: TBD
+
+----
+
+Category: medium
+
+----
+
+Sort: 32

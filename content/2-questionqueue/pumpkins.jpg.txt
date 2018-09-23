@@ -1,8 +1,8 @@
-Sort: 9
+Sort: 12
 
 ----
 
-Question: How do pumpkins get the air inside them?
+Question: How do pumpkins get air inside when they don’t have any holes? Or are they hollow vacuums?
 
 ----
 
@@ -10,4 +10,4 @@ Explanation: Or is that hollow just a vacuum?
 
 ----
 
-Category: medium
+Category: large
