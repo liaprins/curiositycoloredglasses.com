@@ -62,40 +62,6 @@
 
 			<!-- <div class="desktopcontent"> -->
 
-
-
-
-
-
-			    <div class="testcontainer testcontainer-large">
-    		    	<div class="lens l-lens"></div>
-    		    	<div class="knob"></div>
-    		    	<div class="trapezoid-large"></div>
-    		    	<div class="lens r-lens"></div>
-    		    </div>
-
-    		    
-   			    <div class="testcontainer testcontainer-medium">
-    		    	<div class="lens l-lens"></div>
-    		    	<div class="knob"></div>
-    		    	<div class="trapezoid-medium"></div>
-    		    	<div class="lens r-lens"></div>
-    		    </div>
-
-    		    <div class="testcontainer testcontainer-small">
-    		    	<div class="lens l-lens"></div>
-    		    	<div class="knob"></div>
-    		    	<div class="trapezoid-small"></div>
-    		    	<div class="lens r-lens"></div>
-    		    </div>
-
-
-
-
-
-
-
-
 				<!-- title of the page -->
 				<h2 class="extracontentpagetitle">
 					<?php echo $page->title()->kirbytext() ?>
@@ -126,15 +92,26 @@
 
     	    	<span class="qqpiece">
 
+    	    		<!-- ORIGINAL GLASSES SHAPES BUILT WITH CSS -->
     	    		<!--
 	                <div data-id="<?php echo $qqfile->name() ?>" id="<?php echo $qqfile->name() ?>" class="qqglassescontainer <?php if ($qqfile->category() == 'large'): ?>largeqqglasses<?php endif ?><?php if ($qqfile->category() == 'medium'): ?>mediumqqglasses<?php endif ?><?php if ($qqfile->category() == 'small'): ?>smallqqglasses<?php endif ?>" title="<?php echo $qqfile->question() ?>" alt="<?php echo $qqfile->question() ?>">
 						<div class="stem shortstem leftstem"></div><div class="circle leftcircle" style="background-image: url(<?php echo $qqfile->url() ?>)" data-clickable="yes"></div><div class="stem centerstem"></div><div class="circle rightcircle" style="background-image: url(<?php echo $qqfile->url() ?>)" data-clickable="yes"></div><div class="stem shortstem rightstem"></div>		
 					</div>
 					-->
 
-					<img src="assets/images/binoculars.svg" data-id="<?php echo $qqfile->name() ?>" id="<?php echo $qqfile->name() ?>" class="qqglassescontainer <?php if ($qqfile->category() == 'large'): ?>largeqqglasses<?php endif ?><?php if ($qqfile->category() == 'medium'): ?>mediumqqglasses<?php endif ?><?php if ($qqfile->category() == 'small'): ?>smallqqglasses<?php endif ?>" title="<?php echo $qqfile->question() ?>" alt="<?php echo $qqfile->question() ?>" style="background-image: url(<?php echo $qqfile->url() ?>)" data-clickable="yes">
+					<!-- MASK METHOD -->
+					<!-- <img src="assets/images/binoculars.svg" data-id="<?php echo $qqfile->name() ?>" id="<?php echo $qqfile->name() ?>" class="qqglassescontainer <?php if ($qqfile->category() == 'large'): ?>largeqqglasses<?php endif ?><?php if ($qqfile->category() == 'medium'): ?>mediumqqglasses<?php endif ?><?php if ($qqfile->category() == 'small'): ?>smallqqglasses<?php endif ?>" title="<?php echo $qqfile->question() ?>" alt="<?php echo $qqfile->question() ?>" style="background-image: url(<?php echo $qqfile->url() ?>)" data-clickable="yes"> -->
 
 
+					<!-- SHOWN BINOCULARS + BACKGROUNDS -->
+					<div data-clickable="yes" data-id="<?php echo $qqfile->name() ?>" id="<?php echo $qqfile->name() ?>" class="qqglassescontainer <?php if ($qqfile->category() == 'large'): ?>largeqqglasses<?php endif ?><?php if ($qqfile->category() == 'medium'): ?>mediumqqglasses<?php endif ?><?php if ($qqfile->category() == 'small'): ?>smallqqglasses<?php endif ?>" title="<?php echo $qqfile->question() ?>" alt="<?php echo $qqfile->question() ?>">
+    			    	<div class="lens l-lens" style="background-image: url(<?php echo $qqfile->url() ?>)"></div>
+    			    	<div class="knob"></div>
+	    		    	<div class="<?php if ($qqfile->category() == 'large'): ?>trapezoid-large<?php endif ?><?php if ($qqfile->category() == 'medium'): ?>trapezoid-medium<?php endif ?><?php if ($qqfile->category() == 'small'): ?>trapezoid-small<?php endif ?>"></div>
+    		    		<div class="lens r-lens" style="background-image: url(<?php echo $qqfile->url() ?>)"></div>
+    		    	</div>
+
+					<!-- HIDDEN CONTENT -->
 					<div class="qqcontents" style="display: none;">
 						<img src= "<?php echo url('assets/images/x.svg') ?>" alt="close" id="qq-x" class="yellowhover close-x">
 						<div class="qqquestion"><?php echo $qqfile->question() ?></div>
