@@ -771,23 +771,8 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
 
 
 /* QQ PAGE -------------------------------------------------- */
-
-.qqglassescontainer {
-    position: absolute;    /* MAY BE NEEDED TO MAKE PARALLAX FUNCTIONAL... */
-    display: block;    /* MAY BE NEEDED TO MAKE PARALLAX FUNCTIONAL... */
-    /* margin: 1.024rem auto 1.536rem auto; */    /* JUST COMMENTING OUT WHILE I TEST CSS VERSION OF BINOCS */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 99%;    /* Had to make it just under 100% to prevent slightest amount of edges from peeking out from behind mask */
-    -webkit-transition: background-size 0.5s;    /* for Safari */
-    transition: background-size 0.5s;    
-    -webkit-transition-timing-function: ease-out;
-    transition-timing-function: ease-out;    }
-.qqglassescontainer:hover {
-    background-size: 175%;    }  
-
+/*
 .largeqqglasses {
-    /* width: 241px; */
     width: 210.773px;
     height: 96.4px;
     opacity: 0.3;
@@ -802,7 +787,7 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
     width: calc(210.773px * 0.5);
     height: calc(96.4px * 0.5);
 }
-
+*/
 .qqselected {
     background-color: red;
 }
@@ -817,29 +802,27 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
     --container-height-big: 96.4px; 
 }
 
-
-.testcontainer-large,
-.testcontainer-medium,
-.testcontainer-small {
+.largeqqglasses,
+.mediumqqglasses,
+.smallqqglasses {
     position: absolute;
 }
 
-.testcontainer-large {
-    /* width: 209px; */
+.largeqqglasses {
     width: var(--container-width-big);
     height: var(--container-height-big);
     top: 250px;
     left: 700px;
 }
 
-.testcontainer-medium {
+.mediumqqglasses {
     width: calc(var(--container-width-big) * 0.75);
     height: calc(var(--container-height-big) * 0.75);
     top: 250px;
     left: 150px;
 }
 
-.testcontainer-small {
+.smallqqglasses {
     width: calc(var(--container-width-big) * 0.5);
     height: calc(var(--container-height-big) * 0.5);
     top: 100px;
@@ -862,32 +845,34 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
     transition: background-size 0.5s;    
     -webkit-transition-timing-function: ease-out;
     transition-timing-function: ease-out;    }
-.testcontainer:hover > .lens {
+.qqglassescontainer:hover > .lens {
     background-size: 175%;
     background-position: 43% 50%;
 }
 
-.testcontainer > .l-lens {
+/*
+.qqglassescontainer > .l-lens {
     background-image: url(../images/test-1.jpg);
 }
 
-.testcontainer > .r-lens {
+.qqglassescontainer > .r-lens {
     background-image: url(../images/test-2.jpg);
 }
+*/
 
-.testcontainer-large > .lens {
+.largeqqglasses > .lens {
     border-width: calc(var(--container-width-big) * 0.045 * 0.833);    /* PLAN: Use CSS variable to hold width or height of glasses in combo with calc() to easily change all border-widths at each breakpoint-size-change */
 }
 
-.testcontainer-medium > .lens {
+.mediumqqglasses > .lens {
     border-width: calc(var(--container-width-big) * 0.045 * 0.833 * 0.75);    /* PLAN: Use CSS variable to hold width or height of glasses in combo with calc() to easily change all border-widths at each breakpoint-size-change */
 }
 
-.testcontainer-small > .lens {
+.smallqqglasses > .lens {
     border-width: calc(var(--container-width-big) * 0.045 * 0.833 * 0.5);    /* PLAN: Use CSS variable to hold width or height of glasses in combo with calc() to easily change all border-widths at each breakpoint-size-change */
 }
 
-.testcontainer-small > .l-lens {
+.smallqqglasses > .l-lens {
 }
 
 .knob {
