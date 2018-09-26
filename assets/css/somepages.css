@@ -811,22 +811,16 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
 .largeqqglasses {
     width: var(--container-width-big);
     height: var(--container-height-big);
-    top: 250px;
-    left: 700px;
 }
 
 .mediumqqglasses {
     width: calc(var(--container-width-big) * 0.75);
     height: calc(var(--container-height-big) * 0.75);
-    top: 250px;
-    left: 150px;
 }
 
 .smallqqglasses {
     width: calc(var(--container-width-big) * 0.5);
     height: calc(var(--container-height-big) * 0.5);
-    top: 100px;
-    left: 400px;
 }
 
 .lens {
@@ -840,25 +834,14 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
     border-radius: 50%;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 100%;    /* ONLY IF ZOOMING FROM CTR OF GLASSES AS A WHOLE RATHER THAN INTO THE CTR OF EACH LENS */
+    background-size: auto 100%;    /* ONLY IF ZOOMING FROM CTR OF GLASSES AS A WHOLE RATHER THAN INTO THE CTR OF EACH LENS */
     -webkit-transition: background-size 0.5s;    /* for Safari */
     transition: background-size 0.5s;    
     -webkit-transition-timing-function: ease-out;
     transition-timing-function: ease-out;    }
 .qqglassescontainer:hover > .lens {
-    background-size: 175%;
-    background-position: 43% 50%;
+    background-size: auto 175%;
 }
-
-/*
-.qqglassescontainer > .l-lens {
-    background-image: url(../images/test-1.jpg);
-}
-
-.qqglassescontainer > .r-lens {
-    background-image: url(../images/test-2.jpg);
-}
-*/
 
 .largeqqglasses > .lens {
     border-width: calc(var(--container-width-big) * 0.045 * 0.833);    /* PLAN: Use CSS variable to hold width or height of glasses in combo with calc() to easily change all border-widths at each breakpoint-size-change */
@@ -870,9 +853,6 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
 
 .smallqqglasses > .lens {
     border-width: calc(var(--container-width-big) * 0.045 * 0.833 * 0.5);    /* PLAN: Use CSS variable to hold width or height of glasses in combo with calc() to easily change all border-widths at each breakpoint-size-change */
-}
-
-.smallqqglasses > .l-lens {
 }
 
 .knob {
@@ -921,9 +901,14 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
     width: 14.46%;
 }
 
+.l-lens {
+    background-position: 100% 50%;
+}
+
 .r-lens {
     position: absolute;
     left: 53.94%;
+    background-position: 0% 50%;
 }
 
 

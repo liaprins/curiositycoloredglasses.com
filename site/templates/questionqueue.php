@@ -84,7 +84,7 @@
 
 	        <!-- images + info stored in qq folder directly -->
     	    <!-- info here is from metadata -->
-        	<!-- <div id="qqparent" data-test="yoohoo"> -->
+        	<div id="qqparent" data-test="yoohoo">
 
 	        	<?php foreach ($page->images()->sortBy('sort', 'asc') as $qqfile): ?>
 	    	    
@@ -105,10 +105,10 @@
 
 					<!-- SHOWN BINOCULARS + BACKGROUNDS -->
 					<div data-clickable="yes" data-id="<?php echo $qqfile->name() ?>" id="<?php echo $qqfile->name() ?>" class="qqglassescontainer <?php if ($qqfile->category() == 'large'): ?>largeqqglasses<?php endif ?><?php if ($qqfile->category() == 'medium'): ?>mediumqqglasses<?php endif ?><?php if ($qqfile->category() == 'small'): ?>smallqqglasses<?php endif ?>" title="<?php echo $qqfile->question() ?>" alt="<?php echo $qqfile->question() ?>">
-    			    	<div class="lens l-lens" style="background-image: url(<?php echo $qqfile->url() ?>)"></div>
-    			    	<div class="knob"></div>
-	    		    	<div class="<?php if ($qqfile->category() == 'large'): ?>trapezoid-large<?php endif ?><?php if ($qqfile->category() == 'medium'): ?>trapezoid-medium<?php endif ?><?php if ($qqfile->category() == 'small'): ?>trapezoid-small<?php endif ?>"></div>
-    		    		<div class="lens r-lens" style="background-image: url(<?php echo $qqfile->url() ?>)"></div>
+    			    	<div data-innards-clickable="yes" class="lens l-lens" style="background-image: url(<?php echo $qqfile->url() ?>)"></div>
+    			    	<div data-innards-clickable="yes" class="knob"></div>
+	    		    	<div data-innards-clickable="yes" class="<?php if ($qqfile->category() == 'large'): ?>trapezoid-large<?php endif ?><?php if ($qqfile->category() == 'medium'): ?>trapezoid-medium<?php endif ?><?php if ($qqfile->category() == 'small'): ?>trapezoid-small<?php endif ?>"></div>
+    		    		<div data-innards-clickable="yes" class="lens r-lens" style="background-image: url(<?php echo $qqfile->url() ?>)"></div>
     		    	</div>
 
 					<!-- HIDDEN CONTENT -->
@@ -122,7 +122,7 @@
 
     		    <?php endforeach ?>
 
-    		<!-- </div> -->    <!-- close .qqparent -->
+    		</div>    <!-- close .qqparent -->
 
 		<!-- </main> -->
 
