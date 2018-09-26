@@ -37,12 +37,12 @@ function removeHash() {
 
 // Opens the entry when the container of the glasses is clicked, and closes it if the same lens or its pair is re-clicked
 function qqIconClick(e) {
-	var selectedContainer = e.target;
+	var selectedLens = e.target;
     // verifying the area inside the "qqsection" <div> that was clicked was an icon, not an in-between space, which caused problems
-    var selectedContainerVerify = selectedContainer.getAttribute('data-clickable');
-    if (selectedContainerVerify == 'yes') {
+    var selectedLensVerify = selectedLens.getAttribute('data-clickable');
+    if (selectedLensVerify == 'yes') {
         // checking if clicked icon was closed when it was clicked
-        var contentOfInterest = selectedContainer.nextElementSibling;
+        var contentOfInterest = selectedLens.nextElementSibling;
         if (contentOfInterest.style.display === 'none') {
             var qqContent = document.querySelectorAll('.qqcontents');
             var allGlasses = qqContent.length;
@@ -55,14 +55,14 @@ function qqIconClick(e) {
                     qqContent[i].previousElementSibling.classList.remove('qqselected');
 		        }    // closing checking if-statement
             }
-            selectedContainer.nextElementSibling.style.display = 'block';
-            var qqSelectedClasses = selectedContainer.getAttribute('class');
-            selectedContainer.setAttribute('class', qqSelectedClasses + ' ' + 'qqselected');            
-            var qqURLHash = selectedContainer.getAttribute('data-id');
+            selectedLens.nextElementSibling.style.display = 'block';
+            var qqSelectedClasses = selectedLens.getAttribute('class');
+            selectedLens.setAttribute('class', qqSelectedClasses + ' ' + 'qqselected');            
+            var qqURLHash = selectedLens.getAttribute('data-id');
             location.hash = qqURLHash; 
         } else {
-            selectedContainer.nextElementSibling.style.display = 'none';
-            selectedContainer.classList.remove('qqselected');
+            selectedLens.nextElementSibling.style.display = 'none';
+            selectedLens.classList.remove('qqselected');
             removeHash();
         } // close inner if
         
@@ -129,8 +129,8 @@ function qqXOut(e) {
 
     if (clickedThing.getAttribute('id') == 'qq-x') {
         clickedThing.parentNode.style.display = 'none';
-        var selectedContainer = clickedThing.parentNode.previousElementSibling;
-        var qqSelectedClasses = selectedContainer.classList.remove('qqselected');
+        var selectedLens = clickedThing.parentNode.previousElementSibling;
+        var qqSelectedClasses = selectedLens.classList.remove('qqselected');
         removeHash();
     }
 }
