@@ -104,7 +104,8 @@
 
 
 					<!-- SHOWN BINOCULARS + BACKGROUNDS -->
-					<div data-clickable="yes" data-id="<?php echo $qqfile->name() ?>" id="<?php echo $qqfile->name() ?>" class="qqglassescontainer <?php if ($qqfile->category() == 'large'): ?>largeqqglasses<?php endif ?><?php if ($qqfile->category() == 'medium'): ?>mediumqqglasses<?php endif ?><?php if ($qqfile->category() == 'small'): ?>smallqqglasses<?php endif ?>" title="<?php echo $qqfile->question() ?>" alt="<?php echo $qqfile->question() ?>">
+					<!-- <div data-clickable="yes" data-id="<?php echo $qqfile->name() ?>" id="<?php echo $qqfile->name() ?>" class="qqglassescontainer <?php if ($qqfile->category() == 'large'): ?>largeqqglasses<?php endif ?><?php if ($qqfile->category() == 'medium'): ?>mediumqqglasses<?php endif ?><?php if ($qqfile->category() == 'small'): ?>smallqqglasses<?php endif ?>" title="<?php echo $qqfile->question() ?>" alt="<?php echo $qqfile->question() ?>"> -->
+					<div data-clickable="yes" data-id="<?php echo $qqfile->name() ?>" class="qqglassescontainer <?php if ($qqfile->category() == 'large'): ?>largeqqglasses<?php endif ?><?php if ($qqfile->category() == 'medium'): ?>mediumqqglasses<?php endif ?><?php if ($qqfile->category() == 'small'): ?>smallqqglasses<?php endif ?>" title="<?php echo $qqfile->question() ?>" alt="<?php echo $qqfile->question() ?>">
     			    	<div data-innards-clickable="yes" class="lens l-lens" style="background-image: url(<?php echo $qqfile->url() ?>)"></div>
     			    	<div data-innards-clickable="yes" class="knob"></div>
 	    		    	<div data-innards-clickable="yes" class="<?php if ($qqfile->category() == 'large'): ?>trapezoid-large<?php endif ?><?php if ($qqfile->category() == 'medium'): ?>trapezoid-medium<?php endif ?><?php if ($qqfile->category() == 'small'): ?>trapezoid-small<?php endif ?>"></div>
