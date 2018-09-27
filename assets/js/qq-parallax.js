@@ -3,19 +3,19 @@ function getTops() {
 
     
     // SMALL GLASSES
-    var smallGlasses = document.getElementsByClassName('smallqqglasses');
+    var smallGlasses = document.getElementsByClassName('smallqqglasses').parentNode;
     for (var g = 0; g < smallGlasses.length; g++) {
         var smallGlassesStartTop = smallGlasses[g].setAttribute('data-start-top', smallGlasses[g].offsetTop);
     }  // closing g for-loop
     
     // MEDIUM GLASSES
-    var mediumGlasses = document.getElementsByClassName('mediumqqglasses');
+    var mediumGlasses = document.getElementsByClassName('mediumqqglasses').parentNode;
     for (var h = 0; h < mediumGlasses.length; h++) {
         var bigGlassesStartTop = mediumGlasses[h].setAttribute('data-start-top', mediumGlasses[h].offsetTop);
     }  // closing h for-loop
 
     // BIG GLASSES
-    var bigGlasses = document.getElementsByClassName('largeqqglasses');
+    var bigGlasses = document.getElementsByClassName('largeqqglasses').parentNode;
     for (var i = 0; i < bigGlasses.length; i++) {
         var bigGlassesStartTop = bigGlasses[i].setAttribute('data-start-top', bigGlasses[i].offsetTop);
     }  // closing i for-loop
@@ -46,7 +46,7 @@ function parallaxScroll() {
     */
     
     // SMALL GLASSES
-    var smallGlasses = document.getElementsByClassName('smallqqglasses');
+    var smallGlasses = document.getElementsByClassName('smallqqglasses').parentNode;
     for (var g = 0; g < smallGlasses.length; g++) {
         smallGlassesStartTopData = parseInt(smallGlasses[g].getAttribute('data-start-top'));
         // ... (scrollTop * [INSERT SCROLL RATIO HERE]) ...
@@ -59,7 +59,7 @@ function parallaxScroll() {
     medBGImg.style.top = -(scrollTop * 0.888) + 'px';
     */
     // MEDIUM GLASSES
-    var mediumGlasses = document.getElementsByClassName('mediumqqglasses');
+    var mediumGlasses = document.getElementsByClassName('mediumqqglasses').parentNode;
     for (var h = 0; h < mediumGlasses.length; h++) {
         mediumGlassesStartTopData = parseInt(mediumGlasses[h].getAttribute('data-start-top'));
         // ... (scrollTop * [INSERT SCROLL RATIO HERE]) ...
@@ -72,7 +72,7 @@ function parallaxScroll() {
     bigBGImg.style.top = -(scrollTop * 0.968) + 'px';
     */
     // BIG GLASSES
-    var bigGlasses = document.getElementsByClassName('largeqqglasses');
+    var bigGlasses = document.getElementsByClassName('largeqqglasses').parentNode;
     for (var i = 0; i < bigGlasses.length; i++) {
         bigGlassesStartTopData = parseInt(bigGlasses[i].getAttribute('data-start-top'));
         // ... (scrollTop * [INSERT SCROLL RATIO HERE]) ...
