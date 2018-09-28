@@ -12,7 +12,6 @@ function qqLink() {
             }    // closing checking if-statement
             if (currentIcon.hasAttribute('data-id')) {    // Checking for its existence first, to save resources
                 var iconName = '#' + currentIcon.getAttribute('data-id');
-                // document.getElementById('jstest').innerHTML = iconName;
             }    // closing checking if-statement
             // ...if the clicked icon's name matches the hash
             if (hash == iconName) {
