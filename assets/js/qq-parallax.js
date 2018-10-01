@@ -3,19 +3,20 @@ function getTops() {
 
     
     // SMALL GLASSES
-    var smallGlasses = document.getElementsByClassName('smallqqglasses').parentNode;
+    // var smallGlasses = document.getElementsByClassName('smallqqglasses').parentNode;
+    var smallGlasses = document.getElementsByClassName('smallqqglasses');
     for (var g = 0; g < smallGlasses.length; g++) {
         var smallGlassesStartTop = smallGlasses[g].setAttribute('data-start-top', smallGlasses[g].offsetTop);
     }  // closing g for-loop
     
     // MEDIUM GLASSES
-    var mediumGlasses = document.getElementsByClassName('mediumqqglasses').parentNode;
+    var mediumGlasses = document.getElementsByClassName('mediumqqglasses');
     for (var h = 0; h < mediumGlasses.length; h++) {
         var bigGlassesStartTop = mediumGlasses[h].setAttribute('data-start-top', mediumGlasses[h].offsetTop);
     }  // closing h for-loop
 
     // BIG GLASSES
-    var bigGlasses = document.getElementsByClassName('largeqqglasses').parentNode;
+    var bigGlasses = document.getElementsByClassName('largeqqglasses');
     for (var i = 0; i < bigGlasses.length; i++) {
         var bigGlassesStartTop = bigGlasses[i].setAttribute('data-start-top', bigGlasses[i].offsetTop);
     }  // closing i for-loop
@@ -46,11 +47,14 @@ function parallaxScroll() {
     */
     
     // SMALL GLASSES
-    var smallGlasses = document.getElementsByClassName('smallqqglasses').parentNode;
+    // var smallGlasses = document.getElementsByClassName('smallqqglasses').parentNode;
+    var smallGlasses = document.getElementsByClassName('smallqqglasses');
+    var smallScrollRatio = -0.22;
     for (var g = 0; g < smallGlasses.length; g++) {
         smallGlassesStartTopData = parseInt(smallGlasses[g].getAttribute('data-start-top'));
         // ... (scrollTop * [INSERT SCROLL RATIO HERE]) ...
-        smallGlasses[g].style.top = -((scrollTop * -0.22) - smallGlassesStartTopData) + 'px';
+        smallGlasses[g].style.top = -((scrollTop * smallScrollRatio) - smallGlassesStartTopData) + 'px';
+        smallGlasses[g].nextElementSibling.style.top = -((scrollTop * smallScrollRatio) - smallGlassesStartTopData) + 'px';
     }  // closing g for-loop
     
     /*
@@ -59,11 +63,13 @@ function parallaxScroll() {
     medBGImg.style.top = -(scrollTop * 0.888) + 'px';
     */
     // MEDIUM GLASSES
-    var mediumGlasses = document.getElementsByClassName('mediumqqglasses').parentNode;
+    var mediumGlasses = document.getElementsByClassName('mediumqqglasses');
+    var mediumScrollRatio = -0.16;
     for (var h = 0; h < mediumGlasses.length; h++) {
         mediumGlassesStartTopData = parseInt(mediumGlasses[h].getAttribute('data-start-top'));
         // ... (scrollTop * [INSERT SCROLL RATIO HERE]) ...
-        mediumGlasses[h].style.top = -((scrollTop * -0.16) - mediumGlassesStartTopData) + 'px';
+        mediumGlasses[h].style.top = -((scrollTop * mediumScrollRatio) - mediumGlassesStartTopData) + 'px';
+        mediumGlasses[h].nextElementSibling.style.top = -((scrollTop * mediumScrollRatio) - mediumGlassesStartTopData) + 'px';
     }  // closing h for-loop
     
     /*
@@ -72,11 +78,13 @@ function parallaxScroll() {
     bigBGImg.style.top = -(scrollTop * 0.968) + 'px';
     */
     // BIG GLASSES
-    var bigGlasses = document.getElementsByClassName('largeqqglasses').parentNode;
+    var bigGlasses = document.getElementsByClassName('largeqqglasses');
+    var bigScrollRatio = -0.035;
     for (var i = 0; i < bigGlasses.length; i++) {
         bigGlassesStartTopData = parseInt(bigGlasses[i].getAttribute('data-start-top'));
         // ... (scrollTop * [INSERT SCROLL RATIO HERE]) ...
-        bigGlasses[i].style.top = -((scrollTop * -0.035) - bigGlassesStartTopData) + 'px';
+        bigGlasses[i].style.top = -((scrollTop * bigScrollRatio) - bigGlassesStartTopData) + 'px';
+        bigGlasses[i].nextElementSibling.style.top = -((scrollTop * bigScrollRatio) - bigGlassesStartTopData) + 'px';
     }  // closing i for-loop
         
     /*

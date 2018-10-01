@@ -771,23 +771,19 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
 
 
 /* QQ PAGE -------------------------------------------------- */
-/*
-.largeqqglasses {
-    width: 210.773px;
-    height: 96.4px;
-    opacity: 0.3;
+
+#qqpagetitle p {
+    padding-top: calc(10.714vw - 0.25rem);
+    margin: 0 auto 1.536rem auto;    }
+
+#qqpagetext p {
+    margin: 0 auto;
 }
 
-.mediumqqglasses {
-    width: calc(210.773px * 0.75);
-    height: calc(96.4px * 0.75);
-}
+#qqpagetitle p,
+#qqpagetext p {
+    width:  78.571vw;    }
 
-.smallqqglasses {
-    width: calc(210.773px * 0.5);
-    height: calc(96.4px * 0.5);
-}
-*/
 .qqselected {
     background-color: red;
 }
@@ -796,6 +792,15 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
     position: absolute;
 }
 
+.qqcontents {
+    position: absolute;
+}
+
+/*
+.qqpiece:nth-child(1) {
+    top: 200px !important;
+}
+*/
 
 :root {
     --container-width-big: 209px; 
