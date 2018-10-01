@@ -52,22 +52,29 @@
 	it cannot load by definition, and the animation never stops! -->
 	<div id="loadbg" style="width:100%; height:100%; position:fixed; z-index:9999; background:url("../images/loader.gif") no-repeat center center rgba(226,228,58,0.75)    }"></div>
 
-				<!-- title of the page -->
-				<h2 class="extracontentpagetitle">
-					<?php echo $page->title()->kirbytext() ?>
-				</h2>
+<!-- *************************************** ^^^^^ LEAVE ALONE ^^^^^ *************************************** -->
 
 
-				<!-- intro text for QQ page -->
-				<span id="abouttext" class="l-textface">
-					<?php echo $page->text()->kirbytext() ?>
-				</span>
+			<!-- title of the page -->
+			<h2 id="qqpagetitle">
+				<?php echo $page->title()->kirbytext() ?>
+			</h2>
+
+
+			<!-- intro text for QQ page -->
+			<span id="qqpagetext" class="l-textface">
+				<?php echo $page->text()->kirbytext() ?>
+			</span>
 
 			<!-- </div> -->
 
 	        <!-- images + info (as metadata) stored in QQ content folder directly -->
         	<div id="qqparent">
 
+        		<!-- USE "ORIGINAL METHOD" IF I WANT ANY NEWLY ADDED QUESTION IN THE PANEL TO BE AT THE TOP; WHOLE GROUP OF LARGE GLASSES NEED TO BE AT THE END OF THE ORDER TO SHOW UP ON TOP LAYER -->
+        		<!-- "ORIGINAL METHOD" = (without "->flip()") -->
+	        	<!-- USE "FLIP METHOD" IF I WANT TO REVERSE THE ORDER OF GLASSES WITHIN EACH GROUP, BUT ALLOW GROUP OF LARGE GLASSES TO BE AT THE TOP OF THE PANEL AND STILL SHOW UP ON TOP LAYER, TOO-->
+	        	<!-- "FLIP METHOD" = ADD "->flip()" RIGHT AFTER "->sortBy('sort', 'asc')" TO GET THE GLASSES TO REVERSE ORDER FROM HOW THEY ARE IN PANEL -->
 	        	<?php foreach ($page->images()->sortBy('sort', 'asc') as $qqfile): ?>
 	    	    
 		        <?php $qqsubpage = $qqfile->name(); ?>
@@ -98,7 +105,7 @@
 	<!-- <?php snippet('f o o t e r-sitewide') ?> -->
 
 
-		<!-- *************************************** vvvvv footer.php snippet vvvvv LEAVE ALONE vvvvv *************************************** -->
+<!-- *************************************** vvvvv footer.php snippet vvvvv LEAVE ALONE vvvvv *************************************** -->
 
 
 </body>

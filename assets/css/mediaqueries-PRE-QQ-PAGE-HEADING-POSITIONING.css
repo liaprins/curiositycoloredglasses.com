@@ -330,9 +330,6 @@
         width: 641.929px;    }
     #blognametagline {
         width: 641.929px;    }
-    #qqpagetitle p,
-    #qqpagetext p {
-        width: 641.929px;    }
     #pre-rr {
         padding-top: 87.536px;    }    
     #navdetails[open] #navsummary {
@@ -342,7 +339,7 @@
         width: 641.929px;    }
     #searchpageinput {
         width: calc(641px - 1.94rem);    }
-    #navdetails[open] {    
+   #navdetails[open] {    
         padding: 58.357px;
         width: calc(274.129px + 116.714px);    }
     .date, figcaption {
