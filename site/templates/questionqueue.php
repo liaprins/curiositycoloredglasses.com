@@ -66,6 +66,8 @@
 				<?php echo $page->text()->kirbytext() ?>
 			</span>
 
+			<p id="qqtest">hola</p>
+
 			<!-- </div> -->
 
 	        <!-- images + info (as metadata) stored in QQ content folder directly -->
