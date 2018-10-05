@@ -14,10 +14,11 @@
  */
 class S {
 
-  public static $started = false;
-  public static $name    = 'kirby_session';
-  public static $timeout = 30;
-  public static $cookie  = array();
+  public static $started     = false;
+  public static $name        = 'kirby_session';
+  public static $timeout     = 30;
+  public static $cookie      = array();
+  public static $fingerprint = null;
 
   /**
    * Starts a new session
@@ -49,24 +50,21 @@ class S {
     // make sure to use cookies only
     ini_set('session.use_cookies', 1);
     ini_set('session.use_only_cookies', 1);
+    
+    // set additional cookie options
+    session_set_cookie_params(
+      cookie::lifetime(static::$cookie['lifetime']),
+      static::$cookie['path'],
+      static::$cookie['domain'],
+      static::$cookie['secure'],
+      static::$cookie['httponly']
+    );
 
     // try to start the session
     if(!session_start()) return false;
 
-    if(!setcookie(
-      static::$name, 
-      session_id(), 
-      cookie::lifetime(static::$cookie['lifetime']), 
-      static::$cookie['path'], 
-      static::$cookie['domain'], 
-      static::$cookie['secure'], 
-      static::$cookie['httponly']
-    )) {
-      return false;
-    }
-
     // mark it as started
-    static::$started = true;      
+    static::$started = true;
 
     // check if the session is still valid
     if(!static::check()) {
@@ -109,6 +107,12 @@ class S {
    * @return string
    */
   public static function fingerprint() {
+
+    // custom fingerprint callback
+    if(is_callable(static::$fingerprint)) {
+      return call(static::$fingerprint);
+    } 
+
     if(!r::cli()) {
       return sha1(Visitor::ua() . (ip2long($_SERVER['REMOTE_ADDR']) & ip2long('255.255.0.0')));      
     } else {
