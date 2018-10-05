@@ -1,4 +1,4 @@
-Question: How is a mountain’s height measured?
+Question: Mountain
 
 ----
 
@@ -10,4 +10,4 @@ Category: medium
 
 ----
 
-Sort: 27
+Sort: 20

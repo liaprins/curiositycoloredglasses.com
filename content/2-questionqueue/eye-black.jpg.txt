@@ -6,8 +6,8 @@ Explanation: TBD
 
 ----
 
-Category: large
+Category: small
 
 ----
 
-Sort: 45
+Sort: 15
