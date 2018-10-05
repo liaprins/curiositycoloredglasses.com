@@ -1,4 +1,4 @@
-Question: Why are blazer pockets sewn shut when you buy them?
+Question: Pockets
 
 ----
 
@@ -6,8 +6,8 @@ Explanation: TBD
 
 ----
 
-Category: medium
+Category: small
 
 ----
 
-Sort: 31
+Sort: 34

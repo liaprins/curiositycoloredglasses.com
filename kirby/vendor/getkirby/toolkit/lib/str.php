@@ -92,12 +92,12 @@ class Str {
 
   /**
    * Default options for string methods
-   * 
+   *
    * @var array
    */
   public static $defaults = array(
     'slug' => array(
-      'separator' => '-', 
+      'separator' => '-',
       'allowed'   => 'a-z0-9'
     )
   );
@@ -223,6 +223,9 @@ class Str {
         return (array)@parse_url($string);
       case 'php':
         return @unserialize($string);
+      case 'query':
+        @parse_str($string, $result);
+        return $result;
       default:
         return $string;
     }
@@ -241,11 +244,11 @@ class Str {
     for($i = 0; $i < static::length($string); $i++) {
       $char = static::substr($string, $i, 1);
       if(MB) {
-        list(, $code) = unpack('N', mb_convert_encoding($char, 'UCS-4BE', 'UTF-8'));        
+        list(, $code) = unpack('N', mb_convert_encoding($char, 'UCS-4BE', 'UTF-8'));
       } else {
         $code = ord($char);
       }
-      
+
       $encoded .= rand(1, 2) == 1 ? '&#' . $code . ';' : '&#x' . dechex($code) . ';';
     }
     return $encoded;
@@ -314,7 +317,7 @@ class Str {
 
   /**
    * Checks if the given string is a URL
-   * 
+   *
    * @param string $string
    * @return boolean
    */
@@ -373,7 +376,7 @@ class Str {
    * @return string
    */
   public static function widont($string = '') {
-    return preg_replace_callback('|([^\s])\s+([^\s]+)\s*$|', function($matches) {
+    return preg_replace_callback('|([^\s])\s+([^\s]+)\s*$|u', function($matches) {
       if(str::contains($matches[2], '-')) {
         return $matches[1] . ' ' . str_replace('-', '&#8209;', $matches[2]);
       } else {
@@ -443,7 +446,7 @@ class Str {
 
   /**
    * Generates a random string that may be used for cryptographic purposes
-   * 
+   *
    * WARNING (PHP < 7.0): This function does *not* produce secure random
    * strings and falls back to str::quickRandom with PHP < 7.0!
    *
@@ -505,8 +508,8 @@ class Str {
    */
   public static function slug($string, $separator = null, $allowed = null) {
 
-    $separator = $separator ?: static::$defaults['slug']['separator'];
-    $allowed   = $allowed   ?: static::$defaults['slug']['allowed'];
+    $separator = $separator !== null ? $separator : static::$defaults['slug']['separator'];
+    $allowed   = $allowed   !== null ? $allowed   : static::$defaults['slug']['allowed'];
 
     $string = trim($string);
     $string = static::lower($string);
@@ -514,10 +517,15 @@ class Str {
 
     // replace spaces with simple dashes
     $string = preg_replace('![^' . $allowed . ']!i', $separator, $string);
-    // remove double dashes
-    $string = preg_replace('![' . preg_quote($separator) . ']{2,}!', $separator, $string);
+
+    if(strlen($separator) > 0) {
+      // remove double separators
+      $string = preg_replace('![' . preg_quote($separator) . ']{2,}!', $separator, $string);
+    }
+
     // trim trailing and leading dashes
     $string = trim($string, $separator);
+
     // replace slashes with dashes
     $string = str_replace('/', $separator, $string);
 
@@ -582,7 +590,7 @@ class Str {
   public static function encoding($string) {
 
     if(MB) {
-      return mb_detect_encoding($string, 'UTF-8, ISO-8859-1, windows-1251');
+      return mb_detect_encoding($string, 'UTF-8, ISO-8859-1, windows-1251', true);
     } else {
       foreach(array('utf-8', 'iso-8859-1', 'windows-1251') as $item) {
         if(md5(iconv($item, $item, $string)) == md5($string)) return $item;
@@ -603,6 +611,10 @@ class Str {
   public static function convert($string, $targetEncoding, $sourceEncoding = null) {
     // detect the source encoding if not passed as third argument
     if(is_null($sourceEncoding)) $sourceEncoding = static::encoding($string);
+
+    // no need to convert if the target encoding is the same
+    if(strtolower($sourceEncoding) === strtolower($targetEncoding)) return $string;
+
     return iconv($sourceEncoding, $targetEncoding, $string);
   }
 
@@ -736,51 +748,211 @@ class Str {
 
   /**
    * Returns the beginning of a string before the given character
-   * 
+   *
    * @param string $string
    * @param string $char
    * @return string
    */
   public static function before($string, $char) {
-    $pos = strpos($string, $char);
-    return static::substr($string, 0, $pos);
+    $pos = strpos($string, $char);    
+    if($pos !== false) {
+      return static::substr($string, 0, $pos);      
+    } else {
+      return false;
+    }
   }
 
   /**
    * Returns the beginning of a string until the given character
-   * 
+   *
    * @param string $string
    * @param string $char
    * @return string
    */
   public static function until($string, $char) {
     $pos = strpos($string, $char);
-    return static::substr($string, 0, $pos + str::length($char));
+    if($pos !== false) {
+      return static::substr($string, 0, $pos + str::length($char));      
+    } else {
+      return false;
+    }
   }
 
   /**
    * Returns the rest of the string after the given character
-   * 
+   *
    * @param string $string
    * @param string $char
    * @return string
    */
   public static function after($string, $char) {
     $pos = strpos($string, $char);
-    return static::substr($string, $pos+1);
+    if($pos !== false) {
+      return static::substr($string, $pos + str::length($char));      
+    } else {
+      return false;
+    }
   }
 
   /**
    * Returns the rest of the string starting from the given character
-   * 
+   *
    * @param string $string
    * @param string $char
    * @return string
    */
   public static function from($string, $char) {
     $pos = strpos($string, $char);
-    return static::substr($string, $pos);
+    if($pos !== false) {
+      return static::substr($string, $pos);      
+    } else {
+      return false;
+    }
   }
 
+  /**
+   * Returns everything between two strings from the first occurrence of a given string
+   * 
+   * @param string $string
+   * @param string $start
+   * @param string $end
+   * @return string
+   */
+  public static function between($string, $start, $end) {
+    return static::before(static::after($string, $start), $end);
+  }
+
+  /**
+   * Replaces all or some occurrences of the search string with the replacement string
+   * Extension of the str_replace() function in PHP with an additional $limit parameter
+   *
+   * @param  string|array $string  String being replaced on (haystack);
+   *                               can be an array of multiple subject strings
+   * @param  string|array $search  Value being searched for (needle)
+   * @param  string|array $replace Value to replace matches with
+   * @param  int|array    $limit   Maximum possible replacements for each search value;
+   *                               multiple limits for each search value are supported;
+   *                               defaults to no limit
+   * @return string|array          String with replaced values;
+   *                               if $string is an array, array of strings
+   */
+  public static function replace($string, $search, $replace, $limit = -1) {
+    // convert Kirby collections to arrays
+    if(is_a($string,  'Collection')) $string  = $string->toArray();
+    if(is_a($search,  'Collection')) $search  = $search->toArray();
+    if(is_a($replace, 'Collection')) $replace = $replace->toArray();
+
+    // without a limit we might as well use the built-in function
+    if($limit === -1) return str_replace($search, $replace, $string);
+
+    // if the limit is zero, the result will be no replacements at all
+    if($limit === 0) return $string;
+
+    // multiple subjects are run separately through this method
+    if(is_array($string)) {
+      $result = [];
+      foreach($string as $s) {
+        $result[] = static::replace($s, $search, $replace, $limit);
+      }
+
+      return $result;
+    }
+
+    // build an array of replacements
+    // we don't use an associative array because otherwise you couldn't
+    // replace the same string with different replacements
+    $replacements = static::makeReplacements($search, $replace, $limit);
+
+    // run the string and the replacement array through the replacer
+    return static::replaceReplacements($string, $replacements);
+  }
+
+  /**
+   * Generates a replacement array out of dynamic input data
+   * Used for Str::replace()
+   *
+   * @param  string|array $search  Value being searched for (needle)
+   * @param  string|array $replace Value to replace matches with
+   * @param  int|array    $limit   Maximum possible replacements for each search value;
+   *                               multiple limits for each search value are supported;
+   *                               defaults to no limit
+   * @return array                 List of replacement arrays, each with a
+   *                               'search', 'replace' and 'limit' attribute
+   */
+  public static function makeReplacements($search, $replace, $limit) {
+    $replacements = [];
+
+    if(is_array($search) && is_array($replace)) {
+      foreach($search as $i => $s) {
+        // replace with an empty string if no replacement string was defined for this index;
+        // behavior is identical to the official PHP str_replace()
+        $r = (isset($replace[$i]))? $replace[$i] : '';
+
+        if(is_array($limit)) {
+          // don't apply a limit if no limit was defined for this index
+          $l = (isset($limit[$i]))? $limit[$i] : -1;
+        } else {
+          $l = $limit;
+        }
+
+        $replacements[] = ['search' => $s, 'replace' => $r, 'limit' => $l];
+      }
+    } else if(is_array($search) && is_string($replace)) {
+      foreach($search as $i => $s) {
+        if(is_array($limit)) {
+          // don't apply a limit if no limit was defined for this index
+          $l = (isset($limit[$i]))? $limit[$i] : -1;
+        } else {
+          $l = $limit;
+        }
+
+        $replacements[] = ['search' => $s, 'replace' => $replace, 'limit' => $l];
+      }
+    } else if(is_string($search) && is_string($replace) && is_int($limit)) {
+      $replacements[] = compact('search', 'replace', 'limit');
+    } else {
+      throw new Error('Invalid combination of $search, $replace and $limit params.');
+    }
+
+    return $replacements;
+  }
+
+  /**
+   * Takes a replacement array and processes the replacements
+   * Used for Str::replace()
+   *
+   * @param  string $string       String being replaced on (haystack)
+   * @param  array  $replacements Replacement array from Str::makeReplacements()
+   * @return string               String with replaced values
+   */
+  public static function replaceReplacements($string, $replacements) {
+    // replace in the order of the replacements
+    // behavior is identical to the official PHP str_replace()
+    foreach($replacements as $r) {
+      if(!is_int($r['limit'])) {
+        throw new Error('Invalid limit "' . $r['limit'] . '".');
+      } else if($r['limit'] === -1) {
+        // no limit, we don't need our special replacement routine
+        $string = str_replace($r['search'], $r['replace'], $string);
+      } else if($r['limit'] > 0) {
+        // limit given, only replace for $r['limit'] times per replacement
+        $pos = -1;
+        for($i = 0; $i < $r['limit']; $i++) {
+          $pos = strpos($string, $r['search'], $pos + 1);
+          if(is_int($pos)) {
+            $string = substr_replace($string, $r['replace'], $pos, strlen($r['search']));
+
+            // adapt $pos to the now changed offset
+            $pos = $pos + strlen($r['replace']) - strlen($r['search']);
+          } else {
+            // no more match in the string
+            break;
+          }
+        }
+      }
+    }
+
+    return $string;
+  }
 
 }

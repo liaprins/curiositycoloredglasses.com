@@ -264,11 +264,11 @@ class Page extends \Page {
 
     $this->changes()->update($changes);
 
-    // remove all thumbs for the old id
-    $old->removeThumbs();
+    // move the thumbs folder to the new id
+    $this->moveThumbs($old);
 
     // hit the hook
-    kirby()->trigger($event, [$this, $old]);
+    kirby()->trigger('panel.page.move', [$this, $old]);
   
   }
 
@@ -310,7 +310,7 @@ class Page extends \Page {
     // run the hook if the number changed
     if($old->num() != $this->num()) {
       // hit the hook
-      kirby()->trigger($event, array($this, $old));
+      kirby()->trigger('panel.page.sort', [$this, $old]);
     }
 
     return $this->num();
@@ -339,7 +339,8 @@ class Page extends \Page {
 
     parent::hide();
     $this->sorter()->hide();
-    kirby()->trigger($event, [$this, $old]);
+
+    kirby()->trigger('panel.page.hide', [$this, $old]);
 
   }
 
@@ -350,7 +351,7 @@ class Page extends \Page {
 
     if($mode === 'default') {
 
-      if($position > 0) {
+      if($position > 0 || $this->isInvisible()) {
         $this->sort($position);                  
       } else {
         $this->hide();
@@ -405,6 +406,10 @@ class Page extends \Page {
 
   public function update($data = array(), $lang = null) {
 
+    if($this->options()->update() === false) {
+      throw new PermissionsException();
+    }
+
     // create the update event
     $event = $this->event('update:action', [
       'data' => $data
@@ -450,7 +455,7 @@ class Page extends \Page {
     $event->check();
 
     // delete the page
-    parent::delete();
+    parent::delete(true);
 
     // resort the siblings
     $this->sorter()->delete();
@@ -545,9 +550,11 @@ class Page extends \Page {
     if($newTemplate == $oldTemplate) return true;
 
     if($this->site()->multilang()) {
-      
-      foreach($this->site()->languages() as $lang) {
-        $old = $this->textfile(null, $lang->code());
+
+      // make sure to update the default language first
+      // otherwise updating the content file won't work properly
+      foreach($this->site()->languages()->sortBy('isDefault', 'desc') as $lang) {
+        $old = $this->textfile($oldTemplate, $lang->code());
         $new = $this->textfile($newTemplate, $lang->code());
         f::move($old, $new);
         $this->reset();
@@ -626,8 +633,20 @@ class Page extends \Page {
   }
 
   /**
+   * Moves the thumbs of an old page object
+   * to the ones for the current page
+   *
+   * @param Page $old
+   */
+  public function moveThumbs($old) {
+    $oldPath = $this->kirby()->roots()->thumbs() . DS . $old->id();
+    $newPath = $this->kirby()->roots()->thumbs() . DS . $this->id();
+
+    return dir::move($oldPath, $newPath);
+  }
+
+  /**
    * Clean the thumbs folder for the page
-   * 
    */
   public function removeThumbs() {
     return dir::remove($this->kirby()->roots()->thumbs() . DS . $this->id());

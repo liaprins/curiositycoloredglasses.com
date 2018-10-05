@@ -66,7 +66,7 @@
 				<?php echo $page->text()->kirbytext() ?>
 			</span>
 
-			<p id="qqtest">hola</p>
+			<!-- <p id="qqtest">hola</p> -->
 
 			<!-- </div> -->
 
@@ -81,7 +81,11 @@
 	    	    
 		        <?php $qqsubpage = $qqfile->name(); ?>
 
-    	    	<span class="qqpiece">
+		        <!-- Setting up the margin-width randomizer for binoculars' relative positions -->
+                <?php $margins = array('2rem', '-1.5rem', '-1rem', '-0.5rem', '0rem', '0.5rem', '1rem', '1.5rem', '2rem'); ?>
+                <?php $rand_margin = $margins[array_rand($margins)]; ?>
+
+    	    	<span class="qqpiece" style="margin-left: <?= $rand_margin ?>; margin-top: <?= $rand_margin ?>">
 
 					<!-- SHOWN BINOCULARS + BACKGROUNDS -->
 					<div data-clickable="yes" data-id="<?php echo $qqfile->name() ?>" class="qqglassescontainer <?php if ($qqfile->category() == 'large'): ?>largeqqglasses<?php endif ?><?php if ($qqfile->category() == 'medium'): ?>mediumqqglasses<?php endif ?><?php if ($qqfile->category() == 'small'): ?>smallqqglasses<?php endif ?>" title="<?php echo $qqfile->question() ?>" alt="<?php echo $qqfile->question() ?>">

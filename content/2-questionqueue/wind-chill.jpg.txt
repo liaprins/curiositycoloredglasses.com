@@ -1,4 +1,4 @@
-Question: How is wind chill calculated?
+Question: Wind chill
 
 ----
 
@@ -10,4 +10,4 @@ Category: medium
 
 ----
 
-Sort: 21
+Sort: 26

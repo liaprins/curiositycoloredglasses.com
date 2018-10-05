@@ -1,4 +1,4 @@
-Question: What makes fluorescent colors look so bright?
+Question: Fluorescence
 
 ----
 
@@ -10,4 +10,4 @@ Category: medium
 
 ----
 
-Sort: 30
+Sort: 24

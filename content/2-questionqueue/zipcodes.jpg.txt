@@ -1,4 +1,4 @@
-Question: How are zipcodes assigned?
+Question: Zip code
 
 ----
 
@@ -10,4 +10,4 @@ Category: medium
 
 ----
 
-Sort: 29
+Sort: 28

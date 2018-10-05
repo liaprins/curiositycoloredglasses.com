@@ -1,4 +1,4 @@
-Question: Which part of the plant are bananas? The seed?
+Question: Banana
 
 ----
 
@@ -10,4 +10,4 @@ Category: medium
 
 ----
 
-Sort: 24
+Sort: 25
