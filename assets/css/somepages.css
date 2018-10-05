@@ -790,6 +790,7 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
 
 .qqpiece {
     position: absolute;
+    display: block;    /* testing! */
 }
 
 .qqcontents {

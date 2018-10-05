@@ -1,4 +1,4 @@
-Question: How do bugs breathe? Do they have cardiovascular systems?
+Question: Bug breath
 
 ----
 
@@ -10,4 +10,4 @@ Category: medium
 
 ----
 
-Sort: 25
+Sort: 30

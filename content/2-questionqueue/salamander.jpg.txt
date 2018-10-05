@@ -1,4 +1,4 @@
-Question: Do salamanders and other amphibians start out as tadpoles too?
+Question: Salamander
 
 ----
 
@@ -10,4 +10,4 @@ Category: medium
 
 ----
 
-Sort: 20
+Sort: 21
