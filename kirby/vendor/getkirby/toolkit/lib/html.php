@@ -14,6 +14,17 @@
 class Html {
 
   /**
+   * Can be used to switch to trailing slashes if required
+   * 
+   * ```php
+   * html::$void = ' />'
+   * ```
+   * 
+   * @var string $void
+   */
+  public static $void = '>';
+
+  /**
    * An internal store for a html entities translation table
    *
    * @return array
@@ -159,7 +170,7 @@ class Html {
     if(!empty($attr)) $html .= ' ' . $attr;
 
     if(static::isVoid($name)) {
-      $html .= '>';
+      $html .= static::$void;
     } else {
       $html .= '>' . $content . '</' . $name . '>';
     }
@@ -192,7 +203,16 @@ class Html {
     } else if(is_bool($value)) {
       return $value === true ? strtolower($name) : '';
     } else {
-      return strtolower($name) . '="' . htmlspecialchars(is_array($value) ? implode(' ', $value) : $value) . '"';      
+      if(is_array($value)) {
+        if(isset($value['value']) && isset($value['escape'])) {
+          $value = $value['escape'] === true ? htmlspecialchars($value['value']) : $value['value'];
+        } else {
+          $value = implode(' ', $value);
+        }
+      } else {
+        $value = htmlspecialchars($value);
+      }
+      return strtolower($name) . '="' . $value . '"';      
     }
 
   }
@@ -229,7 +249,12 @@ class Html {
       $text = str::encode(a::first(str::split($email, '?'))); 
     }
     $email = str::encode($email);
-    $attr  = array_merge(array('href' => 'mailto:' . $email), $attr);
+    $attr  = array_merge([
+      'href' => [
+        'value'  => 'mailto:' . $email,
+        'escape' => false
+      ]
+    ], $attr);
     return static::tag('a', $text, $attr);
   }
 
@@ -247,10 +272,13 @@ class Html {
 
   /**
    * Generates a HTML5 shiv script tag with additional comments for older IEs
+   * @deprecated
    *
    * @return string the generated html
    */
   public static function shiv() {
+    trigger_error('The html::shiv() method is deprecated and should not be used anymore.', E_USER_DEPRECATED);
+    
     return '<!--[if lt IE 9]>' . PHP_EOL .
            '<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>' . PHP_EOL .
            '<![endif]-->' . PHP_EOL;

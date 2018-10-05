@@ -92,8 +92,8 @@ class Collection extends I implements Countable {
   }
 
   /**
-   * Checks if an element is in the collection by key. 
-   * 
+   * Checks if an element is in the collection by key.
+   *
    * @param string $key
    * @return boolean
    */
@@ -196,13 +196,13 @@ class Collection extends I implements Countable {
   public function shuffle() {
     $keys = array_keys($this->data);
     shuffle($keys);
-    
+
     $collection = clone $this;
     $collection->data = array();
     foreach($keys as $key) {
       $collection->data[$key] = $this->data[$key];
     }
-    
+
     return $collection;
   }
 
@@ -340,7 +340,7 @@ class Collection extends I implements Countable {
         } else {
           ${"param_$i"} = array();
           foreach($array as $index => $row) {
-            ${"param_$i"}[$index] = str::ascii(is_array($row) ? str::lower($row[$param]) : str::lower($row->$param()));
+            ${"param_$i"}[$index] = is_array($row) ? str::lower($row[$param]) : str::lower($row->$param());
           }
         }
       } else {
@@ -544,7 +544,7 @@ class Collection extends I implements Countable {
     } else {
       $lowerkeys = array_change_key_case($this->data, CASE_LOWER);
       if(isset($lowerkeys[strtolower($key)])) {
-        return $lowerkeys[$key];
+        return $lowerkeys[strtolower($key)];
       } else {
         return $default;
       }
@@ -572,7 +572,7 @@ class Collection extends I implements Countable {
 
   /**
    * Improved var_dump() output
-   * 
+   *
    * @return array
    */
   public function __debuginfo() {
@@ -597,9 +597,9 @@ collection::$filters['=='] = function($collection, $field, $value, $split = fals
 
     if($split) {
       $values = str::split((string)collection::extractValue($item, $field), $split);
-      if(!in_array($value, $values)) unset($collection->$key);
+      if(!in_array($value, $values)) unset($collection->data[$key]);
     } else if(collection::extractValue($item, $field) != $value) {
-      unset($collection->$key);
+      unset($collection->data[$key]);
     }
 
   }
@@ -621,9 +621,9 @@ collection::$filters['in'] = function($collection, $field, $value, $split = fals
       foreach($value as $v) {
         if(in_array($v, $values)) $match = true;
       }
-      if(!$match) unset($collection->$key);
+      if(!$match) unset($collection->data[$key]);
     } else if(!in_array(collection::extractValue($item, $field), $value)) {
-      unset($collection->$key);
+      unset($collection->data[$key]);
     }
 
   }
@@ -638,9 +638,9 @@ collection::$filters['!='] = function($collection, $field, $value, $split = fals
   foreach($collection->data as $key => $item) {
     if($split) {
       $values = str::split((string)collection::extractValue($item, $field), $split);
-      if(in_array($value, $values)) unset($collection->$key);
+      if(in_array($value, $values)) unset($collection->data[$key]);
     } else if(collection::extractValue($item, $field) == $value) {
-      unset($collection->$key);
+      unset($collection->data[$key]);
     }
   }
 
@@ -659,12 +659,12 @@ collection::$filters['not in'] = function($collection, $field, $value, $split = 
 
       foreach($value as $v) {
         if(in_array($v, $values)) {
-          unset($collection->$key);
+          unset($collection->data[$key]);
           break;
         }
       }
     } else if(in_array(collection::extractValue($item, $field), $value)) {
-      unset($collection->$key);
+      unset($collection->data[$key]);
     }
 
   }
@@ -681,12 +681,12 @@ collection::$filters['*='] = function($collection, $field, $value, $split = fals
       $values = str::split((string)collection::extractValue($item, $field), $split);
       foreach($values as $val) {
         if(strpos($val, $value) === false) {
-          unset($collection->$key);
+          unset($collection->data[$key]);
           break;
         }
       }
     } else if(strpos(collection::extractValue($item, $field), $value) === false) {
-      unset($collection->$key);
+      unset($collection->data[$key]);
     }
   }
 
@@ -699,7 +699,7 @@ collection::$filters['>'] = function($collection, $field, $value) {
 
   foreach($collection->data as $key => $item) {
     if(collection::extractValue($item, $field) > $value) continue;
-    unset($collection->$key);
+    unset($collection->data[$key]);
   }
 
   return $collection;
@@ -711,7 +711,7 @@ collection::$filters['>='] = function($collection, $field, $value) {
 
   foreach($collection->data as $key => $item) {
     if(collection::extractValue($item, $field) >= $value) continue;
-    unset($collection->$key);
+    unset($collection->data[$key]);
   }
 
   return $collection;
@@ -723,7 +723,7 @@ collection::$filters['<'] = function($collection, $field, $value) {
 
   foreach($collection->data as $key => $item) {
     if(collection::extractValue($item, $field) < $value) continue;
-    unset($collection->$key);
+    unset($collection->data[$key]);
   }
 
   return $collection;
@@ -735,7 +735,7 @@ collection::$filters['<='] = function($collection, $field, $value) {
 
   foreach($collection->data as $key => $item) {
     if(collection::extractValue($item, $field) <= $value) continue;
-    unset($collection->$key);
+    unset($collection->data[$key]);
   }
 
   return $collection;

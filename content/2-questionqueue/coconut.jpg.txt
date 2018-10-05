@@ -1,4 +1,4 @@
-Question: What are those three dots that coconuts have?
+Question: Coconut
 
 ----
 
@@ -6,8 +6,8 @@ Explanation: TBD
 
 ----
 
-Category: medium
+Category: small
 
 ----
 
-Sort: 28
+Sort: 33

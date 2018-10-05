@@ -1,4 +1,4 @@
-Question: Why are bowling alleys seemingly always windowless?
+Question: Bowling alley
 
 ----
 
@@ -10,4 +10,4 @@ Category: medium
 
 ----
 
-Sort: 32
+Sort: 29
