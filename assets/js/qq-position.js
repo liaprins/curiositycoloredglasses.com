@@ -122,28 +122,28 @@ function qqPosition() {
 
     if (smallRemainder == 1) {
         // last pair; 1st column
-        allSmallPairs[smallPairCount - 1].parentNode.style.left = 'calc(50vw - 650px)';
+        allSmallPairs[smallPairCount - 1].parentNode.style.left = 'calc(50vw - 450px)';
         allSmallPairs[smallPairCount - 1].parentNode.style.top = ((265 * k) + 150) + 'px';
     }
 
     if (smallRemainder == 2) {
         // 2nd-to-last pair; 1st column
-        allSmallPairs[smallPairCount - 2].parentNode.style.left = 'calc(50vw - 650px)';
+        allSmallPairs[smallPairCount - 2].parentNode.style.left = 'calc(50vw - 450px)';
         allSmallPairs[smallPairCount - 2].parentNode.style.top = ((265 * k) + 150) + 'px';
         // last pair; 2nd column
-        allSmallPairs[smallPairCount - 1].parentNode.style.left = 'calc(50vw - 400px)';
+        allSmallPairs[smallPairCount - 1].parentNode.style.left = 'calc(50vw - 150px)';
         allSmallPairs[smallPairCount - 1].parentNode.style.top = ((265 * k) + 150) + 'px';
     }
 
     if (smallRemainder == 3) {
         // 3rd-to-last pair; 1st column
-        allSmallPairs[smallPairCount - 3].parentNode.style.left = 'calc(50vw - 650px)';
+        allSmallPairs[smallPairCount - 3].parentNode.style.left = 'calc(50vw - 450px)';
         allSmallPairs[smallPairCount - 3].parentNode.style.top = ((265 * k) + 150) + 'px';
         // 2nd-to-last pair; 2nd column
-        allSmallPairs[smallPairCount - 2].parentNode.style.left = 'calc(50vw - 400px)';
+        allSmallPairs[smallPairCount - 2].parentNode.style.left = 'calc(50vw - 150px)';
         allSmallPairs[smallPairCount - 2].parentNode.style.top = ((265 * k) + 150) + 'px';
         // last pair; 3rd column
-        allSmallPairs[smallPairCount - 1].parentNode.style.left = 'calc(50vw - 150px)';
+        allSmallPairs[smallPairCount - 1].parentNode.style.left = 'calc(50vw + 250px)';
         allSmallPairs[smallPairCount - 1].parentNode.style.top = ((265 * k) + 150) + 'px';
     }
 
