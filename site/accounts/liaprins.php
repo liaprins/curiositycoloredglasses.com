@@ -2,7 +2,7 @@
 
 username: liaprins
 password: >
-  $2a$10$sr8nxw/Z4VtyJP1z7Tvs8.5YV3xc8vu2nuJCih6UOUVg1.wMVc66y
+  $2y$10$e685F1FTIOl/Ij/8Rf1FIOkFZHUehp24W8yIv7AHy6b665Qii/cuC
 email: liajprins@gmail.com
 language: en
 role: admin

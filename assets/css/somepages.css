@@ -917,10 +917,34 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
     background-position: 0% 50%;
 }
 
+/* QQ BOXES TESTING -------------------------------------------------- */
 
+.largeqqbox,
+.mediumqqbox,
+.smallqqbox {
+    position: absolute;
+}
 
+.largeqqbox {
+    background-color: purple;
+    opacity: 0.5;
+    width: 209px;
+    height: 96.4px;
+}
 
+.mediumqqbox {
+    background-color: blue;
+    opacity: 0.5;
+    width: calc(209px * 0.75);
+    height: calc(96.4px * 0.75);
+}
 
+.smallqqbox {
+    background-color: green;
+    opacity: 0.5;
+    width: calc(209px * 0.5);
+    height: calc(96.4px * 0.5);
+}
 
 
 

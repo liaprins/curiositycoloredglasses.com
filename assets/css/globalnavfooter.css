@@ -30,10 +30,7 @@ main {    /* :) This is for all content except nav and footer on all pages; "con
 
 :focus {    /* Getting rid of browser's default focus ring (for now), since it automatically applies to nav search when clicked on, and yellow x when menu is opened */ 
     outline: none;    }
-/*
-#loadbg {
-    visibility: hidden;    }
-*/
+
 .yellowhover:hover {    /* For all hover states with a yellow background */
     background-color: #e2e43a;
     color: black;    } 
