@@ -21,7 +21,6 @@ pages:
 
 //file settings 
 files: 
-  sortable: true
   type: 
     - image
   fields:
