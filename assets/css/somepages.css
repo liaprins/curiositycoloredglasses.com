@@ -822,11 +822,13 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
 .mediumqqglasses {
     width: calc(var(--container-width-big) * 0.75);
     height: calc(var(--container-height-big) * 0.75);
+    opacity: 0.9;
 }
 
 .smallqqglasses {
     width: calc(var(--container-width-big) * 0.5);
     height: calc(var(--container-height-big) * 0.5);
+    opacity: 0.8;
 }
 
 .lens {
@@ -928,22 +930,22 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
 .largeqqbox {
     background-color: purple;
     opacity: 0.5;
-    width: 209px;
-    height: 96.4px;
+    width: calc(209px + 2.5rem);
+    height: calc(96.4px + 2.5rem);
 }
 
 .mediumqqbox {
     background-color: blue;
     opacity: 0.5;
-    width: calc(209px * 0.75);
-    height: calc(96.4px * 0.75);
+    width: calc((209px * 0.75) + 2.5rem);
+    height: calc((96.4px * 0.75) + 2.5rem);
 }
 
 .smallqqbox {
     background-color: green;
     opacity: 0.5;
-    width: calc(209px * 0.5);
-    height: calc(96.4px * 0.5);
+    width: calc((209px * 0.5) + 2.5rem);
+    height: calc((96.4px * 0.5) + 2.5rem);
 }
 
 

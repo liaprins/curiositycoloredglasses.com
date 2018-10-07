@@ -39,16 +39,16 @@
     </script>
 
     <!-- positions glasses -->
-    <!--
+    
     <script src="assets/js/qq-position.js">
     </script>
-	-->
+	
 
     <!-- parallax scroll -->
-    <!--
+    
     <script src="assets/js/qq-parallax.js">
     </script>
-	-->
+	
 
     <!-- TEST!!! boxes -->
     
@@ -90,14 +90,11 @@
 		        <?php $qqsubpage = $qqfile->name(); ?>
 
 		        <!-- Setting up the margin-width randomizer for binoculars' relative positions -->
-                <!--
-                <?php $margins = array('2rem', '-1.5rem', '-1rem', '-0.5rem', '0rem', '0.5rem', '1rem', '1.5rem', '2rem'); ?>
+                <?php $margins = array('0rem', '0.5rem', '1rem', '1.5rem', '2rem', '2.5rem'); ?>
                 <?php $rand_margin = $margins[array_rand($margins)]; ?>
     	    	<span class="qqpiece" style="margin-left: <?= $rand_margin ?>; margin-top: <?= $rand_margin ?>">
-				-->
-
-				<!--
-				<span class="qqpiece">
+				
+				<!-- <span class="qqpiece"> -->
 
 					<div data-clickable="yes" data-id="<?php echo $qqfile->name() ?>" class="qqglassescontainer <?php if ($qqfile->category() == 'large'): ?>largeqqglasses<?php endif ?><?php if ($qqfile->category() == 'medium'): ?>mediumqqglasses<?php endif ?><?php if ($qqfile->category() == 'small'): ?>smallqqglasses<?php endif ?>" title="<?php echo $qqfile->question() ?>" alt="<?php echo $qqfile->question() ?>">
     			    	<div data-innards-clickable="yes" class="lens l-lens" style="background-image: url(<?php echo $qqfile->url() ?>)"></div>
@@ -113,13 +110,13 @@
 					</div>
 
 				</span>
-				-->
 
 
 				<!-- BOXES -->
+				
 				<div data-id="<?php echo $qqfile->name() ?>" class="qqbox <?php if ($qqfile->category() == 'large'): ?>largeqqbox<?php endif ?><?php if ($qqfile->category() == 'medium'): ?>mediumqqbox<?php endif ?><?php if ($qqfile->category() == 'small'): ?>smallqqbox<?php endif ?>">
 				</div>
-
+				
 
 
     		    <?php endforeach ?>
