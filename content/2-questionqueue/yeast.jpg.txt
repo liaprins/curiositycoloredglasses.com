@@ -10,4 +10,4 @@ Explanation: What is it?
 
 ----
 
-Category: large
+Category: medium
