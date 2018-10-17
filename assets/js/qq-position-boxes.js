@@ -461,14 +461,14 @@ function qqBoxPosition() {
                 allSmallPairs[smallPairCount - 2].style.left = 'calc(50vw - 42.106vw)';
                 allSmallPairs[smallPairCount - 2].style.top = ((26.52 * (i / 2)) - 0.57) + 'vw';
                 // last pair; 2nd column
-                allSmallPairs[smallPairCount - 1].style.left = 'calc(50vw + 28.315vw)';
+                allSmallPairs[smallPairCount - 1].style.left = 'calc(50vw - 7.018vw)';
                 allSmallPairs[smallPairCount - 1].style.top = ((26.52 * (i / 2)) - 0.57) + 'vw';
             } else {
                 // 2nd-to-last pair; 1st column
                 allSmallPairs[smallPairCount - 2].style.left = 'calc(50vw - 516px)';
                 allSmallPairs[smallPairCount - 2].style.top = ((325 * (i / 2)) - 7) + 'px';
                 // last pair; 2nd column
-                allSmallPairs[smallPairCount - 1].style.left = 'calc(50vw + 347px)';
+                allSmallPairs[smallPairCount - 1].style.left = 'calc(50vw - 86px)';
                 allSmallPairs[smallPairCount - 1].style.top = ((325 * (i / 2)) - 7) + 'px';
             } // close qqScreenWidth
         } // close remainder 2

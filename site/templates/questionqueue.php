@@ -51,13 +51,13 @@
 	
 
     <!-- TEST!!! boxes -->
-    
+    <!--
     <script src="assets/js/qq-position-boxes.js">
     </script>
     
     <script src="assets/js/qq-parallax-boxes.js">
     </script>
-	
+	-->
 	
 
 <!-- *************************************** ^^^^^ LEAVE ALONE ^^^^^ *************************************** -->
@@ -95,7 +95,7 @@
     	    	<span class="qqpiece" style="margin-left: <?= $rand_margin ?>; margin-top: <?= $rand_margin ?>">
 				
 				<!-- <span class="qqpiece"> -->
-
+					
 					<div data-clickable="yes" data-id="<?php echo $qqfile->name() ?>" class="qqglassescontainer <?php if ($qqfile->category() == 'large'): ?>largeqqglasses<?php endif ?><?php if ($qqfile->category() == 'medium'): ?>mediumqqglasses<?php endif ?><?php if ($qqfile->category() == 'small'): ?>smallqqglasses<?php endif ?>" title="<?php echo $qqfile->question() ?>" alt="<?php echo $qqfile->question() ?>">
     			    	<div data-innards-clickable="yes" class="lens l-lens" style="background-image: url(<?php echo $qqfile->url() ?>)"></div>
     			    	<div data-innards-clickable="yes" class="knob"></div>
@@ -108,15 +108,15 @@
 						<div class="qqquestion s-display"><?php echo $qqfile->question() ?></div>
 						<div class="qqdescription m-textface"><?php echo $qqfile->explanation() ?></div>
 					</div>
-
+					
 				</span>
 
 
 				<!-- BOXES -->
-				
+				<!--
 				<div data-id="<?php echo $qqfile->name() ?>" class="qqbox <?php if ($qqfile->category() == 'large'): ?>largeqqbox<?php endif ?><?php if ($qqfile->category() == 'medium'): ?>mediumqqbox<?php endif ?><?php if ($qqfile->category() == 'small'): ?>smallqqbox<?php endif ?>">
 				</div>
-				
+				-->
 
 
     		    <?php endforeach ?>
