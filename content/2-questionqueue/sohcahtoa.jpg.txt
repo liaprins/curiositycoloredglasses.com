@@ -14,4 +14,4 @@ Explanation: SOHCAHTOA in the pre-TI-83 landscape
 
 ----
 
-Category: large
+Category: medium
