@@ -27,11 +27,6 @@ main {
 
 :focus {
     outline: none;    }
-*/
-
-
-*, *:before, *:after {
-    box-sizing: border-box;   }
 
 .yellowhover:hover { 
     background-color: #e2e43a;
@@ -42,6 +37,7 @@ main {
   -moz-transition: background-color .2s ease-out;
   -o-transition: background-color .2s ease-out;
   transition: background-color .2s ease-out;    } 
+*/
 
 
 /* NAV -------------------------------------------------- */
@@ -97,27 +93,10 @@ summary {
 
 /* FOOTER -------------------------------------------------- */
 
-#background {
-    background-color: orange;
-    opacity: 0.2;
-    /* height: calc(1731px + 212px); */
-    position: relative;
-    z-index: -5;
-    width: 100%;
-}
-
-
-@media only screen and (min-width: 1225px) {
-
-
-
-}
-
-
 footer {
-    position: relative;
+    position: absolute;
     bottom: 0;
-    width: 100%;
+    width: 100vw;
     background-color: #e2e43a;
     padding: 10.714vw 0;    }    /* 3/28 cols to pad top and bottom of yellow BG */
 
@@ -156,7 +135,7 @@ footer {
     border-width: 0.125rem;
     border-color: black;    
     padding: 0.125rem 0.469rem 0 0.469rem;
-    height: 1.8rem;
+    height: 1.875rem;
     -webkit-transition: color .2s ease-out;    /* for hover ease-in on Subscribe button's text */
     -moz-transition: color .2s ease-out;
     -o-transition: color .2s ease-out;
@@ -177,7 +156,6 @@ footer {
     background-color: #e2e43a;    }    /* Making the button BG color match the yellow footer background */
 
 #subscribemessage {    /* "I'll only ever email you to let you know about..." */
-    font-family: 'Sintesi_Sans_Light', Geneva, Verdana, "Lucida Sans", "Lucida Grande", Arial, sans-serif;    /* This font wasn't being recognized when it was just the default in <body> so had to explicitly call it here */
     margin-bottom: 1.024rem;    }    /* 0.5 lineheight */
 #subscribemessage a {    /* Email subscribe explanation's link to example campaigns | May end up unnecessary if I apply a default underline to all content or <p> links */
     text-decoration: underline;
@@ -199,15 +177,12 @@ footer {
 
 .followicon {
     display: inline;
-    float: left;
-    position: relative;
-    top: -0.3rem;    }
-
-#instagramlogo {
-    padding-left: 0;    }
+    float: left;    }
 
 #portfolio {    /* "liaprins.com" */
     margin-left: 0.422rem;    }
+
+
 
 
 

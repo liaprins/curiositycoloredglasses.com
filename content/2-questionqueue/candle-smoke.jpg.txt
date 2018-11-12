@@ -6,8 +6,8 @@ Explanation: TBD
 
 ----
 
-Category: large
+Category: medium
 
 ----
 
-Sort: 31
+Sort: 30

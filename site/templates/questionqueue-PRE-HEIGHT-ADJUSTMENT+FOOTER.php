@@ -28,7 +28,6 @@
 
  	<!-- Media queries -->
  	<?php echo css('assets/css/mediaqueries.css') ?>
- 	<?php echo css('assets/css/qqmediaqueries-override.css') ?>
 
 
 </head>
@@ -75,7 +74,7 @@
 				<?php echo $page->text()->kirbytext() ?>
 			</span>
 
-			<p id="qqtest">hola</p>
+			<!-- <p id="qqtest">hola</p> -->
 
 			<!-- </div> -->
 
@@ -124,9 +123,7 @@
 
     		</div>    <!-- close .qqparent -->
 
-    <div id="background"></div>
-
-	<?php snippet('footer-sitewide') ?>
+	<!-- <?php snippet('f o o t e r-sitewide') ?> -->
 
 
 <!-- *************************************** vvvvv footer.php snippet vvvvv LEAVE ALONE vvvvv *************************************** -->
