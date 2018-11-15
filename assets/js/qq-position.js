@@ -250,30 +250,25 @@ function qqBoxPosition() {
 
     // GETTING FOOTER TO STICK TO BOTTOM AT 1225+
     if (qqScreenWidth < 1225) {
-        // var binocularsArea = (smallPairRowCountInt * ((26.52 / 2) - 0.57));    /* ONLY FOR <1225!!! ((325 / 2) - 7)) + 'px' is the distance from the top of one small binoculars to the top of one in the next row  */
         var binocularsArea = (smallPairRowCountInt * ((26.52 / 2) - 0.57));    /* TESTING!!! ((325 / 2) - 7)) + 'px' is the distance from the top of one small binoculars to the top of one in the next row  */
         var background = document.getElementById('background');
         var qqPageTitleHeight = document.getElementById('qqpagetitle').offsetHeight;
-        var qqPageTextHeight = document.getElementById('qqpagetext').firstElementChild.offsetHeight;
-        // background.style.height = (binocularsArea - (qqPageTitleHeight + qqPageTextHeight)) + 'vw';
-        background.style.height = 'calc(' + binocularsArea + 'vw - ' + (parseInt(qqPageTitleHeight) + parseInt(qqPageTextHeight)) + 'px + 2.5rem)';
+        var qqPageTextHeight = document.getElementById('qqpagetext').firstElementChild.offsetHeight; 
+        // background.style.height = 'calc(' + binocularsArea + 'vw - ' + (parseInt(qqPageTitleHeight) + parseInt(qqPageTextHeight)) + 'px + 2.5rem)';
+        background.style.height = 'calc(' + (binocularsArea * 1.22) + 'vw - ' + (parseInt(qqPageTitleHeight) + parseInt(qqPageTextHeight)) + 'px + 2.5rem)';    // 1.22 comes from the scroll rate for small glasses in qq-parallax.js (the 1 comes from 100% scroll speed and the 0.22 comes from 22% slower than that...); 2.5rem comes from the maximum randomized margin set to each binoculars in questionqueue.php
         var footerHeight = document.getElementsByTagName('footer')[0].offsetHeight; 
         var body = document.getElementsByTagName('body')[0];
         body.style.height = binocularsArea + footerHeight;
-        // TEST!!!
-        document.getElementById('qqtest').innerHTML = '< 1225!' + body.offsetHeight;
     } else {
         var binocularsArea = (smallPairRowCountInt * ((325 / 2) - 7));    /* ONLY FOR 1225+!!! ((325 / 2) - 7)) + 'px' is the distance from the top of one small binoculars to the top of one in the next row  */
         var background = document.getElementById('background');
         var qqPageTitleHeight = document.getElementById('qqpagetitle').offsetHeight;
         var qqPageTextHeight = document.getElementById('qqpagetext').firstElementChild.offsetHeight;
-        // background.style.height = (binocularsArea - (qqPageTitleHeight + qqPageTextHeight)) + 'px';
-        background.style.height = 'calc(' + (binocularsArea - (qqPageTitleHeight + qqPageTextHeight)) + 'px + 2.5rem)';
+        // background.style.height = 'calc(' + (binocularsArea - (qqPageTitleHeight + qqPageTextHeight)) + 'px + 2.5rem)';
+        background.style.height = 'calc(' + ((binocularsArea * 1.22) - (qqPageTitleHeight + qqPageTextHeight)) + 'px + 2.5rem)';    // 1.22 comes from the scroll rate for small glasses in qq-parallax.js (the 1 comes from 100% scroll speed and the 0.22 comes from 22% slower than that...); 2.5rem comes from the maximum randomized margin set to each binoculars in questionqueue.php
         var footerHeight = document.getElementsByTagName('footer')[0].offsetHeight; 
         var body = document.getElementsByTagName('body')[0];
         body.style.height = binocularsArea + footerHeight;
-        // TEST!!!
-        document.getElementById('qqtest').innerHTML = '1225+!' + body.offsetHeight;
     }
 
 
