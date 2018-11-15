@@ -75,7 +75,7 @@
 				<?php echo $page->text()->kirbytext() ?>
 			</span>
 
-			<p id="qqtest">hola</p>
+			<!-- <p id="qqtest">hola</p> -->
 
 			<!-- </div> -->
 
