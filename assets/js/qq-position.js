@@ -271,9 +271,6 @@ function qqBoxPosition() {
         body.style.height = binocularsArea + footerHeight;
     }
 
-
-
-
     for (var i = 0; i < smallPairRowCountInt; i++) {
 
         if (([i] % 4) === 0) {

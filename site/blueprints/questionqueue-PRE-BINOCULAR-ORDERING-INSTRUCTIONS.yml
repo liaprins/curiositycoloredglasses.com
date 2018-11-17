@@ -14,6 +14,7 @@ pages: false
 
 //file settings
 files:
+  sortable: true
   type: 
     - image
   fields:

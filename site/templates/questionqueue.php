@@ -29,6 +29,7 @@
  	<!-- Media queries -->
  	<?php echo css('assets/css/mediaqueries.css') ?>
  	<?php echo css('assets/css/qqmediaqueries-override.css') ?>
+ 	<?php echo css('assets/css/qq-position-override.css') ?>
 
 
 </head>
