@@ -1,4 +1,4 @@
-Sort: 39
+Sort: 42
 
 ----
 
@@ -14,4 +14,4 @@ Explanation: SOHCAHTOA in the pre-TI-83 landscape
 
 ----
 
-Category: medium
+Category: large

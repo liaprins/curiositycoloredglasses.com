@@ -797,32 +797,6 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
     position: absolute;
 }
 
-.qqpiece:nth-child(2),
-.qqpiece:nth-child(3),
-.qqpiece:nth-child(11) {
-    top: 65px !important;
-}
-
-.qqpiece:nth-child(12) {
-    top: calc(295px + 25px) !important;
-}
-
-.qqpiece:nth-child(9) {
-    left: calc(50vw - 712.5px + 50px) !important;
-}
-
-.qqpiece:nth-child(13) {
-    left: calc(50vw + 320px + 200px) !important;
-}
-
-.qqpiece:nth-child(5),
-.qqpiece:nth-child(6),
-.qqpiece:nth-child(8) {
-    /* top: 200px !important; */
-    display: none !important;
-    /* background-color: blue; */
-}
-
 :root {
     --container-width-big: 17.05vw; 
     --container-height-big: 7.866vw; 
