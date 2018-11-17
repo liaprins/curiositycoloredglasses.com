@@ -797,11 +797,31 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
     position: absolute;
 }
 
-/*
-.qqpiece:nth-child(1) {
-    top: 200px !important;
+.qqpiece:nth-child(2),
+.qqpiece:nth-child(3),
+.qqpiece:nth-child(11) {
+    top: 65px !important;
 }
-*/
+
+.qqpiece:nth-child(12) {
+    top: calc(295px + 25px) !important;
+}
+
+.qqpiece:nth-child(9) {
+    left: calc(50vw - 712.5px + 50px) !important;
+}
+
+.qqpiece:nth-child(13) {
+    left: calc(50vw + 320px + 200px) !important;
+}
+
+.qqpiece:nth-child(5),
+.qqpiece:nth-child(6),
+.qqpiece:nth-child(8) {
+    /* top: 200px !important; */
+    display: none !important;
+    /* background-color: blue; */
+}
 
 :root {
     --container-width-big: 17.05vw; 
@@ -828,6 +848,7 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
 .mediumqqglasses,
 .smallqqglasses {
     position: absolute;
+    cursor: pointer;
 }
 
 .largeqqglasses {
@@ -896,6 +917,7 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
     height: 0;
     position: absolute;
     display: inline-block;
+    width: 28.5%;
 }
 
 .trapezoid-large {
@@ -904,7 +926,7 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
     border-top: calc(var(--container-width-big) * 0.145) solid black;    /* TRAPEZOID NEEDS PIXELS! */
     border-left: calc(var(--container-width-big) * 0.072) solid transparent;
     border-right: calc(var(--container-width-big) * 0.072) solid transparent;
-    width: 14.46%;
+    /* width: 14.46%; */
 }
 
 .trapezoid-medium {
@@ -913,7 +935,7 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
     border-top: calc(var(--container-width-big) * 0.145 * 0.75) solid black;
     border-left: calc(var(--container-width-big) * 0.072 * 0.75) solid transparent;
     border-right: calc(var(--container-width-big) * 0.072 * 0.75) solid transparent;
-    width: 14.46%;
+    /* width: 14.46%; */
 }
 
 .trapezoid-small {
@@ -922,7 +944,7 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
     border-top: calc(var(--container-width-big) * 0.145 * 0.5) solid black;
     border-left: calc(var(--container-width-big) * 0.072 * 0.5) solid transparent;
     border-right: calc(var(--container-width-big) * 0.072 * 0.5) solid transparent;
-    width: 14.46%;
+    /* width: 14.46%; */
 }
 
 .l-lens {
