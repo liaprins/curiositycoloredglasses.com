@@ -52,6 +52,7 @@
 	
 
     <!-- TEST!!! boxes -->
+    <!-- UNCOMMENT BELOW + UNCOMMENT "BOXES" BELOW TO MAKE THEM SHOW -->
     <!--
     <script src="assets/js/qq-position-boxes.js">
     </script>
@@ -68,7 +69,6 @@
 			<h2 id="qqpagetitle">
 				<?php echo $page->title()->kirbytext() ?>
 			</h2>
-
 
 			<!-- intro text for QQ page -->
 			<span id="qqpagetext" class="l-textface">
@@ -113,12 +113,11 @@
 				</span>
 
 
-				<!-- BOXES -->
+				<!-- BOXES UNCOMMENT BELOW + UNCOMMENT qq-position-boxes.js + qq-parallax-boxes.js ABOVE TO MAKE THEM SHOW -->
 				<!--
 				<div data-id="<?php echo $qqfile->name() ?>" class="qqbox <?php if ($qqfile->category() == 'large'): ?>largeqqbox<?php endif ?><?php if ($qqfile->category() == 'medium'): ?>mediumqqbox<?php endif ?><?php if ($qqfile->category() == 'small'): ?>smallqqbox<?php endif ?>">
 				</div>
 				-->
-
 
     		    <?php endforeach ?>
 

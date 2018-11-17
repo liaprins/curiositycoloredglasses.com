@@ -20,18 +20,18 @@ function getTops() {
         var bigGlassesStartTop = bigGlasses[i].setAttribute('data-start-top', bigGlasses[i].offsetTop);
     }  // closing i for-loop
 
-    /*
-    // BLOG NAME
-    var blogName = document.getElementById('blogname');
-    blogName.setAttribute('data-start-top', blogName.offsetTop);
+    /* // CANNOT GET THIS TO WORK :(  
+    // MENU
+    var menu = document.getElementById('navdetails');
+    menu.setAttribute('data-start-top', menu.offsetTop);
 
-    // TAGLINE
-    var tagline = document.getElementById('tagline');
-    tagline.setAttribute('data-start-top', tagline.offsetTop);
+    // PAGE TITLE
+    var pageTitle = document.getElementById('qqpagetitle');
+    pageTitle.setAttribute('data-start-top', pageTitle.offsetTop);
 
-    // COMING SOON BOX
-    var comingSoonBox = document.getElementById('comingsoonbox');
-    comingSoonBox.setAttribute('data-start-top', comingSoonBox.offsetTop);
+    // PAGE INTRO
+    var pageIntro = document.getElementById('qqpagetext');
+    pageIntro.setAttribute('data-start-top', pageIntro.offsetTop);
     */
 }
 
@@ -40,12 +40,6 @@ window.addEventListener('DOMContentLoaded', getTops, false);
 function parallaxScroll() {
     var scrollLeft = (window.pageXOffset !== undefined) ? window.pageXOffset : (document.documentElement || document.body.parentNode || document.body).scrollLeft;
     var scrollTop = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
-    
-    /*
-    // SMALL GLASSES BG IMG (REMOVE WHEN SCROLL RATIO IS FINALIZED) ---------------------------------
-    var smBGImg = document.getElementById('parallax-small');
-    smBGImg.style.top = -(scrollTop * 0.8) + 'px';
-    */
     
     // SMALL GLASSES
     // var smallGlasses = document.getElementsByClassName('smallqqglasses').parentNode;
@@ -58,11 +52,6 @@ function parallaxScroll() {
         smallGlasses[g].nextElementSibling.style.top = -((scrollTop * smallScrollRatio) - smallGlassesStartTopData) + 'px';
     }  // closing g for-loop
     
-    /*
-    // MEDIUM GLASSES BG IMG (REMOVE WHEN SCROLL RATIO IS FINALIZED) ---------------------------------
-    var medBGImg = document.getElementById('parallax-medium');
-    medBGImg.style.top = -(scrollTop * 0.888) + 'px';
-    */
     // MEDIUM GLASSES
     var mediumGlasses = document.getElementsByClassName('mediumqqglasses');
     var mediumScrollRatio = -0.16;
@@ -73,11 +62,6 @@ function parallaxScroll() {
         mediumGlasses[h].nextElementSibling.style.top = -((scrollTop * mediumScrollRatio) - mediumGlassesStartTopData) + 'px';
     }  // closing h for-loop
     
-    /*
-    // BIG GLASSES BG IMG (REMOVE WHEN SCROLL RATIO IS FINALIZED) ---------------------------------
-    var bigBGImg = document.getElementById('parallax-big');
-    bigBGImg.style.top = -(scrollTop * 0.968) + 'px';
-    */
     // BIG GLASSES
     var bigGlasses = document.getElementsByClassName('largeqqglasses');
     var bigScrollRatio = -0.035;
@@ -87,22 +71,26 @@ function parallaxScroll() {
         bigGlasses[i].style.top = -((scrollTop * bigScrollRatio) - bigGlassesStartTopData) + 'px';
         bigGlasses[i].nextElementSibling.style.top = -((scrollTop * bigScrollRatio) - bigGlassesStartTopData) + 'px';
     }  // closing i for-loop
-        
-    /*
-    // BLOG NAME
-    var blogName = document.getElementById('blogname');
-    var blogNameStartTopData = parseInt(blogName.getAttribute('data-start-top'));
-    blogName.style.top = -((scrollTop * 0.3) - blogNameStartTopData) + 'px';
+      
+    /* // CANNOT GET THIS TO WORK :(  
+    // MENU
+    var menu = document.getElementById('navdetails');
+    var menuStartTopData = parseInt(menu.getAttribute('data-start-top'));
+    menu.style.top = -((scrollTop * 0.3) - menuStartTopData) + 'px';
 
-    // TAGLINE
-    var tagline = document.getElementById('tagline');
-    var taglineStartTopData = parseInt(tagline.getAttribute('data-start-top'));
-    tagline.style.top = -((scrollTop * 0.2) - taglineStartTopData) + 'px';
+    // PAGE TITLE
+    var pageTitle = document.getElementById('qqpagetitle');
+    var pageTitleStartTopData = parseInt(pageTitle.getAttribute('data-start-top'));
+    pageTitle.style.top = -((scrollTop * 0.2) - pageTitleStartTopData) + 'px';
 
-    // COMING SOON BOX
-    var comingSoonBox = document.getElementById('comingsoonbox');
-    var comingSoonBoxStartTopData = parseInt(comingSoonBox.getAttribute('data-start-top'));
-    comingSoonBox.style.top = -((scrollTop * 0.1) - comingSoonBoxStartTopData) + 'px';
+    // PAGE TEXT
+    var pageText = document.getElementById('qqpagetext');
+    var pageTextStartTopData = parseInt(pageText.getAttribute('data-start-top'));
+    pageText.style.top = -((scrollTop * 0.1) - pageTextStartTopData) + 'px';
+
+    // TEST!!!!!!!!!!!!!!!!!
+    var qqTest = document.getElementById('qqtest');
+    qqTest.innerHTML = pageText.getAttribute('data-start-top');
     */
 }
 
