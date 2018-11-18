@@ -1,3 +1,11 @@
+/* PREVENTING HORIZONTAL SCROLLING (for some reason only needed for screenwidths 755px and below) -------------------------------------------------- */
+html, body {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+    position: relative;
+    left: 0vw;
+}
+
 *, *:before, *:after {
     box-sizing: border-box;   }
 
