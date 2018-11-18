@@ -4,7 +4,8 @@ html, body {
     overflow-x: hidden !important;
     position: relative;
     left: 0vw;
-}
+    color: black;
+    line-height: 1.7;    }
 
 *, *:before, *:after {
     box-sizing: border-box;   }
@@ -18,6 +19,57 @@ html, body {
   -moz-transition: background-color .2s ease-out;
   -o-transition: background-color .2s ease-out;
   transition: background-color .2s ease-out;    } 
+
+/* NAV -------------------------------------------------- */
+
+summary {    /* for FF, this hides the triangle toggle! */
+    display: block;    }
+
+#searchdecoy {
+    padding-bottom: 0.13rem;    /* Matching bottom padding of yellow menu, when #navsearchinput is open */
+    padding-top: 0.13rem;    }
+#searchdecoy:hover {
+    cursor: pointer;    }
+
+#navsearchform {    }
+
+.underlineinput {    /* Applies to both nav search bar and search page input fields */
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0!important;
+    border-bottom-left-radius: 0!important;
+    border-bottom-right-radius: 0!important;
+    -webkit-appearance: none !important;
+    border-style: none none solid none;
+    border-width: 0.125rem;    /* This will match the weight of the home glasses icon at any screensize */
+    border-color: black;
+    background-color: transparent;
+    color: black;    }    
+
+.searchbutton {    /* Applies to both nav search bar and search page buttons */
+    background-color: transparent;
+    border-style: none;
+    cursor: pointer;    }    /* This is to force the curser into a hand */
+
+#navsearchinput {
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+    -webkit-appearance: none  !important;
+    padding-bottom: 0.25rem;    /* :) Finessed the space between input word and underline bar to match space between input and bottom of field for subscribe + comment name fields */
+    width: calc(67.857vw - 1.6rem);    }
+
+#navsearchinput::-webkit-input-placeholder {    /* This is to make the placeholder text in Chrome look multiplied (because I can't get it to actually!) */
+   color: #686b31;    }    
+
+#navsearchbutton {    /* This refers to the button element holding the image */
+    height: 1.688rem;    /* For some reason for search icons/buttons, I had to put the padding on the button and account for its size to fit the img perfectly inside; if I tried to use box-sizing:content-box and put the padding on the img, it raised up the icon and couldn't figure out how to get it level except this method */
+    padding: 0.422rem 0 0.422rem 0.422rem;    }
+
+.navsearchicon {    /* This refers to the magnifier SVG image, for both the real search button, and the decoy */
+    display: inline;
+    height: 0.844rem;    }
+
 
 
 /* FOOTER -------------------------------------------------- */
