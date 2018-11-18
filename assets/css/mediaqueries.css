@@ -587,6 +587,7 @@
         float: right;    }
     #searchdecoy {
         height: 1.476rem;
+        width: 1.476rem;    /* TESTING! */
         padding: 0 0.316rem 0.316rem 0.316rem;    }
     #navsearchinput {
         width: calc(291.667px - 3.586rem);    }
