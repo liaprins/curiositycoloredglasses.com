@@ -1,35 +1,3 @@
-/*
-html {
-    height: 100%;
-    font-size: 1em;    }
-
-body {
-    overflow-x: hidden;
-    width: 100%;
-    -webkit-box-sizing: border-box;
-       -moz-box-sizing: border-box;
-            box-sizing: border-box;   
-    position: relative;         
-    min-height: 100%;
-    padding-bottom: calc(32.142vw + 10.272rem);    
-    background-color: white;
-    color: black;
-    font-family: 'Sintesi_Sans_Light', 'Courier_New', Courier, Monotype;
-    line-height: 1.7;   }
-
-main {
-    max-width: 1225px;
-    width: 78.571%;    
-    margin: 0 auto;    }
-
-*, *:before, *:after {
-    box-sizing: border-box;   }
-
-:focus {
-    outline: none;    }
-*/
-
-
 *, *:before, *:after {
     box-sizing: border-box;   }
 
@@ -44,62 +12,13 @@ main {
   transition: background-color .2s ease-out;    } 
 
 
-/* NAV -------------------------------------------------- */
-/*
-summary {    
-    display: block;    }
-
-#searchdecoy {
-    padding-bottom: 0.13rem;    
-    padding-top: 0.13rem;    }
-#searchdecoy:hover {
-    cursor: pointer;    }
-
-#navsearchform {    }
-
-.underlineinput {    
-    border-top-left-radius: 0 !important;
-    border-top-right-radius: 0!important;
-    border-bottom-left-radius: 0!important;
-    border-bottom-right-radius: 0!important;
-    -webkit-appearance: none !important;
-    border-style: none none solid none;
-    border-width: 0.125rem;    
-    border-color: black;
-    background-color: transparent;
-    color: black;    }    
-
-.searchbutton {    
-    background-color: transparent;
-    border-style: none;
-    cursor: pointer;    }   
-
-#navsearchinput {
-    border-top-left-radius: 0 !important;
-    border-top-right-radius: 0 !important;
-    border-bottom-left-radius: 0 !important;
-    border-bottom-right-radius: 0 !important;
-    -webkit-appearance: none  !important;
-    padding-bottom: 0.25rem;    
-    width: calc(67.857vw - 1.6rem);    }
-
-#navsearchinput::-webkit-input-placeholder {    
-   color: #686b31;    }    
-
-#navsearchbutton {   
-    height: 1.688rem;
-    padding: 0.422rem 0 0.422rem 0.422rem;    }
-
-.navsearchicon {    
-    display: inline;
-    height: 0.844rem;    }
-*/
-
 /* FOOTER -------------------------------------------------- */
 
 #background {
-    /* background-color: orange;
-    opacity: 0.2; */
+    /*
+    background-color: orange;
+    opacity: 0.2;
+    */
     position: relative;
     z-index: -5;
     width: 100%;

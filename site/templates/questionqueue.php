@@ -15,16 +15,11 @@
  	<!-- Calls the stylesheet that hold the designs -->
  	<!-- Will combine these into one style sheet by copying and pasting the contents together, once 100% finished, for performance reasons -->
  	<?php echo css('assets/css/fonts.css') ?>
- 	<!-- WHEN globalnavfooter IS ON, NO PARALLAX; WHEN OFF, YES PARALLAX BUT GLASSES ICONS FALL APART -->
- 	<!-- <?php echo css('assets/css/globalnavfooter.css') ?> -->
  	<?php echo css('assets/css/qqnavfooter.css') ?>
 
  	<?php echo css('assets/css/somepages.css') ?>
  	<?php echo css('assets/css/text.css') ?>
  	<?php echo css('assets/css/menu-hamburger.css') ?>
-
- 	<!-- POSITIONS THE GLASSES ICONS FOR THE TIME BEING -->
- 	<!-- <?php echo css('assets/css/postglasses.css') ?> -->
 
  	<!-- Media queries -->
  	<?php echo css('assets/css/mediaqueries.css') ?>
