@@ -783,8 +783,8 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
 #qqpagetext p {
     width:  78.571vw;    }
 
-.qqselected {
-    background-color: red;    }
+.qqselected > .lens {
+    background-size: auto 175%;    }
 
 .qqpiece {
     position: absolute;
