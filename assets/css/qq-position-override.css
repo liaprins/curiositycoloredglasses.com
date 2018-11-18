@@ -44,7 +44,7 @@ so that at smaller sizes I can add display: none; to more binocular pairs as mor
     margin-top: 0 !important;
     left: calc(50vw - 113px - 600px) !important;
     margin-left: 0 !important;    }
-/* hide entirely to prevent from overlapping page title and text (all other selectors below) */
+/* hide entirely to prevent from overlapping page title and text */
 .qqpiece:nth-child(9),    /* 9th pair overall / 5th S pair / middle S pair in 2nd row (drycleaning) */
 .qqpiece:nth-child(11) {    /* 11th pair overall / 6th S pair / right-most S pair in 2nd row (orange) */
     display: none !important;    }
@@ -56,30 +56,38 @@ so that at smaller sizes I can add display: none; to more binocular pairs as mor
 
 /* 1224 and below -------------------------------------- */
 @media (max-width: 1224px) {
-    /* move down from menu zone and over to the right */
+    /* adjust out of px into vw */
     .qqpiece:nth-child(4) {    /* 4th pair overall / 2nd S pair / middle S pair in top row (champagne) */
         top: 1vw !important;
         margin-top: 0 !important;
         left: calc(50vw + 3.917vw) !important;
         margin-left: 0 !important;    }
-    /* move down from menu zone and over to the left to prevent overlap with M pair below it */
+    /* now that menu is inside hamburger, move this up a bit */
     .qqpiece:nth-child(5) {    /* 5th pair overall / 3rd L pair / right-most L pair in top row (helium) */
-        top: -0.5vw !important;
+        top: 3vw !important;
         margin-top: 0 !important;
         left: calc(50vw + 16.112vw) !important;
         margin-left: 0 !important;    }
     /* move down from menu zone */
     .qqpiece:nth-child(6) {    /* 6th pair overall / 3rd S pair / right-most S pair in top row (airports) */
-        top: 120px !important;
+        top: 10vw !important;
         margin-top: 0 !important;
         left: calc(50vw + 42.595vw) !important;
         margin-left: 0 !important;    }
     /* prevent from overlapping left edge of text */
-    .qqpiece:nth-child(8) {    /* 6th pair overall / 3rd S pair / right-most S pair in top row (airports) */
+    .qqpiece:nth-child(8) {    /* 8th pair overall / 1st M pair / left-most M pair in 2nd row / left-most M pair in 1st M-containing row (mountains) */
+        margin-top: 2.5rem !important;
+        left: calc(50vw - 44vw) !important;
+        margin-left: 0 !important;    }
+    /* adjust out px into vw */
+    .qqpiece:nth-child(10) {    /* 10th pair overall / 2nd M pair / middle M pair in 2nd overall row / middle M pair in 1st M-containing row (banana) */
+        top: 38vw !important;
+        margin-top: 0 !important;
+        left: calc(50vw - 56vw) !important;
         margin-left: 0 !important;    }
     /* prevent from overlapping right edge of text */
     .qqpiece:nth-child(12) {    /* 12th pair overall / 3rd M pair / right-most M pair in 2nd row overall / right-most M pair in 1st M-containing row (windchill) */
-        top: 190px !important;
+        top: 16vw !important;
         margin-top: 0 !important;
         left: calc(50vw + 32vw) !important;
         margin-left: 0 !important;    }
@@ -89,11 +97,189 @@ so that at smaller sizes I can add display: none; to more binocular pairs as mor
         margin-top: 0 !important;    }
 }
 
+/* 1075 and below -------------------------------------- */
+@media (max-width: 1075px) {
+    /* move down from menu zone */
+    .qqpiece:nth-child(6) {    /* 6th pair overall / 3rd S pair / right-most S pair in top row (airports) */
+        top: 18vw !important;    }
+    /* hide entirely to prevent from overlapping page title and text */
+    .qqpiece:nth-child(7) {    /* 11th pair overall / 6th S pair / right-most S pair in 2nd row (orange) */
+        display: none !important;    }
+    /* prevent from overlapping left edge of text */
+    .qqpiece:nth-child(8) {    /* 8th pair overall / 1st M pair / left-most M pair in 2nd row / left-most M pair in 1st M-containing row (mountains) */
+        left: -2vw !important;    }
+    /* prevent from overlapping right edge of text */
+    .qqpiece:nth-child(12) {    /* 12th pair overall / 3rd M pair / right-most M pair in 2nd row overall / right-most M pair in 1st M-containing row (windchill) */
+        /* top: 16vw !important; */
+        top: 10vw !important;
+        margin-top: 0 !important;
+        left: calc(50vw + 35vw) !important;
+        margin-left: 0 !important;    }
+}
 
+/* 950 and below -------------------------------------- */
+@media (max-width: 950px) {
+    /* keep from overlapping page title */
+    .qqpiece:nth-child(1) {    /* 1st pair overall / 1st L pair (coffee) */
+        top: 2vw !important;    }
+    /* keep from crowding page title */
+    .qqpiece:nth-child(2) {    /* 1st pair overall / 1st L pair (coffee) */
+        top: 3vw !important;
+        margin-top: 0 !important;
+        margin-left: 2.5vw !important;    }
+    /* prevent from overlapping right edge of text */
+    .qqpiece:nth-child(12) {    /* 12th pair overall / 3rd M pair / right-most M pair in 2nd row overall / right-most M pair in 1st M-containing row (windchill) */
+        left: 90vw !important;    }
+    /* put back to normal location mostly */
+    .qqpiece:nth-child(14) {    /* 14th pair overall / 4th L pair / left-most L pair in 3rd overall row down / left-most L pair in 2nd L-containing row down (moths) */
+        left: calc(50vw - 40vw) !important;    }
+    /* prevent from overlapping bottom edge of text */
+    .qqpiece:nth-child(16) {    /* 16th pair overall / 5th L pair / middle L pair in 3rd row overall / middle L pair in 2nd L-containing row (treerings) */
+        top: 26vw !important;
+        margin-top: 0 !important;
+        left: 48vw !important;    }
+}
 
+/* 875 and below -------------------------------------- */
+@media (max-width: 875px) {
+    /* balance space below */
+    .qqpiece:nth-child(1) {    /* 1st pair overall / 1st L pair (coffee) */
+        top: 8vw !important;
+        left: -7vw !important;
+        margin-left: 0 !important;    }
+    /* prevent from overlapping left edge of text */
+    .qqpiece:nth-child(8),
+    .qqpiece:nth-child(14) {    /* 8th pair overall / 1st M pair / left-most M pair in 2nd row / left-most M pair in 1st M-containing row (mountains) */
+        display: none !important;    }
+    /* balance space to the left */
+    .qqpiece:nth-child(15) {    /* 8th pair overall / 1st M pair / left-most M pair in 2nd row / left-most M pair in 1st M-containing row (mountains) */
+        left: calc(50vw - 35vw) !important;
+        top: 33vw !important; 
+        margin-top: 0 !important;   }
+    .qqpiece:nth-child(16) {    /* 16th pair overall / 5th L pair / middle L pair in 3rd row overall / middle L pair in 2nd L-containing row (treerings) */
+        top: 28vw !important;
+        left: 40vw !important;    }
+    /* prevent from overlapping bottome edge of second text row of intro */
+    .qqpiece:nth-child(17) {    /* 6th pair overall / 3rd S pair / right-most S pair in top row (airports) */
+        top: 30vw !important;
+        margin-top: 0 !important;    }
+}
 
+/* 800 and below -------------------------------------- */
+@media (max-width: 800px) {
+    /* keep from overlapping page title */
+    .qqpiece:nth-child(1) {    /* 1st pair overall / 1st L pair (coffee) */
+        top: 4vw !important;
+        left: -10vw !important;    }
+    /* balance space above page title */
+    .qqpiece:nth-child(3) {    /* 3rd pair overall / 2nd L pair (Dutch) */
+        top: -1.5vw !important;    }
+    /* move down from menu zone */
+    .qqpiece:nth-child(6) {    /* 6th pair overall / 3rd S pair / right-most S pair in top row (airports) */
+        display: none !important;    }
+    /* move down from menu zone */
+    .qqpiece:nth-child(18) {    /* 6th pair overall / 3rd S pair / right-most S pair in top row (airports) */
+        left: 90vw !important; 
+        margin-left: 0 !important;    }
+    .qqpiece:nth-child(16) {    /* 16th pair overall / 5th L pair / middle L pair in 3rd row overall / middle L pair in 2nd L-containing row (treerings) */
+        top: 35vw !important;
+        margin-left: 0 !important;    }
+    .qqpiece:nth-child(21) {    /* 16th pair overall / 5th L pair / middle L pair in 3rd row overall / middle L pair in 2nd L-containing row (treerings) */
+        display: none !important;   }
+}
 
+/* 725 and below -------------------------------------- */
+@media (max-width: 725px) {
+    /* balance space to the left */
+    .qqpiece:nth-child(13) {    /* 8th pair overall / 1st M pair / left-most M pair in 2nd row / left-most M pair in 1st M-containing row (mountains) */
+        margin-top: 0 !important;
+        margin-left: 0 !important;    }
+    /* balance space to the left */
+    .qqpiece:nth-child(15) {    /* 8th pair overall / 1st M pair / left-most M pair in 2nd row / left-most M pair in 1st M-containing row (mountains) */
+        display: none !important;   }
+    /* prevent from overlapping bottome edge of second text row of intro */
+    .qqpiece:nth-child(17) {    /* 6th pair overall / 3rd S pair / right-most S pair in top row (airports) */
+        top: 35vw !important;
+        margin-top: 0 !important;
+        margin-left: 0 !important;    }
+}
 
+/* 650 and below -------------------------------------- */
+@media (max-width: 650px) {
+    .qqpiece:nth-child(16) {    /* 16th pair overall / 5th L pair / middle L pair in 3rd row overall / middle L pair in 2nd L-containing row (treerings) */
+        display: none !important;    }
+    /* prevent from overlapping bottome edge of second text row of intro */
+    .qqpiece:nth-child(17) {    /* 6th pair overall / 3rd S pair / right-most S pair in top row (airports) */
+        top: 38vw !important;
+        left: 45vw !important;    }
+}
+
+/* 442 and below -------------------------------------- */
+@media (max-width: 442px) {
+    /* prevent from overlapping hamburger menu */
+    .qqpiece:nth-child(12) {    /* 12th pair overall / 3rd M pair / right-most M pair in 2nd row overall / right-most M pair in 1st M-containing row (windchill) */
+        top: 16vw !important;
+        left: 95vw !important;    }
+}
+
+/* 420 and below -------------------------------------- */
+@media (max-width: 420px) {
+    /* prevent from overlapping bottome edge of second text row of intro */
+    .qqpiece:nth-child(17) {    /* 6th pair overall / 3rd S pair / right-most S pair in top row (airports) */
+        top: 40vw !important;    }
+    /* move down from menu zone and over to the left to prevent overlap with M pair below it */ 
+    .qqpiece:nth-child(19) {    /* 5th pair overall / 3rd L pair / right-most L pair in top row (helium) */
+        display: none !important;    }
+    /* move down from menu zone and over to the left to prevent overlap with M pair below it */ 
+    .qqpiece:nth-child(20) {    /* 5th pair overall / 3rd L pair / right-most L pair in top row (helium) */
+        top: 45vw !important;
+        margin-top: 0 !important;    }
+}
+
+/* 400 and below -------------------------------------- */
+@media (max-width: 400px) {
+    /* move down from menu zone and over to the left to prevent overlap with M pair below it */ 
+    .qqpiece:nth-child(5) {    /* 5th pair overall / 3rd L pair / right-most L pair in top row (helium) */
+        top: 1vw !important;
+        left: 70vw !important;    }
+    /* prevent from overlapping bottome edge of second text row of intro */
+    .qqpiece:nth-child(17) {    /* 6th pair overall / 3rd S pair / right-most S pair in top row (airports) */
+        top: 44vw !important;    }
+    /* move down from menu zone and over to the left to prevent overlap with M pair below it */ 
+    .qqpiece:nth-child(20) {    /* 5th pair overall / 3rd L pair / right-most L pair in top row (helium) */
+        display: none !important;    }
+    /* move down from menu zone and over to the left to prevent overlap with M pair below it */ 
+    .qqpiece:nth-child(22) {    /* 5th pair overall / 3rd L pair / right-most L pair in top row (helium) */
+        top: 43vw !important;
+        margin-top: 0 !important;    }
+}
+
+/* 382 and below -------------------------------------- */
+@media (max-width: 382px) {
+    /* prevent from overlapping bottome edge of second text row of intro */
+    .qqpiece:nth-child(17) {    /* 6th pair overall / 3rd S pair / right-most S pair in top row (airports) */
+        display: none !important;    }
+    /* prevent from overlapping bottome edge of second text row of intro */
+    .qqpiece:nth-child(18) {    /* 6th pair overall / 3rd S pair / right-most S pair in top row (airports) */
+        left: 94vw !important;    }
+    /* prevent from overlapping bottome edge of second text row of intro */
+    .qqpiece:nth-child(22) {    /* 6th pair overall / 3rd S pair / right-most S pair in top row (airports) */
+        top: 45vw !important;    }
+    /* prevent from overlapping bottome edge of second text row of intro */
+    .qqpiece:nth-child(23) {    /* 6th pair overall / 3rd S pair / right-most S pair in top row (airports) */
+        top: 45vw !important;
+        margin-top: 0 !important;    }
+    /* prevent from overlapping bottome edge of second text row of intro */
+    .qqpiece:nth-child(24) {    /* 6th pair overall / 3rd S pair / right-most S pair in top row (airports) */
+        display: none !important;    }
+}
+
+/* 350 and below -------------------------------------- */
+@media (max-width: 350px) {
+    /* prevent from overlapping bottome edge of second text row of intro */
+    .qqpiece:nth-child(22) {    /* 6th pair overall / 3rd S pair / right-most S pair in top row (airports) */
+        display: none !important;    }
+}
 
 
 
