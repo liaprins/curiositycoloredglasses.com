@@ -20,9 +20,10 @@ so that at smaller sizes I can add display: none; to more binocular pairs as mor
     margin-left: 0 !important;    }
 /* move a bit away from menu zone */
 .qqpiece:nth-child(3) {    /* 3rd pair overall / 2nd L pair on top row */
-    top: 10px !important;
-    margin-top: -15px !important;
-    margin-left: -10px !important;    }
+    top: -5px !important;
+    margin-top: 0px !important;
+    left: calc(50vw - 285px) !important;
+    margin-left: 0 !important;    }
 /* move down from menu zone and over to the right */
 .qqpiece:nth-child(4) {    /* 4th pair overall / 2nd S pair on top row */
     top: 65px !important;
@@ -52,6 +53,14 @@ so that at smaller sizes I can add display: none; to more binocular pairs as mor
 .qqpiece:nth-child(14) {    /* 14th pair overall / 1st L pair on 2nd L-containing row down */
     top: 360px !important;
     margin-top: 0 !important;    }
+/* prevent from overlapping bottom edge of text (when three lines tall) */
+.qqpiece:nth-child(15) {    /* 15th pair overall / 2nd S pair on 3rd row down */
+    top: 365px !important;
+    margin-top: 0 !important;    }
+/* prevent from overlapping bottom edge of text (when three lines tall) */
+.qqpiece:nth-child(16) {    /* 16th pair overall / 2nd L pair on 2nd L-containing row down */
+    top: 330px !important;
+    margin-top: 0 !important;    }
 
 /* 1245 and below -------------------------------------- */
 @media (max-width: 1245px) {
@@ -62,6 +71,10 @@ so that at smaller sizes I can add display: none; to more binocular pairs as mor
 
 /* 1224 and below -------------------------------------- */
 @media (max-width: 1224px) {
+    /* move a bit away from menu zone */
+    .qqpiece:nth-child(3) {    /* 3rd pair overall / 2nd L pair on top row */
+        top: 10px !important;
+        left: 35vw !important;    }
     /* adjust out of px into vw */
     .qqpiece:nth-child(4) {    /* 4th pair overall / 2nd S pair on top row */
         top: 1vw !important;
@@ -97,6 +110,13 @@ so that at smaller sizes I can add display: none; to more binocular pairs as mor
     /* put back to normal location mostly */
     .qqpiece:nth-child(14) {    /* 14th pair overall / 1st L pair on 2nd L-containing row down */
         top: 30vw !important;    }
+    /* convert from px to vw */
+    .qqpiece:nth-child(15) {    /* 15th pair overall / 2nd S pair on 3rd row down */
+        top: 27vw !important;
+        margin-top: 0 !important;    }
+    /* convert from px to vw */
+    .qqpiece:nth-child(16) {    /* 16th pair overall / 2nd L pair on 2nd L-containing row down */
+        top: 25vw !important;    }
 }
 
 /* 1075 and below -------------------------------------- */
@@ -114,6 +134,9 @@ so that at smaller sizes I can add display: none; to more binocular pairs as mor
     .qqpiece:nth-child(12) {    /* 12th pair overall / 3rd M pair on 1st M-containing row */
         top: 10vw !important;
         left: 85vw !important;    }
+    /* convert from px to vw */
+    .qqpiece:nth-child(16) {    /* 16th pair overall / 2nd L pair on 2nd L-containing row down */
+        top: 28vw !important;    }
 }
 
 /* 950 and below -------------------------------------- */
@@ -132,10 +155,15 @@ so that at smaller sizes I can add display: none; to more binocular pairs as mor
         left: 90vw !important;    }
     /* put back to normal location mostly */
     .qqpiece:nth-child(14) {    /* 14th pair overall / 4th L pair on 2nd L-containing row down */
+        top: 32vw !important;
         left: 10vw !important;    }
+    /* balance space to the left */
+    .qqpiece:nth-child(15) {    /* 15th pair overall / 2nd S pair on 3rd S-containing row */
+        top: 30vw !important; 
+        margin-top: 0 !important;   }
     /* prevent from overlapping bottom edge of text */
     .qqpiece:nth-child(16) {    /* 16th pair overall / 5th L pair on 2nd L-containing row */
-        top: 26vw !important;
+        top: 30vw !important;
         margin-top: 0 !important;
         left: 48vw !important;    }
 }
@@ -153,11 +181,10 @@ so that at smaller sizes I can add display: none; to more binocular pairs as mor
     /* balance space to the left */
     .qqpiece:nth-child(15) {    /* 15th pair overall / 2nd S pair on 3rd S-containing row */
         left: 15vw !important;
-        top: 33vw !important; 
-        margin-top: 0 !important;   }
+        top: 35vw !important;    }
     /* prevent from crowding bottom edge of text */
     .qqpiece:nth-child(16) {    /* 16th pair overall / 2nd L pair on 2nd L-containing row */
-        top: 28vw !important;
+        top: 30vw !important;
         left: 40vw !important;    }
     /* prevent from overlapping bottom edge of second text row of intro */
     .qqpiece:nth-child(17) {    /* 17th pair overall / 3rd S pair on 3rd S-containing row */

@@ -48,3 +48,4 @@ fields:
     label: Page description
     type: textarea
     placeholder: Optional explanation or instructions to readers about this page
+    help: The binocular image pattern should be L S L S L S | S M S M S M | S L S L S L | S M S M S M | (start back over)
