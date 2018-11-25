@@ -31,10 +31,12 @@
 
 <!-- Adding opening body tag here, since all templates call this head-close.php snippet -->
 <body>
-
-
+    <!-- reveal content script -->
+    <script src="assets/js/qq.js">
+    </script>
 
     <!-- positions glasses -->
+    
     <script src="assets/js/qq-position.js">
     </script>
 	
@@ -43,6 +45,7 @@
     <script src="assets/js/qq-parallax.js">
     </script>
 	
+
     <!-- TEST!!! boxes -->
     <!-- UNCOMMENT BELOW + UNCOMMENT "BOXES" BELOW TO MAKE THEM SHOW -->
     <!--
@@ -53,8 +56,8 @@
     </script>
 	-->
 
-    <!-- reveal content script -->
-    <script src="assets/js/qq.js">
+	<!-- positioning the content boxes relative to binocs -->
+    <script src="assets/js/qq-content.js">
     </script>
 	
 
@@ -101,7 +104,7 @@
     		    		<div data-innards-clickable="yes" class="lens r-lens" style="background-image: url(<?php echo $qqfile->url() ?>)"></div>
     		    	</div>
 
-					<div class="qqcontents <?php if ($qqfile->category() == 'large'): ?>qqcontents-large<?php endif ?><?php if ($qqfile->category() == 'medium'): ?>qqcontents-medium<?php endif ?><?php if ($qqfile->category() == 'small'): ?>qqcontents-small<?php endif ?>" style="display: none;" data-edgemargin="">						
+					<div class="qqcontents <?php if ($qqfile->category() == 'large'): ?>qqcontents-large<?php endif ?><?php if ($qqfile->category() == 'medium'): ?>qqcontents-medium<?php endif ?><?php if ($qqfile->category() == 'small'): ?>qqcontents-small<?php endif ?>" style="display: none;">
 						<img src= "<?php echo url('assets/images/x.svg') ?>" alt="close" id="qq-x" class="yellowhover close-x">
 						<div class="qqquestion s-display"><?php echo $qqfile->question() ?></div>
 						<div class="qqdescription s-textface"><?php echo $qqfile->explanation() ?></div>
