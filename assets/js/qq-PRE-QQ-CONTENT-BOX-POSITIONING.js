@@ -102,65 +102,6 @@ function qqIconInnardsClick(e) {
             selectedInnards.parentNode.setAttribute('class', qqSelectedClasses + ' ' + 'qqselected');            
             var qqURLHash = selectedInnards.parentNode.getAttribute('data-id');
             location.hash = qqURLHash; 
-
-
-
-
-            // binoc-related elements
-            var binoc = selectedInnards.parentNode;
-            var binocLeftLoc = binoc.getBoundingClientRect().left;
-            var binocTopLoc = binoc.getBoundingClientRect().top + pageYOffset;
-            var binocWidth = binoc.offsetWidth;
-            var binocHeight = binoc.offsetHeight;
-            var binocHCtr = binocLeftLoc + (binocWidth / 2);
-
-            // content-related elements
-            var content = selectedInnards.parentNode.nextElementSibling;
-            var contentLeftLoc = content.getBoundingClientRect().left;
-            var contentTopLoc = content.getBoundingClientRect().top + pageYOffset;
-            var contentBottomLoc = content.getBoundingClientRect().bottom + pageYOffset;
-            var contentWidth = content.offsetWidth;
-            var contentWidthHalf = (contentWidth / 2);
-            var contentHeight = content.offsetHeight;
-
-            // other constants
-            var footerTopLoc = document.getElementById('footercontent').parentNode.getBoundingClientRect().top + pageYOffset;
-            var edgeMargin = content.getAttribute('data-edgemargin');    // set within a script at bottom of qq-position.js
-            var qqScreenWidth = window.innerWidth;
-
-            // for larger screens first
-            if (qqScreenWidth >= 390) {
-
-                document.getElementById('qqtest').innerHTML = contentBottomLoc;  // GENERAL TESTING !!!!!
-
-                // applying .center zone (or not)
-                if (((binocHCtr - contentWidthHalf - edgeMargin) >= 0) && (binocHCtr + contentWidthHalf + edgeMargin) <= qqScreenWidth) {
-                    content.classList.add('.center');
-                    document.getElementById('qqtest').innerHTML = 'center!';  // .center TEST !!!!!
-
-                    if ((contentBottomLoc + binocHeight + (2 * edgeMargin)) < footerTopLoc) {
-                        content.classList.add('.top');
-                        document.getElementById('qqtest').innerHTML = 'center + top!';  // .top TEST !!!!!
-                    } else {
-                        content.classList.add('.bottom');
-                        document.getElementById('qqtest').innerHTML = 'center + bottom!';  // .bottom TEST !!!!!                        
-                    } // close "else" for .bottom zone
-
-                } // will add "else" here for non-.center zoners
-
-            } // will add "else" here for narrow screens' if-statements
-
-
-
-
-
-
-
-
-
-
-
-
         } else {
             selectedInnards.parentNode.nextElementSibling.style.display = 'none';
             selectedInnards.parentNode.classList.remove('qqselected');

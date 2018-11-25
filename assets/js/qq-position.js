@@ -497,3 +497,55 @@ function qqBoxPosition() {
 
 } // close function
 window.addEventListener('DOMContentLoaded', qqBoxPosition, false);
+
+
+// Sends a variable measurement to .qqcontents' "data-edgemargin" attribute to store for future use with qq.js...
+// wherein the measure is used to position content box differently depending upon screenwidth
+function qqEdgeMargin() {
+    var qqScreenWidth = window.innerWidth;
+    var qqContent = document.querySelectorAll('.qqcontents');
+    if (qqScreenWidth < 650) {
+        for (var i = 0; i < qqContent.length; i++) {
+            qqContent[i].setAttribute('data-edgemargin', parseInt(qqScreenWidth / 56));
+        }
+    } else {
+        for (var i = 0; i < qqContent.length; i++) {
+            qqContent[i].setAttribute('data-edgemargin', 10);
+        }
+    }
+}
+window.addEventListener('DOMContentLoaded', qqEdgeMargin, false);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
