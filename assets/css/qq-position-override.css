@@ -61,6 +61,7 @@ so that at smaller sizes I can add display: none; to more binocular pairs as mor
 .qqpiece:nth-child(16) {    /* 16th pair overall / 2nd L pair on 2nd L-containing row down */
     top: 330px !important;
     margin-top: 0 !important;    }
+}
 
 /* 1245 and below -------------------------------------- */
 @media (max-width: 1245px) {
