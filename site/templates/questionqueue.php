@@ -42,7 +42,6 @@
 	
 
     <!-- parallax scroll -->
-    
     <script src="assets/js/qq-parallax.js">
     </script>
 	
@@ -56,6 +55,10 @@
     <script src="assets/js/qq-parallax-boxes.js">
     </script>
 	-->
+
+	<!-- positioning the content boxes relative to binocs -->
+    <script src="assets/js/qq-content.js">
+    </script>
 	
 
 <!-- *************************************** ^^^^^ LEAVE ALONE ^^^^^ *************************************** -->
@@ -71,7 +74,7 @@
 				<?php echo $page->text()->kirbytext() ?>
 			</span>
 
-			<!-- <p id="qqtest">hola</p> -->
+			<p id="qqtest">hola</p>
 
 			<!-- </div> -->
 
@@ -90,6 +93,7 @@
                 <?php $margins = array('0rem', '0.5rem', '1rem', '1.5rem', '2rem', '2.5rem'); ?>
                 <?php $rand_margin = $margins[array_rand($margins)]; ?>
     	    	<span class="qqpiece" style="margin-left: <?= $rand_margin ?>; margin-top: <?= $rand_margin ?>">
+    	    	<!-- <span class="qqpiece <?php if ($qqfile->category() == 'large'): ?>largeqqpiece<?php endif ?><?php if ($qqfile->category() == 'medium'): ?>mediumqqpiece<?php endif ?><?php if ($qqfile->category() == 'small'): ?>smallqqpiece<?php endif ?>" style="margin-left: <?= $rand_margin ?>; margin-top: <?= $rand_margin ?>"> -->
 				
 				<!-- <span class="qqpiece"> -->
 					
@@ -100,10 +104,10 @@
     		    		<div data-innards-clickable="yes" class="lens r-lens" style="background-image: url(<?php echo $qqfile->url() ?>)"></div>
     		    	</div>
 
-					<div class="qqcontents" style="display: none;">
+					<div class="qqcontents <?php if ($qqfile->category() == 'large'): ?>qqcontents-large<?php endif ?><?php if ($qqfile->category() == 'medium'): ?>qqcontents-medium<?php endif ?><?php if ($qqfile->category() == 'small'): ?>qqcontents-small<?php endif ?>" style="display: none;">
 						<img src= "<?php echo url('assets/images/x.svg') ?>" alt="close" id="qq-x" class="yellowhover close-x">
 						<div class="qqquestion s-display"><?php echo $qqfile->question() ?></div>
-						<div class="qqdescription m-textface"><?php echo $qqfile->explanation() ?></div>
+						<div class="qqdescription s-textface"><?php echo $qqfile->explanation() ?></div>
 					</div>
 					
 				</span>

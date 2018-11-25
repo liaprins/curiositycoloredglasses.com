@@ -730,8 +730,7 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
 #resultdate {
     padding-top: 0.256rem;    /* .125 lh; this is the space between the date and it's top border */
     margin: 1.536rem 0 0.512rem 0;    /* top: .75 lh, bottom: .25 lh */
-    border-width: 0.15rem;
-    /* border-width: 1.14284vw; */    }    /* This should dynamically match the weight of the line of the resultglasses below date, based on their width of 28.571vw (8/28 cols) and the ratio of the resultglasses width to their line weight of 25:1; */ 
+    border-width: 0.15rem;    }    /* This should dynamically match the weight of the line of the resultglasses below date, based on their width of 28.571vw (8/28 cols) and the ratio of the resultglasses width to their line weight of 25:1; */ 
 
 #resultglasses {
     width: 28.571vw;    /* 8/28 cols */ 
@@ -791,7 +790,22 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
     display: block;    }
 
 .qqcontents {
-    position: absolute;    }
+    background-color: white;
+    border-style: solid;
+    border-color: black;
+    z-index: 1;
+    position: absolute;
+    border-width: 0.125rem;
+    padding: 7.143vw;
+    width: 78.571vw;    }
+
+#qq-x {
+    position: absolute;
+    top: calc(3.571vw - 0.844rem);
+    left: calc(75vw - 1.094rem);    }
+
+.qqquestion {
+    margin-bottom: 0.768rem;    }
 
 :root {
     --container-width-big: 17.05vw; 
