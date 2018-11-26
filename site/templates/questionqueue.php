@@ -52,10 +52,6 @@
     <script src="assets/js/qq-parallax-boxes.js">
     </script>
 	-->
-
-    <!-- reveal content script -->
-    <script src="assets/js/qq.js">
-    </script>
 	
 
 <!-- *************************************** ^^^^^ LEAVE ALONE ^^^^^ *************************************** -->
@@ -126,7 +122,9 @@
 
 
 <!-- *************************************** vvvvv footer.php snippet vvvvv LEAVE ALONE vvvvv *************************************** -->
-
+    <!-- reveal content script -->
+    <script src="assets/js/qq.js">
+    </script>
 
 </body>
 
