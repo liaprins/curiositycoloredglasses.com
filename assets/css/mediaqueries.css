@@ -289,6 +289,14 @@
         width: 64.283vw;    }
     #qq-x {
         left: calc(60.712vw - 1.094rem);    }
+
+    /* TEST !!!!! */
+    #sharkfin {
+        width: 20px;
+        height: 20px;    }
+    #bordercover {
+        width: 20px;
+        height: 20px;    }
 }
 
 @media (min-width: 756px) {
