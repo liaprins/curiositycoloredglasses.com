@@ -807,6 +807,28 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
 .qqquestion {
     margin-bottom: 0.768rem;    }
 
+/* TEST !!!!! */
+#sharkfin {
+    background-color: white;
+    border-style: solid;
+    border-color: black;
+    border-width: 0.125rem;
+    position: absolute;
+    -ms-transform: rotate(45deg); /* IE 9 */
+    -webkit-transform: rotate(45deg); /* Safari */
+    transform: rotate(45deg);    }
+
+#bordercover {
+    background-color: white;
+    border-style: solid;
+    border-color: white;
+    border-width: 0.125rem;
+    position: absolute;
+    -ms-transform: rotate(45deg); /* IE 9 */
+    -webkit-transform: rotate(45deg); /* Safari */
+    transform: rotate(45deg);
+}
+
 :root {
     --container-width-big: 17.05vw; 
     --container-height-big: 7.866vw;     }
@@ -919,6 +941,7 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
     position: absolute;
     left: 53.94%;
     background-position: 0% 50%;    }
+
 
 /* QQ BOXES FOR TESTING -------------------------------------------------- */
 

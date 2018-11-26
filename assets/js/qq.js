@@ -130,6 +130,12 @@ function qqIconInnardsClick(e) {
             var footerTopLoc = document.getElementById('footercontent').parentNode.getBoundingClientRect().top + pageYOffset;
             var edgeMargin = content.getAttribute('data-edgemargin');    // set within a script at bottom of qq-position.js
             var qqScreenWidth = window.innerWidth;
+            var sharkFin = document.createElement('div');
+            sharkFin.setAttribute('id', 'sharkfin');
+            var sharkFinHeight = 12;
+            var borderCover = document.createElement('div');
+            borderCover.setAttribute('id', 'bordercover');
+            var contentPadding = 58;
 
             // for larger screens first
             if (qqScreenWidth >= 390) {
@@ -137,11 +143,19 @@ function qqIconInnardsClick(e) {
                 // applying .center zone (or not)
                 if (((binocHCtr - contentWidthHalf - edgeMargin) >= 0) && ((binocHCtr + contentWidthHalf + edgeMargin) <= qqScreenWidth)) {
                     content.style.left = '-' + parseInt(contentWidthHalf - binocWidthHalf) + 'px';
+                    content.appendChild(sharkFin);
+                    // sharkFin.style.top = 0 - parseInt(sharkFinHeight) + "px";
+                    sharkFin.style.left = 'calc(' + (0 + parseInt(contentWidthHalf) - parseInt(sharkFinHeight / 2)) + "px - 0.2rem)";
+                    content.appendChild(borderCover);
+                    // borderCover.style.top = 'calc(' + (0 - parseInt(sharkFinHeight)) + "px + 0.18rem)";
+                    borderCover.style.left = 'calc(' + (0 + parseInt(contentWidthHalf) - parseInt(sharkFinHeight / 2)) + "px - 0.2rem)";
                     document.getElementById('qqtest').innerHTML = 'center!';  // .center TEST !!!!!
 
                     // applying .top zone or not to .center
                     if ((contentBottomLoc + binocHeight + (2 * edgeMargin)) < footerTopLoc) {
                         content.style.top = parseInt(edgeMargin) + parseInt(binocHeight) + "px";
+                        sharkFin.style.top = 0 - parseInt(sharkFinHeight) + "px";
+                        borderCover.style.top = 'calc(' + (0 - parseInt(sharkFinHeight)) + "px + 0.18rem)";
                         document.getElementById('qqtest').innerHTML = 'center + top!';  // .center + .top TEST !!!!!
                     
                     } else { // NOT .top; YES .bottom added to .center
@@ -283,8 +297,7 @@ function qqIconInnardsClick(e) {
 
             } // I WILL ADD "else" here for narrow screens' if-statements !!!!!!!!!!!!!!!!!!!!
 
-
-            // document.getElementById('qqtest').innerHTML = parseInt(edgeMargin) + parseInt(binocHeight) + "px";  // GENERAL TESTING !!!!!
+            //document.getElementById('qqtest').innerHTML = sharkFinHeight;  // GENERAL TESTING !!!!!
 
 
 
