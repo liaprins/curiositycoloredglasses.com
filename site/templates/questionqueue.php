@@ -18,6 +18,7 @@
  	<?php echo css('assets/css/qqnavfooter.css') ?>
 
  	<?php echo css('assets/css/somepages.css') ?>
+ 	<?php echo css('assets/css/qq.css') ?>
  	<?php echo css('assets/css/text.css') ?>
  	<?php echo css('assets/css/menu-hamburger.css') ?>
 

@@ -105,10 +105,6 @@
         width: 67.857vw;   }
     #postedcomment {
         margin-top: calc(7.143vw - 2.25em);    }
-    .qqcontents {
-        width: 50vw;    }
-    #qq-x {
-        left: calc(46.429vw - 1.094rem);    }
 }
 
 @media (min-width: 408px) {
@@ -198,15 +194,13 @@
         padding-bottom: calc(21.429vw + 6.641rem);    }
     #searchpageinput {
         width: calc(78vw - 2.05rem);    }
-
     #searchpagebutton {
         float: right;    }
 }
 
 @media (min-width: 539px) {
     .subscribebutton {
-        bottom: calc(3.6rem + 7.143vw + 1.5px);
-    }
+        bottom: calc(3.6rem + 7.143vw + 1.5px);    }
 }
 
 @media (min-width: 544px) {
@@ -285,18 +279,6 @@
         width: 14.286vw;    }
     #resultdate {
         border-width: 0.15rem;    }
-    .qqcontents {
-        width: 64.283vw;    }
-    #qq-x {
-        left: calc(60.712vw - 1.094rem);    }
-
-    /* TEST !!!!! */
-    #sharkfin {
-        width: 20px;
-        height: 20px;    }
-    #bordercover {
-        width: 20px;
-        height: 20px;    }
 }
 
 @media (min-width: 756px) {
@@ -467,12 +449,6 @@
         width: 641.292px;
         margin-left: auto;
         margin-right: auto;    }
-    .qqcontents {
-        padding: 58.33px;
-        width: 525px;    }
-    #qq-x {
-        top: calc(29.175px - 0.844rem);
-        left: calc(495.825px - 1.094rem);    }
 }
 
 @media (min-width: 973px) {
