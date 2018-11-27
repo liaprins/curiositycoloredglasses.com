@@ -1,0 +1,327 @@
+/* QQ page set-up ---------------------------------------------------------------------------------------------------- */
+
+#qqpagetitle p {
+	padding-top: calc(10.714vw - 0.25rem);
+	margin: 0 auto 1.536rem auto;    }
+
+#qqpagetext p {
+	margin: 0 auto;
+	line-height: 1.6;    }
+
+#qqpagetitle p,
+#qqpagetext p {
+	width:  78.571vw;    }
+
+.qqpiece {
+	position: absolute;
+	display: block;    }
+
+
+/* Building the binocs ---------------------------------------------------------------------------------------------------- */
+
+.largeqqglasses,
+.mediumqqglasses,
+.smallqqglasses {
+	position: absolute;
+	cursor: pointer;    }
+
+:root {
+	--container-width-big: 17.05vw; 
+	--container-height-big: 7.866vw;     }
+
+.largeqqglasses {
+	width: var(--container-width-big);
+	height: var(--container-height-big);    }
+
+.mediumqqglasses {
+	width: calc(var(--container-width-big) * 0.75);
+	height: calc(var(--container-height-big) * 0.75);
+	opacity: 0.9;    }
+
+.smallqqglasses {
+	width: calc(var(--container-width-big) * 0.5);
+	height: calc(var(--container-height-big) * 0.5);
+	opacity: 0.8;    }
+
+.largeqqglasses > .lens {
+	border-width: calc(var(--container-width-big) * 0.045 * 0.833);    }
+
+.mediumqqglasses > .lens {
+	border-width: calc(var(--container-width-big) * 0.045 * 0.833 * 0.75);    }
+
+.smallqqglasses > .lens {
+	border-width: calc(var(--container-width-big) * 0.045 * 0.833 * 0.5);    }
+
+.lens {
+	box-sizing: border-box;
+	display: inline-block;
+	position: absolute;
+	border-color: black;
+	border-style: solid;
+	height: 100%;
+	width: 46.124%;
+	border-radius: 50%;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: auto 100%;    /* ONLY IF ZOOMING FROM CTR OF GLASSES AS A WHOLE RATHER THAN INTO THE CTR OF EACH LENS */
+	-webkit-transition: background-size 0.5s;    /* for Safari */
+	transition: background-size 0.5s;    
+	-webkit-transition-timing-function: ease-out;
+	transition-timing-function: ease-out;    }
+
+.l-lens {
+	background-position: 100% 50%;    }
+
+.r-lens {
+	position: absolute;
+	left: 53.94%;
+	background-position: 0% 50%;    }
+
+.qqglassescontainer:hover > .lens {
+	background-size: auto 175%;    }
+
+.qqselected > .lens {
+	background-size: auto 175%;    }
+
+.knob {
+	box-sizing: border-box;
+	display: inline-block;
+	position: absolute;
+	left: 42.3%;
+	background-color: black;
+	height: 33.9%;
+	width: 15.636%;
+	border-radius: 50%;    }
+
+.trapezoid-large,
+.trapezoid-medium,
+.trapezoid-small {
+	height: 0;
+	width: 28.5%;
+	position: absolute;
+	display: inline-block;
+	left: 35.55%;
+	top: 8.71%;    }
+
+.trapezoid-large {
+	border-top: calc(var(--container-width-big) * 0.145) solid black;    /* TRAPEZOID NEEDS PIXELS! */
+	border-left: calc(var(--container-width-big) * 0.072) solid transparent;
+	border-right: calc(var(--container-width-big) * 0.072) solid transparent;    }
+
+.trapezoid-medium {
+	border-top: calc(var(--container-width-big) * 0.145 * 0.75) solid black;
+	border-left: calc(var(--container-width-big) * 0.072 * 0.75) solid transparent;
+	border-right: calc(var(--container-width-big) * 0.072 * 0.75) solid transparent;    }
+
+.trapezoid-small {
+	border-top: calc(var(--container-width-big) * 0.145 * 0.5) solid black;
+	border-left: calc(var(--container-width-big) * 0.072 * 0.5) solid transparent;
+	border-right: calc(var(--container-width-big) * 0.072 * 0.5) solid transparent;    }
+
+
+/* QQ BOXES FOR TESTING BINOC MARGIN RANGES ---------------------------------------------------------------------------------------------------- */
+
+.largeqqbox,
+.mediumqqbox,
+.smallqqbox {
+	position: absolute;    }
+
+.largeqqbox {
+	background-color: purple;
+	opacity: 0.5;
+	width: calc(17.05vw + 2.5rem);
+	height: calc(7.866vw + 2.5rem);    }
+
+.mediumqqbox {
+	background-color: blue;
+	opacity: 0.5;
+	width: calc((17.05vw * 0.75) + 2.5rem);
+	height: calc((7.866vw * 0.75) + 2.5rem);    }
+
+.smallqqbox {
+	background-color: green;
+	opacity: 0.5;
+	width: calc((17.05vw * 0.5) + 2.5rem);
+	height: calc((7.866vw * 0.5) + 2.5rem);    }
+
+/* MIN 1225px GROW ++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+@media only screen and (min-width: 1225px) {
+	.largeqqbox {
+		width: calc(209px + 2.5rem);
+		height: calc(96.4px + 2.5rem);    }
+	.mediumqqbox {
+		width: calc((209px * 0.75) + 2.5rem);
+		height: calc((96.4px * 0.75) + 2.5rem);    }
+	.smallqqbox {
+		width: calc((209px * 0.5) + 2.5rem);
+		height: calc((96.4px * 0.5) + 2.5rem);    }
+}    /* MIN 1225px GROW ++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+
+/* CONTENTS (QUESTIONS + EXPLANATORY TEXT) OF EACH BINOC ---------------------------------------------------------------------------------------------------- */
+
+.qqcontents {
+	background-color: white;
+	border-style: solid;
+	border-color: black;
+	z-index: 1;
+	/* position: absolute; */
+	position: relative;
+	border-width: 0.125rem;
+	padding: 7.143vw;
+	width: 78.571vw;    }
+
+#qq-x {
+	position: absolute;
+	top: calc(3.571vw - 0.844rem);
+	left: calc(75vw - 1.094rem);    }
+
+.qqquestion {
+	margin-bottom: 0.768rem;    }
+
+#sharkfin {
+	background-color: white;
+	border-style: solid;
+	border-color: black;
+	border-width: 0.125rem;
+	position: absolute;
+	-ms-transform: rotate(45deg); /* IE 9 */
+	-webkit-transform: rotate(45deg); /* Safari */
+	transform: rotate(45deg);    }
+
+#bordercover {
+	background-color: white;
+	border-style: solid;
+	border-color: white;
+	border-width: 0.125rem;
+	position: absolute;
+	-ms-transform: rotate(45deg); /* IE 9 */
+	-webkit-transform: rotate(45deg); /* Safari */
+	transform: rotate(45deg);    }
+
+
+/* "CLASS ZONES": JS-DETERMINED, CSS-STYLED TO MAKE THE SHARKFIN AND CONTENT BOX OPTIMALLY POSITIONED ---------------------------------------------------------------------------------------------------- */
+/* TRY TO SET CSS VARIABLES FOR MEDIUM AND SMALL BINOCS, BASED ON LARGE BINOC SIZE...
+   THIS WOULD MEAN A CSS VARIABLE WITHIN A CSS VARIABLE
+   IF THAT DOESN'T WORK (OR IF THAT DOESN'T WORK WITH calc() PROPERLY) WILL NEED TO SET SEPARATE SELECTORS FOR EACH ZONE FOR EACH BINOC SIZE, BY COMBINING (FOR INSTANCE):
+   .qqcontents-large.center {...} (THE TWO CLASSES GO RIGHT NEXT TO EACH OTHER WITHOUT A SPACE!) */
+
+/* < 390px: NARROW CLASS ZONES APPLIED VIA JS (no mediaquery needed; I will come back and add classes once I do the JS if-statements for this) +++++++++++++++++++++++++++++++ */
+/* binoc width (large) = 17.05vw, set via CSS Variable via :root element above, line ~28
+   binoc height (large) = 7.866vw, set via CSS Variable via :root element above, line ~28
+   content width = 22/28 (78.571vw), set above, line ~172
+   edge margin = 1/56 (1.79vw), set within a script at bottom of qq-position.js
+   USE CSS VARIABLES FOR content width AND edge margin & SET THE :root ELEMENT
+   ALL CLASS ZONES MUST BE SET FROM SCRATCH
+   ALSO DEFINE #sharkfin AND #bordercover SIZE HERE BASED ON CSS VARIABLE * 2 */
+
+/* >= 390px: WIDESCREEN CLASS ZONES APPLIED VIA JS + CONTENT BOX WIDTH CHANGES +++++++++++++++++++++++++++++++ */
+/* content width = 14/28 (50vw), set below within mediaquery
+   USE CSS VARIABLES FOR content width AND edge margin & SET THE :root ELEMENT
+   ALL CLASS ZONES MUST BE SET FROM SCRATCH */
+@media (min-width: 390px) {
+	.qqcontents {
+		width: 50vw;    }
+	#qq-x {
+		left: calc(46.429vw - 1.094rem);    }
+}    /* close >= 390 mediquery */
+
+
+/* >= 650px: CONTENT WIDTH CHANGES + EDGE MARGIN WIDTH CHANGES +++++++++++++++++++++++++++++++ */
+/* content width = 18/28 (64.283vw), set below within mediaquery
+   edge margin = 10px, set within a script at bottom of qq-position.js
+   I WILL TRY TO USE CSS VARIABLES FOR content width AND edge margin & SET THE :root ELEMENT
+   IF THAT DOESN'T WORK WITH calc() PROPERLY ALL CLASS ZONES MUST BE SET FROM SCRATCH
+   ALSO DEFINE #sharkfin AND #bordercover SIZE HERE BASED ON CSS VARIABLE * 2 */
+@media (min-width: 650px) {
+	.qqcontents {
+		width: 64.283vw;    }
+	#qq-x {
+		left: calc(60.712vw - 1.094rem);    }
+	#sharkfin {
+		width: 20px;    /* TEST !!!!! should be 2 * edgemargin's CSS Variable */
+		height: 20px;    }    /* TEST !!!!! should be 2 * edgemargin's CSS Variable */
+	#bordercover {
+		width: 20px;    /* TEST !!!!! should be 2 * edgemargin's CSS Variable */
+		height: 20px;    }    /* TEST !!!!! should be 2 * edgemargin's CSS Variable */
+}    /* close >= 650 mediquery */
+
+
+/* >= 817px: CONTENT WIDTH CHANGE +++++++++++++++++++++++++++++++ */
+/* content width = 18/28 (64.283vw), set below within mediaquery
+   I WILL TRY TO USE CSS VARIABLES FOR content width AND edge margin & SET THE :root ELEMENT
+   IF THAT DOESN'T WORK WITH calc() PROPERLY ONLY CLASS ZONES INVOLVING CONTENT WIDTH MUST BE SET FROM SCRATCH */
+@media (min-width: 817px) {
+    .qqcontents {
+        padding: 58.33px;
+        width: 525px;    }
+    #qq-x {
+        top: calc(29.175px - 0.844rem);
+        left: calc(495.825px - 1.094rem);    }
+}    /* close >= 817 mediquery */
+
+
+/* >= 1225px: CONTENT WIDTH CHANGE + EDGE MARGIN WIDTH CHANGE +++++++++++++++++++++++++++++++ */
+/* binoc width (large) = 209px, set via CSS Variable via :root element, set below within mediaquery
+   binoc height (large) = 96.4px, set via CSS Variable via :root element, set below within mediaquery
+   I WILL TRY TO USE CSS VARIABLES FOR content width AND edge margin & SET THE :root ELEMENT
+   IF THAT DOESN'T WORK WITH calc() PROPERLY ONLY CLASS ZONES INVOLVING CONTENT WIDTH & BINOC WIDTH & BINOC HEIGHT MUST BE SET FROM SCRATCH */
+@media only screen and (min-width: 1225px) {
+	:root {
+		--container-width-big: 209px; /* CHANGING FROM vw's TO px's AT 1225px BREAKPOINT */
+		--container-height-big: 96.4px;    }
+	.center.qqcontents-large {    /* TEST !!!!! */
+		left: -200px;	}
+	.top {    /* TEST !!!!! */
+		margin-top: 96px;    }
+}    /* MIN 1225px GROW ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -140,13 +140,14 @@ function qqIconInnardsClick(e) {
             // for larger screens first
             if (qqScreenWidth >= 390) {
 
-                // .center zone
+                // applying .center zone (or not)
                 if (((binocHCtr - contentWidthHalf - edgeMargin) >= 0) && ((binocHCtr + contentWidthHalf + edgeMargin) <= qqScreenWidth)) {
-                    // content.style.left = '-' + parseInt(contentWidthHalf - binocWidthHalf) + 'px';
-                    content.classList.add('center');
+                    content.style.left = '-' + parseInt(contentWidthHalf - binocWidthHalf) + 'px';
                     content.appendChild(sharkFin);
+                    // sharkFin.style.top = 0 - parseInt(sharkFinHeight) + "px";
                     sharkFin.style.left = 'calc(' + (0 + parseInt(contentWidthHalf) - parseInt(sharkFinHeight / 2)) + "px - 0.2rem)";
                     content.appendChild(borderCover);
+                    // borderCover.style.top = 'calc(' + (0 - parseInt(sharkFinHeight)) + "px + 0.18rem)";
                     borderCover.style.left = 'calc(' + (0 + parseInt(contentWidthHalf) - parseInt(sharkFinHeight / 2)) + "px - 0.2rem)";
                     document.getElementById('qqtest').innerHTML = 'center!';  // .center TEST !!!!!
 
@@ -154,13 +155,12 @@ function qqIconInnardsClick(e) {
                     if ((contentBottomLoc + binocHeight + (2 * edgeMargin)) < footerTopLoc) {
                         content.classList.add('top');
                         // TESTING COMMENTING THIS OUT! // content.style.top = parseInt(edgeMargin) + parseInt(binocHeight) + "px";
-                        content.style.marginTop = parseInt(edgeMargin) + parseInt(binocHeight) + "px";
                         sharkFin.style.top = 0 - parseInt(sharkFinHeight) + "px";
                         borderCover.style.top = 'calc(' + (0 - parseInt(sharkFinHeight)) + "px + 0.18rem)";
                         document.getElementById('qqtest').innerHTML = 'center + top!';  // .center + .top TEST !!!!!
                     
                     } else { // NOT .top; YES .bottom added to .center
-                        content.style.marginTop = parseInt(-contentHeight) - parseInt(edgeMargin) + "px";
+                        content.style.top = parseInt(-contentHeight) - parseInt(edgeMargin) + "px";
                         document.getElementById('qqtest').innerHTML = 'center + bottom!';  // .center + .bottom TEST !!!!!                        
                     } // close "else" for .bottom zone
                 
@@ -175,11 +175,11 @@ function qqIconInnardsClick(e) {
 
                             // applying .top zone or not to .left
                             if ((contentBottomLoc + binocHeight + (2 * edgeMargin)) < footerTopLoc) {
-                                content.style.marginTop = parseInt(edgeMargin) + parseInt(binocHeight) + "px";
+                                content.style.top = parseInt(edgeMargin) + parseInt(binocHeight) + "px";
                                 document.getElementById('qqtest').innerHTML = 'left + top!';  // .left + .top TEST !!!!!
                             
                             } else { // NOT .top; YES .bottom added to .left
-                                content.style.marginTop = parseInt(-contentHeight) - parseInt(edgeMargin) + "px";
+                                content.style.top = parseInt(-contentHeight) - parseInt(edgeMargin) + "px";
                                 document.getElementById('qqtest').innerHTML = 'left + bottom!';  // .left + .bottom TEST !!!!!                        
                             } // close "else" for .bottom zone                       
                         
@@ -192,11 +192,11 @@ function qqIconInnardsClick(e) {
 
                                 // applying .top zone or not to .right
                                 if ((contentBottomLoc + binocHeight + (2 * edgeMargin)) < footerTopLoc) {
-                                    content.style.marginTop = parseInt(edgeMargin) + parseInt(binocHeight) + "px";
+                                    content.style.top = parseInt(edgeMargin) + parseInt(binocHeight) + "px";
                                     document.getElementById('qqtest').innerHTML = 'right + top!';  // .right + .top TEST !!!!!
                                 
                                 } else { // NOT .top; YES .bottom added to .right
-                                    content.style.marginTop = parseInt(-contentHeight) - parseInt(edgeMargin) + "px";
+                                    content.style.top = parseInt(-contentHeight) - parseInt(edgeMargin) + "px";
                                     document.getElementById('qqtest').innerHTML = 'right + bottom!';  // .right + .bottom TEST !!!!!                        
                                 } // close "else" for .bottom zone  
                             
@@ -207,20 +207,20 @@ function qqIconInnardsClick(e) {
                                     // applying .specialmiddleright or not
                                     if ((contentBottomLoc - contentHeightHalf + binocHeightHalf + edgeMargin) < footerTopLoc) {
                                         content.style.left = parseInt(-contentWidth) - (parseInt(edgeMargin) * 3) + "px";
-                                        content.style.marginTop = parseInt(-contentHeightHalf) + parseInt(binocHeightHalf) + "px";
+                                        content.style.top = parseInt(-contentHeightHalf) + parseInt(binocHeightHalf) + "px";
                                         document.getElementById('qqtest').innerHTML = 'specialmiddleright!';  // .specialmiddleright TEST !!!!!                        
                                 
                                     } else {
 
                                         // applying .specialbottomright or not
                                         if ((contentBottomLoc - contentHeight + binocHeightHalf + (3 * edgeMargin)) < footerTopLoc) {
-                                            content.style.marginTop = parseInt(contentBottomLoc) - parseInt(footerTopLoc) - parseInt(edgeMargin) + "px";
+                                            content.style.top = parseInt(contentBottomLoc) - parseInt(footerTopLoc) - parseInt(edgeMargin) + "px";
                                             content.style.left = parseInt(-contentWidth) - (parseInt(edgeMargin) * 3) + "px";
                                             document.getElementById('qqtest').innerHTML = 'specialbottomright!';  // .specialbottomright TEST !!!!!                        
                                 
                                         } else { // NOT .specialbottomright; YES .extremebottomright
                                             content.style.left = parseInt(-contentWidth) - (parseInt(edgeMargin) * 3) + "px";
-                                            content.style.marginTop = parseInt(contentBottomLoc) - parseInt(footerTopLoc) - parseInt(edgeMargin) + "px";
+                                            content.style.top = parseInt(contentBottomLoc) - parseInt(footerTopLoc) - parseInt(edgeMargin) + "px";
                                             document.getElementById('qqtest').innerHTML = 'extremebottomright!';  // .extremebottomright TEST !!!!!                        
                                 
                                         } // close "else" for .extremebottomright zone
@@ -232,12 +232,12 @@ function qqIconInnardsClick(e) {
                                     // applying .specialtopright or not
                                     if ((binocTopLoc + binocHeightHalf - (3 * edgeMargin)) < 0) {
                                         content.style.left = parseInt(-contentWidth) - (parseInt(edgeMargin) * 3) + "px";
-                                        content.style.marginTop = -contentTopLoc + parseInt(edgeMargin) + "px";
+                                        content.style.top = -contentTopLoc + parseInt(edgeMargin) + "px";
                                         document.getElementById('qqtest').innerHTML = 'specialtopright!';  // .specialtopright TEST !!!!!                        
 
                                     } else { // NOT .specialtopright; YES .extremetopright
                                         content.style.left = parseInt(-contentWidth) - (parseInt(edgeMargin) * 3) + "px";
-                                        content.style.marginTop = -contentTopLoc + parseInt(edgeMargin) + "px";
+                                        content.style.top = -contentTopLoc + parseInt(edgeMargin) + "px";
                                         document.getElementById('qqtest').innerHTML = 'extremetopright!';  // .extremetopright TEST !!!!!                            
 
                                     } // close "else" for .extremetopright zone
@@ -255,20 +255,20 @@ function qqIconInnardsClick(e) {
                             // applying .specialmiddleleft or not
                             if ((contentBottomLoc - contentHeightHalf + binocHeightHalf + edgeMargin) < footerTopLoc) {
                                 content.style.left = parseInt(binocWidth) + (parseInt(edgeMargin) * 3) + "px";
-                                content.style.marginTop = parseInt(-contentHeightHalf) + parseInt(binocHeightHalf) + "px";
+                                content.style.top = parseInt(-contentHeightHalf) + parseInt(binocHeightHalf) + "px";
                                 document.getElementById('qqtest').innerHTML = 'specialmiddleleft!';  // .specialmiddleleft TEST !!!!!                        
                                 
                             } else {
 
                                 // applying .specialbottomleft or not
                                 if ((contentBottomLoc - contentHeight + binocHeightHalf + (3 * edgeMargin)) < footerTopLoc) {
-                                    content.style.marginTop = parseInt(contentBottomLoc) - parseInt(footerTopLoc) - parseInt(edgeMargin) + "px";
+                                    content.style.top = parseInt(contentBottomLoc) - parseInt(footerTopLoc) - parseInt(edgeMargin) + "px";
                                     content.style.left = parseInt(binocWidth) + (parseInt(edgeMargin) * 3) + "px";
                                     document.getElementById('qqtest').innerHTML = 'specialbottomleft!';  // .specialbottomleft TEST !!!!!                        
                                 
                                 } else { // NOT .specialbottomleft; YES .extremebottomleft
                                     content.style.left = parseInt(binocWidth) + (parseInt(edgeMargin) * 3) + "px";
-                                    content.style.marginTop = parseInt(contentBottomLoc) - parseInt(footerTopLoc) - parseInt(edgeMargin) + "px";
+                                    content.style.top = parseInt(contentBottomLoc) - parseInt(footerTopLoc) - parseInt(edgeMargin) + "px";
                                     document.getElementById('qqtest').innerHTML = 'extremebottomleft!';  // .extremebottomleft TEST !!!!!                        
                                 
                                 } // close "else" for .extremebottomleft zone
@@ -279,13 +279,13 @@ function qqIconInnardsClick(e) {
 
                             // applying .specialtopleft or not
                             if ((binocTopLoc + binocHeightHalf - (3 * edgeMargin)) < 0) {
-                                content.style.marginTop = -contentTopLoc + parseInt(edgeMargin) + "px";
+                                content.style.top = -contentTopLoc + parseInt(edgeMargin) + "px";
                                 content.style.left = parseInt(binocWidth) + (parseInt(edgeMargin) * 3) + "px";
                                 document.getElementById('qqtest').innerHTML = 'specialtopleft!';  // .specialtopleft TEST !!!!!                        
 
                             } else { // NOT .specialtopleft; YES .extremetopleft
                                 content.style.left = parseInt(binocWidth) + (parseInt(edgeMargin) * 3) + "px";
-                                content.style.marginTop = -contentTopLoc + parseInt(edgeMargin) + "px";
+                                content.style.top = -contentTopLoc + parseInt(edgeMargin) + "px";
                                 document.getElementById('qqtest').innerHTML = 'extremetopleft!';  // .extremetopleft TEST !!!!!                            
 
                             } // close "else" for .extremetopleft zone
