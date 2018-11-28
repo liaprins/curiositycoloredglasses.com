@@ -25,32 +25,30 @@
 	position: absolute;
 	cursor: pointer;    }
 
-:root {
-	--container-width-big: 17.05vw; 
-	--container-height-big: 7.866vw;     }
+/* TRYING OUT PUTTING THESE DOWN IN THE CONTENT POSITIONING AREA WITH THE OTHER CSS VARIABLES */
 
 .largeqqglasses {
-	width: var(--container-width-big);
-	height: var(--container-height-big);    }
+	width: var(--binocwidth-l);
+	height: var(--binocheight-l);    }
 
 .mediumqqglasses {
-	width: calc(var(--container-width-big) * 0.75);
-	height: calc(var(--container-height-big) * 0.75);
+	width: var(--binocwidth-m);
+	height: var(--binocheight-m);
 	opacity: 0.9;    }
 
 .smallqqglasses {
-	width: calc(var(--container-width-big) * 0.5);
-	height: calc(var(--container-height-big) * 0.5);
+	width: var(--binocwidth-s);
+	height: var(--binocheight-s);
 	opacity: 0.8;    }
 
 .largeqqglasses > .lens {
-	border-width: calc(var(--container-width-big) * 0.045 * 0.833);    }
+	border-width: calc(var(--binocwidth-l) * 0.045 * 0.833);    }
 
 .mediumqqglasses > .lens {
-	border-width: calc(var(--container-width-big) * 0.045 * 0.833 * 0.75);    }
+	border-width: calc(var(--binocwidth-m) * 0.045 * 0.833);    }
 
 .smallqqglasses > .lens {
-	border-width: calc(var(--container-width-big) * 0.045 * 0.833 * 0.5);    }
+	border-width: calc(var(--binocwidth-s) * 0.045 * 0.833);    }
 
 .lens {
 	box-sizing: border-box;
@@ -104,19 +102,19 @@
 	top: 8.71%;    }
 
 .trapezoid-large {
-	border-top: calc(var(--container-width-big) * 0.145) solid black;    /* TRAPEZOID NEEDS PIXELS! */
-	border-left: calc(var(--container-width-big) * 0.072) solid transparent;
-	border-right: calc(var(--container-width-big) * 0.072) solid transparent;    }
+	border-top: calc(var(--binocwidth-l) * 0.145) solid black;    /* TRAPEZOID NEEDS PIXELS! */
+	border-left: calc(var(--binocwidth-l) * 0.072) solid transparent;
+	border-right: calc(var(--binocwidth-l) * 0.072) solid transparent;    }
 
 .trapezoid-medium {
-	border-top: calc(var(--container-width-big) * 0.145 * 0.75) solid black;
-	border-left: calc(var(--container-width-big) * 0.072 * 0.75) solid transparent;
-	border-right: calc(var(--container-width-big) * 0.072 * 0.75) solid transparent;    }
+	border-top: calc(var(--binocwidth-m) * 0.145) solid black;
+	border-left: calc(var(--binocwidth-m) * 0.072) solid transparent;
+	border-right: calc(var(--binocwidth-m) * 0.072) solid transparent;    }
 
 .trapezoid-small {
-	border-top: calc(var(--container-width-big) * 0.145 * 0.5) solid black;
-	border-left: calc(var(--container-width-big) * 0.072 * 0.5) solid transparent;
-	border-right: calc(var(--container-width-big) * 0.072 * 0.5) solid transparent;    }
+	border-top: calc(var(--binocwidth-s) * 0.145) solid black;
+	border-left: calc(var(--binocwidth-s) * 0.072) solid transparent;
+	border-right: calc(var(--binocwidth-s) * 0.072) solid transparent;    }
 
 
 /* QQ BOXES FOR TESTING BINOC MARGIN RANGES ---------------------------------------------------------------------------------------------------- */
@@ -165,11 +163,11 @@
 	border-style: solid;
 	border-color: black;
 	z-index: 1;
-	/* position: absolute; */
-	position: relative;
+	position: absolute;
+	/* position: relative; */
 	border-width: 0.125rem;
 	padding: 7.143vw;
-	width: 78.571vw;    }
+	width: var(--contentwidth);    }
 
 #qq-x {
 	position: absolute;
@@ -201,60 +199,107 @@
 
 
 /* "CLASS ZONES": JS-DETERMINED, CSS-STYLED TO MAKE THE SHARKFIN AND CONTENT BOX OPTIMALLY POSITIONED ---------------------------------------------------------------------------------------------------- */
-/* TRY TO SET CSS VARIABLES FOR MEDIUM AND SMALL BINOCS, BASED ON LARGE BINOC SIZE...
-   THIS WOULD MEAN A CSS VARIABLE WITHIN A CSS VARIABLE
-   IF THAT DOESN'T WORK (OR IF THAT DOESN'T WORK WITH calc() PROPERLY) WILL NEED TO SET SEPARATE SELECTORS FOR EACH ZONE FOR EACH BINOC SIZE, BY COMBINING (FOR INSTANCE):
+/* WILL NEED TO SET class zones that are dependent upon binoc width or height 3 times over, once for each binco size
+   These calculations will be identical to each other, except the one for large binocs will include "var(--binocwidth-l)"
+   and the one for med binocs will include "var(--container-width-m)" instead, for instance.
    .qqcontents-large.center {...} (THE TWO CLASSES GO RIGHT NEXT TO EACH OTHER WITHOUT A SPACE!) */
 
 /* < 390px: NARROW CLASS ZONES APPLIED VIA JS (no mediaquery needed; I will come back and add classes once I do the JS if-statements for this) +++++++++++++++++++++++++++++++ */
-/* binoc width (large) = 17.05vw, set via CSS Variable via :root element above, line ~28
-   binoc height (large) = 7.866vw, set via CSS Variable via :root element above, line ~28
-   content width = 22/28 (78.571vw), set above, line ~172
-   edge margin = 1/56 (1.79vw), set within a script at bottom of qq-position.js
-   USE CSS VARIABLES FOR content width AND edge margin & SET THE :root ELEMENT
-   ALL CLASS ZONES MUST BE SET FROM SCRATCH
-   ALSO DEFINE #sharkfin AND #bordercover SIZE HERE BASED ON CSS VARIABLE * 2 */
+/* ALL CLASS ZONES (FOR NARROW SCREENWIDTHS) MUST BE SET FROM SCRATCH
+   THIS (AND >= 390px BELOW) SHOULD BE THE ONLY PLACES I SET CLASS ZONES */
+:root {
+ 	--binocwidth-l: 17.05vw;    /* binoc width (large) applied above in lines ~31 */
+	--binocheight-l: 7.866vw;    /* binoc height (large) applied above in lines ~32 */
+	--binocwidth-m: calc(var(--binocwidth-l) * 0.75);    /* binoc width (med) applied above in lines ~35 */
+	--binocheight-m: calc(var(--binocheight-l) * 0.75);    /* binoc height (med) applied above in lines ~36 */
+	--binocwidth-s: calc(var(--binocwidth-l) * 0.5);    /* binoc width (small) applied above in lines ~40 */
+	--binocheight-s: calc(var(--binocheight-l) * 0.5);    /* binoc height (small) applied above in lines ~41 */
+	--contentwidth: 78.571vw;    /* content width = 22/28 (78.571vw), applied above in line ~174 */
+	--edgemargin: 1.79vw;    }    /* edge margin = 1/56 (1.79vw), set within a script at bottom of qq-position.js */
+#sharkfin,
+#bordercover {
+	width: calc(var(--edgemargin) * 2);
+	height: calc(var(--edgemargin) * 2);    }
+
 
 /* >= 390px: WIDESCREEN CLASS ZONES APPLIED VIA JS + CONTENT BOX WIDTH CHANGES +++++++++++++++++++++++++++++++ */
-/* content width = 14/28 (50vw), set below within mediaquery
-   USE CSS VARIABLES FOR content width AND edge margin & SET THE :root ELEMENT
-   ALL CLASS ZONES MUST BE SET FROM SCRATCH */
+/* ALL CLASS ZONES MUST BE SET FROM SCRATCH
+   THIS (AND < 390px ABOVE) SHOULD BE THE ONLY PLACES I SET CLASS ZONES */
 @media (min-width: 390px) {
-	.qqcontents {
-		width: 50vw;    }
+	:root {
+		--contentwidth: 50vw;    }    /* content width = 14/28 (50vw), applied above in line ~174 */
 	#qq-x {
 		left: calc(46.429vw - 1.094rem);    }
+
+	.center.qqcontents-large {    
+		left: calc((var(--contentwidth) / -2) + (var(--binocwidth-l) / 2));	}
+	.center.qqcontents-medium {    
+		left: calc((var(--contentwidth) / -2) + (var(--binocwidth-m) / 2));	}
+	.center.qqcontents-small {    
+		left: calc((var(--contentwidth) / -2) + (var(--binocwidth-s) / 2));	}
+
+	.top.qqcontents-large {
+		margin-top: calc(var(--edgemargin) + var(--binocheight-l)); }
+	.top.qqcontents-medium {
+		margin-top: calc(var(--edgemargin) + var(--binocheight-m)); }
+	.top.qqcontents-small {
+		margin-top: calc(var(--edgemargin) + var(--binocheight-s)); }
+
+	.bottom.qqcontents-large {
+		/* NEED TO FIGURE OUT HOW TO COLLECT CONTENT BOX'S HEIGHT... MAY NEED TO ASSIGN THIS ONE IN JS OTHERWISE */
+	}
+	.bottom.qqcontents-medium {
+		/* NEED TO FIGURE OUT HOW TO COLLECT CONTENT BOX'S HEIGHT... MAY NEED TO ASSIGN THIS ONE IN JS OTHERWISE */
+	}
+	.bottom.qqcontents-small {
+		/* NEED TO FIGURE OUT HOW TO COLLECT CONTENT BOX'S HEIGHT... MAY NEED TO ASSIGN THIS ONE IN JS OTHERWISE */
+	}
+
+	.left.qqcontents-large {
+		/* NEED TO FIGURE OUT HOW TO COLLECT CONTENT BOX'S LEFT LOCATION... MAY NEED TO ASSIGN THIS ONE IN JS OTHERWISE */
+	}
+	.left.qqcontents-medium {    
+		/* NEED TO FIGURE OUT HOW TO COLLECT CONTENT BOX'S LEFT LOCATION... MAY NEED TO ASSIGN THIS ONE IN JS OTHERWISE */
+	}
+	.left.qqcontents-small {    
+		/* NEED TO FIGURE OUT HOW TO COLLECT CONTENT BOX'S LEFT LOCATION... MAY NEED TO ASSIGN THIS ONE IN JS OTHERWISE */
+	}
+
+	.specialmiddleright,
+	.specialbottomright,
+	.extremebottomright,
+	.specialtopright,
+	.extremetopright {
+		/* THESE CLASS ZONES CAN ONLY DO HORIZONTAL POSITIONING AS OF NOW; NEED TO FIGURE OUT HOW TO COLLECT CONTENT BOX'S HEIGHT... MAY NEED TO ASSIGN THESE ONES IN JS OTHERWISE */
+		left: calc((var(--contentwidth) * -1) - (var(--edgemargin) * 3));	}
+
+	.specialmiddleleft,
+	.specialbottomleft,
+	.extremebottomleft,
+	.specialtopleft,
+	.extremetopleft {
+		/* THESE CLASS ZONES CAN ONLY DO HORIZONTAL POSITIONING AS OF NOW; NEED TO FIGURE OUT HOW TO COLLECT CONTENT BOX'S HEIGHT... MAY NEED TO ASSIGN THESE ONES IN JS OTHERWISE */
+		left: calc(var(--contentwidth) + (var(--edgemargin) * 3));	}
+
 }    /* close >= 390 mediquery */
 
 
 /* >= 650px: CONTENT WIDTH CHANGES + EDGE MARGIN WIDTH CHANGES +++++++++++++++++++++++++++++++ */
-/* content width = 18/28 (64.283vw), set below within mediaquery
-   edge margin = 10px, set within a script at bottom of qq-position.js
-   I WILL TRY TO USE CSS VARIABLES FOR content width AND edge margin & SET THE :root ELEMENT
-   IF THAT DOESN'T WORK WITH calc() PROPERLY ALL CLASS ZONES MUST BE SET FROM SCRATCH
-   ALSO DEFINE #sharkfin AND #bordercover SIZE HERE BASED ON CSS VARIABLE * 2 */
 @media (min-width: 650px) {
-	.qqcontents {
-		width: 64.283vw;    }
+	:root {
+		--contentwidth: 64.283vw;    /* content width = 18/28 (64.283vw), applied above in line ~174 */
+		--edgemargin: 10px;    }    /* set within a script at bottom of qq-position.js */
 	#qq-x {
 		left: calc(60.712vw - 1.094rem);    }
-	#sharkfin {
-		width: 20px;    /* TEST !!!!! should be 2 * edgemargin's CSS Variable */
-		height: 20px;    }    /* TEST !!!!! should be 2 * edgemargin's CSS Variable */
-	#bordercover {
-		width: 20px;    /* TEST !!!!! should be 2 * edgemargin's CSS Variable */
-		height: 20px;    }    /* TEST !!!!! should be 2 * edgemargin's CSS Variable */
 }    /* close >= 650 mediquery */
 
 
 /* >= 817px: CONTENT WIDTH CHANGE +++++++++++++++++++++++++++++++ */
-/* content width = 18/28 (64.283vw), set below within mediaquery
-   I WILL TRY TO USE CSS VARIABLES FOR content width AND edge margin & SET THE :root ELEMENT
-   IF THAT DOESN'T WORK WITH calc() PROPERLY ONLY CLASS ZONES INVOLVING CONTENT WIDTH MUST BE SET FROM SCRATCH */
 @media (min-width: 817px) {
+    :root {
+		--contentwidth: 525px;    }    /* content width applied above in line ~174 */
     .qqcontents {
-        padding: 58.33px;
-        width: 525px;    }
+        padding: 58.33px;    }
     #qq-x {
         top: calc(29.175px - 0.844rem);
         left: calc(495.825px - 1.094rem);    }
@@ -262,18 +307,10 @@
 
 
 /* >= 1225px: CONTENT WIDTH CHANGE + EDGE MARGIN WIDTH CHANGE +++++++++++++++++++++++++++++++ */
-/* binoc width (large) = 209px, set via CSS Variable via :root element, set below within mediaquery
-   binoc height (large) = 96.4px, set via CSS Variable via :root element, set below within mediaquery
-   I WILL TRY TO USE CSS VARIABLES FOR content width AND edge margin & SET THE :root ELEMENT
-   IF THAT DOESN'T WORK WITH calc() PROPERLY ONLY CLASS ZONES INVOLVING CONTENT WIDTH & BINOC WIDTH & BINOC HEIGHT MUST BE SET FROM SCRATCH */
 @media only screen and (min-width: 1225px) {
 	:root {
-		--container-width-big: 209px; /* CHANGING FROM vw's TO px's AT 1225px BREAKPOINT */
-		--container-height-big: 96.4px;    }
-	.center.qqcontents-large {    /* TEST !!!!! */
-		left: -200px;	}
-	.top {    /* TEST !!!!! */
-		margin-top: 96px;    }
+		--binocwidth-l: 209px;    /* changing from vw's to px's; applied above in lines ~31, 212, 214  */
+		--binocheight-l: 96.4px;    }    /* changing from vw's to px's; applied above in lines ~31, 213, 215  */
 }    /* MIN 1225px GROW ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
 
