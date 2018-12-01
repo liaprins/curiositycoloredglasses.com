@@ -100,6 +100,8 @@
 
 					<div class="qqcontents <?php if ($qqfile->category() == 'large'): ?>qqcontents-large<?php endif ?><?php if ($qqfile->category() == 'medium'): ?>qqcontents-medium<?php endif ?><?php if ($qqfile->category() == 'small'): ?>qqcontents-small<?php endif ?>" style="display: none;" data-edgemargin="">						
 						<img src= "<?php echo url('assets/images/x.svg') ?>" alt="close" id="qq-x" class="yellowhover close-x">
+						<div class="sharkfin"></div>
+						<div class="bordercover"></div>
 						<div class="qqquestion s-display"><?php echo $qqfile->question() ?></div>
 						<div class="qqdescription s-textface"><?php echo $qqfile->explanation() ?></div>
 					</div>

@@ -130,12 +130,12 @@ function qqIconInnardsClick(e) {
             var footerTopLoc = document.getElementById('footercontent').parentNode.getBoundingClientRect().top + pageYOffset;
             var edgeMargin = content.getAttribute('data-edgemargin');    // set within a script at bottom of qq-position.js
             var qqScreenWidth = window.innerWidth;
-            var sharkFin = document.createElement('div');
-            sharkFin.setAttribute('id', 'sharkfin');
+            var sharkFin = content.firstElementChild.nextElementSibling;
             var sharkFinHeight = 12;
-            var borderCover = document.createElement('div');
-            borderCover.setAttribute('id', 'bordercover');
+            var borderCover = sharkFin.nextElementSibling;
             var contentPadding = 58;
+
+            // document.getElementById('qqtest').innerHTML = sharkFinHeight;  // GENERAL TESTING !!!!!
 
             // for larger screens first
             if (qqScreenWidth >= 390) {
@@ -159,8 +159,10 @@ function qqIconInnardsClick(e) {
                         document.getElementById('qqtest').innerHTML = 'center + top!';  // .center + .top TEST !!!!!
                     
                     } else { // .bottom zone added to .center MAY NEED TO KEEP SYLING FOR THIS ZONE WITHIN JS; CSS CANNOT KNOW CONTENT BOX'S HEIGHT BUT JS CAN
-                        content.style.marginTop = parseInt(-contentHeight) - parseInt(edgeMargin) + "px";
-                        // content.classList.add('bottom');
+                        content.style.marginTop = parseInt(-contentHeight) - (parseInt(edgeMargin) * 2) + "px";
+                        content.classList.add('bottom');
+                        sharkFin.style.top = 'calc(' + (contentHeight - edgeMargin) + 'px - 0.1875rem)';
+                        borderCover.style.top = 'calc(' + (contentHeight - edgeMargin) + 'px - 0.375rem)';
                         document.getElementById('qqtest').innerHTML = 'center + bottom!';  // .center + .bottom TEST !!!!!                        
                     } // close "else" for .bottom zone
                 
@@ -172,6 +174,8 @@ function qqIconInnardsClick(e) {
                         if (binocHCtr < (qqScreenWidth / 2)) {
                             content.style.left = parseInt(-contentLeftLoc) + parseInt(edgeMargin) + 'px';
                             // content.classList.add('left');
+                            sharkFin.style.left = 'calc(' + (0 - edgeMargin + binocLeftLoc + binocWidthHalf - edgeMargin) + 'px - 0.125rem)';
+                            borderCover.style.left = 'calc(' + (0 - edgeMargin + binocLeftLoc + binocWidthHalf - edgeMargin) + 'px - 0.125rem)';
                             document.getElementById('qqtest').innerHTML = 'left!';  // .left TEST !!!!! 
 
                             // .top zone added to .left
@@ -181,8 +185,10 @@ function qqIconInnardsClick(e) {
                                 document.getElementById('qqtest').innerHTML = 'left + top!';  // .left + .top TEST !!!!!
                             
                             } else { // .bottom zone added to .left MAY NEED TO KEEP SYLING FOR THIS ZONE WITHIN JS; CSS CANNOT KNOW CONTENT BOX'S HEIGHT BUT JS CAN
-                                content.style.marginTop = parseInt(-contentHeight) - parseInt(edgeMargin) + "px";
-                                // content.classList.add('bottom');
+                                content.style.marginTop = parseInt(-contentHeight) - (parseInt(edgeMargin) * 2) + "px";
+                                content.classList.add('bottom');
+                                sharkFin.style.top = 'calc(' + (contentHeight - edgeMargin) + 'px - 0.1875rem)';
+                                borderCover.style.top = 'calc(' + (contentHeight - edgeMargin) + 'px - 0.375rem)';
                                 document.getElementById('qqtest').innerHTML = 'left + bottom!';  // .left + .bottom TEST !!!!!                        
                             } // close "else" for .bottom zone                       
                         
@@ -191,6 +197,8 @@ function qqIconInnardsClick(e) {
                             // .right zone MAY NEED TO KEEP SYLING FOR THIS ZONE WITHIN JS; CSS CANNOT KNOW CONTENT BOX'S LOCATION NOR EXACT SCREENWIDTH BUT JS CAN
                             if (binocHCtr <= (qqScreenWidth - (3 * edgeMargin))) {
                                 content.style.left = parseInt(qqScreenWidth) - parseInt(contentLeftLoc) - parseInt(contentWidth) - parseInt(edgeMargin) + "px";
+                                sharkFin.style.left = 'calc(' + (0 + contentWidth - qqScreenWidth + binocLeftLoc + binocWidthHalf) + 'px - 0.125rem)';
+                                borderCover.style.left = 'calc(' + (0 + contentWidth - qqScreenWidth + binocLeftLoc + binocWidthHalf) + 'px - 0.125rem)';
                                 document.getElementById('qqtest').innerHTML = 'right!';  // .right TEST !!!!! 
 
                                 // .top zone added to .right
@@ -200,7 +208,7 @@ function qqIconInnardsClick(e) {
                                     document.getElementById('qqtest').innerHTML = 'right + top!';  // .right + .top TEST !!!!!
                                 
                                 } else { // .bottom zone added to .right MAY NEED TO KEEP SYLING FOR THIS ZONE WITHIN JS; CSS CANNOT KNOW CONTENT BOX'S HEIGHT BUT JS CAN
-                                    content.style.marginTop = parseInt(-contentHeight) - parseInt(edgeMargin) + "px";
+                                    content.style.marginTop = parseInt(-contentHeight) - (parseInt(edgeMargin) * 2) + "px";
                                     // content.classList.add('bottom');
                                     document.getElementById('qqtest').innerHTML = 'right + bottom!';  // .right + .bottom TEST !!!!!                        
                                 } // close "else" for .bottom zone  
@@ -214,6 +222,8 @@ function qqIconInnardsClick(e) {
                                         // content.style.left = parseInt(-contentWidth) - (parseInt(edgeMargin) * 3) + "px"; 
                                         content.style.marginTop = parseInt(-contentHeightHalf) + parseInt(binocHeightHalf) + "px";  // MAY NEED TO KEEP SYLING FOR THIS ZONE WITHIN JS; CSS CANNOT KNOW CONTENT BOX'S HEIGHT BUT JS CAN
                                         content.classList.add('specialmiddleright');
+                                        sharkFin.style.top = 'calc(' + (0 + contentHeightHalf - edgeMargin) + 'px - 0.125rem)';
+                                        borderCover.style.top = 'calc(' + (0 + contentHeightHalf - edgeMargin) + 'px - 0.125rem)';
                                         document.getElementById('qqtest').innerHTML = 'specialmiddleright!';  // .specialmiddleright TEST !!!!!                        
                                 
                                     } else {
@@ -223,12 +233,16 @@ function qqIconInnardsClick(e) {
                                             content.style.marginTop = parseInt(contentBottomLoc) - parseInt(footerTopLoc) - parseInt(edgeMargin) + "px";  // MAY NEED TO KEEP SYLING FOR THIS ZONE WITHIN JS; CSS CANNOT KNOW CONTENT BOX'S LOCATION OR FOOTER'S LOCATION BUT JS CAN
                                             // content.style.left = parseInt(-contentWidth) - (parseInt(edgeMargin) * 3) + "px";
                                             content.classList.add('specialbottomright');
+                                            sharkFin.style.top = 'calc(' + (0 - contentHeight - footerTopLoc + binocTopLoc + binocHeightHalf) + 'px - 0.125rem)';
+                                            borderCover.style.top = 'calc(' + (0 - contentHeight - footerTopLoc + binocTopLoc + binocHeightHalf) + 'px - 0.125rem)';
                                             document.getElementById('qqtest').innerHTML = 'specialbottomright!';  // .specialbottomright TEST !!!!!                        
                                 
                                         } else { // .extremebottomright zone  MAY NEED TO KEEP vertical STYLING FOR THIS ZONE WITHIN JS; CSS CANNOT KNOW CONTENT BOX'S LOCATION OR FOOTER'S LOCATION BUT JS CAN
                                             // content.style.left = parseInt(-contentWidth) - (parseInt(edgeMargin) * 3) + "px";
                                             content.classList.add('extremebottomright');
                                             content.style.marginTop = parseInt(contentBottomLoc) - parseInt(footerTopLoc) - parseInt(edgeMargin) + "px";  // MAY NEED TO KEEP SYLING FOR THIS ZONE WITHIN JS; CSS CANNOT KNOW CONTENT BOX'S LOCATION OR FOOTER'S LOCATION BUT JS CAN
+                                            sharkFin.style.top = 'calc(' + (0 - contentHeight - (3 * edgeMargin)) + 'px - 0.125rem)'; 
+                                            borderCover.style.top = 'calc(' + (0 - contentHeight - (3 * edgeMargin)) + 'px - 0.125rem)';                                    
                                             document.getElementById('qqtest').innerHTML = 'extremebottomright!';  // .extremebottomright TEST !!!!!                        
                                 
                                         } // close "else" for .extremebottomright zone
@@ -242,6 +256,8 @@ function qqIconInnardsClick(e) {
                                         // content.style.left = parseInt(-contentWidth) - (parseInt(edgeMargin) * 3) + "px";
                                         content.classList.add('specialtopright');
                                         content.style.marginTop = -contentTopLoc + parseInt(edgeMargin) + "px";  // MAY NEED TO KEEP SYLING FOR THIS ZONE WITHIN JS; CSS CANNOT KNOW CONTENT BOX'S LOCATION BUT JS CAN
+                                        sharkFin.style.top = 'calc(' + (0 - (edgeMargin * 2) + binocTopLoc + binocHeightHalf) + 'px - 0.125rem)';
+                                        borderCover.style.top = 'calc(' + (0 - (edgeMargin * 2) + binocTopLoc + binocHeightHalf) + 'px - 0.125rem)';
                                         document.getElementById('qqtest').innerHTML = 'specialtopright!';  // .specialtopright TEST !!!!!                        
 
                                     } else { // .extremetopright zone MAY NEED TO KEEP vertical STYLING FOR THIS ZONE WITHIN JS; CSS CANNOT KNOW CONTENT BOX'S LOCATION BUT JS CAN
@@ -267,6 +283,8 @@ function qqIconInnardsClick(e) {
                                 // content.style.left = parseInt(binocWidth) + (parseInt(edgeMargin) * 3) + "px";
                                 content.classList.add('specialmiddleleft');
                                 content.style.marginTop = parseInt(-contentHeightHalf) + parseInt(binocHeightHalf) + "px"; // MAY NEED TO KEEP SYLING FOR THIS ZONE WITHIN JS; CSS CANNOT KNOW CONTENT BOX'S HEIGHT BUT JS CAN
+                                sharkFin.style.top = 'calc(' + (0 + contentHeightHalf - edgeMargin) + 'px - 0.125rem)';
+                                borderCover.style.top = 'calc(' + (0 + contentHeightHalf - edgeMargin) + 'px - 0.125rem)';
                                 document.getElementById('qqtest').innerHTML = 'specialmiddleleft!';  // .specialmiddleleft TEST !!!!!                        
                                 
                             } else {
@@ -276,12 +294,16 @@ function qqIconInnardsClick(e) {
                                     content.style.marginTop = parseInt(contentBottomLoc) - parseInt(footerTopLoc) - parseInt(edgeMargin) + "px";  // MAY NEED TO KEEP SYLING FOR THIS ZONE WITHIN JS; CSS CANNOT KNOW CONTENT BOX'S LOCATION OR FOOTER'S LOCATION BUT JS CAN
                                     // content.style.left = parseInt(binocWidth) + (parseInt(edgeMargin) * 3) + "px";
                                     content.classList.add('specialbottomleft');
+                                    sharkFin.style.top = 'calc(' + (0 - contentHeight - footerTopLoc + binocTopLoc + binocHeightHalf) + 'px - 0.125rem)';
+                                    borderCover.style.top = 'calc(' + (0 - contentHeight - footerTopLoc + binocTopLoc + binocHeightHalf) + 'px - 0.125rem)';
                                     document.getElementById('qqtest').innerHTML = 'specialbottomleft!';  // .specialbottomleft TEST !!!!!                        
                                 
                                 } else { // .extremebottomleft zone MAY NEED TO KEEP vertical STYLING FOR THIS ZONE WITHIN JS; CSS CANNOT KNOW CONTENT BOX'S LOCATION OR FOOTER'S LOCATION BUT JS CAN
                                     // content.style.left = parseInt(binocWidth) + (parseInt(edgeMargin) * 3) + "px";
                                     content.classList.add('extremebottomleft');
                                     content.style.marginTop = parseInt(contentBottomLoc) - parseInt(footerTopLoc) - parseInt(edgeMargin) + "px";  // MAY NEED TO KEEP SYLING FOR THIS ZONE WITHIN JS; CSS CANNOT KNOW CONTENT BOX'S LOCATION OR FOOTER'S LOCATION BUT JS CAN
+                                    sharkFin.style.top = 'calc(' + (0 - contentHeight - (3 * edgeMargin)) + 'px - 0.125rem)'; 
+                                    borderCover.style.top = 'calc(' + (0 - contentHeight - (3 * edgeMargin)) + 'px - 0.125rem)';                                    
                                     document.getElementById('qqtest').innerHTML = 'extremebottomleft!';  // .extremebottomleft TEST !!!!!                        
                                 
                                 } // close "else" for .extremebottomleft zone
@@ -295,6 +317,8 @@ function qqIconInnardsClick(e) {
                                 content.style.marginTop = -contentTopLoc + parseInt(edgeMargin) + "px";  // MAY NEED TO KEEP SYLING FOR THIS ZONE WITHIN JS; CSS CANNOT KNOW CONTENT BOX'S LOCATION BUT JS CAN
                                 // content.style.left = parseInt(binocWidth) + (parseInt(edgeMargin) * 3) + "px";
                                 content.classList.add('specialtopleft');
+                                sharkFin.style.top = 'calc(' + (0 - (edgeMargin * 2) + binocTopLoc + binocHeightHalf) + 'px - 0.125rem)';
+                                borderCover.style.top = 'calc(' + (0 - (edgeMargin * 2) + binocTopLoc + binocHeightHalf) + 'px - 0.125rem)';
                                 document.getElementById('qqtest').innerHTML = 'specialtopleft!';  // .specialtopleft TEST !!!!!                        
 
                             } else { // .extremetopleft zone MAY NEED TO KEEP vertical STYLING FOR THIS ZONE WITHIN JS; CSS CANNOT KNOW CONTENT BOX'S LOCATION BUT JS CAN
@@ -313,7 +337,7 @@ function qqIconInnardsClick(e) {
 
             } // I WILL ADD "else" here for narrow screens' if-statements !!!!!!!!!!!!!!!!!!!!
 
-            //document.getElementById('qqtest').innerHTML = sharkFinHeight;  // GENERAL TESTING !!!!!
+            // document.getElementById('qqtest').innerHTML = sharkFinHeight;  // GENERAL TESTING !!!!!
 
 
 
