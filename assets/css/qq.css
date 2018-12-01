@@ -166,7 +166,7 @@
 	position: absolute;
 	/* position: relative; */
 	border-width: 0.125rem;
-	padding: 7.143vw;
+	padding: var(--contentpadding);
 	width: var(--contentwidth);    }
 
 #qq-x {
@@ -177,32 +177,30 @@
 .qqquestion {
 	margin-bottom: 0.768rem;    }
 
-#sharkfin {
-	background-color: white;
-	border-style: solid;
-	border-color: black;
+.sharkfin,
+.bordercover {
+	width: calc(var(--edgemargin) * 2);
+	height: calc(var(--edgemargin) * 2);
 	border-width: 0.125rem;
 	position: absolute;
+	border-style: solid;
+	background-color: white;
 	-ms-transform: rotate(45deg); /* IE 9 */
 	-webkit-transform: rotate(45deg); /* Safari */
 	transform: rotate(45deg);    }
 
-#bordercover {
-	background-color: white;
-	border-style: solid;
+.sharkfin {
+	border-color: black;    }
+
+.bordercover {
 	border-color: white;
-	border-width: 0.125rem;
-	position: absolute;
-	-ms-transform: rotate(45deg); /* IE 9 */
-	-webkit-transform: rotate(45deg); /* Safari */
-	transform: rotate(45deg);    }
-
+	background-color: yellow;  /* TEST!!! */
+	border-color: yellow;  /* TEST!!! */
+	opacity: 0.9;    }    /* TEST!!! */
 
 /* "CLASS ZONES": JS-DETERMINED, CSS-STYLED TO MAKE THE SHARKFIN AND CONTENT BOX OPTIMALLY POSITIONED ---------------------------------------------------------------------------------------------------- */
-/* WILL NEED TO SET class zones that are dependent upon binoc width or height 3 times over, once for each binco size
-   These calculations will be identical to each other, except the one for large binocs will include "var(--binocwidth-l)"
-   and the one for med binocs will include "var(--container-width-m)" instead, for instance.
-   .qqcontents-large.center {...} (THE TWO CLASSES GO RIGHT NEXT TO EACH OTHER WITHOUT A SPACE!) */
+/* THESE CLASS ZONES CAN ONLY DO HORIZONTAL POSITIONING (BECAUSE CSS CANNOT BE AWARE OF CONTENT BOX HEIGHT OR LOCATION, ETC
+NEED TO ASSIGN VERTICAL STYLES IN JS */
 
 /* < 390px: NARROW CLASS ZONES APPLIED VIA JS (no mediaquery needed; I will come back and add classes once I do the JS if-statements for this) +++++++++++++++++++++++++++++++ */
 /* ALL CLASS ZONES (FOR NARROW SCREENWIDTHS) MUST BE SET FROM SCRATCH
@@ -215,11 +213,8 @@
 	--binocwidth-s: calc(var(--binocwidth-l) * 0.5);    /* binoc width (small) applied above in lines ~40 */
 	--binocheight-s: calc(var(--binocheight-l) * 0.5);    /* binoc height (small) applied above in lines ~41 */
 	--contentwidth: 78.571vw;    /* content width = 22/28 (78.571vw), applied above in line ~174 */
+	--contentpadding: 7.143vw;    /* content padding applied above in line ~169 */
 	--edgemargin: 1.79vw;    }    /* edge margin = 1/56 (1.79vw), set within a script at bottom of qq-position.js */
-#sharkfin,
-#bordercover {
-	width: calc(var(--edgemargin) * 2);
-	height: calc(var(--edgemargin) * 2);    }
 
 
 /* >= 390px: WIDESCREEN CLASS ZONES APPLIED VIA JS + CONTENT BOX WIDTH CHANGES +++++++++++++++++++++++++++++++ */
@@ -238,6 +233,12 @@
 	.center.qqcontents-small {    
 		left: calc((var(--contentwidth) / -2) + (var(--binocwidth-s) / 2));	}
 
+	.center > .sharkfin,
+	.center > .bordercover,
+	.center > .sharkfin,
+	.center > .bordercover {
+		left: calc((var(--contentwidth) / 2) - var(--edgemargin) - 0.125rem);	}
+
 	.top.qqcontents-large {
 		margin-top: calc(var(--edgemargin) + var(--binocheight-l)); }
 	.top.qqcontents-medium {
@@ -245,41 +246,72 @@
 	.top.qqcontents-small {
 		margin-top: calc(var(--edgemargin) + var(--binocheight-s)); }
 
-	.bottom.qqcontents-large {
-		/* NEED TO FIGURE OUT HOW TO COLLECT CONTENT BOX'S HEIGHT... MAY NEED TO ASSIGN THIS ONE IN JS OTHERWISE */
-	}
-	.bottom.qqcontents-medium {
-		/* NEED TO FIGURE OUT HOW TO COLLECT CONTENT BOX'S HEIGHT... MAY NEED TO ASSIGN THIS ONE IN JS OTHERWISE */
-	}
-	.bottom.qqcontents-small {
-		/* NEED TO FIGURE OUT HOW TO COLLECT CONTENT BOX'S HEIGHT... MAY NEED TO ASSIGN THIS ONE IN JS OTHERWISE */
-	}
-
-	.left.qqcontents-large {
-		/* NEED TO FIGURE OUT HOW TO COLLECT CONTENT BOX'S LEFT LOCATION... MAY NEED TO ASSIGN THIS ONE IN JS OTHERWISE */
-	}
-	.left.qqcontents-medium {    
-		/* NEED TO FIGURE OUT HOW TO COLLECT CONTENT BOX'S LEFT LOCATION... MAY NEED TO ASSIGN THIS ONE IN JS OTHERWISE */
-	}
-	.left.qqcontents-small {    
-		/* NEED TO FIGURE OUT HOW TO COLLECT CONTENT BOX'S LEFT LOCATION... MAY NEED TO ASSIGN THIS ONE IN JS OTHERWISE */
-	}
+	.top > .sharkfin {
+		top: calc((var(--edgemargin) * -1) - 0.0625rem);	}
+	.top > .bordercover {
+		top: calc((var(--edgemargin) * -1) + 0.125rem);	}
 
 	.specialmiddleright,
 	.specialbottomright,
 	.extremebottomright,
 	.specialtopright,
 	.extremetopright {
-		/* THESE CLASS ZONES CAN ONLY DO HORIZONTAL POSITIONING AS OF NOW; NEED TO FIGURE OUT HOW TO COLLECT CONTENT BOX'S HEIGHT... MAY NEED TO ASSIGN THESE ONES IN JS OTHERWISE */
 		left: calc((var(--contentwidth) * -1) - (var(--edgemargin) * 3));	}
 
-	.specialmiddleleft,
-	.specialbottomleft,
-	.extremebottomleft,
-	.specialtopleft,
-	.extremetopleft {
-		/* THESE CLASS ZONES CAN ONLY DO HORIZONTAL POSITIONING AS OF NOW; NEED TO FIGURE OUT HOW TO COLLECT CONTENT BOX'S HEIGHT... MAY NEED TO ASSIGN THESE ONES IN JS OTHERWISE */
-		left: calc(var(--contentwidth) + (var(--edgemargin) * 3));	}
+	.specialmiddleright > .sharkfin,
+	.specialbottomright > .sharkfin,
+	.extremebottomright > .sharkfin,
+	.specialtopright > .sharkfin,
+	.extremetopright > .sharkfin {
+		left: calc(var(--contentwidth) - var(--edgemargin) - 0.1875rem);	}
+
+	.specialmiddleright > .bordercover,
+	.specialbottomright > .bordercover,
+	.extremebottomright > .bordercover,
+	.specialtopright > .bordercover,
+	.extremetopright > .bordercover {
+		left: calc(var(--contentwidth) - var(--edgemargin) - 0.3125rem);	}
+
+	.specialmiddleleft.qqcontents-large,
+	.specialbottomleft.qqcontents-large,
+	.extremebottomleft.qqcontents-large,
+	.specialtopleft.qqcontents-large,
+	.extremetopleft.qqcontents-large {
+		left: calc((var(--binocwidth-l) * 1) + (var(--edgemargin) * 3));	}
+
+	.specialmiddleleft.qqcontents-medium,
+	.specialbottomleft.qqcontents-medium,
+	.extremebottomleft.qqcontents-medium,
+	.specialtopleft.qqcontents-medium,
+	.extremetopleft.qqcontents-medium {
+		left: calc((var(--binocwidth-m) * 1) + (var(--edgemargin) * 3));	}
+
+	.specialmiddleleft.qqcontents-small,
+	.specialbottomleft.qqcontents-small,
+	.extremebottomleft.qqcontents-small,
+	.specialtopleft.qqcontents-small,
+	.extremetopleft.qqcontents-small {
+		left: calc((var(--binocwidth-s) * 1) + (var(--edgemargin) * 3));	}
+
+	.specialmiddleleft > .sharkfin,
+	.specialbottomleft > .sharkfin,
+	.extremebottomleft > .sharkfin,
+	.specialtopleft > .sharkfin,
+	.extremetopleft > .sharkfin {
+		left: calc((var(--edgemargin) * -1) - 0.063rem);	}
+
+	.specialmiddleleft > .bordercover,
+	.specialbottomleft > .bordercover,
+	.extremebottomleft > .bordercover,
+	.specialtopleft > .bordercover,
+	.extremetopleft > .bordercover {
+		left: calc((var(--edgemargin) * -1) + 0.1rem);	}
+
+	.extremetopright > .sharkfin,
+	.extremetopleft > .sharkfin,
+	.extremetopright > .bordercover,
+	.extremetopleft > .bordercover {
+		top: calc((var(--contentpadding) * -1) - var(--edgemargin));	}
 
 }    /* close >= 390 mediquery */
 
@@ -297,9 +329,8 @@
 /* >= 817px: CONTENT WIDTH CHANGE +++++++++++++++++++++++++++++++ */
 @media (min-width: 817px) {
     :root {
-		--contentwidth: 525px;    }    /* content width applied above in line ~174 */
-    .qqcontents {
-        padding: 58.33px;    }
+		--contentwidth: 525px;    /* content width applied above in line ~174 */
+		--contentpadding: 58.333px;    }    /* content padding applied above in line ~169 */
     #qq-x {
         top: calc(29.175px - 0.844rem);
         left: calc(495.825px - 1.094rem);    }
