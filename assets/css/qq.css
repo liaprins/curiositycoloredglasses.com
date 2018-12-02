@@ -193,10 +193,7 @@
 	border-color: black;    }
 
 .bordercover {
-	border-color: white;
-	background-color: yellow;  /* TEST!!! */
-	border-color: yellow;  /* TEST!!! */
-	opacity: 0.9;    }    /* TEST!!! */
+	border-color: white;    }
 
 /* "CLASS ZONES": JS-DETERMINED, CSS-STYLED TO MAKE THE SHARKFIN AND CONTENT BOX OPTIMALLY POSITIONED ---------------------------------------------------------------------------------------------------- */
 /* THESE CLASS ZONES CAN ONLY DO HORIZONTAL POSITIONING (BECAUSE CSS CANNOT BE AWARE OF CONTENT BOX HEIGHT OR LOCATION, ETC
@@ -215,6 +212,100 @@ NEED TO ASSIGN VERTICAL STYLES IN JS */
 	--contentwidth: 78.571vw;    /* content width = 22/28 (78.571vw), applied above in line ~174 */
 	--contentpadding: 7.143vw;    /* content padding applied above in line ~169 */
 	--edgemargin: 1.79vw;    }    /* edge margin = 1/56 (1.79vw), set within a script at bottom of qq-position.js */
+
+.top-n.qqcontents-large {
+	margin-top: calc(var(--binocheight-l) + var(--edgemargin));	}
+.top-n.qqcontents-medium {
+	margin-top: calc(var(--binocheight-m) + var(--edgemargin));	}
+.top-n.qqcontents-small {
+	margin-top: calc(var(--binocheight-s) + var(--edgemargin));	}
+
+.top-n > .sharkfin {
+	top: calc((var(--edgemargin) * -1) - 0.125rem);	}
+.top-n > .bordercover {
+	top: calc((var(--edgemargin) * -1) + 0.0625rem);	}
+
+.left-n.qqcontents-large {
+	left: calc((var(--binocwidth-l) / 2) - (var(--edgemargin) * 2) - 0.125rem);	}
+.left-n.qqcontents-medium {
+	left: calc((var(--binocwidth-m) / 2) - (var(--edgemargin) * 2) - 0.125rem);	}
+.left-n.qqcontents-small {
+	left: calc((var(--binocwidth-s) / 2) - (var(--edgemargin) * 2) - 0.125rem);	}
+
+.left-n > .sharkfin,
+.farleft-n > .sharkfin {
+	left: var(--edgemargin);	}
+.left-n > .bordercover,
+.farleft-n > .bordercover {
+	left: var(--edgemargin);	}
+
+.right-n.qqcontents-large {
+	left: calc((var(--contentwidth) * -1) + (var(--binocwidth-l) / 2) + (var(--edgemargin) * 2) + 0.125rem);	}
+.right-n.qqcontents-medium {
+	left: calc((var(--contentwidth) * -1) + (var(--binocwidth-m) / 2) + (var(--edgemargin) * 2) + 0.125rem);	}
+.right-n.qqcontents-small {
+	left: calc((var(--contentwidth) * -1) + (var(--binocwidth-s) / 2) + (var(--edgemargin) * 2) + 0.125rem);	}
+
+.right-n > .sharkfin,
+.farright-n > .sharkfin {
+	left: calc(var(--contentwidth) - (var(--edgemargin) * 3) - 0.25rem);	}
+
+.right-n > .bordercover,
+.farright-n > .bordercover {
+	left: calc(var(--contentwidth) - (var(--edgemargin) * 3) - 0.25rem);	}
+
+.specialmiddleleft-n.qqcontents-large,
+.specialtopleft-n.qqcontents-large,
+.specialbottomleft-n.qqcontents-large,
+.extremetopleft-n.qqcontents-large,
+.extremebottomleft-n.qqcontents-large {
+	left: calc(var(--binocwidth-l) + (var(--edgemargin) * 2));	}
+.specialmiddleleft-n.qqcontents-medium,
+.specialtopleft-n.qqcontents-medium,
+.specialbottomleft-n.qqcontents-medium,
+.extremetopleft-n.qqcontents-medium,
+.extremebottomleft-n.qqcontents-medium {
+	left: calc(var(--binocwidth-m) + (var(--edgemargin) * 2));	}
+.specialmiddleleft-n.qqcontents-small,
+.specialtopleft-n.qqcontents-small,
+.specialbottomleft-n.qqcontents-small,
+.extremetopleft-n.qqcontents-small,
+.extremebottomleft-n.qqcontents-small {
+	left: calc(var(--binocwidth-s) + (var(--edgemargin) * 2));	}
+
+.specialmiddleleft-n > .sharkfin,
+.specialtopleft-n > .sharkfin,
+.specialbottomleft-n > .sharkfin,
+.extremetopleft-n > .sharkfin,
+.extremebottomleft-n > .sharkfin {
+	left: calc((var(--edgemargin) * -1) - 0.0625rem);	}
+.specialmiddleleft-n > .bordercover,
+.specialtopleft-n > .bordercover,
+.specialbottomleft-n > .bordercover,
+.extremetopleft-n > .bordercover,
+.extremebottomleft-n > .bordercover {
+	left: calc((var(--edgemargin) * -1) + 0.125rem);	}
+
+.specialmiddleright-n,
+.specialtopright-n,
+.specialbottomright-n,
+.extremetopright-n,
+.extremebottomright-n {
+	left: calc((var(--contentwidth) * -1) - (var(--edgemargin) * 2));	}
+
+.specialmiddleright-n > .sharkfin,
+.specialtopright-n > .sharkfin,
+.specialbottomright-n > .sharkfin,
+.extremetopright-n > .sharkfin,
+.extremebottomright-n > .sharkfin {
+	left: calc(var(--contentwidth) - var(--edgemargin) - 0.1875rem);	}
+.specialmiddleright-n > .bordercover,
+.specialtopright-n > .bordercover,
+.specialbottomright-n > .bordercover,
+.extremetopright-n > .bordercover,
+.extremebottomright-n > .bordercover {
+	left: calc(var(--contentwidth) - var(--edgemargin) - 0.375rem);	}
+
 
 
 /* >= 390px: WIDESCREEN CLASS ZONES APPLIED VIA JS + CONTENT BOX WIDTH CHANGES +++++++++++++++++++++++++++++++ */
