@@ -57,6 +57,7 @@
 
 <!-- *************************************** ^^^^^ LEAVE ALONE ^^^^^ *************************************** -->
 
+		<!-- <div id="qqtitlebg"> --> <!-- TESTING BG FOR TITLE AND INTRO!!! -->
 
 			<!-- title of the page -->
 			<h2 id="qqpagetitle">
@@ -67,6 +68,8 @@
 			<span id="qqpagetext" class="l-textface">
 				<?php echo $page->text()->kirbytext() ?>
 			</span>
+
+		<!-- </div> --> <!-- TESTING BG FOR TITLE AND INTRO!!! -->
 
 			<p id="qqtest">hola</p>
 

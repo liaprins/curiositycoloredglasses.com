@@ -11,7 +11,7 @@ function qqBoxPosition() {
     var largePerfectGrid = (largePairRowCountInt * largeColumnCount);
     var largeRemainder = (largePairCount - largePerfectGrid);
 
-    for (var i = 0; i < largePairRowCountInt; i++) {
+    for (var i = 0; i < largePairRowCountInt; i++) {                                                
 
         if (([i] % 2) === 0) {
             if (qqScreenWidth < 1225) {
