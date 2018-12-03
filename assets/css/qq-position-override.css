@@ -8,6 +8,14 @@ This pattern within the Kirby panel should be as follows:
  Row 4: S M S M S M
  Row 5: (start back over with top row pattern) */
 
+/* 1360 and up -------------------------------------- */
+@media (min-width: 1360px) {
+    .qqpiece:nth-child(3) > .qqcontents {    
+        left: calc((var(--contentwidth) / -2) + (var(--binocwidth-l) / 2)) !important; }
+    .qqpiece:nth-child(3) .sharkfin,
+    .qqpiece:nth-child(3) .bordercover {
+        left: calc((var(--contentwidth) / 2) - var(--edgemargin) - 0.125rem) !important;   }
+}
 
 /* 1225px and wider --------------------------------------
 Starting at widest screenwidth and working down with mediaqueries (opposite method I usually employ)
@@ -62,6 +70,7 @@ so that at smaller sizes I can add display: none; to more binocular pairs as mor
     top: 330px !important;
     margin-top: 0 !important;    }
 } /* closing 1225 mediaquery */
+
 
 /* 1245 and below -------------------------------------- */
 @media (max-width: 1245px) {
@@ -118,6 +127,15 @@ so that at smaller sizes I can add display: none; to more binocular pairs as mor
     /* convert from px to vw */
     .qqpiece:nth-child(16) {    /* 16th pair overall / 2nd L pair on 2nd L-containing row down */
         top: 25vw !important;    }
+}
+
+/* 1075 and up -------------------------------------- */
+@media (min-width: 1075px) {
+    .qqpiece:nth-child(5) > .qqcontents {    
+        left: calc((var(--contentwidth) / -2) + (var(--binocwidth-l) / 2)) !important; }
+    .qqpiece:nth-child(5) .sharkfin,
+    .qqpiece:nth-child(5) .bordercover {
+        left: calc((var(--contentwidth) / 2) - var(--edgemargin) - 0.125rem) !important;   }
 }
 
 /* 1075 and below -------------------------------------- */
@@ -228,9 +246,12 @@ so that at smaller sizes I can add display: none; to more binocular pairs as mor
     /* balance space */
     .qqpiece:nth-child(15) {    /* 15th pair overall / 2nd S pair on 3rd S-containing row */
         display: none !important;   }
+    /* prevent crowding bottom edge of text */
+    .qqpiece:nth-child(16) {    /* 16th pair overall / 2nd L pair on 2nd L-containing row */
+        top: 39vw !important;    }
     /* prevent from overlapping bottome edge of second text row of intro */
     .qqpiece:nth-child(17) {    /* 17th pair overall / 3rd S pair on 3rd S-containing row */
-        top: 35vw !important;
+        top: 38vw !important;
         margin-top: 0 !important;
         margin-left: 0 !important;    }
 }

@@ -1,5 +1,15 @@
 /* QQ page set-up ---------------------------------------------------------------------------------------------------- */
 
+#qqtitlebg {
+	background-color: white;
+	border-style: solid;
+	border-color: black;
+	border-width: 0.125rem;
+	position: absolute;
+	z-index: 2 !important;
+	left: calc(50vw - 322px);
+}
+
 #qqpagetitle p {
 	padding-top: calc(10.714vw - 0.25rem);
 	margin: 0 auto 1.536rem auto;    }
@@ -34,12 +44,12 @@
 .mediumqqglasses {
 	width: var(--binocwidth-m);
 	height: var(--binocheight-m);
-	opacity: 0.9;    }
+	/* opacity: 0.9; */    }
 
 .smallqqglasses {
 	width: var(--binocwidth-s);
 	height: var(--binocheight-s);
-	opacity: 0.8;    }
+	/* opacity: 0.8; */    }
 
 .largeqqglasses > .lens {
 	border-width: calc(var(--binocwidth-l) * 0.045 * 0.833);    }
@@ -325,8 +335,6 @@ NEED TO ASSIGN VERTICAL STYLES IN JS */
 		left: calc((var(--contentwidth) / -2) + (var(--binocwidth-s) / 2));	}
 
 	.center > .sharkfin,
-	.center > .bordercover,
-	.center > .sharkfin,
 	.center > .bordercover {
 		left: calc((var(--contentwidth) / 2) - var(--edgemargin) - 0.125rem);	}
 
@@ -361,7 +369,7 @@ NEED TO ASSIGN VERTICAL STYLES IN JS */
 	.extremebottomright > .bordercover,
 	.specialtopright > .bordercover,
 	.extremetopright > .bordercover {
-		left: calc(var(--contentwidth) - var(--edgemargin) - 0.3125rem);	}
+		left: calc(var(--contentwidth) - var(--edgemargin) - 0.375rem);	}
 
 	.specialmiddleleft.qqcontents-large,
 	.specialbottomleft.qqcontents-large,
@@ -433,6 +441,9 @@ NEED TO ASSIGN VERTICAL STYLES IN JS */
 	:root {
 		--binocwidth-l: 209px;    /* changing from vw's to px's; applied above in lines ~31, 212, 214  */
 		--binocheight-l: 96.4px;    }    /* changing from vw's to px's; applied above in lines ~31, 213, 215  */
+	.qqcontents {
+		z-index: 2;
+	}
 }    /* MIN 1225px GROW ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
 
