@@ -89,3 +89,31 @@ Twitterimageurl:
 ----
 
 Guestwriter: 
+
+----
+
+Postglassesleft: l-license-plates.jpg
+
+----
+
+Postglassesright: r-license-plates.jpg
+
+----
+
+Guestwriterlink: 
+
+----
+
+Thankyou: 
+
+----
+
+Process: 
+
+----
+
+Facebookshareimage: l-license-plates.jpg
+
+----
+
+Pinterestverticalimage: 

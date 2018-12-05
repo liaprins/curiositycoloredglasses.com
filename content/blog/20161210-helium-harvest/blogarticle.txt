@@ -109,3 +109,31 @@ Twitterimageurl:
 ----
 
 Guestwriter: 
+
+----
+
+Postglassesleft: l-helium.jpg
+
+----
+
+Postglassesright: r-helium.jpg
+
+----
+
+Guestwriterlink: 
+
+----
+
+Thankyou: 
+
+----
+
+Process: 
+
+----
+
+Facebookshareimage: he-diagram-test-3.jpg
+
+----
+
+Pinterestverticalimage: 

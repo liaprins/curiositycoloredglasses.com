@@ -47,24 +47,6 @@ figcaption {
     /* border-width: 1.8vw; */    /* This should match 9/10 (to account for optical illusion) of the weight of the main postglasses' outline; the ratio of postglasses' width to stroke weight is 25:1; */
     border-width: 0.22rem;    }
 
-.postglasses {
-    /* width: 42.857vw; */    /* 12/28 cols */
-    width: 50vw;    /* 14/28 cols */
-    display: block;
-    margin: 1.024rem auto 1.536rem auto;    /* top: .5 lh, bottom: .75 lh */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 99%;    /* Had to make it just under 100% to prevent slightest amount of edges from peeking out from behind mask */
-    -webkit-transition: background-size 0.5s;    /* for Safari */
-    transition: background-size 0.5s;    
-    -webkit-transition-timing-function: ease-out;
-    transition-timing-function: ease-out;    }
-.postglasses:hover {
-    background-size: 175%;    }  
-
-#postlink:hover > .postglasses {
-    background-size: 175%;    }  
-
 .posttitle {
     /* hyphens: manual; */    /* This did not work; the "&shy;" showed us as characters on the screen regardless of what I did */
     margin-top: 2.048rem;    }    /* 1 lh | This id was needed because <h2> couldn't hold margins because different margins are needed between post titles and About, etc pages, and <h2> would cascade to override either ids; id that holds margins for About, etc pages' is .extracontentpagetitle */
@@ -92,6 +74,69 @@ figcaption {
     white-space: nowrap;
     padding: 0.6em 0.5em 0.5em 0;
     /* padding: 0.6em 0.5em 0.5em 0.5em; */    }    /* Finessing to be perfectly centered */
+
+
+/* POSTGLASSES -------------------------------------------------- */
+
+:root {
+    --glasseswidth: 50vw;    }
+
+.postglassescontainer {
+    width: var(--glasseswidth);
+    height: calc(var(--glasseswidth) * 0.393);
+    margin: 1.024rem auto 1.536rem auto;    /* top: .5 lh, bottom: .75 lh */
+    display: block;    }
+.postglassescontainer:hover > .circle,
+#postlink:hover .circle {
+    background-size: 160%;
+    background-position: 41.5% 42%;    } 
+
+.circle,
+.stem {
+    border-color: black;
+    border-width: calc(var(--glasseswidth) * 0.035);
+    border-style: solid;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    position: relative;    }
+
+.circle {
+    height: calc(var(--glasseswidth) * 0.393);
+    width: calc(var(--glasseswidth) * 0.393);
+    border-radius: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;  }
+
+.leftcircle {
+    left: -0.5%;    }
+.rightcircle {
+    left: -1.75%;        }
+
+.leftcircle,
+.rightcircle {
+    -webkit-transition: background-size 0.5s;    /* for Safari */
+    transition: background-size 0.5s;    
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;    }
+
+.stem {
+    display: inline-block;
+    border-style: solid none none none;
+    width: calc(var(--glasseswidth) * 0.053);
+    position: relative;
+    top: calc(0vw - (var(--glasseswidth) * 0.197));
+    border-width: 0;
+    border-top-width: calc(var(--glasseswidth) * 0.035);    }
+
+.centerstem {
+    width: calc(var(--glasseswidth) * 0.107);
+    left: -1%;    }
+
+.rightstem {
+    left: -2.25%;
+    width: calc(var(--glasseswidth) * 0.053);    }
 
 
 /* POST PAGE -------------------------------------------------- */
@@ -732,20 +777,6 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
     margin: 1.536rem 0 0.512rem 0;    /* top: .75 lh, bottom: .25 lh */
     border-width: 0.15rem;    }    /* This should dynamically match the weight of the line of the resultglasses below date, based on their width of 28.571vw (8/28 cols) and the ratio of the resultglasses width to their line weight of 25:1; */ 
 
-#resultglasses {
-    width: 28.571vw;    /* 8/28 cols */ 
-    display: block;
-    margin: 0.512rem auto 1.024rem auto;    /* top: .25 lh, bottom: .5 lh */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 99%;    /* Had to make it just under 100% to prevent slightest amount of edges from peeking out from behind mask */
-    -webkit-transition: background-size 0.5s;    /* for Safari */
-    transition: background-size 0.5s;     
-    -webkit-transition-timing-function: ease-out;
-    transition-timing-function: ease-out;    }
-#resultglasses:hover {
-    background-size: 175%;    }
-
 #resulttitle {
     hyphens: auto;
     text-overflow: ellipsis;    /* making words that are too long truncate with an ellipsis (e.g. PHOSPHORESCENCE) to keep from going outside the div width */
@@ -758,6 +789,72 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
 
 #resulttag {
     padding: 0.3em 0.5em 0.3em 0.5em;    }    /* Finessing to be perfectly centered */
+
+
+/* RESULTGLASSES -------------------------------------------------- */
+
+:root {
+    --resultglasseswidth: 28.571vw;    }
+
+.resultglassescontainer {
+    width: var(--resultglasseswidth);
+    height: calc(var(--resultglasseswidth) * 0.393);
+    margin: 0.512rem auto 1.024rem auto;    /* top: .25 lh, bottom: .5 lh */
+    display: block;    }
+.resultglassescontainer:hover > .resultcircle,
+#postlink:hover .resultcircle {
+    background-size: 160%;
+    background-position: 41.5% 42%;    } 
+
+.resultcircle,
+.resultstem {
+    border-color: black;
+    border-width: calc(var(--resultglasseswidth) * 0.035);
+    border-style: solid;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    position: relative;    }
+
+.resultcircle {
+    height: calc(var(--resultglasseswidth) * 0.393);
+    width: calc(var(--resultglasseswidth) * 0.393);
+    border-radius: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;  }
+
+.resultleftcircle {
+    left: -0.5%;    }
+.resultrightcircle {
+    left: -1.75%;        }
+
+.resultleftcircle,
+.resultrightcircle {
+    -webkit-transition: background-size 0.5s;    /* for Safari */
+    transition: background-size 0.5s;    
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;    }
+
+.resultstem {
+    display: inline-block;
+    border-style: solid none none none;
+    width: calc(var(--resultglasseswidth) * 0.053);
+    position: relative;
+    top: calc(0vw - (var(--resultglasseswidth) * 0.197));
+    border-width: 0;
+    border-top-width: calc(var(--resultglasseswidth) * 0.035);    }
+
+.resultcenterstem {
+    width: calc(var(--resultglasseswidth) * 0.107);
+    left: -1%;    }
+
+.resultrightstem {
+    left: -2.25%;
+    width: calc(var(--resultglasseswidth) * 0.053);    }
+
+
+
 
 
 /* ERROR PAGE -------------------------------------------------- */

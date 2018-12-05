@@ -12,13 +12,12 @@
             </time>
         </p>
 
-
         <!-- Postglasses image -->
-        <?php if($image = $result->postglasses()->toFile()): ?>
-            <img src="<?= url('assets/images/mask.svg') ?>" style="background-image: url(<?= $image->url() ?>)" alt="" id="resultglasses">
-        <?php endif; ?>
+        <div class="resultglassescontainer">
+            <div class="resultstem resultshortstem resultleftstem"></div><?php if($imageleft = $result->postglassesleft()->toFile()): ?><div style="background-image: url(<?= $imageleft->url() ?>)" class="resultcircle resultleftcircle"></div><?php endif; ?><div class="resultstem resultcenterstem"></div><?php if($imageright = $result->postglassesright()->toFile()): ?><div style="background-image: url(<?= $imageright->url() ?>)" class="resultcircle resultrightcircle"></div><?php endif; ?><div class="resultstem resultshortstem resultrightstem"></div>  
+        </div>
 
-
+        
         <!-- Title of article -->       
         <p id="resulttitle" class="s-display">
             <?php echo $result->title()->html() ?>

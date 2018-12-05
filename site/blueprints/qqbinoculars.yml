@@ -1,0 +1,53 @@
+title: Question Queue Question
+
+//page settings
+deletable: true
+options: 
+	preview: false
+	status: true
+	template: true
+	url: true
+icon: question-circle
+
+//subpage settings
+pages: false
+
+//file settings
+files: 
+	- image
+  sortable: true
+
+//fields with their field types and options
+fields:
+  question:
+    label: Question
+    type: text
+    required: true
+    placeholder: Question as headline and tooltip
+  binocimageleft:
+    label: Binoculars' left lens background image
+    type:  image
+    required: true
+    width: 1/2
+  binocimageright:
+    label: Binoculars' right lens background image
+    type:  image
+    required: true
+    width: 1/2
+  explanation:
+    label: Explanation
+    type: textarea
+    required: true
+    placeholder: A bit of background on this question such as how I came to be curious about it or why it's worth investigating
+  binocsize:
+    label: Binoculars' size
+    type: radio
+    default: false
+    required: true
+    options:
+      large: Large
+      medium: Medium
+      small: Small
+    columns: 3
+
+

@@ -1,0 +1,21 @@
+Question: It's possible to have vision that's better than 20/20; so why is that measure the standard?
+
+----
+
+Binocimageleft: l-twenty-twenty.jpg
+
+----
+
+Binocimageright: r-twenty-twenty.jpg
+
+----
+
+Explanation: What does the denominator of "20" mean?
+
+----
+
+Binocsize: small
+
+----
+
+Title: twenty-twenty-vision

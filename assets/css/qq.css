@@ -71,25 +71,22 @@
 	border-radius: 50%;
 	background-repeat: no-repeat;
 	background-position: center;
-	background-size: auto 100%;    /* ONLY IF ZOOMING FROM CTR OF GLASSES AS A WHOLE RATHER THAN INTO THE CTR OF EACH LENS */
+	background-size: 100%;
 	-webkit-transition: background-size 0.5s;    /* for Safari */
 	transition: background-size 0.5s;    
 	-webkit-transition-timing-function: ease-out;
 	transition-timing-function: ease-out;    }
 
-.l-lens {
-	background-position: 100% 50%;    }
-
 .r-lens {
 	position: absolute;
-	left: 53.94%;
-	background-position: 0% 50%;    }
+	left: 53.94%;    }
 
 .qqglassescontainer:hover > .lens {
-	background-size: auto 175%;    }
+	background-size: 150%;
+	background-position: 40% 40%;    }
 
 .qqselected > .lens {
-	background-size: auto 175%;    }
+	background-size: 150%;    }
 
 .knob {
 	box-sizing: border-box;

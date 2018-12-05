@@ -82,7 +82,7 @@
         		<!-- "ORIGINAL METHOD" = (without "->flip()") -->
 	        	<!-- USE "FLIP METHOD" IF I WANT TO REVERSE THE ORDER OF GLASSES WITHIN EACH GROUP, BUT ALLOW GROUP OF LARGE GLASSES TO BE AT THE TOP OF THE PANEL AND STILL SHOW UP ON TOP LAYER, TOO-->
 	        	<!-- "FLIP METHOD" = ADD "->flip()" RIGHT AFTER "->sortBy('sort', 'asc')" TO GET THE GLASSES TO REVERSE ORDER FROM HOW THEY ARE IN PANEL -->
-	        	<?php foreach ($page->images()->sortBy('sort', 'asc') as $qqfile): ?>
+	        	<?php foreach ($page->children()->sortBy('sort', 'asc') as $qqfile): ?>
 	    	    
 		        <?php $qqsubpage = $qqfile->name(); ?>
 
@@ -90,18 +90,23 @@
                 <?php $margins = array('0rem', '0.5rem', '1rem', '1.5rem', '2rem', '2.5rem'); ?>
                 <?php $rand_margin = $margins[array_rand($margins)]; ?>
     	    	<span class="qqpiece" style="margin-left: <?= $rand_margin ?>; margin-top: <?= $rand_margin ?>">
-    	    	<!-- <span class="qqpiece <?php if ($qqfile->category() == 'large'): ?>largeqqpiece<?php endif ?><?php if ($qqfile->category() == 'medium'): ?>mediumqqpiece<?php endif ?><?php if ($qqfile->category() == 'small'): ?>smallqqpiece<?php endif ?>" style="margin-left: <?= $rand_margin ?>; margin-top: <?= $rand_margin ?>"> -->
+    	    	<!-- <span class="qqpiece <?php if ($qqfile->binocsize() == 'large'): ?>largeqqpiece<?php endif ?><?php if ($qqfile->binocsize() == 'medium'): ?>mediumqqpiece<?php endif ?><?php if ($qqfile->binocsize() == 'small'): ?>smallqqpiece<?php endif ?>" style="margin-left: <?= $rand_margin ?>; margin-top: <?= $rand_margin ?>"> -->
 				
 				<!-- <span class="qqpiece"> -->
 					
-					<div data-clickable="yes" data-id="<?php echo $qqfile->name() ?>" class="qqglassescontainer <?php if ($qqfile->category() == 'large'): ?>largeqqglasses<?php endif ?><?php if ($qqfile->category() == 'medium'): ?>mediumqqglasses<?php endif ?><?php if ($qqfile->category() == 'small'): ?>smallqqglasses<?php endif ?>" title="<?php echo $qqfile->question() ?>" alt="<?php echo $qqfile->question() ?>">
-    			    	<div data-innards-clickable="yes" class="lens l-lens" style="background-image: url(<?php echo $qqfile->url() ?>)"></div>
+					<!-- <div data-clickable="yes" data-id="<?php echo $qqfile->name() ?>" class="qqglassescontainer <?php if ($qqfile->binocsize() == 'large'): ?>largeqqglasses<?php endif ?><?php if ($qqfile->binocsize() == 'medium'): ?>mediumqqglasses<?php endif ?><?php if ($qqfile->binocsize() == 'small'): ?>smallqqglasses<?php endif ?>" title="<?php echo $qqfile->question() ?>" alt="<?php echo $qqfile->question() ?>"> -->
+					<div data-clickable="yes" data-id="<?php echo $qqfile->title() ?>" class="qqglassescontainer <?php if ($qqfile->binocsize() == 'large'): ?>largeqqglasses<?php endif ?><?php if ($qqfile->binocsize() == 'medium'): ?>mediumqqglasses<?php endif ?><?php if ($qqfile->binocsize() == 'small'): ?>smallqqglasses<?php endif ?>" title="<?php echo $qqfile->question() ?>" alt="<?php echo $qqfile->question() ?>">
+    			    	<?php if($leftbinoclens = $qqfile->binocimageleft()->toFile()): ?>
+                            <div data-innards-clickable="yes" class="lens l-lens" style="background-image: url(<?php echo $leftbinoclens->url() ?>)"></div>
+                        <?php endif; ?>
     			    	<div data-innards-clickable="yes" class="knob"></div>
-	    		    	<div data-innards-clickable="yes" class="<?php if ($qqfile->category() == 'large'): ?>trapezoid-large<?php endif ?><?php if ($qqfile->category() == 'medium'): ?>trapezoid-medium<?php endif ?><?php if ($qqfile->category() == 'small'): ?>trapezoid-small<?php endif ?>"></div>
-    		    		<div data-innards-clickable="yes" class="lens r-lens" style="background-image: url(<?php echo $qqfile->url() ?>)"></div>
+	    		    	<div data-innards-clickable="yes" class="<?php if ($qqfile->binocsize() == 'large'): ?>trapezoid-large<?php endif ?><?php if ($qqfile->binocsize() == 'medium'): ?>trapezoid-medium<?php endif ?><?php if ($qqfile->binocsize() == 'small'): ?>trapezoid-small<?php endif ?>"></div>
+    		    		<?php if($rightbinoclens = $qqfile->binocimageright()->toFile()): ?>
+                            <div data-innards-clickable="yes" class="lens r-lens" style="background-image: url(<?php echo $rightbinoclens->url() ?>)"></div>
+                        <?php endif; ?>
     		    	</div>
 
-					<div class="qqcontents <?php if ($qqfile->category() == 'large'): ?>qqcontents-large<?php endif ?><?php if ($qqfile->category() == 'medium'): ?>qqcontents-medium<?php endif ?><?php if ($qqfile->category() == 'small'): ?>qqcontents-small<?php endif ?>" style="display: none;" data-edgemargin="">						
+					<div class="qqcontents <?php if ($qqfile->binocsize() == 'large'): ?>qqcontents-large<?php endif ?><?php if ($qqfile->binocsize() == 'medium'): ?>qqcontents-medium<?php endif ?><?php if ($qqfile->binocsize() == 'small'): ?>qqcontents-small<?php endif ?>" style="display: none;" data-edgemargin="">						
 						<img src= "<?php echo url('assets/images/x.svg') ?>" alt="close" id="qq-x" class="yellowhover close-x">
 						<div class="sharkfin"></div>
 						<div class="bordercover"></div>
@@ -114,7 +119,7 @@
 
 				<!-- BOXES UNCOMMENT BELOW + UNCOMMENT qq-position-boxes.js + qq-parallax-boxes.js ABOVE TO MAKE THEM SHOW -->
 				<!--
-				<div data-id="<?php echo $qqfile->name() ?>" class="qqbox <?php if ($qqfile->category() == 'large'): ?>largeqqbox<?php endif ?><?php if ($qqfile->category() == 'medium'): ?>mediumqqbox<?php endif ?><?php if ($qqfile->category() == 'small'): ?>smallqqbox<?php endif ?>">
+				<div data-id="<?php echo $qqfile->name() ?>" class="qqbox <?php if ($qqfile->binocsize() == 'large'): ?>largeqqbox<?php endif ?><?php if ($qqfile->binocsize() == 'medium'): ?>mediumqqbox<?php endif ?><?php if ($qqfile->binocsize() == 'small'): ?>smallqqbox<?php endif ?>">
 				</div>
 				-->
 

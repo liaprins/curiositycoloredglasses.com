@@ -112,3 +112,19 @@ Facebookshareimage: carbonless-original.png
 ----
 
 Pinterestverticalimage: 
+
+----
+
+Postglassesleft: l-copyless-carbon-paper.jpg
+
+----
+
+Postglassesright: r-copyless-carbon-paper.jpg
+
+----
+
+Thankyou: 
+
+----
+
+Process: 
