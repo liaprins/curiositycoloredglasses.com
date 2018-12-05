@@ -233,3 +233,11 @@ Thankyou: Thanks, Mom!
 ----
 
 Process: Am I crazy,  or is it you?
+
+----
+
+Postglassesleft: l-mountain.jpg
+
+----
+
+Postglassesright: r-mountain.jpg

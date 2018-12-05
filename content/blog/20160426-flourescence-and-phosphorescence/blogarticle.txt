@@ -99,3 +99,27 @@ Guestwriter: Sheriff of Chopping&shy;ham (looks like a wolf)
 ----
 
 Guestwriterlink: 
+
+----
+
+Postglassesleft: l-fluorescence.jpg
+
+----
+
+Postglassesright: r-fluorescence.jpg
+
+----
+
+Thankyou: 
+
+----
+
+Process: 
+
+----
+
+Facebookshareimage: fluorescence.png
+
+----
+
+Pinterestverticalimage: 

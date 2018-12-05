@@ -1,0 +1,40 @@
+@media (min-width: 295px) {
+    :root {
+        --glasseswidth: 173.64px;
+        --resultglasseswidth: 84.571px;    }
+} 
+
+@media (min-width: 390px) {
+    :root {
+        --resultglasseswidth: 21.429vw;    }
+}
+
+@media (min-width: 433px) {
+    :root {
+        --resultglasseswidth: 92.857px;    }
+}  
+
+@media (min-width: 442px) {
+    :root {
+        --glasseswidth: 39.286vw;    }
+}
+
+@media (min-width: 613px) {
+    :root {
+        --glasseswidth: 240.82px;    }
+}
+
+@media (min-width: 650px) {
+    :root {
+        --resultglasseswidth: 14.286vw;    }
+}
+
+@media (min-width: 783px) {
+    :root {
+        --resultglasseswidth: 112px;    }
+}
+
+@media (min-width: 1225px) {
+    :root {
+        --resultglasseswidth: 116.667px;    }
+}

@@ -70,3 +70,19 @@ Facebookshareimage: chocolates.png
 ----
 
 Pinterestverticalimage: 
+
+----
+
+Postglassesleft: l-chocolates.jpg
+
+----
+
+Postglassesright: r-chocolates.jpg
+
+----
+
+Thankyou: 
+
+----
+
+Process: 

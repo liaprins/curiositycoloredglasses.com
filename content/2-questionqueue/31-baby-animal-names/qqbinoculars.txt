@@ -1,0 +1,21 @@
+Question: What are the etymologies for baby animal names?
+
+----
+
+Binocimageleft: l-baby-animals.jpg
+
+----
+
+Binocimageright: r-baby-animals.jpg
+
+----
+
+Explanation: Baby cats are kittens. Baby foxes are kits. Baby goats are kids. Baby dogs, whales, and mice are all pups. Very peculiar, and not exactly intuitive. Why can't they all follow the pig and piglet model?
+
+----
+
+Binocsize: small
+
+----
+
+Title: baby-animal-names

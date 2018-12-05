@@ -1,0 +1,21 @@
+Question: Why do spicy foods make your nose run?
+
+----
+
+Binocimageleft: l-spicy-snot.jpg
+
+----
+
+Binocimageright: r-spicy-snot.jpg
+
+----
+
+Explanation: Maybe the spicy fumes irritate the mucus membranes, so they react by producing more mucus?
+
+----
+
+Binocsize: small
+
+----
+
+Title: spicy-snot

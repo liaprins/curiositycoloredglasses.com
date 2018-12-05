@@ -90,3 +90,31 @@ Twitterimageurl:
 ----
 
 Guestwriter: 
+
+----
+
+Postglassesleft: covfefe.jpg
+
+----
+
+Postglassesright: r-penmanship.png
+
+----
+
+Guestwriterlink: 
+
+----
+
+Thankyou: 
+
+----
+
+Process: 
+
+----
+
+Facebookshareimage: covfefe.jpg
+
+----
+
+Pinterestverticalimage: 

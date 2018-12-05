@@ -89,3 +89,19 @@ Facebookshareimage: moon.png
 ----
 
 Pinterestverticalimage: 
+
+----
+
+Postglassesleft: moon-watercolor.png
+
+----
+
+Postglassesright: moon-diagram.png
+
+----
+
+Thankyou: 
+
+----
+
+Process: 

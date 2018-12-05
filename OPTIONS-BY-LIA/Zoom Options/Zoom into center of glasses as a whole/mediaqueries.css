@@ -1,0 +1,45 @@
+@media (min-width: 295px) {
+    .postglasses {
+        width: 173.64px;    }  
+    #resultglasses {
+        width: 84.571px;    }
+} 
+
+@media (min-width: 390px) {
+    #resultglasses {
+        width: 21.429vw;    }
+}
+
+@media (min-width: 433px) {
+    #resultglasses {
+        width: 92.857px;    }
+}  
+
+@media (min-width: 442px) {
+    .postglasses {
+        width: 39.286vw;    }
+}
+
+@media (min-width: 613px) {
+    .postglasses {
+        width: 240.82px;    }
+}
+
+@media (min-width: 650px) {
+    #resultglasses {
+        width: 14.286vw;    }
+}
+
+@media (min-width: 783px) {
+    #resultglasses {
+        width: 112px;    }
+}
+
+@media (min-width: 1225px) {
+    #resultglasses {
+}
+
+
+
+
+

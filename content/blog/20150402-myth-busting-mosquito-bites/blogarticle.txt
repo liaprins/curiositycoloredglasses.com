@@ -73,3 +73,31 @@ Twitterimageurl:
 ----
 
 Guestwriter: Off, with 100% real Deet
+
+----
+
+Postglassesleft: l-mosquito.png
+
+----
+
+Postglassesright: r-mosquito.png
+
+----
+
+Guestwriterlink: 
+
+----
+
+Thankyou: 
+
+----
+
+Process: 
+
+----
+
+Facebookshareimage: human-effect.jpg
+
+----
+
+Pinterestverticalimage: 

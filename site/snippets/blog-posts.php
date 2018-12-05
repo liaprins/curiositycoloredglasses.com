@@ -28,13 +28,12 @@
             If I want the zoom effect even when hover on title and date, keep the id="postglasses", otherwise remove it.
             Also un-comment the <a> tag surrounding "read more", below, and comment out its current <span> -->
             <!-- Grouping all but the intro paragraph into one link -->
-            <a href="<?php echo $article->url() ?>" id="postlink">
+            <a href="<?php echo $article->url() ?>" id="postlink">        
 
                 <!-- Post glasses icon -->
-                <?php if($homepostglasses = $article->postglasses()->toFile()): ?>
-                    <img src="<?= url('assets/images/mask.svg') ?>" style="background-image: url(<?= $homepostglasses->url() ?>)" alt="" class="postglasses">
-                <?php endif; ?>
-
+                <div class="postglassescontainer">
+                    <div class="stem shortstem leftstem"></div><?php if($homepostglassesleft = $article->postglassesleft()->toFile()): ?><div style="background-image: url(<?= $homepostglassesleft->url() ?>)" class="circle leftcircle"></div><?php endif; ?><div class="stem centerstem"></div><?php if($homepostglassesright = $article->postglassesright()->toFile()): ?><div style="background-image: url(<?= $homepostglassesright->url() ?>)" class="circle rightcircle"></div><?php endif; ?><div class="stem shortstem rightstem"></div>  
+                </div>
 
                 <!-- Name of post -->
                 <h2 class="posttitle">

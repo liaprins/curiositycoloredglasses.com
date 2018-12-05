@@ -27,16 +27,19 @@
 }
 
 @media (min-width: 295px) {
+    :root {
+        --glasseswidth: 173.64px;
+        --resultglasseswidth: 84.571px;    }
     .postglasses {
         width: 173.64px;    }
     .date,
     figcaption {
         border-width: 0.29rem;    }    
-    #resultglasses {
-        width: 84.571px;    }
 } 
 
 @media (min-width: 390px) {
+    :root {
+        --resultglasseswidth: 21.429vw;    }
     #vocabwordanddefinition {
         overflow: auto;    }
     .glossaryvocabwordandaudio {
@@ -84,8 +87,6 @@
         margin: 0 3.571vw 1.5rem 3.571vw;    }
     /* .resultarea .result:nth-last-child(-n+2) {
         margin-bottom: 0;    } */
-    #resultglasses {
-        width: 21.429vw;    }
     #resultdate {
         margin: 0 0 0.512rem 0;
         border-width: 0.15rem;    }
@@ -127,13 +128,15 @@
 }
 
 @media (min-width: 433px) {
-    #resultglasses {
-        width: 92.857px;    }
+    :root {
+        --resultglasseswidth: 92.857px;    }
     #resultdate {
         border-width: 0.15rem;    }
 }  
 
 @media (min-width: 442px) {
+    :root {
+        --glasseswidth: 39.286vw;    }
     html {
         font-size: 3.620vw;    }
     .xs-display {
@@ -226,11 +229,15 @@
 }
 
 @media (min-width: 613px) {
+    :root {
+        --glasseswidth: 240.82px;    }
     .postglasses {
         width: 240.82px;    }
 }
 
 @media (min-width: 650px) {
+    :root {
+        --resultglasseswidth: 14.286vw;    }
     html {
         font-size: 23.529px;    }
     #navdetails[open] {    
@@ -275,8 +282,6 @@
     .result {
         height: calc(7.94rem - 1.5rem + 5.714vw);
         width: calc(28.571vw - 7.143vw);    }
-    #resultglasses {
-        width: 14.286vw;    }
     #resultdate {
         border-width: 0.15rem;    }
 }
@@ -287,6 +292,8 @@
 }
 
 @media (min-width: 783px) {
+    :root {
+        --resultglasseswidth: 112px;    }
     #mce-EMAIL {
         float: left;
         margin-right: calc(14.0545rem + 5.3125rem);
@@ -306,8 +313,6 @@
         padding-left: 0.422rem;    }
     body {
         padding-bottom: calc(21.429vw + 3.9285rem);    }
-    #resultglasses {
-        width: 112px;    }
     #resultdate {
         border-width: 0.15rem;    }
 }
@@ -459,6 +464,8 @@
 }
 
 @media (min-width: 1225px) {
+    :root {
+        --resultglasseswidth: 116.667px;    }
     html {
         font-size: 24.531px;    }
     #tagline {
@@ -609,6 +616,9 @@
         position: absolute;
         width: 175px;    }
     .postglasses {
+        margin-top: 3.072rem;
+        margin-bottom: 2.048rem;    }
+    .postglassescontainer {
         margin-top: 3.072rem;
         margin-bottom: 2.048rem;    }
     .toprule {
@@ -770,8 +780,6 @@
     .result {
         width: 175px;
         margin: 0 29.167px 1.536rem 29.167px;    }
-    #resultglasses {
-        width: 116.667px;    }
     #resultdate {
         position: static;
         border-width: 4px;

@@ -1,0 +1,21 @@
+Question: Why are different beers served in different glasses?
+
+----
+
+Binocimageleft: l-beer-glasses.jpg
+
+----
+
+Binocimageright: r-beer-glasses.jpg
+
+----
+
+Explanation: ... And how were these matchings derived and universally adopted (or are they?)?
+
+----
+
+Binocsize: small
+
+----
+
+Title: beer-glasses

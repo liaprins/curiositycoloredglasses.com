@@ -108,3 +108,19 @@ Facebookshareimage: annotated-tree-rings-1-b.jpg
 ----
 
 Pinterestverticalimage: 
+
+----
+
+Postglassesleft: l-tree-rings.jpg
+
+----
+
+Postglassesright: r-tree-rings.jpg
+
+----
+
+Thankyou: 
+
+----
+
+Process: 
