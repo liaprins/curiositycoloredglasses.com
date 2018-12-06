@@ -24,5 +24,8 @@ Add to site/blueprints folder.
 questionqueue.yml
 Replace this with the blueprint of its same name within the site/blueprints folder.
 
+questionqueue.php
+Replace this with the template of its same name within the site/templates folder.
+
 somepages.css
 Insert this code into assets/css/somepages.css.
