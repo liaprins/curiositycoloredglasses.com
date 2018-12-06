@@ -102,6 +102,8 @@
         height: 7.143vw;
         width: 7.143vw;
         margin-right: 3.571vw;    }
+    .commentssummary {
+        margin-top: 0;    }
     #namedatecomment {
         width: 67.857vw;   }
     #postedcomment {
@@ -762,7 +764,8 @@
     #inlineaudioicon {
         height: 0.844rem;
         width: 0.844rem;
-        padding: 0.422rem;    }
+        padding: 0.422rem;
+        margin-top: -.25em;    }
     #vocabclose {    }
     .wordandpronunciation {
         width: 175px;
