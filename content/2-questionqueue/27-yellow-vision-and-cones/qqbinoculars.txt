@@ -2,11 +2,11 @@ Question: How do we see the primary color yellow without yellow cones in our eye
 
 ----
 
-Binocimageleft: l-yellow-cones.jpg
+Binocimageleft: moon-watercolor.png
 
 ----
 
-Binocimageright: r-yellow-cones.jpg
+Binocimageright: moon-diagram.png
 
 ----
 

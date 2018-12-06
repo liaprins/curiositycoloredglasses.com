@@ -26,29 +26,29 @@ summary {    /* for FF, this hides the triangle toggle! */
     display: block;    }
 
 #searchdecoy {
-    padding-bottom: 0.13rem;    /* Matching bottom padding of yellow menu, when #navsearchinput is open */
+    padding-bottom: 0.13rem;
     padding-top: 0.13rem;    }
 #searchdecoy:hover {
     cursor: pointer;    }
 
 #navsearchform {    }
 
-.underlineinput {    /* Applies to both nav search bar and search page input fields */
+.underlineinput {
     border-top-left-radius: 0 !important;
     border-top-right-radius: 0!important;
     border-bottom-left-radius: 0!important;
     border-bottom-right-radius: 0!important;
     -webkit-appearance: none !important;
     border-style: none none solid none;
-    border-width: 0.125rem;    /* This will match the weight of the home glasses icon at any screensize */
+    border-width: 0.125rem;
     border-color: black;
     background-color: transparent;
     color: black;    }    
 
-.searchbutton {    /* Applies to both nav search bar and search page buttons */
+.searchbutton {
     background-color: transparent;
     border-style: none;
-    cursor: pointer;    }    /* This is to force the curser into a hand */
+    cursor: pointer;    }
 
 #navsearchinput {
     border-top-left-radius: 0 !important;
@@ -56,17 +56,17 @@ summary {    /* for FF, this hides the triangle toggle! */
     border-bottom-left-radius: 0 !important;
     border-bottom-right-radius: 0 !important;
     -webkit-appearance: none  !important;
-    padding-bottom: 0.25rem;    /* :) Finessed the space between input word and underline bar to match space between input and bottom of field for subscribe + comment name fields */
+    padding-bottom: 0.25rem;
     width: calc(67.857vw - 1.6rem);    }
 
-#navsearchinput::-webkit-input-placeholder {    /* This is to make the placeholder text in Chrome look multiplied (because I can't get it to actually!) */
+#navsearchinput::-webkit-input-placeholder {
    color: #686b31;    }    
 
-#navsearchbutton {    /* This refers to the button element holding the image */
-    height: 1.688rem;    /* For some reason for search icons/buttons, I had to put the padding on the button and account for its size to fit the img perfectly inside; if I tried to use box-sizing:content-box and put the padding on the img, it raised up the icon and couldn't figure out how to get it level except this method */
+#navsearchbutton {
+    height: 1.688rem;
     padding: 0.422rem 0 0.422rem 0.422rem;    }
 
-.navsearchicon {    /* This refers to the magnifier SVG image, for both the real search button, and the decoy */
+.navsearchicon {
     display: inline;
     height: 0.844rem;    }
 
@@ -75,10 +75,6 @@ summary {    /* for FF, this hides the triangle toggle! */
 /* FOOTER -------------------------------------------------- */
 
 #background {
-    /*
-    background-color: orange;
-    opacity: 0.2;
-    */
     position: relative;
     z-index: -5;
     width: 100%;
@@ -90,14 +86,14 @@ footer {
     bottom: 0;
     width: 100%;
     background-color: #e2e43a;
-    padding: 10.714vw 0;    }    /* 3/28 cols to pad top and bottom of yellow BG */
+    padding: 10.714vw 0;    }
 
-#footercontent {    /* Matching <main> tag for center content column width and centering */
-    max-width: 1225px;    /* Match whatever <main>'s max-width is; see above, line ~16 */   
-    width: 78.571%;    /* 22/28 cols | Use % here instead of vw because they can be used inside the max-width */
+#footercontent {
+    max-width: 1225px;
+    width: 78.571%;
     margin: 0 auto;    }
 
-.boxinput {    /* This applies to subscribe + comment's input fields */
+.boxinput {
     border-top-left-radius: 0 !important;
     border-top-right-radius: 0 !important;
     border-bottom-left-radius: 0 !important;
@@ -107,16 +103,16 @@ footer {
     border-style: solid ;
     border-width: 0.125rem;
     border-color: black;
-    color: black;    /* This is just for user's input text; does not apply to placeholder text */
-    background-color: transparent;   /* This would be default, but <body> sets all BG to white */
+    color: black;
+    background-color: transparent;
     height: 1.875rem;    
-    width: 78.571vw;    /* 22/28 cols to match 'main' */
-    padding: 0.033rem 0.233rem 0 0.467rem;    }    /* Finessing to be perfect */   
+    width: 78.571vw;
+    padding: 0.033rem 0.233rem 0 0.467rem;    }
 
-#mce-EMAIL::-webkit-input-placeholder {    /* This id applies to just the subscribe input field; this is to target the placeholder text; not accepted by FF */
-   color: #686b31;   }    /* This color is to make the placeholder text in Chrome look multiplied (because I can't get it to actually!) */
+#mce-EMAIL::-webkit-input-placeholder {
+   color: #686b31;   }
 
-.boxbutton {    /* This applies to subscribe button and to comments' "Post a comment" button */
+.boxbutton {
     border-top-left-radius: 0 !important;
     border-top-right-radius: 0 !important;
     border-bottom-left-radius: 0 !important;
@@ -128,7 +124,7 @@ footer {
     border-color: black;    
     padding: 0.125rem 0.469rem 0 0.469rem;
     height: 1.8rem;
-    -webkit-transition: color .2s ease-out;    /* for hover ease-in on Subscribe button's text */
+    -webkit-transition: color .2s ease-out;
     -moz-transition: color .2s ease-out;
     -o-transition: color .2s ease-out;
     transition: color .2s ease-out;    }
@@ -137,36 +133,34 @@ footer {
 
 .subscribebutton {
     -webkit-appearance: none !important;
-    width: 78.571vw;    /* 22/28 cols */
-    margin: 0.9375rem 0;    /* Half the height of the input field and of the button */
-    color: #e2e43a;    /* Making the text match the yellow footer background */ 
-    -webkit-transition: background-color .2s ease-out;    /* for hover ease-in on Subscribe button's BG */
+    width: 78.571vw;
+    margin: 0.9375rem 0;
+    color: #e2e43a;
+    -webkit-transition: background-color .2s ease-out;
     -moz-transition: background-color .2s ease-out;
     -o-transition: background-color .2s ease-out;
     transition: background-color .2s ease-out;    }
-.subscribebutton:hover {    /* For some reason this needs to be a class; id's aren't working for this element with hover (including it's id assigned by MailChimp: mc-embedded-subscribe) */
-    background-color: #e2e43a;    }    /* Making the button BG color match the yellow footer background */
+.subscribebutton:hover {
+    background-color: #e2e43a;    }
 
-#subscribemessage {    /* "I'll only ever email you to let you know about..." */
+#subscribemessage {
     font-family: 'Sintesi_Sans_Light', Geneva, Verdana, "Lucida Sans", "Lucida Grande", Arial, sans-serif;    /* This font wasn't being recognized when it was just the default in <body> so had to explicitly call it here */
-    margin-bottom: 1.024rem;    }    /* 0.5 lineheight */
-#subscribemessage a {    /* Email subscribe explanation's link to example campaigns | May end up unnecessary if I apply a default underline to all content or <p> links */
+    margin-bottom: 1.024rem;    }
+#subscribemessage a {
     text-decoration: underline;
-    text-decoration-color: #b0b13a;    }    /* Faking the underline color on the links to be the same gray as links' are on white, but multiplied on the yellow; following pattern of subscribe input placeholder text */
+    text-decoration-color: #b0b13a;    }
 #subscribemessage a:hover {
     text-decoration: underline;
     text-decoration-color: black;    }
 
-#mc-embedded-subscribe-form div {   /* :) Error message, like "Please enter a value" */
-    /* color: #df0a17; */    /* :) CSS red multiplied over my yellow, to match the pattern of the input field's placeholder text mutliplied over the yellow (because it's a bit darker when multiplied and easier to read) | FINALIZE In FF, it also applies red to the placeholder text of the email input field which I don't want, so commenting this out, but leaving it in case I decide to just not support FF (or at least the IBM version, not sure how it behaves in newer FF versions) */
-    /* font-size: 9.877px; */    /* :) This needs to match xs-textface, but since I can't apply classes to it, I'm calling it's class here and adding the properties needed: Mobile-V based on 1.125 ratio (8:9, Major Second) typescale with 12.5px base at level 0, and this at level -2 | Fallback for browser's not processing rems */
-    font-size: 0;    }    /* :) Finessing the placement */
+#mc-embedded-subscribe-form div {
+    font-size: 0;    }
 
-.socialicon {    /* This applies to both share (post page) and follow icons (footer) */
-    box-sizing: content-box;    /* This makes the padding go outside of the image, otherwise it will cut into it and shrink it */
+.socialicon {
+    box-sizing: content-box;
     height: 0.844rem;
     padding: 0.422rem;    
-    cursor: pointer;    }    /* :) This forces the curser into a hand */
+    cursor: pointer;    }
 
 .followicon {
     display: inline;
@@ -175,7 +169,7 @@ footer {
 #instagramlogo {
     padding-left: 0;    }
 
-#portfolio {    /* "liaprins.com" */
+#portfolio {
     margin-left: 0.422rem;    }
 
 

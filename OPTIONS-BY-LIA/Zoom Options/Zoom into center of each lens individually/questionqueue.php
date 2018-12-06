@@ -33,32 +33,55 @@
 <!-- Adding opening body tag here, since all templates call this head-close.php snippet -->
 <body>
 
+
+
     <!-- positions glasses -->
     <script src="assets/js/qq-position.js">
     </script>
 	
+
     <!-- parallax scroll -->
     <script src="assets/js/qq-parallax.js">
     </script>
-
-    <!-- reveals question + content upon click -->
-    <script src="assets/js/qq.js">
+	
+    <!-- TEST!!! boxes -->
+    <!-- UNCOMMENT BELOW + UNCOMMENT "BOXES" BELOW TO MAKE THEM SHOW -->
+    <!--
+    <script src="assets/js/qq-position-boxes.js">
     </script>
+    
+    <script src="assets/js/qq-parallax-boxes.js">
+    </script>
+	-->
 	
 
 <!-- *************************************** ^^^^^ LEAVE ALONE ^^^^^ *************************************** -->
+
+		<!-- <div id="qqtitlebg"> --> <!-- TESTING BG FOR TITLE AND INTRO!!! -->
 
 			<!-- title of the page -->
 			<h2 id="qqpagetitle">
 				<?php echo $page->title()->kirbytext() ?>
 			</h2>
 
+			<!-- intro text for QQ page -->
 			<span id="qqpagetext" class="l-textface">
 				<?php echo $page->text()->kirbytext() ?>
 			</span>
 
+		<!-- </div> --> <!-- TESTING BG FOR TITLE AND INTRO!!! -->
+
+			<p id="qqtest">hola</p>
+
+			<!-- </div> -->
+
+	        <!-- images + info (as metadata) stored in QQ content folder directly -->
         	<div id="qqparent">
 
+        		<!-- USE "ORIGINAL METHOD" IF I WANT ANY NEWLY ADDED QUESTION IN THE PANEL TO BE AT THE TOP; WHOLE GROUP OF LARGE GLASSES NEED TO BE AT THE END OF THE ORDER TO SHOW UP ON TOP LAYER -->
+        		<!-- "ORIGINAL METHOD" = (without "->flip()") -->
+	        	<!-- USE "FLIP METHOD" IF I WANT TO REVERSE THE ORDER OF GLASSES WITHIN EACH GROUP, BUT ALLOW GROUP OF LARGE GLASSES TO BE AT THE TOP OF THE PANEL AND STILL SHOW UP ON TOP LAYER, TOO-->
+	        	<!-- "FLIP METHOD" = ADD "->flip()" RIGHT AFTER "->sortBy('sort', 'asc')" TO GET THE GLASSES TO REVERSE ORDER FROM HOW THEY ARE IN PANEL -->
 	        	<?php foreach ($page->children()->sortBy('sort', 'asc') as $qqfile): ?>
 	    	    
 		        <?php $qqsubpage = $qqfile->name(); ?>
@@ -67,7 +90,11 @@
                 <?php $margins = array('0rem', '0.5rem', '1rem', '1.5rem', '2rem', '2.5rem'); ?>
                 <?php $rand_margin = $margins[array_rand($margins)]; ?>
     	    	<span class="qqpiece" style="margin-left: <?= $rand_margin ?>; margin-top: <?= $rand_margin ?>">
+    	    	<!-- <span class="qqpiece <?php if ($qqfile->binocsize() == 'large'): ?>largeqqpiece<?php endif ?><?php if ($qqfile->binocsize() == 'medium'): ?>mediumqqpiece<?php endif ?><?php if ($qqfile->binocsize() == 'small'): ?>smallqqpiece<?php endif ?>" style="margin-left: <?= $rand_margin ?>; margin-top: <?= $rand_margin ?>"> -->
 				
+				<!-- <span class="qqpiece"> -->
+					
+					<!-- <div data-clickable="yes" data-id="<?php echo $qqfile->name() ?>" class="qqglassescontainer <?php if ($qqfile->binocsize() == 'large'): ?>largeqqglasses<?php endif ?><?php if ($qqfile->binocsize() == 'medium'): ?>mediumqqglasses<?php endif ?><?php if ($qqfile->binocsize() == 'small'): ?>smallqqglasses<?php endif ?>" title="<?php echo $qqfile->question() ?>" alt="<?php echo $qqfile->question() ?>"> -->
 					<div data-clickable="yes" data-id="<?php echo $qqfile->title() ?>" class="qqglassescontainer <?php if ($qqfile->binocsize() == 'large'): ?>largeqqglasses<?php endif ?><?php if ($qqfile->binocsize() == 'medium'): ?>mediumqqglasses<?php endif ?><?php if ($qqfile->binocsize() == 'small'): ?>smallqqglasses<?php endif ?>" title="<?php echo $qqfile->question() ?>" alt="<?php echo $qqfile->question() ?>">
     			    	<?php if($leftbinoclens = $qqfile->binocimageleft()->toFile()): ?>
                             <div data-innards-clickable="yes" class="lens l-lens" style="background-image: url(<?php echo $leftbinoclens->url() ?>)"></div>
@@ -80,14 +107,21 @@
     		    	</div>
 
 					<div class="qqcontents <?php if ($qqfile->binocsize() == 'large'): ?>qqcontents-large<?php endif ?><?php if ($qqfile->binocsize() == 'medium'): ?>qqcontents-medium<?php endif ?><?php if ($qqfile->binocsize() == 'small'): ?>qqcontents-small<?php endif ?>" style="display: none;" data-edgemargin="">						
+						<img src= "<?php echo url('assets/images/x.svg') ?>" alt="close" id="qq-x" class="yellowhover close-x">
 						<div class="sharkfin"></div>
 						<div class="bordercover"></div>
-						<img src= "<?php echo url('assets/images/x.svg') ?>" alt="close" id="qq-x" class="yellowhover close-x">
-						<div class="qqquestion s-display"><?php echo $qqfile->question()->kirbytext() ?></div>
-						<div class="qqdescription s-textface"><?php echo $qqfile->explanation()->kirbytext() ?></div>
+						<div class="qqquestion s-display"><?php echo $qqfile->question() ?></div>
+						<div class="qqdescription s-textface"><?php echo $qqfile->explanation() ?></div>
 					</div>
 					
 				</span>
+
+
+				<!-- BOXES UNCOMMENT BELOW + UNCOMMENT qq-position-boxes.js + qq-parallax-boxes.js ABOVE TO MAKE THEM SHOW -->
+				<!--
+				<div data-id="<?php echo $qqfile->name() ?>" class="qqbox <?php if ($qqfile->binocsize() == 'large'): ?>largeqqbox<?php endif ?><?php if ($qqfile->binocsize() == 'medium'): ?>mediumqqbox<?php endif ?><?php if ($qqfile->binocsize() == 'small'): ?>smallqqbox<?php endif ?>">
+				</div>
+				-->
 
     		    <?php endforeach ?>
 
@@ -99,7 +133,9 @@
 
 
 <!-- *************************************** vvvvv footer.php snippet vvvvv LEAVE ALONE vvvvv *************************************** -->
-
+    <!-- reveal content script -->
+    <script src="assets/js/qq.js">
+    </script>
 
 </body>
 

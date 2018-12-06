@@ -7,8 +7,7 @@
 	border-width: 0.125rem;
 	position: absolute;
 	z-index: 2 !important;
-	left: calc(50vw - 322px);
-}
+	left: calc(50vw - 322px);	}
 
 #qqpagetitle p {
 	padding-top: calc(10.714vw - 0.25rem);
@@ -35,21 +34,17 @@
 	position: absolute;
 	cursor: pointer;    }
 
-/* TRYING OUT PUTTING THESE DOWN IN THE CONTENT POSITIONING AREA WITH THE OTHER CSS VARIABLES */
-
 .largeqqglasses {
 	width: var(--binocwidth-l);
 	height: var(--binocheight-l);    }
 
 .mediumqqglasses {
 	width: var(--binocwidth-m);
-	height: var(--binocheight-m);
-	/* opacity: 0.9; */    }
+	height: var(--binocheight-m);    }
 
 .smallqqglasses {
 	width: var(--binocwidth-s);
-	height: var(--binocheight-s);
-	/* opacity: 0.8; */    }
+	height: var(--binocheight-s);    }
 
 .largeqqglasses > .lens {
 	border-width: calc(var(--binocwidth-l) * 0.045 * 0.833);    }
@@ -71,7 +66,7 @@
 	border-radius: 50%;
 	background-repeat: no-repeat;
 	background-position: center;
-	background-size: 100%;
+	background-size: 101%;
 	-webkit-transition: background-size 0.5s;    /* for Safari */
 	transition: background-size 0.5s;    
 	-webkit-transition-timing-function: ease-out;
@@ -82,11 +77,12 @@
 	left: 53.94%;    }
 
 .qqglassescontainer:hover > .lens {
-	background-size: 150%;
-	background-position: 40% 40%;    }
+	background-size: 159%;
+	background-position: 41.5% 41.5%;    }
 
 .qqselected > .lens {
-	background-size: 150%;    }
+	background-size: 159%;
+	background-position: 41.5% 41.5%;    }
 
 .knob {
 	box-sizing: border-box;
@@ -124,45 +120,6 @@
 	border-right: calc(var(--binocwidth-s) * 0.072) solid transparent;    }
 
 
-/* QQ BOXES FOR TESTING BINOC MARGIN RANGES ---------------------------------------------------------------------------------------------------- */
-
-.largeqqbox,
-.mediumqqbox,
-.smallqqbox {
-	position: absolute;    }
-
-.largeqqbox {
-	background-color: purple;
-	opacity: 0.5;
-	width: calc(17.05vw + 2.5rem);
-	height: calc(7.866vw + 2.5rem);    }
-
-.mediumqqbox {
-	background-color: blue;
-	opacity: 0.5;
-	width: calc((17.05vw * 0.75) + 2.5rem);
-	height: calc((7.866vw * 0.75) + 2.5rem);    }
-
-.smallqqbox {
-	background-color: green;
-	opacity: 0.5;
-	width: calc((17.05vw * 0.5) + 2.5rem);
-	height: calc((7.866vw * 0.5) + 2.5rem);    }
-
-/* MIN 1225px GROW ++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
-@media only screen and (min-width: 1225px) {
-	.largeqqbox {
-		width: calc(209px + 2.5rem);
-		height: calc(96.4px + 2.5rem);    }
-	.mediumqqbox {
-		width: calc((209px * 0.75) + 2.5rem);
-		height: calc((96.4px * 0.75) + 2.5rem);    }
-	.smallqqbox {
-		width: calc((209px * 0.5) + 2.5rem);
-		height: calc((96.4px * 0.5) + 2.5rem);    }
-}    /* MIN 1225px GROW ++++++++++++++++++++++++++++++++++++++++++++++++++ */
-
-
 /* CONTENTS (QUESTIONS + EXPLANATORY TEXT) OF EACH BINOC ---------------------------------------------------------------------------------------------------- */
 
 .qqcontents {
@@ -171,7 +128,6 @@
 	border-color: black;
 	z-index: 1;
 	position: absolute;
-	/* position: relative; */
 	border-width: 0.125rem;
 	padding: var(--contentpadding);
 	width: var(--contentwidth);    }
@@ -183,6 +139,12 @@
 
 .qqquestion {
 	margin-bottom: 0.768rem;    }
+
+.qqdescription > p {
+	margin-bottom: 0.75rem;	}
+
+.qqdescription > p:last-of-type {
+	margin-bottom: 0;	}
 
 .sharkfin,
 .bordercover {
@@ -206,9 +168,7 @@
 /* THESE CLASS ZONES CAN ONLY DO HORIZONTAL POSITIONING (BECAUSE CSS CANNOT BE AWARE OF CONTENT BOX HEIGHT OR LOCATION, ETC
 NEED TO ASSIGN VERTICAL STYLES IN JS */
 
-/* < 390px: NARROW CLASS ZONES APPLIED VIA JS (no mediaquery needed; I will come back and add classes once I do the JS if-statements for this) +++++++++++++++++++++++++++++++ */
-/* ALL CLASS ZONES (FOR NARROW SCREENWIDTHS) MUST BE SET FROM SCRATCH
-   THIS (AND >= 390px BELOW) SHOULD BE THE ONLY PLACES I SET CLASS ZONES */
+/* < 390px: NARROW CLASS ZONES (ZONES APPLIED VIA JS) +++++++++++++++++++++++++++++++ */
 :root {
  	--binocwidth-l: 17.05vw;    /* binoc width (large) applied above in lines ~31 */
 	--binocheight-l: 7.866vw;    /* binoc height (large) applied above in lines ~32 */
@@ -315,9 +275,8 @@ NEED TO ASSIGN VERTICAL STYLES IN JS */
 
 
 
-/* >= 390px: WIDESCREEN CLASS ZONES APPLIED VIA JS + CONTENT BOX WIDTH CHANGES +++++++++++++++++++++++++++++++ */
-/* ALL CLASS ZONES MUST BE SET FROM SCRATCH
-   THIS (AND < 390px ABOVE) SHOULD BE THE ONLY PLACES I SET CLASS ZONES */
+/* >= 390px: WIDESCREEN CLASS ZONES (ZONES APPLIED VIA JS + CONTENT BOX WIDTH CHANGES +++++++++++++++++++++++++++++++ */
+
 @media (min-width: 390px) {
 	:root {
 		--contentwidth: 50vw;    }    /* content width = 14/28 (50vw), applied above in line ~174 */

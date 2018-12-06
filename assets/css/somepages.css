@@ -18,10 +18,9 @@ header {    /* Holds blog name + tagline */
 
 #readmore {
     display: inline;
-    padding: 0.6em 0.5em 0.5em 0;    }    /* Basing on line-height; they would all be 0.6em, but I had to optically finesse R + bottom, so they are 0.5em */
+    padding: 0.6em 0.5em 0.5em 0;    }
 
 #hometaggroup {  
-    /* line-height: 2.63; */
     line-height: 2.2;
     overflow: hidden;
     text-overflow: ellipsis; 
@@ -36,10 +35,7 @@ header {    /* Holds blog name + tagline */
 .date {
     padding-top: 0.512rem;    /* top: .25 lh */
     margin-bottom: 1.024rem;    /* .5 lh */
-    border-style: solid none none none; 
-    /* border-width: 1.71428vw; */    /* This should dynamically match the weight of the line of the postglasses below date, based on their width of 42.857vw (12/28 cols) and the ratio of the postglasses width to their line weight of 25:1 */ 
-    /* border-width: 0.125rem; */    /* This should match the weight of the icons, e.g. home icon */
-    /* border-width: 2vw; */    }    /* This should match the weight of the main postglasses' outline; the ratio of postglasses' width to stroke weight is 25:1; */
+    border-style: solid none none none;    }
 
 /* Setting the stroke weight for the lines above date, and below captions */
 .date,
