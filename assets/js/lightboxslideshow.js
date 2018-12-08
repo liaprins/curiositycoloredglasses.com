@@ -1,11 +1,3 @@
-
-
-
-
-
-
-
-
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 // LIGHTBOX SCRIPTS FIRST !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -21,29 +13,6 @@ function removeHashReturnScroll() {
     document.documentElement.style.overflow = 'auto';
 }
 
-
-
-/*
-// TRYING IT LOWER DOWN IN SCRIPT TO SEE IF IT PERFORMS MORE CONSISTENTLY
-// NAMED + USED FUNCTION ----------------------------------------------------------------------------
-// vertically centers lightbox img
-// used on resize + on click of an img to open lightbox
-function verticallyCenter() {
-    var singleLightbox = document.getElementById('singlelightbox');
-    if (singleLightbox) {
-        var lightboxImg = singleLightbox.firstElementChild;
-        var imgHeight = lightboxImg.offsetHeight;
-        singleLightbox.style.height = (window.innerHeight);
-        singleLightbox.style.width = window.innerWidth;
-        var lightboxHeight = singleLightbox.offsetHeight;
-        lightboxImg.style.marginTop = (lightboxHeight - imgHeight)/2 + 'px';
-    }
-}
-
-// EVENT LISTENER ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-// vertically centers lightbox img upon screen resize
-window.addEventListener('resize', verticallyCenter, false);
-*/
 
 
 
@@ -381,7 +350,7 @@ function slideshow() {
             slide[j].style.position = "absolute";
             // position slides at increments equal to the post text width + 1 margin
             // slide[j].style.left = 'calc(700px * ' + j + ')';    // this size works for 1225+ only
-            var screenWidth = window.innerWidth;
+            // var screenWidth = window.innerWidth; // for some reason having this re-defined here cause second and thrid, etc galleries on a page to not recognize teh if-statement following and move each slide 700px even at screenwidths < 817! But this is fine in liaprins.com's code!
             if (screenWidth < 817) {
                 slide[j].style.left = 'calc(85.714vw * ' + j + ')';
             } else {
@@ -591,8 +560,6 @@ window.addEventListener('click', clickGalleryArrow, false);
 
 // SWIPE FOR BOTH REGULAR VIEW GALLERY && LIGHTBOX VIEW!!!
 window.onload = function() {
-
-    var box1 = document.getElementById('box1');
 
     document.addEventListener('swiped-left', function(e) {
         console.log(e.type);
