@@ -29,77 +29,10 @@
     <script src="../assets/js/comment.js">
     </script>
 
-
-
-
-<!-- TESTING SLIDESHOW SWIPE!!!!! vvv -->
-
+    <!-- detects swipes by users with touchscreens for galleries -->
     <script src="../assets/js/pure-swipe.js">
     </script>
 
-
-<!-- ADD THE SCRIPT CONTENT BELOW INTO lightboxslideshow.js -->
-<!--
-    <script>
-
-        window.onload = function() {
-
-            var box1 = document.getElementById('box1');
-
-            document.addEventListener('swiped-left', function(e) {
-                console.log(e.type);
-                console.log(e.target);
-                // e.target.innerHTML = e.type;
-                box1.innerHTML = e.type + ' | id: ' + e.target.getAttribute('id') + ' | class: ' + e.target.getAttribute('class');
-            });
-
-            document.addEventListener('swiped-right', function(e) {
-                console.log(e.type);
-                console.log(e.target);
-                // e.target.innerHTML = e.type;
-                box1.innerHTML = e.type;
-            });
-        }
-
-    </script>
--->
-
-<!--
-<script>
- 
-window.addEventListener('load', function(){
- 
-    var box1 = document.getElementById('box1')
-    var statusdiv = document.getElementById('statusdiv')
-    var startx = 0
-    var dist = 0
- 
-    box1.addEventListener('touchstart', function(e){
-        var touchobj = e.changedTouches[0] // reference first touch point (ie: first finger)
-        startx = parseInt(touchobj.clientX) // get x position of touch point relative to left edge of browser
-        statusdiv.innerHTML = 'Status: touchstart<br> ClientX: ' + startx + 'px'
-        e.preventDefault()
-    }, false)
- 
-    box1.addEventListener('touchmove', function(e){
-        var touchobj = e.changedTouches[0] // reference first touch point for this event
-        var dist = parseInt(touchobj.clientX) - startx
-        statusdiv.innerHTML = 'Status: touchmove<br> Horizontal distance traveled: ' + dist + 'px'
-        e.preventDefault()
-    }, false)
- 
-    box1.addEventListener('touchend', function(e){
-        var touchobj = e.changedTouches[0] // reference first touch point for this event
-        statusdiv.innerHTML = 'Status: touchend<br> Resting x coordinate: ' + touchobj.clientX + 'px'
-        e.preventDefault()
-    }, false)
- 
-}, false)
- 
-</script>
--->
-<!-- TESTING SLIDESHOW SWIPE!!!!! ^^^ -->
-    
 
     <!-- This encompasses everything within <body> except for <nav>
     This is so that there is an element that can be clicked on that will be anything except <nav>,
@@ -152,38 +85,6 @@ window.addEventListener('load', function(){
                         <?php snippet('blogarticle-share') ?>
 
                     </div>    <!-- Closing id="posttagshare" -->
-
-
-
-
-
-
-
-
-
-
-<!-- TESTING SLIDESHOW SWIPE!!!!! vvv -->
-
-
-<div class="box" id="box1" style="width: 100%; height: 50vh; background-color: yellow;">
-<h3> Touch Me!!</h3>
-</div>
-<!--
-<h3 id="statusdiv">Status</h3>
--->
-
-<!-- TESTING SLIDESHOW SWIPE!!!!! ^^^ -->
-
-
-
-
-
-
-
-
-
-
-
 
 
                     <!-- Text of post -->
