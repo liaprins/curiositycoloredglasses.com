@@ -33,16 +33,6 @@
     <script src="../assets/js/pure-swipe.js">
     </script>
 
-    <!-- p5 library TESTING!!! -->
-    <script src="../assets/js/p5.js">
-    </script>
-
-    <script src="<?= $page->contentURL() ?>/blogarticle.js">
-    </script>
-
-
-
-
 
     <!-- This encompasses everything within <body> except for <nav>
     This is so that there is an element that can be clicked on that will be anything except <nav>,
@@ -52,8 +42,6 @@
 
         <!-- for backarrow script ^^^ -->
         <?php snippet('backarrow') ?>
-
-
 
 
             <article class="mockmain" id="pre-rr">    <!-- Opening <article> to make room for RR results that need to be wider than this width, to accommodate their all having margins on L + R -->
@@ -87,7 +75,6 @@
                     <?php snippet('blogarticle-intro') ?>
 
 
-
                     <div id="posttagshare">
 
                         <!-- Tags of post -->
@@ -102,6 +89,7 @@
 
                     <!-- Text of post -->
                     <?php snippet('blogarticle-text') ?>
+
 
 
                     <!-- Glossary of all vocab words; listed after the main text -->
