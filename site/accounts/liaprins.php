@@ -7,10 +7,10 @@ email: liajprins@gmail.com
 language: en
 role: admin
 history:
+  - blog/carbonless-copy-paper
   - questionqueue/uv-light-and-nail-polish
   - questionqueue/yellow-vision-and-cones
   - questionqueue/decaffeination
   - blog/myth-busting-mosquito-bites
-  - blog/penmanship-dialects
 firstname: Lia
 lastname: Prins

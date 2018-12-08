@@ -41,6 +41,13 @@ Carbonless copy paper was first produced by the NCR Corporation. Formerly, the o
 - yellow, ochre, lemon, sunny, school bus, Dixon Ticonderoga, buttercup, sunflower, daisy
 - white
 
+<figure id="sketch-holder">
+<figcaption class="xs-textface">
+Just testing out my little figcaption for my p5 test!
+<div class="fullscreen clickme">FULLSCREEN</div>
+</figcaption>
+</figure>
+
 Carbonless paper was used as business stationery requiring one or more copies of the original, such as invoices and receipts. The copies were often paper of different colors (e.g. white original for customer, yellow copy for supplier's records, and other colors for subsequent copies). Stationery with carbonless copy paper can be supplied collated either in pads or books bound into sets, or as loose sets, or as continuous stationery for printers designed to use it.
 
 (image: paper-crane.jpg)
