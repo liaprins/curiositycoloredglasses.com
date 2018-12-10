@@ -26,7 +26,7 @@ function setup() {
 
     // "prop" for now (short for proportion); so I can size things relative to the canvas as a whole,
     // rather than thinking of px sizes for draw() elements that only apply to 817+ in reg view...
-    var prop = ((cW * pE) / 100);
+    var prop = (cW / 100);
     
     // ALWAYS; DON'T CHANGE! SET CANVAS ASPECT RATIO ABOVE WITH cHProp VARIABLE (~ line 6)
     var canvas = createCanvas((cWProp * prop), (cHProp * prop));
