@@ -37,7 +37,12 @@
     <script src="../assets/js/p5.js">
     </script>
 
+    <!-- pull in the p5 code for each blog post -->
     <script src="<?= $page->contentURL() ?>/blogarticle.js">
+    </script>
+
+    <!-- build out functionality for p5 <canvas> element going fullscreen -->
+    <script src="../assets/js/canvasfullscreen.js">
     </script>
 
 
@@ -98,6 +103,12 @@
                         <?php snippet('blogarticle-share') ?>
 
                     </div>    <!-- Closing id="posttagshare" -->
+
+
+
+<!-- TESTING FULLSCREEN BUTTON FOR p5 canvas! -->
+<div id="fullscreentest">Hi!</div>
+
 
 
                     <!-- Text of post -->

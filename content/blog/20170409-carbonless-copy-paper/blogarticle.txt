@@ -43,8 +43,8 @@ Carbonless copy paper was first produced by the NCR Corporation. Formerly, the o
 
 <figure id="sketch-holder">
 <figcaption class="xs-textface">
+<hr class="toprule">
 Just testing out my little figcaption for my p5 test!
-<div class="fullscreen clickme">FULLSCREEN</div>
 </figcaption>
 </figure>
 

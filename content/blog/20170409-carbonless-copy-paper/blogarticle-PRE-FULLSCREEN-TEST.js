@@ -1,20 +1,9 @@
 function setup() {
 // establishing pe (Pixel Equivalent) = equivalent for screensizes <817px whose canvas width should be in vw
-  	
-    var sketchHolder = document.getElementById('sketch-holder');
-
-    if (windowWidth < 817) {
-        if (sketchHolder.classList.contains('sketch-lightbox')) {
-            var pe = (((windowWidth / 28) * 22) / 321);
-        } else {
-            var pe = (((windowWidth / 28) * 22) / 642);
-        }
+  	if (windowWidth < 817) {
+		var pe = (((windowWidth / 28) * 22) / 642);
   	} else {
-        if (sketchHolder.classList.contains('sketch-lightbox')) {
-            var pe = 2;
-        } else {
-            var pe = 1;
-        }
+  		var pe = 1;
   	}
 
   	var canvas = createCanvas((642 * pe), (100 * pe));
@@ -41,26 +30,11 @@ function windowResized() {
 
 function draw() {
 // establishing pe (Pixel Equivalent) = equivalent for screensizes <817px whose canvas width should be in vw
-  	/*
-    if (windowWidth < 817) {
+  	if (windowWidth < 817) {
 		var pe = (((windowWidth / 28) * 22) / 642);
   	} else {
   		var pe = 1;
   	}
-    */
-    if (windowWidth < 817) {
-        if (sketchHolder.classList.contains('sketch-lightbox')) {
-            var pe = (((windowWidth / 28) * 22) / 321);
-        } else {
-            var pe = (((windowWidth / 28) * 22) / 642);
-        }
-    } else {
-        if (sketchHolder.classList.contains('sketch-lightbox')) {
-            var pe = 2;
-        } else {
-            var pe = 1;
-        }
-    }
 
 // draw fun stuff now!
 	if(mouseIsPressed) {
@@ -70,21 +44,3 @@ function draw() {
 	}
 	ellipse(mouseX, mouseY, (80 * pe), (80 * pe));
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
