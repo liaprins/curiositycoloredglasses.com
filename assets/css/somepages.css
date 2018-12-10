@@ -1,9 +1,31 @@
 /* TESTING P5!!!! */
 
-canvas {
+.fullscreentoggle {
+    width: 25px;    /* just for now */
+    float: right;    }
 
-}
+.toregview {
+    position: absolute;
+    bottom: 0.322rem;
+    right: 0.422rem;    }
 
+/* can be added to #singlelightbox styling, ~ line 541, when ready to finalize and optimize styling for canvas lightbox*/
+.sketch-lightbox {
+    /* opacity: 0.7; */    /* FOR TESTING ONLY */
+    cursor: pointer;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    margin-top: 0;    }
+
+.canvaslightbox {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;    }
 
 
 
