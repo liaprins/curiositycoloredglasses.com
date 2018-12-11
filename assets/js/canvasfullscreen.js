@@ -168,8 +168,12 @@ function canvasToLightbox(e) {
 
     	// turning on an event listener only when lightbox is open; this way hitting "escape" key can close lightbox (via "function addESC()")
     	document.addEventListener('keydown', canvasCloseEsc);
-
-
+    	// set hash for URL when open
+    	if (sketchHolder.hasAttribute('data-hash')) {
+			location.hash = sketchHolder.getAttribute('data-hash');
+		}
+	    // stop V scrollability
+    	document.documentElement.style.overflow = 'hidden';
 
    		// style caption: if statemtn must come after everything else...
    		// because nothing after it within this function is read if its condition is not met 
@@ -246,9 +250,9 @@ function canvasClose() {
         }
 
 		// RETURN TO ACTIVATE THESE LATER!
-        // document.removeEventListener('keydown', addESC); // is turned on when lightbox is open, and only needed when it's open, so removing to save resources when not needed
+        document.removeEventListener('keydown', addESC); // is turned on when lightbox is open, and only needed when it's open, so removing to save resources when not needed
         // call NAMED function
-        // removeHashReturnScroll();
+        removeHashReturnScroll();
 }
 
 
