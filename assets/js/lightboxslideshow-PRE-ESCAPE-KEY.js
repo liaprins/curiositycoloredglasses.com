@@ -95,12 +95,7 @@ function lightbox(imgToShow) {
         topRule.setAttribute('id', 'lightboxcaptionbar');
         singleLightbox.appendChild(topRule);   
         */
-
     } // close if (caption)
-    
-    // turning on an event listener only when lightbox is open; this way hitting "escape" key can close lightbox (via "function addESC()")
-    document.addEventListener('keydown', addESC);
-
 } // function
 
 
@@ -232,7 +227,6 @@ function lightboxSpaceClose(e) {
     if (clickedSpace.hasAttribute('data-lightbox-close')) {
         var lightboxToClose = document.getElementById('singlelightbox');
         clickedSpace.parentNode.removeChild(lightboxToClose);
-        document.removeEventListener('keydown', addESC); // is turned on when lightbox is open, and only needed when it's open, so removing to save resources when not needed
         // call NAMED function
         removeHashReturnScroll();
     }
@@ -252,7 +246,6 @@ function lightboxXClose(e) {
     if (clickedX.hasAttribute('data-lightbox-x')) {
         var lightboxToClose = document.getElementById('singlelightbox');
         clickedX.parentNode.parentNode.removeChild(lightboxToClose);
-        document.removeEventListener('keydown', addESC); // is turned on when lightbox is open, and only needed when it's open, so removing to save resources when not needed
         // call NAMED function
         removeHashReturnScroll();
     }
@@ -261,23 +254,6 @@ function lightboxXClose(e) {
 // EVENT LISTENER ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // responds to a click on the lightbox "x" button
 window.addEventListener('click', lightboxXClose, false);
-
-
-
-
-// USED FUNCTION ----------------------------------------------------------------------------
-// EVENT LISTENER TURNED ON WITHIN LAST LINE (~100) OF "function lightbox(imgToShow)"
-// escape key to exit from lightbox
-var addESC = function(e) {
-  if (e.keyCode == 27) {
-    var lightboxToClose = document.getElementById('singlelightbox');
-    lightboxToClose.parentNode.removeChild(lightboxToClose);
-    document.removeEventListener('keydown', addESC); // is turned on when lightbox is open, and only needed when it's open, so removing to save resources when not needed
-    // call NAMED function
-    removeHashReturnScroll();
-  } 
-}
-
 
 
 
