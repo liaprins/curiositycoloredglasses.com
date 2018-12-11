@@ -29,10 +29,12 @@ Text:
 Carbonless copy paper also known as (vocab: CCP url: ccp), non-carbon copy paper, or (vocab: NCR paper url: ncr-paper) consists of sheets of paper that are coated with micro-encapsulated dye or ink or a reactive clay. The back of the first sheet is coated with micro-encapsulated dye (referred to as a Coated Back or CB sheet). The lowermost sheet is coated on the top surface with a clay that quickly reacts with the dye to form a permanent mark (Coated Front, CF). Any intermediate sheets are coated with clay on top and dye on the bottom (Coated Front and Back, CFB).
 
 <figure id="sketch-holder">
+
 <figcaption class="xs-textface">
 <hr class="toprule">
 Just testing out my little figcaption for my p5 test!
 </figcaption>
+
 </figure>
 
 (image: dot.svg)
