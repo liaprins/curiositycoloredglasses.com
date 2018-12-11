@@ -10,6 +10,7 @@ function canvasFullScreen() {
 		fullScreenButton.setAttribute('title', 'View in fullscreen mode');
 		fullScreenButton.setAttribute('alt', 'View in fullscreen mode');
 		fullScreenButton.setAttribute('class', 'fullscreentoggle tofullscreen');
+		fullScreenButton.setAttribute('id', 'fullify');
 		allCanvas[i].parentNode.appendChild(fullScreenButton);
 
 		var figCaption = allCanvas[i].previousElementSibling;

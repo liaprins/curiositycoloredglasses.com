@@ -28,6 +28,15 @@ Text:
 
 Carbonless copy paper also known as (vocab: CCP url: ccp), non-carbon copy paper, or (vocab: NCR paper url: ncr-paper) consists of sheets of paper that are coated with micro-encapsulated dye or ink or a reactive clay. The back of the first sheet is coated with micro-encapsulated dye (referred to as a Coated Back or CB sheet). The lowermost sheet is coated on the top surface with a clay that quickly reacts with the dye to form a permanent mark (Coated Front, CF). Any intermediate sheets are coated with clay on top and dye on the bottom (Coated Front and Back, CFB).
 
+<figure id="sketch-holder">
+<figcaption class="xs-textface">
+<hr class="toprule">
+Just testing out my little figcaption for my p5 test!
+</figcaption>
+</figure>
+
+(image: dot.svg)
+
 When the sheets are written on with pressure, as with a ball-point pen; or impact like a typewriter or (vocab: dot matrix printer url: dot-matrix-printer), the pressure causes the micro-capsules to break and release their dye. Since the capsules are so small, the resulting print is very accurate.
 
 Carbonless copy paper was also available in a self-contained version that had both the ink and the clay on the same side of the paper.
@@ -40,13 +49,6 @@ Carbonless copy paper was first produced by the NCR Corporation. Formerly, the o
 - pink
 - yellow, ochre, lemon, sunny, school bus, Dixon Ticonderoga, buttercup, sunflower, daisy
 - white
-
-<figure id="sketch-holder">
-<figcaption class="xs-textface">
-<hr class="toprule">
-Just testing out my little figcaption for my p5 test!
-</figcaption>
-</figure>
 
 Carbonless paper was used as business stationery requiring one or more copies of the original, such as invoices and receipts. The copies were often paper of different colors (e.g. white original for customer, yellow copy for supplier's records, and other colors for subsequent copies). Stationery with carbonless copy paper can be supplied collated either in pads or books bound into sets, or as loose sets, or as continuous stationery for printers designed to use it.
 
