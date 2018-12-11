@@ -86,6 +86,7 @@ function lightbox(imgToShow) {
         toggle.setAttribute('title', 'Toggle caption visibility');
         toggle.setAttribute('alt', 'Toggle caption visibility');
         toggle.setAttribute('id', 'captiontoggle');
+        // toggle.setAttribute('class', 'close-x yellowhover turn180'); // use this line instead of the next if I want chevron to start int eh other direction it does now
         toggle.setAttribute('class', 'close-x yellowhover');
         toggle.setAttribute('captiontoggle', '');
         singleLightbox.appendChild(toggle);
