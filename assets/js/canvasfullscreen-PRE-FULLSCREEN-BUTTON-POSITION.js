@@ -20,7 +20,7 @@ function canvasFullScreen() {
 		fullScreenButton.setAttribute('src', 'https://curiositycoloredglasses.com/assets/images/to-full-screen.svg');
 		fullScreenButton.setAttribute('title', 'View in fullscreen mode');
 		fullScreenButton.setAttribute('alt', 'View in fullscreen mode');
-		fullScreenButton.setAttribute('class', 'fullscreentoggle tofullscreen');
+		fullScreenButton.setAttribute('class', 'fullscreentoggle tofullscreen yellowhover');
 		allCanvas[i].parentNode.appendChild(fullScreenButton);
 		// DOM order within #sketch-holder is now:
 		// 1. <canvas>
@@ -52,6 +52,7 @@ function canvasToLightbox(e) {
 		var fullScreenIcon = sketchHolder.lastElementChild;
 		fullScreenIcon.parentNode.removeChild(fullScreenIcon);
 
+		/*/
 		// style caption
 		if (sketchHolder.firstElementChild.nextElementSibling.hasAttribute('data-canvas-figcaption')) {
 			sketchHolder.firstElementChild.nextElementSibling.classList.add('lightboxcaption', 'hide');
@@ -66,6 +67,9 @@ function canvasToLightbox(e) {
     	    chevron.setAttribute('canvascaptiontoggle', '');
 	        sketchHolder.appendChild(chevron);
 		} 
+		*/
+
+
 		// add "x"
 		var closeX = document.createElement('img');
 		closeX.setAttribute('src', 'https://curiositycoloredglasses.com/assets/images/x.svg');
@@ -83,16 +87,24 @@ function canvasToLightbox(e) {
 		regViewIcon.setAttribute('src', 'https://curiositycoloredglasses.com/assets/images/to-regular-view.svg');
 		regViewIcon.setAttribute('title', 'Close fullscreen mode');
 		regViewIcon.setAttribute('alt', 'Close fullscreen mode');
-		regViewIcon.setAttribute('class', 'fullscreentoggle toregview');
+		regViewIcon.setAttribute('id', 'toregview');
+		regViewIcon.setAttribute('class', 'fullscreentoggle yellowhover');
 		regViewIcon.setAttribute('data-canvas-x', '');
 		sketchHolder.appendChild(regViewIcon);
 		document.getElementById('fullscreentest').innerHTML = regViewIcon.getAttribute('title');
+
+
+
+
+
+
 		// DOM order within #sketch-holder is now:
 		// 1. <canvas>
 		// [2. <figcaption> (OPTIONAL!)]
-		// [3. chevron for figcaption toggling (OPTIONAL!)] ADDED HERE; SHOULD ONLY EXIST WITHIN LIGHTBOX
-		// 4. .close-x button ADDED HERE; SHOULD ONLY EXIST WITHIN LIGHTBOX
-		// 5. .toregview button
+		// 3. .close-x button ADDED HERE; SHOULD ONLY EXIST WITHIN LIGHTBOX
+		// 4. #toregview button
+		// [5. chevron for figcaption toggling (OPTIONAL!)] ADDED HERE; SHOULD ONLY EXIST WITHIN LIGHTBOX
+
 
 		// now resize canvas for lightbox (but... vvv)
 		// TRANSFORM #sketch-holder INTO A LIGHTBOX-BG-LOOKALIKE (USE CSS FOR STYLING VIA JS-ADDED "sketch-lightbox" CLASS)
@@ -156,6 +168,29 @@ function canvasToLightbox(e) {
 
     	// turning on an event listener only when lightbox is open; this way hitting "escape" key can close lightbox (via "function addESC()")
     	document.addEventListener('keydown', canvasCloseEsc);
+    	// set hash for URL when open
+    	if (sketchHolder.hasAttribute('data-hash')) {
+			location.hash = sketchHolder.getAttribute('data-hash');
+		}
+	    // stop V scrollability
+    	document.documentElement.style.overflow = 'hidden';
+
+   		// style caption: if statemtn must come after everything else...
+   		// because nothing after it within this function is read if its condition is not met 
+   		// (i.e. if there is NOT a caption)
+		if (sketchHolder.firstElementChild.nextElementSibling.hasAttribute('data-canvas-figcaption')) {
+			sketchHolder.firstElementChild.nextElementSibling.classList.add('lightboxcaption', 'hide');
+			// add caption-toggling chevron
+			var chevron = document.createElement('img');
+			chevron.setAttribute('src', 'https://curiositycoloredglasses.com/assets/images/up-arrowhead.svg');	
+	        chevron.setAttribute('title', 'Toggle caption visibility');
+        	chevron.setAttribute('alt', 'Toggle caption visibility');
+    	    chevron.setAttribute('id', 'captiontoggle');
+	        // chevron.setAttribute('class', 'close-x yellowhover turn180'); // use this line instead of the next if I want chevron to start int eh other direction it does now
+        	chevron.setAttribute('class', 'close-x yellowhover');
+    	    chevron.setAttribute('canvascaptiontoggle', '');
+	        sketchHolder.appendChild(chevron);
+		} 
 	
 	} // close if-statement that defines what was clicked
 } // function
@@ -173,20 +208,22 @@ function canvasClose() {
     	if (sketchHolder.firstElementChild.nextElementSibling.hasAttribute('data-canvas-figcaption')) {
 			sketchHolder.firstElementChild.nextElementSibling.classList.remove('lightboxcaption');
 			sketchHolder.firstElementChild.nextElementSibling.classList.remove('hide');
-			var canvasCaptionToggle = sketchHolder.firstElementChild.nextElementSibling.nextElementSibling;
+			// var canvasCaptionToggle = sketchHolder.firstElementChild.nextElementSibling.nextElementSibling;
+			var canvasCaptionToggle = document.getElementById('captiontoggle');
 			sketchHolder.removeChild(canvasCaptionToggle);
 		}
 		// remove "x" button
 		var closeX = document.getElementById('lightboxclose');
 		sketchHolder.removeChild(closeX);
 		// swap back out regview icon for fullscreen icon again + position
-        var regViewIcon = sketchHolder.lastElementChild;
+        // var regViewIcon = sketchHolder.lastElementChild;
+        var regViewIcon = document.getElementById('toregview');
         sketchHolder.removeChild(regViewIcon);
         var fullScreenButton = document.createElement('img');
         fullScreenButton.setAttribute('src', 'https://curiositycoloredglasses.com/assets/images/to-full-screen.svg');
 		fullScreenButton.setAttribute('title', 'View in fullscreen mode');
 		fullScreenButton.setAttribute('alt', 'View in fullscreen mode');
-		fullScreenButton.setAttribute('class', 'fullscreentoggle tofullscreen');
+		fullScreenButton.setAttribute('class', 'fullscreentoggle tofullscreen yellowhover');
 		sketchHolder.appendChild(fullScreenButton);
 		// DOM order within #sketch-holder is now back to:
 		// 1. <canvas>
@@ -213,9 +250,9 @@ function canvasClose() {
         }
 
 		// RETURN TO ACTIVATE THESE LATER!
-        // document.removeEventListener('keydown', addESC); // is turned on when lightbox is open, and only needed when it's open, so removing to save resources when not needed
+        document.removeEventListener('keydown', addESC); // is turned on when lightbox is open, and only needed when it's open, so removing to save resources when not needed
         // call NAMED function
-        // removeHashReturnScroll();
+        removeHashReturnScroll();
 }
 
 
@@ -257,8 +294,10 @@ function toggleCanvasCaption(e) {
     var captionToggleIcon = e.target;
     if (captionToggleIcon.hasAttribute('canvascaptiontoggle')) {
         captionToggleIcon.classList.toggle('turn180');
-        captionToggleIcon.previousElementSibling.removeAttribute('style');
-        captionToggleIcon.previousElementSibling.classList.toggle('hide');
+        // captionToggleIcon.previousElementSibling.removeAttribute('style');
+        // captionToggleIcon.previousElementSibling.classList.toggle('hide');
+        captionToggleIcon.parentNode.firstElementChild.nextElementSibling.removeAttribute('style');
+        captionToggleIcon.parentNode.firstElementChild.nextElementSibling.classList.toggle('hide');
     }
 }
 
