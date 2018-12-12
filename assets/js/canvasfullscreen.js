@@ -14,6 +14,9 @@ function canvasFullScreen() {
 		lightboxToggle.setAttribute('class', 'fullscreentoggle tofullscreen yellowhover');
 		allCanvas[i].parentNode.appendChild(lightboxToggle);
 
+		// snugging up fullscreen toggle icon to bottom edge of canvas
+		lightboxToggle.style.top = ((allCanvas[i].parentNode.offsetHeight * -1) + allCanvas[i].offsetHeight) + "px";
+
 		// id if there's a figcaption; if so, move it to be after canvas
 		if (allCanvas[i].previousElementSibling) {
 			var figCaption = allCanvas[i].previousElementSibling;
@@ -148,9 +151,10 @@ function canvasToLightbox(e) {
 		lightboxToggle.setAttribute('title', 'Close fullscreen mode');
 		lightboxToggle.setAttribute('alt', 'Close fullscreen mode');
 		lightboxToggle.setAttribute('id', 'toregview');
-		lightboxToggle.setAttribute('class', 'fullscreentoggle');
+		lightboxToggle.setAttribute('class', 'fullscreentoggle'); // starting without yellowhover to remove it as a class for one second (adding back in the next line) or it will keep the yellow hover from being tapped (in its previous image instantiation) on touchscreen devices
 		lightboxToggle.classList.add('yellowhover');
-		lightboxToggle.setAttribute('data-canvas-x', '');		
+		lightboxToggle.setAttribute('data-canvas-x', '');
+		lightboxToggle.style.top = 'calc(' + window.innerHeight + "px - 2.11rem)";
 
 		// add "x"; created as <img> node within var list
 		closeX.setAttribute('src', '../assets/images/x.svg');
@@ -273,12 +277,16 @@ function canvasClose() {
 	lightboxToggle.setAttribute('title', 'View in fullscreen mode');
 	lightboxToggle.setAttribute('alt', 'View in fullscreen mode');
 	lightboxToggle.setAttribute('class', 'fullscreentoggle tofullscreen yellowhover');
+	lightboxToggle.removeAttribute('id');
 
 	// remove "X" 
 	sketchHolder.removeChild(closeX);
 
 	// remove special lightbox-like styling from sketchHolder 
 	sketchHolder.classList.remove('sketch-lightbox'); // this must come last since this var, and therefore other UI vars, are defined by the presence of this class attached to sketchHolder!
+
+	// snugging up fullscreen toggle icon to bottom edge of canvas
+	lightboxToggle.style.top = ((sketchHolder.offsetHeight * -1) + canvas.offsetHeight) + "px"; // must come after sketchHolder is restyled to its reg view state (and therefore height)
 }
 
 
