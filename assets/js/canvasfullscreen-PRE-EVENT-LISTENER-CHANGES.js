@@ -28,17 +28,6 @@ function canvasFullScreen() {
 		//[3.) <figcaption> (OPTIONAL!)]
 		
 	} // close for loop
-
-
-	// --------------------------------------------------------------------------------
-	// ADD OTHER LIGHTBOX-NECESSARY FUNCTIONALITY
-
-	// turn OFF event listener for closing lightbox 
-	// otherwise that function to close lightbox will run immediately upon clicking the same lightbox toggle button that opens it, and it will never appear open
-	window.removeEventListener('click', xOrRegViewIconOrWhiteSpaceClick);
-	
-	// upon load (when this function as a whole is called) turn ON event listener to open lightbox
-	window.addEventListener('click', canvasToLightbox);
 	
 } // close canvasFullScreen function
 
@@ -132,13 +121,6 @@ function canvasToLightbox(e) {
         // turning on an event listener only when lightbox is open; this way hitting "escape" key can close lightbox (via "function addESC()")
     	document.addEventListener('keydown', canvasCloseEsc);
 
-    	// turn OFF event listener for opening lightbox 
-		// otherwise that function to open lightbox will run immediately upon clicking the same lightbox toggle button that closes it, and it will never appear close (via the toggle button at least)
-		window.removeEventListener('click', canvasToLightbox);
-
-		// turn on event listener to close lightbox
-		window.addEventListener('click', xOrRegViewIconOrWhiteSpaceClick);
-
 
 		// --------------------------------------------------------------------------------
 		// FLESH OUT ALL LIGHTBOX-RELATED BUTTONS except for chevron, which must be defined within if-statement at end (dependent upon existence of <figcaption> or not)
@@ -148,8 +130,7 @@ function canvasToLightbox(e) {
 		lightboxToggle.setAttribute('title', 'Close fullscreen mode');
 		lightboxToggle.setAttribute('alt', 'Close fullscreen mode');
 		lightboxToggle.setAttribute('id', 'toregview');
-		lightboxToggle.setAttribute('class', 'fullscreentoggle');
-		lightboxToggle.classList.add('yellowhover');
+		lightboxToggle.setAttribute('class', 'fullscreentoggle yellowhover');
 		lightboxToggle.setAttribute('data-canvas-x', '');		
 
 		// add "x"; created as <img> node within var list
@@ -199,6 +180,7 @@ window.addEventListener('click', canvasToLightbox, false);
 
 
 // *************************************************************************************************************
+// NAMED FUNCTION ----------------------------------------------------------------------------
 function canvasClose() {
 	
     // all UI var's defined except for chevron, which must be defined within if-statement at end (dependent upon existence of <figcaption> or not)
@@ -241,12 +223,9 @@ function canvasClose() {
 	// ADD OTHER LIGHTBOX-REMOVAL FUNCTIONALITY
 
 	// RETURN TO ACTIVATE THESE LATER!
-    document.removeEventListener('keydown', canvasCloseEsc); // is turned on when lightbox is open, and only needed when it's open, so removing to save resources when not needed
+    document.removeEventListener('keydown', addESC); // is turned on when lightbox is open, and only needed when it's open, so removing to save resources when not needed
 
-    // turning back ON event listener that opens lightbox, from regular view
-	window.addEventListener('click', canvasToLightbox);
-
-    // remove #hash from URL and allow page to scroll again once lightbox is closed
+    // call NAMED function
     removeHashReturnScroll();
 
 
@@ -296,7 +275,7 @@ function xOrRegViewIconOrWhiteSpaceClick(e) {
 }
 
 // responds to a click on the lightbox "x" button
-// window.addEventListener('click', xOrRegViewIconOrWhiteSpaceClick, false);
+window.addEventListener('click', xOrRegViewIconOrWhiteSpaceClick, false);
 
 
 

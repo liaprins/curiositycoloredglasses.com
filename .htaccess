@@ -52,4 +52,5 @@ RewriteRule ^(.*) index.php [L]
 #
 # php_flag short_open_tag on
 
+# Prevent visitors from navigating to my "/content" directory with URL
 Options -Indexes

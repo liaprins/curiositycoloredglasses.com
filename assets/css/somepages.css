@@ -1,8 +1,14 @@
 /* TESTING P5!!!! */
 
 .fullscreentoggle {
-    width: 25px;    /* just for now */
-    float: right;    }
+    box-sizing: content-box;
+    height: 0.844rem;
+    width: 0.844rem;
+    padding: 0.422rem;
+    cursor: pointer;
+    float: right;
+    position: relative;
+    top: 0;    }
 
 .toregview {
     position: absolute;
@@ -26,8 +32,6 @@
     display: block;
     margin-left: auto;
     margin-right: auto;    }
-
-
 
 
 
