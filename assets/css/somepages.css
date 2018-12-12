@@ -10,10 +10,10 @@
     position: relative;
     top: 0;    }
 
-.toregview {
+#toregview {
     position: absolute;
-    bottom: 0.322rem;
-    right: 0.422rem;    }
+    top: 0;
+    right: 0.422rem    }
 
 /* can be added to #singlelightbox styling, ~ line 541, when ready to finalize and optimize styling for canvas lightbox*/
 .sketch-lightbox {
