@@ -5,6 +5,8 @@ function canvasFullScreen() {
 	var allCanvas = document.querySelectorAll('.p5Canvas');
 
 	for (i = 0; i < allCanvas.length; i++) {
+
+		var sketchHolder = allCanvas[i].parentNode;
 		
 		// append fullscreen button after canvas
 		var lightboxToggle = document.createElement('img');
@@ -14,17 +16,45 @@ function canvasFullScreen() {
 		lightboxToggle.setAttribute('class', 'fullscreentoggle tofullscreen yellowhover');
 		allCanvas[i].parentNode.appendChild(lightboxToggle);
 
-		// snugging up fullscreen toggle icon to bottom edge of canvas
-		lightboxToggle.style.top = ((allCanvas[i].parentNode.offsetHeight * -1) + allCanvas[i].offsetHeight) + "px";
 
 		// id if there's a figcaption; if so, move it to be after canvas
 		if (allCanvas[i].previousElementSibling) {
+		
 			var figCaption = allCanvas[i].previousElementSibling;
 			figCaption.setAttribute('data-canvas-figcaption', '');
 			figCaption.parentNode.removeChild(figCaption);
 			allCanvas[i].parentNode.appendChild(figCaption);
-		}
+
+			// sungging lightboxToggle up against bottom of canvas
+			if (window.innerWidth >= 1225) {
+				lightboxToggle.style.top = -10 + "px";
+			} else if (window.innerWidth >= 563) {
+				lightboxToggle.style.top = -9 + "px";
+			} else if (window.innerWidth >= 500) {
+				lightboxToggle.style.top = -8 + "px";
+			} else if (window.innerWidth >= 451) {
+				lightboxToggle.style.top = -7 + "px";
+			} else {
+				lightboxToggle.style.top = -6 + "px";
+			}
 		
+		} else { // no caption
+
+			// sungging lightboxToggle up against bottom of canvas
+			if (window.innerWidth >= 1225) {
+				lightboxToggle.style.top = -10 + "px";
+			} else if (window.innerWidth >= 563) {
+				lightboxToggle.style.top = -9 + "px";
+			} else if (window.innerWidth >= 500) {
+				lightboxToggle.style.top = -8 + "px";
+			} else if (window.innerWidth >= 451) {
+				lightboxToggle.style.top = -7 + "px";
+			} else {
+				lightboxToggle.style.top = -6 + "px";
+			}
+
+		}
+
 
 		////////////////////////////////////////////
 		// DOM order within #sketch-holder is now:
@@ -290,8 +320,18 @@ function canvasClose() {
 	// remove special lightbox-like styling from sketchHolder 
 	sketchHolder.classList.remove('sketch-lightbox'); // this must come last since this var, and therefore other UI vars, are defined by the presence of this class attached to sketchHolder!
 
-	// snugging up fullscreen toggle icon to bottom edge of canvas
-	lightboxToggle.style.top = ((sketchHolder.offsetHeight * -1) + canvas.offsetHeight) + "px"; // must come after sketchHolder is restyled to its reg view state (and therefore height)
+	// sungging lightboxToggle up against bottom of canvas
+	if (window.innerWidth >= 1225) {
+		lightboxToggle.style.top = -10 + "px";
+	} else if (window.innerWidth >= 563) {
+		lightboxToggle.style.top = -9 + "px";
+	} else if (window.innerWidth >= 500) {
+		lightboxToggle.style.top = -8 + "px";
+	} else if (window.innerWidth >= 451) {
+		lightboxToggle.style.top = -7 + "px";
+	} else {
+		lightboxToggle.style.top = -6 + "px";
+	}
 }
 
 

@@ -11,6 +11,8 @@ var ltMaxW = 1108;
 // aggregate horizontal (W = width), vertical (H = height) padding within lightbox, above 817px
 var ltWPad = 117;
 var ltHPad = 96;
+// maximum display px density to account for
+var maxPxDensity = 2;
 
 
 
@@ -30,9 +32,10 @@ function setup() {
     
     // ALWAYS; DON'T CHANGE! SET CANVAS ASPECT RATIO ABOVE WITH cHProp VARIABLE (~ line 6)
     var canvas = createCanvas((cWProp * prop), (cHProp * prop));
+    pixelDensity((ltMaxW * maxPxDensity) / cW);    // account for high res screens (maxPxDensity) + scaling from regular view's max width (cW) up to lightbox view's max width (ltMaxW)
+
     
     canvas.parent('sketch-holder');    // Move the canvas so it’s inside our <div id="sketch-holder">.
-    
     background(255, 0, 200);
 }
 
