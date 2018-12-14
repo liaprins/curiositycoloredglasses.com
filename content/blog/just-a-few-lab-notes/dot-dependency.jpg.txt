@@ -1,0 +1,5 @@
+Caption: Dots only exist on the map at the intersection of bird <em>and</em> bird spotter.
+
+----
+
+Alt: Venn diagram conveying the idea that data points in my visualization exist solely at the intersection of a bird and a bird spotter.

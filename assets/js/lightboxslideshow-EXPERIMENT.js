@@ -62,26 +62,6 @@ function lightbox(imgToShow) {
 
 
     // --------------------------------------------------------------------------------
-    // SETUP FULLSCREEN TOGGLE
-
-    // for single img only (not galleries)
-    if (lightboxImg.nextElementSibling.classList.contains('imgtofullscreen')) {
-
-        var singleImgToFullScreen = lightboxImg.nextElementSibling;
-        singleImgToFullScreen.classList.add('hide');
-
-        var singleImgToRegView = document.createElement('img');
-        singleImgToRegView.setAttribute('src', 'https://curiositycoloredglasses.com/assets/images/to-regular-view.svg');
-        singleImgToRegView.setAttribute('title', 'Close');
-        singleImgToRegView.setAttribute('alt', 'Close');
-        singleImgToRegView.setAttribute('class', 'imgfullscreentoggle imgtoregview yellowhover');
-        // singleImgToRegView.setAttribute('id', 'imgtoregview');
-        singleLightbox.appendChild(singleImgToRegView);
-        singleImgToRegView.style.top = 'calc(' + window.innerHeight + 'px - 2.11rem)';
-    }
-
-
-    // --------------------------------------------------------------------------------
     // ADD OTHER LIGHTBOX-NECESSARY FUNCTIONALITY
 
     // call NAMED FUNCTION
@@ -169,7 +149,7 @@ function populateLightboxDots(imgToShow) { // imgToShow is the image that should
         var lightboxArrowContainer = document.createElement('div');
         lightbox.appendChild(lightboxArrowContainer);
         lightboxArrowContainer.setAttribute('class', 'arrowcontainer lightboxarrowcontainer');
-        lightboxArrowContainer.innerHTML = '<img src="https://curiositycoloredglasses.com/assets/images/left-arrowhead.svg" alt="retreat" title="Previous image" class="galleryarrows lightboxarrows yellowhover" data-retreatlightboxarrow>' + '<img src="https://curiositycoloredglasses.com/assets/images/right-arrowhead.svg" alt="advance" title="Next image" class="galleryarrows lightboxarrows yellowhover" data-advancelightboxarrow>' + '<img class="imgfullscreentoggle imgtoregview yellowhover" title="View larger" id="galleryimgtoregview" alt="View larger" src="https://curiositycoloredglasses.com/assets/images/to-regular-view.svg">';
+        lightboxArrowContainer.innerHTML = '<img src="https://curiositycoloredglasses.com/assets/images/left-arrowhead.svg" alt="retreat" title="Previous image" class="galleryarrows lightboxarrows yellowhover" data-retreatlightboxarrow>' + '<img src="https://curiositycoloredglasses.com/assets/images/right-arrowhead.svg" alt="advance" title="Next image" class="galleryarrows lightboxarrows yellowhover" data-advancelightboxarrow>' + '<img class="imgfullscreentoggle imgtofullscreen yellowhover" title="View larger" alt="View larger" src="https://curiositycoloredglasses.com/assets/images/to-full-screen.svg">';
 
 
         ////////////////////////////////////////////
@@ -220,65 +200,6 @@ window.addEventListener('click', clickRegularViewFocusImg, false);
 
 // ******************************************************************************************************************************************
 // INVOKED VIA EVENT LISTENER IMMEDIATELY FOLLOWING THIS FUNCTION ---------------------------------------------------------------------------
-// invoked when fullscreen button is clicked within regular view
-function clickToFullScreenButton(e) {
-
-    var clickedThing = e.target;
-    
-    // if clicked element is a single image or the focus img in a gallery
-    if (clickedThing.classList.contains('imgtofullscreen')) {
-
-        var toFullScreen = clickedThing;
-
-        // if it is part of a single img (non-gallery)
-        if (toFullScreen.previousElementSibling.classList.contains('clickme')) {
-
-            // define imgToShow
-            var imgToShow = toFullScreen.previousElementSibling;
-
-            // call NAMED lightbox function
-            lightbox(imgToShow);
-
-            // call NAMED function to populate lightbox dots
-            populateLightboxDots(imgToShow);
-
-        } else { // it must be part of a gallery
-
-            var currentGallery = toFullScreen.parentNode.parentNode;
-            var galleryName = currentGallery.getAttribute('id');
-
-            for (i = 0; i < (currentGallery.children.length - 3); i++) {
-
-                if (currentGallery.children[i].getAttribute('id') == galleryName + '-current') {
-
-                    // define imgToShow
-                    var imgToShow = currentGallery.children[i].firstElementChild.firstElementChild;
-
-                    // call NAMED lightbox function
-                    lightbox(imgToShow);
-
-                    // call NAMED function to populate lightbox dots
-                    populateLightboxDots(imgToShow);
-
-                }
-
-            } // close for loop
-
-        }
-
-    } // close if ('clickme')
-} // close function
-
-// EVENT LISTENER ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-// responds to clicks on any post-content image within content zone (not edgelings), in regular view
-window.addEventListener('click', clickToFullScreenButton, false);
-
-
-
-
-
-// ******************************************************************************************************************************************
-// INVOKED VIA EVENT LISTENER IMMEDIATELY FOLLOWING THIS FUNCTION ---------------------------------------------------------------------------
 // toggles lightbox caption open/closed
 function toggleCaption(e) {
 
@@ -305,12 +226,12 @@ window.addEventListener('click', toggleCaption, false);
 
 // ******************************************************************************************************************************************
 // INVOKED VIA EVENT LISTENER IMMEDIATELY FOLLOWING THIS FUNCTION ---------------------------------------------------------------------------
-// close lightbox by (clicking "x") OR (white space) OR (fullscreen toggle button)
+// close lightbox by (clicking "x") OR (white space) OR (FULLSCREEN TOGGLE BUTTON: ADD TO THIS FUNCTION'S IF-STATEMENT BELOW!)
 function lightboxClose(e) {
 
     clickedThing = e.target;
     
-    if ((clickedThing.hasAttribute('data-lightbox-close')) || (clickedThing.hasAttribute('data-lightbox-x')) || (clickedThing.classList.contains('imgtoregview'))) {
+    if ((clickedThing.hasAttribute('data-lightbox-close')) || (clickedThing.hasAttribute('data-lightbox-x'))) {
 
         // tear down lightbox
         var lightbox = document.getElementById('singlelightbox');
@@ -489,6 +410,7 @@ function slideshow() {
             // position arrows
             arrowContainer.style.top = 'calc(' + (slide[0].firstElementChild.firstElementChild.offsetHeight) + 'px + 1.024rem)'; // !!! FULLSCREEN BUTTON MAY AFFECT THIS DOM NAVIGATION !!!
             arrowContainer.style.left = 0;
+            // arrowContainer.style.left = '-1.688rem';
 
         }   // close j
     }   // close i
@@ -539,12 +461,14 @@ function advanceOrRetreat(clickedSideSlide, dotsContainer, gallery, clickedIndex
         gallery.style.right = 'calc(85.714vw * ' + clickedIndex + ')'; // moves entire gallery
         placeholderBox.style.right = 'calc(-85.714vw * ' + clickedIndex + ')'; // keeps placeholderBox in current slide position + reflects its height: need to move it in the opposite direction and same increment that the slide moved, to offset it otherwise being attached to the first slide
         dotsContainer.style.left = 'calc(85.714vw * ' + clickedIndex + ')'; // keeps dotsContainer in current slide position: need to move it in the opposite direction and same increment that the slide moved, to offset it otherwise being attached to the front of the gallery
+        // arrowContainer.style.left = 'calc((85.714vw * ' + clickedIndex + ') - 1.688rem)'; // keeps arrows in current slide position: need to move it in the opposite direction and same increment that the slide moved, to offset it otherwise being attached to the front of the gallery
         arrowContainer.style.left = 'calc(85.714vw * ' + clickedIndex + ')'; // keeps arrows in current slide position: need to move it in the opposite direction and same increment that the slide moved, to offset it otherwise being attached to the front of the gallery
         arrowContainer.style.top = 'calc(' + clickedSideSlide.firstElementChild.offsetHeight + 'px + 1.024rem)'; // !!! FULLSCREEN BUTTON MAY AFFECT THIS DOM NAVIGATION !!!
     } else {
         gallery.style.right = 'calc(700px * ' + clickedIndex + ')'; // moves entire gallery
         placeholderBox.style.right = 'calc(-700px * ' + clickedIndex + ')'; // keeps placeholderBox in current slide position + reflects its height: need to move it in the opposite direction and same increment that the slide moved, to offset it otherwise being attached to the first slide
         dotsContainer.style.left = 'calc(700px * ' + clickedIndex + ')'; // keeps dotsContainer in current slide position: need to move it in the opposite direction and same increment that the slide moved, to offset it otherwise being attached to the front of the gallery
+        // arrowContainer.style.left = 'calc((700px * ' + clickedIndex + ') - 1.688rem)'; // keeps arrows in current slide position: need to move it in the opposite direction and same increment that the slide moved, to offset it otherwise being attached to the front of the gallery
         arrowContainer.style.left = 'calc(700px * ' + clickedIndex + ')'; // keeps arrows in current slide position: need to move it in the opposite direction and same increment that the slide moved, to offset it otherwise being attached to the front of the gallery
         arrowContainer.style.top = 'calc(' + clickedSideSlide.firstElementChild.offsetHeight + 'px + 1.024rem)'; // !!! FULLSCREEN BUTTON MAY AFFECT THIS DOM NAVIGATION !!!
     }
@@ -1164,7 +1088,8 @@ function lightboxArrows(e) {
 
 // EVENT LISTENER +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // responds to clicks on lightbox arrows
-window.addEventListener('click', lightboxArrows, false);
+window.addEventListener('click',
+    ugs, false);
 
 
 

@@ -1,0 +1,5 @@
+Caption: One function for one of the species, and at line 4210 there's still all the code in the other two tabs left.
+
+----
+
+Alt: Lines 4197 through 4210 of the primary code file, containing dependent if-statements and nested parentheses.

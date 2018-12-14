@@ -35,9 +35,6 @@ kirbytext::$tags['gallery'] = array(
             $html .= '<figure>';
 
                 $html .= '<img src="' . $slide->url() . '" alt="' . $slide->alt() . '" class="contentimage" id="galleryimage">';
-
-                // Added by Lia, to pull in fullscreen icon
-                // $html .= '<img class="imgfullscreentoggle imgtofullscreen yellowhover" title="View larger" alt="View larger" src="https://curiositycoloredglasses.com/assets/images/to-full-screen.svg">';
                 
                 
                 // Ensures that images without captions will not have the border (horizontal bar)

@@ -8,9 +8,9 @@ function canvasFullScreen() {
 		
 		// append fullscreen button after canvas
 		var lightboxToggle = document.createElement('img');
-		lightboxToggle.setAttribute('src', '../assets/images/to-full-screen.svg');
-		lightboxToggle.setAttribute('title', 'View in fullscreen mode');
-		lightboxToggle.setAttribute('alt', 'View in fullscreen mode');
+		lightboxToggle.setAttribute('src', 'https://curiositycoloredglasses.com/assets/images/to-full-screen.svg');
+		lightboxToggle.setAttribute('title', 'View larger');
+		lightboxToggle.setAttribute('alt', 'View larger');
 		lightboxToggle.setAttribute('class', 'fullscreentoggle tofullscreen yellowhover');
 		allCanvas[i].parentNode.appendChild(lightboxToggle);
 
@@ -25,6 +25,8 @@ function canvasFullScreen() {
 			allCanvas[i].parentNode.appendChild(figCaption);
 		}
 		
+
+		////////////////////////////////////////////
 		// DOM order within #sketch-holder is now:
 		// 1.) <canvas>
 		// 2.) .fullscreentoggle button
@@ -46,6 +48,7 @@ function canvasFullScreen() {
 } // close canvasFullScreen function
 
 window.addEventListener('load', canvasFullScreen, false);
+
 
 
 
@@ -147,17 +150,17 @@ function canvasToLightbox(e) {
 		// FLESH OUT ALL LIGHTBOX-RELATED BUTTONS except for chevron, which must be defined within if-statement at end (dependent upon existence of <figcaption> or not)
 
 		// swap from "to-full-screen" icon over to "to-reg-view" icon
-		lightboxToggle.setAttribute('src', '../assets/images/to-regular-view.svg');
+		lightboxToggle.setAttribute('src', 'https://curiositycoloredglasses.com/assets/images/to-regular-view.svg');
 		lightboxToggle.setAttribute('title', 'Close fullscreen mode');
 		lightboxToggle.setAttribute('alt', 'Close fullscreen mode');
 		lightboxToggle.setAttribute('id', 'toregview');
-		lightboxToggle.setAttribute('class', 'fullscreentoggle'); // starting without yellowhover to remove it as a class for one second (adding back in the next line) or it will keep the yellow hover from being tapped (in its previous image instantiation) on touchscreen devices
+		lightboxToggle.setAttribute('class', 'fullscreentoggle'); // starting without yellowhover to remove it as a class for a milli-second (adding back in on the next line) or it will keep the yellow hover from being tapped (in its previous image instantiation in regular view) on touchscreen devices
 		lightboxToggle.classList.add('yellowhover');
 		lightboxToggle.setAttribute('data-canvas-x', '');
 		lightboxToggle.style.top = 'calc(' + window.innerHeight + "px - 2.11rem)";
 
-		// add "x"; created as <img> node within var list
-		closeX.setAttribute('src', '../assets/images/x.svg');
+		// add "x"; already created as <img> node within var list
+		closeX.setAttribute('src', 'https://curiositycoloredglasses.com/assets/images/x.svg');
 		closeX.setAttribute('title', 'Close fullscreen mode');
 		closeX.setAttribute('alt', 'Close fullscreen mode');
 		closeX.setAttribute('id', 'lightboxclose');
@@ -177,7 +180,7 @@ function canvasToLightbox(e) {
 
 			// add caption-toggling chevron (functionality is added within function toggleCanvasCaption(e))
 			var chevron = document.createElement('img');
-			chevron.setAttribute('src', '../assets/images/up-arrowhead.svg');	
+			chevron.setAttribute('src', 'https://curiositycoloredglasses.com/assets/images/up-arrowhead.svg');	
 	        chevron.setAttribute('title', 'Toggle caption visibility');
         	chevron.setAttribute('alt', 'Toggle caption visibility');
     	    chevron.setAttribute('id', 'captiontoggle');
@@ -186,6 +189,8 @@ function canvasToLightbox(e) {
 	        sketchHolder.appendChild(chevron);
 		}
 
+
+		////////////////////////////////////////////
 		// DOM order within #sketch-holder is now:
 		// 1.) canvas
 		// 2.) lightboxToggle
@@ -244,8 +249,8 @@ function canvasClose() {
 	// --------------------------------------------------------------------------------
 	// ADD OTHER LIGHTBOX-REMOVAL FUNCTIONALITY
 
-	// RETURN TO ACTIVATE THESE LATER!
-    document.removeEventListener('keydown', canvasCloseEsc); // is turned on when lightbox is open, and only needed when it's open, so removing to save resources when not needed
+	// is turned on when lightbox is open, and only needed when it's open, so removing to save resources when not needed
+    document.removeEventListener('keydown', canvasCloseEsc); 
 
     // turning back ON event listener that opens lightbox, from regular view
 	window.addEventListener('click', canvasToLightbox);
@@ -273,9 +278,9 @@ function canvasClose() {
 	// RESTORE REG VIEW SETTINGS TO UI ELEMENTS
 
 	// change lightboxToggle back into "to-full-screen" icon + functionality
-	lightboxToggle.setAttribute('src', '../assets/images/to-full-screen.svg');
-	lightboxToggle.setAttribute('title', 'View in fullscreen mode');
-	lightboxToggle.setAttribute('alt', 'View in fullscreen mode');
+	lightboxToggle.setAttribute('src', 'https://curiositycoloredglasses.com/assets/images/to-full-screen.svg');
+	lightboxToggle.setAttribute('title', 'View larger');
+	lightboxToggle.setAttribute('alt', 'View larger');
 	lightboxToggle.setAttribute('class', 'fullscreentoggle tofullscreen yellowhover');
 	lightboxToggle.removeAttribute('id');
 
@@ -292,20 +297,16 @@ function canvasClose() {
 
 
 
+
 // *************************************************************************************************************
 // id either X or toRegView button
 function xOrRegViewIconOrWhiteSpaceClick(e) {
     clickedThing = e.target;
     // (white space surrounding sketch, within lightbox mode) || ("x" button or "to reg view" button)
     if ((clickedThing.hasAttribute('data-canvas-x')) || (clickedThing.classList.contains('sketch-lightbox'))) {
-    // if ((clickedThing.getAttribute('id') == 'lightboxclose') || (clickedThing.classList.contains('sketch-lightbox'))) {
 		canvasClose();
     }
 }
-
-// responds to a click on the lightbox "x" button
-// window.addEventListener('click', xOrRegViewIconOrWhiteSpaceClick, false);
-
 
 
 
@@ -318,6 +319,7 @@ var canvasCloseEsc = function(e) {
 	canvasClose();
   } 
 }
+
 
 
 

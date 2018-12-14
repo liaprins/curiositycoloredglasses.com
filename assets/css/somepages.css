@@ -1,41 +1,4 @@
-/* TESTING P5!!!! */
-
-.fullscreentoggle {
-    box-sizing: content-box;
-    height: 0.844rem;
-    width: 0.844rem;
-    padding: 0.422rem;
-    cursor: pointer;
-    float: right;
-    position: relative;
-    top: 0;    }
-
-#toregview {
-    position: absolute;
-    top: 0;
-    right: 0.422rem    }
-
-/* can be added to #singlelightbox styling, ~ line 541, when ready to finalize and optimize styling for canvas lightbox*/
-.sketch-lightbox {
-    /* opacity: 0.7; */    /* FOR TESTING ONLY */
-    cursor: pointer;
-    width: 100vw;
-    height: 100vh;
-    background-color: white;
-    position: fixed;
-    z-index: 100;
-    left: 0;
-    top: 0;
-    margin-top: 0;    }
-
-.canvaslightbox {
-    display: block;
     margin-left: auto;
-    margin-right: auto;    }
-
-
-
-
 
 /* "1 lh" = 2.048rem = the height of one lineheight's-worth of m-textface at 1.6 lineheight (although the base line height on <body> tag is actually set to 1.7; but I am keeping these rem measurements, because they look good) */
 
@@ -624,7 +587,47 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
 .lightboxarrowcontainer {
     position: absolute;
     bottom: 0.322rem;
-    right: 0.422rem;    }
+    /* right: 0.422rem; */
+    right: 2.11rem;    }
+
+.fullscreentoggle,
+.imgfullscreentoggle {
+    box-sizing: content-box;
+    height: 0.844rem;
+    width: 0.844rem;
+    padding: 0.422rem;
+    cursor: pointer;
+    float: right;
+    position: relative;
+    top: 0;    }
+
+#toregview,
+.imgtoregview {
+    position: absolute;
+    top: 0;
+    right: 0.422rem    }
+
+#galleryimgtoregview {
+    left: 3.376rem;
+}
+
+/* can be added to #singlelightbox styling, ~ line 541, when ready to finalize and optimize styling for canvas lightbox*/
+.sketch-lightbox {
+    /* opacity: 0.7; */    /* FOR TESTING ONLY */
+    cursor: pointer;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    margin-top: 0;    }
+
+.canvaslightbox {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;    }
 
 
 /* POST + LIBRARY PAGES -------------------------------------------------- */
