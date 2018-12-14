@@ -168,18 +168,13 @@ kirbytext::$tags['image'] = array(
 
         if(!$metacaption->empty()) {
           // $figure->append('<figcaption class="s-textface">' . $file->caption() . '</figcaption>');
-          $figure->append('<img class="imgfullscreentoggle imgtofullscreen yellowhover" title="View larger" alt="View larger" src="https://curiositycoloredglasses.com/assets/images/to-full-screen.svg">' . '<figcaption class="xs-textface">' . '<hr class="toprule">' . $file->caption() . '</figcaption>');
+          $figure->append('<figcaption class="xs-textface">' . '<hr class="toprule">' . $file->caption() . '</figcaption>');
       
 
         } elseif(($metacaption->empty()) and (!empty($caption))) {
           // $figure->append('<figcaption class="s-textface">' . html($caption) . '</figcaption>');
-          $figure->append('<img class="imgfullscreentoggle imgtofullscreen yellowhover" title="View larger" alt="View larger" src="https://curiositycoloredglasses.com/assets/images/to-full-screen.svg">' . '<figcaption class="xs-textface">' . '<hr class="toprule">' . html($caption) . '</figcaption>');
-        
-        // add fullscreen button even if no caption
-        } else {
-          $figure->append('<img class="imgfullscreentoggle imgtofullscreen yellowhover" title="View larger" alt="View larger" src="https://curiositycoloredglasses.com/assets/images/to-full-screen.svg">');
+          $figure->append('<figcaption class="xs-textface">' . '<hr class="toprule">' . html($caption) . '</figcaption>');
         }
-
       }  // CLOSE if(file) ADDED BY LIA Ensures that images without captions will not have the border (horizontal bar)
 
       return $figure;

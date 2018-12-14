@@ -39,7 +39,9 @@ Just testing out my little figcaption for my p5 test!
 
 When the sheets are written on with pressure, as with a ball-point pen; or impact like a typewriter or (vocab: dot matrix printer url: dot-matrix-printer), the pressure causes the micro-capsules to break and release their dye. Since the capsules are so small, the resulting print is very accurate.
 
-Carbonless copy paper was also available in a self-contained version that had both the ink and the clay on the same side of the paper.
+(gallery: user-education)
+
+Carbonless copy paper was also available in a self-contained version that had both the ink and the clay on the same side of the paper. The average carbonless copy paper contains a high concentration of Bisphenol A (BPA), an endocrine disruptor.
 
 (image: peacock-feathers.jpg)
 
@@ -68,9 +70,9 @@ Until the 1970s, when the use of polychlorinated biphenyls (PCBs) was banned due
 
 Exposure to certain types of carbonless copy paper or its components has resulted, under some conditions, in mild to moderate symptoms of skin irritation and irritation of the mucosal membranes of the eyes and upper respiratory tract. A 2000 review found no irritation or sensitization on contact with carbonless copy paper produced after 1987. In most cases, good industrial hygiene and work practices should be adequate to reduce or eliminate symptoms. These include adequate ventilation, humidity, and temperature controls; proper housekeeping; minimal hand-to-mouth and hand-to-eye contact; and periodic cleansing of hands.
 
-In a 1997 study, the University of Florida found that a poorly-ventilated office where large amounts of carbonless copy paper were used had significant levels of volatile organic compounds present in its air, whereas a well-ventilated office where little such paper was used did not. The study also found that there were higher rates of sick leave and illness complaints at the office using large amounts of carbonless copy paper. Another study, which was published in Environmental Health Perspectives, connected chronic occupational exposure to paper dust and carbonless copy paper with an increased risk of adult-onset asthma.
+(gallery: migration-sequence)
 
-The average carbonless copy paper contains a high concentration of Bisphenol A (BPA), an endocrine disruptor.
+In a 1997 study, the University of Florida found that a poorly-ventilated office where large amounts of carbonless copy paper were used had significant levels of volatile organic compounds present in its air, whereas a well-ventilated office where little such paper was used did not. The study also found that there were higher rates of sick leave and illness complaints at the office using large amounts of carbonless copy paper. Another study, which was published in Environmental Health Perspectives, connected chronic occupational exposure to paper dust and carbonless copy paper with an increased risk of adult-onset asthma.
 
 In 2001, three employees of a medical center in San Francisco filed a lawsuit against their employer, blaming exposure to carbonless copy paper and other chemicals for their inflammatory breast cancer.
 

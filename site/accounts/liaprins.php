@@ -8,9 +8,9 @@ language: en
 role: admin
 history:
   - blog/carbonless-copy-paper
-  - questionqueue/uv-light-and-nail-polish
-  - questionqueue/yellow-vision-and-cones
-  - questionqueue/decaffeination
-  - blog/myth-busting-mosquito-bites
+  - blog/carbonless-copy-paper/migration-sequence
+  - blog/just-a-few-lab-notes
+  - blog/just-a-few-lab-notes/sequence
+  - blog/just-a-few-lab-notes/migration-sampling
 firstname: Lia
 lastname: Prins
