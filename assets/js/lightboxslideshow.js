@@ -288,8 +288,12 @@ function toggleCaption(e) {
 
         var captionToggle = clickedThing;
         captionToggle.classList.toggle('turn180');
-        captionToggle.previousElementSibling.previousElementSibling.removeAttribute('style');
-        captionToggle.previousElementSibling.previousElementSibling.classList.toggle('hide');
+
+        var caption = document.querySelector('div>figcaption');
+        // captionToggle.previousElementSibling.previousElementSibling.removeAttribute('style');
+        caption.removeAttribute('style');
+        // captionToggle.previousElementSibling.previousElementSibling.classList.toggle('hide');
+        caption.classList.toggle('hide');
 
         // if I want dots to hide at the same time, add this line: captionToggle.nextElementSibling.classList.toggle('hide');
     }
