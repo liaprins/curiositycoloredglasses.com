@@ -23,7 +23,7 @@
     #navdetails[open] {
         width: calc(189.310px + 21.429vw);    }
     #navsearchinput {
-        width: 163px;    }
+        width: 160px;    }
 }
 
 @media (min-width: 295px) {

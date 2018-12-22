@@ -30,12 +30,16 @@ function canvasFullScreen() {
 				lightboxToggle.style.top = -10 + "px";
 			} else if (window.innerWidth >= 563) {
 				lightboxToggle.style.top = -9 + "px";
+				figCaption.style.marginTop = "calc(1.024rem - 9px)";
 			} else if (window.innerWidth >= 500) {
 				lightboxToggle.style.top = -8 + "px";
+				figCaption.style.marginTop = "calc(1.024rem - 8px)";
 			} else if (window.innerWidth >= 451) {
 				lightboxToggle.style.top = -7 + "px";
+				figCaption.style.marginTop = "calc(1.024rem - 7px)";
 			} else {
 				lightboxToggle.style.top = -6 + "px";
+				figCaption.style.marginTop = "calc(1.024rem - 6px)";
 			}
 		
 		} else { // no caption
@@ -184,8 +188,7 @@ function canvasToLightbox(e) {
 		lightboxToggle.setAttribute('title', 'Close fullscreen mode');
 		lightboxToggle.setAttribute('alt', 'Close fullscreen mode');
 		lightboxToggle.setAttribute('id', 'toregview');
-		lightboxToggle.setAttribute('class', 'fullscreentoggle'); // starting without yellowhover to remove it as a class for a milli-second (adding back in on the next line) or it will keep the yellow hover from being tapped (in its previous image instantiation in regular view) on touchscreen devices
-		lightboxToggle.classList.add('yellowhover');
+		lightboxToggle.setAttribute('class', 'fullscreentoggle yellowhover'); // starting without yellowhover to remove it as a class for a milli-second (adding back in on the next line) or it will keep the yellow hover from being tapped (in its previous image instantiation in regular view) on touchscreen devices
 		lightboxToggle.setAttribute('data-canvas-x', '');
 		lightboxToggle.style.top = 'calc(' + window.innerHeight + "px - 2.11rem)";
 

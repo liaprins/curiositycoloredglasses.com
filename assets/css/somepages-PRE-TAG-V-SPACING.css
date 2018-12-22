@@ -236,7 +236,6 @@ figcaption {
     hyphens: manual;    }    /* This applies to intro on the post page; it needs hyphenation but the auto-wrapping <p> tags surrounding text called from the panel is interfering with any potential hyphenation class being applied */
 
 #posttagshare {     /* Groups the tags and share icons into one div; the HTML id is located in blogarticle.php template, surrounding the tag and share snippets */
-    line-height: 1;
     margin: 0.512rem 0;    }    /* top + bottom: .25 lh */
 
 #posttaggroup {  
@@ -248,8 +247,7 @@ figcaption {
 
 #share {    /* Applies to all the share icons together as a whole */
     padding-left: 0.422rem;
-    float: right;
-    margin-top: -0.1rem;    }
+    float: right;    }
 
 .pullquotesquare {
     background-color: #e2e43a;
