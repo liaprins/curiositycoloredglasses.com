@@ -14,21 +14,21 @@ Tags: rocky,all,light,science
 
 ----
 
-Intro: One Moon “day” is approximately 29 1/2 Earth days. This rotation coincides with its orbit around the Earth so that we only see about 59% of the surface of the Moon from Earth. When the Moon first formed, its rotational speed and orbit were very different than they are now. Over time, the Earth’s gravitational field gradually slowed the Moon’s rotation until the orbital period and the rotational speed stabilized, making one side of the moon always face the Earth. How does this work? Simply put: tidal friction. For a slightly less simple explanation, we’ll have to put our science caps on. But stick with me; it’s fascinating. I promise.
+Intro: Way back in seventh grade science class, I wrote on the back of my spiral-bound notebook:  "Is it just a coincidence that the moon both rotates around us [Earth] at a certain speed and spins at a certain rate that ends up so it is *always* keeping the same face toward us?" My teacher had not been able to give me an answer. I could not fathom that the moon's behavior was just a coincidence, though. Now, nearly two decades later, I am going to find out once and for all!
 
 ----
 
 Text: 
+
+<div class="pullquotesquare">
+</div>
+(text: But why does the moon keep the same side toward Earth all the time?</br> In order to do so, it has to revolve exactly one time on its axis for every one time it circles Earth, which seems like a remarkable coincidence. class: l-textface pullquote bold)
 
 To start, think of how the Moon causes major tides on the Earth due to the Moon pulling at the Earth via its gravitational field. The Earth has this same effect on the Moon and, being 81.28 times more massive, the effect is much more powerful.
 
 So, as the mass of the Moon is attempting to go one way (in a straight line), the Earth is simultaneously pulling it another way (towards the Earth). Further, the effect of the Earth’s gravitational field is stronger on the side of the Moon closest to the Earth than on the far side (and the same with the Moon’s gravitational field’s effect on the different parts of the surface of the Earth). To peak around to the "dark" side of the moon, (link: library#future-spacecraft text: NASA) used the Hubble telescope. 
 
 This combination essentially stretches the Earth and Moon, creating tidal bulges on both celestial bodies. This occurs on both sides of each, with the bulge on the sides closest together from gravity and on the sides farthest away from (vocab: inertia url: inertia). In the latter case, the matter is less affected by the gravitational force with inertia dominating in this instance. To put it another way, the matter is trying to move in a straight line away from the Earth and the gravitational forces here aren’t as strongly able to overcome this, which creates the bulge on that side.
-
-<div class="pullquotesquare">
-</div>
-(text: But why does the moon keep the same side toward Earth all the time?</br> In order to do so, it has to revolve exactly one time on its axis for every one time it circles Earth, which seems like a remarkable coincidence. class: l-textface pullquote bold)
 
 So back before the Moon was tidally locked with the Earth, the bulge on the side of the Moon nearest to Earth ended up slightly leading thanks to (vocab: friction url: friction) and the fact that the Moon rotated faster than its orbital period around the Earth. So with this slightly leading bulge being offset from the line of gravitational pull between the Moon and Earth, this created a torque, which overtime resulted in the Moon’s rotation slowing until it became tidally locked with the Earth; thus, only one side faces the Earth. (Note: the bulge on the far side of the Moon had the opposite effect, but the bulge closest to the Earth dominated the interaction.)
 

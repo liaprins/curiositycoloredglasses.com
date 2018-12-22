@@ -18,7 +18,7 @@ Guestwriter: Hannity O'Lemon
 
 ----
 
-Tags: mountains,measurements,geology,Mars,volcanoes,science,supercalafragalisticexpialidocious,superdupertrooper
+Tags: mountains,measurements,geology,Mars,volcanoes,science,supercalafragalisticexpialidocious,superdupertroopertool
 
 ----
 
@@ -164,9 +164,23 @@ Nowadays, geographers use a mathematical expression to estimate sea level. They 
 
 Despite sophisticated (vocab: gravimeters url:gravimeter), complicated equations and fancy tools like global positioning systems, the elevation of Mount Everest is only precise to within a foot or two.
 
-16:9 ratio vvv
 <figure>
 <iframe src="//player.vimeo.com/video/89886877?title=0&byline=0&portrait=0&color=e2e43a" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen class="postvideo-16-9-ratio"></iframe>
+<figcaption class="s-textface">
+<hr class="toprule">
+FIGCAPTION TESTING! 
+*Italic text* </br>
+**Bold text** </br>
+(link: https://ed.ted.com/lessons/is-math-discovered-or-invented-jeff-dekofsky text: Link text) </br>
+<em>Em text</em> </br>
+<strong>Strong text</strong> </br>
+<a href="https://ed.ted.com/lessons/is-math-discovered-or-invented-jeff-dekofsky">href text</a>
+</figcaption>
+</figure>
+
+16:9 ratio vvv
+<figure>
+<iframe src="//player.vimeo.com/video/258092024?title=0&byline=0&portrait=0&color=e2e43a" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen class="postvideo-16-9-ratio"></iframe>
 <figcaption class="s-textface">
 <hr class="toprule">
 FIGCAPTION TESTING! 

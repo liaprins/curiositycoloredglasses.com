@@ -343,14 +343,18 @@ function qqPositionContents(binoc) {
                                             if (binocHCtr < (qqScreenWidth / 2)) {
                                                 content.classList.add('specialtopleft-n');
                                                 content.style.marginTop = "calc(" + ((contentTopLoc * -1) + (edgeMargin * 2)) + "px - 0.125rem)";
-                                                sharkFin.style.top = "calc(" + (edgeMargin * -2) + binocTopLoc + binocHeightHalf + "px - 0.125rem)";
-                                                borderCover.style.top = "calc(" + (edgeMargin * -2) + binocTopLoc + binocHeightHalf + "px - 0.25rem)";
+                                                // sharkFin.style.top = "calc(" + (edgeMargin * -2) + binocTopLoc + binocHeightHalf + "px - 0.125rem)";
+                                                sharkFin.style.top = "calc(" + binocTopLoc + "px - 0.125rem)";
+                                                // borderCover.style.top = "calc(" + (edgeMargin * -2) + binocTopLoc + binocHeightHalf + "px - 0.25rem)";
+                                                borderCover.style.top = "calc(" + binocTopLoc + "px - 0.125rem)";
                                             
                                             } else { // .specialtopright-n
                                                 content.classList.add('specialtopright-n');
-                                                content.style.marginTop = "calc(" + ((contentTopLoc * -1) + edgeMargin) + "px - 0.125rem)";
-                                                sharkFin.style.top = "calc(" + (edgeMargin * -2) + binocTopLoc + binocHeightHalf + "px - 0.125rem)";
-                                                borderCover.style.top = "calc(" + (edgeMargin * -2) + binocTopLoc + binocHeightHalf + "px - 0.25rem)";
+                                                content.style.marginTop = "calc(" + ((contentTopLoc * -1) + (edgeMargin * 2)) + "px - 0.125rem)";
+                                                // sharkFin.style.top = "calc(" + (edgeMargin * -2) + binocTopLoc + binocHeightHalf + "px - 0.125rem)";
+                                                sharkFin.style.top = "calc(" + binocTopLoc + "px - 0.125rem)";
+                                                // borderCover.style.top = "calc(" + (edgeMargin * -2) + binocTopLoc + binocHeightHalf + "px - 0.25rem)";
+                                                borderCover.style.top = "calc(" + binocTopLoc + "px - 0.125rem)";
                                             } // close else for .specialtopright-n
 
                                         } else { // green "NO" IN NOTEBOOK
