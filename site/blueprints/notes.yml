@@ -1,0 +1,28 @@
+title: Notes
+
+//page settings
+deletable: true
+options: 
+	preview: false
+	status: false
+	template: true
+	url: true
+icon: superscript
+
+//subpage settings
+pages: false
+
+//fields with their field types and options
+fields:
+  notenumber:
+    label: Note number
+    type: text
+    required: true
+    placeholder: Number to reference the note in order of sequential appearance in text
+    help: This is what will appear in the notes section at the bottom of the page and in the sidebar; it needs to match the "footnote:" attribute in the kirbytag
+  notecontent:
+  	label: Note content
+  	type: textarea
+  	help: Image must be exactly 350px wide
+
+

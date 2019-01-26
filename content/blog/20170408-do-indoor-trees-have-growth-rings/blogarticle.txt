@@ -36,16 +36,16 @@ The legacy of A. E. Douglass now resides in "a warren of dim rooms" tucked benea
 
 (image: european-panorama-of-austria.jpg)
 
-Known as (vocab: dendrochronology url: dendrochronology), the science of tree rings has matured and perhaps a thousand people worldwide are now reading the stories that reside in living trees or in ancient timbers found at archeological sites. While Douglass became famous for his studies of Pueblo ruins, he knew that an understanding of the effects of changing weather on trees was critical if the technique was to be at all viable, says Martin Munro, a researcher at the LTRR.
+Known as (vocab: dendrochronology url: dendrochronology), the science of tree rings has matured and perhaps a thousand people worldwide are now reading the stories that reside in living trees or in ancient timbers found at archeological sites. While Douglass became famous for his studies of Pueblo ruins(note:1 url:1), he knew that an understanding of the effects of changing weather on trees was critical if the technique was to be at all viable, says Martin Munro, a researcher at the LTRR(note:2 url:2).
 
 (gallery: tree-ring-prints)
 
 <div id="paneltest">
 </div>
 
-The dendrochronologist, says Munro, reads the distinctive patterns of wide and narrow rings which appear in pieces of wood from different trees. It is more than simply a matter of counting rings. Patterns from different trees must be matched to pinpoint the year a tree produced a particular ring, a process known as (vocab: crossdating url: crossdating).
+The dendrochronologist, says Munro, reads the distinctive patterns of wide and narrow rings which appear in pieces of wood from different trees. It is more than simply a matter of counting rings(note: 3 url: 3). Patterns from different trees must be matched to pinpoint the year a tree produced a particular ring, a process known as (vocab: crossdating url: crossdating).
 
-Year-to-year changes in the weather create the patterns, says Munro. Trees respond to temperature, rainfall and other environmental conditions by altering growth. In boom years, the tree adds extra tissue and the ring will be correspondingly thick. During lean years, growth is slowed and rings are thinner. While that sounds like a straightforward way to get at the issue of climate, Munro notes that it is not all that simple. Trees grow better or worse in response to a combination of weather conditions, depending on their physiology and where they are growing.
+Year-to-year changes in the weather create the patterns, says Munro. Trees respond to temperature, rainfall and other environmental conditions by altering growth. In boom years, the tree adds extra tissue and the ring will be correspondingly thick. During lean years, growth is slowed and rings are thinner. While that sounds like a straightforward way to get at the issue of climate, Munro notes that it is not all that simple(note: 3 url: 3). Trees grow better or worse in response to a combination of weather conditions, depending on their physiology and where they are growing.
 
 (image: log-jam.jpg)
 

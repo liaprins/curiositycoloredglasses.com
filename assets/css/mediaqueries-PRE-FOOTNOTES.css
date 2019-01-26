@@ -740,8 +740,7 @@
         width: 641.667px;    }
     .vocabillustration {
         max-width: 175px;    }
-    .inlinevocabcontainer,
-    .inlinenotecontainer {
+    .inlinevocabcontainer {
         position: absolute;
         left: 641.667px;
         padding-right: 58.333px;
@@ -774,9 +773,7 @@
         padding-top: 0.512rem;
         border-style: solid none none none; 
         border-color: black;    }
-    .sidebarnotenumber {    }
-    #inlinedefinition,
-    #inlinenotecontent {
+    #inlinedefinition {
         width: 175px;
         margin-top: 0.512rem !important;    }
     #rrsectionheader{

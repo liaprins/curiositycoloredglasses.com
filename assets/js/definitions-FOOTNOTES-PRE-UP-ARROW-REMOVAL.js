@@ -125,8 +125,8 @@ function vocabTest(e) {
     					// remove unneeded elements from original glossary HTML
     					// remove up arrow that in glossary links to inline vocab word
     					// var anchorUp = containerInner.lastElementChild.firstElementChild.firstElementChild;
-    					// var anchorUp = containerInner.lastElementChild.firstElementChild.lastElementChild;
-    					// anchorUp.parentNode.removeChild(anchorUp);
+    					var anchorUp = containerInner.lastElementChild.firstElementChild.lastElementChild;
+    					anchorUp.parentNode.removeChild(anchorUp);
 
     					// manipulate definition styles to differentiate from HTML pulled in from glossary
     					// x-button

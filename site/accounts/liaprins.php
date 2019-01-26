@@ -7,10 +7,10 @@ email: liajprins@gmail.com
 language: en
 role: admin
 history:
-  - blog/measure-of-a-mountain
   - blog/the-moons-dark-side
-  - blog/carbonless-copy-paper
-  - blog/carbonless-copy-paper/migration-sequence
-  - blog/just-a-few-lab-notes
+  - blog/the-moons-dark-side/2
+  - blog/the-moons-dark-side/1
+  - blog/do-indoor-trees-have-growth-rings/1
+  - blog/do-indoor-trees-have-growth-rings/2
 firstname: Lia
 lastname: Prins

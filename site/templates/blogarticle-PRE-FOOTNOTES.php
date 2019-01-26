@@ -117,12 +117,6 @@
 
                     <!-- Glossary of all vocab words; listed after the main text -->
                     <?php snippet('blogarticle-glossary') ?>
-
-                    <!-- Footnotes of all superscript numbers; listed after the main text -->
-                    <?php snippet('blogarticle-notes') ?>
-
-
-                    <div id="notestest">hi, ya!</div>
     
 
 

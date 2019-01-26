@@ -1,0 +1,13 @@
+Notenumber: 1
+
+----
+
+Notecontent: I am a moon-related footnote, short and stout. Here is my crater, here is my dust.
+
+----
+
+Noteillustration: 
+
+----
+
+Title: 1
