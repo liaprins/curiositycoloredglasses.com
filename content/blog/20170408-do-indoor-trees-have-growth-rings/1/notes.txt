@@ -1,0 +1,13 @@
+Notenumber: 1
+
+----
+
+Notecontent: <strong>Newton, Isaac. *Personal letter to Robert Hooke.* 1701.</strong>
+
+----
+
+Noteillustration: 
+
+----
+
+Title: 1

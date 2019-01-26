@@ -38,11 +38,11 @@
 
                                 <!-- <dt> = the name within the <dl> (parent) name-value pair  -->
                                 <dt class="glossaryvocabwordandaudio">
-                                    
-                                    <span id="<?php echo $vocabwordurl ?>" class="glossaryvocabword m-textface bold">
-                                        <!-- This is the vocab word that appears alongside the definition -->
-                                        <?php echo html($subpage->vocabword()) ?>
-                                    </span>&ensp;<span id="pronunciation" class="xs-textface">
+                                        <span id="<?php echo $vocabwordurl ?>" class="glossaryvocabword m-textface bold">
+                                            <!-- This is the vocab word that appears alongside the definition -->
+                                            <a href="<?php echo url($thisurl . '#-' . $vocabwordurl) ?>" title="View word in context" class="yellowhover">
+                                                <?php echo html($subpage->vocabword()) ?></a>
+                                        </span>&ensp;<span id="pronunciation" class="xs-textface">
                                     <!-- ^^^ Written pronunciation -->
                                     <!-- <span id="pronunciation" class="s-textface"> -->
                                         <?php echo html($subpage->pronunciation()) ?>
@@ -52,7 +52,7 @@
                                     <?php if(!$subpage->audiopronunciation()->empty()): ?>
                                         <a onclick="this.firstChild.play()" data-audiolink title="Hear audio pronunciation"><audio src="<?php echo $subpage->audiopronunciation()->audio()->toFile()->url() ?>" type="audio/mpeg"></audio><img src="<?php echo url('assets/images/audio.svg') ?>" alt="play audio pronunciation" class="audioicon yellowhover"></a>
                                     <?php endif ?>
-
+                                    
                                 </dt>
 
 
@@ -66,9 +66,11 @@
                                             <?php echo html($subpage->definition()) ?>
 
                                             <!-- Linking back to the word in context within the post content -->
+                                            <!--
                                             <a href="<?php echo url($thisurl . '#-' . $vocabwordurl) ?>" title="View word in context">
                                                 <img src= "<?php echo url('assets/images/up.svg') ?>" alt="Up to word in context" id="uparrow" class="yellowhover">
                                             </a>
+                                            -->
                                         </p>
                                     <?php endif ?>
 
@@ -94,10 +96,6 @@
     <?php endforeach ?>
 
 </section>
-
-
-<!-- FOR TESTING!!!!! -->
-<div id="glossarytestcontainer"></div>
 
 
 
