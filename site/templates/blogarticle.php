@@ -119,11 +119,7 @@
                     <?php snippet('blogarticle-glossary') ?>
 
                     <!-- Footnotes of all superscript numbers; listed after the main text -->
-                    <?php snippet('blogarticle-notes') ?>
-
-
-                    <div id="notestest">hi, ya!</div>
-    
+                    <?php snippet('blogarticle-notes') ?>    
 
 
                     <!-- * * * * * KEEPING THANK YOU, PROCESS SECTIONS IN HERE IN CASE I WANT TO ADD THEM LATER; THEY WON'T SHOW IN THE BROWSER * * * * * -->

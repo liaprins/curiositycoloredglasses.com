@@ -740,7 +740,8 @@
         width: 641.667px;    }
     .vocabillustration {
         max-width: 175px;    }
-    .inlinevocabcontainer {
+    .inlinevocabcontainer,
+    .inlinenotecontainer {
         position: absolute;
         left: 641.667px;
         padding-right: 58.333px;
@@ -773,9 +774,13 @@
         padding-top: 0.512rem;
         border-style: solid none none none; 
         border-color: black;    }
-    #inlinedefinition {
+    .sidebarnotenumber {    }
+    #inlinedefinition,
+    #inlinenotecontent {
         width: 175px;
         margin-top: 0.512rem !important;    }
+    #inlinenotecontent {
+        margin-bottom: 0 !important;    }
     #rrsectionheader{
         width: 641.667px;    }
     .resultarea {

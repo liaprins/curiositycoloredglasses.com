@@ -97,7 +97,7 @@
                 return $p->date('Y');    }    // year, e.g. "2016"
                 $posts = page('blog')->children(); ?>
     
-            <?php foreach ($posts->visible()->flip()->group('pageYear') as $year => $yearList): ?>
+            <?php foreach ($posts->flip()->group('pageYear') as $year => $yearList): ?>
     
                 <!-- year heading -->
                 <div id="archiveheadingarea">

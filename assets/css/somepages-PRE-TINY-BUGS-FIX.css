@@ -18,8 +18,7 @@
     right: 0.422rem    }
 
 #galleryimgtoregview {
-    left: 3.376rem;
-}
+    left: 3.376rem;    }
 
 /* can be added to #singlelightbox styling, ~ line 541, when ready to finalize and optimize styling for canvas lightbox*/
 .sketch-lightbox {
@@ -295,16 +294,26 @@ figcaption {
 .postpagesectionsummary::-webkit-details-marker {    /* Setting up the custom icons instead of default toggles */
     display: none;    }
 
-.vocabwordinline {    /* This applies to just the inline vocab word, via vocab.php in the site/tags folder */
+.vocabwordinline,
+.notenumberinline {    /* This applies to just the inline vocab word, via vocab.php in the site/tags folder */
     cursor: pointer;
     padding: 0.1em 0.2em;
     /* padding: 0.6em 0.3em 0.5em 0.5em; */    }    /* Based on line-height, but had to finesse optically, and pull in L + R a bit because it was too wide of a space between vocab word and other text inline */
+
+.notenumberinline,
+.notessectionnumber {
+    padding: 0.1em 0.2em 0 0.2em;    }
 
 #vocabwordanddefinition {
     margin: 1.024rem 0;    }
 
 .glossaryvocabwordandaudio {    /* This applies to the vocab word, where it shows up with its definition in the glossary (and optionally, the audio icon next to it) */
     line-height: 1.6;   }    /* Would be 1.6 to match look of stacked blog name in display font, but had to adjust optically */
+
+.glossaryvocabword > a {
+    border-bottom-style: none !important;
+    padding: 0.1em 0.2em;
+}
 
 #pronunciation {
     white-space: nowrap;    }
@@ -331,6 +340,27 @@ figcaption {
 .vocabillustration {
     margin-bottom: 0;
     max-width: 78.571vw;    }    /* 22/28 cols */
+
+#notessection {
+    margin-bottom: 2rem;
+}
+
+.notesdivclass {
+    line-height: 1.7;
+    overflow: auto;
+    margin-bottom: 1rem;
+}
+
+.notessectionnumber {
+
+}
+
+.notecontent {
+    margin-top: 0.65em;
+    display: inline-block !important;
+    width: 96%;
+    float: right;
+}
 
 #rrsectionheader {    /* This applies to Relevant Reading's section header, which isn't encapsulated in the .post <article> class (so that the results can have a wider area to accommodate their margins needing to be on both sides for spacing) */
     max-width: 1225px;    
