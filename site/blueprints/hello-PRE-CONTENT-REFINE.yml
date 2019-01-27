@@ -37,11 +37,7 @@ fields:
   aboutimage:
     label: Image
     type: image
-  intro:
-    label: Page intro
-    type: textarea
-    placeholder: Intro paragraph about myself and the purpose behind this blog
   text:
-    label: Page text
+    label: Page description
     type: textarea
-    placeholder: A bit more in-depth information and details
+    placeholder: Information about myself and the purpose behind this blog

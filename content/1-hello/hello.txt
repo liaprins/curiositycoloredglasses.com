@@ -6,7 +6,13 @@ Aboutimage: whale-binocular-view2.jpg
 
 ----
 
-Text: Welcome to my blog! I’m Lia, and this is where I examine the wonderfully perplex&shy;ing world we live in and report back my findings. I’m a self-proclaimed visual learner and a software designer by trade, but I love to write, so I decided to start Curiosity-Colored Glasses as a way to educate myself (and potentially others) through imagery and explanations. Happy looking and learning!  You can see my other projects (link: http://cargocollective.com/liaprins text: here).
+Text: 
+
+Each post investigates a question from an ever-evolving collection that I've been curating since seventh grade (see the (link: questionqueue text: Question Queue target: blank) for my shortlist). I designed and built this website from scratch so that I could freely explore and accommodate unique ways to encourage others’ understanding. As a visual learner and a data vis designer by trade, I employ imagery and interaction to explain the answers I uncover, but attempt to put an equal emphasis on the story behind each of my investigations.
+
+Deeper dives into my process, as well as tangential thoughts on code and creativity can be found on my “meta-blog,” (link: https://medium.com/@liajprins text: The Method to My Madness target: blank); for more of my design work, visit my (link: https://liaprins.com/ text: portfolio target: blank).
+
+If you have a quandary of your own that deserves in-depth analysis, I'd love to hear it! Send (link: https://twitter.com/CuriosityColor text: @CuriosityColor target: blank) a tweet or email me at [hello@curiositycoloredglasses.com](mailto:hello@curiositycoloredglasses.com).
 
 ----
 
@@ -15,3 +21,7 @@ Hellotitle: Hello
 ----
 
 Hellotext: Welcome to my blog! I’m Lia, and this is where I examine the wonderfully perplexing world we live in and report back my findings. I’m a self-proclaimed visual learner and a software designer by trade, but I love to write, so I decided to start Curiosity-Colored Glasses as a way to educate myself (and potentially others) through imagery and explanations. Happy looking and learning! You can see my other projects here.
+
+----
+
+Intro: Welcome to my blog! I’m Lia, and this is where I examine </br> the wonderfully perplex&shy;ing world we live in and report back my findings.

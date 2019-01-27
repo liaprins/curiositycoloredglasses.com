@@ -57,11 +57,7 @@
 
 				<!-- text for About page -->
 				<!-- FOR SOME REASON <p> ISN'T APPLYING THE CLASS, BUT <span> DOES -->
-				<span id="aboutintro" class="l-textface">
-					<?php echo $page->intro()->kirbytext() ?>
-				</span>
-
-				<span id="abouttext" class="m-textface">
+				<span id="abouttext" class="l-textface">
 					<?php echo $page->text()->kirbytext() ?>
 				</span>
 
