@@ -711,7 +711,7 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
     margin: 0 auto;    }  
 
 .archivesectionsummary {
-    margin: 0 auto;
+    margin: 0 auto 1.536rem auto !important;
     display: block;    }  
 
 .archivesectiontoggleoff {
