@@ -693,8 +693,11 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
     cursor: auto;
     margin-top: -0.512rem;    }    /* .25 lh | Counteracting <figure>'s top margin to move top of About image closer to About page name optically */
 
-#abouttext {
+#aboutintro {
     hyphens: manual;    }
+
+#abouttext p {
+    margin-top: 1.024rem;    }
 
 
 /* ARCHIVE PAGE -------------------------------------------------- */
