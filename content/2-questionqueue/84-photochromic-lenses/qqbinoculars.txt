@@ -1,0 +1,21 @@
+Question: How do light-sensitive lenses work?
+
+----
+
+Binocimageleft: photochromic-lenses-l.jpg
+
+----
+
+Binocimageright: photochromic-lenses-r.jpg
+
+----
+
+Explanation: How can something go from transparent to opaque just due to the brightness of the surrounding light?
+
+----
+
+Binocsize: small
+
+----
+
+Title: photochromic-lenses

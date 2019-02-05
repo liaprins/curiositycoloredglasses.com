@@ -59,7 +59,7 @@
 
         	<div id="qqparent">
 
-	        	<?php foreach ($page->children()->sortBy('sort', 'asc') as $qqfile): ?>
+	        	<?php foreach ($page->children()->visible()->sortBy('sort', 'asc') as $qqfile): ?>
 	    	    
 		        <?php $qqsubpage = $qqfile->name(); ?>
 

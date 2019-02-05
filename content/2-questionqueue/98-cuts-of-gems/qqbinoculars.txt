@@ -1,0 +1,21 @@
+Question: How are gemstones cut?
+
+----
+
+Binocimageleft: cuts-of-gems-l.jpg
+
+----
+
+Binocimageright: cuts-of-gems-r.jpg
+
+----
+
+Explanation: And how does the underlying crystalline structure of a raw gemstone affect the options for its outcome, if at all? Some precious stones in the rough look just like gravelly rocks; how was ugly duckling potential ever discovered in the first place?
+
+----
+
+Binocsize: large
+
+----
+
+Title: cuts-of-gems

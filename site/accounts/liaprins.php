@@ -7,10 +7,11 @@ email: liajprins@gmail.com
 language: en
 role: admin
 history:
-  - hello
-  - blog/the-moons-dark-side
-  - blog/the-moons-dark-side/2
-  - blog/the-moons-dark-side/1
-  - blog/do-indoor-trees-have-growth-rings/1
+  - >
+    questionqueue/stainless-steel-scent-removal
+  - questionqueue/sunset-rise-times
+  - questionqueue/sun-moon-size
+  - questionqueue/color-spectrum-wheel
+  - questionqueue/mule-hinny
 firstname: Lia
 lastname: Prins

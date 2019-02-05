@@ -126,11 +126,11 @@ Pinterestverticalimage:
 
 ----
 
-Postglassesleft: l-copyless-carbon-paper.jpg
+Postglassesleft: curiosity-test-l.jpg
 
 ----
 
-Postglassesright: r-copyless-carbon-paper.jpg
+Postglassesright: curiosity-test-r.jpg
 
 ----
 

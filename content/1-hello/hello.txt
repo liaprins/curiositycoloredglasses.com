@@ -2,13 +2,13 @@ Title: Hello
 
 ----
 
-Aboutimage: whale-binocular-view2.jpg
+Aboutimage: hello.jpg
 
 ----
 
 Text: 
 
-Each post investigates a question from an ever-evolving collection that I've been curating since seventh grade (see the (link: questionqueue text: Question Queue target: blank) for my shortlist). I designed and built this website from scratch so that I could freely explore and accommodate unique ways to encourage others’ understanding. As a visual learner and a data vis designer by trade, I employ imagery and interaction to explain the answers I uncover, but attempt to put an equal emphasis on the story behind each of my investigations.
+Each post investigates a question from an ever-evolving collection that I've been curating since seventh grade (see the (link: questionqueue text: Question Queue target: blank) for my shortlist). I designed and built this website from scratch so that I could freely explore and accommodate unique ways to encourage others’ understandings. As a visual learner and a data vis designer by trade, I employ imagery and interaction to explain the answers I uncover, but attempt to put an equal emphasis on the story behind each of my investigations.
 
 Deeper dives into my process, as well as tangential thoughts on code and creativity can be found on my “meta-blog,” (link: https://medium.com/@liajprins text: The Method to My Madness target: blank); for more of my design work, visit my (link: https://liaprins.com/ text: portfolio target: blank).
 
@@ -24,4 +24,4 @@ Hellotext: Welcome to my blog! I’m Lia, and this is where I examine the wonder
 
 ----
 
-Intro: Welcome to my blog! I’m Lia, and this is where I examine </br> the wonderfully perplex&shy;ing world we live in and report back my findings.
+Intro: Welcome to my blog! I’m Lia, and this is where I examine the&nbsp;wonderfully perplex&shy;ing world we live in and report back my findings.
