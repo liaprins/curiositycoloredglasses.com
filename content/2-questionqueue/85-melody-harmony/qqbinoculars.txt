@@ -1,0 +1,21 @@
+Question: What's the difference between melody and harmony?
+
+----
+
+Binocimageleft: melody-harmony-l.jpg
+
+----
+
+Binocimageright: melody-harmony-r.jpg
+
+----
+
+Explanation: Music is not my strong suit, but I want to learn more about it. What is the threshold or criteria for knowing what melody is versus what harmony is?
+
+----
+
+Binocsize: small
+
+----
+
+Title: melody-harmony

@@ -1,4 +1,4 @@
-Question: How were the original parameters that we know use to derive sine, cosine, and tangent established?
+Question: How were the original parameters that we now use to derive sine, cosine, and tangent established?
 
 ----
 
@@ -10,7 +10,7 @@ Binocimageright: r-sohcahtoa.jpg
 
 ----
 
-Explanation: I have wondered about this for decades. Geometry was my all-time favorite class I have maybe ever taken, despite that fact that Ms. Jacky sent me to detention on more than one occasion for asking too many questions, one of which was this. No one in the class even understood what I was asking, including Ms. Jacky, and the fact that my teacher and all my classmates were willing to swallow the SOHCAHTOA formula we'd been taught hook, line and sinker, without bothering to question its origins, incensed me. The real issue with this particularly opaque formula is that it relies on parameters that change depending upon the knowns of a triangle's sides' lengths and angles' measurements. We had to look up these parameters in the back of our math books, or rely on our scientific calculator's outputs—either way, without having an understanding of how *those* parameters were ultimately and originally determined. It is time I learn the truth and share it with all the many geometry students the world over who have been kept in the dark, or worse—relegated to detention simply for seeking knowledge!
+Explanation: I have wondered about this for decades. Geometry was my all-time favorite class I have maybe ever taken, despite that fact that Ms. Jacky sent me to detention on more than one occasion for asking too many questions, one of which was this. No one in the class even understood what I was asking, including Ms. Jacky, and the fact that my teacher and all my classmates were willing to swallow the SOHCAHTOA formula we'd been taught hook, line and sinker, without bothering to question its origins, incensed me. The real issue with this particularly opaque formula is that it relies on parameters that change depending upon the knowns of a triangle's sides' lengths and angles' measurements. We had to look up these parameters in the back of our math books, or rely on our scientific calculators' outputs—either way, without having an understanding of how *those* parameters were ultimately and originally determined. It is time I learn the truth and share it with all the many geometry students the world over who have been kept in the dark, or worse—relegated to detention simply for seeking knowledge!
 
 ----
 

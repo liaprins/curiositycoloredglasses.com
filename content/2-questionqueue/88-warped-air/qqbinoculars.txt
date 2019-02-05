@@ -1,0 +1,25 @@
+Question: How does hot air warp light?
+
+----
+
+Binocimageleft: warped-air-l.jpg
+
+----
+
+Binocimageright: warped-air-r.jpg
+
+----
+
+Explanation: 
+
+Why does everything directly behind the toaster look wiggly when its on and toastily toasting some toast? I don't think I have ever had a proper explanation about this. Yes, I know it is caused by heat, but why is wiggly vision the outcome? 
+
+Sidenote: the mirage effect is so ironically awful for anyone who's ever been lost in a desert, it's almost like the universe is playing jokes with this particular heat wave phenomena.
+
+----
+
+Binocsize: small
+
+----
+
+Title: warped-air

@@ -1,0 +1,21 @@
+Question: Blank-11
+
+----
+
+Binocimageleft: blank.jpg
+
+----
+
+Binocimageright: blank.jpg
+
+----
+
+Explanation: Blank.
+
+----
+
+Binocsize: small
+
+----
+
+Title: Blank-11

@@ -250,8 +250,8 @@ Process: Am I crazy,  or is it you?
 
 ----
 
-Postglassesleft: l-mountain.jpg
+Postglassesleft: curiosity-test-l.jpg
 
 ----
 
-Postglassesright: r-mountain.jpg
+Postglassesright: curiosity-test-r.jpg

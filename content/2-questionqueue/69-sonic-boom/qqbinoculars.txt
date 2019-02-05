@@ -1,0 +1,21 @@
+Question: Do you hear the sonic boom if you’re in the plane that made it happen?
+
+----
+
+Binocimageleft: sonic-boom-l.jpg
+
+----
+
+Binocimageright: sonic-boom-r.jpg
+
+----
+
+Explanation: Also, what is a sonic boom again?
+
+----
+
+Binocsize: medium
+
+----
+
+Title: sonic-boom
