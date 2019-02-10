@@ -1,0 +1,13 @@
+Heading: BBC Earth
+
+----
+
+About: These majestically crafted (link: https://www.bbcearth.com/ text: documentaries target: blank), nearly all narrated by David Attenborough, brought me wonder and newfound knowledge about everything from killer whale feeding frenzies to hummingbirds that duel with their beaks. They've played a crucial role in my determination to bring a better understanding of nature and biology to those outside the field.
+
+----
+
+Alt: An Arabian-centric view of our world.
+
+----
+
+Sort: 2

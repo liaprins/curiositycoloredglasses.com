@@ -105,12 +105,6 @@
                     </div>    <!-- Closing id="posttagshare" -->
 
 
-
-<!-- TESTING FULLSCREEN BUTTON FOR p5 canvas! -->
-<div id="fullscreentest">Hi!</div>
-
-
-
                     <!-- Text of post -->
                     <?php snippet('blogarticle-text') ?>
 

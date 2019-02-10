@@ -24,6 +24,7 @@ fields:
     type: text
     required: true
     placeholder: Question as headline and tooltip
+    help: No straight quotes allowed or they'll mess up the tooltip text; curly quotes are fine
   binocimageleft:
     label: Binoculars' left lens background image
     type:  image
