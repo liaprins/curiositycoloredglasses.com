@@ -1,0 +1,13 @@
+Heading: Kirby
+
+----
+
+About: (link: https://getkirby.com/ text: Kirby target: blank) is the infrastructure behind the content management system (CMS) I built into this very website. It's extremely flexible and well documented, which is why I chose it: I couldn't find any other CMS that would let me design and build-in all the little content-filled details I had in mind, while providing web performance equivalent to a static site. However, it was not an easy task at all; Kirby uses PHP, so I had to learn that coding language from scratch, the syntax of which leaves much to be desired. Kirby has a fantastically responsive forum though, and they helped me with nearly every challenge I encountered and could not solve through my own sheer will and external research.
+
+----
+
+Alt: A freehand version of the Kirby logo.
+
+----
+
+Sort: 21

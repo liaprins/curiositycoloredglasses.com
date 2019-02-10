@@ -187,6 +187,11 @@ sup {
     vertical-align: super;
     font-size: 0.75em;    }
 
+sub {
+    vertical-align: sub !important;
+    font-size: 0.75em !important;
+}
+
 sup a {
     border-bottom-style: none !important;    }
 

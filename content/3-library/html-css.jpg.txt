@@ -1,9 +1,0 @@
-Heading: HTML & CSS by Jon Duckett
-
-----
-
-About: Helped me to remember HTML and CSS.
-
-----
-
-Alt: alt

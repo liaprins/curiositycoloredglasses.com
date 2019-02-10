@@ -250,7 +250,8 @@ function qqBoxPosition() {
 
     // GETTING FOOTER TO STICK TO BOTTOM AT 1225+
     if (qqScreenWidth < 1225) {
-        var binocularsArea = (smallPairRowCountInt * ((26.52 / 2) - 0.57));    /* TESTING!!! ((325 / 2) - 7)) + 'px' is the distance from the top of one small binoculars to the top of one in the next row  */
+        // var binocularsArea = (smallPairRowCountInt * ((26.52 / 2) - 0.57));    /* TESTING!!! ((325 / 2) - 7)) + 'px' is the distance from the top of one small binoculars to the top of one in the next row  */
+        var binocularsArea = (smallPairRowCountInt * 12);    /* TESTING!!! ((325 / 2) - 7)) + 'px' is the distance from the top of one small binoculars to the top of one in the next row  */
         var background = document.getElementById('background');
         var qqPageTitleHeight = document.getElementById('qqpagetitle').offsetHeight;
         var qqPageTextHeight = document.getElementById('qqpagetext').firstElementChild.offsetHeight; 

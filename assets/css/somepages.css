@@ -756,6 +756,7 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
     display: none;    }
 
 .libraryicon {
+    cursor: pointer;
     box-sizing: content-box;
     /* float: left; */
     margin-top: 7.143vw;
@@ -874,6 +875,8 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
 
 :root {
     --resultglasseswidth: 28.571vw;    }
+.result:last-of-type {
+    margin-bottom: 2rem;    }
 
 .resultglassescontainer {
     width: var(--resultglasseswidth);
