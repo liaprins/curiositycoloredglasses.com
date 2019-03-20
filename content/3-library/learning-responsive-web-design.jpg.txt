@@ -1,4 +1,4 @@
-Heading: Responsive Web Design, by Clarissa Peterson
+Heading: Learning Responsive Web Design, by Clarissa Peterson
 
 ----
 
