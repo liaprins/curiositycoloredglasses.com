@@ -99,6 +99,7 @@ function draw() {
         fill(0, 0, 255);
     }
     ellipse(mouseX, mouseY, (10 * prop), (10 * prop));
+    
 }
 
 

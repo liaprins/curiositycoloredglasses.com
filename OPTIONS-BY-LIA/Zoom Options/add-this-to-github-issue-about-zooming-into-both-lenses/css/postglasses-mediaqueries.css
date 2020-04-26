@@ -1,0 +1,568 @@
+/* MIN 326px GROW ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+@media only screen and (min-width: 326px) {
+
+    #orange {
+        top: 167px;
+        left: calc(50vw - 5.39vw - 10.2vw);    }
+
+}    /* MIN 326px GROW ++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+
+
+
+/* MIN 442px GROW ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+@media only screen and (min-width: 442px) {
+
+    #orange {
+        top: 30vw;
+        left: calc(50vw - 5.39vw - 10.2vw);    }
+
+    #wind-chill {
+        top: 49vw;
+        left: calc(50vw - 8vw + 11.424vw);    }
+
+    #dutch-orange {
+        top: 46.5vw;
+        left: calc(50vw - 10.63vw - 33vw);    }
+
+}    /* MIN 442px GROW ++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+
+
+
+/* MIN 650px GROW ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+@media only screen and (min-width: 650px) {
+
+    #orange {
+        top: 198px;
+        left: calc(50vw - 5.39vw - 10.2vw);    }
+
+    #wind-chill {
+        top: 317px;
+        left: calc(50vw - 8vw + 11.424vw);    }
+
+    #dutch-orange {
+        top: 311px;
+        left: calc(50vw - 10.63vw - 33vw);    }
+
+}    /* MIN 650px GROW ++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+
+
+
+/* MIN 817px GROW ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+@media only screen and (min-width: 817px) {
+
+	/* NECESSARY FOR PARALLAX TO WORK PROPERLY */ 
+	#background { 
+    	/* background-color: orange; */
+	    opacity: 0.2;
+    	/* height: 158.55vw; */
+	    position: relative;
+    	z-index: -5;    }
+
+    .small-postglasses {
+        width: 10.77vw;    } 
+
+    .medium-postglasses {
+        width: 16vw;    } 
+
+    .big-postglasses {
+        width: 21.26vw;    }
+
+
+	/* SMALL GLASSES POSITIONS */
+
+	#beer-glasses {
+    	top: -12px;
+    	left: calc(50vw - 5.39vw + 9.058vw);	}
+
+	#dry-cleaning {
+    	top: 53px;
+    	left: calc(50vw - 5.39vw - 38.57vw);	}
+
+	#orange {
+    	top: 213px;
+    	left: calc(50vw - 5.39vw - 10.2vw);    }
+
+	#freezer-burn {  
+	    top: 1420px;
+    	left: calc(50vw - 5.39vw - 32vw);    }
+
+    /* OVER THE EDGE!!! */
+	#champagne {
+    	top: 451px;
+    	left: calc(50vw - 5.39vw - 59.57vw);    }
+
+	#malt {
+    	top: 529px;
+    	left: calc(50vw - 5.39vw - 26.27vw);    }
+
+    /* OVER THE EDGE!!! */
+	#holiday-dates {
+    	top: 665px;
+    	left: calc(50vw - 5.39vw - 59vw);    }
+
+	#water-towers {
+    	top: 732px;
+    	left: calc(50vw - 5.39vw + 38.27vw);    }
+
+	#straw {
+    	top: 795px;
+    	left: calc(50vw - 5.39vw + 8vw);    }
+
+	#uv-nail-polish-dryers {
+    	top: 884px;
+    	left: calc(50vw - 5.39vw + 35.17vw);    }
+
+	#staleness {
+    	top: 911px;
+    	left: calc(50vw - 5.39vw + 1.96vw);     }
+
+	#spicy-snot {
+    	top: 914px;
+    	left: calc(50vw - 5.39vw - 32.4vw);	}
+
+    /* OVER THE EDGE!!! */
+	#baby-animals {
+    	top: 1027px;
+    	left: calc(50vw - 5.39vw - 53.04vw);    }
+
+	#airports {
+    	top: 1165px;
+    	left: calc(50vw - 5.39vw + 11.51vw);    }
+
+    /* OVER THE EDGE!!! */
+	#eye-black {
+    	top: 1244px;
+    	left: calc(50vw - 5.39vw - 56.47vw);	}
+
+    /* OVER THE EDGE!!! */
+	#lift {
+    	top: 1340px;
+    	left: calc(50vw - 5.39vw + 57.12vw);	}
+
+
+	/* MEDIUM GLASSES POSITIONS */
+
+	#camera-focus {
+    	top: -30px;
+    	left: calc(50vw - 8vw - 22.032vw);	}
+
+	#salamander {
+    	top: 72px;
+    	left: calc(50vw - 8vw + 55vw);	}
+
+	#wind-chill {
+    	top: 340px;
+    	left: calc(50vw - 8vw + 11.424vw);    }
+
+	#pollination {
+    	top: 298px;
+    	left: calc(50vw - 8vw - 55.73vw);	}
+
+	#macaroni {
+    	top: 305px;
+    	left: calc(50vw - 8vw + 32.48vw);	}
+
+	#banana {
+	    top: 805px;
+    	left: calc(50vw - 8vw - 12.24vw);	}
+
+	#bug-breath {
+    	top: 549px;
+    	left: calc(50vw - 8vw + 61.12vw);	}
+
+	#water-taste {
+    	top: 705px;
+    	left: calc(50vw - 8vw + 16.4vw);	}
+
+	#mountain {
+    	top: 751px;
+    	left: calc(50vw - 8vw - 30.93vw);	}
+
+	#twenty-twenty {
+    	top: 890px;
+    	left: calc(50vw - 8vw - 46.92vw);	}
+
+	#coconut {
+    	top: 971px;
+    	left: calc(50vw - 8vw + 21.46vw);    }
+
+	#zipcodes {
+    	top: 1027px;
+    	left: calc(50vw - 8vw - 18.2vw); 	}
+
+	#fluorescence {
+    	top: 1130px;
+    	left: calc(50vw - 8vw - 2.28vw);    }
+
+	#pockets {
+    	top: 1146px;
+    	left: calc(50vw - 8vw + 50.84vw);	}
+
+	#tone-deaf {
+    	top: 1259px;
+    	left: calc(50vw - 8vw + 46.27vw);	}
+
+	#bowling-alleys {
+    	top: 1334px;
+    	left: calc(50vw - 8vw - 14.04vw);    }
+
+	#candle-smoke {
+    	top: 1434px;
+    	left: calc(50vw - 8vw + 17.63vw);	}
+
+	#night-vision {
+    	top: 1494px;
+    	left: calc(50vw - 8vw - 54.1vw);    }
+
+
+	/* BIG GLASSES POSITIONS */
+
+	#sohcahtoa {
+    	top: -26px;
+    	left: calc(50vw - 10.63vw - 56.3vw);	}
+
+	#decaffeination {
+    	top: -3px;
+    	left: calc(50vw - 10.63vw + 30.6vw);	}
+
+	#dutch-orange {
+	    top: 325px;
+    	left: calc(50vw - 10.63vw - 30.6vw);	}
+
+	#helium {
+    	top: 338px;
+    	/* left: calc(50vw - 21.26vw + 51.49vw); */
+    	left: calc(50vw - 10.63vw + 51.49vw);	}
+
+	#moths {
+    	top: 564px;
+    	left: calc(50vw - 10.63vw - 42.84vw);	}
+
+	#tree-rings {
+    	top: 568px;
+    	left: calc(50vw - 10.63vw + 37.13vw);	}
+
+	#street-names {
+    	top: 655px;
+    	left: calc(50vw - 10.63vw - 3.92vw);	}
+
+	#pumpkins {
+    	top: 853px;
+	    left: calc(50vw - 10.63vw + 55.08vw);	}
+
+	#yellow-cones {
+    	top: 1256px;
+	    left: calc(50vw - 10.63vw + 27.66vw);	}
+
+	#copyless-carbon-paper {
+    	top: 1306px;
+    	left: calc(50vw - 10.63vw - 36.23vw);	}
+
+	#yeast {
+    	top: 1630px;
+    	left: calc(50vw - 10.63vw - 9.87vw);	}
+
+	#wheels-on-film {
+    	top: 1606px;
+    	left: calc(50vw - 10.63vw + 43.08vw);	}
+
+}    /* MIN 817px GROW ++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+
+
+
+/* MIN 1017px GROW ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+@media only screen and (min-width: 1017px) {
+
+    #orange {
+        top: 158px;
+        left: calc(50vw - 5.39vw - 10.2vw);    }
+
+    #wind-chill {
+        top: 277px;
+        left: calc(50vw - 8vw + 11.424vw);    }
+
+    #dutch-orange {
+        top: 257px;
+        left: calc(50vw - 10.63vw - 33vw);    }
+
+}    /* MIN 1017px GROW ++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+
+
+
+/* MIN 1225px STATIC ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+@media only screen and (min-width: 1225px) {
+
+	/* NECESSARY FOR PARALLAX TO WORK PROPERLY */ 
+	#background { 
+    	/* background-color: orange; */
+	    opacity: 0.2;
+    	height: 1943px;
+	    position: relative;
+    	z-index: -5;    }
+
+    .small-postglasses {
+        width: 132px;    }
+
+    .medium-postglasses {
+        width: 196px;    } 
+
+    .big-postglasses {
+        width: 260px;    }
+
+	/* SMALL GLASSES POSITIONS */
+
+	#beer-glasses {
+    	top: -12px;
+    	left: calc(50vw - 66px + 111px);	}
+
+	#dry-cleaning {
+    	top: 53px;
+    	left: calc(50vw - 66px - 475px);	}
+
+	#orange {
+    	top: 155px;
+    	left: calc(50vw - 66px - 125px);    }
+
+	#freezer-burn {  
+	    top: 1420px;
+    	left: calc(50vw - 66px - 392px);    }
+
+	#champagne {
+    	top: 451px;
+    	left: calc(50vw - 66px - 730px);    }
+
+	#malt {
+    	top: 529px;
+    	left: calc(50vw - 66px - 322px);    }
+
+	#holiday-dates {
+    	top: 665px;
+    	left: calc(50vw - 66px - 723px);    }
+
+	#water-towers {
+    	top: 732px;
+    	left: calc(50vw - 66px + 469px);    }
+
+	#straw {
+    	top: 795px;
+    	left: calc(50vw - 66px + 98px);    }
+
+	#uv-nail-polish-dryers {
+    	top: 884px;
+    	left: calc(50vw - 66px + 431px);    }
+
+	#staleness {
+    	top: 911px;
+    	left: calc(50vw - 66px + 24px);     }
+
+	#spicy-snot {
+    	top: 914px;
+    	left: calc(50vw - 66px - 397px);	}
+
+	#baby-animals {
+    	top: 1027px;
+    	left: calc(50vw - 66px - 650px);    }
+
+	#airports {
+    	top: 1165px;
+    	left: calc(50vw - 66px + 141px);    }
+
+	#eye-black {
+    	top: 1244px;
+    	left: calc(50vw - 66px - 692px);	}
+
+	#lift {
+    	top: 1340px;
+    	left: calc(50vw - 66px + 700px);	}
+
+
+	/* MEDIUM GLASSES POSITIONS */
+
+	#camera-focus {
+    	top: -30px;
+    	left: calc(50vw - 98px - 270px);	}
+
+	#salamander {
+    	top: 72px;
+    	left: calc(50vw - 98px + 674px);	}
+
+	#wind-chill {
+    	top: 275px;
+    	left: calc(50vw - 98px + 140px);    }
+
+	#pollination {
+    	top: 298px;
+    	left: calc(50vw - 98px - 683px);	}
+
+	#macaroni {
+    	top: 305px;
+    	left: calc(50vw - 98px + 398px);	}
+
+	#banana {
+	    top: 805px;
+    	left: calc(50vw - 98px - 150px);	}
+
+	#bug-breath {
+    	top: 549px;
+    	left: calc(50vw - 98px + 749px);	}
+
+	#water-taste {
+    	top: 705px;
+    	left: calc(50vw - 98px + 201px);	}
+
+	#mountain {
+    	top: 751px;
+    	left: calc(50vw - 98px - 379px);	}
+
+	#twenty-twenty {
+    	top: 890px;
+    	left: calc(50vw - 98px - 575px);	}
+
+	#coconut {
+    	top: 971px;
+    	left: calc(50vw - 98px + 263px);    }
+
+	#zipcodes {
+    	top: 1027px;
+    	left: calc(50vw - 98px - 223px); 	}
+
+	#fluorescence {
+    	top: 1130px;
+    	left: calc(50vw - 98px - 28px);    }
+
+	#pockets {
+    	top: 1146px;
+    	left: calc(50vw - 98px + 623px);	}
+
+	#tone-deaf {
+    	top: 1259px;
+    	left: calc(50vw - 98px + 567px);	}
+
+	#bowling-alleys {
+    	top: 1334px;
+    	left: calc(50vw - 98px - 172px);    }
+
+	#candle-smoke {
+    	top: 1434px;
+    	left: calc(50vw - 98px + 216px);	}
+
+	#night-vision {
+    	top: 1494px;
+    	left: calc(50vw - 98px - 663px);    }
+
+
+	/* BIG GLASSES POSITIONS */
+
+	#sohcahtoa {
+    	top: -26px;
+    	left: calc(50vw - 130px - 690px);	}
+
+	#decaffeination {
+    	top: -3px;
+    	left: calc(50vw - 130px + 375px);	}
+
+	#dutch-orange {
+	    top: 272px;
+    	left: calc(50vw - 130px - 375px);	}
+
+	#helium {
+    	top: 338px;
+    	left: calc(50vw - 130px + 631px);	}
+
+	#moths {
+    	top: 564px;
+    	left: calc(50vw - 130px - 525px);	}
+
+	#tree-rings {
+    	top: 568px;
+    	left: calc(50vw - 130px + 455px);	}
+
+	#street-names {
+    	top: 655px;
+    	left: calc(50vw - 130px - 48px);	}
+
+	#pumpkins {
+    	top: 853px;
+	    left: calc(50vw - 130px + 675px);	}
+
+	#yellow-cones {
+    	top: 1256px;
+	    left: calc(50vw - 130px + 339px);	}
+
+	#copyless-carbon-paper {
+    	top: 1306px;
+    	left: calc(50vw - 130px - 444px);	}
+
+	#yeast {
+    	top: 1630px;
+    	left: calc(50vw - 130px - 121px);	}
+
+	#wheels-on-film {
+    	top: 1606px;
+    	left: calc(50vw - 130px + 528px);	}
+
+}    /* MIN 1225px STATIC ++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+
+
+/* 1292px ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+@media only screen and (min-width: 1292px) {
+
+	#wind-chill {
+    	top: 235px;    }
+
+}    /* 1292px ++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
