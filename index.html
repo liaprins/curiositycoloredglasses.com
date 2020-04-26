@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8" />
+
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+  <!-- Favicon -->
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#e2e43a">
+	<meta name="msapplication-TileColor" content="#e2e43a">
+	<meta name="theme-color" content="#e2e43a">
+
+
+  <!-- This is what shows when you bookmark this page, and what's in the browser tab (I think) -->
+  <title>
+    Curiosity-Colored Glasses
+  </title>
+
+
+<!-- This file has contents that is common, or dynamically called in a common way, for all pages. -->
+
+<!-- The opengraph tags are how Facebook and Pinterest know what to name the parts within its own little link-creator. -->
+<!-- The actual Facebook and Pinterest share buttons themselves are inside the blogarticle-5a-share.php file. -->
+
+
+<!-- The url of the current page -->
+<meta property="og:url"                content=">" /> 
+
+<!-- This one was found on Pinterest, may not be supported by Facebook -->
+<meta property="og:site_name"          content="Curiosity-Colored Glasses" />
+
+<!-- This is the page's title/name -->
+<meta property="og:title"              content="Curiosity-Colored Glasses" />
+
+
+<!-- ********************************************* -->
+
+<!-- (I think) these tags are how search engines like Google know what to put with the provided link, and how to find it when people search. -->
+
+<meta name="description"        	   content="Looking at life's little mysteries through the same lens that killed the cat, and living to tell the tale." />
+
+<!-- comma,separated,without,spaces -->
+<meta name="keywords" 				   content="curiosity,science,learning,facts,trivia,storytelling,narrative,illustration,design"/>
+
+<!-- ********************************************* -->
+
+<!-- Should test that this is directing properly -->
+<meta property="og:description"        content="Looking at life's little mysteries through the same lens that killed the cat, and living to tell the tale."/>
+
+<!-- For now using a single image stored in assets/images to represent all pages -->
+<meta property="og:image"              content="images/ccg.jpg" />
+
+<meta property="og:type"               content="website" />
+
+
+ 	<!-- Calls the stylesheet that zeroes out the default browser renderings -->
+ 	<link rel="stylesheet" href="css/reset.css">
+
+ 	<!-- Call the stylesheet that hold the designs -->
+ 	<link rel="stylesheet" href="css/fonts.css">
+ 	<link rel="stylesheet" href="css/styles.css">
+ 	<link rel="stylesheet" href="css/postglasses-mediaqueries.css">
+ 	<link rel="stylesheet" href="css/mediaqueries.css">
+
+</head>
+
+<body>
+
+	<script src="js/parallax.js"></script>
+
+	<!-- holds the loading animation -->
+	<!--
+	<div id="loadbg"></div>
+	-->
+
+<!-- *************************************** ^^^^^ head-close.php snippet ^^^^^ LEAVE ALONE (except maybe favicon links) ^^^^^ *************************************** -->
+
+
+	<h1 id="blogname" class="blackbg">	
+		Curiosity-Colored Glasses
+	</h1>
+
+
+	<p id="tagline" class="l-textface bold">
+		<!-- Making sure tagline breaks where I want it to (combining with mediaqueries.css so it breaks WHEN I want it to) -->
+		<span class="taglinehalf">Looking at life's little mysteries through the same lens that killed the cat, </span>
+		<span class="taglinehalf">and living to tell the tale.</span>
+	</p>
+
+	<div id="comingsoonbox" class="blackbg">
+
+		<p id="comingsoon">Coming soon!</p>
+		<p class="untilthen s-textface bold">Until then, keep an eye on <a href="https://www.instagram.com/curiositycoloredglasses/" target="_blank" class="underline">@curiositycoloredglasses</a> on Instagram, follow <a href="https://twitter.com/CuriosityColor" target="_blank" class="underline">@curiositycolor</a> on Twitter, and sign up with your email below to be the first to know when Curiosity-Colored Glasses says “Hello, World!"</p>
+		<p class="untilthen s-textface bold">You can also read my <a href="https://liaprins.com/curiosity-colored-glasses" target="_blank" class="underline">portfolio post</a> explaining more about this project and detailing my progress so far.</p>
+		<p class="untilthen xs-textface bold">Expected launch is early spring of 2019.</p>
+
+	</div>  <!-- closing #comingsoon -->
+
+		<!-- PARALLAX JAVASCRIPT TEST!!! -->
+		<!--
+		<div id="parallax-small"></div>
+		-->
+			<!-- beer-glasses -->
+			<img src="images/mask.svg" style="background-image: url(images/small-glasses/beer-glasses.jpg)" id="beer-glasses" class="small-postglasses postglasses" title="Why are different types of beer served in different types of glasses?">
+
+			<!-- dry-cleaning -->
+			<img src="images/mask.svg" style="background-image: url(images/small-glasses/dry-cleaning.jpg)" id="dry-cleaning" class="small-postglasses postglasses" title="Is dry cleaning really dry? How does it work?">
+
+			<!-- orange -->
+			<img src="images/mask.svg" style="background-image: url(images/small-glasses/orange.jpg)" id="orange" class="small-postglasses postglasses" title="Which came first: orange the color or orange the fruit?">
+
+			<!-- freezer-burn -->
+			<img src="images/mask.svg" style="background-image: url(images/small-glasses/freezer-burn.jpg)" id="freezer-burn" class="small-postglasses postglasses" title="What happens to cause freezer burn?">
+
+			<!-- champagne -->
+			<img src="images/mask.svg" style="background-image: url(images/small-glasses/champagne.jpg)" id="champagne" class="small-postglasses postglasses" title="How do so many subsequent bubbles all spawn from the same microscopic part at the bottom of a filled champagne glass?">
+
+			<!-- malt -->
+			<img src="images/mask.svg" style="background-image: url(images/small-glasses/malt.jpg)" id="malt" class="small-postglasses postglasses" title="What is malt and where does it come from?">
+
+			<!-- holiday-dates -->
+			<img src="images/mask.svg" style="background-image: url(images/small-glasses/holiday-dates.jpg)" id="holiday-dates" class="small-postglasses postglasses" title="How are the dates for Easter, Passover, and other seemingly arbitrary holiday dates determined?">
+
+			<!-- water-towers -->
+			<img src="images/mask.svg" style="background-image: url(images/small-glasses/water-towers.jpg)" id="water-towers" class="small-postglasses postglasses" title="What’s the point of a water tower? Isn’t the energy cost to pump the water up to it the same or greater than the potential energy it gains?">
+
+			<!-- straw -->
+			<img src="images/mask.svg" style="background-image: url(images/small-glasses/straw.jpg)" id="straw" class="small-postglasses postglasses" title="Why do liquids seem hotter when sipped through a straw?">
+
+			<!-- uv-nail-polish-dryers -->
+			<img src="images/mask.svg" style="background-image: url(images/small-glasses/uv-nail-polish-dryers.jpg)" id="uv-nail-polish-dryers" class="small-postglasses postglasses" title="Does UV light actually make nail polish dry faster? If so, how?">
+
+			<!-- staleness -->
+			<img src="images/mask.svg" style="background-image: url(images/small-glasses/staleness.jpg)" id="staleness" class="small-postglasses postglasses" title="What happens, biochemically, to make chips become bendable when they go stale?">
+
+			<!-- spicy-snot -->
+			<img src="images/mask.svg" style="background-image: url(images/small-glasses/spicy-snot.jpg)" id="spicy-snot" class="small-postglasses postglasses" title="Why does eating hot things make your nose run?">
+
+			<!-- baby-animals -->
+			<img src="images/mask.svg" style="background-image: url(images/small-glasses/baby-animals.jpg)" id="baby-animals" class="small-postglasses postglasses" title="Why are the words used to describe baby animals so different from the adult animals' names?">
+
+			<!-- airports -->
+			<img src="images/mask.svg" style="background-image: url(images/small-glasses/airports.jpg)" id="airports" class="small-postglasses postglasses" title="How are airports funded?">
+
+			<!-- eye-black -->
+			<img src="images/mask.svg" style="background-image: url(images/small-glasses/eye-black.jpg)" id="eye-black" class="small-postglasses postglasses" title="Do the smears of black that athletes put under their eyes on sunny days have any effect? How?">
+
+			<!-- lift -->
+			<img src="images/mask.svg" style="background-image: url(images/small-glasses/lift.jpg)" id="lift" class="small-postglasses postglasses" title="Is equal transit time real: does air really flow over the top of a wing faster, thereby generating lift? If so, what makes it do this?">
+
+		<!--		
+		<div id="parallax-medium"></div>
+		-->
+
+			<!-- camera-focus -->
+			<img src="images/mask.svg" style="background-image: url(images/medium-glasses/camera-focus.jpg)" id="camera-focus" class="medium-postglasses postglasses" title="How do cameras “know” how far away something is in order to focus on it?">
+
+			<!-- salamander -->
+			<img src="images/mask.svg" style="background-image: url(images/medium-glasses/salamander.jpg)" id="salamander" class="medium-postglasses postglasses" title="Do salamanders and other amphibians start out as tadpoles too?">
+
+			<!-- wind-chill -->
+			<img src="images/mask.svg" style="background-image: url(images/medium-glasses/wind-chill.jpg)" id="wind-chill" class="medium-postglasses postglasses" title="How is wind chill calculated?">
+
+			<!-- pollination -->
+			<img src="images/mask.svg" style="background-image: url(images/medium-glasses/pollination.jpg)" id="pollination" class="medium-postglasses postglasses" title="Why haven’t flowers evolved to self-pollinate exclusively?">
+
+			<!-- macaroni -->
+			<img src="images/mask.svg" style="background-image: url(images/medium-glasses/macaroni.jpg)" id="macaroni" class="medium-postglasses postglasses" title="How are the holes in macaroni noodles extruded?">
+
+			<!-- banana -->
+			<img src="images/mask.svg" style="background-image: url(images/medium-glasses/banana.jpg)" id="banana" class="medium-postglasses postglasses" title="Which part of the plant are bananas? The seed?">
+
+			<!-- bug-breath -->
+			<img src="images/mask.svg" style="background-image: url(images/medium-glasses/bug-breath.jpg)" id="bug-breath" class="medium-postglasses postglasses" title="How do bugs breathe? Do they have cardiovascular systems?">
+
+			<!-- water-taste -->
+			<img src="images/mask.svg" style="background-image: url(images/medium-glasses/water-taste.jpg)" id="water-taste" class="medium-postglasses postglasses" title="Does pure H&#8322;0 have a taste?">
+
+			<!-- mountain -->
+			<img src="images/mask.svg" style="background-image: url(images/medium-glasses/mountain.jpg)" id="mountain" class="medium-postglasses postglasses" title="How is a mountain’s height measured?">
+
+			<!-- twenty-twenty -->
+			<img src="images/mask.svg" style="background-image: url(images/medium-glasses/twenty-twenty.jpg)" id="twenty-twenty" class="medium-postglasses postglasses" title="If it’s possible to have vision that’s better than 20/20, why is that measurement considered the standard?">
+
+			<!-- coconut -->
+			<img src="images/mask.svg" style="background-image: url(images/medium-glasses/coconut.jpg)" id="coconut" class="medium-postglasses postglasses" title="What are those three dots that coconuts have?">
+
+			<!-- zipcodes -->
+			<img src="images/mask.svg" style="background-image: url(images/medium-glasses/zipcodes.jpg)" id="zipcodes" class="medium-postglasses postglasses" title="How are zipcodes assigned?">
+
+			<!-- fluorescence -->
+			<img src="images/mask.svg" style="background-image: url(images/medium-glasses/fluorescence.jpg)" id="fluorescence" class="medium-postglasses postglasses" title="What makes fluorescent colors look so bright?">
+
+			<!-- pockets -->
+			<img src="images/mask.svg" style="background-image: url(images/medium-glasses/pockets.jpg)" id="pockets" class="medium-postglasses postglasses" title="Why are blazer pockets sewn shut when you buy them?">
+
+			<!-- tone-deaf -->
+			<img src="images/mask.svg" style="background-image: url(images/medium-glasses/tone-deaf.jpg)" id="tone-deaf" class="medium-postglasses postglasses" title="What does it mean to be tone deaf?">
+
+			<!-- bowling-alleys -->
+			<img src="images/mask.svg" style="background-image: url(images/medium-glasses/bowling-alleys.jpg)" id="bowling-alleys" class="medium-postglasses postglasses" title="Why are bowling alleys seemingly always windowless?">
+
+			<!-- candle-smoke -->
+			<img src="images/mask.svg" style="background-image: url(images/medium-glasses/candle-smoke.jpg)" id="candle-smoke" class="medium-postglasses postglasses" title="Why do candles only smoke after their flame is extinguished, but not while burning?">
+
+			<!-- night-vision -->
+			<img src="images/mask.svg" style="background-image: url(images/medium-glasses/night-vision.jpg)" id="night-vision" class="medium-postglasses postglasses" title="Is there a reason green is always the color used for night vision goggles?">
+
+		<!--
+		<div id="parallax-big"></div>
+		-->
+
+			<!-- sohcahtoa -->
+			<img src="images/mask.svg" style="background-image: url(images/big-glasses/sohcahtoa.jpg)" id="sohcahtoa" class="big-postglasses postglasses" title="How were the original measurements we now use to find sine, cosine, and tangent determined?">
+
+			<!-- decaffeination -->
+			<img src="images/mask.svg" style="background-image: url(images/big-glasses/decaffeination.jpg)" id="decaffeination" class="big-postglasses postglasses" title="How does coffee bean decaffination happen?">
+
+			<!-- dutch-orange -->
+			<img src="images/mask.svg" style="background-image: url(images/big-glasses/dutch-orange.jpg)" id="dutch-orange" class="big-postglasses postglasses" title="Why is the color orange associated to the Netherlands even though it's not in their flag?">
+
+			<!-- helium -->
+			<img src="images/mask.svg" style="background-image: url(images/big-glasses/helium.jpg)" id="helium" class="big-postglasses postglasses" title="How is helium harvested?">
+
+			<!-- moths -->
+			<img src="images/mask.svg" style="background-image: url(images/big-glasses/moths.jpg)" id="moths" class="big-postglasses postglasses" title="If moths flock to lights, why are they nocturnal?">
+
+			<!-- tree-rings -->
+			<img src="images/mask.svg" style="background-image: url(images/big-glasses/tree-rings.jpg)" id="tree-rings" class="big-postglasses postglasses" title="Indoor trees don't experience annual weather patterns like their counterparts in the wild; does this mean they don't exhibit cross-sectional growth rings?">
+
+			<!-- street-names -->
+			<img src="images/mask.svg" style="background-image: url(images/big-glasses/street-names.jpg)" id="street-names" class="big-postglasses postglasses" title="How are streets named?">
+
+			<!-- pumpkins -->
+			<img src="images/mask.svg" style="background-image: url(images/big-glasses/pumpkins.jpg)" id="pumpkins" class="big-postglasses postglasses" title="How do pumpkins get air inside when they don’t have any holes? Or are they hollow vaccuums?">
+
+			<!-- yellow-cones -->
+			<img src="images/mask.svg" style="background-image: url(images/big-glasses/yellow-cones.jpg)" id="yellow-cones" class="big-postglasses postglasses" title="How do we see the primary color yellow when we don’t have yellow cones in our eyes?">
+
+			<!-- copyless-carbon-paper -->
+			<img src="images/mask.svg" style="background-image: url(images/big-glasses/copyless-carbon-paper.jpg)" id="copyless-carbon-paper" class="big-postglasses postglasses" title="How does that old-school yellow and pink pressure-sensitive carbon paper work?">
+
+			<!-- yeast -->
+			<img src="images/mask.svg" style="background-image: url(images/big-glasses/yeast.jpg)" id="yeast" class="big-postglasses postglasses" title="Yeast is living! But how?">
+
+			<!-- wheels-on-film -->
+			<img src="images/mask.svg" style="background-image: url(images/big-glasses/wheels-on-film.jpg)" id="wheels-on-film" class="big-postglasses postglasses" title="Why do wheels sometimes look like they're turning backwards on film?">
+
+		
+
+		<div id="background"></div>
+
+
+	<!-- *************************************** vvvvv footer.php snippet vvvvv LEAVE ALONE vvvvv *************************************** -->
+
+
+	<footer id="footer" role="contentinfo">
+
+		<div id="footercontent">
+
+			
+			<!-- Subscribe, via MailChimp -->
+			<form action="//curiositycoloredglasses.us14.list-manage.com/subscribe/post?u=05f8f85154975a52907f2ce4d&amp;id=086ebe8644" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+
+
+				<!-- For some reason, this needs to stay for the validation and ability to submit email -->
+				<span class="mc-field-group">
+	
+					<input type="email" value="" name="EMAIL" class="boxinput s-textface" id="mce-EMAIL" placeholder="Email address">
+
+				</span>
+
+	
+				<!-- NOT SURE WHY THIS IS NEEDED, BUT PROBABLY KEEP EVERYTHING INSIDE THIS TAG SO IT FUNCTIONS PROPERLY! -->		
+			    <span style="position: absolute; left: -5000px;" aria-hidden="true">
+			    	<input type="text" name="b_05f8f85154975a52907f2ce4d_086ebe8644" tabindex="-1" value="">
+			    </span>
+
+
+				<!-- "Subscribe" button -->
+			    <input type="submit" value="Subscribe" name="subscribe" class="xs-display boxbutton subscribebutton" id="mc-embedded-subscribe">
+	
+
+			</form>
+
+
+			<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+			<!-- HONEYPOT VALIDATION? ^^^ PROBABLY KEEP EVERYTHING INSIDE THIS TAG SO IT FUNCTIONS PROPERLY! -->
+			<!-- 
+			<span id="mce-responses" class="clear">
+
+				<span class="response" id="mce-error-response" style="display:none">
+				</span>
+		
+				<span class="response" id="mce-success-response" style="display:none">
+				Thank you!
+				</span>
+	
+			</span> -->   <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+   
+
+			<p class="xs-textface" id="subscribemessage">
+				I’ll only ever email to let you know about new posts!
+				<!--
+				<a href="http://us14.campaign-archive2.com/home/?u=05f8f85154975a52907f2ce4d&id=086ebe8644" title="View previous campaigns" target="_blank">
+					See an example email first.
+				</a>
+				-->
+			</p>
+
+
+			<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'>
+			</script>
+
+			<script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);
+			</script>
+
+			<!--End mc_embed_signup-->
+
+
+			<!-- Link to my instagram profile + Twitter + portfolio -->
+			<span id="follow">
+
+				<!-- Link to my instagram page -->
+				<a href="https://www.instagram.com/curiositycoloredglasses/" title="Follow on Instagram" target="_blank"> 
+					<img src= "icons/Instagram.svg" alt="Follow me on Instagram" class="followicon socialicon">
+				</a>
+
+
+				<!-- Link to @CuriosityColor twitter page -->
+				<a href="https://twitter.com/CuriosityColor" title="Follow on Twitter" target="_blank"> 
+					<img src= "icons/Twitter.svg" alt="Follow me on Twitter" class="followicon socialicon">
+				</a>
+
+
+				<!-- Link to my portfolio website -->
+				<a href="http://liaprins.com/" target="_blank" id="portfolio" class="m-textface bold"> 
+					liaprins.com
+				</a>
+
+			</span>
+
+		</div>  <!-- closing #footercontent -->
+
+	</footer>
+
+	<!-- loading animation script -->
+	<!-- may need to move to right before footer is called -->
+	<!--
+	<script src="js/loader.js">
+	</script>
+	-->
+
+<!-- </div> -->    <!-- closing #everythingexceptnav-->
+
+
+
+
+
+</body>
+
+</html>
