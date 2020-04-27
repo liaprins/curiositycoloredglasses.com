@@ -43,7 +43,7 @@ fields:
     type:  image
     required: true
     width: 1/2
-  name:
+  title:
     label: Post title
     type:  text
     required: true
