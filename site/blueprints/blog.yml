@@ -2,7 +2,7 @@ title: Blog
 
 //page settings
 deletable: false
-options: 
+options:
 	preview: true
 	status: false
 	template: false
@@ -10,7 +10,7 @@ options:
 	delete: false
 
 //subpage settings
-pages: 
+pages:
 	template: blogarticle
 	sort: flip
 	num: date
