@@ -2,7 +2,7 @@ Postglasses: moon.png
 
 ----
 
-Title: Casting light on the moon's dark side
+Name: Casting light on the moon's dark side
 
 ----
 

@@ -1,0 +1,81 @@
+Postcontent: 
+
+----
+
+Postglassesleft: lp-favicon.png
+
+----
+
+Postglassesright: lp-favicon.png
+
+----
+
+Name: I am the name of the blog post
+
+----
+
+Date: 2020-04-27
+
+----
+
+Guestwriter: 
+
+----
+
+Guestwriterlink: 
+
+----
+
+Tags: all
+
+----
+
+Intro: 
+
+----
+
+Text: 
+
+----
+
+Thankyou: 
+
+----
+
+Process: 
+
+----
+
+Relevantreading1: 
+
+----
+
+Relevantreading2: 
+
+----
+
+Relevantreading3: 
+
+----
+
+Line: 
+
+----
+
+Share-settings: 
+
+----
+
+Share: 
+
+----
+
+Facebookshareimage: lp-favicon.png
+
+----
+
+Pinterestverticalimage: 
+
+----
+
+Title: i am the title of the content subfolder

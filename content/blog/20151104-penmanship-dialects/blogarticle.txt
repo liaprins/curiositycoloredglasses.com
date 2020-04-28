@@ -2,7 +2,7 @@ Postglasses: penmanship.png
 
 ----
 
-Title: Penmanship dialects of the Roman alphabet
+Name: Penmanship dialects of the Roman alphabet
 
 ----
 

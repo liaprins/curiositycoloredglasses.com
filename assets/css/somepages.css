@@ -45,11 +45,11 @@
 /* "1 lh" = 2.048rem = the height of one lineheight's-worth of m-textface at 1.6 lineheight (although the base line height on <body> tag is actually set to 1.7; but I am keeping these rem measurements, because they look good) */
 
 /* HOME PAGE -------------------------------------------------- */
- 
+
 header {    /* Holds blog name + tagline */
     padding-top: 10.714vw;    }    /* 2/28 cols */
 
-#tagline { 
+#tagline {
     text-align: center;
     margin: 1.536rem 0 2.048rem 0;   }    /* top + bottom: .75 lh */
 
@@ -64,10 +64,10 @@ header {    /* Holds blog name + tagline */
     display: inline;
     padding: 0.6em 0.5em 0.5em 0;    }
 
-#hometaggroup {  
+#hometaggroup {
     line-height: 2.2;
     overflow: hidden;
-    text-overflow: ellipsis; 
+    text-overflow: ellipsis;
     margin-left: -0.3rem;     }
 
 #hometag {
@@ -109,7 +109,7 @@ figcaption {
     color: white;
     margin-right: 0.4em;
     padding: 0.2rem 0.2rem 0.1rem 0.2rem;    }
-    
+
 .tag {
     white-space: nowrap;
     padding: 0.6em 0.5em 0.5em 0;
@@ -129,7 +129,8 @@ figcaption {
 .postglassescontainer:hover > .circle,
 #postlink:hover .circle {
     background-size: 160%;
-    background-position: 41.5% 42%;    } 
+    /* background-position: 41.5% 42%; */
+    background-position: 50% 50%;    }
 
 .circle,
 .stem {
@@ -157,7 +158,7 @@ figcaption {
 .leftcircle,
 .rightcircle {
     -webkit-transition: background-size 0.5s;    /* for Safari */
-    transition: background-size 0.5s;    
+    transition: background-size 0.5s;
     -webkit-transition-timing-function: ease-out;
     transition-timing-function: ease-out;    }
 
@@ -198,7 +199,7 @@ figcaption {
     box-sizing: content-box;    /* Preventing the padding from cutting into the yellow hover state */
     width: 1.407rem;
     padding: 0.316rem;
-    cursor: pointer;    }   
+    cursor: pointer;    }
 
 .mockmain {    /* This applies to the article element which holds all the post content and top part of Archive page; it is taking the place of <main> on post page, because there's only one <main> element allowed per page, but it has to split into two to allow wider #relevantreading <section> to fit between, to accomodate RR results with margins that extend beyond <main> */
     max-width: 1225px;
@@ -238,11 +239,11 @@ figcaption {
     line-height: 1;
     margin: 0.512rem 0;    }    /* top + bottom: .25 lh */
 
-#posttaggroup {  
+#posttaggroup {
     /* line-height: 2.63; */
     line-height: 2.2;
     overflow: hidden;
-    text-overflow: ellipsis; 
+    text-overflow: ellipsis;
     margin-left: -0.3rem;     }
 
 #share {    /* Applies to all the share icons together as a whole */
@@ -318,7 +319,7 @@ figcaption {
 #pronunciation {
     white-space: nowrap;    }
 
-.audioicon { 
+.audioicon {
     box-sizing: content-box;
     height: 0.703rem;    /* Had to make smaller than other icons to help it fit inline with potentially long phrases that wrap to next line, otherwise it would affect the text line-height */
     padding: 0.25em;
@@ -363,7 +364,7 @@ figcaption {
 }
 
 #rrsectionheader {    /* This applies to Relevant Reading's section header, which isn't encapsulated in the .post <article> class (so that the results can have a wider area to accommodate their margins needing to be on both sides for spacing) */
-    max-width: 1225px;    
+    max-width: 1225px;
     width: 78.571%;    /* 22/28 cols | Use % here instead of vw because they can be used inside the max-width */
     margin: 2.048rem auto;    }    /* top + bottom: 1 lh*/
 
@@ -399,10 +400,10 @@ figcaption {
     margin-right: 3.571vw;    }    /* right: 1/28 cols */
 
 #namedatecomment {
-    
+
     line-height: 1;
     margin-top: -0.3em;
-    
+
     /* margin-top: -0.6em; */
     float: left;
     width: 64.286vw;   }    /* 18/28 cols | This should be <main>'s width in cols (22/28) minus avatar (2/28) minus space between this and avatar (2/28) = 18/28 cols */
@@ -464,8 +465,8 @@ abbr {
     margin-bottom: 0.9375rem;    }    /* Half the height of the name input and button's height of 1.875rem */
 
 #message {    /* This applies to only to the actual comment message input field */
-    line-height: 1.7;    
-    padding: 0.313rem 0.438rem;    
+    line-height: 1.7;
+    padding: 0.313rem 0.438rem;
     height: 5.877rem;
     resize: none;    }    /* This is to get rid of the ability to resize the field; it should scroll automatically if needed */
 
@@ -475,7 +476,7 @@ abbr {
     margin-top: 0.3752rem;    }    /* Finessing spacing to optically match space between name and message inputs */
 
 #postacommentdetails {    /* Setting up the "x" button to replace the default <details> */
-    position: relative;    }    
+    position: relative;    }
 #postacommentdetails summary::-webkit-details-marker {
     display: none;    }
 
@@ -497,13 +498,13 @@ abbr {
 
 /* POST + ABOUT PAGES -------------------------------------------------- */
 
-/* This class is assigned in the HTML to About pg img. 
+/* This class is assigned in the HTML to About pg img.
 This class is assigned via the site/tags/gallery.php kirbytag file to all gallery images (along with id="galleryimage").
 This class is assigned via the site/tags/tag.php kirbytag file to all content images by default.
 If I ever want to use a custom class on a content image, I can do this in the panel (via "class: xxx").
 However, adding a class via the panel REPLACES this .contentimage class entirely (instead of overriding)!!!
 So for any custom class added via the panel, I need to copy and paste all the properties of .contentimage and just replace the values I would have overridden, and also add new properties I want. */
-.contentimage { 
+.contentimage {
     display: block;
     margin: 2.048rem auto 0 auto;    /* top: .75 lh | Leaving the bottom margin 0 since it depends if there's a caption (then figcaption specifies its top margin to cover this space) or another image (it's top margin covert the space) or text (figure specifies its bottom margin to cover the space) */
     max-width: 78.571vw;    /* 22/28 cols */
@@ -517,7 +518,7 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
     background-color: rgba(255, 255, 255, 0.95);
     padding-bottom:  1.024rem;    /* .5 lh */
     border-style: none none solid none;    /* For the non-desktop screens with a rule on the bottom */
-    /* border-width: 1.71428vw; */    /* :) This should dynamically match the weight of the line of the postglasses below date, based on their width of 42.857vw (12/28 cols) and the ratio of the postglasses width to their line weight of 25:1 */ 
+    /* border-width: 1.71428vw; */    /* :) This should dynamically match the weight of the line of the postglasses below date, based on their width of 42.857vw (12/28 cols) and the ratio of the postglasses width to their line weight of 25:1 */
     margin: 1.024rem 0 2.048rem 0;    }    /* top: .5 lh, bottom: .75 lh */
 
 
@@ -535,15 +536,15 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
     margin-top: 0.512rem;    }
 
 .dot {
-    width: 0.56rem;   
-    height: 0.56rem;  
+    width: 0.56rem;
+    height: 0.56rem;
     border-radius: 0.28rem;
     display: inline-block;    /* needed so that margins can apply to <span>s */
     margin: 0 0.14rem;    }
 
 .dotimg {
-    width: 0.56rem;   
-    height: 0.56rem; 
+    width: 0.56rem;
+    height: 0.56rem;
     position: relative;
     top: -0.35rem;    }
 
@@ -693,6 +694,13 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
     cursor: auto;
     margin-top: -0.512rem;    }    /* .25 lh | Counteracting <figure>'s top margin to move top of About image closer to About page name optically */
 
+.aboutimage {
+  cursor: default !important;    }
+
+.aboutimage + .imgfullscreentoggle {
+  display: none;
+}
+
 #aboutintro {
     hyphens: manual;    }
 
@@ -706,19 +714,19 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
     margin-bottom: 1.536rem;
     margin-top: 1.024rem;    }    /* top: .5 lh, bottom: .75 lh */
 
-#archivemenuyear {    /* Applies to the years in the menu; this is only needed if I want to override any properties set by .sectionsummary, which applies to the year headings and section headings on other pages, and is also applied to the element that this is an ide for to get it to be the same size as them */  
+#archivemenuyear {    /* Applies to the years in the menu; this is only needed if I want to override any properties set by .sectionsummary, which applies to the year headings and section headings on other pages, and is also applied to the element that this is an ide for to get it to be the same size as them */
     padding: 0.6em 0.4em 0.4em 0.7em;    }    /* Based on line-height, but finessing optically */
 
 #archiveheadingarea {
     width:  78.571%;    /* 24/28 cols | Establishing a separate div so I can make it wider in screens with more than one result wide to accommodate margins I need to put on both L + R sides of all results so they have proper spacing between each other, but don't look like they're extending past the page margins */
-    margin: 0 auto;    }  
+    margin: 0 auto;    }
 
 .archivesectionsummary {
     margin: 0 auto 1.536rem auto !important;
-    display: block;    }  
+    display: block;    }
 
 .archivesectiontoggleoff {
-    display: none;    }  
+    display: none;    }
 
 #archiveyeartoggle {
     /* vertical-align: middle; */
@@ -737,7 +745,7 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
 #librarysection {    /* :) Had to make a new section (24/28 col widths) that is wider than <main> to hold the margins of the library icons */
     overflow: auto;    /* :) This line and the next are to fix a broswer bug wherein this containing element thinks it is 0px tall because it only contains floated elements; see pp373-4 in HTML & CSS book */
     width: 85.77vw;    /* :) V-Mobile 24/28 cols | Had to round up slightly from 85.714vw to get the icons to fit 3-across */
-    background-color: white;    
+    background-color: white;
     margin: 7.143vw auto -3.571vw auto;     }    /* top: 2/28 cols, bottom: -1/28 cols | Trying to counteract other margins to make the space between library icon zone and above and below it match the space between library icons themselves */
 
 #libraryentrydetails {    }
@@ -816,7 +824,7 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
 
 #searchpageicon {
     display: inline;
-    height: 0.844rem;    }    
+    height: 0.844rem;    }
 
 #searchpageintrotext {
     margin-top: 1.024rem;    }    /* .25 lh */
@@ -842,9 +850,9 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
 
 .tagnobackarrow {
     padding-right: 1.914rem;    }    /* pre-backarrow */
- 
+
 .extrarightpadding {    /* This is called by the backarrow JS script for the library and tag page titles, to account for extra space needed by back arrow in the title area  */
-    padding-right: 5.25rem;    } 
+    padding-right: 5.25rem;    }
 
 /* RESULTS -------------------------------------------------- */
 
@@ -855,7 +863,7 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
 #resultdate {
     padding-top: 0.256rem;    /* .125 lh; this is the space between the date and it's top border */
     margin: 1.536rem 0 0.512rem 0;    /* top: .75 lh, bottom: .25 lh */
-    border-width: 0.15rem;    }    /* This should dynamically match the weight of the line of the resultglasses below date, based on their width of 28.571vw (8/28 cols) and the ratio of the resultglasses width to their line weight of 25:1; */ 
+    border-width: 0.15rem;    }    /* This should dynamically match the weight of the line of the resultglasses below date, based on their width of 28.571vw (8/28 cols) and the ratio of the resultglasses width to their line weight of 25:1; */
 
 #resulttitle {
     hyphens: auto;
@@ -881,12 +889,13 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
 .resultglassescontainer {
     width: var(--resultglasseswidth);
     height: calc(var(--resultglasseswidth) * 0.393);
-    margin: 0.512rem auto 1.024rem auto;    /* top: .25 lh, bottom: .5 lh */
+    margin: 0.512rem auto 1.024rem auto;
+    /* top: .25 lh, bottom: .5 lh */
     display: block;    }
 .resultglassescontainer:hover > .resultcircle,
 #postlink:hover .resultcircle {
     background-size: 160%;
-    background-position: 41.5% 42%;    } 
+    background-position: 50% 50%;    }
 
 .resultcircle,
 .resultstem {
@@ -914,7 +923,7 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
 .resultleftcircle,
 .resultrightcircle {
     -webkit-transition: background-size 0.5s;    /* for Safari */
-    transition: background-size 0.5s;    
+    transition: background-size 0.5s;
     -webkit-transition-timing-function: ease-out;
     transition-timing-function: ease-out;    }
 
@@ -945,4 +954,3 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
     width: 100%;
     margin-top: 2.048rem;
     float: right;    }
-

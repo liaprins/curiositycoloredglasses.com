@@ -1,3 +1,3 @@
 <h2 class="posttitle">
-	<?php echo $page->title()->html() ?>
+	<?php echo $page->name()->html() ?>
 </h2> 

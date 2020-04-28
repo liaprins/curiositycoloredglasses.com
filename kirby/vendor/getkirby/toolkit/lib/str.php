@@ -754,9 +754,9 @@ class Str {
    * @return string
    */
   public static function before($string, $char) {
-    $pos = strpos($string, $char);    
+    $pos = strpos($string, $char);
     if($pos !== false) {
-      return static::substr($string, 0, $pos);      
+      return static::substr($string, 0, $pos);
     } else {
       return false;
     }
@@ -772,7 +772,7 @@ class Str {
   public static function until($string, $char) {
     $pos = strpos($string, $char);
     if($pos !== false) {
-      return static::substr($string, 0, $pos + str::length($char));      
+      return static::substr($string, 0, $pos + str::length($char));
     } else {
       return false;
     }
@@ -788,7 +788,7 @@ class Str {
   public static function after($string, $char) {
     $pos = strpos($string, $char);
     if($pos !== false) {
-      return static::substr($string, $pos + str::length($char));      
+      return static::substr($string, $pos + str::length($char));
     } else {
       return false;
     }
@@ -804,7 +804,7 @@ class Str {
   public static function from($string, $char) {
     $pos = strpos($string, $char);
     if($pos !== false) {
-      return static::substr($string, $pos);      
+      return static::substr($string, $pos);
     } else {
       return false;
     }
@@ -812,7 +812,7 @@ class Str {
 
   /**
    * Returns everything between two strings from the first occurrence of a given string
-   * 
+   *
    * @param string $string
    * @param string $start
    * @param string $end

@@ -29,27 +29,6 @@
 					<?php echo $page->title()->kirbytext() ?>
 				</h2>
 
-
-				<!-- tentatively adding <figure> element to hold together image + caption for semantice purposes -->
-				<figure>
-
-
-					<!-- image for About page -->
-					<img src="<?php echo $page->aboutimage()->image()->toFile()->url() ?>" alt="<?php echo $page->aboutimage()->toFile()->alt() ?>" class="contentimage" id="aboutimage">
-
-
-					<!-- calling caption from metadata -->
-					<?php if($aboutimage = $page->aboutimage()->image()->toFile()): ?>
-
-						<figcaption class="xs-textface">
-							<?php echo $aboutimage->caption()->value() ?>
-						</figcaption>
-
-					<?php endif ?>
-
-
-				</figure>
-
 			</div>
 
 
@@ -66,7 +45,7 @@
 				</span>
 
 			</div>
-	
+
 		</main>
 
 

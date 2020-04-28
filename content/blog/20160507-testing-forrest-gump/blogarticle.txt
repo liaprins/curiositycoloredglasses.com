@@ -2,7 +2,7 @@ Postglasses: chocolates.png
 
 ----
 
-Title: Testing Forrest Gump’s chocolate box credo: do you really never know what you’re gonna get?
+Name: Testing Forrest Gump’s chocolate box credo: do you really never know what you’re gonna get?
 
 ----
 

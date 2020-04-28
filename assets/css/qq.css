@@ -68,7 +68,7 @@
 	background-position: center;
 	background-size: 101%;
 	-webkit-transition: background-size 0.5s;    /* for Safari */
-	transition: background-size 0.5s;    
+	transition: background-size 0.5s;
 	-webkit-transition-timing-function: ease-out;
 	transition-timing-function: ease-out;    }
 
@@ -78,7 +78,8 @@
 
 .qqglassescontainer:hover > .lens {
 	background-size: 159%;
-	background-position: 41.5% 41.5%;    }
+	/* background-position: 41.5% 41.5%; */
+  background-position: 50% 50%; }
 
 .qqselected > .lens {
 	background-size: 159%;
@@ -283,11 +284,11 @@ NEED TO ASSIGN VERTICAL STYLES IN JS */
 	#qq-x {
 		left: calc(46.429vw - 1.094rem);    }
 
-	.center.qqcontents-large {    
+	.center.qqcontents-large {
 		left: calc((var(--contentwidth) / -2) + (var(--binocwidth-l) / 2));	}
-	.center.qqcontents-medium {    
+	.center.qqcontents-medium {
 		left: calc((var(--contentwidth) / -2) + (var(--binocwidth-m) / 2));	}
-	.center.qqcontents-small {    
+	.center.qqcontents-small {
 		left: calc((var(--contentwidth) / -2) + (var(--binocwidth-s) / 2));	}
 
 	.center > .sharkfin,
@@ -401,53 +402,3 @@ NEED TO ASSIGN VERTICAL STYLES IN JS */
 		z-index: 2;
 	}
 }    /* MIN 1225px GROW ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
