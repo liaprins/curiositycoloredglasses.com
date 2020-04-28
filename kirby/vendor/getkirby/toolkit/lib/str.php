@@ -634,9 +634,10 @@ class Str {
    * @param  string  $string
    * @return string
    */
+   /* COMMENTED OUT BY LIA: "get_magic_quotes_gpc" IS DEPRACATED IN PHP 7.4 AND ABOVE AND THROWS BREAKING ERRORS; PLUS IT WOULDN'T DO ANYTHING USEFUL NOWADAYS */
   public static function stripslashes($string) {
     if(is_array($string)) return $string;
-    return get_magic_quotes_gpc() ? stripslashes($string) : $string;
+    return /* get_magic_quotes_gpc() ? stripslashes($string) : */ $string;
   }
 
   /**
