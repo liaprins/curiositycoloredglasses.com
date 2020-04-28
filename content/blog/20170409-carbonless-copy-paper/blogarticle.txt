@@ -6,7 +6,7 @@ Postglasses: carbonless.png
 
 ----
 
-Title: How does carbonless copy paper work?
+Name: How does carbonless copy paper work?
 
 ----
 
@@ -82,7 +82,7 @@ Relevantreading1: blog/penmanship-dialects
 
 ----
 
-Relevantreading2: 
+Relevantreading2: blog/i-am-the-title-of-the-content-subfolder
 
 ----
 
@@ -139,3 +139,5 @@ Thankyou:
 ----
 
 Process: 
+
+----

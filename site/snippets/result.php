@@ -20,7 +20,7 @@
         
         <!-- Title of article -->       
         <p id="resulttitle" class="s-display">
-            <?php echo $result->title()->html() ?>
+            <?php echo $result->name()->html() ?>
         </p>
 
     </a>

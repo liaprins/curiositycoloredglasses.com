@@ -2,7 +2,7 @@ title: Hello
 
 //page settings
 deletable: false
-options: 
+options:
 	preview: true
 	status: false
 	template: false
@@ -13,8 +13,8 @@ options:
 pages: false
 
 //file settings
-files: 
-  type: 
+files:
+  type:
     - image
     - video
   fields:
@@ -34,9 +34,6 @@ fields:
     label: Page name
     type: text
     placeholder: Title for the 'about' page
-  aboutimage:
-    label: Image
-    type: image
   intro:
     label: Page intro
     type: textarea

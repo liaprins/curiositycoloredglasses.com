@@ -9,10 +9,10 @@
   	// $results = $site->index()->visible()->not('template', '!=', 'comment', 'comments', 'about', 'archive', 'library')->search($query, array('words' => true), 'title');
 
     // testing search fix for multi-words to be "and" not "or" search
-  	// $results = search($pages->index()->visible()->not('template', '!=', 'comment', 'comments', 'about', 'archive', 'library'), $query, array('words' => true, 'fields' => ['title', 'text', 'intro', 'text', 'caption'] ));
+  	//$results = search($pages->index()->visible()->not('template', '!=', 'comment', 'comments', 'about', 'archive', 'library'), $query, array('words' => true, 'fields' => ['title', 'text', 'intro', 'text', 'caption'] ));
 
     // testing ability to search for tags with #
-    $results = search($pages->index()->visible()->not('template', '!=', 'comment', 'comments', 'hello', 'questionqueue', 'archive', 'library'), $query, array('words' => true, 'fields' => ['title', 'text', 'intro', 'tags', 'text', 'caption'] ));
+    $results = search($pages->index()->visible()->not('template', '!=', 'comment', 'comments', 'hello', 'questionqueue', 'archive', 'library'), $query, array('words' => true, 'fields' => ['name', 'text', 'intro', 'tags', 'text', 'caption'] ));
 
     // regular search, but doesn't look at tags vvv
     // $results = search($pages->index()->visible()->not('template', '!=', 'comment', 'comments', 'hello', 'archive', 'library'), $query, array('words' => true, 'fields' => ['title', 'text', 'intro', 'text', 'caption'] ));

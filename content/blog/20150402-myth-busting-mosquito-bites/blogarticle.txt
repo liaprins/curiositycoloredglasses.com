@@ -2,7 +2,7 @@ Postglasses: mosquito.png
 
 ----
 
-Title: Myth busting mosquito bites
+Name: Myth busting mosquito bites
 
 ----
 

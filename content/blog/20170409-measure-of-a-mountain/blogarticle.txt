@@ -6,7 +6,7 @@ Postglasses: mountain-measurement.png
 
 ----
 
-Title: The measure of a mountain
+Name: The measure of a mountain
 
 ----
 

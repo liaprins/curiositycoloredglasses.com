@@ -37,7 +37,7 @@
 
                 <!-- Name of post -->
                 <h2 class="posttitle">
-                    <?php echo $article->title()->html() ?>
+                    <?php echo $article->name()->html() ?>
                 </h2>
 
             </a>

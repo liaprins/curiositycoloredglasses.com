@@ -6,7 +6,7 @@ Postglasses: fluorescence.png
 
 ----
 
-Title: Fluorescence and phosphorescence
+Name: Fluorescence and phosphorescence
 
 ----
 
