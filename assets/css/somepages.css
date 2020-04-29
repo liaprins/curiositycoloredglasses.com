@@ -131,6 +131,11 @@ figcaption {
     background-size: 160%;
     /* background-position: 41.5% 42%; */
     background-position: 50% 50%;    }
+.postglassescontainer > .circle,
+#postlink .circle {
+    background-size: 102%;
+    /* background-position: 41.5% 42%; */
+    background-position: 50% 50%;    }
 
 .circle,
 .stem {
@@ -896,6 +901,10 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
 #postlink:hover .resultcircle {
     background-size: 160%;
     background-position: 50% 50%;    }
+.resultglassescontainer > .resultcircle,
+#postlink .resultcircle {
+        background-size: 101%;
+        background-position: 50% 50%;    }
 
 .resultcircle,
 .resultstem {
