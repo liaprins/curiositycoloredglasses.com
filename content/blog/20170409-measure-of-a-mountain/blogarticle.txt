@@ -22,7 +22,7 @@ Tags: mountains,measurements,geology,Mars,volcanoes,science,supercalafragalistic
 
 ----
 
-Intro: I remember learning that Mauna Kea, a volcano that forms one of the  Hawai'ian islands, was actually "taller" than Mt Everest, when comparing the height from their respective bases to their peaks. This got me to thinking about how mountains are measured. It turns out the height of a mountain as listed on a map is simply the peak's altitude above sea level. It seemed strange to me that the measurement of land formations would be so dependent on a sea measurement. Perhaps most perplexing was the question then of how mountains on other planets, like Mars' Olympus Mons, were measured? Where was the "base" of a mountain determined to begin without a sea to compare it against?
+Intro: On maps, a mountain’s height is always shown solely as its peak’s altitude above sea level. This seems like a bit of a cop-out: is the mountain itself really that tall? Or is it just standing on the shoulders of a very tall plateau, so to speak? Then again, determining the base from which to measure any mountain seems like quite the slippery slope once you get down to it, so I do understand and sympathize with the sea level approach adopted by us Earthlings. But what about pinnacle-filled planets and moons that lack oceans—how do we measure their mountains? And even on Earth, how are the high and low tides of sea level reconciled in order to arrive at heights so specific that they often indicate individual feet, and even inches in some cases?
 
 ----
 
@@ -32,7 +32,7 @@ Text:
 </div>
 (text: Unfortunately, sea level is not level. The distance from the center of the Earth to the coast&shy;line is different around the world, not only because of winds and weather, but also as a result of the Earth's midsection bulge, which causes water {and everything else} to spread out at the equator. In addition, Earth is lumpy, with massive topographical features {such as mountains} altering the gravity in surrounding areas. class: l-textface pullquote)
 
-I love (link: library#earth text: this planet). That's why I have such a cool (link: library#globe text: globe). The magnitude-7.8 earthquake that rocked Nepal in April 2015 may have changed the Himalayas' heights buy a couple of inches at most. But just how do scientists measure that miniscule level of change?
+I love (link: library#bbc-earth text: this planet). That's why I have such a cool (link: library#pentel-rolling-writers text: pen). The magnitude-7.8 earthquake that rocked Nepal in April 2015 may have changed the Himalayas' heights buy a couple of inches at most. But just how do scientists measure that miniscule level of change?
 
 Official measures put Mount Everest at 29,029 feet (8,848 meters) above sea level, but recent satellite data suggest the sky-scraping peak may have shrunk by about 1 inch (2.54 centimeters), because the un&shy;derly&shy;ing (vocab: tectonic url: tectonic) plates have relaxed somewhat. Even the alpine forests' (link: blog/do-indoor-trees-have-growth-rings text: tree rings) were shaken. Regular text above 1.
 
@@ -220,11 +220,11 @@ Guestwriterlink:
 
 ----
 
-Facebookshareimage: mountain-measurement-original.png
+Facebookshareimage: blue-mountains-watercolor.jpg
 
 ----
 
-Pinterestverticalimage: tall-pin-size.png
+Pinterestverticalimage: 
 
 ----
 
@@ -236,8 +236,12 @@ Process: Am I crazy,  or is it you?
 
 ----
 
-Postglassesleft: l-mountain.jpg
+Postglassesleft: measure-of-a-mountain-l.jpg
 
 ----
 
-Postglassesright: r-mountain.jpg
+Postglassesright: measure-of-a-mountain-r.jpg
+
+----
+
+Title: measure-of-a-mountain
