@@ -8,7 +8,6 @@ language: en
 role: admin
 history:
   - blog/measure-of-a-mountain
-  - blog/i-am-the-title-of-the-content-subfolder
   - questionqueue
   - hello
   - questionqueue/license-plates
