@@ -3,7 +3,7 @@
 
 <?php snippet('head-title-all-but-home') ?>
 
- 
+
 <?php snippet('share-settings-common') ?>
 
 
@@ -66,7 +66,7 @@
                 <div class="desktopcontent">
 
                 <!-- I'm arranging the pieces of the intro part according to the V-mobile design; CSS can re-arrange them; this is according to responsive design principles -->
-            
+
                 </div>
 
 
@@ -76,12 +76,8 @@
                     <?php snippet('blogarticle-date') ?>
 
 
-                    <!-- Postglasses icon -->
-                    <?php snippet('blogarticle-postglasses') ?>
-
-
-                    <!-- Title of post -->
-                    <?php snippet('blogarticle-title') ?>
+                    <!-- Postglasses icon + title of post -->
+                    <?php snippet('blogarticle-postglasses-title') ?>
 
 
                     <!-- OPTIONAL GUEST WRITER -->
@@ -113,7 +109,7 @@
                     <?php snippet('blogarticle-glossary') ?>
 
                     <!-- Footnotes of all superscript numbers; listed after the main text -->
-                    <?php snippet('blogarticle-notes') ?>    
+                    <?php snippet('blogarticle-notes') ?>
 
 
                     <!-- * * * * * KEEPING THANK YOU, PROCESS SECTIONS IN HERE IN CASE I WANT TO ADD THEM LATER; THEY WON'T SHOW IN THE BROWSER * * * * * -->
@@ -149,7 +145,7 @@
                     <!-- Comments via Kirby plugin -->
                     <!-- IMPORTANT! This snippet lives in site/plugins/comments/snippets; that is where the plugin calls for it to be -->
                     <!-- I am keeping it there in case of future updates to comments I need to install -->
-                    
+
                     <!-- 1. TO RE-ACTIVATE ORIGINAL COMMENTS, MUST UN-COMMENT LINE BELOW && REMOVE THE SPACE [ ] BETWEEN "c" AND "omments" !!! -->
                     <!-- 2. THEN, IF LIVE ON REAL INTERNET, MUST COMMENT OUT THE RE-ROUTING IN site/config/config.php THAT RE-ROUTES HOME URL TO SKIP OVER "blog/" -->
                     <!-- 3. ONLY THEN WILL THESE CUSTOM COMMENTS WORK -->
@@ -166,9 +162,8 @@
             <div class="hidepinnable"><?php echo $page->pinterestverticalimage()->toFile() ?></div>
 
 
-        <!-- within the footer, the JS scripts used on everypage are called, 
-        but they need to be called in a special format for blog article and tag page, 
+        <!-- within the footer, the JS scripts used on everypage are called,
+        but they need to be called in a special format for blog article and tag page,
         since they appear lower in the folder structure at least according to their URLs' "/"s...
         ...IF I MANIPULATE THE URLS TO GET RID OF "BLOG" AND EXTRA "TAG" THIS MAY CHANGE! MAY JUST NEED 'scripts-sitewide' THEN LIKE THE OTHER PAGES... -->
         <?php snippet('footer-sitewide-posts-tag') ?>
-

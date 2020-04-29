@@ -898,11 +898,10 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
     /* top: .25 lh, bottom: .5 lh */
     display: block;    }
 .resultglassescontainer:hover > .resultcircle,
-#postlink:hover .resultcircle {
+.resultlink:hover .resultcircle {
     background-size: 160%;
     background-position: 50% 50%;    }
-.resultglassescontainer > .resultcircle,
-#postlink .resultcircle {
+.resultglassescontainer > .resultcircle {
         background-size: 101%;
         background-position: 50% 50%;    }
 
