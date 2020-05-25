@@ -24,14 +24,14 @@
         <div class="desktopcontent">
 
             <!-- NOT SURE THAT THIS WILL STAY AS <h2> -->
-            <h2 id="pagetitle" class="extracontentpagetitle"><?php echo $page->title()->html() ?></h2>
+            <h2 id="pagetitle" class="extracontentpagetitle"><?php echo $page->name()->html() ?></h2>
 
 
             <!-- text for the page -->
             <span class="l-textface">
                 <?php echo $page->text()->kirbytext() ?>
             </span>
-    
+
 
             <!-- Image of broken glasses -->
 

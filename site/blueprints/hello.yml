@@ -30,7 +30,7 @@ files:
 
 //fields with their field types and options
 fields:
-  title:
+  name:
     label: Page name
     type: text
     placeholder: Title for the 'about' page
