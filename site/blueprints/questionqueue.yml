@@ -2,7 +2,7 @@ title: Question Queue
 
 //page settings
 deletable: true
-options: 
+options:
 	preview: true
 	status: false
 	template: false
@@ -10,7 +10,7 @@ options:
 	delete: false
 
 //subpage settings
-pages: 
+pages:
   template: qqbinoculars
 
 //file settings
@@ -18,7 +18,7 @@ files: false
 
 //fields with their field types and options
 fields:
-  title:
+  name:
     label: Page name
     type: text
     placeholder: Title for the 'question queue' page

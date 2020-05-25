@@ -26,7 +26,7 @@
 				<!-- title of the page -->
 				<!-- NOT SURE IF THIS WILL STAY AS <h2> -->
 				<h2 class="extracontentpagetitle">
-					<?php echo $page->title()->kirbytext() ?>
+					<?php echo $page->name()->kirbytext() ?>
 				</h2>
 
 			</div>

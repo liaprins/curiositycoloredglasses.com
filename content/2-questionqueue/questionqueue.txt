@@ -1,4 +1,4 @@
-Title: Question Queue
+Name: Question Queue
 
 ----
 
@@ -6,4 +6,4 @@ Text: These queries are on my horizon. (link: https://twitter.com/CuriosityColor
 
 ----
 
-Illustration: 
+Illustration:

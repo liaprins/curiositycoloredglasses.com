@@ -3,7 +3,7 @@
 
 <?php snippet('head-title-all-but-home') ?>
 
- 
+
 <?php snippet('share-settings-common') ?>
 
 
@@ -31,7 +31,7 @@
                 <!-- title of the page + any intro text -->
                 <!-- NOT SURE IF THIS WILL STAY AS <h2> -->
                 <h2 class="extracontentpagetitle">
-                    <?php echo $page->title()->kirbytext() ?>
+                    <?php echo $page->name()->kirbytext() ?>
                 </h2>
 
                 <!-- text for the page -->
@@ -43,7 +43,7 @@
             </div>
 
 
-<!-- __________________________________________________________________________________ -->      
+<!-- __________________________________________________________________________________ -->
 
 <!-- ARCHIVE YEAR MENU -->
 
@@ -70,23 +70,23 @@
 
         </main>
 
-<!-- __________________________________________________________________________________ -->      
+<!-- __________________________________________________________________________________ -->
 
 
 <!-- THIS SECTION NEEDS TO BE HERE OR ELSE THE YEAR MENU WON'T SHOW UP -->
 
         <?php foreach($site->page('blog')
                            ->children()
-                           ->visible() 
+                           ->visible()
                            ->flip() as $result): ?>
 
-            <?php $date = getdate($result->date()); 
+            <?php $date = getdate($result->date());
             $tmpDate = $date; ?>
 
         <?php endforeach ?>
 
 
-<!-- __________________________________________________________________________________ -->      
+<!-- __________________________________________________________________________________ -->
 
 
 <!-- BLOG ARTICLES GROUPED BY YEAR -->
@@ -96,9 +96,9 @@
             <?php function pageYear($p) {
                 return $p->date('Y');    }    // year, e.g. "2016"
                 $posts = page('blog')->children(); ?>
-    
+
             <?php foreach ($posts->visible()->flip()->group('pageYear') as $year => $yearList): ?>
-    
+
                 <!-- year heading -->
                 <div id="archiveheadingarea">
                     <h3 class="sectionsummary archivesectionsummary blackbg" id="<?php echo $year?>" data-clickable-header="">
@@ -106,7 +106,7 @@
                         <?php echo $year ?>
                     </h3>
                 </div>
-                
+
 
                 <!-- area where results are per year -->
                 <div class="resultarea archiveresultarea">
@@ -122,5 +122,3 @@
 
 
     <?php snippet('footer-sitewide') ?>
-
-

@@ -1,4 +1,4 @@
-<nav role="navigation"> 
+<nav role="navigation">
 
     <details id="navdetails" open>
 
@@ -7,7 +7,7 @@
 
             <!-- Home glasses icon -->
         <a href="<?php echo url('blog') ?>" title="Curiosity-Colored Glasses">
-            <img src="<?php echo url('assets/images/home.svg') ?>" alt="Curiosity-Colored Glasses" id="homeicon" class="yellowhover">   
+            <img src="<?php echo url('assets/images/home.svg') ?>" alt="Curiosity-Colored Glasses" id="homeicon" class="yellowhover">
         </a>
 
 		<ul id="navlist">
@@ -19,10 +19,10 @@
             <a <?php e($p->isOpen(), ' class="active"') ?> href="<?php echo $p->url() ?>" class="menuwordlink">
 
                 <li id="menuword" class="navnothome m-display yellowhover">
-                
+
                     <span <?php e($p->isOpen(), ' class="active2"') ?> href="<?php echo $p->url() ?>" >
 
-                    <?php echo $p->title()->html() ?></span></li>
+                    <?php echo $p->name()->html() ?></span></li>
 
             </a>
 

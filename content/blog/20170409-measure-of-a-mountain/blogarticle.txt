@@ -18,11 +18,11 @@ Guestwriter:
 
 ----
 
-Tags: mountains,measurements,geology,Mars,volcanoes,science,supercalafragalisticexpialidocious,superdupertrooper
+Tags: mountains,measurements,geology,Mars,volcanoes,science,supercalafragalisticexpialidocious,superdupertrooper,all
 
 ----
 
-Intro: On maps, a mountain’s height is always shown solely as its peak’s altitude above sea level. This seems like a bit of a cop-out: is the mountain itself really that tall? Or is it just standing on the shoulders of a very tall plateau, so to speak? Then again, determining the base from which to measure any mountain seems like quite the slippery slope once you get down to it, so I do understand and sympathize with the sea level approach adopted by us Earthlings. But what about pinnacle-filled planets and moons that lack oceans—how do we measure their mountains? And even on Earth, how are the high and low tides of sea level reconciled in order to arrive at heights so specific that they often indicate individual feet, and even inches in some cases?
+Intro: On maps, a mountain’s height is always shown solely as its peak’s elevation above sea level. This seems like a bit of a cop-out: is the mountain itself really that tall? Or is it just standing on the shoulders of a very tall plateau, so to speak? Then again, determining the base from which to measure any mountain seems like quite the slippery slope once you get down to it, so I do understand and sympathize with the sea level approach adopted by us Earthlings. But what about pinnacle-filled planets and moons that lack oceans—(how) do we measure their mountains? And even on Earth, how are the high and low tides of sea level reconciled in order to arrive at heights so specific that they often indicate individual feet, and even inches in some cases?
 
 ----
 
@@ -31,6 +31,8 @@ Text:
 <div class="pullquotesquare">
 </div>
 (text: Unfortunately, sea level is not level. The distance from the center of the Earth to the coast&shy;line is different around the world, not only because of winds and weather, but also as a result of the Earth's midsection bulge, which causes water {and everything else} to spread out at the equator. In addition, Earth is lumpy, with massive topographical features {such as mountains} altering the gravity in surrounding areas. class: l-textface pullquote)
+
+In the long run, though, snow might actually be more of a bane than a boone for a mountain’s height. Geologists had wondered for a while whether it was just a coincidence that taller peaks tended to cluster closer to the equator. That was until research into erosion rates done by David Egholm of Aarhus University in Denmark revealed that the slow, [tectonic-collision]-fueled growth of most mountains is no match for the mountain-munching forces of glaciers and ice. The snowline of crests at lower latitudes is likely to lie at a much higher elevation compared to the those of their more polar peaks, many of which are coated in a thick blanket of snow from tip to toe year round--and by blanket I mean gritty sandpaper that scours a mountain’s surface away, whole boulders at a time. This means that unless you’re lucky enough to be a Himalayan peak or a pinnacle in one of a handful of rare ranges whose vertical growth outpaces the damage done by glacial erosion, your height is likely to top off at about [1,500 meters] above your snowline, which in turn would seem to favor the equatorial summits, the snowlines of which are [staved off to higher elevations by their more tropical climates].
 
 I love (link: library#bbc-earth text: this planet). That's why I have such a cool (link: library#pentel-rolling-writers text: pen). The magnitude-7.8 earthquake that rocked Nepal in April 2015 may have changed the Himalayas' heights buy a couple of inches at most. But just how do scientists measure that miniscule level of change?
 

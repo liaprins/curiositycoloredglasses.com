@@ -3,7 +3,7 @@
 
 <?php snippet('head-title-all-but-home') ?>
 
- 
+
 <?php snippet('share-settings-common') ?>
 
 
@@ -35,7 +35,7 @@
             <!-- title of the page -->
             <!-- NOT SURE IF THIS WILL END UP STAYING AS <h2> -->
             <h2 id="librarypagename" class="extracontentpagetitle">
-                <?php echo $page->title()->kirbytext() ?>
+                <?php echo $page->name()->kirbytext() ?>
             </h2>
 
 
@@ -46,7 +46,7 @@
             </span>
 
         </div>
-    
+
     </main>
 
 
@@ -55,8 +55,8 @@
         <!-- images + info stored in library folder directly (not library/libraryimages) -->
         <!-- info here is from metadata, info on blog article pages is from blogarticle.txt fields + custom CSS -->
         <?php foreach ($page->images()->sortBy('sort', 'asc') as $libraryresult): ?>
-        
-        <?php $librarysubpage = $libraryresult->name(); ?>  
+
+        <?php $librarysubpage = $libraryresult->name(); ?>
 
                 <!--
                 <img src="<?php echo $libraryresult->url() ?>" alt="<?php echo $libraryresult->alt() ?>" class="libraryicon" id="<?php echo $librarysubpage ?>">
@@ -94,8 +94,6 @@
 
 <script src="assets/js/library.js">
 </script>
-    
+
 
 <?php snippet('footer-sitewide') ?>
-
-

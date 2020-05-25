@@ -2,7 +2,7 @@ title: Archive
 
 //page settings
 deletable: false
-options: 
+options:
 	preview: true
 	status: false
 	template: false
@@ -17,7 +17,7 @@ files: false
 
 //fields with their field types and options
 fields:
-  title:
+  name:
     label: Page name
     type: text
     placeholder: Title for the 'archive' page
@@ -25,12 +25,12 @@ fields:
     label: Page description
     type: textarea
     placeholder: Optional explanation or instructions to readers about this page
-  years: 
+  years:
     label: Years
     type: structure
     style: table
     modalsize: small
-    fields: 
-      year: 
+    fields:
+      year:
         label: Year for Archive menu
         type: text

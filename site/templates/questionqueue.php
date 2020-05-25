@@ -36,7 +36,7 @@
     <!-- positions glasses -->
     <script src="assets/js/qq-position.js">
     </script>
-	
+
     <!-- parallax scroll -->
     <script src="assets/js/qq-parallax.js">
     </script>
@@ -44,13 +44,13 @@
     <!-- reveals question + content upon click -->
     <script src="assets/js/qq.js">
     </script>
-	
+
 
 <!-- *************************************** ^^^^^ LEAVE ALONE ^^^^^ *************************************** -->
 
 			<!-- title of the page -->
 			<h2 id="qqpagetitle">
-				<?php echo $page->title()->kirbytext() ?>
+				<?php echo $page->name()->kirbytext() ?>
 			</h2>
 
 			<span id="qqpagetext" class="l-textface">
@@ -60,14 +60,14 @@
         	<div id="qqparent">
 
 	        	<?php foreach ($page->children()->visible()->sortBy('sort', 'asc') as $qqfile): ?>
-	    	    
+
 		        <?php $qqsubpage = $qqfile->name(); ?>
 
 		        <!-- Setting up the margin-width randomizer for binoculars' relative positions -->
                 <?php $margins = array('0rem', '0.5rem', '1rem', '1.5rem', '2rem', '2.5rem'); ?>
                 <?php $rand_margin = $margins[array_rand($margins)]; ?>
     	    	<span class="qqpiece" style="margin-left: <?= $rand_margin ?>; margin-top: <?= $rand_margin ?>">
-				
+
 					<div data-clickable="yes" data-id="<?php echo $qqfile->title() ?>" class="qqglassescontainer <?php if ($qqfile->binocsize() == 'large'): ?>largeqqglasses<?php endif ?><?php if ($qqfile->binocsize() == 'medium'): ?>mediumqqglasses<?php endif ?><?php if ($qqfile->binocsize() == 'small'): ?>smallqqglasses<?php endif ?>" title="<?php echo $qqfile->question() ?>" alt="<?php echo $qqfile->question() ?>">
     			    	<?php if($leftbinoclens = $qqfile->binocimageleft()->toFile()): ?>
                             <div data-innards-clickable="yes" class="lens l-lens" style="background-image: url(<?php echo $leftbinoclens->url() ?>)"></div>
@@ -79,14 +79,14 @@
                         <?php endif; ?>
     		    	</div>
 
-					<div class="qqcontents <?php if ($qqfile->binocsize() == 'large'): ?>qqcontents-large<?php endif ?><?php if ($qqfile->binocsize() == 'medium'): ?>qqcontents-medium<?php endif ?><?php if ($qqfile->binocsize() == 'small'): ?>qqcontents-small<?php endif ?>" style="display: none;" data-edgemargin="">						
+					<div class="qqcontents <?php if ($qqfile->binocsize() == 'large'): ?>qqcontents-large<?php endif ?><?php if ($qqfile->binocsize() == 'medium'): ?>qqcontents-medium<?php endif ?><?php if ($qqfile->binocsize() == 'small'): ?>qqcontents-small<?php endif ?>" style="display: none;" data-edgemargin="">
 						<div class="sharkfin"></div>
 						<div class="bordercover"></div>
 						<img src= "<?php echo url('assets/images/x.svg') ?>" alt="close" id="qq-x" class="yellowhover close-x">
 						<div class="qqquestion s-display"><?php echo $qqfile->question()->kirbytext() ?></div>
 						<div class="qqdescription s-textface"><?php echo $qqfile->explanation()->kirbytext() ?></div>
 					</div>
-					
+
 				</span>
 
     		    <?php endforeach ?>
@@ -104,33 +104,3 @@
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

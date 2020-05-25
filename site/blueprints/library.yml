@@ -2,7 +2,7 @@ title: Library
 
 //page settings
 deletable: false
-options: 
+options:
   preview: true
   status: false
   template: false
@@ -10,19 +10,19 @@ options:
   delete: false
 
 //subpage settings
-pages: 
+pages:
   template: libraryentry
   sort: flip
   limit: 100
-  num: 
+  num:
     mode: date
     format: d F Y
   hide: false
 
-//file settings 
-files: 
+//file settings
+files:
   sortable: true
-  type: 
+  type:
     - image
   fields:
     heading:
@@ -43,7 +43,7 @@ files:
 
 //fields with their field types and options
 fields:
-  title:
+  name:
     label: Page name
     type: text
     placeholder: Title for the 'library' page
