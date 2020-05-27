@@ -49,7 +49,7 @@
 <!-- *************************************** ^^^^^ LEAVE ALONE ^^^^^ *************************************** -->
 
 			<!-- title of the page -->
-			<h2 id="qqpagetitle">
+			<h2 id="qqpagetitle" class="extracontentpagetitle">
 				<?php echo $page->name()->kirbytext() ?>
 			</h2>
 
