@@ -10,7 +10,7 @@
 	left: calc(50vw - 322px);	}
 
 #qqpagetitle p {
-	padding-top: calc(10.714vw - 0.25rem);
+	/* padding-top: calc(10.714vw - 0.25rem); */
 	margin: 0 auto 1.536rem auto;    }
 
 #qqpagetext p {
