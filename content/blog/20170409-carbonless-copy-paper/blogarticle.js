@@ -29,12 +29,12 @@ function setup() {
     // "prop" for now (short for proportion); so I can size things relative to the canvas as a whole,
     // rather than thinking of px sizes for draw() elements that only apply to 817+ in reg view...
     var prop = ((cW * pE) / 100);
-    
+
     // ALWAYS; DON'T CHANGE! SET CANVAS ASPECT RATIO ABOVE WITH cHProp VARIABLE (~ line 6)
     var canvas = createCanvas((cWProp * prop), (cHProp * prop));
     pixelDensity((ltMaxW * maxPxDensity) / cW);    // account for high res screens (maxPxDensity) + scaling from regular view's max width (cW) up to lightbox view's max width (ltMaxW)
 
-    
+
     canvas.parent('sketch-holder');    // Move the canvas so it’s inside our <div id="sketch-holder">.
     background(255, 0, 200);
 }
@@ -42,10 +42,6 @@ function setup() {
 
 
 function draw() {
-
-    // "prop" for now (short for proportion); so I can size things relative to the canvas as a whole,
-    // rather than thinking of px sizes for draw() elements that only apply to 817+ in reg view...
-    var prop = (cW / 100);
 
     var sketchHolder = document.getElementById('sketch-holder');
 
@@ -92,6 +88,10 @@ function draw() {
         }
     }
 
+    // "prop" for now (short for proportion); so I can size things relative to the canvas as a whole,
+    // rather than thinking of px sizes for draw() elements that only apply to 817+ in reg view...
+    var prop = ((cW * pE) / 100);
+
     // draw fun stuff now!
     if(mouseIsPressed) {
         fill(0);
@@ -99,28 +99,12 @@ function draw() {
         fill(0, 0, 255);
     }
     ellipse(mouseX, mouseY, (10 * prop), (10 * prop));
-    
+
 }
 
 
-/*
+
 function mousePressed() {
-    // redraw();
+    redraw();
     background(0, 0, 200);
 }
-*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

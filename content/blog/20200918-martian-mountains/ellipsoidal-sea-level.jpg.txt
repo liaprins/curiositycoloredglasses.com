@@ -1,0 +1,9 @@
+Caption: 
+
+A world with no gravitational anomalies — in which the mass of the Earth is distributed completely homogeneously — would result in new shorelines, shown in green. Sea level would lower between New Guinea and Australia, but rise to cover Bangladesh.
+<p class="figcaptionspacer"></p>
+Image credit: <a href="https://www.esri.com/news/arcuser/0703/geoid2of3.html" target="_blank">Environmental Systems Research Institute</a>; annotation added.
+
+----
+
+Alt: A map simulation of southeast Asia, wherein the sea level has lowered near New Guinea but risen to cover Bangladesh.

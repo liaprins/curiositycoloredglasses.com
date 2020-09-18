@@ -1,0 +1,12 @@
+Notenumber: 29
+
+----
+
+Notecontent: 
+
+I basically just set up a proportional equation to solve for the height of Olympus Mons under Earth’s gravity. Mars has 38% the gravity of Earth, so I inverted 38 (to represent Mars) and 100 (Earth) into their reciprocals: <sup>1</sup>/<sub>38</sub> and <sup>1</sup>/<sub>100</sub> respectively. This was necessary because otherwise solving for the Earth height would result in a number larger than the Mars height, which we know is not the direction things would go. Inverting to reciprocals keeps the relationship between 38 and 100, but results in a smaller Earth height relative to the Mars height. Assuming the height would have a linear relationship to the pull of gravity, we can sub in the height of Olympus Mons on Mars and solve for the missing Earthly height.
+<em><p class="s-textface notecontent">22km / (1 / 38) = x / (1 / 100)</em></p>
+
+----
+
+Title: 29

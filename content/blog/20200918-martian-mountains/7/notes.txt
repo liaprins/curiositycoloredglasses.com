@@ -1,0 +1,12 @@
+Notenumber: 7
+
+----
+
+Notecontent: 
+
+<a href="http://www.census.gov/geographies/reference-files/2010/geo/state-area.html" target="blank">“State Area Measurements and Internal Point Coordinates.” <em>The United States Census Bureau</em>, US Census Bureau, 9 Aug. 2018.
+</a>
+
+----
+
+Title: 7

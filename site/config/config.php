@@ -31,7 +31,7 @@ of the system, please check out http://getkirby.com/docs/advanced/options
 
 /* Make curiositycoloredglasses.com go straight to the main page, instead of curiositycoloredglasses.com/blog */
 /* UN-comment the segment below when launch */
-/*
+
 c::set('home','blog');
 
 c::set('routes', array(
@@ -57,7 +57,7 @@ c::set('routes', array(
     }
   )
 ));
-*/
+
 
 
 /* SETTING UP EMAIL ALERTS FOR COMMENTS VIA KIRBY PLUGIN */
@@ -71,9 +71,6 @@ c::set('comments.email.subject', '"New comment on {{ page.title }} by {{ comment
 /* MAKING COMMENTS' "PAGES" INVISIBLE AUTOMATICALLY SO THEY DON'T RETURN AS SEARCH RESULTS */
 c::set('comments.pages.comment.visible', false);
 
-/* ADDING DEBUGGING ABILITY FOR PHP, WHILE IN CREATION/TESTING MODE ONLY! 
+/* ADDING DEBUGGING ABILITY FOR PHP, WHILE IN CREATION/TESTING MODE ONLY!
 (SHOULD REMOVE BY DELETING THE LINE COMPLETELY BEFORE PUBLISHING PUBLICILY!) */
 c::set('debug', true);
-
-
-

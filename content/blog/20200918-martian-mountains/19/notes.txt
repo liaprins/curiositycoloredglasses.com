@@ -1,0 +1,9 @@
+Notenumber: 19
+
+----
+
+Notecontent: <a href="http://www.meted.ucar.edu/GIS/gravity_intro_2/navmenu.php?tab=1&page=2-2-0&type=flash" target="blank">“Equipotential Surfaces and the Geoid.” <em>Gravity for Geodesy II: Applications</em>, The University Corporation for Atmospheric Research, 2017.</a>
+
+----
+
+Title: 19

@@ -1,0 +1,21 @@
+Vocabword: mantle
+
+----
+
+Pronunciation: 
+
+----
+
+Audiopronunciation: 
+
+----
+
+Definition: The region of a planetary body that is sandwiched by the crust and core, believed to consist of hot, dense silicate rocks (such as <a href="martian-mountains/#olivine">olivine</a>). All terrestrial planets, a number of asteroids, and some planetary moons have mantles. <em>Definition is my own, informed by <a href="https://en.wikipedia.org/wiki/Mantle_(geology)" target="_blank">Wikipedia</a>.</em>
+
+----
+
+Illustration: mantle.png
+
+----
+
+Title: mantle

@@ -2,7 +2,7 @@ Name: Hello
 
 ----
 
-Intro:
+Intro: 
 
 (image: hello.jpg class: aboutimage contentimage)
 
@@ -10,10 +10,16 @@ Welcome to my blog! I’m Lia, and this is where I examine the wonderfully perpl
 
 ----
 
-Text:
+Text: 
 
 Since seventh grade, I’ve cultivated an ever-evolving collection of questions: How is helium harvested? Why does the moon perpetually keep the same face toward Earth? When preceding “glasses”, should I put a hyphen between “curiosity” and “colored”? (see the (link: questionqueue text: Question Queue target: blank) for more on my shortlist). I recorded my first investigation-worthy quandary on the back cover of a spiral-bound notebook, well before Googling it was a feasible option.
 
 And while consulting Google for a quick answer is certainly a possibility now, the questions on this list seem to deserve more: each harbors not only an answer but also a story; beyond simply satisfying my own curiosity, they possess the power to spark someone else’s. So I built this website not only to document my research and its results, but also to provoke the capacity for a curiosity within my readership that changes the way you view the world.
 
+Curiosity is the enemy of ignorance, and we must never stop asking why things are the way they are. Likewise, this habit — if tended to with care and allowed to thrive — forces us to examine our own beliefs and actions with an intensity normally obscured and deflected by our overly protective egos (I speak for myself on that latter part at least).
+
 Now that I’ve laid my ambitions bare, I’d love to hear any queries of your own that deserve in-depth analysis! Send (link: https://twitter.com/CuriosityColor text: @CuriosityColor target: blank) a tweet or email [hello@curiositycoloredglasses.com](mailto:hello@curiositycoloredglasses.com).
+
+----
+
+Title: hello
