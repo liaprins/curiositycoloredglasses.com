@@ -32,6 +32,15 @@ While we are yet unable to predict future climate with certainty, the informatio
 
 ##### Rosetta trees?
 
+<figure id="sketch-holder" data-hash="circles">
+<figcaption class="xs-textface">
+<hr class="toprule">
+Just testing out my little figcaption for my p5 test!
+</figcaption>
+</figure>
+
+(image: dot.svg)
+
 The legacy of A. E. Douglass now resides in "a warren of dim rooms" tucked beneath the football stadium at the University of Arizona. There, in the Laboratory of Tree Ring Research (LTRR), nearly a million specimens of wood⏤from pen-sized cores to cross sections the diameter of small silos⏤are used to ferret out the secrets of the past, including those of climate.
 
 (image: european-panorama-of-austria.jpg)

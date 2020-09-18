@@ -1,0 +1,5 @@
+Caption: To determine the geoid’s height at any inland point, we could theoretically excavate a canal to the sea: the height of the water there will match that of the geoid, by definition. This extension of sea level will be pulled higher where it passes through taller and denser land masses, due to the increased gravity they create.
+
+----
+
+Alt: A sketch of North America with a canal dug straight across, and a cross-section of that canal showing the water level rising slightly at the Rockies and other mountainous regions.

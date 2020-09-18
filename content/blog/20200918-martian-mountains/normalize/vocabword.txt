@@ -1,0 +1,21 @@
+Vocabword: normalize
+
+----
+
+Pronunciation: 
+
+----
+
+Audiopronunciation: 
+
+----
+
+Definition: The adjustment of values to a common scale, for purposes of comparison. <em>Definition is my own.</em>
+
+----
+
+Illustration: 
+
+----
+
+Title: normalize

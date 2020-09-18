@@ -1,0 +1,9 @@
+Notenumber: 23
+
+----
+
+Notecontent: <a href="http://www.avs.org/AVS/files/c7/c7edaedb-95b2-438f-adfb-36de54f87b9e.pdf" target="blank">“Atmospheric Pressure at Different Altitudes .” <em>Science and Technology of Materials, Interfaces, and Processing</em>, AVS.</a>
+
+----
+
+Title: 23

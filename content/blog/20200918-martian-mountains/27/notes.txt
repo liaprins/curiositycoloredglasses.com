@@ -1,0 +1,9 @@
+Notenumber: 27
+
+----
+
+Notecontent: <a href="https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2002JE002031" target="blank">Plescia, J. B. “Morphometric Properties of Martian Volcanoes.” <em>Journal of Geophysical Research</em>, vol. 109, no. E3, 5 Mar. 2004, doi:10.1029/2002je002031.</a>
+
+----
+
+Title: 27

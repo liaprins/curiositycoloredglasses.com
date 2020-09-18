@@ -1,0 +1,9 @@
+Notenumber: 9
+
+----
+
+Notecontent: <a href="http://www.phyast.pitt.edu/~wmwv/Classes/A1122/Literature/Science-2012-Russell-684-6.pdf" target="blank">Russell, C. T., et al. “Dawn at Vesta: Testing the Protoplanetary Paradigm.” <em>Science</em>, vol. 336, no. 6082, 10 May 2012, pp. 684–686., doi:10.1126/science.1219381.</a>
+
+----
+
+Title: 9

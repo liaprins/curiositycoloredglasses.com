@@ -1,0 +1,9 @@
+Caption: 
+
+The Island of Hawai’i, which includes Mauna Kea as well as other volcanoes, is so massive that it puts a literal dent in the crust below it. This in turn results in a seafloor trough ringing the region, as well as an arch further out where the crust is raised about 200 meters (656 feet) above the rest of the seabed.
+<p class="figcaptionspacer"></p>
+(Note that the horizontal scale is squished so that I could fit everything in!)
+
+----
+
+Alt: A cross-section of Mauna Kea, showing the depth to which it depresses the crust below (8,000 meters) and around it (5,000 meters), as well as a resulting arch raised 200 meters above the adjacent seafloor.

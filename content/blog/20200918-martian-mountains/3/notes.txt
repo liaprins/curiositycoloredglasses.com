@@ -1,0 +1,9 @@
+Notenumber: 3
+
+----
+
+Notecontent: <em>Mount Everest</em> (1:50,000 scale map), prepared by Bradford Washburn for the Boston Museum of Science, the Swiss Foundation for Alpine Research, and the National Geographic Society, 1991.
+
+----
+
+Title: 3
