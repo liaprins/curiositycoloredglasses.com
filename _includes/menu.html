@@ -1,0 +1,25 @@
+<nav role="navigation">
+  <details id="navdetails" open>
+    <summary id="navsummary">
+    </summary>
+
+    <!-- Home glasses icon -->
+    <a href="/" title="Curiosity-Colored Glasses">
+      <img src="assets/images/sitewide/home.svg" alt="Curiosity-Colored Glasses" id="homeicon" class="yellowhover">
+    </a>
+    <ul id="navlist">
+      {% for item in site.mainpages %}
+        {% unless item.title == 'Page not found' %}
+        <a href="{{ item.url }}" {% if page.url == item.url %}class="active"{% endif %} class="menuwordlink">
+          <li id="menuword" class="navnothome m-display yellowhover">
+            <span {% if page.url == item.url %}class="active2"{% endif %} href="{{ item.url }}">
+              {{ item.title }}</span></li></a>
+        {% endunless %}
+      {% endfor %}
+    	<!-- I added the searchbar snippet here, inside a list item, so it will be part of the menu list -->
+    	<li id="navsearch" class="navnothome">
+       			<!-- searchbar SNIPPET WAS HERE; NEED TO FIGURE OUT SEARCH FOR JEKYLL -->
+			</li>
+		</ul>
+  </details>
+</nav>

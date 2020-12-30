@@ -1,5 +1,0 @@
-Caption: These early sketches explore the functionalities I’d need to incorporate into my visualization: actionable buttons, an analog clock, and dots depicting location that change over time.
-
-----
-
-Alt: Three rough Processing sketches: the first of a mouse hovering on a white square which changes to red, and then clicking it, changing it to blue. The second depicts a red dot making its way around the perimeter of a circle while the center holds a number counting up. The last has circles changing in location and count quickly.

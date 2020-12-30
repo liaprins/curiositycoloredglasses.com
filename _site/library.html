@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <!-- Google Analytics tracking tag -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-124245560-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-124245560-1');
+  </script>
+
+  <meta charset="utf-8" />
+
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#e2e43a">
+  <meta name="msapplication-TileColor" content="#e2e43a">
+  <meta name="theme-color" content="#e2e43a">
+
+<!-- This is what shows when you bookmark this page, and what's in the browser tab -->
+<title>
+  Library | Curiosity-Colored Glasses
+</title>
+
+<!-- This file has contents that is common, or dynamically called in a common way, for all pages. -->
+
+<!-- The opengraph tags are how Facebook and Pinterest know what to name the parts within its own little link-creator. -->
+<!-- The actual Facebook and Pinterest share buttons themselves are inside the blogarticle-5a-share.php file. -->
+
+
+<!-- The url of the current page -->
+<meta property="og:url"                content="/library" />
+
+<!-- This one was found on Pinterest, may not be supported by Facebook -->
+<meta property="og:site_name"          content="Curiosity-Colored Glasses" />
+
+<!-- This is the page's title/name -->
+<meta property="og:title"              content="Library" />
+
+
+<!-- This file has contents for all pages except blog posts: Home (Blog), About, Archive, Library, search, tag results, error -->
+<!-- The content is dynamically pulled, to be specific to page. -->
+
+<!-- ********************************************* -->
+
+<!-- (I think) these tags are how search engines like Google know what to put with the provided link, and how to find it when people search. -->
+
+<!-- The kirby starter kit directs the description to come from here (content/site.txt) -->
+<!-- <meta name="description" content="<?php echo $site->description()->html() ?>"> -->
+
+<!-- For now using the site tagline from the blog page's field in panel, same as for og:description, below -->
+<!-- Or could pull each page's bit of text (more for About) to be specific to page, with "<?php echo ($page->text()); ?>" -->
+<!-- Should test that this is directing properly -->
+<!-- If want more characters (limit is 155; search engine won't parse or display more), could build a field into panel to hold description -->
+<meta name="description" 				content="Looking at life's little mysteries through the same lens that killed the cat, and living to tell the tale.">
+
+<!-- comma,separated,without,spaces -->
+<meta name="keywords" 				   	content="learning,curiosity,data visualization,questions,education,investigation,facts,science,nature,illustration">
+
+<!-- ********************************************* -->
+
+<!-- Or could pull each page's bit of text (more for About) to be specific to page -->
+<meta property="og:description"         content="Looking at life's little mysteries through the same lens that killed the cat, and living to tell the tale." />
+
+<!-- For now using a single image stored in assets/images/sitewide to represent all pages -->
+<meta property="og:image"               content="assets/images/sitewide/curiositycoloredglasses-facebook.jpg" />
+
+<meta property="og:type"                content="website" />
+
+<meta property="fb:app_id"              content="1816213758596939" />
+
+ 	<!-- Calls the stylesheet that zeroes out the default browser renderings -->
+  <link rel="stylesheet" href="/assets/css/reset.css">
+
+ 	<!-- Calls the stylesheet that hold the designs -->
+ 	<!-- Will combine these into one style sheet by copying and pasting the contents together, once 100% finished, for performance reasons -->
+  <link rel="stylesheet" href="/assets/css/fonts.css">
+  <link rel="stylesheet" href="/assets/css/globalnavfooter.css">
+  <link rel="stylesheet" href="/assets/css/somepages.css">
+  <link rel="stylesheet" href="/assets/css/text.css">
+  <link rel="stylesheet" href="/assets/css/menu-hamburger.css">
+
+ 	<!-- Media queries -->
+  <link rel="stylesheet" href="/assets/css/mediaqueries.css">
+
+</head>
+
+<!-- Adding opening body tag here, since all templates call this head-close.php snippet -->
+<body>
+
+
+<!-- backarrow script -->
+<script src="/assets/js/backarrow-library.js">
+</script>
+
+<!-- This encompasses everything within <body> except for <nav>
+This is so that there is an element that can be clicked on that will be anything except <nav>,
+that will be recognized in JS menu.js script, that can have an event listener applied when it is clicked on, that will close the <nav> -->
+<div id="everythingexceptnav">
+
+  <!-- for backarrow script ^^^ -->
+  <!-- DOES THIS WARRANT AN INCLUDE? OR SHOULD ITS CONTENTS JUST BE INLINE? -->
+  <a id="backarrowcontainer">
+	<!-- THE IMAGE IS BEING SUPPLIED BY THE BACKARROW JS SCRIPT;
+	THE ORIGINAL backarrow.svg IMAGE CAN BE ADDED VIA LIQUID BELOW FOR TESTING, BUT HASN'T BEEN ADDED YET, AND COMMENTING OUT FOR NOW -->
+    <!-- <img src= "assets/images/sitewide/backarrow.svg" alt="back" id="backarrow"> -->
+</a>
+
+
+  <main>
+    <div class="desktopcontent">
+
+        <!-- title of the page -->
+        <h2 id="librarypagename" class="extracontentpagetitle">
+            Library
+        </h2>
+
+        <!-- intro text for the page -->
+        <span id="libraryintro" class="l-textface">
+            <p>Meet my most reached-for resources, capable of simultaneously satisfying and catapulting my curiosity.</p>
+
+        </span>
+
+      </div>
+    </main>
+
+    <!-- Library entries section -->
+    <div id="librarysection">
+      
+        
+        <!-- Image per library entry -->
+        <img src="assets/images/libraryimages/golden-press.jpg" alt="A common black and orange butterfly (not a monarch, though)." title="Golden Press Nature Guides" class="libraryicon" data-id="golden-press" data-clickable="yes" >
+
+        <!-- Content per library entry (hidden until select an entry's image) -->
+        <article style="display: none;" class="libraryentry">
+          <img src= "assets/images/sitewide/x.svg" alt="close" id="library-x" class="yellowhover close-x">
+          <span class="libraryentryname s-display">
+            <p>
+              Golden Press Nature Guides
+            </p>
+          </span>
+          <div class="libraryentryabout s-textface">
+            <p>Field guides are probably my favorite genre of all-time. I read them like novels, cover to cover, entranced by both the natural world and the organizational systems we’ve applied to our understandings of it. Add in my weaknesses (in no particular order) for hand-painted illustrations, offset printing, the perfectly circular o’s featured in the Futura typeface, thumbnail-sized maps, old paperbacks that can fit in my back pocket, and 1970s color palettes—and it’s no wonder that these quaint little retro Golden Guides topped my Christmas list last year. Have no fear, though: while I relish their charm, I do acknowledge that my copies are a few decades out of date, and I will be conducting my zoological and botanical fact checking elsewhere.</p>
+
+          </div>
+        </article>
+      
+        
+        <!-- Image per library entry -->
+        <img src="assets/images/libraryimages/bbc-earth.jpg" alt="An Arabian-centric view of our world." title="BBC Earth" class="libraryicon" data-id="bbc-earth" data-clickable="yes" >
+
+        <!-- Content per library entry (hidden until select an entry's image) -->
+        <article style="display: none;" class="libraryentry">
+          <img src= "assets/images/sitewide/x.svg" alt="close" id="library-x" class="yellowhover close-x">
+          <span class="libraryentryname s-display">
+            <p>
+              BBC Earth
+            </p>
+          </span>
+          <div class="libraryentryabout s-textface">
+            <p>These majestically crafted <a href="https://www.bbcearth.com/" target="_blank">documentaries</a>, nearly all narrated by David Attenborough, brought me wonder and newfound knowledge about everything from killer whale feeding frenzies to hummingbirds that duel with their beaks. They’ve played a crucial role in my determination to bring a better understanding of nature and biology to those outside the field.</p>
+
+          </div>
+        </article>
+      
+        
+        <!-- Image per library entry -->
+        <img src="assets/images/libraryimages/calvin-and-hobbes.jpg" alt="A zooming wagon after Bill Watterson's style." title="Calvin and Hobbes&#58; The Complete Collection, by Bill Watterson" class="libraryicon" data-id="calvin-and-hobbes" data-clickable="yes" >
+
+        <!-- Content per library entry (hidden until select an entry's image) -->
+        <article style="display: none;" class="libraryentry">
+          <img src= "assets/images/sitewide/x.svg" alt="close" id="library-x" class="yellowhover close-x">
+          <span class="libraryentryname s-display">
+            <p>
+              Calvin and Hobbes&#58; The Complete Collection, by Bill Watterson
+            </p>
+          </span>
+          <div class="libraryentryabout s-textface">
+            <p>You know you’ve discovered the world’s best ever comic strip artist when you set out to read their life’s work, planning to put a flag on every page that makes you literally laugh out loud, and you end up with <em>every single page flagged</em>. (Very dangerous if you do this while recovering from a tonsillectomy … consider yourself warned. Also be sure to stock up on sticky notes ahead of time.) Bill Watterson rolls wit, humor, and worldly perspective into one, through incredibly inventive illustrations and idiosyncratic character creation. I feel more than comfortable calling him a genius at what he does, and consider myself lucky to be living at a point and place in history that has allowed me to benefit from his brilliance (even if it set back my post-op healing time a bit).</p>
+
+          </div>
+        </article>
+      
+        
+        <!-- Image per library entry -->
+        <img src="assets/images/libraryimages/trader-joes.jpg" alt="Spoon, fork, and knife in Trader Joe's signature Victorian-vintage style, with a modern twist." title="Trader Joe's Fearless Flyers" class="libraryicon" data-id="trader-joes" data-clickable="yes" >
+
+        <!-- Content per library entry (hidden until select an entry's image) -->
+        <article style="display: none;" class="libraryentry">
+          <img src= "assets/images/sitewide/x.svg" alt="close" id="library-x" class="yellowhover close-x">
+          <span class="libraryentryname s-display">
+            <p>
+              Trader Joe's Fearless Flyers
+            </p>
+          </span>
+          <div class="libraryentryabout s-textface">
+            <p>Trader Joe’s sends out little newspaper-like missives every once in a while, cheekily and cheerfully touting the virtues of their newly stocked or seasonal items. I <em>love</em> reading them. I have a stack at least three inches high that I’ve been saving for years: they’ve survived every move and every massive apartment-wide purge I’ve ever undertaken in an attempt at minimalism. These grocery-centric <a href="https://www.traderjoes.com/fearless-flyer" target="_blank">newsletters</a> are just so joyous, silly, and self-aware; I dig into my stack whenever I need inspiration for finding my own writer’s voice.</p>
+
+          </div>
+        </article>
+      
+        
+        <!-- Image per library entry -->
+        <img src="assets/images/libraryimages/freakonomics.jpg" alt="A watercolor take on the classic Freakonomics logo of green apple with orange-the-fruit interior." title="Freakonomics" class="libraryicon" data-id="freakonomics" data-clickable="yes" >
+
+        <!-- Content per library entry (hidden until select an entry's image) -->
+        <article style="display: none;" class="libraryentry">
+          <img src= "assets/images/sitewide/x.svg" alt="close" id="library-x" class="yellowhover close-x">
+          <span class="libraryentryname s-display">
+            <p>
+              Freakonomics
+            </p>
+          </span>
+          <div class="libraryentryabout s-textface">
+            <p>Stephen Dubner, the host of this <a href="http://freakonomics.com/archive/" target="_blank">podcast</a> and co-author of a book or two of the same name, is my favorite interviewer on the air. He is unbiased but exceedingly personable in his interrogations after the truth, siding with nothing short of critical thought. He manages to measure the seemingly unmeasurable—squishy social science things like the concept of creativity, for example—revealing every detail of his protocol along the way, and sussing out and scrutinizing those of others he talks to. I listen to the show as much for its intriguing content as for Dubner’s journalistic methods.</p>
+
+          </div>
+        </article>
+      
+        
+        <!-- Image per library entry -->
+        <img src="assets/images/libraryimages/p5.jpg" alt="p5's pink asterisk logo, chalk-ified." title="p5.js" class="libraryicon" data-id="p5" data-clickable="yes" >
+
+        <!-- Content per library entry (hidden until select an entry's image) -->
+        <article style="display: none;" class="libraryentry">
+          <img src= "assets/images/sitewide/x.svg" alt="close" id="library-x" class="yellowhover close-x">
+          <span class="libraryentryname s-display">
+            <p>
+              p5.js
+            </p>
+          </span>
+          <div class="libraryentryabout s-textface">
+            <p><a href="https://processing.org/" target="_blank">Processing</a> is, in the words of the <a href="https://processingfoundation.org/" target="_blank">foundation</a> behind it, “a flexible software sketchbook and a language for learning how to code within the context of the visual arts”. When I learned it as fledgling designer, I knew I’d caught the coding bug. <a href="http://p5js.org/" target="_blank">p5.js</a> is even better, because it’s an adaptation of Processing that can be built into websites so that its outputs can be shared across the web! Keep an eye out for the p5-dependent interactive modules—or sketches as they’re called in Processing-speak—across my Curiosity-Colored Glasses posts!</p>
+
+          </div>
+        </article>
+      
+        
+        <!-- Image per library entry -->
+        <img src="assets/images/libraryimages/charley-harper.jpg" alt="A geometric-inspired hummingbird illustration." title="Charley Harper&#58; An Illustrated Life, by Todd Oldham" class="libraryicon" data-id="charley-harper" data-clickable="yes" >
+
+        <!-- Content per library entry (hidden until select an entry's image) -->
+        <article style="display: none;" class="libraryentry">
+          <img src= "assets/images/sitewide/x.svg" alt="close" id="library-x" class="yellowhover close-x">
+          <span class="libraryentryname s-display">
+            <p>
+              Charley Harper&#58; An Illustrated Life, by Todd Oldham
+            </p>
+          </span>
+          <div class="libraryentryabout s-textface">
+            <p>Charley Harper’s prolific compendium of paintings, posters, murals, and more combine my love of the natural world with my fondness for modern geometric lines and grid systems. This digest serves as a visual stroll through Harper’s career as an artist, biology book illustrator, and conservationist. I pull it off the shelf any time I need to simplify a visual concept or illustration.</p>
+
+          </div>
+        </article>
+      
+        
+        <!-- Image per library entry -->
+        <img src="assets/images/libraryimages/ted-ed.jpg" alt="TED-Ed's brain-filled-with-cool-stuff logo." title="TED-Ed" class="libraryicon" data-id="ted-ed" data-clickable="yes" >
+
+        <!-- Content per library entry (hidden until select an entry's image) -->
+        <article style="display: none;" class="libraryentry">
+          <img src= "assets/images/sitewide/x.svg" alt="close" id="library-x" class="yellowhover close-x">
+          <span class="libraryentryname s-display">
+            <p>
+              TED-Ed
+            </p>
+          </span>
+          <div class="libraryentryabout s-textface">
+            <p>This overwhelming <a href="https://ed.ted.com/lessons?content_type=animations&amp;direction=desc&amp;sort=publish-date" target="_blank">collection</a>—in both quality and quantity—of short animated videos are intended to enhance teachers’ curriculums, but have also transformed my rainy day elliptical machine workouts from sweaty and boring (a.k.a. non-existent usually) to educational and awe-inspiring. They even have <a href="https://ed.ted.com/series/animation-basics" target="_blank">tutorials</a> about the animation used in some of the videos.</p>
+
+          </div>
+        </article>
+      
+        
+        <!-- Image per library entry -->
+        <img src="assets/images/libraryimages/radiolab.jpg" alt="A freehand version of Radiolab's logo." title="Radiolab's early episodes" class="libraryicon" data-id="radiolab" data-clickable="yes" >
+
+        <!-- Content per library entry (hidden until select an entry's image) -->
+        <article style="display: none;" class="libraryentry">
+          <img src= "assets/images/sitewide/x.svg" alt="close" id="library-x" class="yellowhover close-x">
+          <span class="libraryentryname s-display">
+            <p>
+              Radiolab's early episodes
+            </p>
+          </span>
+          <div class="libraryentryabout s-textface">
+            <p>The original, almost hour-long episodes out of Radiolab are some of my very favorite science journalism. Flu-afflicted, I listened to the <a href="https://www.wnycstudios.org/story/shrink" target="_blank">Mimiviruses</a> episode during an otherwise insufferable traffic jam in Tel Aviv and it made me nervous that the cars would start moving again before I could finish it. My other two favorites are about <a href="https://www.wnycstudios.org/story/91684-stochasticity" target="_blank">chance</a> and <a href="https://www.wnycstudios.org/story/211119-colors" target="_blank">color</a>.</p>
+
+          </div>
+        </article>
+      
+        
+        <!-- Image per library entry -->
+        <img src="assets/images/libraryimages/flatland.jpg" alt="A. Square, yellow and happy." title="Flatland, by Edwin A. Abbott" class="libraryicon" data-id="flatland" data-clickable="yes" >
+
+        <!-- Content per library entry (hidden until select an entry's image) -->
+        <article style="display: none;" class="libraryentry">
+          <img src= "assets/images/sitewide/x.svg" alt="close" id="library-x" class="yellowhover close-x">
+          <span class="libraryentryname s-display">
+            <p>
+              Flatland, by Edwin A. Abbott
+            </p>
+          </span>
+          <div class="libraryentryabout s-textface">
+            <p>If you happened to have set a new year’s resolution along the lines of “come to truly understand the implications of Einstein’s theory of relativity, to a point where I believe it in my bones, not just my brain” and are wondering how you’ll ever accomplish it, fear not, I’ve been through that whole rigamarole myself. I’d recommend starting your journey to enlightenment with a copy of <em>Flatland</em>, and one with an introduction by Rosemary Jann. She sets Abbott’s story up in the context of the time it was written—just a decade or so prior to Einstein’s relativity work, when the notion of extra-dimensional thinking was just starting to be explored. <em>Flatland</em> drops its readers into a 2-D world with a square playing protagonist. I’ll let you read the riveting, geometry-heavy plot yourself, but I will say that if you adore walking, talking, inanimate objects a fraction as much as I do, you’ll be delighted to have A. Square as your guide to acquiring a higher understanding of the physical world.</p>
+
+          </div>
+        </article>
+      
+        
+        <!-- Image per library entry -->
+        <img src="assets/images/libraryimages/wow-in-the-world.jpg" alt="Reggie the giant pigeon, in accordance with my imagination." title="Wow in the World!" class="libraryicon" data-id="wow-in-the-world" data-clickable="yes" >
+
+        <!-- Content per library entry (hidden until select an entry's image) -->
+        <article style="display: none;" class="libraryentry">
+          <img src= "assets/images/sitewide/x.svg" alt="close" id="library-x" class="yellowhover close-x">
+          <span class="libraryentryname s-display">
+            <p>
+              Wow in the World!
+            </p>
+          </span>
+          <div class="libraryentryabout s-textface">
+            <p>I am one of the (hypothesized) many adults who consider themselves both proud and avid fanatics of this exuberant <a href="https://tinkercast.com/shows/wow-in-the-world/" target="_blank">podcast</a> (which possibly considers itself aimed at children). Hosted by the hilariously paired and hyperbolic Mindy Thomas and Guy Raz, I am unceasingly in awe of their ability to pull me into their wondrously-imagined world, as much as I am of the pertinent scientific topics they examine. This podcast is a must-listen; I can’t even choose a favorite episode.</p>
+
+          </div>
+        </article>
+      
+        
+        <!-- Image per library entry -->
+        <img src="assets/images/libraryimages/pentel-rolling-writers.jpg" alt="A green Pentel Rolling Writer's cap, encapsulated in a variable-width heart outline." title="Pentel Rolling Writers" class="libraryicon" data-id="pentel-rolling-writers" data-clickable="yes" >
+
+        <!-- Content per library entry (hidden until select an entry's image) -->
+        <article style="display: none;" class="libraryentry">
+          <img src= "assets/images/sitewide/x.svg" alt="close" id="library-x" class="yellowhover close-x">
+          <span class="libraryentryname s-display">
+            <p>
+              Pentel Rolling Writers
+            </p>
+          </span>
+          <div class="libraryentryabout s-textface">
+            <p>You know those pens that make your handwriting look stunning, and bring out the best in all your doodled curlicues? If you don’t, you really should get around to inventorying the world’s expansive supply of mark-making tools, and I’d urge you to start with the very affordable Pentel Rolling Writer. I admire Pentel’s retro designs across much of their writing utensil portfolio, and the Rolling Writers are no exception. But what I truly adore about these pens are their ability to produce lines of variable widths, which is a rarity in the roller ball arena. I should say that this very trait I’m touting is what many loathe in a pen, so it’s not for everyone—particularly if you tend to hold your pens at an angle approaching perpendicular to your writing surface, which will result in a very thin, scratchy stroke. But for those with very angled grips, the ink flows freely. I keep a Rolling Writer on-hand in every purse, backpack, glove compartment, and desk drawer I own.</p>
+
+          </div>
+        </article>
+      
+        
+        <!-- Image per library entry -->
+        <img src="assets/images/libraryimages/random-house-thesaurus.jpg" alt="the-sau-rus, stacked." title="The Random House Thesaurus" class="libraryicon" data-id="random-house-thesaurus" data-clickable="yes" >
+
+        <!-- Content per library entry (hidden until select an entry's image) -->
+        <article style="display: none;" class="libraryentry">
+          <img src= "assets/images/sitewide/x.svg" alt="close" id="library-x" class="yellowhover close-x">
+          <span class="libraryentryname s-display">
+            <p>
+              The Random House Thesaurus
+            </p>
+          </span>
+          <div class="libraryentryabout s-textface">
+            <p>As a 6th grader, this birthday present (yes, I requested it) saw me through several drafts of an entire spy novella and a few chapters of a potential sequel. I can confidently say that my middle school vocabulary tutor is just as reliable now as it was then.</p>
+
+          </div>
+        </article>
+      
+        
+        <!-- Image per library entry -->
+        <img src="assets/images/libraryimages/642-tiny-things-to-draw.jpg" alt="The number 642 doodled with hashmarks." title="642 Tiny Things to Draw" class="libraryicon" data-id="642-tiny-things-to-draw" data-clickable="yes" >
+
+        <!-- Content per library entry (hidden until select an entry's image) -->
+        <article style="display: none;" class="libraryentry">
+          <img src= "assets/images/sitewide/x.svg" alt="close" id="library-x" class="yellowhover close-x">
+          <span class="libraryentryname s-display">
+            <p>
+              642 Tiny Things to Draw
+            </p>
+          </span>
+          <div class="libraryentryabout s-textface">
+            <p>When I first saw this book for sale in a coffee shop I instantly felt less alone in the world, simply based on the fact that there was a market serving the intersection of doodlers and lovers of tiny objects. I crack this book open whenever I feel like drawing but can’t come up with a prompt of my own, or am feeling too perfectionist-y to draw loosely and need to warm up.</p>
+
+          </div>
+        </article>
+      
+        
+        <!-- Image per library entry -->
+        <img src="assets/images/libraryimages/coursera-information-visualization-specialization.jpg" alt="A freehand version of Coursera's infinity loop logo." title="Coursera's Information Visualization Classes" class="libraryicon" data-id="coursera-information-visualization-specialization" data-clickable="yes" >
+
+        <!-- Content per library entry (hidden until select an entry's image) -->
+        <article style="display: none;" class="libraryentry">
+          <img src= "assets/images/sitewide/x.svg" alt="close" id="library-x" class="yellowhover close-x">
+          <span class="libraryentryname s-display">
+            <p>
+              Coursera's Information Visualization Classes
+            </p>
+          </span>
+          <div class="libraryentryabout s-textface">
+            <p>Coursera is an online class offerer, featuring instructors from many well-renowned universities. I audited all the <a href="https://www.coursera.org/specializations/information-visualization" target="_blank">Information Visualization</a> courses—led by NYU professor and researcher Enrico Bertini—for free, and it was more than worth every penny. The lessons covered practical considerations for designing data visualizations, and distilled a plethora of research around human visual perception into consumable nuggets. I filled a medium-sized Rollbahn notebook cover to cover with notes, and am still poring over what I learned to figure out how I can best apply it to my work.</p>
+
+          </div>
+        </article>
+      
+        
+        <!-- Image per library entry -->
+        <img src="assets/images/libraryimages/sketchbook-skool.jpg" alt="A freehand version of Sketchbook Skool's multi-colored paint drip motif." title="Sketchbook Skool" class="libraryicon" data-id="sketchbook-skool" data-clickable="yes" >
+
+        <!-- Content per library entry (hidden until select an entry's image) -->
+        <article style="display: none;" class="libraryentry">
+          <img src= "assets/images/sitewide/x.svg" alt="close" id="library-x" class="yellowhover close-x">
+          <span class="libraryentryname s-display">
+            <p>
+              Sketchbook Skool
+            </p>
+          </span>
+          <div class="libraryentryabout s-textface">
+            <p>Danny Gregory and Koosje Koene co-founded this <a href="https://klass.sketchbookskool.com/" target="_blank">purveyor of online courses</a> around art, drawing, making, and general creativity. You can tell that they and the artists and illustrators they invite to teach all love what they do. I follow along on their free <a href="https://www.youtube.com/channel/UCnwAvNKzdoFgRyvXEBJBv0Q" target="_blank">YouTube channel</a> for behind-the-scenes interviews and tips, and am unceasingly inspired by the varying approaches and styles they showcase.</p>
+
+          </div>
+        </article>
+      
+        
+        <!-- Image per library entry -->
+        <img src="assets/images/libraryimages/sunday-sketching.jpg" alt="A navy blue ink pot illustration." title="Sunday Sketching, by Christoph Niemann" class="libraryicon" data-id="sunday-sketching" data-clickable="yes" >
+
+        <!-- Content per library entry (hidden until select an entry's image) -->
+        <article style="display: none;" class="libraryentry">
+          <img src= "assets/images/sitewide/x.svg" alt="close" id="library-x" class="yellowhover close-x">
+          <span class="libraryentryname s-display">
+            <p>
+              Sunday Sketching, by Christoph Niemann
+            </p>
+          </span>
+          <div class="libraryentryabout s-textface">
+            <p>This is more than just an artistic coffee table book; it bears an honest and enlightening account of the struggles involved in making one’s living as a creative. I love Niemann’s <a href="http://www.christophniemann.com/portfolio/sunday-sketches-2/" target="_blank">illustrations</a> as much for their cleverness as for their simplicity and craftsmanship: every line and ink wash is perfectly placed, in a way that comes off as effortless.</p>
+
+          </div>
+        </article>
+      
+        
+        <!-- Image per library entry -->
+        <img src="assets/images/libraryimages/yoobi-highlighters.jpg" alt="Drawing of all ten Yoobi's looking their most radially radiant." title="Yoobi highlighters" class="libraryicon" data-id="yoobi-highlighters" data-clickable="yes" >
+
+        <!-- Content per library entry (hidden until select an entry's image) -->
+        <article style="display: none;" class="libraryentry">
+          <img src= "assets/images/sitewide/x.svg" alt="close" id="library-x" class="yellowhover close-x">
+          <span class="libraryentryname s-display">
+            <p>
+              Yoobi highlighters
+            </p>
+          </span>
+          <div class="libraryentryabout s-textface">
+            <p>Color-coding is an imperative part of my process when it comes to planning scripts and other complex code, so the more hues, the better. But that’s not the only criteria that these <a href="https://www.target.com/p/yoobi-153-mini-highlighters-multicolor-10-pack/-/A-15103318" target="_blank">mini highlighters</a> deliver on: each is only about the size of a blanket-less pig-in-a-blanket, but that’s exactly what attracted me to them in the Target school supply aisle in the first place. Not only are tiny things great for their cuteness value, they’re also convenient: I’ve toted all ten of these colorful li’l fluorescence-dispensing piggies to many a coffee shop in one of my favorite (also tiny) zippered pencil pouches for a working session.</p>
+
+          </div>
+        </article>
+      
+        
+        <!-- Image per library entry -->
+        <img src="assets/images/libraryimages/painting-nature-in-watercolor.jpg" alt="A watercolored house wren chirping." title="Painting Nature in Watercolor, by Cathy Johnson" class="libraryicon" data-id="painting-nature-in-watercolor" data-clickable="yes" >
+
+        <!-- Content per library entry (hidden until select an entry's image) -->
+        <article style="display: none;" class="libraryentry">
+          <img src= "assets/images/sitewide/x.svg" alt="close" id="library-x" class="yellowhover close-x">
+          <span class="libraryentryname s-display">
+            <p>
+              Painting Nature in Watercolor, by Cathy Johnson
+            </p>
+          </span>
+          <div class="libraryentryabout s-textface">
+            <p>This book will make you want to go explore North America on foot with nothing but a cute little mini traveling watercolor kit, or at least eat breakfast outside while sketching a squirrel. The pages are filled with snippets from the author-artist’s own sketchpads, nestled in amongst 37 step-by-step painting tutorials. I take it down whenever I want some inspiration in the way of hand-rendered explanatory drawings.</p>
+
+          </div>
+        </article>
+      
+        
+        <!-- Image per library entry -->
+        <img src="assets/images/libraryimages/this-is-rembrandt.jpg" alt="A remake of a Rembrandt self-portrait, in teal." title="This is Rembrandt, illustrated by Nick Higgins" class="libraryicon" data-id="this-is-rembrandt" data-clickable="yes" >
+
+        <!-- Content per library entry (hidden until select an entry's image) -->
+        <article style="display: none;" class="libraryentry">
+          <img src= "assets/images/sitewide/x.svg" alt="close" id="library-x" class="yellowhover close-x">
+          <span class="libraryentryname s-display">
+            <p>
+              This is Rembrandt, illustrated by Nick Higgins
+            </p>
+          </span>
+          <div class="libraryentryabout s-textface">
+            <p>Nick Higgins’ colorfully textured mixed media <a href="https://nickhiggins.co.uk/2016/06/10/pronk-drawing-for-this-is-rembrandt/" target="_blank">illustrations</a> are delightful, and make me extra-grateful that I have accidentally amassed a huge shelf full of art supplies over the years. The style of the imagery in this book makes me want to use them all, and unsparingly, in my own illustrations for Curiosity-Colored Glasses posts.</p>
+
+          </div>
+        </article>
+      
+        
+        <!-- Image per library entry -->
+        <img src="assets/images/libraryimages/kirby.jpg" alt="A freehand version of the Kirby logo." title="Kirby" class="libraryicon" data-id="kirby" data-clickable="yes" >
+
+        <!-- Content per library entry (hidden until select an entry's image) -->
+        <article style="display: none;" class="libraryentry">
+          <img src= "assets/images/sitewide/x.svg" alt="close" id="library-x" class="yellowhover close-x">
+          <span class="libraryentryname s-display">
+            <p>
+              Kirby
+            </p>
+          </span>
+          <div class="libraryentryabout s-textface">
+            <p><a href="https://getkirby.com/" target="_blank">Kirby</a> is the infrastructure behind the content management system (CMS) I built into this very website. It’s extremely flexible and well documented, which is why I chose it: I couldn’t find any other CMS that would let me design and build-in all the little content-filled details I had in mind, while providing web performance equivalent to a static site. However, it was not an easy task at all; Kirby uses PHP, so I had to learn that coding language from scratch, the syntax of which leaves much to be desired. Kirby has a fantastically responsive forum though, and they helped me with nearly every challenge I encountered and could not solve through my own sheer will and external research.</p>
+
+          </div>
+        </article>
+      
+        
+        <!-- Image per library entry -->
+        <img src="assets/images/libraryimages/html-css-js-jquery.jpg" alt="A freehand version of the logo on the books&#58; a diamond with each edge a different color." title="HTML & CSS + JavaScript & JQuery, by Jon Duckett" class="libraryicon" data-id="html-css-js-jquery" data-clickable="yes" >
+
+        <!-- Content per library entry (hidden until select an entry's image) -->
+        <article style="display: none;" class="libraryentry">
+          <img src= "assets/images/sitewide/x.svg" alt="close" id="library-x" class="yellowhover close-x">
+          <span class="libraryentryname s-display">
+            <p>
+              HTML & CSS + JavaScript & JQuery, by Jon Duckett
+            </p>
+          </span>
+          <div class="libraryentryabout s-textface">
+            <p>These are great books for any beginners looking to become semi-competent in browser-based code. However, be warned that they are a bit out of date: the <details>&lt;summary&gt; HTML tags, CSS Variables, and JavaScript’s classList method are not covered, and anyone building a website should know about them (I wish I’d known when I built this one!). Furthermore, media queries are not touched upon at all. Still, I referenced these books often as I built this site and am sure I will continue to rely on them as I go about my business squashing bugs.</details></p>
+
+          </div>
+        </article>
+      
+        
+        <!-- Image per library entry -->
+        <img src="assets/images/libraryimages/learning-responsive-web-design.jpg" alt="A simplified remake of the cover art, which features a sea anemone." title="Learning Responsive Web Design, by Clarissa Peterson" class="libraryicon" data-id="learning-responsive-web-design" data-clickable="yes" >
+
+        <!-- Content per library entry (hidden until select an entry's image) -->
+        <article style="display: none;" class="libraryentry">
+          <img src= "assets/images/sitewide/x.svg" alt="close" id="library-x" class="yellowhover close-x">
+          <span class="libraryentryname s-display">
+            <p>
+              Learning Responsive Web Design, by Clarissa Peterson
+            </p>
+          </span>
+          <div class="libraryentryabout s-textface">
+            <p>Once you’ve mastered the basics of browser-based coding, you’ll need to learn all about designing and executing sites that respond properly to all screen sizes. This book, published by O’Reilly, does the job. My copy is riddled with flags and margin notes.</p>
+
+          </div>
+        </article>
+      
+        
+        <!-- Image per library entry -->
+        <img src="assets/images/libraryimages/tufte-books.jpg" alt="Stacked sparklines, of Tufte fame." title="Edward Tufte's quartet of information visualization books" class="libraryicon" data-id="tufte-books" data-clickable="yes" >
+
+        <!-- Content per library entry (hidden until select an entry's image) -->
+        <article style="display: none;" class="libraryentry">
+          <img src= "assets/images/sitewide/x.svg" alt="close" id="library-x" class="yellowhover close-x">
+          <span class="libraryentryname s-display">
+            <p>
+              Edward Tufte's quartet of information visualization books
+            </p>
+          </span>
+          <div class="libraryentryabout s-textface">
+            <p>First, a few caveats: these are heady; take the time to fully fathom the text and examine the imagery (alternatively, have a look at my <a href="https://www.instagram.com/dataviscliffsnotes/" target="_blank">in-progress “Cliffs notes”</a>). Take the words in these books with several salt grains and be selective about the truths you take away; designing for data and information is not black and white and there will always be best-practice tradeoffs. I found The Quantitative Display of Visual Information and Envisioning Information to be the best investment of my time, the other two largely re-hashed the same concepts and examples, providing diminishing returns. That being said, there are some very useful ideas and ideals analyzed at length in these books, and anyone serious about data and information visualization would be wise to dig into them deeply.</p>
+
+          </div>
+        </article>
+      
+    </div> <!-- #librarysection -->
+
+    <script src="assets/js/library.js">
+    </script>
+
+<!-- FORMERLY footer-sitewide SNIPPET vvv ******************************************************************** -->
+
+            <footer role="contentinfo">
+              <div id="footercontent">
+
+                  
+
+<form action="//curiositycoloredglasses.us14.list-manage.com/subscribe/post?u=05f8f85154975a52907f2ce4d&amp;id=086ebe8644" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+
+
+
+	 <!-- "Subscribe" button -->
+	 <!-- moving to be before the email input form so that I can use the adjacent element rule in the CSS to get the email form to chagne states when button is hovered on -->
+    <!-- <input type="submit" value="Subscribe" name="subscribe" class="xs-display boxbutton subscribebutton" id="mc-embedded-subscribe"> -->
+
+
+	<!-- For some reason, this needs to stay for the validation and ability to submit email -->
+	<span class="mc-field-group">
+		<input type="email" value="" name="EMAIL" class="boxinput s-textface" id="mce-EMAIL" placeholder="Email address">
+	</span>
+
+
+	<!-- NOT SURE WHY THIS IS NEEDED, BUT PROBABLY KEEP EVERYTHING INSIDE THIS TAG SO IT FUNCTIONS PROPERLY! -->
+    <span style="position: absolute; left: -5000px;" aria-hidden="true">
+    	<input type="text" name="b_05f8f85154975a52907f2ce4d_086ebe8644" tabindex="-1" value="">
+    </span>
+
+
+	 <!-- "Subscribe" button -->
+    <input type="submit" value="Subscribe" name="subscribe" class="xs-display boxbutton subscribebutton" id="mc-embedded-subscribe">
+
+
+</form>
+
+
+<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+<!-- HONEYPOT VALIDATION? ^^^ PROBABLY KEEP EVERYTHING INSIDE THIS TAG SO IT FUNCTIONS PROPERLY! -->
+<!--
+<span id="mce-responses" class="clear">
+
+	<span class="response" id="mce-error-response" style="display:none">
+	</span>
+
+	<span class="response" id="mce-success-response" style="display:none">
+	Thank you!
+	</span>
+
+</span> -->
+<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+
+
+<p class="xs-textface" id="subscribemessage">
+	Find out about new posts!
+	<a href="http://us14.campaign-archive2.com/home/?u=05f8f85154975a52907f2ce4d&id=086ebe8644" title="View previous campaigns" target="_blank">
+		See an example email first.
+	</a>
+</p>
+
+
+<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'>
+</script>
+
+<script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);
+</script>
+
+<!--End mc_embed_signup-->
+
+
+                <!-- Link to my Instagram profile + Twitter + portfolio -->
+                <span id="follow">
+
+	<!-- Link to my instagram page -->
+	<a href="https://www.instagram.com/curiositycoloredglasses/" title="Follow on Instagram" target="_blank">
+		<img src= "assets/images/sitewide/Instagram.svg" alt="Follow me on Instagram" id="instagramlogo" class="followicon socialicon">
+	</a>
+
+
+	<!-- Link to @CuriosityColor twitter page -->
+	<a href="https://twitter.com/CuriosityColor" title="Follow on Twitter" target="_blank">
+		<img src= "assets/images/sitewide/Twitter.svg" alt="Follow me on Twitter" class="followicon socialicon">
+	</a>
+
+
+	<!-- Link to my portfolio website -->
+	<a href="http://liaprins.com/" target="_blank" id="portfolio" class="m-textface bold">
+		liaprins.com
+	</a>
+
+</span>
+
+
+              </div>
+            </footer>
+
+            <!--This is the pinterest script, instructed to place right before closing </body> tag-->
+            <script async defer src="//assets.pinterest.com/js/pinit.js">
+            </script>
+
+            <!--This encompasses everything within <body> except for <nav>. This is so that there is an element that can be clicked on that will be anything except <nav>, that will be recognized in JS menu.js script, that can have an event listener applied when it is clicked on, that will close the <nav> -->
+            </div>
+            <!-- Menu has to be called here, to account for a major Safari bug: Safari renders anything measured in rems at 1px, if it comes after a <details> tag... and my menu is within a <details> tag, so it was messing up everything with rems in Safari. Moving menu to the very bottom means there is nothing in the html after it, so it is fine. The menu is styled in css to position it absolutely at the top -->
+            <nav role="navigation">
+  <details id="navdetails" open>
+    <summary id="navsummary">
+    </summary>
+
+    <!-- Home glasses icon -->
+    <a href="/" title="Curiosity-Colored Glasses">
+      <img src="assets/images/sitewide/home.svg" alt="Curiosity-Colored Glasses" id="homeicon" class="yellowhover">
+    </a>
+    <ul id="navlist">
+      
+        
+        <a href="/hello"  class="menuwordlink">
+          <li id="menuword" class="navnothome m-display yellowhover">
+            <span  href="/hello">
+              Hello</span></li></a>
+        
+      
+        
+        <a href="/questionqueue"  class="menuwordlink">
+          <li id="menuword" class="navnothome m-display yellowhover">
+            <span  href="/questionqueue">
+              Question Queue</span></li></a>
+        
+      
+        
+        <a href="/library" class="active" class="menuwordlink">
+          <li id="menuword" class="navnothome m-display yellowhover">
+            <span class="active2" href="/library">
+              Library</span></li></a>
+        
+      
+        
+      
+        
+        <a href="/archive"  class="menuwordlink">
+          <li id="menuword" class="navnothome m-display yellowhover">
+            <span  href="/archive">
+              Archive</span></li></a>
+        
+      
+    	<!-- I added the searchbar snippet here, inside a list item, so it will be part of the menu list -->
+    	<li id="navsearch" class="navnothome">
+       			<!-- searchbar SNIPPET WAS HERE; NEED TO FIGURE OUT SEARCH FOR JEKYLL -->
+			</li>
+		</ul>
+  </details>
+</nav>
+
+
+            <!-- Calling the JS scripts used on everypage; they need to come after the menu is called, to else they will have no effect on the menu items they are intended for -->
+            <script src="/assets/js/menu.js">
+</script>
+
+<script src="/assets/js/search.js">
+</script>
+
+<!--may need to move to right before footer is called (this one withOUT ".../" for all pages except tag and blogarticle) -->
+<!--
+<script src="/assets/js/loader.js">
+</script>
+-->
+
+
+<!--FORMERLY footer-sitewide SNIPPET ^^^ ******************************************************************** -->
+
+  </body>
+</html>

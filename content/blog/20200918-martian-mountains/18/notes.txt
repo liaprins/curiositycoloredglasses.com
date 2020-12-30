@@ -1,9 +1,0 @@
-Notenumber: 18
-
-----
-
-Notecontent: <a href="http://www.meted.ucar.edu/GIS/gravity_intro/navmenu.php?tab=1&page=3-2-2&type=flash" target="blank">“Understanding the Components of Earth’s Gravity Field.” <em>Gravity for Geodesy I: Foundations</em>, The University Corporation for Atmospheric Research, 2017.</a>
-
-----
-
-Title: 18

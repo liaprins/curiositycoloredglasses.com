@@ -1,9 +1,0 @@
-Notenumber: 26
-
-----
-
-Notecontent: <a href="https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2004JE002262" target="blank">Neumann, G. A. “Crustal Structure of Mars from Gravity and Topography.” <em>Journal of Geophysical Research</em>, vol. 109, no. E8, 1 Aug. 2004, doi:10.1029/2004je002262.</a>
-
-----
-
-Title: 26

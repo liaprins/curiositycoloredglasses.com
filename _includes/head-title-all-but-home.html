@@ -1,0 +1,4 @@
+<!-- This is what shows when you bookmark this page, and what's in the browser tab -->
+<title>
+  {% if page.url contains '/tags/' %}#{{ page.tag-name }}{% else %}{{ page.title }}{% endif %} | Curiosity-Colored Glasses
+</title>

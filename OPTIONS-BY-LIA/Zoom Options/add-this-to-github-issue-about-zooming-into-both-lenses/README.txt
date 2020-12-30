@@ -1,1 +1,0 @@
-This is a code prototype folder that demos how each zoom approach works. Just drag the index.html file into a browser.

@@ -1,9 +1,0 @@
-Notenumber: 2
-
-----
-
-Notecontent: <a href="http://www.mbari.org/flexural-arch/" target="blank">Fulton-Bennett, Kim. “Hawaiian Flexural Arch.” <em>Monterey Bay Aquarium Research Institute</em>, 4 June 2019.</a>
-
-----
-
-Title: 2

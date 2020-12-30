@@ -1,5 +1,0 @@
-Caption: I have a caption of my very own, and I am the first image of my little family.
-
-----
-
-Alt: alt

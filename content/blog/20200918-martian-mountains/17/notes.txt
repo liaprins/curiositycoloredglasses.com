@@ -1,9 +1,0 @@
-Notenumber: 17
-
-----
-
-Notecontent: <a href="http://www.meted.ucar.edu/GIS/datums_lesson_1/navmenu.php?tab=1&page=3-2-0&type=flash" target="blank">“Why Use It as a Datum; Pros and Cons.” <em>Understanding Heights and Vertical Datums</em>, The University Corporation for Atmospheric Research, 2015.</a>
-
-----
-
-Title: 17

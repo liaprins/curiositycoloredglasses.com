@@ -1,0 +1,298 @@
+/* Binocular images will be called by the code in iterative groups: S then M then L. 
+But they should be arranged within the Kirby panel in an order that reflects the way they'll appear on the site. 
+This way the CSS can properly target certain binoculars to override their default JavaScript-set positions and prevent them from blocking the text and menu.
+This pattern within the Kirby panel should be as follows:
+ Row 1: L S L S L S
+ Row 2: S M S M S M
+ Row 3: S L S L S L
+ Row 4: S M S M S M
+ Row 5: (start back over with top row pattern) */
+
+/* 1360 and up -------------------------------------- */
+@media (min-width: 1360px) {
+    .qqpiece:nth-child(3) > .qqcontents {    
+        left: calc((var(--contentwidth) / -2) + (var(--binocwidth-l) / 2)) !important; }
+    .qqpiece:nth-child(3) .sharkfin,
+    .qqpiece:nth-child(3) .bordercover {
+        left: calc((var(--contentwidth) / 2) - var(--edgemargin) - 0.125rem) !important;   }
+}
+
+/* 1225px and wider --------------------------------------
+Starting at widest screenwidth and working down with mediaqueries (opposite method I usually employ)
+so that at smaller sizes I can add display: none; to more binocular pairs as more start to overlap text */
+.qqpiece:nth-child(1) {
+    top: 45px !important;
+    margin-top: 0 !important;
+    left: calc(50vw - 650px) !important;
+    margin-left: 0 !important;    }
+.qqpiece:nth-child(3) {
+    top: -5px !important;
+    margin-top: 0px !important;
+    left: calc(50vw - 285px) !important;
+    margin-left: 0 !important;    }
+.qqpiece:nth-child(4) {
+    top: 65px !important;
+    margin-top: 0 !important;
+    left: calc(50vw + 348px) !important;
+    margin-left: 0 !important;    }
+.qqpiece:nth-child(5) {
+    top: 75px !important;
+    margin-top: 0 !important;
+    left: calc(50vw + 233px - 170px) !important;
+    margin-left: 0 !important;    }
+.qqpiece:nth-child(6) {
+    top: 65px !important;    }
+.qqpiece:nth-child(10) {
+    top: 500px !important;
+    margin-top: 0 !important;
+    left: calc(50vw - 713px) !important;
+    margin-left: 0 !important;    }
+.qqpiece:nth-child(9),
+.qqpiece:nth-child(11) {
+    display: none !important;    }
+.qqpiece:nth-child(14) {
+    top: 360px !important;
+    margin-top: 0 !important;    }
+.qqpiece:nth-child(15) {
+    top: 365px !important;
+    margin-top: 0 !important;    }
+.qqpiece:nth-child(16) {
+    top: 330px !important;
+    margin-top: 0 !important;    }
+}
+
+/* 1245 and below -------------------------------------- */
+@media (max-width: 1245px) {
+    .qqpiece:nth-child(1) {
+        left: -2vw !important;    }
+}
+
+/* 1224 and below -------------------------------------- */
+@media (max-width: 1224px) {
+    .qqpiece:nth-child(3) {
+        top: 10px !important;
+        left: 35vw !important;    }
+    .qqpiece:nth-child(4) { 
+        top: 1vw !important;
+        margin-top: 0 !important;
+        left: 53.917vw !important;
+        margin-left: 0 !important;    }
+    .qqpiece:nth-child(5) { 
+        top: 3vw !important;
+        left: 66.112vw !important;    }
+    .qqpiece:nth-child(6) { 
+        top: 10vw !important;
+        margin-top: 0 !important;
+        left: 92.595vw !important;
+        margin-left: 0 !important;    }
+    .qqpiece:nth-child(8) { 
+        margin-top: 0 !important;
+        left: 6vw !important;
+        margin-left: 0 !important;    }
+    .qqpiece:nth-child(10) {  
+        top: 38vw !important;
+        left: -6vw !important;    }
+    .qqpiece:nth-child(12) {  
+        top: 16vw !important;
+        margin-top: 0 !important;
+        left: 82vw !important;
+        margin-left: 0 !important;    }
+    .qqpiece:nth-child(14) {    
+        top: 30vw !important;    }
+    .qqpiece:nth-child(15) {   
+        top: 27vw !important;
+        margin-top: 0 !important;    }
+    .qqpiece:nth-child(16) { 
+        top: 25vw !important;    }
+}
+
+/* 1075 and up -------------------------------------- */
+@media (min-width: 1075px) {
+    .qqpiece:nth-child(5) > .qqcontents {    
+        left: calc((var(--contentwidth) / -2) + (var(--binocwidth-l) / 2)) !important; }
+    .qqpiece:nth-child(5) .sharkfin,
+    .qqpiece:nth-child(5) .bordercover {
+        left: calc((var(--contentwidth) / 2) - var(--edgemargin) - 0.125rem) !important;   }
+}
+
+/* 1075 and below -------------------------------------- */
+@media (max-width: 1075px) {
+    .qqpiece:nth-child(6) {
+        top: 18vw !important;    }
+    .qqpiece:nth-child(7) {
+        display: none !important;    }
+    .qqpiece:nth-child(8) {
+        left: -2vw !important;    }
+    .qqpiece:nth-child(12) {
+        top: 10vw !important;
+        left: 85vw !important;    }
+    .qqpiece:nth-child(16) {
+        top: 28vw !important;    }
+}
+
+/* 950 and below -------------------------------------- */
+@media (max-width: 950px) {
+    .qqpiece:nth-child(1) {
+        top: 2vw !important;    }
+    .qqpiece:nth-child(2) {
+        top: 3vw !important;
+        margin-top: 0 !important;
+        left: 17.5vw !important;
+        margin-left: 0 !important;    }
+    .qqpiece:nth-child(12) {
+        left: 90vw !important;    }
+    .qqpiece:nth-child(14) {
+        top: 32vw !important;
+        left: 10vw !important;    }
+    .qqpiece:nth-child(15) {
+        top: 30vw !important; 
+        margin-top: 0 !important;   }
+    .qqpiece:nth-child(16) {
+        top: 30vw !important;
+        margin-top: 0 !important;
+        left: 48vw !important;    }
+}
+
+/* 875 and below -------------------------------------- */
+@media (max-width: 875px) {
+    .qqpiece:nth-child(1) {
+        top: 8vw !important;
+        left: -7vw !important;    }
+    .qqpiece:nth-child(8), 
+    .qqpiece:nth-child(14) {
+        display: none !important;    }
+    .qqpiece:nth-child(15) {
+        left: 15vw !important;
+        top: 35vw !important;    }
+    .qqpiece:nth-child(16) {
+        top: 30vw !important;
+        left: 40vw !important;    }
+    .qqpiece:nth-child(17) {
+        top: 30vw !important;
+        margin-top: 0 !important;    }
+}
+
+/* 800 and below -------------------------------------- */
+@media (max-width: 800px) {
+    .qqpiece:nth-child(1) {
+        top: 4vw !important;
+        left: -10vw !important;    }
+    .qqpiece:nth-child(3) {
+        top: -1.5vw !important;    }
+    .qqpiece:nth-child(6),
+    .qqpiece:nth-child(21) {
+        display: none !important;    }
+    .qqpiece:nth-child(18) {
+        left: 90vw !important; 
+        margin-left: 0 !important;    }
+    .qqpiece:nth-child(16) {
+        top: 35vw !important;
+        margin-left: 0 !important;    }
+    .qqpiece:nth-child(21) {
+        display: none !important;   }
+}
+
+/* 725 and below -------------------------------------- */
+@media (max-width: 725px) {
+    .qqpiece:nth-child(13) {
+        margin-top: 0 !important;
+        margin-left: 0 !important;    }
+    .qqpiece:nth-child(15) {
+        display: none !important;   }
+    .qqpiece:nth-child(16) {
+        top: 39vw !important;    }
+    .qqpiece:nth-child(17) {
+        top: 38vw !important;
+        margin-top: 0 !important;
+        margin-left: 0 !important;    }
+}
+
+/* 650 and below -------------------------------------- */
+@media (max-width: 650px) {
+    .qqpiece:nth-child(16) {
+        display: none !important;    }
+    .qqpiece:nth-child(17) {
+        top: 38vw !important;
+        left: 45vw !important;    }
+}
+
+/* 442 and below -------------------------------------- */
+@media (max-width: 442px) {
+    .qqpiece:nth-child(12) {
+        top: 16vw !important;
+        left: 95vw !important;    }
+}
+
+/* 420 and below -------------------------------------- */
+@media (max-width: 420px) {
+    .qqpiece:nth-child(17) {
+        top: 40vw !important;    }
+    .qqpiece:nth-child(19) {
+        display: none !important;    }
+    .qqpiece:nth-child(20) {
+        top: 45vw !important;
+        margin-top: 0 !important;    }
+}
+
+/* 400 and below -------------------------------------- */
+@media (max-width: 400px) {
+    .qqpiece:nth-child(5) {
+        top: 1vw !important;
+        left: 70vw !important;    }
+    .qqpiece:nth-child(17) {
+        top: 44vw !important;    }
+    .qqpiece:nth-child(20) {
+        display: none !important;    }
+    .qqpiece:nth-child(22) {
+        top: 43vw !important;
+        margin-top: 0 !important;    }
+}
+
+/* 382 and below -------------------------------------- */
+@media (max-width: 382px) {
+    .qqpiece:nth-child(17),
+    .qqpiece:nth-child(24) {
+        display: none !important;    }
+    .qqpiece:nth-child(18) {
+        left: 94vw !important;    }
+    .qqpiece:nth-child(22) {
+        top: 45vw !important;    }
+    .qqpiece:nth-child(23) {
+        top: 45vw !important;
+        margin-top: 0 !important;    }
+}
+
+/* 350 and below -------------------------------------- */
+@media (max-width: 350px) {
+    .qqpiece:nth-child(22) {
+        display: none !important;    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

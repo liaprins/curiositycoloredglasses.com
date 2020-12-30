@@ -1,0 +1,10 @@
+---
+question: How are the holes in macaroni noodles extruded?
+binocsize: large
+---
+
+To make a tube, you can roll a flat, two-dimensional material and connect its edges, like those construction paper chains kids make. You could also build up its circumference layer by layer, the way tube socks are knitted or the colosseum was built. Finally, you could start with a cylindrical form and carve out its center, the way hollow logs' insides rot away over time, leaving a tubular shell.
+
+To my knowledge, the pasta industry does not employ any of these methods: according to Mister Roger's Neighborhood, noodles are extruded by pushing dough through holes of various shapes and angles. While accruing this knowledge was very enlightening and mesmerizing to me as a child, it cannot account for the holes in macaroni and other pasta forms: the extrusion machine's hole would need to have an inner circle "floating" within the main extrusion hole, to prevent dough from filling the core of the macaroni noodle. But how could that inner core-creating circle be held in place, without also slicing apart at least one side of the macaroni tube?
+
+(Also, how are PVC pipes made? I am beginning to believe that my compilation of tube-creation methods is incomplete.)

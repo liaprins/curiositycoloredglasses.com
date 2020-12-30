@@ -1,5 +1,0 @@
-Caption: I am the second child in my little family.
-
-----
-
-Alt: alt

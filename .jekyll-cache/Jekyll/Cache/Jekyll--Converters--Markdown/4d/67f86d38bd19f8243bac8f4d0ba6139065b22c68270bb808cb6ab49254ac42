@@ -1,0 +1,177 @@
+I"~&
+<!-- Adding <article> for semantic reasons and to hold together each result -->
+<article class="result">
+    <!-- Adding link outside date, blog post name, and postglasses image; tags link to their own tag result page -->
+    <a class="resultlink" href="/martian-mountains">
+
+        <!-- Date of article, if sticking with manual input of date in panel/.txt file, only need: <?php echo $result->date("d F Y") ?> -->
+        <p id="resultdate" class="date s-textface bold">
+          <time datetime="2020-09-18 00:00:00 -0700" pubdate="pubdate">
+              18 September 2020
+          </time>
+        </p>
+
+        <!-- Postglasses image -->
+        <div class="resultglassescontainer">
+            <div class="resultstem resultshortstem resultleftstem"></div><div style="background-image: url(http://localhost:4000/assets/images/blogposts/martian-mountains/-l-martian-mountains.jpg)" class="resultcircle resultleftcircle"></div><div class="resultstem resultcenterstem"></div><div style="background-image: url(http://localhost:4000/assets/images/blogposts/martian-mountains/-r-martian-mountains.jpg)" class="resultcircle resultrightcircle"></div><div class="resultstem resultshortstem resultrightstem"></div>
+        </div>
+
+        <!-- Title of article -->
+        <p id="resulttitle" class="s-display">
+            How are Martian mountains measured?
+        </p>
+
+    </a>
+</article>
+
+<!-- Adding <article> for semantic reasons and to hold together each result -->
+<article class="result">
+    <!-- Adding link outside date, blog post name, and postglasses image; tags link to their own tag result page -->
+    <a class="resultlink" href="/the-moons-dark-side">
+
+        <!-- Date of article, if sticking with manual input of date in panel/.txt file, only need: <?php echo $result->date("d F Y") ?> -->
+        <p id="resultdate" class="date s-textface bold">
+          <time datetime="2018-12-14 00:00:00 -0800" pubdate="pubdate">
+              14 December 2018
+          </time>
+        </p>
+
+        <!-- Postglasses image -->
+        <div class="resultglassescontainer">
+            <div class="resultstem resultshortstem resultleftstem"></div><div style="background-image: url(http://localhost:4000/assets/images/blogposts/the-moons-dark-side/-l-the-moons-dark-side.jpg)" class="resultcircle resultleftcircle"></div><div class="resultstem resultcenterstem"></div><div style="background-image: url(http://localhost:4000/assets/images/blogposts/the-moons-dark-side/-r-the-moons-dark-side.jpg)" class="resultcircle resultrightcircle"></div><div class="resultstem resultshortstem resultrightstem"></div>
+        </div>
+
+        <!-- Title of article -->
+        <p id="resulttitle" class="s-display">
+            Casting light on the moon's dark side
+        </p>
+
+    </a>
+</article>
+
+<!-- Adding <article> for semantic reasons and to hold together each result -->
+<article class="result">
+    <!-- Adding link outside date, blog post name, and postglasses image; tags link to their own tag result page -->
+    <a class="resultlink" href="/measure-of-a-mountain">
+
+        <!-- Date of article, if sticking with manual input of date in panel/.txt file, only need: <?php echo $result->date("d F Y") ?> -->
+        <p id="resultdate" class="date s-textface bold">
+          <time datetime="2017-04-09 00:00:00 -0700" pubdate="pubdate">
+              09 April 2017
+          </time>
+        </p>
+
+        <!-- Postglasses image -->
+        <div class="resultglassescontainer">
+            <div class="resultstem resultshortstem resultleftstem"></div><div style="background-image: url(http://localhost:4000/assets/images/blogposts/measure-of-a-mountain/-l-measure-of-a-mountain.jpg)" class="resultcircle resultleftcircle"></div><div class="resultstem resultcenterstem"></div><div style="background-image: url(http://localhost:4000/assets/images/blogposts/measure-of-a-mountain/-r-measure-of-a-mountain.jpg)" class="resultcircle resultrightcircle"></div><div class="resultstem resultshortstem resultrightstem"></div>
+        </div>
+
+        <!-- Title of article -->
+        <p id="resulttitle" class="s-display">
+            The measure of a mountain
+        </p>
+
+    </a>
+</article>
+
+<!-- Adding <article> for semantic reasons and to hold together each result -->
+<article class="result">
+    <!-- Adding link outside date, blog post name, and postglasses image; tags link to their own tag result page -->
+    <a class="resultlink" href="/indoor-tree-growth-rings">
+
+        <!-- Date of article, if sticking with manual input of date in panel/.txt file, only need: <?php echo $result->date("d F Y") ?> -->
+        <p id="resultdate" class="date s-textface bold">
+          <time datetime="2017-04-08 00:00:00 -0700" pubdate="pubdate">
+              08 April 2017
+          </time>
+        </p>
+
+        <!-- Postglasses image -->
+        <div class="resultglassescontainer">
+            <div class="resultstem resultshortstem resultleftstem"></div><div style="background-image: url(http://localhost:4000/assets/images/blogposts/indoor-tree-growth-rings/-l-indoor-tree-growth-rings.jpg)" class="resultcircle resultleftcircle"></div><div class="resultstem resultcenterstem"></div><div style="background-image: url(http://localhost:4000/assets/images/blogposts/indoor-tree-growth-rings/-r-indoor-tree-growth-rings.jpg)" class="resultcircle resultrightcircle"></div><div class="resultstem resultshortstem resultrightstem"></div>
+        </div>
+
+        <!-- Title of article -->
+        <p id="resulttitle" class="s-display">
+            Do indoor trees have growth rings?
+        </p>
+
+    </a>
+</article>
+
+<!-- Adding <article> for semantic reasons and to hold together each result -->
+<article class="result">
+    <!-- Adding link outside date, blog post name, and postglasses image; tags link to their own tag result page -->
+    <a class="resultlink" href="/helium-harvest">
+
+        <!-- Date of article, if sticking with manual input of date in panel/.txt file, only need: <?php echo $result->date("d F Y") ?> -->
+        <p id="resultdate" class="date s-textface bold">
+          <time datetime="2016-12-10 00:00:00 -0800" pubdate="pubdate">
+              10 December 2016
+          </time>
+        </p>
+
+        <!-- Postglasses image -->
+        <div class="resultglassescontainer">
+            <div class="resultstem resultshortstem resultleftstem"></div><div style="background-image: url(http://localhost:4000/assets/images/blogposts/helium-harvest/-l-helium-harvest.jpg)" class="resultcircle resultleftcircle"></div><div class="resultstem resultcenterstem"></div><div style="background-image: url(http://localhost:4000/assets/images/blogposts/helium-harvest/-r-helium-harvest.jpg)" class="resultcircle resultrightcircle"></div><div class="resultstem resultshortstem resultrightstem"></div>
+        </div>
+
+        <!-- Title of article -->
+        <p id="resulttitle" class="s-display">
+            Helium Harvest
+        </p>
+
+    </a>
+</article>
+
+<!-- Adding <article> for semantic reasons and to hold together each result -->
+<article class="result">
+    <!-- Adding link outside date, blog post name, and postglasses image; tags link to their own tag result page -->
+    <a class="resultlink" href="/flourescence-and-phosphorescence">
+
+        <!-- Date of article, if sticking with manual input of date in panel/.txt file, only need: <?php echo $result->date("d F Y") ?> -->
+        <p id="resultdate" class="date s-textface bold">
+          <time datetime="2016-04-26 00:00:00 -0700" pubdate="pubdate">
+              26 April 2016
+          </time>
+        </p>
+
+        <!-- Postglasses image -->
+        <div class="resultglassescontainer">
+            <div class="resultstem resultshortstem resultleftstem"></div><div style="background-image: url(http://localhost:4000/assets/images/blogposts/flourescence-and-phosphorescence/-l-flourescence-and-phosphorescence.jpg)" class="resultcircle resultleftcircle"></div><div class="resultstem resultcenterstem"></div><div style="background-image: url(http://localhost:4000/assets/images/blogposts/flourescence-and-phosphorescence/-r-flourescence-and-phosphorescence.jpg)" class="resultcircle resultrightcircle"></div><div class="resultstem resultshortstem resultrightstem"></div>
+        </div>
+
+        <!-- Title of article -->
+        <p id="resulttitle" class="s-display">
+            Fluorescence and phosphorescence
+        </p>
+
+    </a>
+</article>
+
+<!-- Adding <article> for semantic reasons and to hold together each result -->
+<article class="result">
+    <!-- Adding link outside date, blog post name, and postglasses image; tags link to their own tag result page -->
+    <a class="resultlink" href="/myth-busting-mosquito-bites">
+
+        <!-- Date of article, if sticking with manual input of date in panel/.txt file, only need: <?php echo $result->date("d F Y") ?> -->
+        <p id="resultdate" class="date s-textface bold">
+          <time datetime="2015-04-02 00:00:00 -0700" pubdate="pubdate">
+              02 April 2015
+          </time>
+        </p>
+
+        <!-- Postglasses image -->
+        <div class="resultglassescontainer">
+            <div class="resultstem resultshortstem resultleftstem"></div><div style="background-image: url(http://localhost:4000/assets/images/blogposts/myth-busting-mosquito-bites/-l-myth-busting-mosquito-bites.jpg)" class="resultcircle resultleftcircle"></div><div class="resultstem resultcenterstem"></div><div style="background-image: url(http://localhost:4000/assets/images/blogposts/myth-busting-mosquito-bites/-r-myth-busting-mosquito-bites.jpg)" class="resultcircle resultrightcircle"></div><div class="resultstem resultshortstem resultrightstem"></div>
+        </div>
+
+        <!-- Title of article -->
+        <p id="resulttitle" class="s-display">
+            Myth busting mosquito bites
+        </p>
+
+    </a>
+</article>
+
+:ET

@@ -1,0 +1,230 @@
+{% include head-open.html %}
+{% include head-title-all-but-home.html %}
+{% include share-settings-common.html %}
+{% include share-settings-blogpost.html %}
+{% include head-close.html %}
+
+<!-- backarrow script -->
+<script src="/assets/js/backarrow-post.js">
+</script>
+
+<!-- definitions/vocab script -->
+<script src="/assets/js/definitions.js">
+</script>
+
+<!-- lightbox and slideshow all in one script -->
+<script src="/assets/js/lightboxslideshow.js">
+</script>
+
+<!-- comment refresh script -->
+<script src="/assets/js/comment.js">
+</script>
+
+<!-- detects swipes by users with touchscreens for galleries -->
+<script src="/assets/js/pure-swipe.js">
+</script>
+
+<!-- LEAVING OUT THE SCRIPT THAT WOULD PULL IN THE P5.JS LIBRARY -->
+
+<!-- LEAVING OUT THE SCRIPT THAT WOULD PULL IN A P5.JS SPECIAL FILE -->
+
+<!-- build out functionality for p5 <canvas> element going fullscreen -->
+<script src="/assets/js/canvasfullscreen.js">
+</script>
+
+<!-- This encompasses everything within <body> except for <nav>
+This is so that there is an element that can be clicked on that will be anything except <nav>,
+that will be recognized in JS menu.js script, that can have an event listener applied when it is clicked on, that will close the <nav> -->
+<div id="everythingexceptnav">
+
+  {% include backarrow.html %}
+
+  <article class="mockmain" id="pre-rr">    <!-- Opening <article> to make room for RR results that need to be wider than this width, to accommodate their all having margins on L + R -->
+    <div class="desktopcontent">
+      <!-- DO I NEED THIS <div>? -->
+      <!-- I'm arranging the pieces of the intro part according to the V-mobile design; CSS can re-arrange them; this is according to responsive design principles -->
+    </div>
+    <div id="postdesktopcontent">
+
+      <!-- Date of post -->
+      <p id="postdate" class="date m-textface bold postdatewidth">
+        <time datetime="{{ page.date }}" pubdate="pubdate">
+          {{ page.date | date: '%d %B %Y' }}
+        </time>
+      </p>
+
+      <!-- Postglasses icon + title of post -->
+      <a href="{{ page.url }}" id="postlink">
+        <!-- Post glasses icon -->
+        <div class="postglassescontainer">
+          <div class="stem shortstem leftstem"></div><div style="background-image: url({{ site.url }}/assets/images/blogposts/{{ page.slug }}/-l-{{ page.slug }}{% if page.leftextension %}{{ page.leftextension }}{% else %}.jpg{% endif %})" class="circle leftcircle"></div><div class="stem centerstem"></div><div style="background-image: url({{ site.url }}/assets/images/blogposts/{{ page.slug }}/-r-{{ page.slug }}{% if page.rightextension %}{{ page.rightextension }}{% else %}.jpg{% endif %})" class="circle rightcircle"></div><div class="stem shortstem rightstem"></div>
+        </div>
+        <!-- Name of post -->
+        <h2 class="posttitle">
+          {{ page.title }}
+        </h2>
+      </a>
+
+      <!-- If there is a guest writer -->
+      {% if page.author and page.author != "Lia Prins" %}
+        <span class="guestpostbanner xxs-display">Guest post</span>
+        <!-- If there is a LINK for the guest writer -->
+        {% if page.authorlink %}
+          <span id="writtenby" class="xs-textface bold">by</span><span class="writer s-display"><a href="{{ page.authorlink }}" target="_blank" class="yellowhover">&nbsp{{ page.author }}</a>
+          </span>
+        <!-- If there is NOT a LINK for the guest writer -->
+        {% else %}
+          <span id="writtenby" class="xs-textface bold">by</span><span class="writer s-display">&nbsp{{ page.author }}
+          </span>
+        {% endif %}
+      <!-- "Lia Prins" to show up as default author unless a guest writer is applied in panel -->
+      {% elsif page.author and page.author == "Lia Prins" %}
+        <span id="writtenby" class="xs-textface bold">by</span><span class="writer s-display"><a href="https://liaprins.com" target="_blank" class="yellowhover">&nbspLia Prins</a>
+        </span>
+      {% endif %}
+
+      <!-- Intro of post -->
+      <span id="postintro" class="l-textface">
+      	{{ page.excerpt }}
+      </span>
+
+      <div id="posttagshare">
+
+        <!-- Tags of post -->
+        <span id="posttaggroup" class="s-textface">
+          <!-- Split the list in the tag field into individual tags -->
+          {% for posttag in page.tags %}
+            <!-- Make them link to the tags page -->
+            <a href="{{ site.url }}/tags/{{ posttag }}" id="posttag" class="xs-textface tag yellowhover">
+              <!-- Adding the 2 x "no break spaces" (&nbsp) to act as L-padding (like for "Read more" button), because using actual padding-left measurements can separate the padding from the word if the word starts on a new line -->
+              &nbsp&nbsp#{{ posttag }}
+            </a>
+          {% endfor %}
+        </span>
+
+        <!-- Sharing for this post -->
+        <span id="share">
+          <!-- TWITTER: From a tutorial website: onlinejournalismblog.com, but adding ability to dynamically include a visualized image. -->
+          <a href="https://twitter.com/intent/tweet?text={{ page.share }}{{ page.url }}&hashtags={% for posttag in page.tags %}%20{{ posttag }}{% endfor %}&via=CuriosityColor" title="Share on Twitter" target="_blank">
+            <img src= "assets/images/sitewide/Twitter.svg" alt="Share on Twitter" class="socialicon shareicon yellowhover">
+          </a>
+          <!-- This script needs to stay or there won't be a popup; it will open a new tab instead -->
+          <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+          <!-- FACEBOOK: This method is from Facebook Developers, after modifications. It only works in conjunction with the script called separately and my registered CCG Facebook app ID (1816213758596939) -->
+          <span id="shareBtn" title="Share on Facebook">
+            <img src= "assets/images/sitewide/Facebook.svg" alt="Share on Facebook" class="socialicon shareicon yellowhover">
+          </span>
+          <script>
+          document.getElementById('shareBtn').onclick = function() {
+            FB.ui({
+              method: 'share',
+              display: 'popup',
+              href: '{{ site.url }}',
+            }, function(response){});
+          }
+          </script>
+          <!-- PINTEREST: From Pinterest widget builder (modified to get stored image-->
+          <a data-pin-do="buttonBookmark" data-pin-custom="true" data-pin-save="false" href="https://www.pinterest.com/pin/create/button/" title="Share on Pinterest">
+            <img src="assets/images/sitewide/Pinterest.svg" alt="Save to Pinterest" class="socialicon shareicon yellowhover">
+          </a>
+        </span>
+
+      </div>    <!-- Closing id="posttagshare" -->
+
+      <!-- Text of post -->
+      <div id="posttext" class="m-textface hyphenation">
+        {{ content }}<img src="assets/images/sitewide/home.svg" alt="" id="articleendglasses">
+      </div>
+
+      {% if page.glossaryfolder %}
+      <section id="glossarysection">
+        <details class="postsectiondetails" open>
+          <summary class="sectionsummary postpagesectionsummary blackbg"><h3>Glossary</h3>
+          </summary>
+          <dl>
+            {% for vocab in site.documents %}
+              {% if vocab.path contains page.glossaryfolder %}
+                {% include post-glossary.html %}
+              {% endif %}
+            {% endfor %}
+          </dl>
+        </details>
+      </section>
+      {% endif %}
+
+      {% if page.thankyoufolder %}
+      <section id="notessection">
+        <details class="postsectiondetails" open>
+          <summary class="sectionsummary postpagesectionsummary blackbg"><h3>Thank You</h3>
+          </summary>
+          {% for note in site.documents %}
+            {% if note.path contains page.thankyoufolder %}
+              {% include post-thankyou.html %}
+            {% endif %}
+          {% endfor %}
+        </details>
+      </section>
+      {% elsif page.thankyoucontent %}
+      <section id="notessection">
+        <details class="postsectiondetails" open>
+          <summary class="sectionsummary postpagesectionsummary blackbg"><h3>Thank You</h3>
+          </summary>
+          <p class="s-textface">{{ page.thankyoucontent }}</p>
+        </details>
+      </section>
+      {% endif %}
+
+    </div>    <!-- Closing class="postdesktopcontent" -->
+    <!-- adding a div to hold (with a class to hide) a vertical image for Pinterest, to be populated via the panel -->
+    <div class="hidepinnable"><img src="/assets/images/blogposts/{{ page.slug }}/{{ page.shareimage }}"></div>
+  </article>
+
+  {% if page.relevantreading %}
+  <section id="relevantreading">
+    <details id="rrdetails" open>
+      <summary class="sectionsummary postpagesectionsummary blackbg" id="rrsectionheader"><h3>Relevant Reading</h3>
+      </summary>
+      <div class="resultarea">
+        {% for rr in page.relevantreading %}
+
+          {% for post in site.posts %}
+            {% if post.path contains rr %}
+              {% include result.html %}
+            {% endif %}
+          {% endfor %}
+
+        {% endfor %}
+      </div>
+    </details>
+  </section>
+  {% endif %}
+
+  <!-- FORMERLY footer-sitewide SNIPPET vvv ******************************************************************** -->
+
+              <footer role="contentinfo">
+                <div id="footercontent">
+
+                    {% include subscribe.html %}
+
+                  <!-- Link to my Instagram profile + Twitter + portfolio -->
+                  {% include follow.html %}
+
+                </div>
+              </footer>
+
+              <!--This is the pinterest script, instructed to place right before closing </body> tag-->
+              <script async defer src="/assets.pinterest.com/js/pinit.js">
+              </script>
+
+              <!--This encompasses everything within <body> except for <nav>. This is so that there is an element that can be clicked on that will be anything except <nav>, that will be recognized in JS menu.js script, that can have an event listener applied when it is clicked on, that will close the <nav> -->
+              </div>
+              <!-- Menu has to be called here, to account for a major Safari bug: Safari renders anything measured in rems at 1px, if it comes after a <details> tag... and my menu is within a <details> tag, so it was messing up everything with rems in Safari. Moving menu to the very bottom means there is nothing in the html after it, so it is fine. The menu is styled in css to position it absolutely at the top -->
+              {% include menu.html %}
+
+              <!-- Calling the JS scripts used on everypage; they need to come after the menu is called, to else they will have no effect on the menu items they are intended for -->
+              {% include scripts-sitewide.html %}
+
+  <!--FORMERLY footer-sitewide SNIPPET ^^^ ******************************************************************** -->
+
+    </body>
+  </html>

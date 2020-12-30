@@ -1,0 +1,21 @@
+<ul class="gallery" id="{{ galleryid }}">
+  {% for galleryimage in gallery %}
+    {% assign imageindex = forloop.index %}
+    <li>
+      <figure>
+        {{ galleryimage }}
+        {% for gallerycaption in captions %}
+
+        {% assign captionindex = forloop.index %}
+        {% if imageindex == captionindex and gallerycaption != '-' and gallerycaption != '' %}
+        <figcaption class="xs-textface caption gallerycaption" data-galleryfigcaption>
+          <hr class="toprule">
+          {{ gallerycaption }}
+        </figcaption>
+        {% endif %}
+
+        {% endfor %}
+      </figure>
+    </li>
+  {% endfor %}
+</ul>

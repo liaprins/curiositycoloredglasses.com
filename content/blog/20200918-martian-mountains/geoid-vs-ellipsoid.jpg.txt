@@ -1,9 +1,0 @@
-Caption: 
-
-How much taller would a given mountain (or dense patch of crust) be without taking into account the gravity it creates (and therefore the hypothetical “sea level” it attracts)? We could instead measure from the ellipsoid (periwinkle line) — which essentially averages all Earth elevations to a perfectly smooth plane — to get an “ellipsoidal height”, rather than measuring from the geoid (red line), which gives us the commonly used “orthometric height”, often referred to as elevation above sea level.
-<p class="figcaptionspacer"></p>
-(Differences between the crust, geoid/mean sea level, and ellipsoid are very exaggerated in this diagram to make their relationships clearer.)
-
-----
-
-Alt: A sketch overlaying the crust with mountains, values, and varying densities; the ellipsoid's boundary; and the geoid. Where the crust rises to form hills, the geoid also rises relative to the ellipsoid, though not so high as the crust itself. Where the crust is denser, geoid also rises.

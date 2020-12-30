@@ -1,0 +1,89 @@
+{% include head-open.html %}
+{% include head-title-all-but-home.html %}
+{% include share-settings-common.html %}
+{% include share-settings-other.html %}
+{% include head-close.html %}
+
+<!-- backarrow script -->
+<script src="/assets/js/backarrow-library.js">
+</script>
+
+<!-- This encompasses everything within <body> except for <nav>
+This is so that there is an element that can be clicked on that will be anything except <nav>,
+that will be recognized in JS menu.js script, that can have an event listener applied when it is clicked on, that will close the <nav> -->
+<div id="everythingexceptnav">
+
+  <!-- for backarrow script ^^^ -->
+  <!-- DOES THIS WARRANT AN INCLUDE? OR SHOULD ITS CONTENTS JUST BE INLINE? -->
+  {% include backarrow.html %}
+
+  <main>
+    <div class="desktopcontent">
+
+        <!-- title of the page -->
+        <h2 id="librarypagename" class="extracontentpagetitle">
+            {{ page.title }}
+        </h2>
+
+        <!-- intro text for the page -->
+        <span id="libraryintro" class="l-textface">
+            {{ content }}
+        </span>
+
+      </div>
+    </main>
+
+    <!-- Library entries section -->
+    <div id="librarysection">
+      {% for libraryentry in site.librarycontent %}
+        {% assign filename = libraryentry.url | replace: '/librarycontent/', '' %}
+        <!-- Image per library entry -->
+        <img src="assets/images/libraryimages/{{ filename }}.jpg" alt="{{ libraryentry.alttext }}" title="{{ libraryentry.title }}" class="libraryicon" data-id="{{ filename }}" data-clickable="yes" >
+
+        <!-- Content per library entry (hidden until select an entry's image) -->
+        <article style="display: none;" class="libraryentry">
+          <img src= "assets/images/sitewide/x.svg" alt="close" id="library-x" class="yellowhover close-x">
+          <span class="libraryentryname s-display">
+            <p>
+              {{ libraryentry.title }}
+            </p>
+          </span>
+          <div class="libraryentryabout s-textface">
+            {{ libraryentry.content | markdownify }}
+          </div>
+        </article>
+      {% endfor %}
+    </div> <!-- #librarysection -->
+
+    <script src="assets/js/library.js">
+    </script>
+
+<!-- FORMERLY footer-sitewide SNIPPET vvv ******************************************************************** -->
+
+            <footer role="contentinfo">
+              <div id="footercontent">
+
+                  {% include subscribe.html %}
+
+                <!-- Link to my Instagram profile + Twitter + portfolio -->
+                {% include follow.html %}
+
+              </div>
+            </footer>
+
+            <!--This is the pinterest script, instructed to place right before closing </body> tag-->
+            <script async defer src="//assets.pinterest.com/js/pinit.js">
+            </script>
+
+            <!--This encompasses everything within <body> except for <nav>. This is so that there is an element that can be clicked on that will be anything except <nav>, that will be recognized in JS menu.js script, that can have an event listener applied when it is clicked on, that will close the <nav> -->
+            </div>
+            <!-- Menu has to be called here, to account for a major Safari bug: Safari renders anything measured in rems at 1px, if it comes after a <details> tag... and my menu is within a <details> tag, so it was messing up everything with rems in Safari. Moving menu to the very bottom means there is nothing in the html after it, so it is fine. The menu is styled in css to position it absolutely at the top -->
+            {% include menu.html %}
+
+            <!-- Calling the JS scripts used on everypage; they need to come after the menu is called, to else they will have no effect on the menu items they are intended for -->
+            {% include scripts-sitewide.html %}
+
+<!--FORMERLY footer-sitewide SNIPPET ^^^ ******************************************************************** -->
+
+  </body>
+</html>

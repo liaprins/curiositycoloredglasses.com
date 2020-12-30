@@ -1,5 +1,0 @@
-Caption: Now I have a caption, short and sweet.
-
-----
-
-Alt: alt

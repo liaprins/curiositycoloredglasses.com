@@ -1,0 +1,210 @@
+/* PREVENTING HORIZONTAL SCROLLING (for some reason only needed for screenwidths 755px and below) -------------------------------------------------- */
+html, body {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+    position: relative;
+    left: 0vw;
+    color: black;
+    line-height: 1.7;    }
+
+*, *:before, *:after {
+    box-sizing: border-box;   }
+
+.yellowhover:hover { 
+    background-color: #e2e43a;
+    color: black;    } 
+
+.yellowhover {
+  -webkit-transition: background-color .2s ease-out;
+  -moz-transition: background-color .2s ease-out;
+  -o-transition: background-color .2s ease-out;
+  transition: background-color .2s ease-out;    } 
+
+/* NAV -------------------------------------------------- */
+
+summary {    /* for FF, this hides the triangle toggle! */
+    display: block;    }
+
+#searchdecoy {
+    padding-bottom: 0.13rem;
+    padding-top: 0.13rem;    }
+#searchdecoy:hover {
+    cursor: pointer;    }
+
+#navsearchform {    }
+
+.underlineinput {
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0!important;
+    border-bottom-left-radius: 0!important;
+    border-bottom-right-radius: 0!important;
+    -webkit-appearance: none !important;
+    border-style: none none solid none;
+    border-width: 0.125rem;
+    border-color: black;
+    background-color: transparent;
+    color: black;    }    
+
+.searchbutton {
+    background-color: transparent;
+    border-style: none;
+    cursor: pointer;    }
+
+#navsearchinput {
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+    -webkit-appearance: none  !important;
+    padding-bottom: 0.25rem;
+    width: calc(67.857vw - 1.6rem);    }
+
+#navsearchinput::-webkit-input-placeholder {
+   color: #686b31;    }    
+
+#navsearchbutton {
+    height: 1.688rem;
+    padding: 0.422rem 0 0.422rem 0.422rem;    }
+
+.navsearchicon {
+    display: inline;
+    height: 0.844rem;    }
+
+
+
+/* FOOTER -------------------------------------------------- */
+
+#background {
+    position: relative;
+    z-index: -5;
+    width: 100%;
+}
+
+footer {
+    position: relative;
+    z-index: 1;
+    bottom: 0;
+    width: 100%;
+    background-color: #e2e43a;
+    padding: 10.714vw 0;    }
+
+#footercontent {
+    max-width: 1225px;
+    width: 78.571%;
+    margin: 0 auto;    }
+
+.boxinput {
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+    -webkit-appearance: none !important;
+    font-family: 'Sintesi_Sans', 'Courier_New', Courier, Monotype;
+    border-style: solid ;
+    border-width: 0.125rem;
+    border-color: black;
+    color: black;
+    background-color: transparent;
+    height: 1.875rem;    
+    width: 78.571vw;
+    padding: 0.033rem 0.233rem 0 0.467rem;    }
+
+#mce-EMAIL::-webkit-input-placeholder {
+   color: #686b31;   }
+
+.boxbutton {
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+    -webkit-appearance: none !important;
+    background-color: black;
+    border: solid;
+    border-width: 0.125rem;
+    border-color: black;    
+    padding: 0.125rem 0.469rem 0 0.469rem;
+    height: 1.8rem;
+    -webkit-transition: color .2s ease-out;
+    -moz-transition: color .2s ease-out;
+    -o-transition: color .2s ease-out;
+    transition: color .2s ease-out;    }
+.boxbutton:hover {
+    color: black;    }
+
+.subscribebutton {
+    -webkit-appearance: none !important;
+    width: 78.571vw;
+    margin: 0.9375rem 0;
+    color: #e2e43a;
+    -webkit-transition: background-color .2s ease-out;
+    -moz-transition: background-color .2s ease-out;
+    -o-transition: background-color .2s ease-out;
+    transition: background-color .2s ease-out;    }
+.subscribebutton:hover {
+    background-color: #e2e43a;    }
+
+#subscribemessage {
+    font-family: 'Sintesi_Sans_Light', Geneva, Verdana, "Lucida Sans", "Lucida Grande", Arial, sans-serif;    /* This font wasn't being recognized when it was just the default in <body> so had to explicitly call it here */
+    margin-bottom: 1.024rem;    }
+#subscribemessage a {
+    text-decoration: underline;
+    text-decoration-color: #b0b13a;    }
+#subscribemessage a:hover {
+    text-decoration: underline;
+    text-decoration-color: black;    }
+
+#mc-embedded-subscribe-form div {
+    font-size: 0;    }
+
+.socialicon {
+    box-sizing: content-box;
+    height: 0.844rem;
+    padding: 0.422rem;    
+    cursor: pointer;    }
+
+.followicon {
+    display: inline;
+    float: left;    }
+
+#instagramlogo {
+    padding-left: 0;    }
+
+#portfolio {
+    margin-left: 0.422rem;    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

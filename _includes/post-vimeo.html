@@ -1,0 +1,9 @@
+<figure>
+  <iframe src="//player.vimeo.com/video/{{ include.vimeonumber }}?title=0&byline=0&portrait=0&color=e2e43a" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen class="postvideo-{{ include.ratio }}-ratio"></iframe>
+  {% if include.caption %}
+  <figcaption class="xs-textface">
+    <hr class="toprule">
+    {{ include.caption }}
+  </figcaption>
+  {% endif %}
+</figure>

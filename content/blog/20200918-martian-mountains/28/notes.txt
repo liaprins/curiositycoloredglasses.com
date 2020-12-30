@@ -1,9 +1,0 @@
-Notenumber: 28
-
-----
-
-Notecontent: <a href="https://apps.dtic.mil/dtic/tr/fulltext/u2/a471037.pdf" target="blank">Seidelmann, P. Kenneth, et al. “Report of the IAU/IAG Working Group on Cartographic Coordinates and Rotational Elements: 2006.” <em>Celestial Mechanics and Dynamical Astronomy</em>, vol. 98, no. 3, 3 July 2007, pp. 155–180., doi:10.1007/s10569-007-9072-y.</a>
-
-----
-
-Title: 28

@@ -1,5 +1,0 @@
-Caption: Most Earthly elevations are greater than the base-to-summit measurements of their mountains. On Mars, though, Olympus Mons is so massive that it pulls the planet’s areoid higher in its region, to the point that the difference between its peak and the areoid is about 1,000 meters (3,280 feet) less than the height of the mountain itself (from its natural base).
-
-----
-
-Alt: Olympus Mons and Everest side by side, with demarcations of their areoid and geoid respectively, as well as their baselines. Olympus Mons' baseline is below its areoid, while the reverse is shown of Everest.

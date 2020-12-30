@@ -1,9 +1,0 @@
-Notenumber: 31
-
-----
-
-Notecontent: <a href="http://pubs.usgs.gov/gip/dynamic/Hawaiian.html" target="blank">“The Long Trail of the Hawaiian Hotspot.” <em>Hawaiian Hotspot</em>, United States Geologic Survey, 5 May 1999.</a>
-
-----
-
-Title: 31

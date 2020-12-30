@@ -1,0 +1,28 @@
+<div id="vocabwordanddefinition" class="vocabwordanddefinitionclass" data-definition-id="{{ vocab.slug }}">
+<!-- <dt> = the name within the <dl> (parent) name-value pair  -->
+<dt class="glossaryvocabwordandaudio">
+<span id="{{ vocab.slug }}" class="glossaryvocabword m-textface bold">
+<!-- This is the vocab word that appears alongside the definition -->
+<a href="{{ page.url }}#-{{ vocab.slug }}" title="View word in context" class="yellowhover">
+{{ vocab.word }}</a>
+</span>&ensp;<span id="pronunciation" class="xs-textface">
+<!-- ^^^ Written pronunciation (optional ) -->
+{% if vocab.pronunciation %}
+{{ vocab.pronunciation }}
+{% endif %}
+</span>
+<!-- Audio pronunciation (optional) -->
+{% if vocab.audio %}
+<a onclick="this.firstChild.play()" data-audiolink title="Hear audio pronunciation"><audio src="assets/images/glossaryextras{{ page.url }}/{{ vocab.audio }}" type="audio/mpeg"></audio><img src="assets/images/sitewide/audio.svg" alt="play audio pronunciation" class="audioicon yellowhover"></a>
+{% endif %}
+</dt>
+<!-- <dd> = the value (definition) within the <dl> (parent) name-value pair  -->
+<dd>
+<!-- definition (required) -->
+<p class="s-textface definition">{{ vocab.content }}</p>
+<!-- illustration (optional) -->
+{% if vocab.illustration %}
+<img src="assets/images/glossaryextras{{ page.url }}/{{ vocab.illustration }}" alt="" class="vocabillustration">
+{% endif %}
+</dd>
+</div>    <!-- id="vocabwordanddefinition" -->

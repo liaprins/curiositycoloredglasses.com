@@ -1,9 +1,0 @@
-Notenumber: 30
-
-----
-
-Notecontent: <a href="http://hirise.lpl.arizona.edu/PSP_001432_2015" target="blank">Kolb, Kelly. “Layers in a Scarp on Olympus Mons.” <em>HiRISE</em>, University of Arizona, 27 Dec. 2007.</a>
-
-----
-
-Title: 30

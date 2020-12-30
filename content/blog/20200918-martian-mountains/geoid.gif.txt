@@ -1,9 +1,0 @@
-Caption: 
-
-The geoid’s lumpiness is vastly exaggerated here, but serves to show areas of Earth where the pull of gravity is relatively stronger and weaker due primarily to the location, size, and density of landmasses.
-<p class="figcaptionspacer"></p>
-Image credit: <a href="https://oceanservice.noaa.gov/facts/geoid.html" target="_blank">NOAA</a>.
-
-----
-
-Alt: An animation of the Earth's geoid (greatly exaggerated in shape) spinning.

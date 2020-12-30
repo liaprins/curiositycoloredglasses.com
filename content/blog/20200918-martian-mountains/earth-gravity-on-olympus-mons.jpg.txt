@@ -1,9 +1,0 @@
-Caption: 
-
-Assuming there’s a more or less linear relationship between a volcano’s height and the gravity exerted upon it, an earth-bound Olympus Mons might have only ever grown to about 8.4 kilometers from base-to-summit.
-<p class="figcaptionspacer"></p>
-(Finally a sketch that is more or less to scale! Although I did have to do some experiments and estimations (silly putty was involved) to get an approximation of Olympus Mons’ would-be diameter on Earth, assuming its volume stayed the same…)
-
-----
-
-Alt: A scale drawing of Olympus Mons from the side, overlaid on a drawing of how much flatter it would be if it grew up under Earth's gravity.

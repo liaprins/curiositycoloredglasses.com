@@ -1,0 +1,122 @@
+{% include head-open.html %}
+{% include head-title-all-but-home.html %}
+{% include share-settings-common.html %}
+{% include share-settings-hello.html %}
+
+
+ 	<!-- Calls the stylesheet that zeroes out the default browser renderings -->
+  <link rel="stylesheet" href="/assets/css/reset.css">
+
+ 	<!-- Calls the stylesheet that hold the designs -->
+ 	<!-- Will combine these into one style sheet by copying and pasting the contents together, once 100% finished, for performance reasons -->
+  <link rel="stylesheet" href="/assets/css/fonts.css">
+  <link rel="stylesheet" href="/assets/css/qqnavfooter.css">
+
+  <link rel="stylesheet" href="/assets/css/somepages.css">
+  <link rel="stylesheet" href="/assets/css/qq.css">
+  <link rel="stylesheet" href="/assets/css/text.css">
+  <link rel="stylesheet" href="/assets/css/menu-hamburger.css">
+
+ 	<!-- Media queries -->
+  <link rel="stylesheet" href="/assets/css/mediaqueries.css">
+  <link rel="stylesheet" href="/assets/css/qqmediaqueries-override.css">
+  <link rel="stylesheet" href="/assets/css/qq-position-override.css">
+
+</head>
+
+<!-- Adding opening body tag here, since all templates call this head-close.php snippet -->
+<body>
+
+    <!-- positions glasses -->
+    <script src="assets/js/qq-position.js">
+    </script>
+
+    <!-- parallax scroll -->
+    <script src="assets/js/qq-parallax.js">
+    </script>
+
+    <!-- reveals question + content upon click -->
+    <script src="assets/js/qq.js">
+    </script>
+
+<!-- *************************************** ^^^^^ LEAVE ALONE ^^^^^ *************************************** -->
+
+<!-- title of the page -->
+<h2 id="qqpagetitle" class="extracontentpagetitle">
+  <p>
+    {{ page.title }}
+  </p>
+</h2>
+
+<!-- Intro sentence -->
+<span id="qqpagetext" class="l-textface">
+  {{ content }}
+</span>
+
+<div id="qqparent">
+  {% for q in site.questionqueuecontent %}
+    <!-- "0rem" MARGINS BELOW ARE JUST PLACEHOLDERS UNTIL I FIGURE OUT HOW TO PULL IN RANDOMIZED MARGIN SELECTION (CONFER ORIGINAL KIRBY FILE) -->
+    <span class="qqpiece" style="margin-left:0rem; margin-top:0rem">
+      {% assign qfilename = q.url | replace: '/questionqueuecontent/', '' %}
+
+      <!-- Binoculars -->
+      <!-- FIGURE OUT IF I WANT TO HAVE AN alt: FIELD IN THE CONTENT FRONT-MATTER FOR alt="" IN THE BELOW <img> TAG INSTEAD OF PULLING IN THE TITLE -->
+      <div data-clickable="yes" data-id="{{ qfilename }}" class="qqglassescontainer {% if q.binocsize == 'large' %}largeqqglasses{% endif %} {% if q.binocsize == 'medium' %}mediumqqglasses{% endif %} {% if q.binocsize == 'small' %}smallqqglasses{% endif %}" title="{{ q.question }}" alt="{{ q.question }}">
+        <div data-innards-clickable="yes" class="lens l-lens" style="background-image: url(assets/images/questionqueueimages/{{ qfilename }}-l{% if q.leftextension %}{{ q.leftextension }}{% else %}.jpg{% endif %})">
+        </div>
+        <div data-innards-clickable="yes" class="knob">
+        </div>
+        <div data-innards-clickable="yes" class="{% if q.binocsize == 'large' %}trapezoid-large{% endif %} {% if q.binocsize == 'medium' %}trapezoid-medium{% endif %} {% if q.binocsize == 'small' %}trapezoid-small{% endif %}">
+        </div>
+        <div data-innards-clickable="yes" class="lens r-lens" style="background-image: url(assets/images/questionqueueimages/{{ qfilename }}-r{% if q.rightextension %}{{ q.rightextension }}{% else %}.jpg{% endif %})">
+        </div>
+      </div>
+
+      <!-- QQ flyout/tooltip -->
+      <div class="qqcontents {% if q.binocsize == 'large' %}qqcontents-large{% endif %} {% if q.binocsize == 'medium' %}qqcontents-medium{% endif %} {% if q.binocsize == 'small' %}qqcontents-small{% endif %}" style="display: none;" data-edgemargin="">
+        <div class="sharkfin">
+        </div>
+        <div class="bordercover">
+        </div>
+        <img src= "<?php echo url('assets/images/sitewide/x.svg') ?>" alt="close" id="qq-x" class="yellowhover close-x">
+        <div class="qqquestion s-display">{{ q.question }}
+        </div>
+        <div class="qqdescription s-textface">{{ q.content }}
+        </div>
+      </div>
+
+    </span>
+  {% endfor %}
+</div>    <!-- close .qqparent -->
+
+<div id="background"></div>
+
+<!-- FORMERLY footer-sitewide SNIPPET vvv ******************************************************************** -->
+
+            <footer role="contentinfo">
+              <div id="footercontent">
+
+                  {% include subscribe.html %}
+
+                <!-- Link to my Instagram profile + Twitter + portfolio -->
+                {% include follow.html %}
+
+              </div>
+            </footer>
+
+            <!--This is the pinterest script, instructed to place right before closing </body> tag-->
+            <script async defer src="//assets.pinterest.com/js/pinit.js">
+            </script>
+
+            <!--This encompasses everything within <body> except for <nav>. This is so that there is an element that can be clicked on that will be anything except <nav>, that will be recognized in JS menu.js script, that can have an event listener applied when it is clicked on, that will close the <nav> -->
+            </div>
+            <!-- Menu has to be called here, to account for a major Safari bug: Safari renders anything measured in rems at 1px, if it comes after a <details> tag... and my menu is within a <details> tag, so it was messing up everything with rems in Safari. Moving menu to the very bottom means there is nothing in the html after it, so it is fine. The menu is styled in css to position it absolutely at the top -->
+            {% include menu.html %}
+
+            <!-- Calling the JS scripts used on everypage; they need to come after the menu is called, to else they will have no effect on the menu items they are intended for -->
+            {% include scripts-sitewide.html %}
+
+<!--FORMERLY footer-sitewide SNIPPET ^^^ ******************************************************************** -->
+
+  </body>
+</html>

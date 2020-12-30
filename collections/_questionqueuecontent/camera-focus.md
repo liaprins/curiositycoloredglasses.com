@@ -1,0 +1,6 @@
+---
+question: How can cameras possibly “know” how far away something is in order to auto-focus on it?
+binocsize: small
+---
+
+Cameras don't have pinging radar like submarines do to measure distance based on returned signals ... as far as I am aware at least. And they have only one lens, unlike the two eyes most animals have, which I had always assumed made it possible for us to detect depth via parallax. So how do cameras do this? What if I put a printed, one-dimensional photograph in front of a camera: would the camera freak out trying to focus on what seems to be true depth? How would it even know, though? And how does this compare to how the human eye(s) would respond?

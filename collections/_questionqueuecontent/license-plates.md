@@ -1,0 +1,8 @@
+---
+question: Why were there so many “GAK” license plates in Walla Walla county circa 1996?
+binocsize: small
+---
+
+Being the bookish youngster that I was, I naturally stashed a spiral-ringed notebook in the family minivan that I dedicated to keeping careful track of every repeating license plate letter-pattern I saw. I had my hypotheses as to why certain letter-combinations seemed to cluster in my small city. The way I saw it, once you bought a new car, you were automatically enrolled to get the next license plate that came off the press. By my calculations, this meant that Walla Wallans were also buying cars in bunches, at least relative to the rest of the state. I figured they must be reacting to dealership sales.
+
+It's been over twenty years, and I have yet to validate this hypothesis one way or the other, but there's no time like the near future! The first order of business is to run some basic probability tests: maybe the "clusters" I witnessed are in fact clusters, but still part of a normal, random-ish distribution pattern.

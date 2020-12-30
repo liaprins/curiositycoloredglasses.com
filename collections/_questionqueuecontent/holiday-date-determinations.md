@@ -1,0 +1,6 @@
+---
+question: How are the dates for Easter, Passover, and other seemingly arbitrarily timed holidays determined?
+binocsize: small
+---
+
+The date for Thanksgiving every year is unpredictable enough for me, and I know its formula: the third Thursday of every November. Yes, that feels arbitrary to me, but not compared to Easter. I do know that Easter's date is based on that of Passover, but then what is the calculation to determine Passover's date, and how did that come to be? Are there other holidays around the world with opaque and unpredictable formulas determining when exactly they'll be celebrated?

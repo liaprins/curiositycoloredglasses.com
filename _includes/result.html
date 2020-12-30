@@ -1,0 +1,24 @@
+<!-- Adding <article> for semantic reasons and to hold together each result -->
+<article class="result">
+    <!-- Adding link outside date, blog post name, and postglasses image; tags link to their own tag result page -->
+    <a class="resultlink" href="{{ post.url }}">
+
+        <!-- Date of article, if sticking with manual input of date in panel/.txt file, only need: <?php echo $result->date("d F Y") ?> -->
+        <p id="resultdate" class="date s-textface bold">
+          <time datetime="{{ post.date }}" pubdate="pubdate">
+              {{ post.date | date: "%d %B %Y" }}
+          </time>
+        </p>
+
+        <!-- Postglasses image -->
+        <div class="resultglassescontainer">
+            <div class="resultstem resultshortstem resultleftstem"></div><div style="background-image: url({{ site.url }}/assets/images/blogposts/{{ post.slug }}/-l-{{ post.slug }}.jpg)" class="resultcircle resultleftcircle"></div><div class="resultstem resultcenterstem"></div><div style="background-image: url({{ site.url }}/assets/images/blogposts/{{ post.slug }}/-r-{{ post.slug }}.jpg)" class="resultcircle resultrightcircle"></div><div class="resultstem resultshortstem resultrightstem"></div>
+        </div>
+
+        <!-- Title of article -->
+        <p id="resulttitle" class="s-display">
+            {{ post.title }}
+        </p>
+
+    </a>
+</article>

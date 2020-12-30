@@ -1,9 +1,0 @@
-Notenumber: 25
-
-----
-
-Notecontent: <a href="https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2000JE001364" target="blank">Smith, David E., et al. “Mars Orbiter Laser Altimeter: Experiment Summary after the First Year of Global Mapping of Mars.” <em>Journal of Geophysical Research: Planets</em>, vol. 106, no. E10, 1 Oct. 2001, pp. 23689–23722., doi:10.1029/2000je001364.</a>
-
-----
-
-Title: 25

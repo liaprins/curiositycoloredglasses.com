@@ -1,0 +1,6 @@
+---
+question: What are those three characteristic spots that every coconut has?
+binocsize: medium
+---
+
+I used to think they were part of the packing and shipping process, when I only saw whole coconuts in the grocery store. But then I went to a tropical beach, and my curiosity was piqued when I saw these same three dots naturally occurring out in the wild. It almost looks like the coconut is attached to the tree with three stems, and all three stems must release their hold on it before it can fall. But having three stems seems strange. So what is the origin story for these little spots?

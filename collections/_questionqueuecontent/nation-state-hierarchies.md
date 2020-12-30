@@ -1,0 +1,8 @@
+---
+question: What does it mean to be a nation? And are there any alternatives?
+binocsize: small
+---
+
+This goes beyond just semantics. What is Puerto Rico? What constitutes Skandinavia? Is Scotland a country? If so, does that make the UK nothing more than a metaphorical file folder enveloping independent nations? … And the EU (pre-Brexit at least) a drawer within the metaphorical filing cabinet that is the world? But why, and what do these designations mean for the people in each segment of the Venn diagram?
+
+Also, what is the Cherokee Nation and how much autonomy does it have?

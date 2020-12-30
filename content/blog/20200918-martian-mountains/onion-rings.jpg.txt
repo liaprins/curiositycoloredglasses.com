@@ -1,9 +1,0 @@
-Caption: 
-
-The geopotential surfaces mapping equal strengths of gravity extend below and above any planet’s surface. Since these planes are the basis from which we measure elevations, it makes sense to choose one as a baseline that matches the surface’s circumference closely.
-<p class="figcaptionspacer"></p>
-(I exaggerated the gravity anomalies (that is, the squiggliness of the “onion rings”) here to visualize the fact that planes of equal gravity are bumpy in direct response to the planet’s uneven density.)
-
-----
-
-Alt: Earth and Mars ringed by concentric wobbly circles, indicating geopotential lines of decreasing strength as they move outward.

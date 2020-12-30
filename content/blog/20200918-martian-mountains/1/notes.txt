@@ -1,9 +1,0 @@
-Notenumber: 1
-
-----
-
-Notecontent: “Region 7: Hawai’i,” Paleontological Research Institution, 2020.
-
-----
-
-Title: 1

@@ -1,9 +1,0 @@
-Caption: 
-
-The original method used to establish the Martian areoid was based on atmospheric pressure. It put the baseline at the planet’s surface, notwithstanding higher landmasses like Olympus Mons, which rises about 21 kilometers (13 miles) above this pressure-defined baseline. If we were to use that same atmospheric threshold to measure elevations on Earth, even Everest — our highest point — would earn itself a negative measurement: about -30 kilometers (-18.6 miles). Given that Mars is sea level-less (and our own sea level is rather randomly based on the amount of water that happened to accumulate on Earth), the pressure-baseline approach affords a way to compare interplanetary elevations. However, those very comparisons come at the cost of seeming nonsensical. 
-<p class="figcaptionspacer"></p>
-(Again, horizontal dimensions are nowhere near to scale; you can just assume they won’t be unless I say otherwise!)
-
-----
-
-Alt: A sketch wherein Olympus Mons perches upon a line representing the Martian areoid's base, and extending 21 kilometers above it. Everest's peak is drawn a scaled distance of 30 kilometers below the line.
