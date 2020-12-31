@@ -1,0 +1,20 @@
+I"4<!-- Html Elements for Search -->
+<!-- HTML elements for search -->
+<p><input type="text" id="search-input" placeholder="Search blog posts.." /></p>
+<ul id="results-container"></ul>
+
+<!-- or without installing anything -->
+
+<!-- Script pointing to search-script.js -->
+<script src="/assets/js/simple-jekyll-search.js" type="text/javascript"></script>
+
+<!-- Configuration -->
+<script>
+SimpleJekyllSearch({
+  searchInput: document.getElementById('search-input'),
+  resultsContainer: document.getElementById('results-container'),
+  json: '/search.json'
+})
+</script>
+
+:ET

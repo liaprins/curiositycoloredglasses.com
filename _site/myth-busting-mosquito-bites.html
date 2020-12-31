@@ -322,6 +322,34 @@ Although researchers have yet to pinpoint what mosquitoes consider an ideal hunk
 
   
 
+<!-- COMMENTS vvv-->
+  <article class="mockmain" id="postdesktopcontent2">    <!-- Opening second instance of <article> to make room for RR results that need to be wider than this width, to accommodate their all having margins on L + R -->
+    <!-- This is from Disqus's installation webpage -->
+    <div id="disqus_thread"></div>
+    <script>
+        /**
+         *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+         *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+         */
+
+        var disqus_config = function () {
+            this.page.url = '/myth-busting-mosquito-bites';  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = '/myth-busting-mosquito-bites'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+
+        (function() {  // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+
+            s.src = '//curiositycoloredglasses.disqus.com/embed.js';
+
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+  </article>
+  <!-- COMMENTS ^^^-->
+
   <!-- FORMERLY footer-sitewide SNIPPET vvv ******************************************************************** -->
 
               <footer role="contentinfo">
@@ -464,9 +492,39 @@ Although researchers have yet to pinpoint what mosquitoes consider an ideal hunk
               Archive</span></li></a>
         
       
+        
+      
     	<!-- I added the searchbar snippet here, inside a list item, so it will be part of the menu list -->
     	<li id="navsearch" class="navnothome">
        			<!-- searchbar SNIPPET WAS HERE; NEED TO FIGURE OUT SEARCH FOR JEKYLL -->
+
+
+
+
+
+
+                          <!--
+                          <div id="searchdecoy" title="Search" class="yellowhover" style="display: none;">
+                          	<img src="/assets/images/sitewide/search.svg" alt="search" class="navsearchicon">
+                          </div>
+                          -->
+
+                          <form action="/search" id="navsearchform">
+                            <input type="text" placeholder="search" name="q" id="navsearchinput" class="s-textface underlineinput">
+                            <button type="submit" value="search" title="Search" id="navsearchbutton" class="searchbutton yellowhover">
+                              <img src="/assets/images/sitewide/search.svg" alt="search" class="navsearchicon">
+                            </button>
+                          </form>
+
+
+
+
+
+
+
+
+
+
 			</li>
 		</ul>
   </details>

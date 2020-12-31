@@ -286,7 +286,7 @@
 
           <!-- Intro for each article -->
           <p id="homeintro" class="m-textface hyphenate">
-            Way back in seventh grade science class, I wrote on the back of my spiral-bound notebook &#58; "Is it just a coincidence that the moon both rotates around Earth at a certain speed and spins at a certain rate that ends up so it is always keeping the same face toward us?" It made no sense to me; other planets' moons don't behave this way.
+            Way back in seventh grade science class, I wrote on the back of my spiral-bound notebook &#58; “Is it just a coincidence that the moon both rotates around Earth at a certain speed and spins at a certain rate that ends up so it is always keeping the same face toward us?” It made no sense to me; other planets' moons don't behave this way.
             <!-- "Read more" -->
             <!-- I put "&nbsp" between "Read" and "more" so they would never split onto separate lines -->
             <a href="/the-moons-dark-side" id="readmore" class="s-display yellowhover">
@@ -508,7 +508,7 @@
 
           <!-- Intro for each article -->
           <p id="homeintro" class="m-textface hyphenate">
-            When Andrew Ellicott Douglas, director of the University of Arizona's Steward Observatory, published his fascinating chronicle of discovery in National Geographic nearly seven decades ago, it was clear to him that he had found a long-overlooked "key to prehistoric chronology." Perhaps even more startling, was his sense that one day the concentric rings of wood laid down by trees as they grew would be a barometer for measuring future climate &#58; "When a real theory of climate has been developed and we can predict drought and flood over a period of years, this Arizona story in tree rings will have played a creditable part in developing that climatic foresight which is perhaps the most valuable economic advantage yet lying beyond our reach."
+            When Andrew Ellicott Douglas, director of the University of Arizona's Steward Observatory, published his fascinating chronicle of discovery in National Geographic nearly seven decades ago, it was clear to him that he had found a long-overlooked “key to prehistoric chronology.” Perhaps even more startling, was his sense that one day the concentric rings of wood laid down by trees as they grew would be a barometer for measuring future climate &#58; “When a "real" theory of climate has been developed and we can predict drought and flood over a period of years, this Arizona story in tree rings will have played a creditable part in developing that climatic foresight which is perhaps the most valuable economic advantage yet lying beyond our <em>reach</em>!”
             <!-- "Read more" -->
             <!-- I put "&nbsp" between "Read" and "more" so they would never split onto separate lines -->
             <a href="/indoor-tree-growth-rings" id="readmore" class="s-display yellowhover">
@@ -1026,9 +1026,39 @@
               Archive</span></li></a>
         
       
+        
+      
     	<!-- I added the searchbar snippet here, inside a list item, so it will be part of the menu list -->
     	<li id="navsearch" class="navnothome">
        			<!-- searchbar SNIPPET WAS HERE; NEED TO FIGURE OUT SEARCH FOR JEKYLL -->
+
+
+
+
+
+
+                          <!--
+                          <div id="searchdecoy" title="Search" class="yellowhover" style="display: none;">
+                          	<img src="/assets/images/sitewide/search.svg" alt="search" class="navsearchicon">
+                          </div>
+                          -->
+
+                          <form action="/search" id="navsearchform">
+                            <input type="text" placeholder="search" name="q" id="navsearchinput" class="s-textface underlineinput">
+                            <button type="submit" value="search" title="Search" id="navsearchbutton" class="searchbutton yellowhover">
+                              <img src="/assets/images/sitewide/search.svg" alt="search" class="navsearchicon">
+                            </button>
+                          </form>
+
+
+
+
+
+
+
+
+
+
 			</li>
 		</ul>
   </details>

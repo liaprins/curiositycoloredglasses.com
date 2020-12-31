@@ -3,7 +3,7 @@ title: Casting light on the moon's dark side
 author: Lia Prins
 tags: science physics astronomy moon sun
 rightextension: .gif
-excerpt: Way back in seventh grade science class, I wrote on the back of my spiral-bound notebook &#58; "Is it just a coincidence that the moon both rotates around Earth at a certain speed and spins at a certain rate that ends up so it is always keeping the same face toward us?" It made no sense to me; other planets' moons don't behave this way.
+excerpt: Way back in seventh grade science class, I wrote on the back of my spiral-bound notebook &#58; “Is it just a coincidence that the moon both rotates around Earth at a certain speed and spins at a certain rate that ends up so it is always keeping the same face toward us?” It made no sense to me; other planets' moons don't behave this way.
 glossaryfolder: vocab-the-moons-dark-side
 relevantreading:
   - the-moons-dark-side

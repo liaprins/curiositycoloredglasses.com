@@ -817,7 +817,7 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
     margin-bottom: 2.560rem;
     padding-top: calc(10.714vw - 0.469rem);    }    /* 3/28 cols, but finessing vertical centering of search bar with menu icon */
 
-#searchpageinput {
+#search-input {
     -webkit-appearance: none;
     padding-bottom: 0.1719rem;    /* Finessed the space between input word and underline bar to match space between input and bottom of field for subscribe + comment name fields (this is a different measurement than nav search's is, because they have different input text sizes, so the line-height (relative sizing) offsets each differently in px for the default spacing)*/
     width: calc(78.571vw - 3.602rem);    }    /* This should be [the width of <main> (22/28 cols = 78.571vw)[] minus [the width of magnifier icon + its padding + the width of menu icon + the space between them (30px + 17px + 15px = 62px)] */
@@ -835,7 +835,7 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
     margin-top: 1.024rem;    }    /* .25 lh */
 
 #nosearchresults {
-    margin: 0 10.714vw;
+    margin: 0;
     width: 78.571vw;    }
 
 
