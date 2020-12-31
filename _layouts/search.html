@@ -1,0 +1,73 @@
+{% include head-open.html %}
+{% include head-title-all-but-home.html %}
+{% include share-settings-common.html %}
+{% include share-settings-other.html %}
+{% include head-close.html %}
+
+<div id="everythingexceptnav">
+  <div id="pre-search">
+    <div id="searchdesktopcontent">
+      <form id="searchpageform">
+        <!-- UPDATE CSS #id from #searchpageinput (Kirby original) to #search-input (part of Simple Jekyll Search) -->
+        <input type="search" placeholder="search" id="search-input" class="xl-textface underlineinput">
+        <button type="submit" value="Search" id="searchpagebutton" class="searchbutton yellowhover">
+          <img src= "/assets/images/sitewide/search.svg" alt="Search" id="searchpageicon">
+        </button>
+      </form>
+      <p id="searchpageintrotext">
+        <span class="l-textface">
+        {{ content }}
+        </span>
+      </p>
+    </div>
+    <div id="results-container" class="resultarea">
+
+    </div>
+  </div>
+  <!-- ?
+</div>
+-->
+
+<!-- Script pointing to search-script.js -->
+<script src="/assets/js/simple-jekyll-search.js" type="text/javascript"></script>
+
+<!-- Configuration -->
+<script>
+SimpleJekyllSearch({
+  searchInput: document.getElementById('search-input'),
+  resultsContainer: document.getElementById('results-container'),
+  searchResultTemplate: '<article class="result"><a class="resultlink" href="{url}"><p id="resultdate" class="date s-textface bold"><time datetime="{date}" pubdate="pubdate">{date}</time></p><div class="resultglassescontainer"><div class="resultstem resultshortstem resultleftstem"></div><div style="background-image: url({bgimageleft})" class="resultcircle resultleftcircle"></div><div class="resultstem resultcenterstem"></div><div style="background-image: url({bgimageright})" class="resultcircle resultrightcircle"></div><div class="resultstem resultshortstem resultrightstem"></div></div><p id="resulttitle" class="s-display">{title}</p></a></article>',
+  noResultsText: ("<p class='l-textface' id='nosearchresults'>I looked everywhere and even polished the lenses of my glasses to see clearly, but could not find that word!</p>"),
+  json: '/search.json'
+})
+</script>
+
+<!-- FORMERLY footer-sitewide SNIPPET vvv ******************************************************************** -->
+
+            <footer role="contentinfo">
+              <div id="footercontent">
+
+                  {% include subscribe.html %}
+
+                <!-- Link to my Instagram profile + Twitter + portfolio -->
+                {% include follow.html %}
+
+              </div>
+            </footer>
+
+            <!--This is the pinterest script, instructed to place right before closing </body> tag-->
+            <script async defer src="//assets.pinterest.com/js/pinit.js">
+            </script>
+
+            <!--This encompasses everything within <body> except for <nav>. This is so that there is an element that can be clicked on that will be anything except <nav>, that will be recognized in JS menu.js script, that can have an event listener applied when it is clicked on, that will close the <nav> -->
+            </div>
+            <!-- Menu has to be called here, to account for a major Safari bug: Safari renders anything measured in rems at 1px, if it comes after a <details> tag... and my menu is within a <details> tag, so it was messing up everything with rems in Safari. Moving menu to the very bottom means there is nothing in the html after it, so it is fine. The menu is styled in css to position it absolutely at the top -->
+            {% include menu.html %}
+
+            <!-- Calling the JS scripts used on everypage; they need to come after the menu is called, to else they will have no effect on the menu items they are intended for -->
+            {% include scripts-sitewide.html %}
+
+<!--FORMERLY footer-sitewide SNIPPET ^^^ ******************************************************************** -->
+
+  </body>
+</html>

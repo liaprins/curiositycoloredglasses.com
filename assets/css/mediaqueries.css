@@ -28,8 +28,8 @@
         width: 173.64px;    }
     .date,
     figcaption {
-        border-width: 0.29rem;    }    
-} 
+        border-width: 0.29rem;    }
+}
 
 @media (min-width: 390px) {
     :root {
@@ -91,7 +91,7 @@
         -webkit-line-clamp: 4;
         -webkit-box-orient: vertical;    }
     #nosearchresults {
-        margin-top: 1.024rem;    }
+        margin-left: 3.571vw;    }
     #avatar {
         height: 7.143vw;
         width: 7.143vw;
@@ -128,7 +128,7 @@
         --resultglasseswidth: 92.857px;    }
     #resultdate {
         border-width: 0.15rem;    }
-}  
+}
 
 @media (min-width: 442px) {
     :root {
@@ -138,7 +138,7 @@
     .xs-display {
         font-size: 0.443rem;    }
     .xxs-display {
-        font-size: 0.369rem;    }    
+        font-size: 0.369rem;    }
     #backarrowcontainer {
         right: calc(5.357vw + 1.7rem);
         top: calc(5.357vw - 0.65rem);    }
@@ -191,7 +191,7 @@
         margin-top: 7.143vw;    }
     body {
         padding-bottom: calc(21.429vw + 6.641rem);    }
-    #searchpageinput {
+    #search-input {
         width: calc(78vw - 2.05rem);    }
     #searchpagebutton {
         float: right;    }
@@ -236,7 +236,7 @@
         --resultglasseswidth: 14.286vw;    }
     html {
         font-size: 23.529px;    }
-    #navdetails[open] {    
+    #navdetails[open] {
         width: calc(274.129px + 14.286vw);    }
     #navsearchinput {
         width: 234px;    }
@@ -293,7 +293,7 @@
     #mce-EMAIL {
         float: left;
         margin-right: calc(14.0545rem + 5.3125rem);
-        width: calc(78.571vw - 14.0545rem + 5.3125rem);    }    
+        width: calc(78.571vw - 14.0545rem + 5.3125rem);    }
     .subscribebutton {
         bottom: calc(7.143vw + 0.844rem + 2.5px);
         right: calc(12.4rem);    }
@@ -326,15 +326,15 @@
     #qqpagetext p {
         width: 641.929px;    }
     #pre-rr {
-        padding-top: 87.536px;    }    
+        padding-top: 87.536px;    }
     #navdetails[open] #navsummary {
         right: 58.357px;
         top: 58.357px;    }
     .postdatewidth {
         width: 641.929px;    }
-    #searchpageinput {
+    #search-input {
         width: calc(641px - 1.94rem);    }
-    #navdetails[open] {    
+    #navdetails[open] {
         padding: 58.357px;
         width: calc(274.129px + 116.714px);    }
     .date, figcaption {
@@ -353,10 +353,10 @@
         width: 641.929px;
         padding: 0.95rem 0;    }
     #mce-EMAIL {
-        width: calc(641.929px - 14.0545rem + 5.3125rem)    }   
+        width: calc(641.929px - 14.0545rem + 5.3125rem)    }
     .subscribebutton {
         left: calc(50vw - 320.96px + 14.0545rem - 0.9rem);
-        bottom: calc(58.357px + 0.844rem + 0.125rem);    } 
+        bottom: calc(58.357px + 0.844rem + 0.125rem);    }
     #follow {
         top: 58.357px;
         left: calc(50% + 320.964px - 8.32rem);    }
@@ -374,7 +374,7 @@
         height: 481.447px;    }
     .postvideo-16-9-ratio {
         width: 641.929px;
-        height: 361.085px;    }    
+        height: 361.085px;    }
     .lightboximage {
         max-width: calc(100vw - 58.333px - 58.333px);
         max-height: calc(100vh - 4.1rem);    }
@@ -404,7 +404,7 @@
     .lonedefinitionwidth {
         width: 641.929px;    }
     .vocabillustration {
-        max-width: 175px;    }    
+        max-width: 175px;    }
     #rrsectionheader {
         width: 641.929px;    }
     .resultarea {
@@ -415,8 +415,6 @@
         margin: 0 29.175px 1.536rem 29.175px;    }
     #resultdate {
         width: 175px;    }
-    #nosearchresults {
-        margin-left: 29.179px;    }
     #avatar {
         height: 58.357px;
         width: 58.357px;
@@ -488,7 +486,7 @@
         width: 641.929px;    }
     #pre-rr,
     #pre-search {
-        padding-top: calc(97.5px - 1.59rem);    }    
+        padding-top: calc(97.5px - 1.59rem);    }
     #backarrowcontainer {
         position: absolute;
         left: 0.422rem;
@@ -545,7 +543,7 @@
         position: absolute;
         left: calc(-100vw + 677px + 0.422rem);
         top: 0.422rem;
-        width: 1.301rem;    
+        width: 1.301rem;
         padding: 0.316rem;    }
     #navlist {
         display: inline;
@@ -560,7 +558,7 @@
     .active2 {
         border-style: none none solid none;
         border-color: black;
-        border-width: 0.125rem;  
+        border-width: 0.125rem;
         padding-bottom: 0.422rem;    }
     #menuword {
         position: relative;
@@ -603,7 +601,7 @@
         top: -0.15rem;    }
     #homedate {
         margin-top: 0;    }
-    .date {       
+    .date {
         position: absolute;
         left: -233.333px;
         top: calc(96px + 2.048rem + 0.4rem + 1px);
@@ -699,7 +697,7 @@
         width: 233.333px;    }
     .toprule {
         display: block;
-        background-color: black;    }    
+        background-color: black;    }
     .lightboximage {
         max-width: 1108.333px;
         max-height: calc(100vh - 4rem);    }
@@ -741,7 +739,7 @@
         padding-right: 58.333px;
         display: block;
         z-index: 1;
-        width: 291.667px;    }    
+        width: 291.667px;    }
     #containerinner {
         position: absolute;
         padding: 58.333px;
@@ -766,7 +764,7 @@
         width: 175px;
         position: relative;
         padding-top: 0.512rem;
-        border-style: solid none none none; 
+        border-style: solid none none none;
         border-color: black;    }
     .sidebarnotenumber {    }
     #inlinedefinition,
@@ -818,13 +816,13 @@
     #searchpageform {
         padding-top: 3.1rem;
         z-index: 100;    }
-    #searchpageinput {
+    #search-input {
         width: calc(641.667px - 1.94rem);    }
     #searchdesktopcontent {
         z-index: 100;    }
 }
 
-@media (min-width: 1246px) {  
+@media (min-width: 1246px) {
     #homeicon {
         position: fixed;
         left: 0.422rem;    }
@@ -837,19 +835,3 @@ html, body {
     max-width: 100% !important;
     overflow-x: hidden !important;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

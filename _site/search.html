@@ -29,7 +29,7 @@
 
 <!-- This is what shows when you bookmark this page, and what's in the browser tab -->
 <title>
-   | Curiosity-Colored Glasses
+  Search | Curiosity-Colored Glasses
 </title>
 
 <!-- This file has contents that is common, or dynamically called in a common way, for all pages. -->
@@ -39,13 +39,13 @@
 
 
 <!-- The url of the current page -->
-<meta property="og:url"                content="/assets/images/blogposts/martian-mountains/olympus-mons-new-mexico" />
+<meta property="og:url"                content="/search" />
 
 <!-- This one was found on Pinterest, may not be supported by Facebook -->
 <meta property="og:site_name"          content="Curiosity-Colored Glasses" />
 
 <!-- This is the page's title/name -->
-<meta property="og:title"              content="" />
+<meta property="og:title"              content="Search" />
 
 
 <!-- This file has contents for all pages except blog posts: Home (Blog), About, Archive, Library, search, tag results, error -->
@@ -100,23 +100,50 @@
 
 
 <div id="everythingexceptnav">
-  <main>
-    <div class="desktopcontent">
-      <h2 id="pagetitle" class="extracontentpagetitle"></h2>
-      <span class="l-textface">
-        <p>I AM A NEW WAY TO ADD IN CAPTIONS!</p>
+  <div id="pre-search">
+    <div id="searchdesktopcontent">
+      <form id="searchpageform">
+        <!-- UPDATE CSS #id from #searchpageinput (Kirby original) to #search-input (part of Simple Jekyll Search) -->
+        <input type="search" placeholder="search" id="search-input" class="xl-textface underlineinput">
+        <button type="submit" value="Search" id="searchpagebutton" class="searchbutton yellowhover">
+          <img src= "/assets/images/sitewide/search.svg" alt="Search" id="searchpageicon">
+        </button>
+      </form>
+      <p id="searchpageintrotext">
+        <span class="l-textface">
+        
 
-      </span>
-      <img src= "/assets/images/sitewide/broken-glasses.jpg" alt="Illustration of broken glasses" id="brokenglasses">
+        </span>
+      </p>
     </div>
-  </main>
+    <div id="results-container" class="resultarea">
 
-  <!-- FORMERLY footer-sitewide SNIPPET vvv ******************************************************************** -->
+    </div>
+  </div>
+  <!-- ?
+</div>
+-->
 
-              <footer role="contentinfo">
-                <div id="footercontent">
+<!-- Script pointing to search-script.js -->
+<script src="/assets/js/simple-jekyll-search.js" type="text/javascript"></script>
 
-                    
+<!-- Configuration -->
+<script>
+SimpleJekyllSearch({
+  searchInput: document.getElementById('search-input'),
+  resultsContainer: document.getElementById('results-container'),
+  searchResultTemplate: '<article class="result"><a class="resultlink" href="{url}"><p id="resultdate" class="date s-textface bold"><time datetime="{date}" pubdate="pubdate">{date}</time></p><div class="resultglassescontainer"><div class="resultstem resultshortstem resultleftstem"></div><div style="background-image: url({bgimageleft})" class="resultcircle resultleftcircle"></div><div class="resultstem resultcenterstem"></div><div style="background-image: url({bgimageright})" class="resultcircle resultrightcircle"></div><div class="resultstem resultshortstem resultrightstem"></div></div><p id="resulttitle" class="s-display">{title}</p></a></article>',
+  noResultsText: ("<p class='l-textface' id='nosearchresults'>I looked everywhere and even polished the lenses of my glasses to see clearly, but could not find that word!</p>"),
+  json: '/search.json'
+})
+</script>
+
+<!-- FORMERLY footer-sitewide SNIPPET vvv ******************************************************************** -->
+
+            <footer role="contentinfo">
+              <div id="footercontent">
+
+                  
 
 <form action="//curiositycoloredglasses.us14.list-manage.com/subscribe/post?u=05f8f85154975a52907f2ce4d&amp;id=086ebe8644" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 
@@ -179,8 +206,8 @@
 <!--End mc_embed_signup-->
 
 
-                  <!-- Link to my Instagram profile + Twitter + portfolio -->
-                  <span id="follow">
+                <!-- Link to my Instagram profile + Twitter + portfolio -->
+                <span id="follow">
 
 	<!-- Link to my instagram page -->
 	<a href="https://www.instagram.com/curiositycoloredglasses/" title="Follow on Instagram" target="_blank">
@@ -202,17 +229,17 @@
 </span>
 
 
-                </div>
-              </footer>
-
-              <!--This is the pinterest script, instructed to place right before closing </body> tag-->
-              <script async defer src="//assets.pinterest.com/js/pinit.js">
-              </script>
-
-              <!--This encompasses everything within <body> except for <nav>. This is so that there is an element that can be clicked on that will be anything except <nav>, that will be recognized in JS menu.js script, that can have an event listener applied when it is clicked on, that will close the <nav> -->
               </div>
-              <!-- Menu has to be called here, to account for a major Safari bug: Safari renders anything measured in rems at 1px, if it comes after a <details> tag... and my menu is within a <details> tag, so it was messing up everything with rems in Safari. Moving menu to the very bottom means there is nothing in the html after it, so it is fine. The menu is styled in css to position it absolutely at the top -->
-              <nav role="navigation">
+            </footer>
+
+            <!--This is the pinterest script, instructed to place right before closing </body> tag-->
+            <script async defer src="//assets.pinterest.com/js/pinit.js">
+            </script>
+
+            <!--This encompasses everything within <body> except for <nav>. This is so that there is an element that can be clicked on that will be anything except <nav>, that will be recognized in JS menu.js script, that can have an event listener applied when it is clicked on, that will close the <nav> -->
+            </div>
+            <!-- Menu has to be called here, to account for a major Safari bug: Safari renders anything measured in rems at 1px, if it comes after a <details> tag... and my menu is within a <details> tag, so it was messing up everything with rems in Safari. Moving menu to the very bottom means there is nothing in the html after it, so it is fine. The menu is styled in css to position it absolutely at the top -->
+            <nav role="navigation">
   <details id="navdetails" open>
     <summary id="navsummary">
     </summary>
@@ -292,8 +319,8 @@
 </nav>
 
 
-              <!-- Calling the JS scripts used on everypage; they need to come after the menu is called, to else they will have no effect on the menu items they are intended for -->
-              <script src="/assets/js/menu.js">
+            <!-- Calling the JS scripts used on everypage; they need to come after the menu is called, to else they will have no effect on the menu items they are intended for -->
+            <script src="/assets/js/menu.js">
 </script>
 
 <script src="/assets/js/search.js">
@@ -306,7 +333,7 @@
 -->
 
 
-  <!--FORMERLY footer-sitewide SNIPPET ^^^ ******************************************************************** -->
+<!--FORMERLY footer-sitewide SNIPPET ^^^ ******************************************************************** -->
 
-    </body>
-  </html>
+  </body>
+</html>

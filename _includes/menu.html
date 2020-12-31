@@ -9,7 +9,7 @@
     </a>
     <ul id="navlist">
       {% for item in site.mainpages %}
-        {% unless item.title == 'Page not found' %}
+        {% unless item.title == 'Page not found' or item.title=='Search' %}
         <a href="{{ item.url }}" {% if page.url == item.url %}class="active"{% endif %} class="menuwordlink">
           <li id="menuword" class="navnothome m-display yellowhover">
             <span {% if page.url == item.url %}class="active2"{% endif %} href="{{ item.url }}">
@@ -19,6 +19,34 @@
     	<!-- I added the searchbar snippet here, inside a list item, so it will be part of the menu list -->
     	<li id="navsearch" class="navnothome">
        			<!-- searchbar SNIPPET WAS HERE; NEED TO FIGURE OUT SEARCH FOR JEKYLL -->
+
+
+
+
+
+
+                          <!--
+                          <div id="searchdecoy" title="Search" class="yellowhover" style="display: none;">
+                          	<img src="/assets/images/sitewide/search.svg" alt="search" class="navsearchicon">
+                          </div>
+                          -->
+
+                          <form action="/search" id="navsearchform">
+                            <input type="text" placeholder="search" name="q" id="navsearchinput" class="s-textface underlineinput">
+                            <button type="submit" value="search" title="Search" id="navsearchbutton" class="searchbutton yellowhover">
+                              <img src="/assets/images/sitewide/search.svg" alt="search" class="navsearchicon">
+                            </button>
+                          </form>
+
+
+
+
+
+
+
+
+
+
 			</li>
 		</ul>
   </details>
