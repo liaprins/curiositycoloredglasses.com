@@ -1,29 +1,4 @@
-I"À1
-<!-- Adding <article> for semantic reasons and to hold together each result -->
-<article class="result">
-    <!-- Adding link outside date, blog post name, and postglasses image; tags link to their own tag result page -->
-    <a class="resultlink" href="/penmanship-dialects">
-
-        <!-- Date of article, if sticking with manual input of date in panel/.txt file, only need: <?php echo $result->date("d F Y") ?> -->
-        <p id="resultdate" class="date s-textface bold">
-          <time datetime="2020-12-29 14:29:54 -0800" pubdate="pubdate">
-              29 December 2020
-          </time>
-        </p>
-
-        <!-- Postglasses image -->
-        <div class="resultglassescontainer">
-            <div class="resultstem resultshortstem resultleftstem"></div><div style="background-image: url(http://localhost:4000/assets/images/blogposts/penmanship-dialects/-l-penmanship-dialects.jpg)" class="resultcircle resultleftcircle"></div><div class="resultstem resultcenterstem"></div><div style="background-image: url(http://localhost:4000/assets/images/blogposts/penmanship-dialects/-r-penmanship-dialects.jpg)" class="resultcircle resultrightcircle"></div><div class="resultstem resultshortstem resultrightstem"></div>
-        </div>
-
-        <!-- Title of article -->
-        <p id="resulttitle" class="s-display">
-            Penmanship dialects of the Roman alphabet
-        </p>
-
-    </a>
-</article>
-
+I"B,
 <!-- Adding <article> for semantic reasons and to hold together each result -->
 <article class="result">
     <!-- Adding link outside date, blog post name, and postglasses image; tags link to their own tag result page -->

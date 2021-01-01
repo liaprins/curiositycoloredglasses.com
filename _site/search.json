@@ -1,16 +1,6 @@
 [
   
     {
-      "title"    : "Penmanship dialects of the Roman alphabet",
-      "tags"     : "penmanship, language, all, design",
-      "excerpt"  : "Believe it or not, the way in which we form our letters can often help identify our culture of origin and even our mother tongue. Although we may achieve a high level of fluency in another language, it’s surprisingly hard to abandon the style of penmanship that we were first taught. Whether it’s the length of our pen strokes or where we place a cross bar, our handwriting retains our cultural identity through all the languages we learn to write in. The order in which we make strokes when writing letters is just one example of our handwriting ‘accent’.",
-      "url"      : "/penmanship-dialects",
-      "date"     : "29 December 2020",
-      "bgimageleft" : "http://localhost:4000/assets/images/blogposts/penmanship-dialects/-l-penmanship-dialects.jpg",
-      "bgimageright" : "http://localhost:4000/assets/images/blogposts/penmanship-dialects/-r-penmanship-dialects.jpg"
-    } ,
-  
-    {
       "title"    : "How are Martian mountains measured?",
       "tags"     : "science, geology, Mars, mountains, volcanoes",
       "excerpt"  : "On maps, a mountain’s height is always shown solely as its peak’s elevation above sea level. This seems like a bit of a cop-out to me&amp;#58; is the mountain itself really that tall? Or is it just standing on the shoulders of a very tall plateau, so to speak? Then again, determining the base from which to measure any mountain seems like quite the slippery slope once you get down to it, so I do understand and sympathize with the sea level approach adopted by us Earthlings. But what about pinnacle-peppered planets and oceanless asteroids — (how) do we measure their mountains?",
