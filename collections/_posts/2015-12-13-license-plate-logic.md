@@ -15,21 +15,21 @@ In addition to my betrothed crayons, I loved my notebooks; I had one for each ob
 Testing inline definition formatting
 Today we will be testing all possible configurations of inline vocab definitions.
 
-Just testing out a defined word {% include post-glossary-inline.html inlineword="pasta (PAI)" data-definition-id="pai" id="-pai" %}, right here!!!
+Just testing out a defined word {% include post-glossary-inline.html inlineword="pasta (PAI)" id="pai" %}, right here!!!
 
-Just testing out a defined word {% include post-glossary-inline.html inlineword="PA" data-definition-id="pa" id="-pa" %} right here!
+Just testing out a defined word {% include post-glossary-inline.html inlineword="PA" id="pa" %} right here!
 
-Just testing out a defined word {% include post-glossary-inline.html inlineword="PI" data-definition-id="pi" id="-pi" %} right here!
+Just testing out a defined word {% include post-glossary-inline.html inlineword="PI" id="pi" %} right here!
 
-Just testing out a defined word {% include post-glossary-inline.html inlineword="P" data-definition-id="p" id="-p" %} right here!
+Just testing out a defined word {% include post-glossary-inline.html inlineword="P" id="p" %} right here!
 
-Just testing out a defined word {% include post-glossary-inline.html inlineword="AI" data-definition-id="ai" id="-ai" %} right here!
+Just testing out a defined word {% include post-glossary-inline.html inlineword="AI" id="ai" %} right here!
 
-Just testing out a defined word {% include post-glossary-inline.html inlineword="A" data-definition-id="a" id="-a" %} right here!
+Just testing out a defined word {% include post-glossary-inline.html inlineword="A" id="a" %} right here!
 
-Just testing out a defined word {% include post-glossary-inline.html inlineword="I" data-definition-id="i" id="-i" %} right here!
+Just testing out a defined word {% include post-glossary-inline.html inlineword="I" id="i" %} right here!
 
-{% include post-glossary-inline.html inlineword="Nothing optional" data-definition-id="nothing-optional" id="-nothing-optional" %} right here!
+{% include post-glossary-inline.html inlineword="Nothing optional" id="nothing-optional" %} right here!
 
 Serial coding
 License plate numbers are usually assigned in ascending order, beginning with a starting point such as AAA-001. Thus, an observer familiar with the sequence can determine roughly when the plate was issued. In a few cases, numbers have been assigned in descending order. For example, when Virginia switched to seven characters for its standard issue in 1993, numbers beginning with AAA-1000 were already in use for extra-cost, optional-issue plates; therefore, the new standard license plates were issued in descending order from ZZZ-9999.

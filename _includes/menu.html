@@ -5,7 +5,7 @@
 
     <!-- Home glasses icon -->
     <a href="/" title="Curiosity-Colored Glasses">
-      <img src="assets/images/sitewide/home.svg" alt="Curiosity-Colored Glasses" id="homeicon" class="yellowhover">
+      <img src="/assets/images/sitewide/home.svg" alt="Curiosity-Colored Glasses" id="homeicon" class="yellowhover">
     </a>
     <ul id="navlist">
       {% for item in site.mainpages %}
@@ -18,35 +18,15 @@
       {% endfor %}
     	<!-- I added the searchbar snippet here, inside a list item, so it will be part of the menu list -->
     	<li id="navsearch" class="navnothome">
-       			<!-- searchbar SNIPPET WAS HERE; NEED TO FIGURE OUT SEARCH FOR JEKYLL -->
-
-
-
-
-
-
-                          <!--
-                          <div id="searchdecoy" title="Search" class="yellowhover" style="display: none;">
-                          	<img src="/assets/images/sitewide/search.svg" alt="search" class="navsearchicon">
-                          </div>
-                          -->
-
-                          <form action="/search" id="navsearchform">
-                            <input type="text" placeholder="search" name="q" id="navsearchinput" class="s-textface underlineinput">
-                            <button type="submit" value="search" title="Search" id="navsearchbutton" class="searchbutton yellowhover">
-                              <img src="/assets/images/sitewide/search.svg" alt="search" class="navsearchicon">
-                            </button>
-                          </form>
-
-
-
-
-
-
-
-
-
-
+        <div id="searchdecoy" title="Search" class="yellowhover" style="display: none;">
+        	<img src="/assets/images/sitewide/search.svg" alt="search" class="navsearchicon">
+        </div>
+        <form action="/search" method="get" id="navsearchform">
+          <input type="text" placeholder="search" name="query" id="navsearchinput" class="s-textface underlineinput">
+          <button type="submit" value="search" title="Search" id="navsearchbutton" class="searchbutton yellowhover">
+            <img src="/assets/images/sitewide/search.svg" alt="search" class="navsearchicon">
+          </button>
+        </form>
 			</li>
 		</ul>
   </details>

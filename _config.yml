@@ -156,7 +156,9 @@ defaults:
       path: ""
     values:
       layout: "default"
+paginate: 7
 plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
+  - jekyll-paginate

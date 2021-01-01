@@ -73,6 +73,17 @@ header {    /* Holds blog name + tagline */
 #hometag {
     margin: 0.512rem 0 1.536rem 0;    }    /* top: .25 lh, bottom: .75 lh */
 
+.pagination {
+    width: 100px;
+    margin: 10.714vw auto 0 auto;    }
+
+.paginationplaceholder {
+    display: inline-block;    }
+
+.paginationarrows {
+  position: relative;
+  top: 8px;    }
+
 
 /* HOME + POST PAGES -------------------------------------------------- */
 
@@ -561,11 +572,15 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
 .arrowcontainer {
     float: right;    }
 
-.galleryarrows {
+.galleryarrows,
+.paginationarrows,
+.paginationplaceholder {
     box-sizing: content-box;
     height: 0.844rem;
     width: 0.844rem;
-    padding: 0.422rem;
+    padding: 0.422rem;   }
+
+.galleryarrows {
     cursor: pointer;
     float: left;    }
 

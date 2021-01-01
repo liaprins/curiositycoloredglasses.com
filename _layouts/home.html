@@ -33,7 +33,7 @@
     <main>
 
       <!-- Pulling in date, postglasses, author, excerpt, and tags for each post -->
-      {% for post in site.posts %}
+      {% for post in paginator.posts %}
         <article id="homepagepost">
           <!-- Date for each article -->
           <p id="homedate" class="date m-textface bold">
@@ -93,6 +93,35 @@
           </div>
         </article>
       {% endfor %}
+
+
+
+      <!-- TEST!!! Pagination links -->
+      {% if paginator.total_pages > 1 %}
+      <div class="pagination">
+        {% if paginator.previous_page %}
+          <a href="{{ paginator.previous_page_path | relative_url }}">
+            <img src="/assets/images/sitewide/left-arrowhead.svg" class="paginationarrows yellowhover">
+          </a>
+        {% else %}
+          <div class="paginationplaceholder"></div>
+        {% endif %}
+
+        <!-- <span class="pagenumbers xl-textface">{{ paginator.page }} / {{ paginator.total_pages }}</span> -->
+        <span class="pagenumbers l-textface"><strong>{{ paginator.page }} / {{ paginator.total_pages }}</strong></span>
+
+        {% if paginator.next_page %}
+          <a href="{{ paginator.next_page_path | relative_url }}">
+            <img src="/assets/images/sitewide/right-arrowhead.svg" class="paginationarrows yellowhover">
+          </a>
+        {% else %}
+          <div class="paginationplaceholder"></div>
+        {% endif %}
+      </div>
+      {% endif %}
+
+
+
     </main>
 
 <!-- FORMERLY footer-sitewide SNIPPET vvv ******************************************************************** -->

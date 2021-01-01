@@ -381,8 +381,6 @@ Fluorescence and photoluminescence are further applications of useful doped semi
             
           
             
-          
-            
               <!-- Adding <article> for semantic reasons and to hold together each result -->
 <article class="result">
     <!-- Adding link outside date, blog post name, and postglasses image; tags link to their own tag result page -->
@@ -425,8 +423,6 @@ Fluorescence and photoluminescence are further applications of useful doped semi
 
         
 
-          
-            
           
             
           
@@ -477,8 +473,6 @@ Fluorescence and photoluminescence are further applications of useful doped semi
 
         
 
-          
-            
           
             
           
@@ -634,13 +628,13 @@ Fluorescence and photoluminescence are further applications of useful doped semi
 
 	<!-- Link to my instagram page -->
 	<a href="https://www.instagram.com/curiositycoloredglasses/" title="Follow on Instagram" target="_blank">
-		<img src= "assets/images/sitewide/Instagram.svg" alt="Follow me on Instagram" id="instagramlogo" class="followicon socialicon">
+		<img src= "/assets/images/sitewide/Instagram.svg" alt="Follow me on Instagram" id="instagramlogo" class="followicon socialicon">
 	</a>
 
 
 	<!-- Link to @CuriosityColor twitter page -->
 	<a href="https://twitter.com/CuriosityColor" title="Follow on Twitter" target="_blank">
-		<img src= "assets/images/sitewide/Twitter.svg" alt="Follow me on Twitter" class="followicon socialicon">
+		<img src= "/assets/images/sitewide/Twitter.svg" alt="Follow me on Twitter" class="followicon socialicon">
 	</a>
 
 
@@ -669,7 +663,7 @@ Fluorescence and photoluminescence are further applications of useful doped semi
 
     <!-- Home glasses icon -->
     <a href="/" title="Curiosity-Colored Glasses">
-      <img src="assets/images/sitewide/home.svg" alt="Curiosity-Colored Glasses" id="homeicon" class="yellowhover">
+      <img src="/assets/images/sitewide/home.svg" alt="Curiosity-Colored Glasses" id="homeicon" class="yellowhover">
     </a>
     <ul id="navlist">
       
@@ -707,35 +701,15 @@ Fluorescence and photoluminescence are further applications of useful doped semi
       
     	<!-- I added the searchbar snippet here, inside a list item, so it will be part of the menu list -->
     	<li id="navsearch" class="navnothome">
-       			<!-- searchbar SNIPPET WAS HERE; NEED TO FIGURE OUT SEARCH FOR JEKYLL -->
-
-
-
-
-
-
-                          <!--
-                          <div id="searchdecoy" title="Search" class="yellowhover" style="display: none;">
-                          	<img src="/assets/images/sitewide/search.svg" alt="search" class="navsearchicon">
-                          </div>
-                          -->
-
-                          <form action="/search" id="navsearchform">
-                            <input type="text" placeholder="search" name="q" id="navsearchinput" class="s-textface underlineinput">
-                            <button type="submit" value="search" title="Search" id="navsearchbutton" class="searchbutton yellowhover">
-                              <img src="/assets/images/sitewide/search.svg" alt="search" class="navsearchicon">
-                            </button>
-                          </form>
-
-
-
-
-
-
-
-
-
-
+        <div id="searchdecoy" title="Search" class="yellowhover" style="display: none;">
+        	<img src="/assets/images/sitewide/search.svg" alt="search" class="navsearchicon">
+        </div>
+        <form action="/search" method="get" id="navsearchform">
+          <input type="text" placeholder="search" name="query" id="navsearchinput" class="s-textface underlineinput">
+          <button type="submit" value="search" title="Search" id="navsearchbutton" class="searchbutton yellowhover">
+            <img src="/assets/images/sitewide/search.svg" alt="search" class="navsearchicon">
+          </button>
+        </form>
 			</li>
 		</ul>
   </details>

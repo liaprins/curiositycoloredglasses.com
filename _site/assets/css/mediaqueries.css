@@ -195,6 +195,11 @@
         width: calc(78vw - 2.05rem);    }
     #searchpagebutton {
         float: right;    }
+    .pagination {
+        width: 23vw;
+        margin-top: 7.143vw;    }
+    .paginationarrows {
+        top: 1.9vw;    }
 }
 
 @media (min-width: 539px) {
@@ -280,6 +285,11 @@
         width: calc(28.571vw - 7.143vw);    }
     #resultdate {
         border-width: 0.15rem;    }
+    .pagination {
+        width: 154px;
+        margin: 10.714vw auto 0 auto;    }
+    .paginationarrows {
+        top: 13px;    }
 }
 
 @media (min-width: 756px) {
@@ -367,6 +377,8 @@
         margin-top: 58.357px;    }
     body {
         padding-bottom: calc(175.071px + 3.9285rem);    }
+    .pagination {
+        margin-top: 58.357px;    }
     .contentimage {
         max-width: 641.929px;     }
     .postvideo-4-3-ratio {

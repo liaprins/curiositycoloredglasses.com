@@ -255,7 +255,7 @@ that will be recognized in JS menu.js script, that can have an event listener ap
 
       <!-- Text of post -->
       <div id="posttext" class="m-textface hyphenation">
-        <p>The most commonly used phrase in this language is the classic assorted box of chocolates. Sure, it’s a nice gesture. Most people enjoy chocolate candies. They don’t need to be cut (although this would help us by revealing their <dfn><a title="Learn more" id="-cross-section" class="vocabwordinline m-textface bold yellowhover" data-definition-id="pai" data-vocab="">cros-sections</a></dfn>
+        <p>The most commonly used phrase in this language is the classic assorted box of chocolates. Sure, it’s a nice gesture. Most people enjoy chocolate candies. They don’t need to be cut (although this would help us by revealing their <dfn><a href="/testing-forrest-gump/#-cross-section" title="Learn more" id="--cross-section" class="vocabwordinline m-textface bold yellowhover" data-definition-id="-cross-section" data-vocab="">cros-sections</a></dfn>
 , chilled, prepared, and they are less likely to cause guilt, due to their diminutive size.</p>
 
 <figure>
@@ -341,8 +341,6 @@ I’m here to help, and I hope this principle has helped you. Let me know how it
           <summary class="sectionsummary postpagesectionsummary blackbg"><h3>Glossary</h3>
           </summary>
           <dl>
-            
-              
             
               
             
@@ -805,8 +803,6 @@ cross-section</a>
             
           
             
-          
-            
               <!-- Adding <article> for semantic reasons and to hold together each result -->
 <article class="result">
     <!-- Adding link outside date, blog post name, and postglasses image; tags link to their own tag result page -->
@@ -942,13 +938,13 @@ cross-section</a>
 
 	<!-- Link to my instagram page -->
 	<a href="https://www.instagram.com/curiositycoloredglasses/" title="Follow on Instagram" target="_blank">
-		<img src= "assets/images/sitewide/Instagram.svg" alt="Follow me on Instagram" id="instagramlogo" class="followicon socialicon">
+		<img src= "/assets/images/sitewide/Instagram.svg" alt="Follow me on Instagram" id="instagramlogo" class="followicon socialicon">
 	</a>
 
 
 	<!-- Link to @CuriosityColor twitter page -->
 	<a href="https://twitter.com/CuriosityColor" title="Follow on Twitter" target="_blank">
-		<img src= "assets/images/sitewide/Twitter.svg" alt="Follow me on Twitter" class="followicon socialicon">
+		<img src= "/assets/images/sitewide/Twitter.svg" alt="Follow me on Twitter" class="followicon socialicon">
 	</a>
 
 
@@ -977,7 +973,7 @@ cross-section</a>
 
     <!-- Home glasses icon -->
     <a href="/" title="Curiosity-Colored Glasses">
-      <img src="assets/images/sitewide/home.svg" alt="Curiosity-Colored Glasses" id="homeicon" class="yellowhover">
+      <img src="/assets/images/sitewide/home.svg" alt="Curiosity-Colored Glasses" id="homeicon" class="yellowhover">
     </a>
     <ul id="navlist">
       
@@ -1015,35 +1011,15 @@ cross-section</a>
       
     	<!-- I added the searchbar snippet here, inside a list item, so it will be part of the menu list -->
     	<li id="navsearch" class="navnothome">
-       			<!-- searchbar SNIPPET WAS HERE; NEED TO FIGURE OUT SEARCH FOR JEKYLL -->
-
-
-
-
-
-
-                          <!--
-                          <div id="searchdecoy" title="Search" class="yellowhover" style="display: none;">
-                          	<img src="/assets/images/sitewide/search.svg" alt="search" class="navsearchicon">
-                          </div>
-                          -->
-
-                          <form action="/search" id="navsearchform">
-                            <input type="text" placeholder="search" name="q" id="navsearchinput" class="s-textface underlineinput">
-                            <button type="submit" value="search" title="Search" id="navsearchbutton" class="searchbutton yellowhover">
-                              <img src="/assets/images/sitewide/search.svg" alt="search" class="navsearchicon">
-                            </button>
-                          </form>
-
-
-
-
-
-
-
-
-
-
+        <div id="searchdecoy" title="Search" class="yellowhover" style="display: none;">
+        	<img src="/assets/images/sitewide/search.svg" alt="search" class="navsearchicon">
+        </div>
+        <form action="/search" method="get" id="navsearchform">
+          <input type="text" placeholder="search" name="query" id="navsearchinput" class="s-textface underlineinput">
+          <button type="submit" value="search" title="Search" id="navsearchbutton" class="searchbutton yellowhover">
+            <img src="/assets/images/sitewide/search.svg" alt="search" class="navsearchicon">
+          </button>
+        </form>
 			</li>
 		</ul>
   </details>
