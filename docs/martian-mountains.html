@@ -1,0 +1,1759 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <!-- Google Analytics tracking tag -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-124245560-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-124245560-1');
+  </script>
+
+  <meta charset="utf-8" />
+
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#e2e43a">
+  <meta name="msapplication-TileColor" content="#e2e43a">
+  <meta name="theme-color" content="#e2e43a">
+
+<!-- This is what shows when you bookmark this page, and what's in the browser tab -->
+<title>
+  How are Martian mountains measured? | Curiosity-Colored Glasses
+</title>
+
+<!-- This file has contents that is common, or dynamically called in a common way, for all pages. -->
+
+<!-- The opengraph tags are how Facebook and Pinterest know what to name the parts within its own little link-creator. -->
+<!-- The actual Facebook and Pinterest share buttons themselves are inside the blogarticle-5a-share.php file. -->
+
+
+<!-- The url of the current page -->
+<meta property="og:url"                content="/martian-mountains" />
+
+<!-- This one was found on Pinterest, may not be supported by Facebook -->
+<meta property="og:site_name"          content="Curiosity-Colored Glasses" />
+
+<!-- This is the page's title/name -->
+<meta property="og:title"              content="How are Martian mountains measured?" />
+
+
+<!-- This file has contents only for blog posts. The content is dynamically pulled, to be specific to each post. -->
+
+<!-- ********************************************* -->
+
+<!-- (I think) these tags are how search engines like Google know what to put with the provided link, and how to find it when people search. -->
+
+<!-- Currently using the same sharing field as for Twitter: limits characters to 144 including my Twitter handle + tags -->
+<!-- But if want more characters (limit is 155; search engine won't parse or display more), could build a field into panel to hold description -->
+<meta name="description"        	   content="Given that Mars is currently ocean-less, how are the heights of Martian mountains like Olympus Mons quantified? It turns out, sea level is somewhat synthesize-able if you know the math." />
+
+<!-- The kirby starter kit directs the keywords to come from here (content/site.txt) -->
+<!-- <meta name="keywords" 				   content="<?php echo $site->keywords()->html() ?>"> -->
+
+<!-- Currently using the same tag field as for the article content itself -->
+<!-- DO NOT build a field into panel specially for these keywords: "In practice, this no longer has any noticeable effect on how search engines index your site." - HTML & CSS book -->
+<!-- Also trying to include the same keywords for the site as a whole (copied manually) but not sure about syntax -->
+<meta name="keywords" 				   content="science,geology,Mars,mountains,volcanoes,learning,curiosity,data visualization,questions,education" />
+
+<!-- ********************************************* -->
+
+<!-- The opengraph tags are how Facebook and Pinterest know what to name the parts within its own little link-creator. -->
+<!-- The actual Facebook and Pinterest share buttons themselves are inside the blogarticle-share.php file. -->
+
+<!-- Currently using the same sharing field as for Twitter (limits characters) -->
+<!-- But if want more characters, could build a field into panel to hold description -->
+<meta property="og:description"        content="Looking at life's little mysteries through the same lens that killed the cat, and living to tell the tale." />
+
+<!-- Pinterest does not support images for articles (user chooses the image to pin) -->
+<meta property="og:image"              content="assets/images/sitewide/curiositycoloredglasses-facebook.jpg" />
+<meta property="og:image:width"        content="1200" />
+<meta property="og:image:height"       content="630" />
+
+<meta property="og:type"               content="article" />
+
+<meta property="fb:app_id"             content="1816213758596939" />
+
+<meta property="article:publisher"     content="Curiosity-Colored Glasses" />
+
+<meta property="article:author"        content="Lia Prins" />
+
+<!-- This will need some testing/specializing, once I have a non-localhost solution to test with -->
+<!-- May not need any # or "HASHTAG-PLACEHOLDER" -->
+<!-- Not sure what this is for, so removing it for now -->
+<!--
+<meta property="article:tag" 		   content="<?php foreach($page->tags()->split(',') as $tag): ?>%20<?php echo ('HASHTAG-PLACEHOLDER' . $tag); ?><?php endforeach ?>" />
+-->
+
+ 	<!-- Calls the stylesheet that zeroes out the default browser renderings -->
+  <link rel="stylesheet" href="/assets/css/reset.css">
+
+ 	<!-- Calls the stylesheet that hold the designs -->
+ 	<!-- Will combine these into one style sheet by copying and pasting the contents together, once 100% finished, for performance reasons -->
+  <link rel="stylesheet" href="/assets/css/fonts.css">
+  <link rel="stylesheet" href="/assets/css/globalnavfooter.css">
+  <link rel="stylesheet" href="/assets/css/somepages.css">
+  <link rel="stylesheet" href="/assets/css/text.css">
+  <link rel="stylesheet" href="/assets/css/menu-hamburger.css">
+
+ 	<!-- Media queries -->
+  <link rel="stylesheet" href="/assets/css/mediaqueries.css">
+
+</head>
+
+<!-- Adding opening body tag here, since all templates call this head-close.php snippet -->
+<body>
+
+
+<!-- backarrow script -->
+<script src="/assets/js/backarrow-post.js">
+</script>
+
+<!-- definitions/vocab script -->
+<script src="/assets/js/definitions.js">
+</script>
+
+<!-- lightbox and slideshow all in one script -->
+<script src="/assets/js/lightboxslideshow.js">
+</script>
+
+<!-- comment refresh script -->
+<script src="/assets/js/comment.js">
+</script>
+
+<!-- detects swipes by users with touchscreens for galleries -->
+<script src="/assets/js/pure-swipe.js">
+</script>
+
+<!-- LEAVING OUT THE SCRIPT THAT WOULD PULL IN THE P5.JS LIBRARY -->
+
+<!-- LEAVING OUT THE SCRIPT THAT WOULD PULL IN A P5.JS SPECIAL FILE -->
+
+<!-- build out functionality for p5 <canvas> element going fullscreen -->
+<script src="/assets/js/canvasfullscreen.js">
+</script>
+
+<!-- This encompasses everything within <body> except for <nav>
+This is so that there is an element that can be clicked on that will be anything except <nav>,
+that will be recognized in JS menu.js script, that can have an event listener applied when it is clicked on, that will close the <nav> -->
+<div id="everythingexceptnav">
+
+  <a id="backarrowcontainer">
+	<!-- THE IMAGE IS BEING SUPPLIED BY THE BACKARROW JS SCRIPT;
+	THE ORIGINAL backarrow.svg IMAGE CAN BE ADDED VIA LIQUID BELOW FOR TESTING, BUT HASN'T BEEN ADDED YET, AND COMMENTING OUT FOR NOW -->
+    <!-- <img src= "assets/images/sitewide/backarrow.svg" alt="back" id="backarrow"> -->
+</a>
+
+
+  <article class="mockmain" id="pre-rr">    <!-- Opening <article> to make room for RR results that need to be wider than this width, to accommodate their all having margins on L + R -->
+    <div class="desktopcontent">
+      <!-- DO I NEED THIS <div>? -->
+      <!-- I'm arranging the pieces of the intro part according to the V-mobile design; CSS can re-arrange them; this is according to responsive design principles -->
+    </div>
+    <div id="postdesktopcontent">
+
+      <!-- Date of post -->
+      <p id="postdate" class="date m-textface bold postdatewidth">
+        <time datetime="2020-09-18 00:00:00 -0700" pubdate="pubdate">
+          18 September 2020
+        </time>
+      </p>
+
+      <!-- Postglasses icon + title of post -->
+      <a href="/martian-mountains" id="postlink">
+        <!-- Post glasses icon -->
+        <div class="postglassescontainer">
+          <div class="stem shortstem leftstem"></div><div style="background-image: url(http://localhost:4000/assets/images/blogposts/martian-mountains/-l-martian-mountains.jpg)" class="circle leftcircle"></div><div class="stem centerstem"></div><div style="background-image: url(http://localhost:4000/assets/images/blogposts/martian-mountains/-r-martian-mountains.jpg)" class="circle rightcircle"></div><div class="stem shortstem rightstem"></div>
+        </div>
+        <!-- Name of post -->
+        <h2 class="posttitle">
+          How are Martian mountains measured?
+        </h2>
+      </a>
+
+      <!-- If there is a guest writer -->
+      
+        <span id="writtenby" class="xs-textface bold">by</span><span class="writer s-display"><a href="https://liaprins.com" target="_blank" class="yellowhover">&nbspLia Prins</a>
+        </span>
+      
+
+      <!-- Intro of post -->
+      <span id="postintro" class="l-textface">
+      	On maps, a mountain’s height is always shown solely as its peak’s elevation above sea level. This seems like a bit of a cop-out to me&#58; is the mountain itself really that tall? Or is it just standing on the shoulders of a very tall plateau, so to speak? Then again, determining the base from which to measure any mountain seems like quite the slippery slope once you get down to it, so I do understand and sympathize with the sea level approach adopted by us Earthlings. But what about pinnacle-peppered planets and oceanless asteroids — (how) do we measure their mountains?
+      </span>
+
+      <div id="posttagshare">
+
+        <!-- Tags of post -->
+        <span id="posttaggroup" class="s-textface">
+          <!-- Split the list in the tag field into individual tags -->
+          
+            <!-- Make them link to the tags page -->
+            <a href="http://localhost:4000/tags/science" id="posttag" class="xs-textface tag yellowhover">
+              <!-- Adding the 2 x "no break spaces" (&nbsp) to act as L-padding (like for "Read more" button), because using actual padding-left measurements can separate the padding from the word if the word starts on a new line -->
+              &nbsp&nbsp#science
+            </a>
+          
+            <!-- Make them link to the tags page -->
+            <a href="http://localhost:4000/tags/geology" id="posttag" class="xs-textface tag yellowhover">
+              <!-- Adding the 2 x "no break spaces" (&nbsp) to act as L-padding (like for "Read more" button), because using actual padding-left measurements can separate the padding from the word if the word starts on a new line -->
+              &nbsp&nbsp#geology
+            </a>
+          
+            <!-- Make them link to the tags page -->
+            <a href="http://localhost:4000/tags/Mars" id="posttag" class="xs-textface tag yellowhover">
+              <!-- Adding the 2 x "no break spaces" (&nbsp) to act as L-padding (like for "Read more" button), because using actual padding-left measurements can separate the padding from the word if the word starts on a new line -->
+              &nbsp&nbsp#Mars
+            </a>
+          
+            <!-- Make them link to the tags page -->
+            <a href="http://localhost:4000/tags/mountains" id="posttag" class="xs-textface tag yellowhover">
+              <!-- Adding the 2 x "no break spaces" (&nbsp) to act as L-padding (like for "Read more" button), because using actual padding-left measurements can separate the padding from the word if the word starts on a new line -->
+              &nbsp&nbsp#mountains
+            </a>
+          
+            <!-- Make them link to the tags page -->
+            <a href="http://localhost:4000/tags/volcanoes" id="posttag" class="xs-textface tag yellowhover">
+              <!-- Adding the 2 x "no break spaces" (&nbsp) to act as L-padding (like for "Read more" button), because using actual padding-left measurements can separate the padding from the word if the word starts on a new line -->
+              &nbsp&nbsp#volcanoes
+            </a>
+          
+        </span>
+
+        <!-- Sharing for this post -->
+        <span id="share">
+          <!-- TWITTER: From a tutorial website: onlinejournalismblog.com, but adding ability to dynamically include a visualized image. -->
+          <a href="https://twitter.com/intent/tweet?text=Given that Mars is currently ocean-less, how are the heights of Martian mountains like Olympus Mons quantified? It turns out, sea level is somewhat synthesize-able if you know the math./martian-mountains&hashtags=%20science%20geology%20Mars%20mountains%20volcanoes&via=CuriosityColor" title="Share on Twitter" target="_blank">
+            <img src= "assets/images/sitewide/Twitter.svg" alt="Share on Twitter" class="socialicon shareicon yellowhover">
+          </a>
+          <!-- This script needs to stay or there won't be a popup; it will open a new tab instead -->
+          <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+          <!-- FACEBOOK: This method is from Facebook Developers, after modifications. It only works in conjunction with the script called separately and my registered CCG Facebook app ID (1816213758596939) -->
+          <span id="shareBtn" title="Share on Facebook">
+            <img src= "assets/images/sitewide/Facebook.svg" alt="Share on Facebook" class="socialicon shareicon yellowhover">
+          </span>
+          <script>
+          document.getElementById('shareBtn').onclick = function() {
+            FB.ui({
+              method: 'share',
+              display: 'popup',
+              href: 'http://localhost:4000',
+            }, function(response){});
+          }
+          </script>
+          <!-- PINTEREST: From Pinterest widget builder (modified to get stored image-->
+          <a data-pin-do="buttonBookmark" data-pin-custom="true" data-pin-save="false" href="https://www.pinterest.com/pin/create/button/" title="Share on Pinterest">
+            <img src="assets/images/sitewide/Pinterest.svg" alt="Save to Pinterest" class="socialicon shareicon yellowhover">
+          </a>
+        </span>
+
+      </div>    <!-- Closing id="posttagshare" -->
+
+      <!-- Text of post -->
+      <div id="posttext" class="m-textface hyphenation">
+        <p>A baseless claim?
+It’s true that no agreed upon or precise definition of a mountain base exists. In fact, there’s not even a universally accepted definition for mountain itself. Nonetheless, I’m certain that one of my geology-related homework readings from the previous millenium claimed that Mauna Kea — the volcano that forms most of the Island of Hawai’i — is taller than Mount Everest if you compare them from base to summit, since Mauna Kea’s base extends below sea level to the ocean floor. Assuming this decades-old elementary school assignment was justified in its claim, what threshold or criteria was used to constitute Mauna Kea’s and Everest’s respective bases?</p>
+
+<p>In the case of Mauna Kea, its base turns out to be fairly apparent. As a shield volcano born of the Hawai’in hotspot, its lava pillowed out to form an upward slope relative to the sea floor. Furthermore, the combined weight of Mauna Kea and its fellow volcanoes depress the oceanic crust below them by an estimated 8 kilometers (4.9 miles),1 which results in an underwater moat ringing the chain of islands, known as the Hawai’in Trough. The bowing of the sea floor causes the surface outside the weight-bearing region to rise up even higher, forming an arch where the crust buckles upwards. This all makes it simple — though still somewhat subjective — to tell where Mauna Kea begins, so to speak. From the bottom of the Hawai’in trough to its top, Mauna Kea comes in at about 9.7 kilometers (6.0 miles) tall.</p>
+
+<figure>
+  <img src="/assets/images/blogposts/martian-mountains/crust-depression.jpg" alt="A cross-section of Mauna Kea, showing the depth to which it depresses the crust below (8,000 meters) and around it (5,000 meters), as well as a resulting arch raised 200 meters above the adjacent seafloor." class="contentimage singleimage clickme" />
+  <img class="imgfullscreentoggle imgtofullscreen yellowhover" title="View larger" alt="View larger" src="assets/images/sitewide/to-full-screen.svg" />
+  
+  <figcaption class="xs-textface">
+    <hr class="toprule" />
+    The Island of Hawai’i, which includes Mauna Kea as well as other volcanoes, is so massive that it puts a literal dent in the crust below it. This in turn results in a seafloor trough ringing the region, as well as an arch further out where the crust is raised about 200 meters (656 feet) above the rest of the seabed.<p class="figcaptionspacer"></p>(Note that the horizontal scale is squished so that I could fit everything in!)
+  </figcaption>
+  
+</figure>
+
+<p>Mount Everest and other Himalayan peaks are fold mountains, resulting from the collision of the Australian-Indian tectonic plate into the Eurasion plate. The materials these mountains are made from more or less match those of the surrounding land, the way a wrinkle in a rug is made of the rug itself, although the crumpled nature of the Himalayan range does reveal older (and therefore normally buried) layers of the crust. This — and the fact that the “rug” from which it arises is itself not necessarily on a horizontal or flat “floor” — make Everest’s base a much more arbitrary call. Proposed base elevations for Everest range from 4.2 kilometers (2.6 miles) on its south to 5.2 kilometers (3.2 miles) on its north in the Tibetan Plateau, which — when averaged and subtracted from the peak’s 8,848-meter (29,029-foot) elevation — result in a summit-to-average-base height of 4,148 meters (13,579 feet).!</p>
+
+<ul class="gallery" id="mauna-kea-vs-everest">
+  
+    
+    <li>
+      <figure>
+        <img src="assets/images/blogposts/martian-mountains/mauna-kea-vs-everest/mauna-kea-vs-everest_1.jpg" alt="1st alt!" class="contentimage" id="galleryimage" />
+        
+
+        
+        
+        <figcaption class="xs-textface caption gallerycaption" data-galleryfigcaption="">
+          <hr class="toprule" />
+          1st caption!
+        </figcaption>
+        
+
+        
+
+        
+        
+
+        
+
+        
+        
+
+        
+      </figure>
+    </li>
+  
+    
+    <li>
+      <figure>
+        <img src="assets/images/blogposts/martian-mountains/mauna-kea-vs-everest/mauna-kea-vs-everest_2.jpg" alt="2nd alt!!" class="contentimage" id="galleryimage" />
+        
+
+        
+        
+
+        
+
+        
+        
+
+        
+
+        
+        
+
+        
+      </figure>
+    </li>
+  
+    
+    <li>
+      <figure>
+        <img src="assets/images/blogposts/martian-mountains/mauna-kea-vs-everest/mauna-kea-vs-everest_3.jpg" alt="3rd alt!" class="contentimage" id="galleryimage" />
+        
+
+        
+        
+
+        
+
+        
+        
+
+        
+
+        
+        
+        <figcaption class="xs-textface caption gallerycaption" data-galleryfigcaption="">
+          <hr class="toprule" />
+          3rd caption :D
+        </figcaption>
+        
+
+        
+      </figure>
+    </li>
+  
+</ul>
+
+<p>Leaving home base
+Despite its uncomfortably abstract squishiness, this base-to-summit measurement method seems to work in some cases, at least conceptually. Given that many of the extraplanetary promontories that us Earthlings have come to be aware of are volcanic in origin (and as we’ve seen in the case of Mauna Kea and Everest, a volcanically created peak generally lends itself to a much more apparent base than mountains and ranges caused by tectonic forces), perhaps this approach can be applied to extraterrestrial mountains, too?</p>
+
+<ul class="gallery" id="helium-balloons">
+  
+    
+    <li>
+      <figure>
+        <img src="assets/images/blogposts/martian-mountains/helium-balloons/helium-balloons_1.jpg" alt="1st balloon alt!" class="contentimage" id="galleryimage" />
+        
+
+        
+        
+
+        
+
+        
+        
+
+        
+
+        
+        
+
+        
+      </figure>
+    </li>
+  
+    
+    <li>
+      <figure>
+        <img src="assets/images/blogposts/martian-mountains/helium-balloons/helium-balloons_2.jpg" alt="2nd balloon alt!!" class="contentimage" id="galleryimage" />
+        
+
+        
+        
+
+        
+
+        
+        
+        <figcaption class="xs-textface caption gallerycaption" data-galleryfigcaption="">
+          <hr class="toprule" />
+          2nd balloon caption!!
+        </figcaption>
+        
+
+        
+
+        
+        
+
+        
+      </figure>
+    </li>
+  
+    
+    <li>
+      <figure>
+        <img src="assets/images/blogposts/martian-mountains/helium-balloons/helium-balloons_3.jpg" alt="3rd balloon alt!" class="contentimage" id="galleryimage" />
+        
+
+        
+        
+
+        
+
+        
+        
+
+        
+
+        
+        
+        <figcaption class="xs-textface caption gallerycaption" data-galleryfigcaption="">
+          <hr class="toprule" />
+          3rd balloon caption :D
+        </figcaption>
+        
+
+        
+      </figure>
+    </li>
+  
+</ul>
+
+<p>Mars is the perfect planet to start with, as it’s propagated a number of truly massive shield volcanoes, many plenty heavy enough to crush the crust beneath and around them into indentations — just like the Hawai’in islands do. Several are also sharply defined by sheer escarpments — 8 kilometers (5 miles) high in some places — that aid in creating distinctive thresholds with which to delineate the volcanoes’ boundaries. These cliffs are likely the result of erosion at the outer edges of past lava flows.4 However, the bases of these pedestal-like scarps surrounding the peaks’ perimeters are at different heights relative to each other, so it’s still tricky to determine where to set the starting point of each mountain. Nonetheless, Olympus Mons is easily Mars’ tallest mountain, coming in at nearly 22 kilometers (13.7 miles) from the foot of its northwestern cliffs to its peak.5 Despite its height, it has an average slope of just 5 degrees, spreading over a footprint of 300,000 square kilometers (120,000 square miles),6 roughly the area of New Mexico.7 It’s so large that, according to astrophysicist Neil deGrasse Tyson, “you could be on its slopes and you would not know [it] … the base is so huge before you get to its summit.”</p>
+
+<figure>
+  <img src="/assets/images/blogposts/martian-mountains/olympus-mons-new-mexico.jpg" alt="A photo of Olympus Mons evidencing its enormity relative to the size of the state of New Mexico." class="contentimage singleimage clickme" />
+  <img class="imgfullscreentoggle imgtofullscreen yellowhover" title="View larger" alt="View larger" src="assets/images/sitewide/to-full-screen.svg" />
+  
+  <figcaption class="xs-textface">
+    <hr class="toprule" />
+    Olympus Mons’ footprint falls only about 4,400 square kilometers (1,700 square miles) short of New Mexico’s.<p class="figcaptionspacer"></p>Image credit: <a href="https://www.jpl.nasa.gov/spaceimages/details.php?id=PIA02982" target="_blank">NASA</a>
+  </figcaption>
+  
+</figure>
+
+<p>The mountain that came from outer space
+Volcanoes aren’t the only way that interplanetary peaks come to be, though. With an average width of just under 530 kilometers (or 330 miles),9 4 Vesta is the second-largest known asteroid within our Solar System. It hosts a crater called Rheasilvia that takes up most of its southern hemisphere, the bottom of which lies about 13 kilometers (8.1 miles) below the surrounding surface.10 Rheasilvia likely formed from a collision so colossal that the impacting body made its way through several layers of crust and possibly even into 4 Vesta’s mantle,11 as evidenced by spectral signatures of olivine — the primary mineral composing Earth’s own mantle — captured by the Hubble Telescope.12 Beneath layers of post-pummel debris, the remnant of the impacting body itself forms the foundation of a soaring summit at the center of the crater. This peak is essentially deadlocked with Olympus Mons for tallest known mountain in the Solar System13 both behemoths’ undulating surroundings — and therefore the large margins of error surrounding their extremely approximated baselines — make it impossible to objectively discern which deserves the honor.</p>
+
+<figure>
+  <img src="/assets/images/blogposts/martian-mountains/4-vesta.jpg" alt="A composite image of Vesta 4, showing Rheasilvia's bump on its south pole." class="contentimage singleimage clickme" />
+  <img class="imgfullscreentoggle imgtofullscreen yellowhover" title="View larger" alt="View larger" src="assets/images/sitewide/to-full-screen.svg" />
+  
+  <figcaption class="xs-textface">
+    <hr class="toprule" />
+    Rheasilvia forms a very visible bulge near 4 Vesta’s southern pole.<p class="figcaptionspacer"></p>Image credit: <a href="https://www.eso.org/public/images/potw1826a/" target="_blank">European Southern Observatory</a>
+  </figcaption>
+  
+</figure>
+
+<p>Clearly, a mountain’s base-to-summit height is significantly subjective, even if there happen to be cooperative geological features at play like troughs, craters, or cliffs. While this measurement method may result in an interesting — if conceptual — trait of the peak in isolation, it neglects to capture the global context.</p>
+
+<p>Earth as an ellipsoid
+Unlike the base-as-a-baseline approach, sea level excels at accurately plotting a peak’s height relative to the rest of the world. This metric has been a reliable reference point throughout the history of height measurement, providing an ostensibly consistent surface from which to determine elevations. According to the National Geodetic Survey — a branch of the National Oceanic and Atmospheric Administration responsible for establishing latitudes, longitudes, elevations, and shorelines in the US — sea level is defined locally, via various tide surveying stations. Each is constantly collecting sea level data for its own region. Mean Sea Level (MSL) is then defined for each locality by averaging those measurements over the course of 19 years, “the period over which the pull of the sun and the moon on the earth completes a full cycle.”14</p>
+
+<p>In theory, sea level serves as the stalwart starting point from which to map the elevations of disparate global locations. But in practice, it’s not quite so simple. It helps here to first have a bit of context about Earth’s overall shape, to better understand the disparity between theoretical and practical sea level. Our planet is not a perfect sphere: all distances from its center of mass to its surface are not equal, and not just because of the bumps caused by the very mountains we’re seeking to measure. Earth’s diameter from pole to pole is about 42.8 kilometers (26.6 miles) shorter than its equatorial diameter — a difference of about ⅓ of a percentage point — which makes our planet an ellipsoid or an oblate spheroid, geometrically speaking.</p>
+
+<figure>
+  <img src="/assets/images/blogposts/martian-mountains/ellipsoid.jpg" alt="A quarter-slice of a perfect circle overlaid on a quarter-slice of Earth's ellipsoidal form, to show the slight sliver of difference." class="contentimage singleimage clickme" />
+  <img class="imgfullscreentoggle imgtofullscreen yellowhover" title="View larger" alt="View larger" src="assets/images/sitewide/to-full-screen.svg" />
+  
+  <figcaption class="xs-textface">
+    <hr class="toprule" />
+    Earth bulges seemingly imperceptibly at its equator; the difference between its ellipsoidal shape and a perfect sphere is shown in dark blue.
+  </figcaption>
+  
+</figure>
+
+<p>Earth is just shy of spherical because it spins. The further a point is from its axis of rotation (like a location along the equator), the faster that point must travel through space, compared to points that are closer to the axis (like those nearer the poles). This difference in relative speed results in a phenomenon called centrifugal force. Over time, this bit of extra force has flung Earth’s innards outwards, which has led to a slightly deformed spheroid shape.</p>
+
+<p>After averaging away tidal pull, currents, and weather-induced waves, one would expect the oceans to settle into a flat, global plane — the very embodiment of the ellipsoid model. However, even after accounting for 19-years-worth of tides, this appears not to be the behavior of our seas.</p>
+
+<p>To quote spatial analyst Witold Fraczek: “The reference ellipsoid was intended to closely approximate the MSL; it was surprising when the figures differed greatly.” This wasn’t realized until relatively recently, when the TOPEX/POSEIDON satellite — launched in 1992 expressly to capture surface altitudes16 — revealed that sea level, even after time-averaging, differed from the ellipsoid by as much as 100 meters (330 feet) in some spots.17 In other words, our oceans appear to have hills and valleys of their own.</p>
+
+<p>Sea level doesn’t seem level
+What keeps sea level from spreading out evenly over Earth’s ellipsoidally averaged surface? It actually turns out to be gravity that is not evenly dispersed across the earth, and the seas in turn reflect this. Earth’s crust varies invisibly in its density: in some places comprised of hollow caverns, porous layers, or water-logged aquifers, all of which are much less dense than solid rock — but even rock differs in density from type to type significantly. Moreover, to quote the National Geodetic Survey, “Mountains have greater density and, therefore, cause greater gravitational acceleration than valleys that are mostly filled with air. … If it has lower density than its surroundings, it produces less gravity.”18 And it is gravity that supplies the very characterization of a level surface: like the tool of the same name, level is defined as perpendicular to the gravitational field.19 Therefore, though the oceans may appear to undulate unevenly, given that they do so in response to Earth’s gravity, they are in fact level by definition.</p>
+
+<figure>
+  <img src="/assets/images/blogposts/martian-mountains/ellipsoidal-sea-level.jpg" alt="A map simulation of southeast Asia, wherein the sea level has lowered near New Guinea but risen to cover Bangladesh." class="contentimage singleimage clickme" />
+  <img class="imgfullscreentoggle imgtofullscreen yellowhover" title="View larger" alt="View larger" src="assets/images/sitewide/to-full-screen.svg" />
+  
+  <figcaption class="xs-textface">
+    <hr class="toprule" />
+    A world with no gravitational anomalies — in which the mass of the Earth is distributed completely homogeneously — would result in new shorelines, shown in green. Sea level would lower between New Guinea and Australia, but rise to cover Bangladesh.<p class="figcaptionspacer"></p>Image credit: <a href="https://www.esri.com/news/arcuser/0703/geoid2of3.html" target="_blank">Environmental Systems Research Institute</a>
+  </figcaption>
+  
+</figure>
+
+<p>Across the time-averaged, temperature-normalized surface of the sea, the strength of gravity is exactly equal, and this lumpy, oceanic expanse equates to the actual reference used by surveyors to define elevations, known as the geoid.20 It extends across the continents too, though — oscillating through raised land masses and over empty valleys, forming a lumpy layer defined by a strength of gravity exactly equaling that at sea level. Scientists use an abundance of different technologies to measure micro-variations in gravity across the continents (a fascinating can of worms that I may pry open in a future post all its own). But another — far more analog — way to find the geoid at any land-based location would be to dig a channel from the ocean inland to that exact point, then wait to see where sea level settled.</p>
+
+<figure>
+  <img src="/assets/images/blogposts/martian-mountains/canal-geoid.jpg" alt="A sketch of North America with a canal dug straight across, and a cross-section of that canal showing the water level rising slightly at the Rockies and other mountainous regions." class="contentimage singleimage clickme" />
+  <img class="imgfullscreentoggle imgtofullscreen yellowhover" title="View larger" alt="View larger" src="assets/images/sitewide/to-full-screen.svg" />
+  
+  <figcaption class="xs-textface">
+    <hr class="toprule" />
+    To determine the geoid’s height at any inland point, we could theoretically excavate a canal to the sea: the height of the water there will match that of the geoid, by definition. This extension of sea level will be pulled higher where it passes through taller and denser land masses, due to the increased gravity they create.
+  </figcaption>
+  
+</figure>
+
+<p>Given that the mass of a mountain makes its own gravity, how much taller would it be if it weren’t weighed down by this same self-induced gravity? That is, how would a mountain’s height change if we didn’t take into account the relative bulging of the geoid at its exact location?</p>
+
+<p>The original geodesists seeking to measure Mount Everest as a part of British India’s Great Trigonometric Survey claimed that there were “grounds for inferring that sea-level under Mount Everest would be raised by 150 feet on account of the attraction of the mighty mass above it.”21 Subtracting this alleged 150 feet would yield Everest’s ellipsoidal height, and is essentially based on the ellipsoid rather than the geoid. Put another way, we’d ignore the gravitational anomalies that the geoid accounts for, in favor of the visually flat surface provided by the reference ellipsoid — that smooth and mathematically perfect geometric form based solely on the discrepancies between Earth’s polar and equatorial diameters, and which disregards variations in density and landmass. The geoid and the ellipsoid intersect at geoid undulations: direct results of the non-homogeneous nature of Earth.</p>
+
+<figure>
+  <img src="/assets/images/blogposts/martian-mountains/geoid-vs-ellipsoid.jpg" alt="A sketch overlaying the crust with mountains, values, and varying densities; the ellipsoid's boundary; and the geoid. Where the crust rises to form hills, the geoid also rises relative to the ellipsoid, though not so high as the crust itself. Where the crust is denser, geoid also rises." class="contentimage singleimage clickme" />
+  <img class="imgfullscreentoggle imgtofullscreen yellowhover" title="View larger" alt="View larger" src="assets/images/sitewide/to-full-screen.svg" />
+  
+  <figcaption class="xs-textface">
+    <hr class="toprule" />
+    How much taller would a given mountain (or dense patch of crust) be without taking into account the gravity it creates (and therefore the hypothetical “sea level” it attracts)? We could instead measure from the ellipsoid (periwinkle line) — which essentially averages all Earth elevations to a perfectly smooth plane — to get an “ellipsoidal height”, rather than measuring from the geoid (red line), which gives us the commonly used “orthometric height”, often referred to as elevation above sea level.<p class="figcaptionspacer"></p>(Differences between the crust, geoid/mean sea level, and ellipsoid are very exaggerated in this diagram to make their relationships clearer.)
+  </figcaption>
+  
+</figure>
+
+<p>While the geoid is quite lumpy relative to the ellipsoid, it’s not as rugged as Earth’s actual crest- and canyon-riddled crust, because although gravity does vary in strength due to these landforms, their physical effects on gravity are not equal to their physical volumes. A mountain cannot produce the gravity required for a river to flow all the way uphill to its top; however, it might generate enough that water near it would settle at a relatively higher elevation than if that mountain weren’t there. The fact that the geoid takes these sorts of gravitational variations into account make it a far superior model for floodplain mapping and the like compared to the ellipsoid.</p>
+
+<figure>
+  <img src="/assets/images/blogposts/martian-mountains/geoid.gif" alt="An animation of the Earth's geoid (greatly exaggerated in shape) spinning." class="contentimage singleimage clickme" />
+  <img class="imgfullscreentoggle imgtofullscreen yellowhover" title="View larger" alt="View larger" src="assets/images/sitewide/to-full-screen.svg" />
+  
+  <figcaption class="xs-textface">
+    <hr class="toprule" />
+    The geoid’s lumpiness is vastly exaggerated here, but serves to show areas of Earth where the pull of gravity is relatively stronger and weaker due primarily to the location, size, and density of landmasses.<p class="figcaptionspacer"></p>Image credit: <a href="https://oceanservice.noaa.gov/facts/geoid.html">NOAA</a>
+  </figcaption>
+  
+</figure>
+
+<p>Extraterrestrial elevations
+Since scientists have identified a geopotential plane from which to measure height on our planet, it would seem at least theoretically possible that this same concept could be applied to other planetary bodies … and in fact, it has: this extraterrestrial equivalent of the geoid is called an areoid.</p>
+
+<p>Other planets aren’t often enveloped in oceans the way Earth is, though, so how are areoids’ baselines chosen? And if they’re anywhere as arbitrary as the bases of the mountains they aim to quantify, what’s the point?</p>
+
+<p>In the case of Mars’ areoid, its “zero” level had initially been based on atmospheric pressure: the minimum pressure at which water is stable, also known as its triple point.22 Anything lower than this and ice is capable of skipping its liquid phase and sublimating straight into gaseous form (the way dry ice does even at Earth’s normal surface pressure, since carbon dioxide — the molecule it’s composed of — has a much lower triple point of its own). The thought was that a hypothetical water-based Martian ocean — with a hypothetical sea level from which to measure elevations — could only exist at a pressure below water’s triple point. Otherwise, by definition, there would be no liquid to form imaginary oceans in the first place — just solid ice and water vapor.</p>
+
+<figure>
+  <img src="/assets/images/blogposts/martian-mountains/triple-point-areoid.jpg" alt="A sketch wherein Olympus Mons perches upon a line representing the Martian areoid's base, and extending 21 kilometers above it. Everest's peak is drawn a scaled distance of 30 kilometers below the line." class="contentimage singleimage clickme" />
+  <img class="imgfullscreentoggle imgtofullscreen yellowhover" title="View larger" alt="View larger" src="assets/images/sitewide/to-full-screen.svg" />
+  
+  <figcaption class="xs-textface">
+    <hr class="toprule" />
+    The original method used to establish the Martian areoid was based on atmospheric pressure. It put the baseline at the planet’s surface, notwithstanding higher landmasses like Olympus Mons, which rises about 21 kilometers (13 miles) above this pressure-defined baseline. If we were to use that same atmospheric threshold to measure elevations on Earth, even Everest — our highest point — would earn itself a negative measurement: about -30 kilometers (-18.6 miles). Given that Mars is sea level-less (and our own sea level is rather randomly based on the amount of water that happened to accumulate on Earth), the pressure-baseline approach affords a way to compare interplanetary elevations. However, those very comparisons come at the cost of seeming nonsensical.<p class="figcaptionspacer"></p>(Again, horizontal dimensions are nowhere near to scale; you can just assume they won’t be unless I say otherwise!)
+  </figcaption>
+  
+</figure>
+
+<p>The atmospheric pressure at sea level on Earth is just 0.6% of water’s triple point,22 however, so if we were to base our own geoid on that metric rather than sea level, it’d mean our geoid’s baseline would be high in the sky, no matter your Earth-bound location. Everest’s elevation would recalibrate to (very) approximately -30 kilometers (-18.6 miles) — that’s right, a negative elevation23 — compared to its current elevation of 8,848 meters (29,029 feet). It’s clearly much easier for our surface-dwelling minds to make use of a sea-level-based reference point. All of this means that a triple-point-calculated Martian areoid and the elevations it results in aren’t particularly comparable to those on Earth, thereby rendering them far less relatable.</p>
+
+<p>Sea level, sans seas
+Fortunately for those of us in dire need of more fathomable (and accurate) Martian elevations, in 2001 the Mars Orbiter Laser Altimeter provided scientists with enough gravity information to reformulate Mars’ areoid.24 They now knew where the pull of gravity was relatively stronger and weaker, and could map the concentric gravity gradients that surround the planet like the layers of an onion — each ring its own geopotential surface exhibiting an exactly equal pull of gravity. Earth is circumscribed by its own geopotential surfaces, of which our geoid is one. For convenience and for comprehension, the baseline of the geoid was chosen to match that of the gravity potential at sea level, but it need not have been. It could have been set as a physically higher geopotential surface, but therefore with lower gravity potential.</p>
+
+<figure>
+  <img src="/assets/images/blogposts/martian-mountains/onion-rings.jpg" alt="Earth and Mars ringed by concentric wobbly circles, indicating geopotential lines of decreasing strength as they move outward." class="contentimage singleimage clickme" />
+  <img class="imgfullscreentoggle imgtofullscreen yellowhover" title="View larger" alt="View larger" src="assets/images/sitewide/to-full-screen.svg" />
+  
+  <figcaption class="xs-textface">
+    <hr class="toprule" />
+    The geopotential surfaces mapping equal strengths of gravity extend below and above any planet’s surface. Since these planes are the basis from which we measure elevations, it makes sense to choose one as a baseline that matches the surface’s circumference closely.<p class="figcaptionspacer"></p>(I exaggerated the gravity anomalies (that is, the squiggliness of the “onion rings”) here to visualize the fact that planes of equal gravity are bumpy in direct response to the planet’s uneven density.)
+  </figcaption>
+  
+</figure>
+
+<p>But on a Mars unmarred by el mar, how does one choose which onion ring to call “zero”? Scientists settled on the geopotential surface for which the mean radius matches that of Mars’ equator.25 This doesn’t necessarily mean that every point along the Martian equator lies at zero inches in elevation, though: like on earth, a surface defined by equal gravity thereby responds to gravity directly, not to physical features (although it may be indirectly affected by land formations in so far as they in turn affect gravity to a degree), and will therefore vary in its distance from the crust, rising above ground in some places and falling below it in others.</p>
+
+<p>Just like Earth’s geoid, Mars’ areoid also exhibits areas in which gravitational disruptions reflect topographical ones. Olympus Mons and the Tharsis region near it — home to some very voluminous volcanoes — produce the largest gravity anomalies in the entire Solar System.26 Olympus Mons came in at 22 kilometers (13.7 miles) high when measuring from the base of its bounding cliffs, but its summit is only about 21 kilometers (13 miles) above the Martian areoid.27 This is the inverse of what we saw with Everest, wherein its elevation is much greater than its base-to-peak height. Olympus Mons’ transposed elevation-to-height ratio actually serves to further emphasize its sheer magnitude: it produces its own gravity (with a lot of help from its neighboring Tharsis Montes and the magma-spawned plateau upon which they perch), thereby raising the areoid’s “onion ring” in its region and leading to elevation measures that are lower due to the areoid’s swell.</p>
+
+<figure>
+  <img src="/assets/images/blogposts/martian-mountains/olympus-mons-vs-everest.jpg" alt="Olympus Mons and Everest side by side, with demarcations of their areoid and geoid respectively, as well as their baselines. Olympus Mons' baseline is below its areoid, while the reverse is shown of Everest." class="contentimage singleimage clickme" />
+  <img class="imgfullscreentoggle imgtofullscreen yellowhover" title="View larger" alt="View larger" src="assets/images/sitewide/to-full-screen.svg" />
+  
+  <figcaption class="xs-textface">
+    <hr class="toprule" />
+    Most Earthly elevations are greater than the base-to-summit measurements of their mountains. On Mars, though, Olympus Mons is so massive that it pulls the planet’s areoid higher in its region, to the point that the difference between its peak and the areoid is about 1,000 meters (3,280 feet) less than the height of the mountain itself (from its natural base).
+  </figcaption>
+  
+</figure>
+
+<p>It seems sensible to develop areoids for planets and moons exhibiting elevated land formations, but scientists have even developed them for the gas giants, too. Like Mars’ initial areoid, those of Jupiter, Saturn, Uranus, and Neptune are based on pressure. Their baselines fall at the radial distance from their planet’s center of gravity wherein the atmospheric pressure equals 1 bar,28 which is just under the pressure at sea level on Earth. This threshold actually ends up falling right at the cloud levels that visibly define the “surface” for each of the gas giants.</p>
+
+<p>Lower gravity and lack of tectonics lend a leg up
+Although areoids provide a helpful way to compare elevations across planets, they fail to account for the fact that bodies with lower mass exhibit lower gravity: namely, the pull that Martian mountains contend with is just 38% the strength of Earth’s, making it much easier for them to sprout skyward. To literally level the playing field, I normalized for Earth’s gravity (in an overly simplistic, possibly precarious way29), and found that beneath its strain, Olympus Mons only makes it to the 8.4 kilometer (5.2 mile) mark when measuring from its base to its summit (compared to 22 kilometers (13.7 miles) under its own planet’s gravity), falling just short of Mauna Kea’s 9.2 kilometers (5.7 miles).</p>
+
+<figure>
+  <img src="/assets/images/blogposts/martian-mountains/earth-gravity-on-olympus-mons.jpg" alt="A scale drawing of Olympus Mons from the side, overlaid on a drawing of how much flatter it would be if it grew up under Earth's gravity." class="contentimage singleimage clickme" />
+  <img class="imgfullscreentoggle imgtofullscreen yellowhover" title="View larger" alt="View larger" src="assets/images/sitewide/to-full-screen.svg" />
+  
+  <figcaption class="xs-textface">
+    <hr class="toprule" />
+    Assuming there’s a more or less linear relationship between a volcano’s height and the gravity exerted upon it, an earth-bound Olympus Mons might have only ever grown to about 8.4 kilometers from base-to-summit.<p class="figcaptionspacer"></p>(Finally a sketch that is more or less to scale! Although I did have to do some experiments and estimations (silly putty was involved) to get an approximation of Olympus Mons’ would-be diameter on Earth, assuming its volume stayed the same…)
+  </figcaption>
+  
+</figure>
+
+<p>Mars’ relatively low gravity isn’t the only pinnacle-producing trick the planet has up its proverbial sleeve, though: lack of tectonic motion plays a prominent role in the heights that its mountains have managed to reach. Most of the Martian shield volcanoes are significantly more massive than any on Earth, in part because their crustal locations stay statically positioned above the hotspots from which the peaks originate.30 Meanwhile, the land above Earth’s hotspots are never in the same spot for long (geologically speaking), due to our planet’s plate movements. <sup><a title="Learn more" id="-1" class="notenumberinline s-textface bold yellowhover" data-notes-id="1" data-notes="">1</a></sup>
+ This explains why the Hawai’in hotspot led to a chain-like formation of several sea mounts, rather than a single skyscraping summit in the middle of the Pacific.</p>
+
+<figure>
+  <img src="/assets/images/blogposts/martian-mountains/hawaii-hotspot.jpg" alt="Raised-relief map of the Pacific basin, showing seamounts and islands trailing the Hawai’i hotspot in a long line terminating near the Kamchatka Peninsula in Russia." class="contentimage singleimage clickme" />
+  <img class="imgfullscreentoggle imgtofullscreen yellowhover" title="View larger" alt="View larger" src="assets/images/sitewide/to-full-screen.svg" />
+  
+  <figcaption class="xs-textface">
+    <hr class="toprule" />
+    The Hawai’in hotspot has stayed stuck in place, while the Pacific plate moved in a northwesterly direction, evidenced by the trail of islands and seamounts scattered from Hawai’i’s Big Island to the hotspot's first creations, now near the Kamchatka Peninsula in Russia.<p class="figcaptionspacer"></p>Image credit: <a href="https://www.ngdc.noaa.gov/mgg/image/2minrelief.html">NOAA</a>
+  </figcaption>
+  
+</figure>
+
+<p>This made me wonder about the Hawai’in hotspot’s lava-output potential relative to that of Olympus Mons’: if the Pacific plate had stayed still, how vast a volcano could it have produced? To get a rough idea, I simply used the collective volume of the Hawai’in chain of islands and seamounts — nearly 750,000 cubic kilometers (180,000 cubic miles) — as a proxy for Mauna Kea’s would-be size on a hypothetical, tectonic-less Earth … I say “simply” on my part, because someone else had already written a paper about the hotspot’s total output <sup><a title="Learn more" id="-2" class="notenumberinline s-textface bold yellowhover" data-notes-id="2" data-notes="">2</a></sup>
+ And equally fortunate for me and my free time, NASA had already done the legwork to determine Olympus Mons’ volume at 3,862,000 cubic kilometers (just under 2,400,000 cubic miles). <dfn><a href="/martian-mountains/#-centrifugal-force" title="Learn more" id="--centrifugal-force" class="vocabwordinline m-textface bold yellowhover" data-definition-id="-centrifugal-force" data-vocab="">Centrifugal force</a></dfn>
+ From there, it was just a matter of division to discover that over five Hawai’in-hotspot-outputs-worth of lava would fit inside of Olympus Mons!</p>
+
+<p><dfn><a href="/martian-mountains/#-el-mar" title="Learn more" id="--el-mar" class="vocabwordinline m-textface bold yellowhover" data-definition-id="-el-mar" data-vocab="">El mar</a></dfn></p>
+
+<p>Of course, as far as the mountains of the world — that is, the Solar System, if not the universe — are concerned, this is all just semantics. And I think that’s more or less where I’ve landed as well. The behemoths of the land (and sea, and space) are wild things, unbridled by our attempts to bestow metrics and accolades upon them. A mountain’s human-assigned height will always carry with it a whiff of the arbitrary, but from now on when I read an elevation on a map, I’ll understand all that went into it.</p>
+<img src="assets/images/sitewide/home.svg" alt="" id="articleendglasses">
+      </div>
+
+      
+      <section id="glossarysection">
+        <details class="postsectiondetails" open>
+          <summary class="sectionsummary postpagesectionsummary blackbg"><h3>Glossary</h3>
+          </summary>
+          <dl>
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+                <div id="vocabwordanddefinition" class="vocabwordanddefinitionclass" data-definition-id="centrifugal-force">
+<!-- <dt> = the name within the <dl> (parent) name-value pair  -->
+<dt class="glossaryvocabwordandaudio">
+<span id="centrifugal-force" class="glossaryvocabword m-textface bold">
+<!-- This is the vocab word that appears alongside the definition -->
+<a href="/martian-mountains#-centrifugal-force" title="View word in context" class="yellowhover">
+centrifugal force</a>
+</span>&ensp;<span id="pronunciation" class="xs-textface">
+<!-- ^^^ Written pronunciation (optional ) -->
+
+sen-trif-uh-gull fors
+
+</span>
+<!-- Audio pronunciation (optional) -->
+
+</dt>
+<!-- <dd> = the value (definition) within the <dl> (parent) name-value pair  -->
+<dd>
+<!-- definition (required) -->
+<p class="s-textface definition">A force apparent when viewing a rotating frame of reference, which acts outwardly on objects moving around a center. *Definition is my own, informed by Oxford Languages and Wikipedia.*
+</p>
+<!-- illustration (optional) -->
+
+<img src="assets/images/glossaryextras/martian-mountains/centrifugal-force.png" alt="" class="vocabillustration">
+
+</dd>
+</div>    <!-- id="vocabwordanddefinition" -->
+
+              
+            
+              
+                <div id="vocabwordanddefinition" class="vocabwordanddefinitionclass" data-definition-id="el-mar">
+<!-- <dt> = the name within the <dl> (parent) name-value pair  -->
+<dt class="glossaryvocabwordandaudio">
+<span id="el-mar" class="glossaryvocabword m-textface bold">
+<!-- This is the vocab word that appears alongside the definition -->
+<a href="/martian-mountains#-el-mar" title="View word in context" class="yellowhover">
+el mar</a>
+</span>&ensp;<span id="pronunciation" class="xs-textface">
+<!-- ^^^ Written pronunciation (optional ) -->
+
+</span>
+<!-- Audio pronunciation (optional) -->
+
+<a onclick="this.firstChild.play()" data-audiolink title="Hear audio pronunciation"><audio src="assets/images/glossaryextras/martian-mountains/el-mar.mp3" type="audio/mpeg"></audio><img src="assets/images/sitewide/audio.svg" alt="play audio pronunciation" class="audioicon yellowhover"></a>
+
+</dt>
+<!-- <dd> = the value (definition) within the <dl> (parent) name-value pair  -->
+<dd>
+<!-- definition (required) -->
+<p class="s-textface definition">Spanish for *the sea*.
+</p>
+<!-- illustration (optional) -->
+
+</dd>
+</div>    <!-- id="vocabwordanddefinition" -->
+
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+          </dl>
+        </details>
+      </section>
+      
+
+      
+      <section id="notessection">
+        <details class="postsectiondetails" open>
+          <summary class="sectionsummary postpagesectionsummary blackbg"><h3>Thank You</h3>
+          </summary>
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              <div id="notesdivid" class="notesdivclass" data-notes-id="1">
+
+  <!-- This is the note number that appears alongside the note itself (on its own sub-page) -->
+  <a hre="/martian-mountains#-1" title="View reference in context" id="1" class="notessectionnumber m-textface bold yellowhover">
+    1
+  </a>
+
+  <!-- note itself (required) -->
+  <p class="s-textface notecontent">
+    “Region 7: Hawai’i,” Paleontological Research Institution, 2020.
+
+  </p>
+</div>
+
+            
+          
+            
+              <div id="notesdivid" class="notesdivclass" data-notes-id="2">
+
+  <!-- This is the note number that appears alongside the note itself (on its own sub-page) -->
+  <a hre="/martian-mountains#-2" title="View reference in context" id="2" class="notessectionnumber m-textface bold yellowhover">
+    2
+  </a>
+
+  <!-- note itself (required) -->
+  <p class="s-textface notecontent">
+    Fulton-Bennett, Kim. *“Hawaiian Flexural Arch.” Monterey Bay Aquarium Research Institute*, 4 June 2019.
+
+  </p>
+</div>
+
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+        </details>
+      </section>
+      
+
+    </div>    <!-- Closing class="postdesktopcontent" -->
+    <!-- adding a div to hold (with a class to hide) a vertical image for Pinterest, to be populated via the panel -->
+    <div class="hidepinnable"><img src="/assets/images/blogposts/martian-mountains/martian-mountains.jpg"></div>
+  </article>
+
+  
+
+<!-- COMMENTS vvv-->
+  <article class="mockmain" id="postdesktopcontent2">    <!-- Opening second instance of <article> to make room for RR results that need to be wider than this width, to accommodate their all having margins on L + R -->
+    <!-- This is from Disqus's installation webpage -->
+    <div id="disqus_thread"></div>
+    <script>
+        /**
+         *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+         *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+         */
+
+        var disqus_config = function () {
+            this.page.url = '/martian-mountains';  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = '/martian-mountains'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+
+        (function() {  // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+
+            s.src = '//curiositycoloredglasses.disqus.com/embed.js';
+
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+  </article>
+  <!-- COMMENTS ^^^-->
+
+  <!-- FORMERLY footer-sitewide SNIPPET vvv ******************************************************************** -->
+
+              <footer role="contentinfo">
+                <div id="footercontent">
+
+                    
+
+<form action="//curiositycoloredglasses.us14.list-manage.com/subscribe/post?u=05f8f85154975a52907f2ce4d&amp;id=086ebe8644" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+
+
+
+	 <!-- "Subscribe" button -->
+	 <!-- moving to be before the email input form so that I can use the adjacent element rule in the CSS to get the email form to chagne states when button is hovered on -->
+    <!-- <input type="submit" value="Subscribe" name="subscribe" class="xs-display boxbutton subscribebutton" id="mc-embedded-subscribe"> -->
+
+
+	<!-- For some reason, this needs to stay for the validation and ability to submit email -->
+	<span class="mc-field-group">
+		<input type="email" value="" name="EMAIL" class="boxinput s-textface" id="mce-EMAIL" placeholder="Email address">
+	</span>
+
+
+	<!-- NOT SURE WHY THIS IS NEEDED, BUT PROBABLY KEEP EVERYTHING INSIDE THIS TAG SO IT FUNCTIONS PROPERLY! -->
+    <span style="position: absolute; left: -5000px;" aria-hidden="true">
+    	<input type="text" name="b_05f8f85154975a52907f2ce4d_086ebe8644" tabindex="-1" value="">
+    </span>
+
+
+	 <!-- "Subscribe" button -->
+    <input type="submit" value="Subscribe" name="subscribe" class="xs-display boxbutton subscribebutton" id="mc-embedded-subscribe">
+
+
+</form>
+
+
+<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+<!-- HONEYPOT VALIDATION? ^^^ PROBABLY KEEP EVERYTHING INSIDE THIS TAG SO IT FUNCTIONS PROPERLY! -->
+<!--
+<span id="mce-responses" class="clear">
+
+	<span class="response" id="mce-error-response" style="display:none">
+	</span>
+
+	<span class="response" id="mce-success-response" style="display:none">
+	Thank you!
+	</span>
+
+</span> -->
+<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+
+
+<p class="xs-textface" id="subscribemessage">
+	Find out about new posts!
+	<a href="http://us14.campaign-archive2.com/home/?u=05f8f85154975a52907f2ce4d&id=086ebe8644" title="View previous campaigns" target="_blank">
+		See an example email first.
+	</a>
+</p>
+
+
+<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'>
+</script>
+
+<script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);
+</script>
+
+<!--End mc_embed_signup-->
+
+
+                  <!-- Link to my Instagram profile + Twitter + portfolio -->
+                  <span id="follow">
+
+	<!-- Link to my instagram page -->
+	<a href="https://www.instagram.com/curiositycoloredglasses/" title="Follow on Instagram" target="_blank">
+		<img src= "/assets/images/sitewide/Instagram.svg" alt="Follow me on Instagram" id="instagramlogo" class="followicon socialicon">
+	</a>
+
+
+	<!-- Link to @CuriosityColor twitter page -->
+	<a href="https://twitter.com/CuriosityColor" title="Follow on Twitter" target="_blank">
+		<img src= "/assets/images/sitewide/Twitter.svg" alt="Follow me on Twitter" class="followicon socialicon">
+	</a>
+
+
+	<!-- Link to my portfolio website -->
+	<a href="http://liaprins.com/" target="_blank" id="portfolio" class="m-textface bold">
+		liaprins.com
+	</a>
+
+</span>
+
+
+                </div>
+              </footer>
+
+              <!--This is the pinterest script, instructed to place right before closing </body> tag-->
+              <script async defer src="/assets.pinterest.com/js/pinit.js">
+              </script>
+
+              <!--This encompasses everything within <body> except for <nav>. This is so that there is an element that can be clicked on that will be anything except <nav>, that will be recognized in JS menu.js script, that can have an event listener applied when it is clicked on, that will close the <nav> -->
+              </div>
+              <!-- Menu has to be called here, to account for a major Safari bug: Safari renders anything measured in rems at 1px, if it comes after a <details> tag... and my menu is within a <details> tag, so it was messing up everything with rems in Safari. Moving menu to the very bottom means there is nothing in the html after it, so it is fine. The menu is styled in css to position it absolutely at the top -->
+              <nav role="navigation">
+  <details id="navdetails" open>
+    <summary id="navsummary">
+    </summary>
+
+    <!-- Home glasses icon -->
+    <a href="/" title="Curiosity-Colored Glasses">
+      <img src="/assets/images/sitewide/home.svg" alt="Curiosity-Colored Glasses" id="homeicon" class="yellowhover">
+    </a>
+    <ul id="navlist">
+      
+        
+        <a href="/hello"  class="menuwordlink">
+          <li id="menuword" class="navnothome m-display yellowhover">
+            <span  href="/hello">
+              Hello</span></li></a>
+        
+      
+        
+        <a href="/questionqueue"  class="menuwordlink">
+          <li id="menuword" class="navnothome m-display yellowhover">
+            <span  href="/questionqueue">
+              Question Queue</span></li></a>
+        
+      
+        
+        <a href="/library"  class="menuwordlink">
+          <li id="menuword" class="navnothome m-display yellowhover">
+            <span  href="/library">
+              Library</span></li></a>
+        
+      
+        
+      
+        
+        <a href="/archive"  class="menuwordlink">
+          <li id="menuword" class="navnothome m-display yellowhover">
+            <span  href="/archive">
+              Archive</span></li></a>
+        
+      
+        
+      
+    	<!-- I added the searchbar snippet here, inside a list item, so it will be part of the menu list -->
+    	<li id="navsearch" class="navnothome">
+        <div id="searchdecoy" title="Search" class="yellowhover" style="display: none;">
+        	<img src="/assets/images/sitewide/search.svg" alt="search" class="navsearchicon">
+        </div>
+        <form action="/search" method="get" id="navsearchform">
+          <input type="text" placeholder="search" name="query" id="navsearchinput" class="s-textface underlineinput">
+          <button type="submit" value="search" title="Search" id="navsearchbutton" class="searchbutton yellowhover">
+            <img src="/assets/images/sitewide/search.svg" alt="search" class="navsearchicon">
+          </button>
+        </form>
+			</li>
+		</ul>
+  </details>
+</nav>
+
+
+              <!-- Calling the JS scripts used on everypage; they need to come after the menu is called, to else they will have no effect on the menu items they are intended for -->
+              <script src="/assets/js/menu.js">
+</script>
+
+<script src="/assets/js/search.js">
+</script>
+
+<!--may need to move to right before footer is called (this one withOUT ".../" for all pages except tag and blogarticle) -->
+<!--
+<script src="/assets/js/loader.js">
+</script>
+-->
+
+
+  <!--FORMERLY footer-sitewide SNIPPET ^^^ ******************************************************************** -->
+
+    </body>
+  </html>

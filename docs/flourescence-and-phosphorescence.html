@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <!-- Google Analytics tracking tag -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-124245560-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-124245560-1');
+  </script>
+
+  <meta charset="utf-8" />
+
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#e2e43a">
+  <meta name="msapplication-TileColor" content="#e2e43a">
+  <meta name="theme-color" content="#e2e43a">
+
+<!-- This is what shows when you bookmark this page, and what's in the browser tab -->
+<title>
+  Fluorescence and phosphorescence | Curiosity-Colored Glasses
+</title>
+
+<!-- This file has contents that is common, or dynamically called in a common way, for all pages. -->
+
+<!-- The opengraph tags are how Facebook and Pinterest know what to name the parts within its own little link-creator. -->
+<!-- The actual Facebook and Pinterest share buttons themselves are inside the blogarticle-5a-share.php file. -->
+
+
+<!-- The url of the current page -->
+<meta property="og:url"                content="/flourescence-and-phosphorescence" />
+
+<!-- This one was found on Pinterest, may not be supported by Facebook -->
+<meta property="og:site_name"          content="Curiosity-Colored Glasses" />
+
+<!-- This is the page's title/name -->
+<meta property="og:title"              content="Fluorescence and phosphorescence" />
+
+
+<!-- This file has contents only for blog posts. The content is dynamically pulled, to be specific to each post. -->
+
+<!-- ********************************************* -->
+
+<!-- (I think) these tags are how search engines like Google know what to put with the provided link, and how to find it when people search. -->
+
+<!-- Currently using the same sharing field as for Twitter: limits characters to 144 including my Twitter handle + tags -->
+<!-- But if want more characters (limit is 155; search engine won't parse or display more), could build a field into panel to hold description -->
+<meta name="description"        	   content="Find out what makes flourescent colors so special." />
+
+<!-- The kirby starter kit directs the keywords to come from here (content/site.txt) -->
+<!-- <meta name="keywords" 				   content="<?php echo $site->keywords()->html() ?>"> -->
+
+<!-- Currently using the same tag field as for the article content itself -->
+<!-- DO NOT build a field into panel specially for these keywords: "In practice, this no longer has any noticeable effect on how search engines index your site." - HTML & CSS book -->
+<!-- Also trying to include the same keywords for the site as a whole (copied manually) but not sure about syntax -->
+<meta name="keywords" 				   content="light,all,science,physicalscience,learning,curiosity,data visualization,questions,education" />
+
+<!-- ********************************************* -->
+
+<!-- The opengraph tags are how Facebook and Pinterest know what to name the parts within its own little link-creator. -->
+<!-- The actual Facebook and Pinterest share buttons themselves are inside the blogarticle-share.php file. -->
+
+<!-- Currently using the same sharing field as for Twitter (limits characters) -->
+<!-- But if want more characters, could build a field into panel to hold description -->
+<meta property="og:description"        content="Looking at life's little mysteries through the same lens that killed the cat, and living to tell the tale." />
+
+<!-- Pinterest does not support images for articles (user chooses the image to pin) -->
+<meta property="og:image"              content="assets/images/sitewide/curiositycoloredglasses-facebook.jpg" />
+<meta property="og:image:width"        content="1200" />
+<meta property="og:image:height"       content="630" />
+
+<meta property="og:type"               content="article" />
+
+<meta property="fb:app_id"             content="1816213758596939" />
+
+<meta property="article:publisher"     content="Curiosity-Colored Glasses" />
+
+<meta property="article:author"        content="Lia Prins" />
+
+<!-- This will need some testing/specializing, once I have a non-localhost solution to test with -->
+<!-- May not need any # or "HASHTAG-PLACEHOLDER" -->
+<!-- Not sure what this is for, so removing it for now -->
+<!--
+<meta property="article:tag" 		   content="<?php foreach($page->tags()->split(',') as $tag): ?>%20<?php echo ('HASHTAG-PLACEHOLDER' . $tag); ?><?php endforeach ?>" />
+-->
+
+ 	<!-- Calls the stylesheet that zeroes out the default browser renderings -->
+  <link rel="stylesheet" href="/assets/css/reset.css">
+
+ 	<!-- Calls the stylesheet that hold the designs -->
+ 	<!-- Will combine these into one style sheet by copying and pasting the contents together, once 100% finished, for performance reasons -->
+  <link rel="stylesheet" href="/assets/css/fonts.css">
+  <link rel="stylesheet" href="/assets/css/globalnavfooter.css">
+  <link rel="stylesheet" href="/assets/css/somepages.css">
+  <link rel="stylesheet" href="/assets/css/text.css">
+  <link rel="stylesheet" href="/assets/css/menu-hamburger.css">
+
+ 	<!-- Media queries -->
+  <link rel="stylesheet" href="/assets/css/mediaqueries.css">
+
+</head>
+
+<!-- Adding opening body tag here, since all templates call this head-close.php snippet -->
+<body>
+
+
+<!-- backarrow script -->
+<script src="/assets/js/backarrow-post.js">
+</script>
+
+<!-- definitions/vocab script -->
+<script src="/assets/js/definitions.js">
+</script>
+
+<!-- lightbox and slideshow all in one script -->
+<script src="/assets/js/lightboxslideshow.js">
+</script>
+
+<!-- comment refresh script -->
+<script src="/assets/js/comment.js">
+</script>
+
+<!-- detects swipes by users with touchscreens for galleries -->
+<script src="/assets/js/pure-swipe.js">
+</script>
+
+<!-- LEAVING OUT THE SCRIPT THAT WOULD PULL IN THE P5.JS LIBRARY -->
+
+<!-- LEAVING OUT THE SCRIPT THAT WOULD PULL IN A P5.JS SPECIAL FILE -->
+
+<!-- build out functionality for p5 <canvas> element going fullscreen -->
+<script src="/assets/js/canvasfullscreen.js">
+</script>
+
+<!-- This encompasses everything within <body> except for <nav>
+This is so that there is an element that can be clicked on that will be anything except <nav>,
+that will be recognized in JS menu.js script, that can have an event listener applied when it is clicked on, that will close the <nav> -->
+<div id="everythingexceptnav">
+
+  <a id="backarrowcontainer">
+	<!-- THE IMAGE IS BEING SUPPLIED BY THE BACKARROW JS SCRIPT;
+	THE ORIGINAL backarrow.svg IMAGE CAN BE ADDED VIA LIQUID BELOW FOR TESTING, BUT HASN'T BEEN ADDED YET, AND COMMENTING OUT FOR NOW -->
+    <!-- <img src= "assets/images/sitewide/backarrow.svg" alt="back" id="backarrow"> -->
+</a>
+
+
+  <article class="mockmain" id="pre-rr">    <!-- Opening <article> to make room for RR results that need to be wider than this width, to accommodate their all having margins on L + R -->
+    <div class="desktopcontent">
+      <!-- DO I NEED THIS <div>? -->
+      <!-- I'm arranging the pieces of the intro part according to the V-mobile design; CSS can re-arrange them; this is according to responsive design principles -->
+    </div>
+    <div id="postdesktopcontent">
+
+      <!-- Date of post -->
+      <p id="postdate" class="date m-textface bold postdatewidth">
+        <time datetime="2016-04-26 00:00:00 -0700" pubdate="pubdate">
+          26 April 2016
+        </time>
+      </p>
+
+      <!-- Postglasses icon + title of post -->
+      <a href="/flourescence-and-phosphorescence" id="postlink">
+        <!-- Post glasses icon -->
+        <div class="postglassescontainer">
+          <div class="stem shortstem leftstem"></div><div style="background-image: url(http://localhost:4000/assets/images/blogposts/flourescence-and-phosphorescence/-l-flourescence-and-phosphorescence.jpg)" class="circle leftcircle"></div><div class="stem centerstem"></div><div style="background-image: url(http://localhost:4000/assets/images/blogposts/flourescence-and-phosphorescence/-r-flourescence-and-phosphorescence.jpg)" class="circle rightcircle"></div><div class="stem shortstem rightstem"></div>
+        </div>
+        <!-- Name of post -->
+        <h2 class="posttitle">
+          Fluorescence and phosphorescence
+        </h2>
+      </a>
+
+      <!-- If there is a guest writer -->
+      
+        <span class="guestpostbanner xxs-display">Guest post</span>
+        <!-- If there is a LINK for the guest writer -->
+        
+          <span id="writtenby" class="xs-textface bold">by</span><span class="writer s-display">&nbspSheriff of Choppingham (looks like a Wolf)
+          </span>
+        
+      <!-- "Lia Prins" to show up as default author unless a guest writer is applied in panel -->
+      
+
+      <!-- Intro of post -->
+      <span id="postintro" class="l-textface">
+      	The production of light from heat, or incandescence, is familiar to everyone. But other processes can also yield light – without ever using heat. The term photoluminescence describes a process that produces light using light energy. Two forms of photoluminescence &#58; fluorescence and phosphorescence, are defined by the length of time the emitted light continues to glow. Fluorescence refers to the immediate release of light, where light is emitted within a fraction of a second after excitation. Phosphorescence refers to the release of light that lasts longer – sec­onds or even hours after the excitation has stopped. Phosphorescence is a longer-lasting process than fluorescence because of the structure of the molecules at the quantum level. The energy transitions from excited, higher energy states to stable ground states are “forbidden” by quantum rules. In real terms, they do in fact occur, but at such low probabilities that these energy transitions last a very long time.
+      </span>
+
+      <div id="posttagshare">
+
+        <!-- Tags of post -->
+        <span id="posttaggroup" class="s-textface">
+          <!-- Split the list in the tag field into individual tags -->
+          
+            <!-- Make them link to the tags page -->
+            <a href="http://localhost:4000/tags/light" id="posttag" class="xs-textface tag yellowhover">
+              <!-- Adding the 2 x "no break spaces" (&nbsp) to act as L-padding (like for "Read more" button), because using actual padding-left measurements can separate the padding from the word if the word starts on a new line -->
+              &nbsp&nbsp#light
+            </a>
+          
+            <!-- Make them link to the tags page -->
+            <a href="http://localhost:4000/tags/all" id="posttag" class="xs-textface tag yellowhover">
+              <!-- Adding the 2 x "no break spaces" (&nbsp) to act as L-padding (like for "Read more" button), because using actual padding-left measurements can separate the padding from the word if the word starts on a new line -->
+              &nbsp&nbsp#all
+            </a>
+          
+            <!-- Make them link to the tags page -->
+            <a href="http://localhost:4000/tags/science" id="posttag" class="xs-textface tag yellowhover">
+              <!-- Adding the 2 x "no break spaces" (&nbsp) to act as L-padding (like for "Read more" button), because using actual padding-left measurements can separate the padding from the word if the word starts on a new line -->
+              &nbsp&nbsp#science
+            </a>
+          
+            <!-- Make them link to the tags page -->
+            <a href="http://localhost:4000/tags/physicalscience" id="posttag" class="xs-textface tag yellowhover">
+              <!-- Adding the 2 x "no break spaces" (&nbsp) to act as L-padding (like for "Read more" button), because using actual padding-left measurements can separate the padding from the word if the word starts on a new line -->
+              &nbsp&nbsp#physicalscience
+            </a>
+          
+        </span>
+
+        <!-- Sharing for this post -->
+        <span id="share">
+          <!-- TWITTER: From a tutorial website: onlinejournalismblog.com, but adding ability to dynamically include a visualized image. -->
+          <a href="https://twitter.com/intent/tweet?text=Find out what makes flourescent colors so special./flourescence-and-phosphorescence&hashtags=%20light%20all%20science%20physicalscience&via=CuriosityColor" title="Share on Twitter" target="_blank">
+            <img src= "assets/images/sitewide/Twitter.svg" alt="Share on Twitter" class="socialicon shareicon yellowhover">
+          </a>
+          <!-- This script needs to stay or there won't be a popup; it will open a new tab instead -->
+          <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+          <!-- FACEBOOK: This method is from Facebook Developers, after modifications. It only works in conjunction with the script called separately and my registered CCG Facebook app ID (1816213758596939) -->
+          <span id="shareBtn" title="Share on Facebook">
+            <img src= "assets/images/sitewide/Facebook.svg" alt="Share on Facebook" class="socialicon shareicon yellowhover">
+          </span>
+          <script>
+          document.getElementById('shareBtn').onclick = function() {
+            FB.ui({
+              method: 'share',
+              display: 'popup',
+              href: 'http://localhost:4000',
+            }, function(response){});
+          }
+          </script>
+          <!-- PINTEREST: From Pinterest widget builder (modified to get stored image-->
+          <a data-pin-do="buttonBookmark" data-pin-custom="true" data-pin-save="false" href="https://www.pinterest.com/pin/create/button/" title="Share on Pinterest">
+            <img src="assets/images/sitewide/Pinterest.svg" alt="Save to Pinterest" class="socialicon shareicon yellowhover">
+          </a>
+        </span>
+
+      </div>    <!-- Closing id="posttagshare" -->
+
+      <!-- Text of post -->
+      <div id="posttext" class="m-textface hyphenation">
+        <p>General uses of fluorescence
+While the marks made by fluorescent highlighters quickly draw our attention to important points in a document, fluorescence is also useful in a number of safety applications, as a scientific research tool, and in investigative medicine.</p>
+
+<p>So how exactly does a fluorescent color fluoresce? It’s all about energy. A fluorescent dye molecule begins at the lowest state of energy possible – the Ground State. When light shines on it, a photon of light is absorbed by the molecule. In effect, energy is absorbed. This excites the electrons inside the molecule to higher energy states – known as the Excited State. The excited electrons soon lose some of their energy to their surroundings, which prompts them to transition back to their unexcited state – the Ground State. In order to transition back, the electrons need to emit the photon of light absorbed. This flash of light (the emission of the photon) is the fluorescence we see.</p>
+
+<figure>
+  <img src="/assets/images/blogposts/flourescence-and-phosphorescence/light-diagram.jpg" alt="A diagram shows the levels electrons occupy and their corresponding states." class="contentimage singleimage clickme" />
+  <img class="imgfullscreentoggle imgtofullscreen yellowhover" title="View larger" alt="View larger" src="assets/images/sitewide/to-full-screen.svg" />
+  
+  <figcaption class="xs-textface">
+    <hr class="toprule" />
+    Both florescent and phosphorescent light is caused by trapped electrons, releasing their energy as light at different rates.
+  </figcaption>
+  
+</figure>
+
+<p>Fluorescent paint, or black light paint, glows in ultraviolet light. This is an example of photoluminescence. Phosphorescent paints also emit light when excited by visible or ultraviolet light, but do so over extended periods. This long-lasting effect of phosphorescents also allows kids to enjoy “glow-in-the-dark” adhesive stars on the ceilings of their rooms.</p>
+
+<p>Over time, the Earth’s gravitational field gradually slowed the Moon’s rotation until the orbital period and the rotational speed stabilized, making one side of the Moon always face the Earth.</p>
+
+<div class="pullquotecircle">
+</div>
+<p class="l-textface pullquote bold">Over time, the Earth’s gravitational field gradually slowed the Moon’s rotation until the orbital period and the rotational speed stabilized, making one side of the Moon always face the Earth!</p>
+
+<p>Common phosphorescents include petroleum jelly, glow-in-the-dark paints, the quinine in tonic water, and some detergents. Clocks and watches have their faces or numbers and hands coated with phosphorescent paints so that we can see the time in the dark. Emergency routes, doors, and stairways are often marked with theses paints so we can find our way out of buildings when the power fails.</p>
+
+<p>One of the most familiar applications is the fluorescent light bulb. When the light bulb is turned on, an electrical current passes through mercury vapor in the light bulb. The current excites the mercury atoms. As electrons in the mercury atoms drop back from their excited state to their ground state, they emit photons of ultraviolet light. The inner surface of the glass tube is coated with a fluorescent chemical, which emits light when excited by this ultraviolet light. These tubes are more efficient and longer lasting than incandescent bulbs.</p>
+
+<div class="pullquotesquare">
+</div>
+<p class="l-textface pullquote bold">Over time, the Earth’s gravitational field gradually slowed the Moon’s rotation until the orbital period and the rotational speed stabilized, making one side of the Moon always face the Earth!</p>
+
+<p>Over time, the Earth’s gravitational field gradually slowed the Moon’s rotation until the orbital period and the rotational speed stabilized, making one side of the Moon always face the Earth.</p>
+
+<p>Other applications of fluorescence in safety equipment include marine buoys and road signs, which also make use of fluorescent paints. Fluorescent or black light paints tend to be bright in color, with yellow, green, orange, and red being common hues.</p>
+
+<p>Fluorescence is used to enhance various kinds of investigation, from the study of genes and cell structure using fluorescence microscopy, to locating useful mineral resources such as oil and gems. Substances that fluoresce naturally make the subject easier to study; for instance, scorpions fluoresce and are much easier to see in ultraviolet light.</p>
+
+<p>Medical research makes widespread use of fluorescence to understand biological processes and in diagnosis. Fluorescent dyes may be used to mark antibodies, for example, or can reveal the flow of body fluids like blood or tears.</p>
+
+<p>Fluorescence and photoluminescence
+Fluorescence and photoluminescence are further applications of useful doped semiconductors. Dopants are used to reduce the energy band gap and produce visible light in substances that would normally emit ultraviolet light. In semiconductor materials containing donor and acceptor impurities, ultraviolet or electrical energy may be absorbed to excite an electron from the valence band directly to the conduction band.</p>
+
+<p>The electron may take a return path via the donor and acceptor energy levels. These energy differences are smaller than the natural band gap, and correspond to wavelengths in the visible light spectrum. Visible light may be emitted as fluorescence or electroluminescence.</p>
+
+<ul class="gallery" id="naturally-occurring-phosphorescence">
+  
+    
+    <li>
+      <figure>
+        <img src="assets/images/blogposts/flourescence-and-phosphorescence/naturally-occurring-phosphorescence/naturally-occurring-phosphorescence_1.jpg" alt="" class="contentimage" id="galleryimage" />
+        
+
+        
+        
+
+        
+
+        
+        
+
+        
+      </figure>
+    </li>
+  
+    
+    <li>
+      <figure>
+        <img src="assets/images/blogposts/flourescence-and-phosphorescence/naturally-occurring-phosphorescence/naturally-occurring-phosphorescence_2.jpg" alt="" class="contentimage" id="galleryimage" />
+        
+
+        
+        
+
+        
+
+        
+        
+        <figcaption class="xs-textface caption gallerycaption" data-galleryfigcaption="">
+          <hr class="toprule" />
+          So much brightness!
+        </figcaption>
+        
+
+        
+      </figure>
+    </li>
+  
+</ul>
+
+<p>Fluorescence occurs in “phosphor” powders, such as zinc sulfide (ZnS) containing copper (Cu) and other additives. Phosphors were once used inside television screens, activated by a stream of electrons (cathode rays). Again, tailoring the impurity levels enabled the production of fluorescence in a desired color. The colors on early television screens were created by mixing red, green, and blue light from this fluorescence. A phosphor coating is also used in high-power LED lamps. The light emitted by the diode excites the phosphor layer to fluoresce, increasing the output by up to 20%.</p>
+
+<p>To produce electroluminescence, photoluminescent powder is spread between two electrodes. Electrical current passing through the powder excites electrons to the conduction band. As electrons in the donor level are ‘accepted’ by holes in the acceptor level, visible light is emitted. Nightlight panels are made using this technology.</p>
+<img src="assets/images/sitewide/home.svg" alt="" id="articleendglasses">
+      </div>
+
+      
+
+      
+
+    </div>    <!-- Closing class="postdesktopcontent" -->
+    <!-- adding a div to hold (with a class to hide) a vertical image for Pinterest, to be populated via the panel -->
+    <div class="hidepinnable"><img src="/assets/images/blogposts/flourescence-and-phosphorescence/fluorescence.png"></div>
+  </article>
+
+  
+  <section id="relevantreading">
+    <details id="rrdetails" open>
+      <summary class="sectionsummary postpagesectionsummary blackbg" id="rrsectionheader"><h3>Relevant Reading</h3>
+      </summary>
+      <div class="resultarea">
+        
+
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              <!-- Adding <article> for semantic reasons and to hold together each result -->
+<article class="result">
+    <!-- Adding link outside date, blog post name, and postglasses image; tags link to their own tag result page -->
+    <a class="resultlink" href="/carbonless-copy-paper">
+
+        <!-- Date of article, if sticking with manual input of date in panel/.txt file, only need: <?php echo $result->date("d F Y") ?> -->
+        <p id="resultdate" class="date s-textface bold">
+          <time datetime="2017-04-09 00:00:00 -0700" pubdate="pubdate">
+              09 April 2017
+          </time>
+        </p>
+
+        <!-- Postglasses image -->
+        <div class="resultglassescontainer">
+            <div class="resultstem resultshortstem resultleftstem"></div><div style="background-image: url(http://localhost:4000/assets/images/blogposts/carbonless-copy-paper/-l-carbonless-copy-paper.jpg)" class="resultcircle resultleftcircle"></div><div class="resultstem resultcenterstem"></div><div style="background-image: url(http://localhost:4000/assets/images/blogposts/carbonless-copy-paper/-r-carbonless-copy-paper.jpg)" class="resultcircle resultrightcircle"></div><div class="resultstem resultshortstem resultrightstem"></div>
+        </div>
+
+        <!-- Title of article -->
+        <p id="resulttitle" class="s-display">
+            How does carbonless copy paper work?
+        </p>
+
+    </a>
+</article>
+
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+
+        
+
+          
+            
+          
+            
+          
+            
+              <!-- Adding <article> for semantic reasons and to hold together each result -->
+<article class="result">
+    <!-- Adding link outside date, blog post name, and postglasses image; tags link to their own tag result page -->
+    <a class="resultlink" href="/the-moons-dark-side">
+
+        <!-- Date of article, if sticking with manual input of date in panel/.txt file, only need: <?php echo $result->date("d F Y") ?> -->
+        <p id="resultdate" class="date s-textface bold">
+          <time datetime="2018-12-14 00:00:00 -0800" pubdate="pubdate">
+              14 December 2018
+          </time>
+        </p>
+
+        <!-- Postglasses image -->
+        <div class="resultglassescontainer">
+            <div class="resultstem resultshortstem resultleftstem"></div><div style="background-image: url(http://localhost:4000/assets/images/blogposts/the-moons-dark-side/-l-the-moons-dark-side.jpg)" class="resultcircle resultleftcircle"></div><div class="resultstem resultcenterstem"></div><div style="background-image: url(http://localhost:4000/assets/images/blogposts/the-moons-dark-side/-r-the-moons-dark-side.jpg)" class="resultcircle resultrightcircle"></div><div class="resultstem resultshortstem resultrightstem"></div>
+        </div>
+
+        <!-- Title of article -->
+        <p id="resulttitle" class="s-display">
+            Casting light on the moon's dark side
+        </p>
+
+    </a>
+</article>
+
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+
+        
+
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              <!-- Adding <article> for semantic reasons and to hold together each result -->
+<article class="result">
+    <!-- Adding link outside date, blog post name, and postglasses image; tags link to their own tag result page -->
+    <a class="resultlink" href="/myth-busting-mosquito-bites">
+
+        <!-- Date of article, if sticking with manual input of date in panel/.txt file, only need: <?php echo $result->date("d F Y") ?> -->
+        <p id="resultdate" class="date s-textface bold">
+          <time datetime="2015-04-02 00:00:00 -0700" pubdate="pubdate">
+              02 April 2015
+          </time>
+        </p>
+
+        <!-- Postglasses image -->
+        <div class="resultglassescontainer">
+            <div class="resultstem resultshortstem resultleftstem"></div><div style="background-image: url(http://localhost:4000/assets/images/blogposts/myth-busting-mosquito-bites/-l-myth-busting-mosquito-bites.jpg)" class="resultcircle resultleftcircle"></div><div class="resultstem resultcenterstem"></div><div style="background-image: url(http://localhost:4000/assets/images/blogposts/myth-busting-mosquito-bites/-r-myth-busting-mosquito-bites.jpg)" class="resultcircle resultrightcircle"></div><div class="resultstem resultshortstem resultrightstem"></div>
+        </div>
+
+        <!-- Title of article -->
+        <p id="resulttitle" class="s-display">
+            Myth busting mosquito bites
+        </p>
+
+    </a>
+</article>
+
+            
+          
+
+        
+      </div>
+    </details>
+  </section>
+  
+
+<!-- COMMENTS vvv-->
+  <article class="mockmain" id="postdesktopcontent2">    <!-- Opening second instance of <article> to make room for RR results that need to be wider than this width, to accommodate their all having margins on L + R -->
+    <!-- This is from Disqus's installation webpage -->
+    <div id="disqus_thread"></div>
+    <script>
+        /**
+         *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+         *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+         */
+
+        var disqus_config = function () {
+            this.page.url = '/flourescence-and-phosphorescence';  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = '/flourescence-and-phosphorescence'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+
+        (function() {  // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+
+            s.src = '//curiositycoloredglasses.disqus.com/embed.js';
+
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+  </article>
+  <!-- COMMENTS ^^^-->
+
+  <!-- FORMERLY footer-sitewide SNIPPET vvv ******************************************************************** -->
+
+              <footer role="contentinfo">
+                <div id="footercontent">
+
+                    
+
+<form action="//curiositycoloredglasses.us14.list-manage.com/subscribe/post?u=05f8f85154975a52907f2ce4d&amp;id=086ebe8644" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+
+
+
+	 <!-- "Subscribe" button -->
+	 <!-- moving to be before the email input form so that I can use the adjacent element rule in the CSS to get the email form to chagne states when button is hovered on -->
+    <!-- <input type="submit" value="Subscribe" name="subscribe" class="xs-display boxbutton subscribebutton" id="mc-embedded-subscribe"> -->
+
+
+	<!-- For some reason, this needs to stay for the validation and ability to submit email -->
+	<span class="mc-field-group">
+		<input type="email" value="" name="EMAIL" class="boxinput s-textface" id="mce-EMAIL" placeholder="Email address">
+	</span>
+
+
+	<!-- NOT SURE WHY THIS IS NEEDED, BUT PROBABLY KEEP EVERYTHING INSIDE THIS TAG SO IT FUNCTIONS PROPERLY! -->
+    <span style="position: absolute; left: -5000px;" aria-hidden="true">
+    	<input type="text" name="b_05f8f85154975a52907f2ce4d_086ebe8644" tabindex="-1" value="">
+    </span>
+
+
+	 <!-- "Subscribe" button -->
+    <input type="submit" value="Subscribe" name="subscribe" class="xs-display boxbutton subscribebutton" id="mc-embedded-subscribe">
+
+
+</form>
+
+
+<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+<!-- HONEYPOT VALIDATION? ^^^ PROBABLY KEEP EVERYTHING INSIDE THIS TAG SO IT FUNCTIONS PROPERLY! -->
+<!--
+<span id="mce-responses" class="clear">
+
+	<span class="response" id="mce-error-response" style="display:none">
+	</span>
+
+	<span class="response" id="mce-success-response" style="display:none">
+	Thank you!
+	</span>
+
+</span> -->
+<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+
+
+<p class="xs-textface" id="subscribemessage">
+	Find out about new posts!
+	<a href="http://us14.campaign-archive2.com/home/?u=05f8f85154975a52907f2ce4d&id=086ebe8644" title="View previous campaigns" target="_blank">
+		See an example email first.
+	</a>
+</p>
+
+
+<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'>
+</script>
+
+<script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);
+</script>
+
+<!--End mc_embed_signup-->
+
+
+                  <!-- Link to my Instagram profile + Twitter + portfolio -->
+                  <span id="follow">
+
+	<!-- Link to my instagram page -->
+	<a href="https://www.instagram.com/curiositycoloredglasses/" title="Follow on Instagram" target="_blank">
+		<img src= "/assets/images/sitewide/Instagram.svg" alt="Follow me on Instagram" id="instagramlogo" class="followicon socialicon">
+	</a>
+
+
+	<!-- Link to @CuriosityColor twitter page -->
+	<a href="https://twitter.com/CuriosityColor" title="Follow on Twitter" target="_blank">
+		<img src= "/assets/images/sitewide/Twitter.svg" alt="Follow me on Twitter" class="followicon socialicon">
+	</a>
+
+
+	<!-- Link to my portfolio website -->
+	<a href="http://liaprins.com/" target="_blank" id="portfolio" class="m-textface bold">
+		liaprins.com
+	</a>
+
+</span>
+
+
+                </div>
+              </footer>
+
+              <!--This is the pinterest script, instructed to place right before closing </body> tag-->
+              <script async defer src="/assets.pinterest.com/js/pinit.js">
+              </script>
+
+              <!--This encompasses everything within <body> except for <nav>. This is so that there is an element that can be clicked on that will be anything except <nav>, that will be recognized in JS menu.js script, that can have an event listener applied when it is clicked on, that will close the <nav> -->
+              </div>
+              <!-- Menu has to be called here, to account for a major Safari bug: Safari renders anything measured in rems at 1px, if it comes after a <details> tag... and my menu is within a <details> tag, so it was messing up everything with rems in Safari. Moving menu to the very bottom means there is nothing in the html after it, so it is fine. The menu is styled in css to position it absolutely at the top -->
+              <nav role="navigation">
+  <details id="navdetails" open>
+    <summary id="navsummary">
+    </summary>
+
+    <!-- Home glasses icon -->
+    <a href="/" title="Curiosity-Colored Glasses">
+      <img src="/assets/images/sitewide/home.svg" alt="Curiosity-Colored Glasses" id="homeicon" class="yellowhover">
+    </a>
+    <ul id="navlist">
+      
+        
+        <a href="/hello"  class="menuwordlink">
+          <li id="menuword" class="navnothome m-display yellowhover">
+            <span  href="/hello">
+              Hello</span></li></a>
+        
+      
+        
+        <a href="/questionqueue"  class="menuwordlink">
+          <li id="menuword" class="navnothome m-display yellowhover">
+            <span  href="/questionqueue">
+              Question Queue</span></li></a>
+        
+      
+        
+        <a href="/library"  class="menuwordlink">
+          <li id="menuword" class="navnothome m-display yellowhover">
+            <span  href="/library">
+              Library</span></li></a>
+        
+      
+        
+      
+        
+        <a href="/archive"  class="menuwordlink">
+          <li id="menuword" class="navnothome m-display yellowhover">
+            <span  href="/archive">
+              Archive</span></li></a>
+        
+      
+        
+      
+    	<!-- I added the searchbar snippet here, inside a list item, so it will be part of the menu list -->
+    	<li id="navsearch" class="navnothome">
+        <div id="searchdecoy" title="Search" class="yellowhover" style="display: none;">
+        	<img src="/assets/images/sitewide/search.svg" alt="search" class="navsearchicon">
+        </div>
+        <form action="/search" method="get" id="navsearchform">
+          <input type="text" placeholder="search" name="query" id="navsearchinput" class="s-textface underlineinput">
+          <button type="submit" value="search" title="Search" id="navsearchbutton" class="searchbutton yellowhover">
+            <img src="/assets/images/sitewide/search.svg" alt="search" class="navsearchicon">
+          </button>
+        </form>
+			</li>
+		</ul>
+  </details>
+</nav>
+
+
+              <!-- Calling the JS scripts used on everypage; they need to come after the menu is called, to else they will have no effect on the menu items they are intended for -->
+              <script src="/assets/js/menu.js">
+</script>
+
+<script src="/assets/js/search.js">
+</script>
+
+<!--may need to move to right before footer is called (this one withOUT ".../" for all pages except tag and blogarticle) -->
+<!--
+<script src="/assets/js/loader.js">
+</script>
+-->
+
+
+  <!--FORMERLY footer-sitewide SNIPPET ^^^ ******************************************************************** -->
+
+    </body>
+  </html>
