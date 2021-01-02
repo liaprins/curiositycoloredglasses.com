@@ -1,6 +1,5 @@
 ---
 question: Is dry cleaning really dry?
-binocsize: small
 ---
 
 How does dry cleaning work? If it's really "dry" how does it clean clothes? Why do some fabrics require it? Furthermore, how much do you *really* end up paying for dry-clean-only clothes versus their lower maintenance counterparts after accounting for cleaning costs?

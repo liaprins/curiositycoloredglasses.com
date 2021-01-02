@@ -4,11 +4,12 @@
     </summary>
 
     <!-- Home glasses icon -->
-    <a href="{{ site.baseurl }}" title="Curiosity-Colored Glasses">
+    <a href="{{ site.baseurl }}/" title="Curiosity-Colored Glasses">
       <img src="{{ site.baseurl }}/assets/images/sitewide/home.svg" alt="Curiosity-Colored Glasses" id="homeicon" class="yellowhover">
     </a>
     <ul id="navlist">
-      {% for item in site.mainpages %}
+      {% assign main_pages = site.mainpages | sort: 'order' %}
+      {% for item in main_pages %}
         {% unless item.title == 'Page not found' or item.title=='Search' %}
         <a href="{{ site.baseurl }}{{ item.url }}" {% if page.url == item.url %}class="active"{% endif %} class="menuwordlink">
           <li id="menuword" class="navnothome m-display yellowhover">

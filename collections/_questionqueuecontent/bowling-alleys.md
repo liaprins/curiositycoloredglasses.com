@@ -1,6 +1,5 @@
 ---
 question: Why are bowling alleys seemingly always windowless?
-binocsize: medium
 ---
 
 I have yet to be in a bowling alley that benefits from natural lighting. Maybe they are following the casino architectural model, in that they want us to forget the time so we wile our days away with more and more games. Maybe windows are too expensive to be worth it. Maybe too much chance of someone accidentally throwing a bowling ball through a costly window (if you have ever bowled with me you know this is a serious, but unintentional, possibility).

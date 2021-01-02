@@ -1,6 +1,5 @@
 ---
 question: What is static?
-binocsize: large
 leftextension: .gif
 ---
 

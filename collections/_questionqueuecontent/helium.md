@@ -1,6 +1,5 @@
 ---
 question: How is helium harvested?
-binocsize: large
 ---
 
 The sun and other solar bodies fuse hydrogen atoms together nuclearly and output helium (need to verify that my memory is correct on this). So there is helium floating around the sun presumably, and in Earth's atmosphere. As a little kid, I always imagined a person in a launched rocket sticking their arm out the window while wielding a little butterfly net and swishing it all around to catch every helium molecule they could. Of course they couldn't really use nets, even with the most microscopic mesh, since helium is the second-smallest regularly occurring molecule (also need to verify how far materials science has come in the helium-filterable-nanoparticle-mesh department). But in any case, I strongly doubt that the imagination of my four-year-old self is correct in this matter (unfortunately). So...how do we *really* get helium?

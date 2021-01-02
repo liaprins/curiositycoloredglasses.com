@@ -1,6 +1,5 @@
 ---
 question: How do L.E.D. light grids depict italics?
-binocsize: small
 ---
 
 Those little L.E.D. light boards on busses, at airport ticket counters, and in shop windows can be programmed to run text across horizontally or vertically, and do all sorts of other little visual choreography. One thing I have been intrigued by since I first bore witness to it, is an italic effect sometimes produced when the letters run horizontally across the board. How can slanted lines—the fundamental structure behind italic type—be simulated on a perfectly parallel, vertical, and extremely low-resolution grid?

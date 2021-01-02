@@ -54,38 +54,43 @@
 </span>
 
 <div id="qqparent">
-  {% for q in site.questionqueuecontent %}
-    <!-- "0rem" MARGINS BELOW ARE JUST PLACEHOLDERS UNTIL I FIGURE OUT HOW TO PULL IN RANDOMIZED MARGIN SELECTION (CONFER ORIGINAL KIRBY FILE) -->
-    <span class="qqpiece" style="margin-left:0rem; margin-top:0rem">
+
+  {% for item in site.data.contentorder.questionqueueorder %}
+    {% for q in site.questionqueuecontent %}
       {% assign qfilename = q.url | replace: '/questionqueuecontent/', '' %}
+      {% if item.file == qfilename %}
+        <!-- "0rem" MARGINS BELOW ARE JUST PLACEHOLDERS UNTIL I FIGURE OUT HOW TO PULL IN RANDOMIZED MARGIN SELECTION (CONFER ORIGINAL KIRBY FILE) -->
+        <span class="qqpiece" style="margin-left:0rem; margin-top:0rem">
 
-      <!-- Binoculars -->
-      <!-- FIGURE OUT IF I WANT TO HAVE AN alt: FIELD IN THE CONTENT FRONT-MATTER FOR alt="" IN THE BELOW <img> TAG INSTEAD OF PULLING IN THE TITLE -->
-      <div data-clickable="yes" data-id="{{ qfilename }}" class="qqglassescontainer {% if q.binocsize == 'large' %}largeqqglasses{% endif %} {% if q.binocsize == 'medium' %}mediumqqglasses{% endif %} {% if q.binocsize == 'small' %}smallqqglasses{% endif %}" title="{{ q.question }}" alt="{{ q.question }}">
-        <div data-innards-clickable="yes" class="lens l-lens" style="background-image: url({{ site.baseurl }}/assets/images/questionqueueimages/{{ qfilename }}-l{% if q.leftextension %}{{ q.leftextension }}{% else %}.jpg{% endif %})">
-        </div>
-        <div data-innards-clickable="yes" class="knob">
-        </div>
-        <div data-innards-clickable="yes" class="{% if q.binocsize == 'large' %}trapezoid-large{% endif %} {% if q.binocsize == 'medium' %}trapezoid-medium{% endif %} {% if q.binocsize == 'small' %}trapezoid-small{% endif %}">
-        </div>
-        <div data-innards-clickable="yes" class="lens r-lens" style="background-image: url({{ site.baseurl }}/assets/images/questionqueueimages/{{ qfilename }}-r{% if q.rightextension %}{{ q.rightextension }}{% else %}.jpg{% endif %})">
-        </div>
-      </div>
+          <!-- Binoculars -->
+          <!-- FIGURE OUT IF I WANT TO HAVE AN alt: FIELD IN THE CONTENT FRONT-MATTER FOR alt="" IN THE BELOW <img> TAG INSTEAD OF PULLING IN THE TITLE -->
+          <div data-clickable="yes" data-id="{{ qfilename }}" class="qqglassescontainer {% if item.size == 'large' %}largeqqglasses{% endif %} {% if item.size == 'medium' %}mediumqqglasses{% endif %} {% if item.size == 'small' %}smallqqglasses{% endif %}" title="{{ q.question }}" alt="{{ q.question }}">
+            <div data-innards-clickable="yes" class="lens l-lens" style="background-image: url({{ site.baseurl }}/assets/images/questionqueueimages/{{ qfilename }}-l{% if q.leftextension %}{{ q.leftextension }}{% else %}.jpg{% endif %})">
+            </div>
+            <div data-innards-clickable="yes" class="knob">
+            </div>
+            <div data-innards-clickable="yes" class="{% if item.size == 'large' %}trapezoid-large{% endif %} {% if item.size == 'medium' %}trapezoid-medium{% endif %} {% if item.size == 'small' %}trapezoid-small{% endif %}">
+            </div>
+            <div data-innards-clickable="yes" class="lens r-lens" style="background-image: url({{ site.baseurl }}/assets/images/questionqueueimages/{{ qfilename }}-r{% if q.rightextension %}{{ q.rightextension }}{% else %}.jpg{% endif %})">
+            </div>
+          </div>
 
-      <!-- QQ flyout/tooltip -->
-      <div class="qqcontents {% if q.binocsize == 'large' %}qqcontents-large{% endif %} {% if q.binocsize == 'medium' %}qqcontents-medium{% endif %} {% if q.binocsize == 'small' %}qqcontents-small{% endif %}" style="display: none;" data-edgemargin="">
-        <div class="sharkfin">
-        </div>
-        <div class="bordercover">
-        </div>
-        <img src= "{{ site.baseurl }}/assets/images/sitewide/x.svg" alt="close" id="qq-x" class="yellowhover close-x">
-        <div class="qqquestion s-display">{{ q.question }}
-        </div>
-        <div class="qqdescription s-textface">{{ q.content }}
-        </div>
-      </div>
+          <!-- QQ flyout/tooltip -->
+          <div class="qqcontents {% if item.size == 'large' %}qqcontents-large{% endif %} {% if item.size == 'medium' %}qqcontents-medium{% endif %} {% if item.size == 'small' %}qqcontents-small{% endif %}" style="display: none;" data-edgemargin="">
+            <div class="sharkfin">
+            </div>
+            <div class="bordercover">
+            </div>
+            <img src= "{{ site.baseurl }}/assets/images/sitewide/x.svg" alt="close" id="qq-x" class="yellowhover close-x">
+            <div class="qqquestion s-display">{{ q.question }}
+            </div>
+            <div class="qqdescription s-textface">{{ q.content }}
+            </div>
+          </div>
 
-    </span>
+        </span>
+      {% endif %}
+    {% endfor %}
   {% endfor %}
 </div>    <!-- close .qqparent -->
 

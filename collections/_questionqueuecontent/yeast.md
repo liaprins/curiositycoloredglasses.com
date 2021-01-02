@@ -1,6 +1,5 @@
 ---
 question: Yeast is living! But how?
-binocsize: large
 ---
 
 I have been confused by this for most of my life (and in blatant disbelief of it when I was a kid). It seemed inhumane that as a society we'd all just be fine with storing living organisms inside of claustrophobic little foil pouches, only to pull them out and use their alive-ness for our own convenience before brutally baking them to death. But very recently I developed a metaphor that I *think* more accurately reflects the reality of yeast: those little particles patiently awaiting us in their foil pouch homes are more like *seeds*. Like barley or apple pips. When they are exposed to the proper environment, they multiply, kind of like plant seeds start to grow when given moisture and light.

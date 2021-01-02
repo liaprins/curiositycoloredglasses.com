@@ -1,6 +1,5 @@
 ---
 question: How is the caffeine removed from whole coffee beans?
-binocsize: large
 ---
 
 You can buy whole, decaffeinated coffee beans. Preliminary research has revealed to me that these caffeine-less beans are not bred or otherwise genetically modified to grow this way, but that the caffeine is removed from them after harvest...somehow. I can more easily imagine already ground coffee in significantly smaller granular pieces with a higher surface-area-to-volume ratio being processed from the outside-in to extract the chemical caffeine, but how does this process happen, and how does it reach all the way into the insides of the whole beans?
