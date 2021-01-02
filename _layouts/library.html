@@ -35,23 +35,30 @@ that will be recognized in JS menu.js script, that can have an event listener ap
 
     <!-- Library entries section -->
     <div id="librarysection">
-      {% for libraryentry in site.librarycontent %}
-        {% assign filename = libraryentry.url | replace: '/librarycontent/', '' %}
-        <!-- Image per library entry -->
-        <img src="{{ site.baseurl }}/assets/images/libraryimages/{{ filename }}.jpg" alt="{{ libraryentry.alttext }}" title="{{ libraryentry.title }}" class="libraryicon" data-id="{{ filename }}" data-clickable="yes" >
 
-        <!-- Content per library entry (hidden until select an entry's image) -->
-        <article style="display: none;" class="libraryentry">
-          <img src= "{{ site.baseurl }}/assets/images/sitewide/x.svg" alt="close" id="library-x" class="yellowhover close-x">
-          <span class="libraryentryname s-display">
-            <p>
-              {{ libraryentry.title }}
-            </p>
-          </span>
-          <div class="libraryentryabout s-textface">
-            {{ libraryentry.content | markdownify }}
-          </div>
-        </article>
+      {% for item in site.data.contentorder.libraryorder %}
+        {% for libraryentry in site.librarycontent %}
+          {% assign filename = libraryentry.url | replace: '/librarycontent/', '' %}
+          {% if item.file == filename %}
+
+            <!-- Image per library entry -->
+            <img src="{{ site.baseurl }}/assets/images/libraryimages/{{ filename }}.jpg" alt="{{ libraryentry.alttext }}" title="{{ libraryentry.title }}" class="libraryicon" data-id="{{ filename }}" data-clickable="yes" >
+
+            <!-- Content per library entry (hidden until select an entry's image) -->
+            <article style="display: none;" class="libraryentry">
+              <img src= "{{ site.baseurl }}/assets/images/sitewide/x.svg" alt="close" id="library-x" class="yellowhover close-x">
+              <span class="libraryentryname s-display">
+                <p>
+                  {{ libraryentry.title }}
+                </p>
+              </span>
+              <div class="libraryentryabout s-textface">
+                {{ libraryentry.content | markdownify }}
+              </div>
+            </article>
+
+          {% endif %}
+        {% endfor %}
       {% endfor %}
     </div> <!-- #librarysection -->
 

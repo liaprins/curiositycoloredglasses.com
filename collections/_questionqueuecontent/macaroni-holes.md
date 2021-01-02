@@ -1,6 +1,5 @@
 ---
 question: How are the holes in macaroni noodles extruded?
-binocsize: large
 ---
 
 To make a tube, you can roll a flat, two-dimensional material and connect its edges, like those construction paper chains kids make. You could also build up its circumference layer by layer, the way tube socks are knitted or the colosseum was built. Finally, you could start with a cylindrical form and carve out its center, the way hollow logs' insides rot away over time, leaving a tubular shell.

@@ -1,6 +1,5 @@
 ---
 question: Is equal transit time really responsible for lift?
-binocsize: small
 ---
 
 Equal transit time, also called longest path theory, claims that air molecules separated from one another when a wing slices between them must meet back up at the trailing edge of the wing. This purportedly results in a negative pressure zone caused by the upper molecules traveling a greater distance and therefore spreading further apart than their below-wing counterparts. I’ve never fully fathomed what I was taught in school about this phenomena: the alleged idea that lifeless air molecules are physically obligated to return to their original alignment, post-wing disruption, has baffled me since second grade. My confidence that the next flight I'm on will arrive safely depends on an understanding of the physics involved!

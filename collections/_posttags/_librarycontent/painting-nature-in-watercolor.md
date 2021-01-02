@@ -1,0 +1,6 @@
+---
+title: Painting Nature in Watercolor, by Cathy Johnson
+alttext: A watercolored house wren chirping.
+---
+
+This book will make you want to go explore North America on foot with nothing but a cute little mini traveling watercolor kit, or at least eat breakfast outside while sketching a squirrel. The pages are filled with snippets from the author-artist's own sketchpads, nestled in amongst 37 step-by-step painting tutorials. I take it down whenever I want some inspiration in the way of hand-rendered explanatory drawings.
