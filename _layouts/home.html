@@ -108,11 +108,11 @@
         {% endif %}
 
         <!-- <span class="pagenumbers xl-textface">{{ paginator.page }} / {{ paginator.total_pages }}</span> -->
-        <span class="pagenumbers l-textface"><strong>{{ paginator.page }} / {{ paginator.total_pages }}</strong></span>
+        <span class="pagenumbers l-textface"><strong>{{ paginator.page }} /! {{ paginator.total_pages }}</strong></span>
 
         {% if paginator.next_page %}
           <a href="{{ paginator.next_page_path | relative_url }}">
-            <img src="/assets/images/sitewide/right-arrowhead.svg" class="paginationarrows yellowhover">
+            <img src="{{ site.baseurl }}/assets/images/sitewide/right-arrowhead.svg" class="paginationarrows yellowhover">
           </a>
         {% else %}
           <div class="paginationplaceholder"></div>
