@@ -24,6 +24,6 @@ Now, some boxes of chocolates come with guides — a printed paper that show
 I’m here to help, and I hope this principle has helped you. Let me know how it works for you this holiday season.
 
 {% assign galleryid = "chocolate-samples" %}
-{% assign gallery = '<img src="assets/images/blogposts/testing-forrest-gump/chocolate-samples/chocolate-samples_1.jpg" alt="Alt text forrest gump 1" class="contentimage" id="galleryimage"> 🟡 <img src="assets/images/blogposts/testing-forrest-gump/chocolate-samples/chocolate-samples_2.jpg" alt="Alt text forrest gump 2" class="contentimage" id="galleryimage">' | split: " 🟡 " %}
+{% assign gallery = '<img src="{{ site.baseurl }}/assets/images/blogposts/testing-forrest-gump/chocolate-samples/chocolate-samples_1.jpg" alt="Alt text forrest gump 1" class="contentimage" id="galleryimage"> 🟡 <img src="{{ site.baseurl }}/assets/images/blogposts/testing-forrest-gump/chocolate-samples/chocolate-samples_2.jpg" alt="Alt text forrest gump 2" class="contentimage" id="galleryimage">' | split: " 🟡 " %}
 {% assign captions = 'The chocolate industry seems to have no rhyme or reason for the exterior "design" of their goods. Meanwhile, the insides are quite compelling, and seem tastefully designed (always, the pun will be intended with me) visually as well. 🟡 Candy bars look much more appetizing on the inside than the outside, so why does all the goodness have to stay hidden?' | split: " 🟡 " %}
 {% include post-gallery.html %}

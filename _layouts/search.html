@@ -14,7 +14,7 @@ layout: search
       <form id="searchpageform" action="/search.html" method="get">
         <input type="text" placeholder="search" id="search-input" class="xl-textface underlineinput" name="query">
         <button type="submit" value="Search" id="searchpagebutton" class="searchbutton yellowhover">
-          <img src= "/assets/images/sitewide/search.svg" alt="Search" id="searchpageicon">
+          <img src= "{{ site.baseurl }}/assets/images/sitewide/search.svg" alt="Search" id="searchpageicon">
         </button>
       </form>
 
@@ -49,8 +49,8 @@ layout: search
     {% endfor %}
   };
 </script>
-<script src="/assets/js/lunr.min.js"></script>
-<script src="/assets/js/lunr-search.js"></script>
+<script src="{{ site.baseurl }}/assets/js/lunr.min.js"></script>
+<script src="{{ site.baseurl }}/assets/js/lunr-search.js"></script>
 
 
 <!-- FORMERLY footer-sitewide SNIPPET vvv ******************************************************************** -->

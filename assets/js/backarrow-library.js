@@ -16,7 +16,7 @@ function backArrowShow() {
     	// this src attribute vvv will have to update when I get proper hosting and URL set up!
         // or store the PHP version in an HTML element's attribute, then collect it in JS as a variable and call it here
         // or else construct its shape with CSS (research performance) vvv
-    	backArrow.setAttribute("src", "/assets/images/sitewide/backarrow.svg");
+    	backArrow.setAttribute("src", "{{ site.baseurl }}/assets/images/sitewide/backarrow.svg");
     	backArrow.setAttribute("id", "backarrow");
     	backArrow.setAttribute("class", "yellowhover");
 

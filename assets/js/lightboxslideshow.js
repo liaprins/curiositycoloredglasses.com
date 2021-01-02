@@ -50,7 +50,7 @@ function lightbox(imgToShow) {
     singleLightbox.setAttribute('data-lightbox-close', '');
 
     // give lightbox content: the <figure> element of image to show (includes its <figcaption> if there is one) + "x" button
-    singleLightbox.innerHTML = singleLightbox.parentNode.innerHTML + '<img src="/assets/images/sitewide/x.svg" alt="close" id="lightboxclose" class="close-x yellowhover" data-lightbox-x>';
+    singleLightbox.innerHTML = singleLightbox.parentNode.innerHTML + '<img src="{{ site.baseurl }}/assets/images/sitewide/x.svg" alt="close" id="lightboxclose" class="close-x yellowhover" data-lightbox-x>';
 
     // remove unintentionally duplicated lightbox element from original (duplicated when call the HTML of <figure> element it is attached to was duplicated as lightbox's content)
     var duplicate = singleLightbox.lastElementChild.previousElementSibling;
@@ -167,7 +167,7 @@ function populateLightboxDots(imgToShow) { // imgToShow is the image that should
         var lightboxArrowContainer = document.createElement('div');
         lightbox.appendChild(lightboxArrowContainer);
         lightboxArrowContainer.setAttribute('class', 'arrowcontainer lightboxarrowcontainer');
-        lightboxArrowContainer.innerHTML = '<img src="/assets/images/sitewide/left-arrowhead.svg" alt="retreat" title="Previous image" class="galleryarrows lightboxarrows yellowhover" data-retreatlightboxarrow>' + '<img src="/assets/images/sitewide/right-arrowhead.svg" alt="advance" title="Next image" class="galleryarrows lightboxarrows yellowhover" data-advancelightboxarrow>' + '<img class="imgfullscreentoggle imgtoregview yellowhover" title="View larger" id="galleryimgtoregview" alt="View larger" src="/assets/images/sitewide/to-regular-view.svg">';
+        lightboxArrowContainer.innerHTML = '<img src="{{ site.baseurl }}/assets/images/sitewide/left-arrowhead.svg" alt="retreat" title="Previous image" class="galleryarrows lightboxarrows yellowhover" data-retreatlightboxarrow>' + '<img src="{{ site.baseurl }}/assets/images/sitewide/right-arrowhead.svg" alt="advance" title="Next image" class="galleryarrows lightboxarrows yellowhover" data-advancelightboxarrow>' + '<img class="imgfullscreentoggle imgtoregview yellowhover" title="View larger" id="galleryimgtoregview" alt="View larger" src="{{ site.baseurl }}/assets/images/sitewide/to-regular-view.svg">';
 
 
         ////////////////////////////////////////////
@@ -401,7 +401,7 @@ function slideshow() {
         galleryList[i].appendChild(arrowContainer);
         arrowContainer.setAttribute('class', 'arrowcontainer');
         arrowContainer.style.position = 'relative';
-        arrowContainer.innerHTML = '<img src="/assets/images/sitewide/left-arrowhead.svg" alt="retreat" title="Previous image" class="galleryarrows yellowhover" data-retreatarrow>' + '<img src="/assets/images/sitewide/right-arrowhead.svg" alt="advance" title="Next image" class="galleryarrows yellowhover" data-advancearrow>' + '<img class="imgfullscreentoggle imgtofullscreen yellowhover" title="View larger" alt="View larger" src="/assets/images/sitewide/to-full-screen.svg">';
+        arrowContainer.innerHTML = '<img src="{{ site.baseurl }}/assets/images/sitewide/left-arrowhead.svg" alt="retreat" title="Previous image" class="galleryarrows yellowhover" data-retreatarrow>' + '<img src="{{ site.baseurl }}/assets/images/sitewide/right-arrowhead.svg" alt="advance" title="Next image" class="galleryarrows yellowhover" data-advancearrow>' + '<img class="imgfullscreentoggle imgtofullscreen yellowhover" title="View larger" alt="View larger" src="{{ site.baseurl }}/assets/images/sitewide/to-full-screen.svg">';
 
         // establish placeholder box to keep text after img at proper height
         galleryList[i].appendChild(placeholderBox);
@@ -445,7 +445,7 @@ function slideshow() {
 
             // create dots + put dots into dots container (positioned later, once placeHolderBox and img heights established)
             dot.setAttribute('class', 'dot dotunfilled');
-            dot.innerHTML = '<img src="/assets/images/sitewide/dot.svg" alt="go to this slide" class="dotimg dotimgunfilled">';
+            dot.innerHTML = '<img src="{{ site.baseurl }}/assets/images/sitewide/dot.svg" alt="go to this slide" class="dotimg dotimgunfilled">';
             dotsContainer.appendChild(dot);
             dotsList = dotsContainer.children;
             dotsList[j].setAttribute('data-dot-index', (j));
@@ -453,7 +453,7 @@ function slideshow() {
 
             // then override the first dot, to indicate it is the current dot/slide
             dotsList[0].setAttribute('class', 'dot');
-            dotsList[0].innerHTML = '<img src="/assets/images/sitewide/dot-filled.svg" alt="go to this slide" class="dotimg dotimgfill">';
+            dotsList[0].innerHTML = '<img src="{{ site.baseurl }}/assets/images/sitewide/dot-filled.svg" alt="go to this slide" class="dotimg dotimgfill">';
 
             // position all slides' <li> elements horizontally (absolute) + add data-* attribute to recognize them as side slides if clicked on
             slide[j].setAttribute('data-slide-index', (j));
@@ -526,10 +526,10 @@ function advanceOrRetreat(clickedSideSlide, dotsContainer, gallery, clickedIndex
     for (k = 0; k < dotsList.length; k++) {
         if (k == clickedIndex) {
             dotsList[k].setAttribute('class', 'dot');
-            dotsList[k].innerHTML = '<img src="/assets/images/sitewide/dot-filled.svg" alt="go to this slide" class="dotimg dotimgfill">';
+            dotsList[k].innerHTML = '<img src="{{ site.baseurl }}/assets/images/sitewide/dot-filled.svg" alt="go to this slide" class="dotimg dotimgfill">';
         } else {
             dotsList[k].setAttribute('class', 'dot dotunfilled');
-            dotsList[k].innerHTML = '<img src="/assets/images/sitewide/dot.svg" alt="go to this slide" class="dotimg dotimgunfilled">';
+            dotsList[k].innerHTML = '<img src="{{ site.baseurl }}/assets/images/sitewide/dot.svg" alt="go to this slide" class="dotimg dotimgunfilled">';
         } // close if
     } // close k
 
