@@ -5,7 +5,7 @@
 {% include head-close.html %}
 
   <!-- backarrow script -->
-  <script src="/assets/js/backarrow-tag.js">
+  <script src="{{ site.baseurl }}/assets/js/backarrow-tag.js">
   </script>
 
   <!-- This encompasses everything within <body> except for <nav>
@@ -75,7 +75,7 @@
       </summary>
       <!-- Home glasses icon -->
       <a href="/" title="Curiosity-Colored Glasses">
-        <img src="/assets/images/sitewide/home.svg" alt="Curiosity-Colored Glasses" id="homeicon" class="yellowhover">
+        <img src="{{ site.baseurl }}/assets/images/sitewide/home.svg" alt="Curiosity-Colored Glasses" id="homeicon" class="yellowhover">
       </a>
       <ul id="navlist">
         {% for item in site.mainpages %}
@@ -89,12 +89,12 @@
       	<!-- I added the searchbar snippet here, inside a list item, so it will be part of the menu list -->
       	<li id="navsearch" class="navnothome">
           <div id="searchdecoy" title="Search" class="yellowhover" style="display: none;">
-            <img src="/assets/images/sitewide/search.svg" alt="search" class="navsearchicon">
+            <img src="{{ site.baseurl }}/assets/images/sitewide/search.svg" alt="search" class="navsearchicon">
           </div>
           <form action="/search.html" method="get" id="navsearchform">
             <input type="text" placeholder="search" name="query" id="navsearchinput" class="s-textface underlineinput">
             <button type="submit" value="search" title="Search" id="navsearchbutton" class="searchbutton yellowhover">
-              <img src="/assets/images/sitewide/search.svg" alt="search" class="navsearchicon">
+              <img src="{{ site.baseurl }}/assets/images/sitewide/search.svg" alt="search" class="navsearchicon">
             </button>
           </form>
   			</li>

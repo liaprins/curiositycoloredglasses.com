@@ -5,7 +5,7 @@
 {% include head-close.html %}
 
 <!-- backarrow script -->
-<script src="/assets/js/backarrow-library.js">
+<script src="{{ site.baseurl }}/assets/js/backarrow-library.js">
 </script>
 
 <!-- This encompasses everything within <body> except for <nav>
@@ -38,11 +38,11 @@ that will be recognized in JS menu.js script, that can have an event listener ap
       {% for libraryentry in site.librarycontent %}
         {% assign filename = libraryentry.url | replace: '/librarycontent/', '' %}
         <!-- Image per library entry -->
-        <img src="assets/images/libraryimages/{{ filename }}.jpg" alt="{{ libraryentry.alttext }}" title="{{ libraryentry.title }}" class="libraryicon" data-id="{{ filename }}" data-clickable="yes" >
+        <img src="{{ site.baseurl }}/assets/images/libraryimages/{{ filename }}.jpg" alt="{{ libraryentry.alttext }}" title="{{ libraryentry.title }}" class="libraryicon" data-id="{{ filename }}" data-clickable="yes" >
 
         <!-- Content per library entry (hidden until select an entry's image) -->
         <article style="display: none;" class="libraryentry">
-          <img src= "assets/images/sitewide/x.svg" alt="close" id="library-x" class="yellowhover close-x">
+          <img src= "{{ site.baseurl }}/assets/images/sitewide/x.svg" alt="close" id="library-x" class="yellowhover close-x">
           <span class="libraryentryname s-display">
             <p>
               {{ libraryentry.title }}
@@ -55,7 +55,7 @@ that will be recognized in JS menu.js script, that can have an event listener ap
       {% endfor %}
     </div> <!-- #librarysection -->
 
-    <script src="assets/js/library.js">
+    <script src="{{ site.baseurl }}/assets/js/library.js">
     </script>
 
 <!-- FORMERLY footer-sitewide SNIPPET vvv ******************************************************************** -->

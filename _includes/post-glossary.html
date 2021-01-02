@@ -13,7 +13,7 @@
 </span>
 <!-- Audio pronunciation (optional) -->
 {% if vocab.audio %}
-<a onclick="this.firstChild.play()" data-audiolink title="Hear audio pronunciation"><audio src="assets/images/glossaryextras{{ page.url }}/{{ vocab.audio }}" type="audio/mpeg"></audio><img src="assets/images/sitewide/audio.svg" alt="play audio pronunciation" class="audioicon yellowhover"></a>
+<a onclick="this.firstChild.play()" data-audiolink title="Hear audio pronunciation"><audio src="{{ site.baseurl }}/assets/images/glossaryextras{{ page.url }}/{{ vocab.audio }}" type="audio/mpeg"></audio><img src="{{ site.baseurl }}/assets/images/sitewide/audio.svg" alt="play audio pronunciation" class="audioicon yellowhover"></a>
 {% endif %}
 </dt>
 <!-- <dd> = the value (definition) within the <dl> (parent) name-value pair  -->
@@ -22,7 +22,7 @@
 <p class="s-textface definition">{{ vocab.content }}</p>
 <!-- illustration (optional) -->
 {% if vocab.illustration %}
-<img src="assets/images/glossaryextras{{ page.url }}/{{ vocab.illustration }}" alt="" class="vocabillustration">
+<img src="{{ site.baseurl }}/assets/images/glossaryextras{{ page.url }}/{{ vocab.illustration }}" alt="" class="vocabillustration">
 {% endif %}
 </dd>
 </div>    <!-- id="vocabwordanddefinition" -->

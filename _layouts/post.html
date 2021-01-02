@@ -5,23 +5,23 @@
 {% include head-close.html %}
 
 <!-- backarrow script -->
-<script src="/assets/js/backarrow-post.js">
+<script src="{{ site.baseurl }}/assets/js/backarrow-post.js">
 </script>
 
 <!-- definitions/vocab script -->
-<script src="/assets/js/definitions.js">
+<script src="{{ site.baseurl }}/assets/js/definitions.js">
 </script>
 
 <!-- lightbox and slideshow all in one script -->
-<script src="/assets/js/lightboxslideshow.js">
+<script src="{{ site.baseurl }}/assets/js/lightboxslideshow.js">
 </script>
 
 <!-- comment refresh script -->
-<script src="/assets/js/comment.js">
+<script src="{{ site.baseurl }}/assets/js/comment.js">
 </script>
 
 <!-- detects swipes by users with touchscreens for galleries -->
-<script src="/assets/js/pure-swipe.js">
+<script src="{{ site.baseurl }}/assets/js/pure-swipe.js">
 </script>
 
 <!-- LEAVING OUT THE SCRIPT THAT WOULD PULL IN THE P5.JS LIBRARY -->
@@ -29,7 +29,7 @@
 <!-- LEAVING OUT THE SCRIPT THAT WOULD PULL IN A P5.JS SPECIAL FILE -->
 
 <!-- build out functionality for p5 <canvas> element going fullscreen -->
-<script src="/assets/js/canvasfullscreen.js">
+<script src="{{ site.baseurl }}/assets/js/canvasfullscreen.js">
 </script>
 
 <!-- This encompasses everything within <body> except for <nav>
@@ -106,13 +106,13 @@ that will be recognized in JS menu.js script, that can have an event listener ap
         <span id="share">
           <!-- TWITTER: From a tutorial website: onlinejournalismblog.com, but adding ability to dynamically include a visualized image. -->
           <a href="https://twitter.com/intent/tweet?text={{ page.share }}{{ page.url }}&hashtags={% for posttag in page.tags %}%20{{ posttag }}{% endfor %}&via=CuriosityColor" title="Share on Twitter" target="_blank">
-            <img src= "assets/images/sitewide/Twitter.svg" alt="Share on Twitter" class="socialicon shareicon yellowhover">
+            <img src= "{{ site.baseurl }}/assets/images/sitewide/Twitter.svg" alt="Share on Twitter" class="socialicon shareicon yellowhover">
           </a>
           <!-- This script needs to stay or there won't be a popup; it will open a new tab instead -->
           <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
           <!-- FACEBOOK: This method is from Facebook Developers, after modifications. It only works in conjunction with the script called separately and my registered CCG Facebook app ID (1816213758596939) -->
           <span id="shareBtn" title="Share on Facebook">
-            <img src= "assets/images/sitewide/Facebook.svg" alt="Share on Facebook" class="socialicon shareicon yellowhover">
+            <img src= "{{ site.baseurl }}/assets/images/sitewide/Facebook.svg" alt="Share on Facebook" class="socialicon shareicon yellowhover">
           </span>
           <script>
           document.getElementById('shareBtn').onclick = function() {
@@ -125,7 +125,7 @@ that will be recognized in JS menu.js script, that can have an event listener ap
           </script>
           <!-- PINTEREST: From Pinterest widget builder (modified to get stored image-->
           <a data-pin-do="buttonBookmark" data-pin-custom="true" data-pin-save="false" href="https://www.pinterest.com/pin/create/button/" title="Share on Pinterest">
-            <img src="assets/images/sitewide/Pinterest.svg" alt="Save to Pinterest" class="socialicon shareicon yellowhover">
+            <img src="{{ site.baseurl }}/assets/images/sitewide/Pinterest.svg" alt="Save to Pinterest" class="socialicon shareicon yellowhover">
           </a>
         </span>
 
@@ -133,7 +133,7 @@ that will be recognized in JS menu.js script, that can have an event listener ap
 
       <!-- Text of post -->
       <div id="posttext" class="m-textface hyphenation">
-        {{ content }}<img src="assets/images/sitewide/home.svg" alt="" id="articleendglasses">
+        {{ content }}<img src="{{ site.baseurl }}/assets/images/sitewide/home.svg" alt="" id="articleendglasses">
       </div>
 
       {% if page.glossaryfolder %}
@@ -176,7 +176,7 @@ that will be recognized in JS menu.js script, that can have an event listener ap
 
     </div>    <!-- Closing class="postdesktopcontent" -->
     <!-- adding a div to hold (with a class to hide) a vertical image for Pinterest, to be populated via the panel -->
-    <div class="hidepinnable"><img src="/assets/images/blogposts/{{ page.slug }}/{{ page.shareimage }}"></div>
+    <div class="hidepinnable"><img src="{{ site.baseurl }}/assets/images/blogposts/{{ page.slug }}/{{ page.shareimage }}"></div>
   </article>
 
   {% if page.relevantreading %}
@@ -241,7 +241,7 @@ that will be recognized in JS menu.js script, that can have an event listener ap
               </footer>
 
               <!--This is the pinterest script, instructed to place right before closing </body> tag-->
-              <script async defer src="/assets.pinterest.com/js/pinit.js">
+              <script async defer src="{{ site.baseurl }}/assets.pinterest.com/js/pinit.js">
               </script>
 
               <!--This encompasses everything within <body> except for <nav>. This is so that there is an element that can be clicked on that will be anything except <nav>, that will be recognized in JS menu.js script, that can have an event listener applied when it is clicked on, that will close the <nav> -->

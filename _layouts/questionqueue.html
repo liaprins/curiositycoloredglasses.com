@@ -5,22 +5,22 @@
 
 
  	<!-- Calls the stylesheet that zeroes out the default browser renderings -->
-  <link rel="stylesheet" href="/assets/css/reset.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/reset.css">
 
  	<!-- Calls the stylesheet that hold the designs -->
  	<!-- Will combine these into one style sheet by copying and pasting the contents together, once 100% finished, for performance reasons -->
-  <link rel="stylesheet" href="/assets/css/fonts.css">
-  <link rel="stylesheet" href="/assets/css/qqnavfooter.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/fonts.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/qqnavfooter.css">
 
-  <link rel="stylesheet" href="/assets/css/somepages.css">
-  <link rel="stylesheet" href="/assets/css/qq.css">
-  <link rel="stylesheet" href="/assets/css/text.css">
-  <link rel="stylesheet" href="/assets/css/menu-hamburger.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/somepages.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/qq.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/text.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/menu-hamburger.css">
 
  	<!-- Media queries -->
-  <link rel="stylesheet" href="/assets/css/mediaqueries.css">
-  <link rel="stylesheet" href="/assets/css/qqmediaqueries-override.css">
-  <link rel="stylesheet" href="/assets/css/qq-position-override.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/mediaqueries.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/qqmediaqueries-override.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/qq-position-override.css">
 
 </head>
 
@@ -28,15 +28,15 @@
 <body>
 
     <!-- positions glasses -->
-    <script src="assets/js/qq-position.js">
+    <script src="{{ site.baseurl }}/assets/js/qq-position.js">
     </script>
 
     <!-- parallax scroll -->
-    <script src="assets/js/qq-parallax.js">
+    <script src="{{ site.baseurl }}/assets/js/qq-parallax.js">
     </script>
 
     <!-- reveals question + content upon click -->
-    <script src="assets/js/qq.js">
+    <script src="{{ site.baseurl }}/assets/js/qq.js">
     </script>
 
 <!-- *************************************** ^^^^^ LEAVE ALONE ^^^^^ *************************************** -->
@@ -78,7 +78,7 @@
         </div>
         <div class="bordercover">
         </div>
-        <img src= "/assets/images/sitewide/x.svg" alt="close" id="qq-x" class="yellowhover close-x">
+        <img src= "{{ site.baseurl }}/assets/images/sitewide/x.svg" alt="close" id="qq-x" class="yellowhover close-x">
         <div class="qqquestion s-display">{{ q.question }}
         </div>
         <div class="qqdescription s-textface">{{ q.content }}

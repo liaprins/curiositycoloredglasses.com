@@ -20,7 +20,7 @@ Mount Everest and other Himalayan peaks are fold mountains, resulting from the c
 
 {% assign galleryid = "mauna-kea-vs-everest" %}
 
-{% assign gallery = '<img src="assets/images/blogposts/martian-mountains/mauna-kea-vs-everest/mauna-kea-vs-everest_1.jpg" alt="1st alt!" class="contentimage" id="galleryimage"> 🟡 <img src="assets/images/blogposts/martian-mountains/mauna-kea-vs-everest/mauna-kea-vs-everest_2.jpg" alt="2nd alt!!" class="contentimage" id="galleryimage"> 🟡 <img src="assets/images/blogposts/martian-mountains/mauna-kea-vs-everest/mauna-kea-vs-everest_3.jpg" alt="3rd alt!" class="contentimage" id="galleryimage">' | split: " 🟡 " %}
+{% assign gallery = '<img src="{{ site.baseurl }}/assets/images/blogposts/martian-mountains/mauna-kea-vs-everest/mauna-kea-vs-everest_1.jpg" alt="1st alt!" class="contentimage" id="galleryimage"> 🟡 <img src="{{ site.baseurl }}/assets/images/blogposts/martian-mountains/mauna-kea-vs-everest/mauna-kea-vs-everest_2.jpg" alt="2nd alt!!" class="contentimage" id="galleryimage"> 🟡 <img src="{{ site.baseurl }}/assets/images/blogposts/martian-mountains/mauna-kea-vs-everest/mauna-kea-vs-everest_3.jpg" alt="3rd alt!" class="contentimage" id="galleryimage">' | split: " 🟡 " %}
 
 {% assign captions = '1st caption! 🟡  🟡 3rd caption :D' | split: " 🟡 " %}
 
@@ -31,7 +31,7 @@ Despite its uncomfortably abstract squishiness, this base-to-summit measurement 
 
 {% assign galleryid = "helium-balloons" %}
 
-{% assign gallery = '<img src="assets/images/blogposts/martian-mountains/helium-balloons/helium-balloons_1.jpg" alt="1st balloon alt!" class="contentimage" id="galleryimage"> 🟡 <img src="assets/images/blogposts/martian-mountains/helium-balloons/helium-balloons_2.jpg" alt="2nd balloon alt!!" class="contentimage" id="galleryimage"> 🟡 <img src="assets/images/blogposts/martian-mountains/helium-balloons/helium-balloons_3.jpg" alt="3rd balloon alt!" class="contentimage" id="galleryimage">' | split: " 🟡 " %}
+{% assign gallery = '<img src="{{ site.baseurl }}/assets/images/blogposts/martian-mountains/helium-balloons/helium-balloons_1.jpg" alt="1st balloon alt!" class="contentimage" id="galleryimage"> 🟡 <img src="{{ site.baseurl }}/assets/images/blogposts/martian-mountains/helium-balloons/helium-balloons_2.jpg" alt="2nd balloon alt!!" class="contentimage" id="galleryimage"> 🟡 <img src="{{ site.baseurl }}/assets/images/blogposts/martian-mountains/helium-balloons/helium-balloons_3.jpg" alt="3rd balloon alt!" class="contentimage" id="galleryimage">' | split: " 🟡 " %}
 
 {% assign captions = ' 🟡 2nd balloon caption!! 🟡 3rd balloon caption :D' | split: " 🟡 " %}
 

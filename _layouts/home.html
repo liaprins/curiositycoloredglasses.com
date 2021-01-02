@@ -1,9 +1,9 @@
 {% include head-open.html %}
 
   <!-- pre-loading the fonts that are above the fold on home page so they show up faster -->
-  <link rel="preload" href="/assets/fonts/GROTESQUE_BOLD_smooth.woff" as="font">
-  <link rel="preload" href="/assets/fonts/sintesi_sans_demi-bold-webfont.woff" as="font">
-  <link rel="preload" href="/assets/fonts/sintesisanslight-webfont.woff" as="font">
+  <link rel="preload" href="{{ site.baseurl }}/assets/fonts/GROTESQUE_BOLD_smooth.woff" as="font">
+  <link rel="preload" href="{{ site.baseurl }}/assets/fonts/sintesi_sans_demi-bold-webfont.woff" as="font">
+  <link rel="preload" href="{{ site.baseurl }}/assets/fonts/sintesisanslight-webfont.woff" as="font">
   <!-- This is what shows when you bookmark this page, and what's in the browser tab -->
   <title>
     {{ page.title }}
@@ -101,14 +101,14 @@
       <div class="pagination">
         {% if paginator.previous_page %}
           <a href="{{ paginator.previous_page_path | relative_url }}">
-            <img src="/assets/images/sitewide/left-arrowhead.svg" class="paginationarrows yellowhover">
+            <img src="{{ site.baseurl }}/assets/images/sitewide/left-arrowhead.svg" class="paginationarrows yellowhover">
           </a>
         {% else %}
           <div class="paginationplaceholder"></div>
         {% endif %}
 
         <!-- <span class="pagenumbers xl-textface">{{ paginator.page }} / {{ paginator.total_pages }}</span> -->
-        <span class="pagenumbers l-textface"><strong>{{ paginator.page }} /! {{ paginator.total_pages }}</strong></span>
+        <span class="pagenumbers l-textface"><strong>{{ paginator.page }} / {{ paginator.total_pages }}</strong></span>
 
         {% if paginator.next_page %}
           <a href="{{ paginator.next_page_path | relative_url }}">

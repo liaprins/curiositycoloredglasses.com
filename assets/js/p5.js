@@ -7907,7 +7907,7 @@ module.exports={
         {
             "file": "src/core/transform.js",
             "line": 13,
-            "description": "<p>Multiplies the current matrix by the one specified through the parameters.\nThis is a powerful operation that can perform the equivalent of translate,\nscale, shear and rotate all at once. You can learn more about transformation\nmatrices on <a href=\"https://en.wikipedia.org/wiki/Transformation_matrix\">\nWikipedia</a>.</p>\n<p>The naming of the arguments here follows the naming of the <a href=\n\"https://html.spec.whatwg.org/multipage/canvas.html#dom-context-2d-transform\">\nWHATWG specification</a> and corresponds to a\ntransformation matrix of the\nform:</p>\n<blockquote>\n<p><img style=\"max-width: 150px\" src=\"assets/transformation-matrix.png\"\nalt=\"The transformation matrix used when applyMatrix is called\"/></p>\n</blockquote>\n",
+            "description": "<p>Multiplies the current matrix by the one specified through the parameters.\nThis is a powerful operation that can perform the equivalent of translate,\nscale, shear and rotate all at once. You can learn more about transformation\nmatrices on <a href=\"https://en.wikipedia.org/wiki/Transformation_matrix\">\nWikipedia</a>.</p>\n<p>The naming of the arguments here follows the naming of the <a href=\n\"https://html.spec.whatwg.org/multipage/canvas.html#dom-context-2d-transform\">\nWHATWG specification</a> and corresponds to a\ntransformation matrix of the\nform:</p>\n<blockquote>\n<p><img style=\"max-width: 150px\" src=\"{{ site.baseurl }}/assets/transformation-matrix.png\"\nalt=\"The transformation matrix used when applyMatrix is called\"/></p>\n</blockquote>\n",
             "itemtype": "method",
             "name": "applyMatrix",
             "params": [
@@ -9615,7 +9615,7 @@ module.exports={
         {
             "file": "src/image/loading_displaying.js",
             "line": 125,
-            "description": "<p>Draw an image to the p5.js canvas.</p>\n<p>This function can be used with different numbers of parameters. The\nsimplest use requires only three parameters: img, x, and y—where (x, y) is\nthe position of the image. Two more parameters can optionally be added to\nspecify the width and height of the image.</p>\n<p>This function can also be used with all eight Number parameters. To\ndifferentiate between all these parameters, p5.js uses the language of\n&quot;destination rectangle&quot; (which corresponds to &quot;dx&quot;, &quot;dy&quot;, etc.) and &quot;source\nimage&quot; (which corresponds to &quot;sx&quot;, &quot;sy&quot;, etc.) below. Specifying the\n&quot;source image&quot; dimensions can be useful when you want to display a\nsubsection of the source image instead of the whole thing. Here&#39;s a diagram\nto explain further:\n<img src=\"assets/drawImage.png\"></img></p>\n",
+            "description": "<p>Draw an image to the p5.js canvas.</p>\n<p>This function can be used with different numbers of parameters. The\nsimplest use requires only three parameters: img, x, and y—where (x, y) is\nthe position of the image. Two more parameters can optionally be added to\nspecify the width and height of the image.</p>\n<p>This function can also be used with all eight Number parameters. To\ndifferentiate between all these parameters, p5.js uses the language of\n&quot;destination rectangle&quot; (which corresponds to &quot;dx&quot;, &quot;dy&quot;, etc.) and &quot;source\nimage&quot; (which corresponds to &quot;sx&quot;, &quot;sy&quot;, etc.) below. Specifying the\n&quot;source image&quot; dimensions can be useful when you want to display a\nsubsection of the source image instead of the whole thing. Here&#39;s a diagram\nto explain further:\n<img src=\"{{ site.baseurl }}/assets/drawImage.png\"></img></p>\n",
             "itemtype": "method",
             "name": "image",
             "example": [
@@ -10929,7 +10929,7 @@ module.exports={
                 "type": "Object"
             },
             "example": [
-                "\n<div class='norender'>\n<code>\n// Given the following CSV file called \"mammals.csv\"\n// located in the project's \"assets\" folder:\n//\n// id,species,name\n// 0,Capra hircus,Goat\n// 1,Panthera pardus,Leopard\n// 2,Equus zebra,Zebra\n\nvar table;\n\nfunction preload() {\n  //my table is comma separated value \"csv\"\n  //and has a header specifying the columns labels\n  table = loadTable('assets/mammals.csv', 'csv', 'header');\n  //the file can be remote\n  //table = loadTable(\"http://p5js.org/reference/assets/mammals.csv\",\n  //                  \"csv\", \"header\");\n}\n\nfunction setup() {\n  //count the columns\n  print(table.getRowCount() + ' total rows in table');\n  print(table.getColumnCount() + ' total columns in table');\n\n  print(table.getColumn('name'));\n  //[\"Goat\", \"Leopard\", \"Zebra\"]\n\n  //cycle through the table\n  for (var r = 0; r < table.getRowCount(); r++)\n    for (var c = 0; c < table.getColumnCount(); c++) {\n      print(table.getString(r, c));\n    }\n}\n</code>\n</div>"
+                "\n<div class='norender'>\n<code>\n// Given the following CSV file called \"mammals.csv\"\n// located in the project's \"{{ site.baseurl }}/assets\" folder:\n//\n// id,species,name\n// 0,Capra hircus,Goat\n// 1,Panthera pardus,Leopard\n// 2,Equus zebra,Zebra\n\nvar table;\n\nfunction preload() {\n  //my table is comma separated value \"csv\"\n  //and has a header specifying the columns labels\n  table = loadTable('assets/mammals.csv', 'csv', 'header');\n  //the file can be remote\n  //table = loadTable(\"http://p5js.org/reference/assets/mammals.csv\",\n  //                  \"csv\", \"header\");\n}\n\nfunction setup() {\n  //count the columns\n  print(table.getRowCount() + ' total rows in table');\n  print(table.getColumnCount() + ' total columns in table');\n\n  print(table.getColumn('name'));\n  //[\"Goat\", \"Leopard\", \"Zebra\"]\n\n  //cycle through the table\n  for (var r = 0; r < table.getRowCount(); r++)\n    for (var c = 0; c < table.getColumnCount(); c++) {\n      print(table.getString(r, c));\n    }\n}\n</code>\n</div>"
             ],
             "alt": "randomly generated text from a file, for example \"i smell like butter\"\nrandomly generated text from a file, for example \"i have three feet\"",
             "class": "p5",
@@ -11657,7 +11657,7 @@ module.exports={
                 "type": "p5.TableRow"
             },
             "example": [
-                "\n <div class=\"norender\">\n <code>\n // Given the CSV file \"mammals.csv\"\n // in the project's \"assets\" folder:\n //\n // id,species,name\n // 0,Capra hircus,Goat\n // 1,Panthera pardus,Leopard\n // 2,Equus zebra,Zebra\n\n var table;\n\n function preload() {\n //my table is comma separated value \"csv\"\n //and has a header specifying the columns labels\n table = loadTable('assets/mammals.csv', 'csv', 'header');\n }\n\n function setup() {\n //add a row\n var newRow = table.addRow();\n newRow.setString('id', table.getRowCount() - 1);\n newRow.setString('species', 'Canis Lupus');\n newRow.setString('name', 'Wolf');\n\n //print the results\n for (var r = 0; r < table.getRowCount(); r++)\n   for (var c = 0; c < table.getColumnCount(); c++)\n     print(table.getString(r, c));\n }\n </code>\n </div>"
+                "\n <div class=\"norender\">\n <code>\n // Given the CSV file \"mammals.csv\"\n // in the project's \"{{ site.baseurl }}/assets\" folder:\n //\n // id,species,name\n // 0,Capra hircus,Goat\n // 1,Panthera pardus,Leopard\n // 2,Equus zebra,Zebra\n\n var table;\n\n function preload() {\n //my table is comma separated value \"csv\"\n //and has a header specifying the columns labels\n table = loadTable('assets/mammals.csv', 'csv', 'header');\n }\n\n function setup() {\n //add a row\n var newRow = table.addRow();\n newRow.setString('id', table.getRowCount() - 1);\n newRow.setString('species', 'Canis Lupus');\n newRow.setString('name', 'Wolf');\n\n //print the results\n for (var r = 0; r < table.getRowCount(); r++)\n   for (var c = 0; c < table.getColumnCount(); c++)\n     print(table.getString(r, c));\n }\n </code>\n </div>"
             ],
             "alt": "no image displayed",
             "class": "p5.Table",
@@ -11678,7 +11678,7 @@ module.exports={
                 }
             ],
             "example": [
-                "\n<div class=\"norender\">\n<code>\n// Given the CSV file \"mammals.csv\"\n// in the project's \"assets\" folder:\n//\n// id,species,name\n// 0,Capra hircus,Goat\n// 1,Panthera pardus,Leopard\n// 2,Equus zebra,Zebra\n\nvar table;\n\nfunction preload() {\n  //my table is comma separated value \"csv\"\n  //and has a header specifying the columns labels\n  table = loadTable('assets/mammals.csv', 'csv', 'header');\n}\n\nfunction setup() {\n  //remove the first row\n  table.removeRow(0);\n\n  //print the results\n  for (var r = 0; r < table.getRowCount(); r++)\n    for (var c = 0; c < table.getColumnCount(); c++)\n      print(table.getString(r, c));\n}\n</code>\n</div>"
+                "\n<div class=\"norender\">\n<code>\n// Given the CSV file \"mammals.csv\"\n// in the project's \"{{ site.baseurl }}/assets\" folder:\n//\n// id,species,name\n// 0,Capra hircus,Goat\n// 1,Panthera pardus,Leopard\n// 2,Equus zebra,Zebra\n\nvar table;\n\nfunction preload() {\n  //my table is comma separated value \"csv\"\n  //and has a header specifying the columns labels\n  table = loadTable('assets/mammals.csv', 'csv', 'header');\n}\n\nfunction setup() {\n  //remove the first row\n  table.removeRow(0);\n\n  //print the results\n  for (var r = 0; r < table.getRowCount(); r++)\n    for (var c = 0; c < table.getColumnCount(); c++)\n      print(table.getString(r, c));\n}\n</code>\n</div>"
             ],
             "alt": "no image displayed",
             "class": "p5.Table",
@@ -11703,7 +11703,7 @@ module.exports={
                 "type": "p5.TableRow"
             },
             "example": [
-                "\n<div class=\"norender\">\n<code>\n// Given the CSV file \"mammals.csv\"\n// in the project's \"assets\" folder:\n//\n// id,species,name\n// 0,Capra hircus,Goat\n// 1,Panthera pardus,Leopard\n// 2,Equus zebra,Zebra\n\nvar table;\n\nfunction preload() {\n  //my table is comma separated value \"csv\"\n  //and has a header specifying the columns labels\n  table = loadTable('assets/mammals.csv', 'csv', 'header');\n}\n\nfunction setup() {\n  var row = table.getRow(1);\n  //print it column by column\n  //note: a row is an object, not an array\n  for (var c = 0; c < table.getColumnCount(); c++) {\n    print(row.getString(c));\n  }\n}\n</code>\n</div>"
+                "\n<div class=\"norender\">\n<code>\n// Given the CSV file \"mammals.csv\"\n// in the project's \"{{ site.baseurl }}/assets\" folder:\n//\n// id,species,name\n// 0,Capra hircus,Goat\n// 1,Panthera pardus,Leopard\n// 2,Equus zebra,Zebra\n\nvar table;\n\nfunction preload() {\n  //my table is comma separated value \"csv\"\n  //and has a header specifying the columns labels\n  table = loadTable('assets/mammals.csv', 'csv', 'header');\n}\n\nfunction setup() {\n  var row = table.getRow(1);\n  //print it column by column\n  //note: a row is an object, not an array\n  for (var c = 0; c < table.getColumnCount(); c++) {\n    print(row.getString(c));\n  }\n}\n</code>\n</div>"
             ],
             "alt": "no image displayed",
             "class": "p5.Table",
@@ -11721,7 +11721,7 @@ module.exports={
                 "type": "p5.TableRow[]"
             },
             "example": [
-                "\n <div class=\"norender\">\n <code>\n // Given the CSV file \"mammals.csv\"\n // in the project's \"assets\" folder:\n //\n // id,species,name\n // 0,Capra hircus,Goat\n // 1,Panthera pardus,Leopard\n // 2,Equus zebra,Zebra\n\n var table;\n\n function preload() {\n //my table is comma separated value \"csv\"\n //and has a header specifying the columns labels\n table = loadTable('assets/mammals.csv', 'csv', 'header');\n }\n\n function setup() {\n var rows = table.getRows();\n\n //warning: rows is an array of objects\n for (var r = 0; r < rows.length; r++) {\n   rows[r].set('name', 'Unicorn');\n }\n\n //print the results\n for (r = 0; r < table.getRowCount(); r++)\n   for (var c = 0; c < table.getColumnCount(); c++)\n     print(table.getString(r, c));\n }\n </code>\n </div>"
+                "\n <div class=\"norender\">\n <code>\n // Given the CSV file \"mammals.csv\"\n // in the project's \"{{ site.baseurl }}/assets\" folder:\n //\n // id,species,name\n // 0,Capra hircus,Goat\n // 1,Panthera pardus,Leopard\n // 2,Equus zebra,Zebra\n\n var table;\n\n function preload() {\n //my table is comma separated value \"csv\"\n //and has a header specifying the columns labels\n table = loadTable('assets/mammals.csv', 'csv', 'header');\n }\n\n function setup() {\n var rows = table.getRows();\n\n //warning: rows is an array of objects\n for (var r = 0; r < rows.length; r++) {\n   rows[r].set('name', 'Unicorn');\n }\n\n //print the results\n for (r = 0; r < table.getRowCount(); r++)\n   for (var c = 0; c < table.getColumnCount(); c++)\n     print(table.getString(r, c));\n }\n </code>\n </div>"
             ],
             "alt": "no image displayed",
             "class": "p5.Table",
@@ -11751,7 +11751,7 @@ module.exports={
                 "type": "p5.TableRow"
             },
             "example": [
-                "\n <div class=\"norender\">\n <code>\n // Given the CSV file \"mammals.csv\"\n // in the project's \"assets\" folder:\n //\n // id,species,name\n // 0,Capra hircus,Goat\n // 1,Panthera pardus,Leopard\n // 2,Equus zebra,Zebra\n\n var table;\n\n function preload() {\n //my table is comma separated value \"csv\"\n //and has a header specifying the columns labels\n table = loadTable('assets/mammals.csv', 'csv', 'header');\n }\n\n function setup() {\n //find the animal named zebra\n var row = table.findRow('Zebra', 'name');\n //find the corresponding species\n print(row.getString('species'));\n }\n </code>\n </div>"
+                "\n <div class=\"norender\">\n <code>\n // Given the CSV file \"mammals.csv\"\n // in the project's \"{{ site.baseurl }}/assets\" folder:\n //\n // id,species,name\n // 0,Capra hircus,Goat\n // 1,Panthera pardus,Leopard\n // 2,Equus zebra,Zebra\n\n var table;\n\n function preload() {\n //my table is comma separated value \"csv\"\n //and has a header specifying the columns labels\n table = loadTable('assets/mammals.csv', 'csv', 'header');\n }\n\n function setup() {\n //find the animal named zebra\n var row = table.findRow('Zebra', 'name');\n //find the corresponding species\n print(row.getString('species'));\n }\n </code>\n </div>"
             ],
             "alt": "no image displayed",
             "class": "p5.Table",
@@ -11781,7 +11781,7 @@ module.exports={
                 "type": "p5.TableRow[]"
             },
             "example": [
-                "\n <div class=\"norender\">\n <code>\n // Given the CSV file \"mammals.csv\"\n // in the project's \"assets\" folder:\n //\n // id,species,name\n // 0,Capra hircus,Goat\n // 1,Panthera pardus,Leopard\n // 2,Equus zebra,Zebra\n\n var table;\n\n function preload() {\n //my table is comma separated value \"csv\"\n //and has a header specifying the columns labels\n table = loadTable('assets/mammals.csv', 'csv', 'header');\n }\n\n function setup() {\n //add another goat\n var newRow = table.addRow();\n newRow.setString('id', table.getRowCount() - 1);\n newRow.setString('species', 'Scape Goat');\n newRow.setString('name', 'Goat');\n\n //find the rows containing animals named Goat\n var rows = table.findRows('Goat', 'name');\n print(rows.length + ' Goats found');\n }\n </code>\n </div>"
+                "\n <div class=\"norender\">\n <code>\n // Given the CSV file \"mammals.csv\"\n // in the project's \"{{ site.baseurl }}/assets\" folder:\n //\n // id,species,name\n // 0,Capra hircus,Goat\n // 1,Panthera pardus,Leopard\n // 2,Equus zebra,Zebra\n\n var table;\n\n function preload() {\n //my table is comma separated value \"csv\"\n //and has a header specifying the columns labels\n table = loadTable('assets/mammals.csv', 'csv', 'header');\n }\n\n function setup() {\n //add another goat\n var newRow = table.addRow();\n newRow.setString('id', table.getRowCount() - 1);\n newRow.setString('species', 'Scape Goat');\n newRow.setString('name', 'Goat');\n\n //find the rows containing animals named Goat\n var rows = table.findRows('Goat', 'name');\n print(rows.length + ' Goats found');\n }\n </code>\n </div>"
             ],
             "alt": "no image displayed",
             "class": "p5.Table",
@@ -11811,7 +11811,7 @@ module.exports={
                 "type": "p5.TableRow"
             },
             "example": [
-                "\n<div class=\"norender\">\n<code>\n// Given the CSV file \"mammals.csv\"\n// in the project's \"assets\" folder:\n//\n// id,species,name\n// 0,Capra hircus,Goat\n// 1,Panthera pardus,Leopard\n// 2,Equus zebra,Zebra\n\nvar table;\n\nfunction preload() {\n  //my table is comma separated value \"csv\"\n  //and has a header specifying the columns labels\n  table = loadTable('assets/mammals.csv', 'csv', 'header');\n}\n\nfunction setup() {\n  //Search using specified regex on a given column, return TableRow object\n  var mammal = table.matchRow(new RegExp('ant'), 1);\n  print(mammal.getString(1));\n  //Output \"Panthera pardus\"\n}\n</code>\n</div>\n"
+                "\n<div class=\"norender\">\n<code>\n// Given the CSV file \"mammals.csv\"\n// in the project's \"{{ site.baseurl }}/assets\" folder:\n//\n// id,species,name\n// 0,Capra hircus,Goat\n// 1,Panthera pardus,Leopard\n// 2,Equus zebra,Zebra\n\nvar table;\n\nfunction preload() {\n  //my table is comma separated value \"csv\"\n  //and has a header specifying the columns labels\n  table = loadTable('assets/mammals.csv', 'csv', 'header');\n}\n\nfunction setup() {\n  //Search using specified regex on a given column, return TableRow object\n  var mammal = table.matchRow(new RegExp('ant'), 1);\n  print(mammal.getString(1));\n  //Output \"Panthera pardus\"\n}\n</code>\n</div>\n"
             ],
             "class": "p5.Table",
             "module": "IO",
@@ -11865,7 +11865,7 @@ module.exports={
                 "type": "Array"
             },
             "example": [
-                "\n <div class=\"norender\">\n <code>\n // Given the CSV file \"mammals.csv\"\n // in the project's \"assets\" folder:\n //\n // id,species,name\n // 0,Capra hircus,Goat\n // 1,Panthera pardus,Leopard\n // 2,Equus zebra,Zebra\n\n var table;\n\n function preload() {\n //my table is comma separated value \"csv\"\n //and has a header specifying the columns labels\n table = loadTable('assets/mammals.csv', 'csv', 'header');\n }\n\n function setup() {\n //getColumn returns an array that can be printed directly\n print(table.getColumn('species'));\n //outputs [\"Capra hircus\", \"Panthera pardus\", \"Equus zebra\"]\n }\n </code>\n </div>"
+                "\n <div class=\"norender\">\n <code>\n // Given the CSV file \"mammals.csv\"\n // in the project's \"{{ site.baseurl }}/assets\" folder:\n //\n // id,species,name\n // 0,Capra hircus,Goat\n // 1,Panthera pardus,Leopard\n // 2,Equus zebra,Zebra\n\n var table;\n\n function preload() {\n //my table is comma separated value \"csv\"\n //and has a header specifying the columns labels\n table = loadTable('assets/mammals.csv', 'csv', 'header');\n }\n\n function setup() {\n //getColumn returns an array that can be printed directly\n print(table.getColumn('species'));\n //outputs [\"Capra hircus\", \"Panthera pardus\", \"Equus zebra\"]\n }\n </code>\n </div>"
             ],
             "alt": "no image displayed",
             "class": "p5.Table",
@@ -11879,7 +11879,7 @@ module.exports={
             "itemtype": "method",
             "name": "clearRows",
             "example": [
-                "\n <div class=\"norender\">\n <code>\n // Given the CSV file \"mammals.csv\"\n // in the project's \"assets\" folder:\n //\n // id,species,name\n // 0,Capra hircus,Goat\n // 1,Panthera pardus,Leopard\n // 2,Equus zebra,Zebra\n\n var table;\n\n function preload() {\n //my table is comma separated value \"csv\"\n //and has a header specifying the columns labels\n table = loadTable('assets/mammals.csv', 'csv', 'header');\n }\n\n function setup() {\n table.clearRows();\n print(table.getRowCount() + ' total rows in table');\n print(table.getColumnCount() + ' total columns in table');\n }\n </code>\n </div>"
+                "\n <div class=\"norender\">\n <code>\n // Given the CSV file \"mammals.csv\"\n // in the project's \"{{ site.baseurl }}/assets\" folder:\n //\n // id,species,name\n // 0,Capra hircus,Goat\n // 1,Panthera pardus,Leopard\n // 2,Equus zebra,Zebra\n\n var table;\n\n function preload() {\n //my table is comma separated value \"csv\"\n //and has a header specifying the columns labels\n table = loadTable('assets/mammals.csv', 'csv', 'header');\n }\n\n function setup() {\n table.clearRows();\n print(table.getRowCount() + ' total rows in table');\n print(table.getColumnCount() + ' total columns in table');\n }\n </code>\n </div>"
             ],
             "alt": "no image displayed",
             "class": "p5.Table",
@@ -11901,7 +11901,7 @@ module.exports={
                 }
             ],
             "example": [
-                "\n <div class=\"norender\">\n <code>\n // Given the CSV file \"mammals.csv\"\n // in the project's \"assets\" folder:\n //\n // id,species,name\n // 0,Capra hircus,Goat\n // 1,Panthera pardus,Leopard\n // 2,Equus zebra,Zebra\n\n var table;\n\n function preload() {\n //my table is comma separated value \"csv\"\n //and has a header specifying the columns labels\n table = loadTable('assets/mammals.csv', 'csv', 'header');\n }\n\n function setup() {\n table.addColumn('carnivore');\n table.set(0, 'carnivore', 'no');\n table.set(1, 'carnivore', 'yes');\n table.set(2, 'carnivore', 'no');\n\n //print the results\n for (var r = 0; r < table.getRowCount(); r++)\n   for (var c = 0; c < table.getColumnCount(); c++)\n     print(table.getString(r, c));\n }\n </code>\n </div>"
+                "\n <div class=\"norender\">\n <code>\n // Given the CSV file \"mammals.csv\"\n // in the project's \"{{ site.baseurl }}/assets\" folder:\n //\n // id,species,name\n // 0,Capra hircus,Goat\n // 1,Panthera pardus,Leopard\n // 2,Equus zebra,Zebra\n\n var table;\n\n function preload() {\n //my table is comma separated value \"csv\"\n //and has a header specifying the columns labels\n table = loadTable('assets/mammals.csv', 'csv', 'header');\n }\n\n function setup() {\n table.addColumn('carnivore');\n table.set(0, 'carnivore', 'no');\n table.set(1, 'carnivore', 'yes');\n table.set(2, 'carnivore', 'no');\n\n //print the results\n for (var r = 0; r < table.getRowCount(); r++)\n   for (var c = 0; c < table.getColumnCount(); c++)\n     print(table.getString(r, c));\n }\n </code>\n </div>"
             ],
             "alt": "no image displayed",
             "class": "p5.Table",
@@ -12003,7 +12003,7 @@ module.exports={
                 }
             ],
             "example": [
-                "\n <div class=\"norender\">\n <code>\n // Given the CSV file \"mammals.csv\"\n // in the project's \"assets\" folder:\n //\n // id,species,name\n // 0,Capra hircus,Goat\n // 1,Panthera pardus,Leopard\n // 2,Equus zebra,Zebra\n\n var table;\n\n function preload() {\n //my table is comma separated value \"csv\"\n //and has a header specifying the columns labels\n table = loadTable('assets/mammals.csv', 'csv', 'header');\n }\n\n function setup() {\n table.removeColumn('id');\n print(table.getColumnCount());\n }\n </code>\n </div>"
+                "\n <div class=\"norender\">\n <code>\n // Given the CSV file \"mammals.csv\"\n // in the project's \"{{ site.baseurl }}/assets\" folder:\n //\n // id,species,name\n // 0,Capra hircus,Goat\n // 1,Panthera pardus,Leopard\n // 2,Equus zebra,Zebra\n\n var table;\n\n function preload() {\n //my table is comma separated value \"csv\"\n //and has a header specifying the columns labels\n table = loadTable('assets/mammals.csv', 'csv', 'header');\n }\n\n function setup() {\n table.removeColumn('id');\n print(table.getColumnCount());\n }\n </code>\n </div>"
             ],
             "alt": "no image displayed",
             "class": "p5.Table",
@@ -12034,7 +12034,7 @@ module.exports={
                 }
             ],
             "example": [
-                "\n<div class=\"norender\">\n<code>\n// Given the CSV file \"mammals.csv\"\n// in the project's \"assets\" folder:\n//\n// id,species,name\n// 0,Capra hircus,Goat\n// 1,Panthera pardus,Leopard\n// 2,Equus zebra,Zebra\n\nvar table;\n\nfunction preload() {\n  //my table is comma separated value \"csv\"\n  //and has a header specifying the columns labels\n  table = loadTable('assets/mammals.csv', 'csv', 'header');\n}\n\nfunction setup() {\n  table.set(0, 'species', 'Canis Lupus');\n  table.set(0, 'name', 'Wolf');\n\n  //print the results\n  for (var r = 0; r < table.getRowCount(); r++)\n    for (var c = 0; c < table.getColumnCount(); c++)\n      print(table.getString(r, c));\n}\n</code>\n</div>"
+                "\n<div class=\"norender\">\n<code>\n// Given the CSV file \"mammals.csv\"\n// in the project's \"{{ site.baseurl }}/assets\" folder:\n//\n// id,species,name\n// 0,Capra hircus,Goat\n// 1,Panthera pardus,Leopard\n// 2,Equus zebra,Zebra\n\nvar table;\n\nfunction preload() {\n  //my table is comma separated value \"csv\"\n  //and has a header specifying the columns labels\n  table = loadTable('assets/mammals.csv', 'csv', 'header');\n}\n\nfunction setup() {\n  table.set(0, 'species', 'Canis Lupus');\n  table.set(0, 'name', 'Wolf');\n\n  //print the results\n  for (var r = 0; r < table.getRowCount(); r++)\n    for (var c = 0; c < table.getColumnCount(); c++)\n      print(table.getString(r, c));\n}\n</code>\n</div>"
             ],
             "alt": "no image displayed",
             "class": "p5.Table",
@@ -12065,7 +12065,7 @@ module.exports={
                 }
             ],
             "example": [
-                "\n<div class=\"norender\">\n<code>\n// Given the CSV file \"mammals.csv\"\n// in the project's \"assets\" folder:\n//\n// id,species,name\n// 0,Capra hircus,Goat\n// 1,Panthera pardus,Leopard\n// 2,Equus zebra,Zebra\n\nvar table;\n\nfunction preload() {\n  //my table is comma separated value \"csv\"\n  //and has a header specifying the columns labels\n  table = loadTable('assets/mammals.csv', 'csv', 'header');\n}\n\nfunction setup() {\n  table.setNum(1, 'id', 1);\n\n  print(table.getColumn(0));\n  //[\"0\", 1, \"2\"]\n}\n</code>\n</div>"
+                "\n<div class=\"norender\">\n<code>\n// Given the CSV file \"mammals.csv\"\n// in the project's \"{{ site.baseurl }}/assets\" folder:\n//\n// id,species,name\n// 0,Capra hircus,Goat\n// 1,Panthera pardus,Leopard\n// 2,Equus zebra,Zebra\n\nvar table;\n\nfunction preload() {\n  //my table is comma separated value \"csv\"\n  //and has a header specifying the columns labels\n  table = loadTable('assets/mammals.csv', 'csv', 'header');\n}\n\nfunction setup() {\n  table.setNum(1, 'id', 1);\n\n  print(table.getColumn(0));\n  //[\"0\", 1, \"2\"]\n}\n</code>\n</div>"
             ],
             "alt": "no image displayed",
             "class": "p5.Table",
@@ -12096,7 +12096,7 @@ module.exports={
                 }
             ],
             "example": [
-                "\n<div class=\"norender\"><code>\n// Given the CSV file \"mammals.csv\" in the project's \"assets\" folder:\n//\n// id,species,name\n// 0,Capra hircus,Goat\n// 1,Panthera pardus,Leopard\n// 2,Equus zebra,Zebra\n\nvar table;\n\nfunction preload() {\n  //my table is comma separated value \"csv\"\n  //and has a header specifying the columns labels\n  table = loadTable('assets/mammals.csv', 'csv', 'header');\n}\n\nfunction setup() {\n  //add a row\n  var newRow = table.addRow();\n  newRow.setString('id', table.getRowCount() - 1);\n  newRow.setString('species', 'Canis Lupus');\n  newRow.setString('name', 'Wolf');\n\n  print(table.getArray());\n}\n</code></div>"
+                "\n<div class=\"norender\"><code>\n// Given the CSV file \"mammals.csv\" in the project's \"{{ site.baseurl }}/assets\" folder:\n//\n// id,species,name\n// 0,Capra hircus,Goat\n// 1,Panthera pardus,Leopard\n// 2,Equus zebra,Zebra\n\nvar table;\n\nfunction preload() {\n  //my table is comma separated value \"csv\"\n  //and has a header specifying the columns labels\n  table = loadTable('assets/mammals.csv', 'csv', 'header');\n}\n\nfunction setup() {\n  //add a row\n  var newRow = table.addRow();\n  newRow.setString('id', table.getRowCount() - 1);\n  newRow.setString('species', 'Canis Lupus');\n  newRow.setString('name', 'Wolf');\n\n  print(table.getArray());\n}\n</code></div>"
             ],
             "alt": "no image displayed",
             "class": "p5.Table",
@@ -12126,7 +12126,7 @@ module.exports={
                 "type": "String|Number"
             },
             "example": [
-                "\n<div class=\"norender\">\n<code>\n// Given the CSV file \"mammals.csv\"\n// in the project's \"assets\" folder:\n//\n// id,species,name\n// 0,Capra hircus,Goat\n// 1,Panthera pardus,Leopard\n// 2,Equus zebra,Zebra\n\nvar table;\n\nfunction preload() {\n  //my table is comma separated value \"csv\"\n  //and has a header specifying the columns labels\n  table = loadTable('assets/mammals.csv', 'csv', 'header');\n}\n\nfunction setup() {\n  print(table.get(0, 1));\n  //Capra hircus\n  print(table.get(0, 'species'));\n  //Capra hircus\n}\n</code>\n</div>"
+                "\n<div class=\"norender\">\n<code>\n// Given the CSV file \"mammals.csv\"\n// in the project's \"{{ site.baseurl }}/assets\" folder:\n//\n// id,species,name\n// 0,Capra hircus,Goat\n// 1,Panthera pardus,Leopard\n// 2,Equus zebra,Zebra\n\nvar table;\n\nfunction preload() {\n  //my table is comma separated value \"csv\"\n  //and has a header specifying the columns labels\n  table = loadTable('assets/mammals.csv', 'csv', 'header');\n}\n\nfunction setup() {\n  print(table.get(0, 1));\n  //Capra hircus\n  print(table.get(0, 'species'));\n  //Capra hircus\n}\n</code>\n</div>"
             ],
             "alt": "no image displayed",
             "class": "p5.Table",
@@ -12156,7 +12156,7 @@ module.exports={
                 "type": "Number"
             },
             "example": [
-                "\n<div class=\"norender\">\n<code>\n// Given the CSV file \"mammals.csv\"\n// in the project's \"assets\" folder:\n//\n// id,species,name\n// 0,Capra hircus,Goat\n// 1,Panthera pardus,Leopard\n// 2,Equus zebra,Zebra\n\nvar table;\n\nfunction preload() {\n  //my table is comma separated value \"csv\"\n  //and has a header specifying the columns labels\n  table = loadTable('assets/mammals.csv', 'csv', 'header');\n}\n\nfunction setup() {\n  print(table.getNum(1, 0) + 100);\n  //id 1 + 100 = 101\n}\n</code>\n</div>"
+                "\n<div class=\"norender\">\n<code>\n// Given the CSV file \"mammals.csv\"\n// in the project's \"{{ site.baseurl }}/assets\" folder:\n//\n// id,species,name\n// 0,Capra hircus,Goat\n// 1,Panthera pardus,Leopard\n// 2,Equus zebra,Zebra\n\nvar table;\n\nfunction preload() {\n  //my table is comma separated value \"csv\"\n  //and has a header specifying the columns labels\n  table = loadTable('assets/mammals.csv', 'csv', 'header');\n}\n\nfunction setup() {\n  print(table.getNum(1, 0) + 100);\n  //id 1 + 100 = 101\n}\n</code>\n</div>"
             ],
             "alt": "no image displayed",
             "class": "p5.Table",
@@ -12186,7 +12186,7 @@ module.exports={
                 "type": "String"
             },
             "example": [
-                "\n<div class=\"norender\">\n<code>\n// Given the CSV file \"mammals.csv\"\n// in the project's \"assets\" folder:\n//\n// id,species,name\n// 0,Capra hircus,Goat\n// 1,Panthera pardus,Leopard\n// 2,Equus zebra,Zebra\n\nvar table;\n\nfunction preload() {\n  // table is comma separated value \"CSV\"\n  // and has specifiying header for column labels\n  table = loadTable('assets/mammals.csv', 'csv', 'header');\n}\n\nfunction setup() {\n  print(table.getString(0, 0)); // 0\n  print(table.getString(0, 1)); // Capra hircus\n  print(table.getString(0, 2)); // Goat\n  print(table.getString(1, 0)); // 1\n  print(table.getString(1, 1)); // Panthera pardus\n  print(table.getString(1, 2)); // Leopard\n  print(table.getString(2, 0)); // 2\n  print(table.getString(2, 1)); // Equus zebra\n  print(table.getString(2, 2)); // Zebra\n}\n</code>\n</div>"
+                "\n<div class=\"norender\">\n<code>\n// Given the CSV file \"mammals.csv\"\n// in the project's \"{{ site.baseurl }}/assets\" folder:\n//\n// id,species,name\n// 0,Capra hircus,Goat\n// 1,Panthera pardus,Leopard\n// 2,Equus zebra,Zebra\n\nvar table;\n\nfunction preload() {\n  // table is comma separated value \"CSV\"\n  // and has specifiying header for column labels\n  table = loadTable('assets/mammals.csv', 'csv', 'header');\n}\n\nfunction setup() {\n  print(table.getString(0, 0)); // 0\n  print(table.getString(0, 1)); // Capra hircus\n  print(table.getString(0, 2)); // Goat\n  print(table.getString(1, 0)); // 1\n  print(table.getString(1, 1)); // Panthera pardus\n  print(table.getString(1, 2)); // Leopard\n  print(table.getString(2, 0)); // 2\n  print(table.getString(2, 1)); // Equus zebra\n  print(table.getString(2, 2)); // Zebra\n}\n</code>\n</div>"
             ],
             "alt": "no image displayed",
             "class": "p5.Table",
@@ -12212,7 +12212,7 @@ module.exports={
                 "type": "Object"
             },
             "example": [
-                "\n<div class=\"norender\">\n<code>\n// Given the CSV file \"mammals.csv\"\n// in the project's \"assets\" folder:\n//\n// id,species,name\n// 0,Capra hircus,Goat\n// 1,Panthera pardus,Leopard\n// 2,Equus zebra,Zebra\n\nvar table;\n\nfunction preload() {\n  //my table is comma separated value \"csv\"\n  //and has a header specifying the columns labels\n  table = loadTable('assets/mammals.csv', 'csv', 'header');\n}\n\nfunction setup() {\n  var tableObject = table.getObject();\n\n  print(tableObject);\n  //outputs an object\n}\n</code>\n</div>"
+                "\n<div class=\"norender\">\n<code>\n// Given the CSV file \"mammals.csv\"\n// in the project's \"{{ site.baseurl }}/assets\" folder:\n//\n// id,species,name\n// 0,Capra hircus,Goat\n// 1,Panthera pardus,Leopard\n// 2,Equus zebra,Zebra\n\nvar table;\n\nfunction preload() {\n  //my table is comma separated value \"csv\"\n  //and has a header specifying the columns labels\n  table = loadTable('assets/mammals.csv', 'csv', 'header');\n}\n\nfunction setup() {\n  var tableObject = table.getObject();\n\n  print(tableObject);\n  //outputs an object\n}\n</code>\n</div>"
             ],
             "alt": "no image displayed",
             "class": "p5.Table",
@@ -12230,7 +12230,7 @@ module.exports={
                 "type": "Array"
             },
             "example": [
-                "\n<div class=\"norender\">\n<code>\n// Given the CSV file \"mammals.csv\"\n// in the project's \"assets\" folder\n//\n// id,species,name\n// 0,Capra hircus,Goat\n// 1,Panthera pardus,Leoperd\n// 2,Equus zebra,Zebra\n\nvar table;\n\nfunction preload() {\n  // table is comma separated value \"CSV\"\n  // and has specifiying header for column labels\n  table = loadTable('assets/mammals.csv', 'csv', 'header');\n}\n\nfunction setup() {\n  var tableArray = table.getArray();\n  for (var i = 0; i < tableArray.length; i++) {\n    print(tableArray[i]);\n  }\n}\n</code>\n</div>"
+                "\n<div class=\"norender\">\n<code>\n// Given the CSV file \"mammals.csv\"\n// in the project's \"{{ site.baseurl }}/assets\" folder\n//\n// id,species,name\n// 0,Capra hircus,Goat\n// 1,Panthera pardus,Leoperd\n// 2,Equus zebra,Zebra\n\nvar table;\n\nfunction preload() {\n  // table is comma separated value \"CSV\"\n  // and has specifiying header for column labels\n  table = loadTable('assets/mammals.csv', 'csv', 'header');\n}\n\nfunction setup() {\n  var tableArray = table.getArray();\n  for (var i = 0; i < tableArray.length; i++) {\n    print(tableArray[i]);\n  }\n}\n</code>\n</div>"
             ],
             "alt": "no image displayed",
             "class": "p5.Table",
@@ -12256,7 +12256,7 @@ module.exports={
                 }
             ],
             "example": [
-                "\n <div class=\"norender\"><code>\n // Given the CSV file \"mammals.csv\" in the project's \"assets\" folder:\n //\n // id,species,name\n // 0,Capra hircus,Goat\n // 1,Panthera pardus,Leopard\n // 2,Equus zebra,Zebra\n\n var table;\n\n function preload() {\n //my table is comma separated value \"csv\"\n //and has a header specifying the columns labels\n table = loadTable('assets/mammals.csv', 'csv', 'header');\n }\n\n function setup() {\n var rows = table.getRows();\n for (var r = 0; r < rows.length; r++) {\n   rows[r].set('name', 'Unicorn');\n }\n\n //print the results\n print(table.getArray());\n }\n </code></div>"
+                "\n <div class=\"norender\"><code>\n // Given the CSV file \"mammals.csv\" in the project's \"{{ site.baseurl }}/assets\" folder:\n //\n // id,species,name\n // 0,Capra hircus,Goat\n // 1,Panthera pardus,Leopard\n // 2,Equus zebra,Zebra\n\n var table;\n\n function preload() {\n //my table is comma separated value \"csv\"\n //and has a header specifying the columns labels\n table = loadTable('assets/mammals.csv', 'csv', 'header');\n }\n\n function setup() {\n var rows = table.getRows();\n for (var r = 0; r < rows.length; r++) {\n   rows[r].set('name', 'Unicorn');\n }\n\n //print the results\n print(table.getArray());\n }\n </code></div>"
             ],
             "alt": "no image displayed",
             "class": "p5.TableRow",
@@ -12282,7 +12282,7 @@ module.exports={
                 }
             ],
             "example": [
-                "\n <div class=\"norender\"><code>\n // Given the CSV file \"mammals.csv\" in the project's \"assets\" folder:\n //\n // id,species,name\n // 0,Capra hircus,Goat\n // 1,Panthera pardus,Leopard\n // 2,Equus zebra,Zebra\n\n var table;\n\n function preload() {\n //my table is comma separated value \"csv\"\n //and has a header specifying the columns labels\n table = loadTable('assets/mammals.csv', 'csv', 'header');\n }\n\n function setup() {\n var rows = table.getRows();\n for (var r = 0; r < rows.length; r++) {\n   rows[r].setNum('id', r + 10);\n }\n\n print(table.getArray());\n }\n </code></div>"
+                "\n <div class=\"norender\"><code>\n // Given the CSV file \"mammals.csv\" in the project's \"{{ site.baseurl }}/assets\" folder:\n //\n // id,species,name\n // 0,Capra hircus,Goat\n // 1,Panthera pardus,Leopard\n // 2,Equus zebra,Zebra\n\n var table;\n\n function preload() {\n //my table is comma separated value \"csv\"\n //and has a header specifying the columns labels\n table = loadTable('assets/mammals.csv', 'csv', 'header');\n }\n\n function setup() {\n var rows = table.getRows();\n for (var r = 0; r < rows.length; r++) {\n   rows[r].setNum('id', r + 10);\n }\n\n print(table.getArray());\n }\n </code></div>"
             ],
             "alt": "no image displayed",
             "class": "p5.TableRow",
@@ -12308,7 +12308,7 @@ module.exports={
                 }
             ],
             "example": [
-                "\n <div class=\"norender\"><code>\n // Given the CSV file \"mammals.csv\" in the project's \"assets\" folder:\n //\n // id,species,name\n // 0,Capra hircus,Goat\n // 1,Panthera pardus,Leopard\n // 2,Equus zebra,Zebra\n\n var table;\n\n function preload() {\n //my table is comma separated value \"csv\"\n //and has a header specifying the columns labels\n table = loadTable('assets/mammals.csv', 'csv', 'header');\n }\n\n function setup() {\n var rows = table.getRows();\n for (var r = 0; r < rows.length; r++) {\n   var name = rows[r].getString('name');\n   rows[r].setString('name', 'A ' + name + ' named George');\n }\n\n print(table.getArray());\n }\n </code></div>"
+                "\n <div class=\"norender\"><code>\n // Given the CSV file \"mammals.csv\" in the project's \"{{ site.baseurl }}/assets\" folder:\n //\n // id,species,name\n // 0,Capra hircus,Goat\n // 1,Panthera pardus,Leopard\n // 2,Equus zebra,Zebra\n\n var table;\n\n function preload() {\n //my table is comma separated value \"csv\"\n //and has a header specifying the columns labels\n table = loadTable('assets/mammals.csv', 'csv', 'header');\n }\n\n function setup() {\n var rows = table.getRows();\n for (var r = 0; r < rows.length; r++) {\n   var name = rows[r].getString('name');\n   rows[r].setString('name', 'A ' + name + ' named George');\n }\n\n print(table.getArray());\n }\n </code></div>"
             ],
             "alt": "no image displayed",
             "class": "p5.TableRow",
@@ -12333,7 +12333,7 @@ module.exports={
                 "type": "String|Number"
             },
             "example": [
-                "\n <div class=\"norender\"><code>\n // Given the CSV file \"mammals.csv\" in the project's \"assets\" folder:\n //\n // id,species,name\n // 0,Capra hircus,Goat\n // 1,Panthera pardus,Leopard\n // 2,Equus zebra,Zebra\n\n var table;\n\n function preload() {\n //my table is comma separated value \"csv\"\n //and has a header specifying the columns labels\n table = loadTable('assets/mammals.csv', 'csv', 'header');\n }\n\n function setup() {\n var names = [];\n var rows = table.getRows();\n for (var r = 0; r < rows.length; r++) {\n   names.push(rows[r].get('name'));\n }\n\n print(names);\n }\n </code></div>"
+                "\n <div class=\"norender\"><code>\n // Given the CSV file \"mammals.csv\" in the project's \"{{ site.baseurl }}/assets\" folder:\n //\n // id,species,name\n // 0,Capra hircus,Goat\n // 1,Panthera pardus,Leopard\n // 2,Equus zebra,Zebra\n\n var table;\n\n function preload() {\n //my table is comma separated value \"csv\"\n //and has a header specifying the columns labels\n table = loadTable('assets/mammals.csv', 'csv', 'header');\n }\n\n function setup() {\n var names = [];\n var rows = table.getRows();\n for (var r = 0; r < rows.length; r++) {\n   names.push(rows[r].get('name'));\n }\n\n print(names);\n }\n </code></div>"
             ],
             "alt": "no image displayed",
             "class": "p5.TableRow",
@@ -12358,7 +12358,7 @@ module.exports={
                 "type": "Number"
             },
             "example": [
-                "\n <div class=\"norender\"><code>\n // Given the CSV file \"mammals.csv\" in the project's \"assets\" folder:\n //\n // id,species,name\n // 0,Capra hircus,Goat\n // 1,Panthera pardus,Leopard\n // 2,Equus zebra,Zebra\n\n var table;\n\n function preload() {\n //my table is comma separated value \"csv\"\n //and has a header specifying the columns labels\n table = loadTable('assets/mammals.csv', 'csv', 'header');\n }\n\n function setup() {\n var rows = table.getRows();\n var minId = Infinity;\n var maxId = -Infinity;\n for (var r = 0; r < rows.length; r++) {\n   var id = rows[r].getNum('id');\n   minId = min(minId, id);\n   maxId = min(maxId, id);\n }\n print('minimum id = ' + minId + ', maximum id = ' + maxId);\n }\n </code></div>"
+                "\n <div class=\"norender\"><code>\n // Given the CSV file \"mammals.csv\" in the project's \"{{ site.baseurl }}/assets\" folder:\n //\n // id,species,name\n // 0,Capra hircus,Goat\n // 1,Panthera pardus,Leopard\n // 2,Equus zebra,Zebra\n\n var table;\n\n function preload() {\n //my table is comma separated value \"csv\"\n //and has a header specifying the columns labels\n table = loadTable('assets/mammals.csv', 'csv', 'header');\n }\n\n function setup() {\n var rows = table.getRows();\n var minId = Infinity;\n var maxId = -Infinity;\n for (var r = 0; r < rows.length; r++) {\n   var id = rows[r].getNum('id');\n   minId = min(minId, id);\n   maxId = min(maxId, id);\n }\n print('minimum id = ' + minId + ', maximum id = ' + maxId);\n }\n </code></div>"
             ],
             "alt": "no image displayed",
             "class": "p5.TableRow",
@@ -12383,7 +12383,7 @@ module.exports={
                 "type": "String"
             },
             "example": [
-                "\n <div class=\"norender\"><code>\n // Given the CSV file \"mammals.csv\" in the project's \"assets\" folder:\n //\n // id,species,name\n // 0,Capra hircus,Goat\n // 1,Panthera pardus,Leopard\n // 2,Equus zebra,Zebra\n\n var table;\n\n function preload() {\n //my table is comma separated value \"csv\"\n //and has a header specifying the columns labels\n table = loadTable('assets/mammals.csv', 'csv', 'header');\n }\n\n function setup() {\n var rows = table.getRows();\n var longest = '';\n for (var r = 0; r < rows.length; r++) {\n   var species = rows[r].getString('species');\n   if (longest.length < species.length) {\n     longest = species;\n   }\n }\n\n print('longest: ' + longest);\n }\n </code></div>"
+                "\n <div class=\"norender\"><code>\n // Given the CSV file \"mammals.csv\" in the project's \"{{ site.baseurl }}/assets\" folder:\n //\n // id,species,name\n // 0,Capra hircus,Goat\n // 1,Panthera pardus,Leopard\n // 2,Equus zebra,Zebra\n\n var table;\n\n function preload() {\n //my table is comma separated value \"csv\"\n //and has a header specifying the columns labels\n table = loadTable('assets/mammals.csv', 'csv', 'header');\n }\n\n function setup() {\n var rows = table.getRows();\n var longest = '';\n for (var r = 0; r < rows.length; r++) {\n   var species = rows[r].getString('species');\n   if (longest.length < species.length) {\n     longest = species;\n   }\n }\n\n print('longest: ' + longest);\n }\n </code></div>"
             ],
             "alt": "no image displayed",
             "class": "p5.TableRow",
@@ -55180,7 +55180,7 @@ var p5 = _dereq_('./main');
  * transformation matrix of the
  * form:
  *
- * > <img style="max-width: 150px" src="assets/transformation-matrix.png"
+ * > <img style="max-width: 150px" src="{{ site.baseurl }}/assets/transformation-matrix.png"
  * alt="The transformation matrix used when applyMatrix is called"/>
  *
  * @method applyMatrix
@@ -59614,7 +59614,7 @@ function _sAssign(sVal, iVal) {
  * "source image" dimensions can be useful when you want to display a
  * subsection of the source image instead of the whole thing. Here's a diagram
  * to explain further:
- * <img src="assets/drawImage.png"></img>
+ * <img src="{{ site.baseurl }}/assets/drawImage.png"></img>
  *
  * @method image
  * @param  {p5.Image|p5.Element} img    the image to display
@@ -61834,7 +61834,7 @@ p5.prototype.loadStrings = function() {
  * <div class='norender'>
  * <code>
  * // Given the following CSV file called "mammals.csv"
- * // located in the project's "assets" folder:
+ * // located in the project's "{{ site.baseurl }}/assets" folder:
  * //
  * // id,species,name
  * // 0,Capra hircus,Goat
@@ -63461,7 +63461,7 @@ p5.Table = function(rows) {
  * <div class="norender">
  * <code>
  * // Given the CSV file "mammals.csv"
- * // in the project's "assets" folder:
+ * // in the project's "{{ site.baseurl }}/assets" folder:
  * //
  * // id,species,name
  * // 0,Capra hircus,Goat
@@ -63518,7 +63518,7 @@ p5.Table.prototype.addRow = function(row) {
  * <div class="norender">
  * <code>
  * // Given the CSV file "mammals.csv"
- * // in the project's "assets" folder:
+ * // in the project's "{{ site.baseurl }}/assets" folder:
  * //
  * // id,species,name
  * // 0,Capra hircus,Goat
@@ -63568,7 +63568,7 @@ p5.Table.prototype.removeRow = function(id) {
  * <div class="norender">
  * <code>
  * // Given the CSV file "mammals.csv"
- * // in the project's "assets" folder:
+ * // in the project's "{{ site.baseurl }}/assets" folder:
  * //
  * // id,species,name
  * // 0,Capra hircus,Goat
@@ -63612,7 +63612,7 @@ p5.Table.prototype.getRow = function(r) {
  * <div class="norender">
  * <code>
  * // Given the CSV file "mammals.csv"
- * // in the project's "assets" folder:
+ * // in the project's "{{ site.baseurl }}/assets" folder:
  * //
  * // id,species,name
  * // 0,Capra hircus,Goat
@@ -63668,7 +63668,7 @@ p5.Table.prototype.getRows = function() {
  * <div class="norender">
  * <code>
  * // Given the CSV file "mammals.csv"
- * // in the project's "assets" folder:
+ * // in the project's "{{ site.baseurl }}/assets" folder:
  * //
  * // id,species,name
  * // 0,Capra hircus,Goat
@@ -63733,7 +63733,7 @@ p5.Table.prototype.findRow = function(value, column) {
  * <div class="norender">
  * <code>
  * // Given the CSV file "mammals.csv"
- * // in the project's "assets" folder:
+ * // in the project's "{{ site.baseurl }}/assets" folder:
  * //
  * // id,species,name
  * // 0,Capra hircus,Goat
@@ -63802,7 +63802,7 @@ p5.Table.prototype.findRows = function(value, column) {
  * <div class="norender">
  * <code>
  * // Given the CSV file "mammals.csv"
- * // in the project's "assets" folder:
+ * // in the project's "{{ site.baseurl }}/assets" folder:
  * //
  * // id,species,name
  * // 0,Capra hircus,Goat
@@ -63923,7 +63923,7 @@ p5.Table.prototype.matchRows = function(regexp, column) {
  * <div class="norender">
  * <code>
  * // Given the CSV file "mammals.csv"
- * // in the project's "assets" folder:
+ * // in the project's "{{ site.baseurl }}/assets" folder:
  * //
  * // id,species,name
  * // 0,Capra hircus,Goat
@@ -63974,7 +63974,7 @@ p5.Table.prototype.getColumn = function(value) {
  * <div class="norender">
  * <code>
  * // Given the CSV file "mammals.csv"
- * // in the project's "assets" folder:
+ * // in the project's "{{ site.baseurl }}/assets" folder:
  * //
  * // id,species,name
  * // 0,Capra hircus,Goat
@@ -64019,7 +64019,7 @@ p5.Table.prototype.clearRows = function() {
  * <div class="norender">
  * <code>
  * // Given the CSV file "mammals.csv"
- * // in the project's "assets" folder:
+ * // in the project's "{{ site.baseurl }}/assets" folder:
  * //
  * // id,species,name
  * // 0,Capra hircus,Goat
@@ -64281,7 +64281,7 @@ p5.Table.prototype.trim = function(column) {
  * <div class="norender">
  * <code>
  * // Given the CSV file "mammals.csv"
- * // in the project's "assets" folder:
+ * // in the project's "{{ site.baseurl }}/assets" folder:
  * //
  * // id,species,name
  * // 0,Capra hircus,Goat
@@ -64347,7 +64347,7 @@ p5.Table.prototype.removeColumn = function(c) {
  * <div class="norender">
  * <code>
  * // Given the CSV file "mammals.csv"
- * // in the project's "assets" folder:
+ * // in the project's "{{ site.baseurl }}/assets" folder:
  * //
  * // id,species,name
  * // 0,Capra hircus,Goat
@@ -64397,7 +64397,7 @@ p5.Table.prototype.set = function(row, column, value) {
  * <div class="norender">
  * <code>
  * // Given the CSV file "mammals.csv"
- * // in the project's "assets" folder:
+ * // in the project's "{{ site.baseurl }}/assets" folder:
  * //
  * // id,species,name
  * // 0,Capra hircus,Goat
@@ -64440,7 +64440,7 @@ p5.Table.prototype.setNum = function(row, column, value) {
  * @param {String} value  value to assign
  * @example
  * <div class="norender"><code>
- * // Given the CSV file "mammals.csv" in the project's "assets" folder:
+ * // Given the CSV file "mammals.csv" in the project's "{{ site.baseurl }}/assets" folder:
  * //
  * // id,species,name
  * // 0,Capra hircus,Goat
@@ -64488,7 +64488,7 @@ p5.Table.prototype.setString = function(row, column, value) {
  * <div class="norender">
  * <code>
  * // Given the CSV file "mammals.csv"
- * // in the project's "assets" folder:
+ * // in the project's "{{ site.baseurl }}/assets" folder:
  * //
  * // id,species,name
  * // 0,Capra hircus,Goat
@@ -64535,7 +64535,7 @@ p5.Table.prototype.get = function(row, column) {
  * <div class="norender">
  * <code>
  * // Given the CSV file "mammals.csv"
- * // in the project's "assets" folder:
+ * // in the project's "{{ site.baseurl }}/assets" folder:
  * //
  * // id,species,name
  * // 0,Capra hircus,Goat
@@ -64580,7 +64580,7 @@ p5.Table.prototype.getNum = function(row, column) {
  * <div class="norender">
  * <code>
  * // Given the CSV file "mammals.csv"
- * // in the project's "assets" folder:
+ * // in the project's "{{ site.baseurl }}/assets" folder:
  * //
  * // id,species,name
  * // 0,Capra hircus,Goat
@@ -64632,7 +64632,7 @@ p5.Table.prototype.getString = function(row, column) {
  * <div class="norender">
  * <code>
  * // Given the CSV file "mammals.csv"
- * // in the project's "assets" folder:
+ * // in the project's "{{ site.baseurl }}/assets" folder:
  * //
  * // id,species,name
  * // 0,Capra hircus,Goat
@@ -64694,7 +64694,7 @@ p5.Table.prototype.getObject = function(headerColumn) {
  * <div class="norender">
  * <code>
  * // Given the CSV file "mammals.csv"
- * // in the project's "assets" folder
+ * // in the project's "{{ site.baseurl }}/assets" folder
  * //
  * // id,species,name
  * // 0,Capra hircus,Goat
@@ -64785,7 +64785,7 @@ p5.TableRow = function(str, separator) {
  *
  * @example
  * <div class="norender"><code>
- * // Given the CSV file "mammals.csv" in the project's "assets" folder:
+ * // Given the CSV file "mammals.csv" in the project's "{{ site.baseurl }}/assets" folder:
  * //
  * // id,species,name
  * // 0,Capra hircus,Goat
@@ -64849,7 +64849,7 @@ p5.TableRow.prototype.set = function(column, value) {
  *                                as a Float
  * @example
  * <div class="norender"><code>
- * // Given the CSV file "mammals.csv" in the project's "assets" folder:
+ * // Given the CSV file "mammals.csv" in the project's "{{ site.baseurl }}/assets" folder:
  * //
  * // id,species,name
  * // 0,Capra hircus,Goat
@@ -64893,7 +64893,7 @@ p5.TableRow.prototype.setNum = function(column, value) {
  *                                as a String
  * @example
  * <div class="norender"><code>
- * // Given the CSV file "mammals.csv" in the project's "assets" folder:
+ * // Given the CSV file "mammals.csv" in the project's "{{ site.baseurl }}/assets" folder:
  * //
  * // id,species,name
  * // 0,Capra hircus,Goat
@@ -64938,7 +64938,7 @@ p5.TableRow.prototype.setString = function(column, value) {
  *
  * @example
  * <div class="norender"><code>
- * // Given the CSV file "mammals.csv" in the project's "assets" folder:
+ * // Given the CSV file "mammals.csv" in the project's "{{ site.baseurl }}/assets" folder:
  * //
  * // id,species,name
  * // 0,Capra hircus,Goat
@@ -64986,7 +64986,7 @@ p5.TableRow.prototype.get = function(column) {
  *  @return {Number}  Float Floating point number
  * @example
  * <div class="norender"><code>
- * // Given the CSV file "mammals.csv" in the project's "assets" folder:
+ * // Given the CSV file "mammals.csv" in the project's "{{ site.baseurl }}/assets" folder:
  * //
  * // id,species,name
  * // 0,Capra hircus,Goat
@@ -65042,7 +65042,7 @@ p5.TableRow.prototype.getNum = function(column) {
  *  @return {String}  String
  * @example
  * <div class="norender"><code>
- * // Given the CSV file "mammals.csv" in the project's "assets" folder:
+ * // Given the CSV file "mammals.csv" in the project's "{{ site.baseurl }}/assets" folder:
  * //
  * // id,species,name
  * // 0,Capra hircus,Goat

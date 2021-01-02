@@ -20,7 +20,7 @@ It’s very common to see people of Chinese, Taiwanese or Japanese origin writin
 In fact, this is the way native English speakers are taught at school; using cursive or ‘joined up’ handwriting whereas characters in Asian languages such as Japanese tend to have a lot of short strokes, with the pen regularly taken off the paper when forming characters.
 
 {% assign galleryid = "chimney-swifts" %}
-{% assign gallery = '<img src="assets/images/blogposts/penmanship-dialects/chimney-swifts/chimney-swifts_1.jpg" alt="" class="contentimage" id="galleryimage"> 🟡 <img src="assets/images/blogposts/penmanship-dialects/chimney-swifts/chimney-swifts_2.jpg" alt="" class="contentimage" id="galleryimage"> 🟡 <img src="assets/images/blogposts/penmanship-dialects/chimney-swifts/chimney-swifts_3.jpg" alt="" class="contentimage" id="galleryimage">' | split: " 🟡 " %}
+{% assign gallery = '<img src="{{ site.baseurl }}/assets/images/blogposts/penmanship-dialects/chimney-swifts/chimney-swifts_1.jpg" alt="" class="contentimage" id="galleryimage"> 🟡 <img src="{{ site.baseurl }}/assets/images/blogposts/penmanship-dialects/chimney-swifts/chimney-swifts_2.jpg" alt="" class="contentimage" id="galleryimage"> 🟡 <img src="{{ site.baseurl }}/assets/images/blogposts/penmanship-dialects/chimney-swifts/chimney-swifts_3.jpg" alt="" class="contentimage" id="galleryimage">' | split: " 🟡 " %}
 {% assign captions = '- 🟡 - 🟡 -' | split: " 🟡 " %}
 {% include post-gallery.html %}
 

@@ -44,7 +44,7 @@ Fluorescence and photoluminescence are further applications of useful doped semi
 The electron may take a return path via the donor and acceptor energy levels. These energy differences are smaller than the natural band gap, and correspond to wavelengths in the visible light spectrum. Visible light may be emitted as fluorescence or electroluminescence.
 
 {% assign galleryid = "naturally-occurring-phosphorescence" %}
-{% assign gallery = '<img src="assets/images/blogposts/flourescence-and-phosphorescence/naturally-occurring-phosphorescence/naturally-occurring-phosphorescence_1.jpg" alt="" class="contentimage" id="galleryimage"> 🟡 <img src="assets/images/blogposts/flourescence-and-phosphorescence/naturally-occurring-phosphorescence/naturally-occurring-phosphorescence_2.jpg" alt="" class="contentimage" id="galleryimage">' | split: " 🟡 " %}
+{% assign gallery = '<img src="{{ site.baseurl }}/assets/images/blogposts/flourescence-and-phosphorescence/naturally-occurring-phosphorescence/naturally-occurring-phosphorescence_1.jpg" alt="" class="contentimage" id="galleryimage"> 🟡 <img src="{{ site.baseurl }}/assets/images/blogposts/flourescence-and-phosphorescence/naturally-occurring-phosphorescence/naturally-occurring-phosphorescence_2.jpg" alt="" class="contentimage" id="galleryimage">' | split: " 🟡 " %}
 {% assign captions = '- 🟡 So much brightness!' | split: " 🟡 " %}
 {% include post-gallery.html %}
 
