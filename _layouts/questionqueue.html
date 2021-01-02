@@ -62,13 +62,13 @@
       <!-- Binoculars -->
       <!-- FIGURE OUT IF I WANT TO HAVE AN alt: FIELD IN THE CONTENT FRONT-MATTER FOR alt="" IN THE BELOW <img> TAG INSTEAD OF PULLING IN THE TITLE -->
       <div data-clickable="yes" data-id="{{ qfilename }}" class="qqglassescontainer {% if q.binocsize == 'large' %}largeqqglasses{% endif %} {% if q.binocsize == 'medium' %}mediumqqglasses{% endif %} {% if q.binocsize == 'small' %}smallqqglasses{% endif %}" title="{{ q.question }}" alt="{{ q.question }}">
-        <div data-innards-clickable="yes" class="lens l-lens" style="background-image: url(assets/images/questionqueueimages/{{ qfilename }}-l{% if q.leftextension %}{{ q.leftextension }}{% else %}.jpg{% endif %})">
+        <div data-innards-clickable="yes" class="lens l-lens" style="background-image: url({{ site.baseurl }}/assets/images/questionqueueimages/{{ qfilename }}-l{% if q.leftextension %}{{ q.leftextension }}{% else %}.jpg{% endif %})">
         </div>
         <div data-innards-clickable="yes" class="knob">
         </div>
         <div data-innards-clickable="yes" class="{% if q.binocsize == 'large' %}trapezoid-large{% endif %} {% if q.binocsize == 'medium' %}trapezoid-medium{% endif %} {% if q.binocsize == 'small' %}trapezoid-small{% endif %}">
         </div>
-        <div data-innards-clickable="yes" class="lens r-lens" style="background-image: url(assets/images/questionqueueimages/{{ qfilename }}-r{% if q.rightextension %}{{ q.rightextension }}{% else %}.jpg{% endif %})">
+        <div data-innards-clickable="yes" class="lens r-lens" style="background-image: url({{ site.baseurl }}/assets/images/questionqueueimages/{{ qfilename }}-r{% if q.rightextension %}{{ q.rightextension }}{% else %}.jpg{% endif %})">
         </div>
       </div>
 

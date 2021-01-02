@@ -10,9 +10,9 @@
     <ul id="navlist">
       {% for item in site.mainpages %}
         {% unless item.title == 'Page not found' or item.title=='Search' %}
-        <a href="{{ item.url }}" {% if page.url == item.url %}class="active"{% endif %} class="menuwordlink">
+        <a href="{{ site.baseurl }}{{ item.url }}" {% if page.url == item.url %}class="active"{% endif %} class="menuwordlink">
           <li id="menuword" class="navnothome m-display yellowhover">
-            <span {% if page.url == item.url %}class="active2"{% endif %} href="{{ item.url }}">
+            <span {% if page.url == item.url %}class="active2"{% endif %} href="{{ site.baseurl }}{{ item.url }}">
               {{ item.title }}</span></li></a>
         {% endunless %}
       {% endfor %}

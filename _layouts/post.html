@@ -54,10 +54,10 @@ that will be recognized in JS menu.js script, that can have an event listener ap
       </p>
 
       <!-- Postglasses icon + title of post -->
-      <a href="{{ page.url }}" id="postlink">
+      <a href="{{ site.baseurl }}{{ page.url }}" id="postlink">
         <!-- Post glasses icon -->
         <div class="postglassescontainer">
-          <div class="stem shortstem leftstem"></div><div style="background-image: url({{ site.url }}/assets/images/blogposts/{{ page.slug }}/-l-{{ page.slug }}{% if page.leftextension %}{{ page.leftextension }}{% else %}.jpg{% endif %})" class="circle leftcircle"></div><div class="stem centerstem"></div><div style="background-image: url({{ site.url }}/assets/images/blogposts/{{ page.slug }}/-r-{{ page.slug }}{% if page.rightextension %}{{ page.rightextension }}{% else %}.jpg{% endif %})" class="circle rightcircle"></div><div class="stem shortstem rightstem"></div>
+          <div class="stem shortstem leftstem"></div><div style="background-image: url({{ site.baseurl }}/assets/images/blogposts/{{ page.slug }}/-l-{{ page.slug }}{% if page.leftextension %}{{ page.leftextension }}{% else %}.jpg{% endif %})" class="circle leftcircle"></div><div class="stem centerstem"></div><div style="background-image: url({{ site.baseurl }}/assets/images/blogposts/{{ page.slug }}/-r-{{ page.slug }}{% if page.rightextension %}{{ page.rightextension }}{% else %}.jpg{% endif %})" class="circle rightcircle"></div><div class="stem shortstem rightstem"></div>
         </div>
         <!-- Name of post -->
         <h2 class="posttitle">
@@ -95,7 +95,7 @@ that will be recognized in JS menu.js script, that can have an event listener ap
           <!-- Split the list in the tag field into individual tags -->
           {% for posttag in page.tags %}
             <!-- Make them link to the tags page -->
-            <a href="{{ site.url }}/tags/{{ posttag }}" id="posttag" class="xs-textface tag yellowhover">
+            <a href="{{ site.baseurl }}/tags/{{ posttag }}" id="posttag" class="xs-textface tag yellowhover">
               <!-- Adding the 2 x "no break spaces" (&nbsp) to act as L-padding (like for "Read more" button), because using actual padding-left measurements can separate the padding from the word if the word starts on a new line -->
               &nbsp&nbsp#{{ posttag }}
             </a>
@@ -119,7 +119,7 @@ that will be recognized in JS menu.js script, that can have an event listener ap
             FB.ui({
               method: 'share',
               display: 'popup',
-              href: '{{ site.url }}',
+              href: '{{ site.baseurl }}',
             }, function(response){});
           }
           </script>
@@ -210,7 +210,7 @@ that will be recognized in JS menu.js script, that can have an event listener ap
          */
 
         var disqus_config = function () {
-            this.page.url = '{{ page.url }}';  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.url = '{{ site.baseurl }}{{ page.url }}';  // Replace PAGE_URL with your page's canonical URL variable
             this.page.identifier = '{{ page.id }}'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
         };
 
