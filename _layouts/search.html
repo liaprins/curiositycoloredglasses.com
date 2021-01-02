@@ -42,8 +42,8 @@ layout: search
         "author"   : "{{ post.author | xml_escape }}",
         "date"     : "{{ post.date | date: '%d %B %Y' | escape }}",
         "url"      : "{{ site.baseurl }}{{ post.url }}",
-        "bgimageleft" : "{{ site.url }}/assets/images/blogposts/{{ post.slug }}/-l-{{ post.slug }}.jpg",
-        "bgimageright" : "{{ site.url }}/assets/images/blogposts/{{ post.slug }}/-r-{{ post.slug }}.jpg"
+        "bgimageleft" : "{{ site.baseurl }}/assets/images/blogposts/{{ post.slug }}/-l-{{ post.slug }}.jpg",
+        "bgimageright" : "{{ site.baseurl }}/assets/images/blogposts/{{ post.slug }}/-r-{{ post.slug }}.jpg"
       }
       {% unless forloop.last %},{% endunless %}
     {% endfor %}

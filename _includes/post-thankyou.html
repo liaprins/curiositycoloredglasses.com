@@ -1,7 +1,7 @@
 <div id="notesdivid" class="notesdivclass" data-notes-id="{{ note.slug }}">
 
   <!-- This is the note number that appears alongside the note itself (on its own sub-page) -->
-  <a hre="{{ page.url }}#-{{ note.slug }}" title="View reference in context" id="{{ note.slug }}" class="notessectionnumber m-textface bold yellowhover">
+  <a hre="{{ site.baseurl }}{{ page.url }}#-{{ note.slug }}" title="View reference in context" id="{{ note.slug }}" class="notessectionnumber m-textface bold yellowhover">
     {{ note.slug }}
   </a>
 

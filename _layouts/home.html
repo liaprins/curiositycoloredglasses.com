@@ -43,10 +43,10 @@
           </p>
 
           <!-- glasses + post title link to post -->
-          <a href="{{ post.url }}" id="postlink">
+          <a href="{{ site.baseurl }}{{ post.url }}" id="postlink">
             <!-- Post glasses icon -->
             <div class="postglassescontainer">
-              <div class="stem shortstem leftstem"></div><div style="background-image: url({{ site.url }}/assets/images/blogposts/{{ post.slug }}/-l-{{ post.slug }}{% if post.leftextension %}{{ post.leftextension }}{% else %}.jpg{% endif %})" class="circle leftcircle"></div><div class="stem centerstem"></div><div style="background-image: url({{ site.url }}/assets/images/blogposts/{{ post.slug }}/-r-{{ post.slug }}{% if post.rightextension %}{{ post.rightextension }}{% else %}.jpg{% endif %})" class="circle rightcircle"></div><div class="stem shortstem rightstem"></div>
+              <div class="stem shortstem leftstem"></div><div style="background-image: url({{ site.baseurl }}/assets/images/blogposts/{{ post.slug }}/-l-{{ post.slug }}{% if post.leftextension %}{{ post.leftextension }}{% else %}.jpg{% endif %})" class="circle leftcircle"></div><div class="stem centerstem"></div><div style="background-image: url({{ site.baseurl }}/assets/images/blogposts/{{ post.slug }}/-r-{{ post.slug }}{% if post.rightextension %}{{ post.rightextension }}{% else %}.jpg{% endif %})" class="circle rightcircle"></div><div class="stem shortstem rightstem"></div>
             </div>
             <!-- Name of post -->
             <h2 class="posttitle">
@@ -77,7 +77,7 @@
             {{ post.excerpt | remove: '<p>' | remove: '</p>' }}
             <!-- "Read more" -->
             <!-- I put "&nbsp" between "Read" and "more" so they would never split onto separate lines -->
-            <a href="{{ post.url }}" id="readmore" class="s-display yellowhover">
+            <a href="{{ site.baseurl }}{{ post.url }}" id="readmore" class="s-display yellowhover">
                 &nbspRead&nbspmore
             </a>
           </p>
@@ -85,7 +85,7 @@
           <!-- Tags: for loop pulling in the tags for each article -->
           <div id="hometaggroup" class="s-textface">
             {% for posttag in post.tags %}
-              <a href="{{ site.url }}/tags/{{ posttag }}" id="hometag" class="xs-textface tag yellowhover">
+              <a href="{{ site.baseurl }}/tags/{{ posttag }}" id="hometag" class="xs-textface tag yellowhover">
                 <!-- Adding the 2 x "no break spaces" (&nbsp) to act as L-padding (like for "Read more" button), because using actual padding-left measurements can separate the padding from the word if the word starts on a new line -->
                 &nbsp&nbsp#{{ posttag }}
               </a>

@@ -34,7 +34,7 @@ that will be recognized in JS menu.js script, that can have an event listener ap
         <p id="archivemenu">
           {% for year in postsByYear %}
             <!-- This holds together all the years on one line -->
-            <span><a href="{{ site.url }}/archive#{{ year.name }}" id="archivemenuyear" class="sectionsummary yellowhover">{{ year.name }}</a></span>
+            <span><a href="{{ site.baseurl }}{{ site.url }}/archive#{{ year.name }}" id="archivemenuyear" class="sectionsummary yellowhover">{{ year.name }}</a></span>
           {% endfor %}
         </p>
       </div>
