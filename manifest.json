@@ -1,0 +1,37 @@
+---
+layout: none
+---
+
+{
+  "lang": "{{ site.language }}",
+  "dir": "{{ site.lang_direction }}",
+  "name": {{ site.name | smartify | jsonify }},
+  "short_name": {{ site.short_name | smartify | jsonify }},
+  "icons": [
+    {
+      "src": "\/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image\/png"
+    },
+    {
+      "src": "\/android-chrome-256x256.png",
+      "sizes": "256x256",
+      "type": "image\/png"
+    },
+    {
+      "src": "\/chrome-128x128.png",
+      "sizes": "128x128",
+      "type": "image\/png"
+    },
+    {
+      "src": "\/chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image\/png"
+    }
+  ],
+  "theme_color": "{{ site.color }}",
+  "background_color": "{{ site.color }}",
+  "start_url": "{{ site.url }}",
+  "display": "standalone",
+  "orientation": "natural"
+}
