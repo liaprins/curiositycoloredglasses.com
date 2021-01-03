@@ -201,29 +201,23 @@ that will be recognized in JS menu.js script, that can have an event listener ap
 
 <!-- COMMENTS vvv-->
   <article class="mockmain" id="postdesktopcontent2">    <!-- Opening second instance of <article> to make room for RR results that need to be wider than this width, to accommodate their all having margins on L + R -->
-    <!-- This is from Disqus's installation webpage -->
-    <div id="disqus_thread"></div>
-    <script>
-        /**
-         *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-         *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-         */
 
-        var disqus_config = function () {
-            this.page.url = '{{ site.baseurl }}{{ page.url }}';  // Replace PAGE_URL with your page's canonical URL variable
-            this.page.identifier = '{{ page.id }}'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-        };
 
-        (function() {  // DON'T EDIT BELOW THIS LINE
-            var d = document, s = d.createElement('script');
 
-            s.src = '//curiositycoloredglasses.disqus.com/embed.js';
 
-            s.setAttribute('data-timestamp', +new Date());
-            (d.head || d.body).appendChild(s);
-        })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+  {% if page.comments %}
+
+    <!-- TESTING TRAVIS DOWNS' VERSION OF STATICMAN -->
+    {% if page.comments == true %}
+      {% include comments-travis.html %}
+    {% endif %}
+
+  {% endif %}
+
+
+
+
+
   </article>
   <!-- COMMENTS ^^^-->
 
