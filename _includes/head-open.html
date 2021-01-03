@@ -14,6 +14,24 @@
     gtag('config', 'UA-124245560-1');
   </script>
 
+  <!-- For PWA, also need serviceworker.js to be in the root of the site -->
+<script>
+if ("serviceWorker" in navigator) {
+  if (navigator.serviceWorker.controller) {
+    console.log("An active service worker found, no need to register");
+  } else {
+    // Register the service worker
+    navigator.serviceWorker
+      .register("{{ site.baseurl }}/serviceworker.js", {
+        scope: "./"
+      })
+      .then(function (reg) {
+        console.log("Service worker has been registered for scope: " + reg.scope);
+      });
+  }
+}
+</script>
+
   <meta charset="utf-8" />
 
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -22,7 +40,9 @@
   <link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl }}/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="{{ site.baseurl }}/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="{{ site.baseurl }}/favicon-16x16.png">
-  <link rel="manifest" href="{{ site.baseurl }}/site.webmanifest">
+  <link rel="icon" type="image/png" sizes="512x512" href="{{ site.baseurl }}/chrome-512x512.png">
+  <link rel="icon" type="image/png" sizes="128x128" href="{{ site.baseurl }}/chrome-128x128.png">
+  <link rel="manifest" href="{{ site.baseurl }}/manifest.json">
   <link rel="mask-icon" href="{{ site.baseurl }}/safari-pinned-tab.svg" color="#e2e43a">
   <meta name="msapplication-TileColor" content="#e2e43a">
   <meta name="theme-color" content="#e2e43a">

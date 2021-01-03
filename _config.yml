@@ -32,3 +32,9 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-paginate
+name: "Curiosity-Colored Glasses"
+short_name: "CCG"
+url: "https://curiositycoloredglasses.com"
+language: "en"
+lang_direction: "ltr"
+color: "#e2e43a"
