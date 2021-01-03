@@ -13,7 +13,7 @@
     {%- assign url             = comment.url %}
     {%- assign date            = comment.date %}
     {%- assign message         = comment.message %}
-    {%- assign uid             = comment._id %}
+    {%- assign uid             = comment.id %}
     {% include comment-travis.html is_reply=false uid=uid replying_to=0 email=email name=name url=url date=date message=message uid=uid %}
     {% endfor %}
   </div>
