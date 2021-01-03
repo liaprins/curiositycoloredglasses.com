@@ -18,6 +18,7 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+      comments: true
   - scope:
       path: "/tags"
     values:
@@ -38,3 +39,21 @@ url: "https://curiositycoloredglasses.com"
 language: "en"
 lang_direction: "ltr"
 color: "#e2e43a"
+
+# The URL for the staticman API bridge endpoint
+# You will want to modify some of the values:
+#  ${github-username}: the username of the account with which you publish your blog
+#  ${blog-repo}: the name of your blog repository in github
+#  master: this the branch out of which your blog is published, often master or gh-pages
+#  ${bridge_app_name}: the name you chose in Heroku for your bridge API
+#  comments: the so-called property, this defines the key in staticman.yml where the configuration is found
+#
+# for me, this line reads:
+# https://staticman-travisdownsio.herokuapp.com/v2/entry/travisdowns/travisdowns.github.io/master/comments
+staticman_url: https://ccg-comments.herokuapp.com/v2/entry/liaprins/curiositycoloredglasses.com/master/comments
+# reCaptcha configuration info: the exact same site key and *encrypted* secret that you used in staticman.yml
+# I personally don't think the secret needs to be included in the generated site, but the staticman API bridge uses
+# it to ensure the site configuration and bridge configuration match (but why not just compare the site key?)
+reCaptcha:
+  siteKey: 6LfHYB8aAAAAAOFTLBJCQQv2fTrdirglT1reyJyI
+  secret: oxyknd+l9ITsmd5YV1M3iK758sLo2hC2PNiBJ7hQ6toOD5WOsDeGbRSjktmt67Imljad5OP1mxBljpsp4Zo4rEWOqIosMOpkG5ZMXQxE9NOkjG8lDVJgUOM6BIZPj4ghzMZQfqw9ZdpClMlxq/kigoTLml9QgrAjLFdAsAQeDRyQGt33E6a7Ip2dHEGzUt84FL+lxuWwXTsbzvghTejWv0uFiK26ub4UuY6vKfFzjVst4L93x4+Kvrms0MuA66NyXDiE6NIRu0wkwT6S9Jtbl4a+erHKGkpDzEYy+2+rYFnJFjJQhE0SeRAfU9fZBgBduDuXCotm2DvMbblkB+zO6nP9TPYNmp7/oQB5YvuW/2D3kwbEWIcQQBcyTvA5/KImkEjhn/SWXFW8M+pmQJpLC19wx8K6JKwiLll2VIGmqTRcA/jb54caOyXEyzckNkW7oSTySPU+ToKvgml28nM8kY8kknk59qyhNr5M3oqodTcBeuOn1nBHDpOjx+EoHM2umcztD5dKjgwt3gSg+g4UM/UGykhZTODar6FiGY7Zbh1ydL74371hgfwaP/EwPpkEkjojwkqdiCSWB/gdxuURAfwNGTy2RnESrrcg2U0SXsP+Zyz2xNtOFTS1gTg53HgWou7kF9JlE1dV9oDu+wxKEBG11EQuypaxPHmlNFgH7go=
