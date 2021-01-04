@@ -1,10 +1,10 @@
 {%- capture article_class %}js-comment comment onecomment{% if include.name == site.author.name %} admin{% endif %}{% if include.is_reply %} child{% endif %}{% endcapture %}
 {% assign comment_id = include.uid | prepend: 'comment-' %}
+
 <article id="{{ comment_id }}" class="{{ article_class }}" uid="{{ include.uid }}">
-  <!-- Avatar -->
   <img src="{{ site.baseurl }}/assets/images/sitewide/avatar.svg" alt="" id="avatar" style="background-color: #e2e43a">
-  <div id="namedatecomment">
-    <a href="#{{ comment_id}}" title="Permalink to this comment"> <!-- might get rid of link, wasn't in my original Kirby version -->
+  <a href="#{{ comment_id}}" title="Permalink to this comment">
+    <div id="namedatecomment">
       <span class="s-display">
         {{- include.name | strip_html -}}&ensp;
       </span>
@@ -14,31 +14,6 @@
       <div id="postedcomment"class="s-textface">
         {{ include.message | strip_html | markdownify }}
       </div>
-    </a>
-  </div>
-
-<!--
-{% if include.is_reply %}
-</article>
-{% else %}
-    <div class="comment__meta">
-      <a rel="nofollow" class="comment__reply-link" onclick="return addComment.moveForm('{{ comment_id }}', 'respond', '{{ page.slug }}', '{{ include.uid }}')">↪&#xFE0E; Reply to {{ include.name }}</a>
     </div>
--->
-
+  </a>
 </article>
-<!--
-  {%- capture this_uid %}{{ include.uid }}{% endcapture %}
-  {%- assign replies = site.data.comments[page.slug] | where_exp: 'item', 'item.replying_to_uid == this_uid' %}
-  {%- assign replies_date = replies | sort: 'date' %}
-  {% for reply in replies_date %}
-    {%- assign email       = reply.email -%}
-    {%- assign name        = reply.name -%}
-    {%- assign url         = reply.url -%}
-    {%- assign date        = reply.date -%}
-    {%- assign message     = reply.message -%}
-    {%- assign uid         = reply._id -%}
-    {% include comment.html is_reply=true uid=uid email=email name=name url=url date=date message=message %}
-  {% endfor %}
-{% endif %}
--->
