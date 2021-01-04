@@ -21,7 +21,7 @@
         showModal('Comment submitted', 'Thanks! Your comment is <a href="https://github.com/travisdowns/travisdowns.github.io/pulls">pending</a>. It will appear when approved.');
 
         $("#comment-form-submit")
-          .html("Submit");
+          .html("Post a comment");
 
         $(form)[0].reset();
         $(form).removeClass('disabled');
@@ -31,7 +31,7 @@
         console.log(err);
         var ecode = (err.responseJSON || {}).errorCode || "unknown";
         showModal('Error', 'An error occured.<br>[' + ecode + ']');
-        $("#comment-form-submit").html("Submit")
+        $("#comment-form-submit").html("Post a comment")
         $(form).removeClass('disabled');
         grecaptcha.reset();
       }
