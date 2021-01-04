@@ -1,42 +1,48 @@
-<form class="js-form form" method="post" action="{{ site.staticman_url }}">
-  <input type="hidden" name="options[origin]" value="{{ page.url | absolute_url }}">
-  <input type="hidden" name="options[parent]" value="{{ page.url | absolute_url }}">
-  <input type="hidden" id="comment-replying-to-uid" name="fields[replying_to_uid]" value="">
-  <input type="hidden" name="options[slug]" value="{{ page.slug }}">
-  <input type="hidden" name="options[reCaptcha][siteKey]" value="{{ site.reCaptcha.siteKey }}">
-  <input type="hidden" name="options[reCaptcha][secret]"  value="{{ site.reCaptcha.secret }}">
+<section class="comments">
+  <details class="commentsdetails" open>
+    <summary class="sectionsummary postpagesectionsummary commentssummary blackbg">
+      <h3>Comments</h3>
+    </summary>
 
-  <div class="textfield">
-    <label for="comment-form-message"><h2>Add Comment<small><a rel="nofollow" id="cancel-comment-reply-link" href="{{ page.url | absolute_url }}#respond" style="display:none;">(cancel reply)</a></small></h2>
-      <textarea class="textfield__input" name="fields[message]" type="text" id="comment-form-message" placeholder="Your comment (markdown accepted)" required rows="6"></textarea>
-    </label>
-  </div>
+    <!-- Comments should insert in here -->
 
-    <div class="textfield narrowfield">
-      <label for="comment-form-name">Name
-        <input class="textfield__input" name="fields[name]" type="text" id="comment-form-name" placeholder="Your name (required)" required/>
-      </label>
-    </div>
+    <!-- The comment-entry area -->
+    <details id="postacommentdetails">
+      <summary id="postacommentsummary" class="xs-display postacommentbutton blackbg">
+        Post a comment
+      </summary>
 
-    <div class="textfield narrowfield">
-      <label for="comment-form-email">E-mail
-        <input class="textfield__input" name="fields[email]" type="email" id="comment-form-email" placeholder="Your email (optional)"/>
-      </label>
-    </div>
 
-    <div class="textfield narrowfield hp">
-      <label for="hp">
-        <input class="textfield__input" name="fields[hp]" id="hp" type="text" placeholder="Leave blank">
-      </label>
-    </div>
 
-    <div id="reCaptcha" class="g-recaptcha" data-sitekey="{{ site.reCaptcha.siteKey }}"></div>
+      <form class="js-form form" method="post" action="{{ site.staticman_url }}" id="commentform">
+        <input type="hidden" name="options[origin]" value="{{ page.url | absolute_url }}">
+        <input type="hidden" name="options[parent]" value="{{ page.url | absolute_url }}">
+        <input type="hidden" id="comment-replying-to-uid" name="fields[replying_to_uid]" value="">
+        <input type="hidden" name="options[slug]" value="{{ page.slug }}">
+        <input type="hidden" name="options[reCaptcha][siteKey]" value="{{ site.reCaptcha.siteKey }}">
+        <input type="hidden" name="options[reCaptcha][secret]"  value="{{ site.reCaptcha.secret }}">
+        <!-- Name input field -->
+        <label for="name"></label>
+        <input class="boxinput s-textface" name="fields[name]" type="text" id="name" placeholder="Name *" required/>
+        <!-- Email input field -->
+        <label for="email"></label>
+        <input class="boxinput s-textface" name="fields[email]" type="email" id="email" placeholder="Email (this won't be posted) *"/>
+        <!-- Honeypot -->
+        <label for="hp" style="display: none" hidden>
+          <input name="fields[hp]" id="hp" type="text" placeholder="Leave blank">
+        </label>
+        <!-- Comment message -->
+        <label for="message">
+          <textarea class="boxinput s-textface" name="fields[message]" type="text" id="message" placeholder="Comment *" required></textarea>
+        </label>
+        <!-- reCAPTCHA -->
+        <div id="reCaptcha" class="g-recaptcha" data-sitekey="{{ site.reCaptcha.siteKey }}"></div>
 
-    <button class="button" id="comment-form-submit">
-      Submit
-    </button>
+        <button class="button" id="comment-form-submit">
+          Post a comment
+        </button>
 
-</form>
+      </form>
 
 <article class="modal mdl-card mdl-shadow--2dp">
   <div>
@@ -56,3 +62,8 @@
 {% comment %}
 	from: https://github.com/eduardoboucas/popcorn/blob/gh-pages/_includes/modal.html
 {% endcomment %}
+
+    </details>
+
+  </details>
+</section>
