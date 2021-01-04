@@ -7,7 +7,7 @@
     var form = this;
 
 
-    $("#comment-form-submit").html(
+    $("#submit").html(
       '<svg class="icon spin"><use xlink:href="#icon-loading"></use></svg> Sending...'
     );
     $(form).addClass('disabled');
@@ -20,7 +20,7 @@
       success: function (data) {
         showModal('Comment submitted', 'Thanks! Your comment is <a href="https://github.com/travisdowns/travisdowns.github.io/pulls">pending</a>. It will appear when approved.');
 
-        $("#comment-form-submit")
+        $("#submit")
           .html("Post a comment");
 
         $(form)[0].reset();
@@ -31,7 +31,7 @@
         console.log(err);
         var ecode = (err.responseJSON || {}).errorCode || "unknown";
         showModal('Error', 'An error occured.<br>[' + ecode + ']');
-        $("#comment-form-submit").html("Post a comment")
+        $("#submit").html("Post a comment")
         $(form).removeClass('disabled');
         grecaptcha.reset();
       }
