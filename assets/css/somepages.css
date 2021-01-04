@@ -477,19 +477,21 @@ abbr {
 #namelabel {    /* :) This applies to just the Name field's "label" which isn't visually shown, but is needed here because the name input id won't apply a top border and this will */
     margin-top: 1.024rem;    }    /* .5 lh */
 
-#name {
+#name,
+#email {
     margin-bottom: 0.9375rem;    }    /* Half the height of the name input and button's height of 1.875rem */
 
 #message {    /* This applies to only to the actual comment message input field */
     line-height: 1.7;
     padding: 0.313rem 0.438rem;
     height: 5.877rem;
+    margin-bottom: 0.5rem;
     resize: none;    }    /* This is to get rid of the ability to resize the field; it should scroll automatically if needed */
 
 #submit {    /* This is the id for the second (inside) "Post a comment" button (I'm afraid to change the id in case it messes up the original Kirby comments functionality) */
     display: block;
     height: 1.875rem;
-    margin-top: 0.3752rem;    }    /* Finessing spacing to optically match space between name and message inputs */
+    margin-top: 0.9375rem;    }    /* Finessing spacing to optically match space between name and message inputs */
 
 #postacommentdetails {    /* Setting up the "x" button to replace the default <details> */
     position: relative;    }

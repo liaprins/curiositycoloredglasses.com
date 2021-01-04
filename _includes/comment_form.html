@@ -10,7 +10,7 @@
         <input class="boxinput s-textface" name="fields[name]" type="text" id="name" placeholder="Name *" required/>
         <!-- Email input field -->
         <label for="email"></label>
-        <input class="boxinput s-textface" name="fields[email]" type="email" id="email" placeholder="Email (this won't be posted) *"/>
+        <input class="boxinput s-textface" name="fields[email]" type="email" id="email" placeholder="Email (this won't be shown or shared) *" required/>
         <!-- Honeypot -->
         <label for="hp" style="display: none" hidden>
           <input name="fields[hp]" id="hp" type="text" placeholder="Leave blank">
@@ -22,7 +22,7 @@
         <!-- reCAPTCHA -->
         <div id="reCaptcha" class="g-recaptcha" data-sitekey="{{ site.reCaptcha.siteKey }}"></div>
 
-        <button class="xs-display boxbutton postacommentbutton blackbg" id="comment-form-submit">
+        <button class="xs-display boxbutton postacommentbutton blackbg" id="submit">
           Post a comment
         </button>
 
