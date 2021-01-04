@@ -204,15 +204,57 @@ that will be recognized in JS menu.js script, that can have an event listener ap
 
 
 
-
-  {% if page.comments %}
-
     <!-- TESTING TRAVIS DOWNS' VERSION OF STATICMAN -->
     {% if page.comments == true %}
-      {% include comments.html %}
-    {% endif %}
 
-  {% endif %}
+    <section class="comments">
+      <details class="commentsdetails" open>
+        <summary class="sectionsummary postpagesectionsummary commentssummary blackbg">
+          <h3>Comments!</h3>
+        </summary>
+
+        <!-- ORIGINALLY WAS INSIDE comments.html INCLUDE vvv -->
+
+        {% if site.data.comments[page.slug] %}
+          <!-- Existing comments -->
+          {% assign comments = site.data.comments[page.slug] | where_exp: "item", "item.replying_to_uid == ''" %}
+          {% assign comments_by_date = comments | sort: 'date' | reverse %}
+          <!-- List main comments in reverse date order, newest first. List replies in date order, oldest first. -->
+          {% for comment in comments_by_date %}
+            {%- assign email           = comment.email %}
+            {%- assign name            = comment.name %}
+            {%- assign url             = comment.url %}
+            {%- assign date            = comment.date %}
+            {%- assign message         = comment.message %}
+            {%- assign uid             = comment._id %}
+            {% include comment.html is_reply=false uid=uid replying_to=0 email=email name=name url=url date=date message=message uid=uid %}
+          {% endfor %}
+        {% endif %}
+
+        <!-- Comments should insert in here -->
+
+        <!-- The comment-entry area -->
+        <details id="postacommentdetails">
+          <summary id="postacommentsummary" class="xs-display postacommentbutton blackbg">
+            Post a comment
+          </summary>
+
+          <!-- New comment form -->
+          <div id="respond"> <!-- LIA: I think this div's id is used in the JS to insert new comments before it, see main.js, line 82 -->
+            {% include comment_form.html %}
+          </div>
+
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+          <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+          <script src="https://www.google.com/recaptcha/api.js"></script>
+
+          <!-- ORIGINALLY WAS INSIDE comments.html INCLUDE ^^^ -->
+        </details>
+
+      </details>
+    </section>
+    {% endif %} <!-- closing "if page.comments == true" -->
+
 
 
 

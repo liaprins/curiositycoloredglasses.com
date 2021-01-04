@@ -24,7 +24,6 @@
       <a rel="nofollow" class="comment__reply-link" onclick="return addComment.moveForm('{{ comment_id }}', 'respond', '{{ page.slug }}', '{{ include.uid }}')">↪&#xFE0E; Reply to {{ include.name }}</a>
     </div>
 </article>
-
   {%- capture this_uid %}{{ include.uid }}{% endcapture %}
   {%- assign replies = site.data.comments[page.slug] | where_exp: 'item', 'item.replying_to_uid == this_uid' %}
   {%- assign replies_date = replies | sort: 'date' %}
@@ -37,6 +36,4 @@
     {%- assign uid         = reply._id -%}
     {% include comment.html is_reply=true uid=uid email=email name=name url=url date=date message=message %}
   {% endfor %}
-
-  <hr style="border-top: 1px solid #ccc; background: transparent; margin-bottom: 10px;">
 {% endif %}
