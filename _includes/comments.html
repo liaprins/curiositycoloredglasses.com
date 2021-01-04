@@ -1,9 +1,5 @@
-<section class="comments" id="comment-section">
-  <hr>
   {% if site.data.comments[page.slug] %}
-  <!-- Existing comments -->
-  <div class="comments__existing">
-    <h2>Comments</h2>
+    <!-- Existing comments -->
     {% assign comments = site.data.comments[page.slug] | where_exp: "item", "item.replying_to_uid == ''" %}
     {% assign comments_by_date = comments | sort: 'date' | reverse %}
     <!-- List main comments in reverse date order, newest first. List replies in date order, oldest first. -->
@@ -16,14 +12,12 @@
     {%- assign uid             = comment._id %}
     {% include comment.html is_reply=false uid=uid replying_to=0 email=email name=name url=url date=date message=message uid=uid %}
     {% endfor %}
-  </div>
   {% endif %}
 
   <!-- New comment form -->
-  <div id="respond" class="comment__new">
+  <div id="respond"> <!-- LIA: I think this div's id is used in the JS to insert new comments before it, see main.js, line 82 -->
     {% include comment_form.html %}
   </div>
-</section>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
