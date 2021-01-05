@@ -394,8 +394,8 @@ figcaption {
     height: 1rem;
     margin-left: 1rem;
     position: relative;
-    top: 0.52rem;
-    background-color: #000000;
+    top: 0.2rem;
+    background-color: #ffffff;
     z-index: 100;    }
 
 .commentloaderhidden {

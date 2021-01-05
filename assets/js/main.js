@@ -24,8 +24,8 @@
 
         $("#submit")
           .html("Post a comment");
-        $("#commentloader").removeClass('commentloadershown');
-        $("#commentloader").addClass('commentloaderhidden');
+        // $("#commentloader").removeClass('commentloadershown');    // TEMPORARILY COMMENTING OUT SO I CAN SEE THE LOADER FOR LONGER
+        // $("#commentloader").addClass('commentloaderhidden');    // TEMPORARILY COMMENTING OUT SO I CAN SEE THE LOADER FOR LONGER
         $("#successmessage").removeClass('successmessagehidden');
         $("#successmessage").addClass('successmessageshown');
 
