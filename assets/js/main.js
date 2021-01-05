@@ -36,8 +36,8 @@
       error: function (err) {
         console.log(err);
         var ecode = (err.responseJSON || {}).errorCode || "unknown";
-        showModal('Error', 'An error occured.<br>[' + ecode + ']');
-        // showModal('Error', 'You must check the box above claiming to be anything but a robot before submitting your comment. Thanks!');
+        // showModal('Error', 'An error occured.<br>[' + ecode + ']');
+        showModal('Error', 'You must check the box above claiming to be anything but a robot before submitting your comment. Thanks!');
         $("#submit").html("Post a comment");
         $("#commentloader").removeClass('commentloadershown');
         $("#commentloader").addClass('commentloaderhidden');
