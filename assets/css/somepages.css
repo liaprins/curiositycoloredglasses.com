@@ -393,7 +393,10 @@ figcaption {
 #commentloader {
     height: 1rem;
     margin-left: 1rem;
-    margin-top: 0.52rem;    }
+    position: relative;
+    top: -0.52rem;
+    background-color: red;
+    z-index: 100;    }
 
 .commentloaderhidden {
     display: none;    }
@@ -401,7 +404,10 @@ figcaption {
 .commentloadershown {
     display: inline;    }
 
-#successmessage {
+.successmessagehidden {
+    margin-top: 0;    }
+
+.successmessageshown {
     margin-top: 1.875rem;    }
 
 .commentssummary {    /* Making it so the margin below comment section header only applies when it's open */

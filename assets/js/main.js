@@ -26,6 +26,8 @@
           .html("Post a comment");
         $("#commentloader").removeClass('commentloadershown');
         $("#commentloader").addClass('commentloaderhidden');
+        $("#successmessage").removeClass('successmessagehidden');
+        $("#successmessage").addClass('successmessageshown');
 
         $(form)[0].reset();
         $(form).removeClass('disabled');
