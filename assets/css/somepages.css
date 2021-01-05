@@ -405,7 +405,7 @@ figcaption {
     display: block;    }
 
 #successmessage {
-    margin: 0 1.875rem;    }
+    margin: 1.875rem 0;    }
 
 .commentssummary {    /* Making it so the margin below comment section header only applies when it's open */
     margin-top: 2.048rem;
@@ -497,7 +497,7 @@ abbr {
     resize: none;    }    /* This is to get rid of the ability to resize the field; it should scroll automatically if needed */
 
 #submit {    /* This is the id for the second (inside) "Post a comment" button (I'm afraid to change the id in case it messes up the original Kirby comments functionality) */
-    display: block;
+    /* display: block; */
     height: 1.875rem;
     margin-top: 0.9375rem;    }    /* Finessing spacing to optically match space between name and message inputs */
 
