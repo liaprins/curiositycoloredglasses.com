@@ -7,17 +7,17 @@
         <input type="hidden" name="options[reCaptcha][secret]"  value="{{ site.reCaptcha.secret }}">
         <!-- Name input field -->
         <label for="name"></label>
-        <input class="boxinput s-textface" name="fields[name]" type="text" id="name" placeholder="Name *" required/>
+        <input class="boxinput s-textface" name="fields[name]" type="text" id="name" placeholder="Name" required/>
         <!-- Email input field -->
         <label for="email"></label>
-        <input class="boxinput s-textface" name="fields[email]" type="email" id="email" placeholder="Email (this won't be shown or shared) *" required/>
+        <input class="boxinput s-textface" name="fields[email]" type="email" id="email" placeholder="Email (this won’t be shown or shared)" required/>
         <!-- Honeypot -->
         <label for="hp" style="display: none" hidden>
           <input name="fields[hp]" id="hp" type="text" placeholder="Leave blank">
         </label>
         <!-- Comment message -->
         <label for="message">
-          <textarea class="boxinput s-textface" name="fields[message]" type="text" id="message" placeholder="Comment *" required></textarea>
+          <textarea class="boxinput s-textface" name="fields[message]" type="text" id="message" placeholder="Comment" required></textarea>
         </label>
         <!-- reCAPTCHA -->
         <div id="reCaptcha" class="g-recaptcha" data-sitekey="{{-site.reCaptcha.siteKey-}}"></div>
