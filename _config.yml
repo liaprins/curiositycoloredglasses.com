@@ -39,7 +39,7 @@ url: "https://curiositycoloredglasses.com"
 language: "en"
 lang_direction: "ltr"
 color: "#e2e43a"
-
+timezone: America/Los_Angeles
 # The URL for the staticman API bridge endpoint
 # You will want to modify some of the values:
 #  ${github-username}: the username of the account with which you publish your blog
