@@ -12,8 +12,6 @@
     );
     $("#commentloader").removeClass('commentloaderhidden');
     $("#commentloader").addClass('commentloadershown');
-    $("#postacommentdetails[open] summary").addClass('commentclosehidden');
-    $("#postacommentdetails[open] summary").removeClass('commentcloseshown');
     $(form).addClass('disabled');
 
     $.ajax({
@@ -28,8 +26,6 @@
           .html("Post a comment");
         $("#commentloader").removeClass('commentloadershown');
         $("#commentloader").addClass('commentloaderhidden');
-        $("#postacommentdetails[open] summary").addClass('commentcloseshown');
-        $("#postacommentdetails[open] summary").removeClass('commentclosehidden');
 
         $(form)[0].reset();
         $(form).removeClass('disabled');
