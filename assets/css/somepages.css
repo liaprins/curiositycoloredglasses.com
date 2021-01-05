@@ -359,25 +359,18 @@ figcaption {
     max-width: 78.571vw;    }    /* 22/28 cols */
 
 #notessection {
-    margin-bottom: 2rem;
-}
+    margin-bottom: 2rem;    }
 
 .notesdivclass {
     line-height: 1.7;
     overflow: auto;
-    margin-bottom: 1rem;
-}
-
-.notessectionnumber {
-
-}
+    margin-bottom: 1rem;    }
 
 .notecontent {
     margin-top: 0.65em;
     display: inline-block !important;
     width: 96%;
-    float: right;
-}
+    float: right;    }
 
 #rrsectionheader {    /* This applies to Relevant Reading's section header, which isn't encapsulated in the .post <article> class (so that the results can have a wider area to accommodate their margins needing to be on both sides for spacing) */
     max-width: 1225px;
@@ -396,6 +389,23 @@ figcaption {
     display: none;    }
 
 /* COMMENTS (POST PAGE) -------------------------------------------------- */
+
+#commentloader {
+    height: 1rem;
+    margin-left: 1rem;    }
+
+.commentloaderhidden,
+.commentclosehidden {
+    display: none;    }
+
+.commentloadershown {
+    display: inline;    }
+
+.commentcloseshown {
+    display: block;    }
+
+#successmessage {
+    margin: 0 1.875rem;    }
 
 .commentssummary {    /* Making it so the margin below comment section header only applies when it's open */
     margin-top: 2.048rem;
@@ -416,10 +426,8 @@ figcaption {
     margin-right: 3.571vw;    }    /* right: 1/28 cols */
 
 #namedatecomment {
-
     line-height: 1;
     margin-top: -0.3em;
-
     /* margin-top: -0.6em; */
     float: left;
     width: 64.286vw;   }    /* 18/28 cols | This should be <main>'s width in cols (22/28) minus avatar (2/28) minus space between this and avatar (2/28) = 18/28 cols */
