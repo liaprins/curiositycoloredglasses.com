@@ -20,7 +20,7 @@
           <textarea class="boxinput s-textface" name="fields[message]" type="text" id="message" placeholder="Comment *" required></textarea>
         </label>
         <!-- reCAPTCHA -->
-        <div id="reCaptcha" class="g-recaptcha" data-sitekey="{{ site.reCaptcha.siteKey }}"></div>
+        <div id="reCaptcha" class="g-recaptcha" data-sitekey="{{-site.reCaptcha.siteKey-}}"></div>
 
         <button class="xs-display boxbutton postacommentbutton blackbg" id="submit">
           Post a comment
