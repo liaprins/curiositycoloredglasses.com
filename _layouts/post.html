@@ -206,18 +206,23 @@ that will be recognized in JS menu.js script, that can have an event listener ap
 
     <!-- TESTING TRAVIS DOWNS' VERSION OF STATICMAN -->
     {% if page.comments == true %}
-
     <section class="comments">
       <details class="commentsdetails" open>
-        <summary class="sectionsummary postpagesectionsummary commentssummary blackbg">
-          <h3>Comments!</h3>
-        </summary>
 
         <!-- ORIGINALLY WAS INSIDE comments.html INCLUDE vvv -->
 
         {% if site.data.comments[page.slug] %}
           <!-- Existing comments -->
           {% assign comments = site.data.comments[page.slug] | where_exp: "item", "item.replying_to_uid == ''" %}
+
+          {% for commentcounter in comments %}
+            {% if forloop.first %}
+            <summary class="sectionsummary postpagesectionsummary commentssummary blackbg">
+              <h3>Comments: {{ forloop.length }}</h3>
+            </summary>
+            {% endif %}
+          {% endfor %}
+
           {% assign comments_by_date = comments | sort: 'date' %}
           <!-- List main comments in date order, oldest first. -->
           {% for comment in comments_by_date %}
@@ -229,6 +234,11 @@ that will be recognized in JS menu.js script, that can have an event listener ap
             {%- assign uid             = comment._id %}
             {% include comment.html is_reply=false uid=uid replying_to=0 email=email name=name url=url date=date message=message uid=uid %}
           {% endfor %}
+
+        {% else %}
+        <summary class="sectionsummary postpagesectionsummary commentssummary blackbg">
+          <h3>Comments</h3>
+        </summary>
         {% endif %}
 
         <!-- Comments should insert in here -->
