@@ -392,9 +392,9 @@ figcaption {
 
 #commentloader {
     height: 1rem;
-    margin-left: 1rem;
+    margin-left: 0.75rem;
     position: relative;
-    top: 0.2rem;
+    top: 0.35rem;
     background-color: #ffffff;
     z-index: 100;    }
 
