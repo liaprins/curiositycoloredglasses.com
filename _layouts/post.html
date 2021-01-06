@@ -226,7 +226,7 @@ that will be recognized in JS menu.js script, that can have an event listener ap
             {%- assign date            = comment.date %}
             {%- assign message         = comment.message %}
             {%- assign uid             = forloop.index %}
-            {% include comment.html is_reply=false replying_to=0 email=email name=name url=url date=date message=message uid=uid %}
+            {% include comment.html email=email name=name url=url date=date message=message uid=uid %}
           {% endfor %}
 
         {% else %}
