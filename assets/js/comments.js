@@ -16,7 +16,7 @@
       data: $(this).serialize(),
       contentType: 'application/x-www-form-urlencoded',
       success: function (data) {
-        showModal('Comment submitted', 'Thanks for your comment! It is pending and will appear when approved.');
+        showModal('Thanks for your comment! It is pending and will appear when approved.');
 
         $("#submit").html("Post a comment");
         $("#commentloader").removeClass('commentloadershown');
@@ -31,7 +31,7 @@
         console.log(err);
         var ecode = (err.responseJSON || {}).errorCode || "unknown";
         // showModal('Error', 'An error occured.<br>[' + ecode + ']');    // LIA: IF SOMETHING WITH COMMENTS NOT WORKING, UNCOMMENT THIS LINE + COMMENT OUT NEXT LINE TO GET ERROR CODE UPON COMMENT SUBMISSION
-        showModal('Error', 'You must check the box above claiming to be anything but a robot before submitting your comment. Thanks!');
+        showModal('You must check the box above claiming to be anything but a robot before submitting your comment. Thanks!');
         $("#submit").html("Post a comment");
         $("#commentloader").removeClass('commentloadershown');
         $("#commentloader").addClass('commentloaderhidden');
