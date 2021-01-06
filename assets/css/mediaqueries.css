@@ -139,15 +139,12 @@
         font-size: 0.443rem;    }
     .xxs-display {
         font-size: 0.369rem;    }
-    #backarrowcontainer {
-        right: calc(5.357vw + 1.7rem);
-        top: calc(5.357vw - 0.65rem);    }
     .extrarightpadding,
     .tagnobackarrow,
     .extracontentpagetitle {
         padding-right: 0;    }
-    .postdatewidthbackarrow {
-        width: 78.571vw;    }
+    /* .postdatewidthbackarrow {
+        width: 78.571vw;    } */
     #navsummary {
         position: absolute;
         border-width: 0.422rem;
@@ -499,24 +496,6 @@
     #pre-rr,
     #pre-search {
         padding-top: calc(97.5px - 1.59rem);    }
-    #backarrowcontainer {
-        position: absolute;
-        left: 0.422rem;
-        top: 2.172rem;    }
-    #backarrowcontainer:hover {
-        max-width: calc(50vw - 390px);    }
-    #backarrow {
-        width: 1.301rem;    }
-    #backarrowhoverwords {
-        position: absolute;
-        left: calc(1.933rem - 0.316rem);
-        padding: 0.220rem 0.316rem 0.048rem 0.316rem;
-        display: none;    }
-    #backarrowcontainer:hover > #backarrowhoverwords {
-        background-color: #e2e43a;
-        display: inline;    }
-    #backarrowcontainer:hover > #backarrow {
-        background-color: #e2e43a;    }
     nav {
         z-index: 100;
         position: absolute;
@@ -838,8 +817,6 @@
     #homeicon {
         position: fixed;
         left: 0.422rem;    }
-    #backarrowcontainer {
-        position: fixed;    }
 }
 
 /* PREVENTING HORIZONTAL SCROLLING (FOR SLIDESHOWS) -------------------------------------------------- */

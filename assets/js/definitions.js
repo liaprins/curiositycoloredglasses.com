@@ -120,7 +120,7 @@ function vocabTest(e) {
     	    			// or store the PHP version in an HTML element's attribute, then collect it in JS as a variable and call it here
 			        	// or else construct its shape with CSS (research performance) vvv
     					// innerContainer
-    					containerInner.innerHTML = '<img src="{{ site.baseurl }}/assets/images/sitewide/x.svg" alt="close" id="vocabclose" class="close-x yellowhover" data-vocab-x>' + definitionsList[i].innerHTML;
+    					containerInner.innerHTML = '<img src="https://curiositycoloredglasses.com/assets/images/sitewide/x.svg" alt="close" id="vocabclose" class="close-x yellowhover" data-vocab-x>' + definitionsList[i].innerHTML;
 
     					// remove unneeded elements from original glossary HTML
     					// remove up arrow that in glossary links to inline vocab word
@@ -212,7 +212,7 @@ function vocabTest(e) {
     	    			// or store the PHP version in an HTML element's attribute, then collect it in JS as a variable and call it here
 			        	// or else construct its shape with CSS (research performance) vvv
     					// innerContainer
-    					containerInner.innerHTML = '<img src="{{ site.baseurl }}/assets/images/sitewide/x.svg" alt="close" id="vocabclose" class="close-x yellowhover" data-vocab-x><span>' + notesList[i].firstElementChild.innerHTML + '</span><p class="xs-textface notecontent">' + notesList[i].firstElementChild.nextElementSibling.innerHTML + '</p>';
+    					containerInner.innerHTML = '<img src="https://curiositycoloredglasses.com/assets/images/sitewide/x.svg" alt="close" id="vocabclose" class="close-x yellowhover" data-vocab-x><span>' + notesList[i].firstElementChild.innerHTML + '</span><p class="xs-textface notecontent">' + notesList[i].firstElementChild.nextElementSibling.innerHTML + '</p>';
 
     					/*
     					// remove unneeded elements from original glossary HTML

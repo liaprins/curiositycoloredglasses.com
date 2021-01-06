@@ -4,10 +4,6 @@
 {% include share-settings-blogpost.html %}
 {% include head-close.html %}
 
-<!-- backarrow script -->
-<script src="{{ site.baseurl }}/assets/js/backarrow-post.js">
-</script>
-
 <!-- definitions/vocab script -->
 <script src="{{ site.baseurl }}/assets/js/definitions.js">
 </script>
@@ -36,8 +32,6 @@
 This is so that there is an element that can be clicked on that will be anything except <nav>,
 that will be recognized in JS menu.js script, that can have an event listener applied when it is clicked on, that will close the <nav> -->
 <div id="everythingexceptnav">
-
-  {% include backarrow.html %}
 
   <article class="mockmain" id="pre-rr">    <!-- Opening <article> to make room for RR results that need to be wider than this width, to accommodate their all having margins on L + R -->
     <div class="desktopcontent">
