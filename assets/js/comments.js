@@ -7,12 +7,10 @@
     var form = this;
 
 
-    $("#submit").html(
-      'Sending...'
-    );
+    $("#submit").html('Sending...');
     $("#commentloader").removeClass('commentloaderhidden');
     $("#commentloader").addClass('commentloadershown');
-    $(form).addClass('disabled');
+    // $(form).addClass('disabled');
 
     $.ajax({
       type: $(this).attr('method'),
@@ -22,15 +20,14 @@
       success: function (data) {
         showModal('Comment submitted', 'Thanks for your comment! It is pending and will appear when approved.');
 
-        $("#submit")
-          .html("Post a comment");
+        $("#submit").html("Post a comment");
         $("#commentloader").removeClass('commentloadershown');
         $("#commentloader").addClass('commentloaderhidden');
         $("#successmessage").removeClass('successmessagehidden');
         $("#successmessage").addClass('successmessageshown');
 
         $(form)[0].reset();
-        $(form).removeClass('disabled');
+        // $(form).removeClass('disabled');
         grecaptcha.reset();
       },
       error: function (err) {
@@ -43,24 +40,28 @@
         $("#commentloader").addClass('commentloaderhidden');
         $("#successmessage").removeClass('successmessagehidden');
         $("#successmessage").addClass('successmessageshown');
-        $(form).removeClass('disabled');
+        // $(form).removeClass('disabled');
         grecaptcha.reset();
       }
     });
     return false;
   });
 
+  /*
   $('.js-close-modal').click(function () {
     $('body').removeClass('show-modal');
   });
+  */
 
-  function showModal(title, message) {
-    $('.js-modal-title').text(title);
+  // function showModal(title, message) {
+  function showModal(message) {
+    // $('.js-modal-title').text(title);
     $('.js-modal-text').html(message);
-    $('body').addClass('show-modal');
+    // $('body').addClass('show-modal');
   }
 })(jQuery);
 
+/*
 // Staticman comment replies, from https://github.com/mmistakes/made-mistakes-jekyll
 // modified from Wordpress https://core.svn.wordpress.org/trunk/wp-includes/js/comment-reply.js
 // Released under the GNU General Public License - https://wordpress.org/about/gpl/
@@ -117,11 +118,10 @@ var addComment = {
       return false;
     };
 
-    /*
-     * Set initial focus to the first form focusable element.
-     * Try/catch used just to avoid errors in IE 7- which return visibility
-     * 'inherit' when the visibility value is inherited from an ancestor.
-     */
+     // Set initial focus to the first form focusable element.
+     // Try/catch used just to avoid errors in IE 7- which return visibility
+     // 'inherit' when the visibility value is inherited from an ancestor.
+
     try {
       for ( var i = 0; i < commentForm.elements.length; i++ ) {
         element = commentForm.elements[i];
@@ -135,12 +135,11 @@ var addComment = {
         style = element.currentStyle;
         }
 
-      /*
-       * For display none, do the same thing jQuery does. For visibility,
-       * check the element computed style since browsers are already doing
-       * the job for us. In fact, the visibility computed style is the actual
-       * computed value and already takes into account the element ancestors.
-       */
+       // For display none, do the same thing jQuery does. For visibility,
+       // check the element computed style since browsers are already doing
+       // the job for us. In fact, the visibility computed style is the actual
+       // computed value and already takes into account the element ancestors.
+
         if ( ( element.offsetWidth <= 0 && element.offsetHeight <= 0 ) || style.visibility === 'hidden' ) {
           cssHidden = true;
         }
@@ -164,3 +163,4 @@ var addComment = {
     return document.getElementById( id );
   }
 };
+*/
