@@ -1,6 +1,0 @@
----
-title: Golden Press Nature Guides
-alttext: A common black and orange butterfly (not a monarch, though).
----
-
-Field guides are probably my favorite genre of all-time. I read them like novels, cover to cover, entranced by both the natural world and the organizational systems we've applied to our understandings of it. Add in my weaknesses (in no particular order) for hand-painted illustrations, offset printing, the perfectly circular o's featured in the Futura typeface, thumbnail-sized maps, old paperbacks that can fit in my back pocket, and 1970s color palettes—and it's no wonder that these quaint little retro Golden Guides topped my Christmas list last year. Have no fear, though: while I relish their charm, I do acknowledge that my copies are a few decades out of date, and I will be conducting my zoological and botanical fact checking elsewhere.

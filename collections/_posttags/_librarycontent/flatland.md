@@ -1,5 +1,0 @@
----
-title: Flatland, by Edwin A. Abbott
-alttext: A. Square, yellow and happy.
----
-If you happened to have set a new year's resolution along the lines of "come to truly understand the implications of Einstein's theory of relativity, to a point where I believe it in my bones, not just my brain" and are wondering how you'll ever accomplish it, fear not, I've been through that whole rigamarole myself. I'd recommend starting your journey to enlightenment with a copy of _Flatland_, and one with an introduction by Rosemary Jann. She sets Abbott's story up in the context of the time it was written—just a decade or so prior to Einstein's relativity work, when the notion of extra-dimensional thinking was just starting to be explored. *Flatland* drops its readers into a 2-D world with a square playing protagonist. I'll let you read the riveting, geometry-heavy plot yourself, but I will say that if you adore walking, talking, inanimate objects a fraction as much as I do, you'll be delighted to have A. Square as your guide to acquiring a higher understanding of the physical world.
