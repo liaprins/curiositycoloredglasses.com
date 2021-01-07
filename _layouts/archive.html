@@ -8,54 +8,49 @@
 <script src="{{ site.baseurl }}/assets/js/archive.js">
 </script>
 
-<!-- This encompasses everything within <body> except for <nav>
-This is so that there is an element that can be clicked on that will be anything except <nav>,
+<!-- This encompasses everything within <body> except for <nav>, so that there is an element that can be clicked on that will be anything except <nav>,
 that will be recognized in JS menu.js script, that can have an event listener applied when it is clicked on, that will close the <nav> -->
 <div id="everythingexceptnav">
-    <main>
-        <div class="desktopcontent">
-
-            <!-- title of the page + any intro text -->
-            <h2 class="extracontentpagetitle">
-                {{ page.title }}
-            </h2>
-
-            <!-- text for the page -->
-            <span class="l-textface">
-                {{ content }}
-            </span>
-        </div>
-
-{% assign postsByYear =
-    site.posts | group_by_exp:"post", "post.date | date: '%Y'" %}
-
+  <main>
+    <div class="desktopcontent">
+      <!-- Title of the page + any intro text -->
+      <h2 class="extracontentpagetitle">
+        {{ page.title }}
+      </h2>
+      <!-- Text for the page -->
+      <span class="l-textface">
+        {{ content }}
+      </span>
+    </div>
+    {% assign postsByYear = site.posts | group_by_exp:"post", "post.date | date: '%Y'" %}
     <!-- Archive year menu-->
     <div id="archivemenudesktopcontent">
-        <p id="archivemenu">
-          {% for year in postsByYear %}
-            <!-- This holds together all the years on one line -->
-            <span><a href="{{ site.baseurl }}{{ site.url }}/archive#{{ year.name }}" id="archivemenuyear" class="sectionsummary yellowhover">{{ year.name }}</a></span>
-          {% endfor %}
-        </p>
-      </div>
+      <p id="archivemenu">
+      {% for year in postsByYear %}
+        <span>
+          <a href="{{ site.baseurl }}{{ site.url }}/archive#{{ year.name }}" id="archivemenuyear" class="sectionsummary yellowhover">
+            {{ year.name }}
+          </a>
+        </span>
+      {% endfor %}
+      </p>
+    </div>
   </main>
 </div>
 
 <!-- Blog articles grouped by year -->
 {% for year in postsByYear %}
-  <!-- year heading -->
+  <!-- Year heading -->
   <div id="archiveheadingarea">
     <h3 class="sectionsummary archivesectionsummary blackbg" id="{{ year.name }}" data-clickable-header="">
       {{ year.name }}
     </h3>
   </div>
-  <!-- area where results are per year -->
+  <!-- Area where results are per year -->
   <div class="resultarea archiveresultarea">
-      {% for post in year.items %}
-
-        {% include result.html %}
-
-      {% endfor %}
+    {% for post in year.items %}
+      {% include result.html %}
+    {% endfor %}
   </div>
 {% endfor %}
 

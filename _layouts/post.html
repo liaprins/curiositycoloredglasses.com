@@ -4,38 +4,23 @@
 {% include share-settings-blogpost.html %}
 {% include head-close.html %}
 
-<!-- definitions/vocab script -->
+<!-- Inline definition script -->
 <script src="{{ site.baseurl }}/assets/js/definitions.js">
 </script>
 
-<!-- lightbox and slideshow all in one script -->
+<!-- Lightbox and slideshow all in one script -->
 <script src="{{ site.baseurl }}/assets/js/lightboxslideshow.js">
 </script>
 
-<!-- comment refresh script -->
-<!-- <script src="{{ site.baseurl }}/assets/js/comment.js"> -->
-</script>
-
-<!-- detects swipes by users with touchscreens for galleries -->
+<!-- Detects swipes by users with touchscreens for galleries -->
 <script src="{{ site.baseurl }}/assets/js/pure-swipe.js">
 </script>
 
-<!-- LEAVING OUT THE SCRIPT THAT WOULD PULL IN THE P5.JS LIBRARY -->
-
-<!-- LEAVING OUT THE SCRIPT THAT WOULD PULL IN A P5.JS SPECIAL FILE -->
-
-<!-- build out functionality for p5 <canvas> element going fullscreen -->
-<script src="{{ site.baseurl }}/assets/js/canvasfullscreen.js">
-</script>
-
-<!-- This encompasses everything within <body> except for <nav>
-This is so that there is an element that can be clicked on that will be anything except <nav>,
+<!-- This encompasses everything within <body> except for <nav>, so that there is an element that can be clicked on that will be anything except <nav>,
 that will be recognized in JS menu.js script, that can have an event listener applied when it is clicked on, that will close the <nav> -->
 <div id="everythingexceptnav">
-
   <article class="mockmain" id="pre-rr">    <!-- Opening <article> to make room for RR results that need to be wider than this width, to accommodate their all having margins on L + R -->
-    <div class="desktopcontent">
-      <!-- DO I NEED THIS <div>? -->
+    <div class="desktopcontent"> <!-- DO I NEED THIS <div>? -->
       <!-- I'm arranging the pieces of the intro part according to the V-mobile design; CSS can re-arrange them; this is according to responsive design principles -->
     </div>
     <div id="postdesktopcontent">
@@ -53,29 +38,30 @@ that will be recognized in JS menu.js script, that can have an event listener ap
         <div class="postglassescontainer">
           <div class="stem shortstem leftstem"></div><div style="background-image: url({{ site.baseurl }}/assets/images/blogposts/{{ page.slug }}/-l-{{ page.slug }}{% if page.leftextension %}{{ page.leftextension }}{% else %}.jpg{% endif %})" class="circle leftcircle"></div><div class="stem centerstem"></div><div style="background-image: url({{ site.baseurl }}/assets/images/blogposts/{{ page.slug }}/-r-{{ page.slug }}{% if page.rightextension %}{{ page.rightextension }}{% else %}.jpg{% endif %})" class="circle rightcircle"></div><div class="stem shortstem rightstem"></div>
         </div>
+
         <!-- Name of post -->
         <h2 class="posttitle">
-          {{ page.title }}
+          {{ page.title | markdownify | smartify }}
         </h2>
       </a>
 
-      <!-- If there is a guest writer -->
-      {% if page.author and page.author != "Lia Prins" %}
-        <span class="guestpostbanner xxs-display">Guest post</span>
-        <!-- If there is a LINK for the guest writer -->
-        {% if page.authorlink %}
-          <span id="writtenby" class="xs-textface bold">by</span><span class="writer s-display"><a href="{{ page.authorlink }}" target="_blank" class="yellowhover">&nbsp{{ page.author }}</a>
-          </span>
+    <!-- If there is a guest writer -->
+    {% if page.author and page.author != "Lia Prins" %}
+      <span class="guestpostbanner xxs-display">Guest post</span>
+      <!-- If there is a LINK for the guest writer -->
+      {% if page.authorlink %}
+        <span id="writtenby" class="xs-textface bold">by</span><span class="writer s-display"><a href="{{ page.authorlink }}" target="_blank" class="yellowhover">&nbsp{{ page.author }}</a>
+        </span>
         <!-- If there is NOT a LINK for the guest writer -->
-        {% else %}
-          <span id="writtenby" class="xs-textface bold">by</span><span class="writer s-display">&nbsp{{ page.author }}
-          </span>
-        {% endif %}
-      <!-- "Lia Prins" to show up as default author unless a guest writer is applied in panel -->
-      {% elsif page.author and page.author == "Lia Prins" %}
-        <span id="writtenby" class="xs-textface bold">by</span><span class="writer s-display"><a href="https://liaprins.com" target="_blank" class="yellowhover">&nbspLia Prins</a>
+      {% else %}
+        <span id="writtenby" class="xs-textface bold">by</span><span class="writer s-display">&nbsp{{ page.author }}
         </span>
       {% endif %}
+    <!-- "Lia Prins" to show up as default author unless a guest writer is applied in panel -->
+    {% elsif page.author and page.author == "Lia Prins" %}
+      <span id="writtenby" class="xs-textface bold">by</span><span class="writer s-display"><a href="https://liaprins.com" target="_blank" class="yellowhover">&nbspLia Prins</a>
+      </span>
+    {% endif %}
 
       <!-- Intro of post -->
       <span id="postintro" class="l-textface">
@@ -83,19 +69,17 @@ that will be recognized in JS menu.js script, that can have an event listener ap
       </span>
 
       <div id="posttagshare">
-
         <!-- Tags of post -->
         <span id="posttaggroup" class="s-textface">
-          <!-- Split the list in the tag field into individual tags -->
-          {% for posttag in page.tags %}
-            <!-- Make them link to the tags page -->
-            <a href="{{ site.baseurl }}/tags/{{ posttag }}" id="posttag" class="xs-textface tag yellowhover">
-              <!-- Adding the 2 x "no break spaces" (&nbsp) to act as L-padding (like for "Read more" button), because using actual padding-left measurements can separate the padding from the word if the word starts on a new line -->
-              &nbsp&nbsp#{{ posttag }}
-            </a>
-          {% endfor %}
+        <!-- Split the list in the tag field into individual tags -->
+        {% for posttag in page.tags %}
+          <!-- Make them link to the tags page -->
+          <a href="{{ site.baseurl }}/tags/{{ posttag }}" id="posttag" class="xs-textface tag yellowhover">
+            <!-- Adding the 2 x "no break spaces" (&nbsp) to act as L-padding (like for "Read more" button), because using actual padding-left measurements can separate the padding from the word if the word starts on a new line -->
+            &nbsp&nbsp#{{ posttag }}
+          </a>
+        {% endfor %}
         </span>
-
         <!-- Sharing for this post -->
         <span id="share">
           <!-- TWITTER: From a tutorial website: onlinejournalismblog.com, but adding ability to dynamically include a visualized image. -->
@@ -109,20 +93,19 @@ that will be recognized in JS menu.js script, that can have an event listener ap
             <img src= "{{ site.baseurl }}/assets/images/sitewide/Facebook.svg" alt="Share on Facebook" class="socialicon shareicon yellowhover">
           </span>
           <script>
-          document.getElementById('shareBtn').onclick = function() {
-            FB.ui({
-              method: 'share',
-              display: 'popup',
-              href: '{{ site.baseurl }}',
-            }, function(response){});
-          }
+            document.getElementById('shareBtn').onclick = function() {
+              FB.ui({
+                method: 'share',
+                display: 'popup',
+                href: '{{ site.baseurl }}',
+              }, function(response){});
+            }
           </script>
           <!-- PINTEREST: From Pinterest widget builder (modified to get stored image-->
           <a data-pin-do="buttonBookmark" data-pin-custom="true" data-pin-save="false" href="https://www.pinterest.com/pin/create/button/" title="Share on Pinterest">
             <img src="{{ site.baseurl }}/assets/images/sitewide/Pinterest.svg" alt="Save to Pinterest" class="socialicon shareicon yellowhover">
           </a>
         </span>
-
       </div>    <!-- Closing id="posttagshare" -->
 
       <!-- Text of post -->
@@ -130,35 +113,38 @@ that will be recognized in JS menu.js script, that can have an event listener ap
         {{ content }}<img src="{{ site.baseurl }}/assets/images/sitewide/home.svg" alt="" id="articleendglasses">
       </div>
 
-      {% if page.glossaryfolder %}
+    <!-- Glossary -->
+    {% if page.glossaryfolder %}
       <section id="glossarysection">
         <details class="postsectiondetails" open>
           <summary class="sectionsummary postpagesectionsummary blackbg"><h3>Glossary</h3>
           </summary>
           <dl>
-            {% for vocab in site.documents %}
-              {% if vocab.path contains page.glossaryfolder %}
-                {% include post-glossary.html %}
-              {% endif %}
-            {% endfor %}
+          {% for vocab in site.documents %}
+            {% if vocab.path contains page.glossaryfolder %}
+              {% include post-glossary.html %}
+            {% endif %}
+          {% endfor %}
           </dl>
         </details>
       </section>
-      {% endif %}
+    {% endif %}
 
-      {% if page.thankyoufolder %}
+    <!-- Notes / Thank You section -->
+    {% if page.thankyoufolder %}
       <section id="notessection">
         <details class="postsectiondetails" open>
           <summary class="sectionsummary postpagesectionsummary blackbg"><h3>Thank You</h3>
           </summary>
-          {% for note in site.documents %}
-            {% if note.path contains page.thankyoufolder %}
-              {% include post-thankyou.html %}
-            {% endif %}
-          {% endfor %}
+        {% assign notesbynumber = site.documents | sort: "basename" %}
+        {% for note in notesbynumber %}
+          {% if note.path contains page.thankyoufolder %}
+            {% include post-thankyou.html %}
+          {% endif %}
+        {% endfor %}
         </details>
       </section>
-      {% elsif page.thankyoucontent %}
+    {% elsif page.thankyoucontent %}
       <section id="notessection">
         <details class="postsectiondetails" open>
           <summary class="sectionsummary postpagesectionsummary blackbg"><h3>Thank You</h3>
@@ -166,109 +152,88 @@ that will be recognized in JS menu.js script, that can have an event listener ap
           <p class="s-textface">{{ page.thankyoucontent }}</p>
         </details>
       </section>
-      {% endif %}
+    {% endif %}
 
     </div>    <!-- Closing class="postdesktopcontent" -->
-    <!-- adding a div to hold (with a class to hide) a vertical image for Pinterest, to be populated via the panel -->
-    <div class="hidepinnable"><img src="{{ site.baseurl }}/assets/images/blogposts/{{ page.slug }}/{{ page.shareimage }}"></div>
+
+    <!-- Adding a div to hold (with a class to hide) a vertical image for Pinterest, to be populated via the panel -->
+    <div class="hidepinnable">
+      <img src="{{ site.baseurl }}/assets/images/blogposts/{{ page.slug }}/{{ page.shareimage }}">
+    </div>
+
   </article>
 
-  {% if page.relevantreading %}
+<!-- Relevant Reading section -->
+{% if page.relevantreading %}
   <section id="relevantreading">
     <details id="rrdetails" open>
       <summary class="sectionsummary postpagesectionsummary blackbg" id="rrsectionheader"><h3>Relevant Reading</h3>
       </summary>
       <div class="resultarea">
-        {% for rr in page.relevantreading %}
-
-          {% for post in site.posts %}
-            {% if post.path contains rr %}
-              {% include result.html %}
-            {% endif %}
-          {% endfor %}
-
+      {% for rr in page.relevantreading %}
+        {% for post in site.posts %}
+          {% if post.path contains rr %}
+            {% include result.html %}
+          {% endif %}
         {% endfor %}
+      {% endfor %}
       </div>
     </details>
   </section>
-  {% endif %}
+{% endif %}
 
-<!-- COMMENTS vvv-->
+  <!-- Comments -->
   <article class="mockmain" id="postdesktopcontent2">    <!-- Opening second instance of <article> to make room for RR results that need to be wider than this width, to accommodate their all having margins on L + R -->
-
-
-
-    <!-- TESTING TRAVIS DOWNS' VERSION OF STATICMAN -->
-    {% if page.comments == true %}
+  {% if page.comments == true %}
     <section class="comments">
       <details class="commentsdetails" open>
-
-        <!-- ORIGINALLY WAS INSIDE comments.html INCLUDE vvv -->
-
-        {% if site.data.comments[page.slug] %}
-          <!-- Existing comments -->
-          {% assign comments = site.data.comments[page.slug] | where_exp: "item", "item.replying_to_uid == ''" %}
-
-          {% for commentcounter in comments %}
-            {% if forloop.first %}
+      <!-- If there are existing comments -->
+      {% if site.data.comments[page.slug] %}
+        <!-- Existing comments -->
+        {% assign comments = site.data.comments[page.slug] | where_exp: "item", "item.replying_to_uid == ''" %}
+        {% for commentcounter in comments %}
+          {% if forloop.first %}
             <summary class="sectionsummary postpagesectionsummary commentssummary blackbg">
               <h3>Comments: {{ forloop.length }}</h3>
             </summary>
-            {% endif %}
-          {% endfor %}
-
-          {% assign comments_by_date = comments | sort: 'date' %}
-          <!-- List main comments in date order, oldest first. -->
-          {% for comment in comments_by_date %}
-            {%- assign email           = comment.email %}
-            {%- assign name            = comment.name %}
-            {%- assign url             = comment.url %}
-            {%- assign date            = comment.date %}
-            {%- assign message         = comment.message %}
-            {%- assign uid             = forloop.index %}
-            {% include comment.html email=email name=name url=url date=date message=message uid=uid %}
-          {% endfor %}
-
-        {% else %}
+          {% endif %}
+        {% endfor %}
+        {% assign comments_by_date = comments | sort: 'date' %}
+        {% for comment in comments_by_date %}
+          {%- assign email           = comment.email %}
+          {%- assign name            = comment.name %}
+          {%- assign url             = comment.url %}
+          {%- assign date            = comment.date %}
+          {%- assign message         = comment.message %}
+          {%- assign uid             = forloop.index %}
+          {% include comment.html email=email name=name url=url date=date message=message uid=uid %}
+        {% endfor %}
+      <!-- If there are not existing comments -->
+      {% else %}
         <summary class="sectionsummary postpagesectionsummary commentssummary blackbg">
           <h3>Comments</h3>
         </summary>
-        {% endif %}
-
-        <!-- Comments should insert in here -->
-
+      {% endif %}
         <!-- The comment-entry area -->
         <details id="postacommentdetails">
           <summary id="postacommentsummary" class="xs-display postacommentbutton blackbg">
             Post a comment
           </summary>
-
           <!-- New comment form -->
           <div id="respond"> <!-- LIA: I think this div's id is used in the JS to insert new comments before it, see main.js, line 82 -->
             {% include comment_form.html %}
           </div>
-
+          <!-- Scripts needed to submit comments via form -->
           <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
           <script src="{{ '/assets/js/comments.js' | relative_url }}"></script>
           <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-
-          <!-- ORIGINALLY WAS INSIDE comments.html INCLUDE ^^^ -->
         </details>
-
       </details>
-
-      <div id="successmessage" class="successmessagehidden m-textface bold js-modal-text"></div> <!-- when here, it's below the form area when closed via "x" button -->
-
+      <!-- Success or fail message after submit comment -->
+      <div id="successmessage" class="successmessagehidden m-textface bold js-modal-text"></div>
     </section>
-    {% endif %} <!-- closing "if page.comments == true" -->
-
-
-
-
-
-
+  {% endif %} <!-- closing "if page.comments == true" -->
   </article>
-  <!-- COMMENTS ^^^-->
 
   <!-- FORMERLY footer-sitewide SNIPPET vvv ******************************************************************** -->
 

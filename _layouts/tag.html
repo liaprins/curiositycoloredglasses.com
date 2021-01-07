@@ -4,29 +4,27 @@
 {% include share-settings-other.html %}
 {% include head-close.html %}
 
-  <!-- This encompasses everything within <body> except for <nav>
-  This is so that there is an element that can be clicked on that will be anything except <nav>,
-  that will be recognized in JS menu.js script, that can have an event listener applied when it is clicked on, that will close the <nav> -->
-  <div id="everythingexceptnav">
+<!-- This encompasses everything within <body> except for <nav>, so that there is an element that can be clicked on that will be anything except <nav>,
+that will be recognized in JS menu.js script, that can have an event listener applied when it is clicked on, that will close the <nav> -->
+<div id="everythingexceptnav">
+  {% assign tagname = page.url | replace: '/tags/', '' %}
+  <main class="desktopcontent">
 
-    {% assign tagname = page.url | replace: '/tags/', '' %}
-    <main class="desktopcontent">
-      <!-- titling the page after the tag that brought us here -->
-      <p id="tagpagename" class="xl-textface tagnobackarrow">
-        #{{ tagname }}
-      </p>
-      <!-- pulling any introductory text for the page, if there's any from the panel -->
-      <!-- ADD THIS INTO G-DOC ABOUT NEEDING TO ADD FRONT-MATTER "intro: " IF I WANT SENTENCE AT THE TOP OF THE PAGE -->
-      <span class="l-textface">
-        {{ page.intro }}
-      </span>
-    </main>
+    <!-- Titling the page after the tag that brought us here -->
+    <p id="tagpagename" class="xl-textface tagnobackarrow">
+      #{{ tagname }}
+    </p>
 
-    <!-- establishing a separate div so I can make it wider in screens with more than one result wide to accommodate margins I need to put on both L + R sides of all results so they have proper spacing between each other, but don't look like they're extending past the page margins -->
-    <div class="resultarea">
-      <!-- resulting article attributes defined in results snippet -->
-      {{ content }}
-    </div>    <!-- closing .resultarea -->
+    <!-- Intro sentence (currently none) -->
+    <span class="l-textface">
+      {{ page.intro }}
+    </span>
+  </main>
+
+  <!-- Resulting posts -->
+  <div class="resultarea">
+    {{ content }}
+  </div>
 
 <!-- FORMERLY footer-sitewide SNIPPET vvv ******************************************************************** -->
 

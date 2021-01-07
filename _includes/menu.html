@@ -2,25 +2,28 @@
   <details id="navdetails" open>
     <summary id="navsummary">
     </summary>
-
     <!-- Home glasses icon -->
     <a href="{{ site.baseurl }}/" title="Curiosity-Colored Glasses">
       <img src="{{ site.baseurl }}/assets/images/sitewide/home.svg" alt="Curiosity-Colored Glasses" id="homeicon" class="yellowhover">
     </a>
+    <!-- Loop through mainpages list according to order number assigned in each page's front matter -->
     <ul id="navlist">
-      {% assign main_pages = site.mainpages | sort: 'order' %}
-      {% for item in main_pages %}
-        {% unless item.title == 'Page not found' or item.title=='Search' %}
-        <a href="{{ site.baseurl }}{{ item.url }}" {% if page.url == item.url %}class="active"{% endif %} class="menuwordlink">
-          <li id="menuword" class="navnothome m-display yellowhover">
-            <span {% if page.url == item.url %}class="active2"{% endif %} href="{{ site.baseurl }}{{ item.url }}">
-              {{ item.title }}</span></li></a>
-        {% endunless %}
-      {% endfor %}
-    	<!-- I added the searchbar snippet here, inside a list item, so it will be part of the menu list -->
-    	<li id="navsearch" class="navnothome">
-        <div id="searchdecoy" title="Search" class="yellowhover" style="display: none;">
-        	<img src="{{ site.baseurl }}/assets/images/sitewide/search.svg" alt="search" class="navsearchicon">
+    {% assign main_pages = site.mainpages | sort: 'order' %}
+    {% for item in main_pages %}
+      {% unless item.title == 'Page not found' or item.title=='Search' %}
+      <a href="{{ site.baseurl }}{{ item.url }}" {% if page.url == item.url %}class="active"{% endif %} class="menuwordlink">
+        <li id="menuword" class="navnothome m-display yellowhover">
+          <span {% if page.url == item.url %}class="active2"{% endif %} href="{{ site.baseurl }}{{ item.url }}">
+            {{ item.title }}
+          </span>
+        </li>
+      </a>
+      {% endunless %}
+    {% endfor %}
+    <!-- Searchbar -->
+  	 <li id="navsearch" class="navnothome">
+       <div id="searchdecoy" title="Search" class="yellowhover" style="display: none;">
+      	  <img src="{{ site.baseurl }}/assets/images/sitewide/search.svg" alt="search" class="navsearchicon">
         </div>
         <form action="/search" method="get" id="navsearchform">
           <input type="text" placeholder="search" name="query" id="navsearchinput" class="s-textface underlineinput">
@@ -28,7 +31,7 @@
             <img src="{{ site.baseurl }}/assets/images/sitewide/search.svg" alt="search" class="navsearchicon">
           </button>
         </form>
-			</li>
-		</ul>
+		  </li>
+	  </ul>
   </details>
 </nav>
