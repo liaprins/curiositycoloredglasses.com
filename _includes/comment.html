@@ -1,5 +1,4 @@
 {%- capture article_class %}js-comment comment onecomment{% if include.email == hello@curiositycoloredglasses.com %} admin{% endif %}{% endcapture %}
-<!-- {% assign comment_id = include.uid | prepend: 'comment-' %} -->
 {% assign avatarletter = include.name | slice: 0 %}
 {% assign colorletter = include.name | slice: -1 %}
 <article id="comment-{{ include.uid }}" class="{{ article_class }}" uid="{{ include.uid }}">

@@ -5,7 +5,7 @@ tags:
   - mountains
   - measurements
   - geology
-  - Mars
+  - mars
   - volcanoes
   - science
   - supercalifragilisticexpialidocious

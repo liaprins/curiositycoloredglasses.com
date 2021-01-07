@@ -1,10 +1,10 @@
 <figure>
   <img src="{{ site.baseurl }}/assets/images/blogposts{{ page.url }}/{{ include.image }}" {% if include.caption %}alt="{{ include.alt }}"{% endif %} class="contentimage singleimage clickme">
   <img class="imgfullscreentoggle imgtofullscreen yellowhover" title="View larger" alt="View larger" src="{{ site.baseurl }}/assets/images/sitewide/to-full-screen.svg">
-  {% if include.caption %}
+{% if include.caption %}
   <figcaption class="xs-textface">
-    <hr class="toprule">
-    {{ include.caption }}
+  <hr class="toprule">
+  {{ include.caption }}
   </figcaption>
-  {% endif %}
+{% endif %}
 </figure>

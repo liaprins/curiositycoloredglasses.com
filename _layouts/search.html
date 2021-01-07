@@ -10,17 +10,15 @@ layout: search
 <div id="everythingexceptnav">
   <div id="pre-search">
     <div id="searchdesktopcontent">
-
       <form id="searchpageform" action="/search.html" method="get">
         <input type="text" placeholder="search" id="search-input" class="xl-textface underlineinput" name="query">
         <button type="submit" value="Search" id="searchpagebutton" class="searchbutton yellowhover">
           <img src= "{{ site.baseurl }}/assets/images/sitewide/search.svg" alt="Search" id="searchpageicon">
         </button>
       </form>
-
       <p id="searchpageintrotext">
         <span class="l-textface">
-        {{ content }}
+          {{ content }}
         </span>
       </p>
     </div>
@@ -31,12 +29,12 @@ layout: search
 </div>
 -->
 
-<!-- FROM CLOUD CANNON -->
+<!-- Lunr search scripts -->
 <script>
   window.store = {
     {% for post in site.posts %}
       "{{ post.url | slugify }}": {
-        "title"    : "{{ post.title | strip_html | strip_newlines | escape }}",
+        "title"    : "{{ post.title | markdownify | strip_html | strip_newlines | escape }}",
         "tags"     : "{{ post.tags | join: ', ' }}",
         "excerpt"  : "{{ post.excerpt | strip_html | strip_newlines | escape }}",
         "author"   : "{{ post.author | xml_escape }}",

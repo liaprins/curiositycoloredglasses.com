@@ -1,6 +1,6 @@
 ---
 layout: tag
-tag-name: Mars
+tag-name: mars
 ---
 {% for post in site.posts %}
 {% if post.tags contains page.tag-name %}
