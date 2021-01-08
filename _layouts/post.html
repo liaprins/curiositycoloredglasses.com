@@ -83,9 +83,7 @@ that will be recognized in JS menu.js script, that can have an event listener ap
         <!-- Sharing for this post -->
         <span id="share">
           <!-- TWITTER: From a tutorial website: onlinejournalismblog.com, but adding ability to dynamically include a visualized image. -->
-          <!-- This script needs to stay or there won't be a popup; it will open a new tab instead -->
-          <script type="text/javascript" async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-          <a href="https://twitter.com/intent/tweet?text={{ page.share }}&url={{ page.sharelink }}%0D%0A{% for posttag in page.tags %}{% if forloop.first %}%23{{ posttag }}{% else %}%20%23{{ posttag }}{% endif %}{% endfor %}&via=CuriosityColor" target="_blank" OnClick="window.open(this.href,'targetWindow','toolbar=no,location=0,status=no,menubar=no,scrollbars=yes,resizable=yes,width=600,height=250'); return false;" title="Share on Twitter">
+          <a href="https://twitter.com/intent/tweet?text={{ page.share }}&url={{ page.sharelink }}%0D%0A{% for posttag in page.tags %}{% if forloop.first %}%23{{ posttag }}{% else %}%20%23{{ posttag }}{% endif %}{% endfor %}&via=CuriosityColor" target="_blank" OnClick="window.open(this.href,'targetWindow','toolbar=no,top=183,left=410,status=no,menubar=no,scrollbars=yes,resizable=yes,width=600,height=500'); return false;" title="Share on Twitter">
             <img src= "{{ site.baseurl }}/assets/images/sitewide/Twitter.svg" alt="Share on Twitter" class="socialicon shareicon yellowhover">
           </a>
           <!-- FACEBOOK: This method is from Facebook Developers, after modifications. It only works in conjunction with the script called separately and my registered CCG Facebook app ID (1816213758596939) -->
