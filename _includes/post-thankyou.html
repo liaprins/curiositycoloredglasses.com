@@ -5,6 +5,6 @@
   </a>
   <!-- note itself (required) -->
   <p class="s-textface notecontent">
-    {{ note.content | markdownify | replace: '<p>', '' }}
+    {{ note.content | markdownify | replace: '<p>', '' | replace: '</p>', '' }}
   </p>
 </div>
