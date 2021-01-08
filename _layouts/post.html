@@ -83,11 +83,11 @@ that will be recognized in JS menu.js script, that can have an event listener ap
         <!-- Sharing for this post -->
         <span id="share">
           <!-- TWITTER: From a tutorial website: onlinejournalismblog.com, but adding ability to dynamically include a visualized image. -->
-          <a href="https://twitter.com/intent/tweet?text={{ page.share }}{{ page.url }}&hashtags={% for posttag in page.tags %}%20{{ posttag }}{% endfor %}&via=CuriosityColor" title="Share on Twitter" target="_blank">
+          <a href="https://twitter.com/intent/tweet?text={{ page.share }}&url={{ page.sharelink }}%0D%0A{% for posttag in page.tags %}{% if forloop.first %}%23{{ posttag }}{% else %}%20%23{{ posttag }}{% endif %}{% endfor %}&via=CuriosityColor" title="Share on Twitter" target="_blank">
             <img src= "{{ site.baseurl }}/assets/images/sitewide/Twitter.svg" alt="Share on Twitter" class="socialicon shareicon yellowhover">
           </a>
           <!-- This script needs to stay or there won't be a popup; it will open a new tab instead -->
-          <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+          <script type="text/javascript" async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
           <!-- FACEBOOK: This method is from Facebook Developers, after modifications. It only works in conjunction with the script called separately and my registered CCG Facebook app ID (1816213758596939) -->
           <span id="shareBtn" title="Share on Facebook">
             <img src= "{{ site.baseurl }}/assets/images/sitewide/Facebook.svg" alt="Share on Facebook" class="socialicon shareicon yellowhover">
