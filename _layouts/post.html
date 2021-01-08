@@ -94,7 +94,7 @@ that will be recognized in JS menu.js script, that can have an event listener ap
               method: 'share_open_graph',
               action_type: 'og.likes',
               action_properties: JSON.stringify({
-                  object:'https://developers.facebook.com/docs/',
+                  object:'https://curiositycoloredglasses.com{{ page.url }}',
               })
             }, function(response){});
           }
@@ -245,7 +245,7 @@ that will be recognized in JS menu.js script, that can have an event listener ap
 
                 </div>
               </footer>
-              
+
               {% include facebook-sdk.html %}
 
               <!--This is the pinterest script, instructed to place right before closing </body> tag-->
