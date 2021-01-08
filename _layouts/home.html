@@ -1,16 +1,4 @@
 {% include head-open.html %}
-
-<!-- Pre-loading the fonts that are above the fold on home page so they show up faster -->
-<link rel="preload" href="{{ site.baseurl }}/assets/fonts/GROTESQUE_BOLD_smooth.woff" as="font">
-<link rel="preload" href="{{ site.baseurl }}/assets/fonts/sintesi_sans_demi-bold-webfont.woff" as="font">
-<link rel="preload" href="{{ site.baseurl }}/assets/fonts/sintesisanslight-webfont.woff" as="font">
-
-<title>
-  {{ page.title }}
-</title>
-
-{% include share-settings-common.html %}
-{% include share-settings-other.html %}
 {% include head-close.html %} <!-- AS OF NOW, INCLUDES THE OPENING <body> TAG -->
 
 <!-- This encompasses everything within <body> except for <nav>, so that there is an element that can be clicked on that will be anything except <nav>,

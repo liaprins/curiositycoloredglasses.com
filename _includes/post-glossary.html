@@ -11,7 +11,7 @@
     <span id="pronunciation" class="xs-textface">
     <!-- ^^^ Written pronunciation (optional ) -->
     {% if vocab.pronunciation %}
-      {{ vocab.pronunciation | markdownify | replace: '<p>', '' }}
+      {{ vocab.pronunciation | markdownify | replace: '<p>', '' | replace: '</p>', '' }}
     {% endif %}
     </span>
     <!-- Audio pronunciation (optional) -->
@@ -22,7 +22,7 @@
   <!-- <dd> = the value (definition) within the <dl> (parent) name-value pair  -->
   <dd>
     <!-- definition (required) -->
-    <p class="s-textface definition">{{ vocab.content | markdownify | replace: '<p>', '' }}</p>
+    <p class="s-textface definition">{{ vocab.content | markdownify | replace: '<p>', '' | replace: '</p>', '' }}</p>
     <!-- illustration (optional) -->
     {% if vocab.illustration %}
       <img src="{{ site.baseurl }}/assets/images/glossaryextras{{ page.url }}/{{ vocab.illustration }}" alt="" class="vocabillustration">
