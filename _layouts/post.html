@@ -87,17 +87,20 @@ that will be recognized in JS menu.js script, that can have an event listener ap
             <img src= "{{ site.baseurl }}/assets/images/sitewide/Twitter.svg" alt="Share on Twitter" class="socialicon shareicon yellowhover">
           </a>
           <!-- FACEBOOK: This method is from Facebook Developers, after modifications. It only works in conjunction with the script called separately and my registered CCG Facebook app ID (1816213758596939) -->
-          <span id="shareBtn" title="Share on Facebook">
+          <span id="ogBtn" title="Share on Facebook">
             <img src= "{{ site.baseurl }}/assets/images/sitewide/Facebook.svg" alt="Share on Facebook" class="socialicon shareicon yellowhover">
           </span>
           <script>
-            document.getElementById('shareBtn').onclick = function() {
-              FB.ui({
-                method: 'share',
-                display: 'popup',
-                href: '{{ site.baseurl }}',
-              }, function(response){});
-            }
+          document.getElementById('ogBtn').onclick = function() {
+            FB.ui({
+              display: 'popup',
+              method: 'share_open_graph',
+              action_type: 'og.likes',
+              action_properties: JSON.stringify({
+                  object:'https://curiositycoloredglasses.com{{ page.url }}',
+              })
+            }, function(response){});
+          }
           </script>
           <!-- PINTEREST: From Pinterest widget builder (modified to get stored image-->
           <a data-pin-do="buttonBookmark" data-pin-custom="true" data-pin-save="false" href="https://www.pinterest.com/pin/create/button/" title="Share on Pinterest">
