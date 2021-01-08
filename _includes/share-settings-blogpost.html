@@ -28,7 +28,7 @@
 
 <!-- Currently using the same sharing field as for Twitter (limits characters) -->
 <!-- But if want more characters, could build a field into panel to hold description -->
-<meta property="og:description"        content="Looking at life's little mysteries through the same lens that killed the cat, and living to tell the tale." />
+<meta property="og:description"        content="{{ page.share }}" />
 
 <!-- Pinterest does not support images for articles (user chooses the image to pin) -->
 <meta property="og:image"              content="https://curiositycoloredglasses.com/assets/images/blogposts/{{ page.slug }}/{{ page.shareimage }}" />
@@ -41,7 +41,7 @@
 
 <meta property="article:publisher"     content="Curiosity-Colored Glasses" />
 
-<meta property="article:author"        content="Lia Prins" />
+<meta property="article:author"        content="{{ page.author }}" />
 
 <!-- This will need some testing/specializing, once I have a non-localhost solution to test with -->
 <!-- May not need any # or "HASHTAG-PLACEHOLDER" -->
