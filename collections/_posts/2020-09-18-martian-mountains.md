@@ -6,6 +6,7 @@ excerpt: On maps, a mountain’s height is always shown solely as its peak’s e
 glossaryfolder: vocab-martian-mountains
 thankyoufolder: thankyou-martian-mountains
 share: Given that Mars is currently ocean-less, how are the heights of Martian mountains like Olympus Mons quantified? It turns out, sea level is somewhat synthesize-able if you know the math.
+sharelink: http://bit.ly/2MBfPz6
 shareimage: martian-mountains.jpg
 ---
 
