@@ -1,21 +1,19 @@
-{% include head-open.html %}
-{% include head-close.html %}
+---
+layout: default
+---
 
-<!-- Inline definition script -->
-<script src="{{ site.baseurl }}/assets/js/definitions.js">
-</script>
+  <!-- Inline definition script -->
+  <script src="{{ site.baseurl }}/assets/js/definitions.js">
+  </script>
 
-<!-- Lightbox and slideshow all in one script -->
-<script src="{{ site.baseurl }}/assets/js/lightboxslideshow.js">
-</script>
+  <!-- Lightbox and slideshow all in one script -->
+  <script src="{{ site.baseurl }}/assets/js/lightboxslideshow.js">
+  </script>
 
-<!-- Detects swipes by users with touchscreens for galleries -->
-<script src="{{ site.baseurl }}/assets/js/pure-swipe.js">
-</script>
+  <!-- Detects swipes by users with touchscreens for galleries -->
+  <script src="{{ site.baseurl }}/assets/js/pure-swipe.js">
+  </script>
 
-<!-- This encompasses everything within <body> except for <nav>, so that there is an element that can be clicked on that will be anything except <nav>,
-that will be recognized in JS menu.js script, that can have an event listener applied when it is clicked on, that will close the <nav> -->
-<div id="everythingexceptnav">
   <article class="mockmain" id="pre-rr">    <!-- Opening <article> to make room for RR results that need to be wider than this width, to accommodate their all having margins on L + R -->
     <div class="desktopcontent"> <!-- DO I NEED THIS <div>? -->
       <!-- I'm arranging the pieces of the intro part according to the V-mobile design; CSS can re-arrange them; this is according to responsive design principles -->
@@ -232,35 +230,3 @@ that will be recognized in JS menu.js script, that can have an event listener ap
     </section>
   {% endif %} <!-- closing "if page.comments == true" -->
   </article>
-
-  <!-- FORMERLY footer-sitewide SNIPPET vvv ******************************************************************** -->
-
-              <footer role="contentinfo">
-                <div id="footercontent">
-
-                    {% include subscribe.html %}
-
-                  <!-- Link to my Instagram profile + Twitter + portfolio -->
-                  {% include follow.html %}
-
-                </div>
-              </footer>
-
-              {% include facebook-sdk.html %}
-
-              <!--This is the pinterest script, instructed to place right before closing </body> tag-->
-              <script async defer src="//assets.pinterest.com/js/pinit.js">
-              </script>
-
-              <!--This encompasses everything within <body> except for <nav>. This is so that there is an element that can be clicked on that will be anything except <nav>, that will be recognized in JS menu.js script, that can have an event listener applied when it is clicked on, that will close the <nav> -->
-              </div>
-              <!-- Menu has to be called here, to account for a major Safari bug: Safari renders anything measured in rems at 1px, if it comes after a <details> tag... and my menu is within a <details> tag, so it was messing up everything with rems in Safari. Moving menu to the very bottom means there is nothing in the html after it, so it is fine. The menu is styled in css to position it absolutely at the top -->
-              {% include menu.html %}
-
-              <!-- Calling the JS scripts used on everypage; they need to come after the menu is called, to else they will have no effect on the menu items they are intended for -->
-              {% include scripts-sitewide.html %}
-
-  <!--FORMERLY footer-sitewide SNIPPET ^^^ ******************************************************************** -->
-
-    </body>
-  </html>
