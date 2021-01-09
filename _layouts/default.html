@@ -32,9 +32,7 @@
     </script>
 
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <meta name="msapplication-TileColor" content="#e2e43a">
-    <meta name="theme-color" content="#e2e43a">
+    <meta name="viewport"                  content="width=device-width,initial-scale=1.0">
     <meta property="og:url"                content="https://curiositycoloredglasses.com{{ page.url }}" />
     <meta property="og:site_name"          content="{{ site.title }}" />
     <meta property="og:title"              content="{% if page.url contains '/tags/' %}#{{ page.tag-name }}{% else %}{{ page.title }}{% endif %}" />
@@ -49,7 +47,8 @@
     <meta name="twitter:creator"           content="@curiositycolor" />
     <meta name="description" 				       content="{% if page.title == 'Hello' or page.title == 'Question Queue' or page.title == 'Library' or page.title == 'Archive' %}{{ page.excerpt | strip_html | replace: '&nbsp;', ' ' | replace: 'perplex&shy;ing', 'perplexing' }}{% elsif page.layout == 'post' %}{{ page.share }}{% else %}{{ site.description }}{% endif %}">
     <meta name="keywords" 	       			   content="{%-if page.layout == 'post'-%}{%-for post in site.posts-%}{%-if post.url == page.url-%}{%-for tag in post.tags-%}{{ tag }},{%-endfor-%}{%-endif-%}{%-endfor-%}{%-else-%}investigation,facts,science,nature,illustration,{%-endif-%}learning,curiosity,data visualization,questions,education">
-
+    <meta name="msapplication-TileColor"   content="#e2e43a">
+    <meta name="theme-color"               content="#e2e43a">
     <link rel="manifest" href="{{ site.baseurl }}/manifest.json">
     <link rel="mask-icon" href="{{ site.baseurl }}/safari-pinned-tab.svg" color="#e2e43a">
     <link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl }}/apple-touch-icon.png">
@@ -83,11 +82,11 @@
     <div id="everythingexceptnav">
   {% endif %}
 
-  <!-- ******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************** -->
+<!-- ******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************** -->
 
       {{ content }}
 
-  <!-- ******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************** -->
+<!-- ******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************** -->
 
       <footer role="contentinfo">
         <div id="footercontent">
