@@ -196,13 +196,33 @@ layout: default
         {% endfor %}
         {% assign comments_by_date = comments | sort: 'date' %}
         {% for comment in comments_by_date %}
-          {%- assign email           = comment.email %}
-          {%- assign name            = comment.name %}
-          {%- assign url             = comment.url %}
-          {%- assign date            = comment.date %}
-          {%- assign message         = comment.message %}
-          {%- assign uid             = forloop.index %}
-          {% include comment.html email=email name=name url=url date=date message=message uid=uid %}
+
+
+
+
+          {%- capture article_class %}js-comment comment onecomment{% if comment.email == 'hello@curiositycoloredglasses.com' %} admin{% endif %}{% endcapture %}
+          {% assign avatarletter = comment.name | slice: 0 %}
+          {% assign colorletter = comment.name | slice: -1 %}
+          <article id="comment-{{ forloop.index }}" class="{{ article_class }}" uid="{{ forloop.index }}">
+            <img src="{{ site.baseurl }}/assets/images/sitewide/{% if avatarletter == 'A' or avatarletter == 'a' or avatarletter == 'C' or avatarletter == 'c' or avatarletter == 'K' or avatarletter == 'k' or avatarletter == 'D' or avatarletter == 'd' or avatarletter == 'G' or avatarletter == 'g' or avatarletter == 'I' or avatarletter == 'i' or avatarletter == 'O' or avatarletter == 'o' or avatarletter == 'F' or avatarletter == 'f' or avatarletter == 'Q' or avatarletter == 'q' %}avatar{% elsif avatarletter == 'J' or avatarletter == 'j' or avatarletter == 'E' or avatarletter == 'e' or avatarletter == 'S' or avatarletter == 's' or avatarletter == 'R' or avatarletter == 'r' or avatarletter == 'T' or avatarletter == 't' or avatarletter == 'P' or avatarletter == 'p' or avatarletter == 'W' or avatarletter == 'w' or avatarletter == 'Y' or avatarletter == 'y' or avatarletter == 'U' or avatarletter == 'u' %}avatar-cat-eye{% else %}avatar-square{% endif %}.svg" alt="" id="avatar" style="background-color: {% if colorletter == 'N' or colorletter == 'n' or colorletter == 'Y' or colorletter == 'y' or colorletter == 'L' or colorletter == 'l' or colorletter == 'O' or colorletter == 'o' or colorletter == 'D' or colorletter == 'd' or colorletter == 'B' or colorletter == 'b' or colorletter == 'F' or colorletter == 'f' or colorletter == 'P' or colorletter == 'p' or colorletter == 'V' or colorletter == 'v' %}#28D4E0{% elsif colorletter == 'A' or colorletter == 'a' or colorletter == 'H' or colorletter == 'h' or colorletter == 'S' or colorletter == 's' or colorletter == 'T' or colorletter == 't' or colorletter == 'K' or colorletter == 'k' or colorletter == 'C' or colorletter == 'c' or colorletter == 'G' or colorletter == 'g' or colorletter == 'Q' or colorletter == 'q' or colorletter == 'Z' or colorletter == 'z' %}#48D67A{% else %}#e2e43a{% endif %}">
+            <a href="#{{ comment_id }}" title="Permalink to this comment">
+              <div id="namedatecomment">
+                <span class="s-display">
+                  {{- comment.name | strip_html -}}&ensp;
+                </span>
+                <span id="commentdate" class="s-textface bold">
+                  {{- comment.date | date: '%d %B %Y' -}}
+                </span>
+                <div id="postedcomment"class="s-textface">
+                  {{ comment.message | strip_html | markdownify }}
+                </div>
+              </div>
+            </a>
+          </article>
+
+
+
+
         {% endfor %}
       <!-- If there are not existing comments -->
       {% else %}
@@ -215,9 +235,38 @@ layout: default
           <summary id="postacommentsummary" class="xs-display postacommentbutton blackbg">
             Post a comment
           </summary>
-          <!-- New comment form -->
-          <div id="respond"> <!-- LIA: I think this div's id is used in the JS to insert new comments before it, see main.js, line 82 -->
-            {% include comment_form.html %}
+          <!-- Comment form -->
+          <div id="respond">
+            <form class="js-form form" method="post" action="{{ site.staticman_url }}" id="commentform">
+              <input type="hidden" name="options[origin]" value="{{ page.url | absolute_url }}">
+              <input type="hidden" name="options[parent]" value="{{ page.url | absolute_url }}">
+              <input type="hidden" id="comment-replying-to-uid" name="fields[replying_to_uid]" value="">
+              <input type="hidden" name="options[slug]" value="{{ page.slug }}">
+              <input type="hidden" name="options[reCaptcha][siteKey]" value="{{ site.reCaptcha.siteKey }}">
+              <input type="hidden" name="options[reCaptcha][secret]"  value="{{ site.reCaptcha.secret }}">
+              <!-- Name input field -->
+              <label for="name"></label>
+              <input class="boxinput s-textface" name="fields[name]" type="text" id="name" placeholder="Name" required/>
+              <!-- Email input field -->
+              <label for="email"></label>
+              <input class="boxinput s-textface" name="fields[email]" type="email" id="email" placeholder="Email (this won’t be shown or shared)" required/>
+              <!-- Honeypot -->
+              <label for="hp" style="display: none" hidden>
+                <input name="fields[hp]" id="hp" type="text" placeholder="Leave blank">
+              </label>
+              <!-- Comment message -->
+              <label for="message">
+                <textarea class="boxinput s-textface" name="fields[message]" type="text" id="message" placeholder="Comment" required></textarea>
+              </label>
+              <!-- reCAPTCHA -->
+              <div id="reCaptcha" class="g-recaptcha" data-sitekey="{{-site.reCaptcha.siteKey-}}"></div>
+              <!-- Post a comment button -->
+              <button class="xs-display boxbutton postacommentbutton blackbg" id="submit">
+                Post a comment
+              </button>
+              <!-- Loader -->
+              <img src="https://curiositycoloredglasses.com/assets/images/sitewide/loader.gif" id="commentloader" class="commentloaderhidden">
+            </form>
           </div>
           <!-- Scripts needed to submit comments via form -->
           <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
