@@ -183,9 +183,9 @@ layout: default
   {% if page.comments == true %}
     <section class="comments">
       <details class="commentsdetails" open>
+
       <!-- If there are existing comments -->
       {% if site.data.comments[page.slug] %}
-        <!-- Existing comments -->
         {% assign comments = site.data.comments[page.slug] | where_exp: "item", "item.replying_to_uid == ''" %}
         {% for commentcounter in comments %}
           {% if forloop.first %}
@@ -194,12 +194,9 @@ layout: default
             </summary>
           {% endif %}
         {% endfor %}
+        <!-- Pulling in existing comments -->
         {% assign comments_by_date = comments | sort: 'date' %}
         {% for comment in comments_by_date %}
-
-
-
-
           {%- capture article_class %}js-comment comment onecomment{% if comment.email == 'hello@curiositycoloredglasses.com' %} admin{% endif %}{% endcapture %}
           {% assign avatarletter = comment.name | slice: 0 %}
           {% assign colorletter = comment.name | slice: -1 %}
@@ -219,17 +216,15 @@ layout: default
               </div>
             </a>
           </article>
-
-
-
-
         {% endfor %}
+
       <!-- If there are not existing comments -->
       {% else %}
         <summary class="sectionsummary postpagesectionsummary commentssummary blackbg">
           <h3>Comments</h3>
         </summary>
       {% endif %}
+
         <!-- The comment-entry area -->
         <details id="postacommentdetails">
           <summary id="postacommentsummary" class="xs-display postacommentbutton blackbg">
@@ -268,14 +263,17 @@ layout: default
               <img src="https://curiositycoloredglasses.com/assets/images/sitewide/loader.gif" id="commentloader" class="commentloaderhidden">
             </form>
           </div>
+
           <!-- Scripts needed to submit comments via form -->
           <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
           <script src="{{ '/assets/js/comments.js' | relative_url }}"></script>
           <script src="https://www.google.com/recaptcha/api.js" async defer></script>
         </details>
       </details>
+
       <!-- Success or fail message after submit comment -->
       <div id="successmessage" class="successmessagehidden m-textface bold js-modal-text"></div>
+      
     </section>
   {% endif %} <!-- closing "if page.comments == true" -->
   </article>
