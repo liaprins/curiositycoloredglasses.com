@@ -31,7 +31,7 @@ layout: default
       </p>
     </div>
   </main>
-</div>
+</div> <!-- id="everythingexceptnav", opened inside default.html layout -->
 
 <!-- Blog articles grouped by year -->
 {% for year in postsByYear %}
@@ -43,8 +43,8 @@ layout: default
   </div>
   <!-- Area where results are per year -->
   <div class="resultarea archiveresultarea">
-    {% for post in year.items %}
-      {% include result.html %}
-    {% endfor %}
+  {% for post in year.items %}
+    {% include result.html %}
+  {% endfor %}
   </div>
 {% endfor %}
