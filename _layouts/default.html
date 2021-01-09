@@ -1,43 +1,191 @@
-{% include head-open.html %}
-{% include head-close.html %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
 
-<div id="everythingexceptnav">
-  <main>
-    <div class="desktopcontent">
-      <h2 id="pagetitle" class="extracontentpagetitle">{{ page.title }}</h2>
-      <span class="l-textface">
-        {{ content }}
-      </span>
-      <img src= "{{ site.baseurl }}/assets/images/sitewide/broken-glasses.jpg" alt="Illustration of broken glasses" id="brokenglasses">
-    </div>
-  </main>
+  <!-- Google Analytics -->
+  {% if jekyll.environment == "production" %}
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-124245560-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-124245560-1');
+    </script>
+  {% endif %}
 
-  <!-- FORMERLY footer-sitewide SNIPPET vvv ******************************************************************** -->
+    <!-- For PWA; also need serviceworker.js to be in the root of the site -->
+    <script>
+      if ("serviceWorker" in navigator) {
+        if (navigator.serviceWorker.controller) {
+          console.log("An active service worker found, no need to register");
+        } else {
+          // Register the service worker
+          navigator.serviceWorker
+          .register("{{ site.baseurl }}/serviceworker.js", {
+            scope: "./"
+          })
+          .then(function (reg) {
+            console.log("Service worker has been registered for scope: " + reg.scope);
+          });
+        }
+      }
+    </script>
 
-              <footer role="contentinfo">
-                <div id="footercontent">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="msapplication-TileColor" content="#e2e43a">
+    <meta name="theme-color" content="#e2e43a">
+    <meta property="og:url"                content="https://curiositycoloredglasses.com{{ page.url }}" />
+    <meta property="og:site_name"          content="{{ site.title }}" />
+    <meta property="og:title"              content="{% if page.url contains '/tags/' %}#{{ page.tag-name }}{% else %}{{ page.title }}{% endif %}" />
+    <meta property="og:description"        content="{% if page.title == 'Hello' or page.title == 'Question Queue' or page.title == 'Library' or page.title == 'Archive' %}{{ page.excerpt | strip_html | replace: '&nbsp;', ' ' | replace: 'perplex&shy;ing', 'perplexing' }}{% elsif page.layout == 'post' %}{{ page.share }}{% else %}{{ site.description }}{% endif %}" />
+    <meta property="og:image"              content="{% if page.layout == 'post' %}https://curiositycoloredglasses.com/assets/images/blogposts/{{ page.slug }}/{{ page.shareimage }}{% elsif page.title == 'Hello' %}https://curiositycoloredglasses.com/assets/images/helloimages/hello.jpg{% else %}https://curiositycoloredglasses.com/assets/images/sitewide/curiositycoloredglasses-facebook.jpg{% endif %}" />
+    <meta property="og:type"               content="{% if page.layout == 'post' %}article{% else %}website{% endif %}" />
+    <meta property="fb:app_id"             content="1816213758596939" />
+    <meta property="article:publisher"     content="{{ site.title }}" />
+    <meta property="article:author"        content="{{ page.author }}" />
+    <meta name="twitter:card"              content="summary_large_image" />
+    <meta name="twitter:site"              content="@curiositycolor" />
+    <meta name="twitter:creator"           content="@curiositycolor" />
+    <meta name="description" 				       content="{% if page.title == 'Hello' or page.title == 'Question Queue' or page.title == 'Library' or page.title == 'Archive' %}{{ page.excerpt | strip_html | replace: '&nbsp;', ' ' | replace: 'perplex&shy;ing', 'perplexing' }}{% elsif page.layout == 'post' %}{{ page.share }}{% else %}{{ site.description }}{% endif %}">
+    <meta name="keywords" 	       			   content="{%-if page.layout == 'post'-%}{%-for post in site.posts-%}{%-if post.url == page.url-%}{%-for tag in post.tags-%}{{ tag }},{%-endfor-%}{%-endif-%}{%-endfor-%}{%-else-%}investigation,facts,science,nature,illustration,{%-endif-%}learning,curiosity,data visualization,questions,education">
 
-                    {% include subscribe.html %}
+    <link rel="manifest" href="{{ site.baseurl }}/manifest.json">
+    <link rel="mask-icon" href="{{ site.baseurl }}/safari-pinned-tab.svg" color="#e2e43a">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl }}/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ site.baseurl }}/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ site.baseurl }}/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="{{ site.baseurl }}/chrome-512x512.png">
+    <link rel="icon" type="image/png" sizes="128x128" href="{{ site.baseurl }}/chrome-128x128.png">
 
-                  <!-- Link to my Instagram profile + Twitter + portfolio -->
-                  {% include follow.html %}
+    <title>
+      {% if page.title == 'Curiosity-Colored Glasses' %}{{ site.title }}{% else %}{% if page.url contains '/tags/' %}#{{ page.tag-name }}{% else %}{{ page.title }}{% endif %} | {{ site.title }}{% endif %}
+    </title>
 
-                </div>
-              </footer>
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/reset.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/fonts.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/{% if page.title == 'Question Queue' %}qq{% else %}global{% endif %}navfooter.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/somepages.css">
+    {% if page.title == 'Question Queue' %}
+      <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/qq.css">
+    {% endif %}
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/text.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/menu-hamburger.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/mediaqueries.css">
+    {% if page.title == 'Question Queue' %}
+      <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/qqmediaqueries-override.css">
+      <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/qq-position-override.css">
+    {% endif %}
+  </head>
 
-              <!--This is the pinterest script, instructed to place right before closing </body> tag-->
-              <script async defer src="//assets.pinterest.com/js/pinit.js">
-              </script>
+  <body>
+  {% if page.title != 'Question Queue' %}
+    <div id="everythingexceptnav">
+  {% endif %}
 
-              <!--This encompasses everything within <body> except for <nav>. This is so that there is an element that can be clicked on that will be anything except <nav>, that will be recognized in JS menu.js script, that can have an event listener applied when it is clicked on, that will close the <nav> -->
-              </div>
-              <!-- Menu has to be called here, to account for a major Safari bug: Safari renders anything measured in rems at 1px, if it comes after a <details> tag... and my menu is within a <details> tag, so it was messing up everything with rems in Safari. Moving menu to the very bottom means there is nothing in the html after it, so it is fine. The menu is styled in css to position it absolutely at the top -->
-              {% include menu.html %}
+  <!-- ******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************** -->
 
-              <!-- Calling the JS scripts used on everypage; they need to come after the menu is called, to else they will have no effect on the menu items they are intended for -->
-              {% include scripts-sitewide.html %}
+      {{ content }}
 
-  <!--FORMERLY footer-sitewide SNIPPET ^^^ ******************************************************************** -->
+  <!-- ******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************** -->
 
-    </body>
-  </html>
+      <footer role="contentinfo">
+        <div id="footercontent">
+
+          <!-- Subscribe -->
+          <form action="//curiositycoloredglasses.us14.list-manage.com/subscribe/post?u=05f8f85154975a52907f2ce4d&amp;id=086ebe8644" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+            <span class="mc-field-group">
+              <input type="email" value="" name="EMAIL" class="boxinput s-textface" id="mce-EMAIL" placeholder="Email address">
+            </span>
+            <!-- Honeypot -->
+            <span style="position: absolute; left: -5000px;" aria-hidden="true">
+              <input type="text" name="b_05f8f85154975a52907f2ce4d_086ebe8644" tabindex="-1" value="">
+            </span>
+            <!-- "Subscribe" button -->
+            <input type="submit" value="Subscribe" name="subscribe" class="xs-display boxbutton subscribebutton" id="mc-embedded-subscribe">
+          </form>
+          <!-- Message to see example posts -->
+          <p class="xs-textface" id="subscribemessage">
+            Find out about new posts!
+            <a href="http://us14.campaign-archive2.com/home/?u=05f8f85154975a52907f2ce4d&id=086ebe8644" title="View previous campaigns" target="_blank">
+              See an example email first.
+            </a>
+          </p>
+          <!-- MailChimp scripts -->
+          <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'>
+          </script>
+          <script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);
+          </script>
+
+          <!-- Follow -->
+          <span id="follow">
+            <!-- Link to my instagram page -->
+            <a href="https://www.instagram.com/curiositycoloredglasses/" title="Follow on Instagram" target="_blank">
+              <img src= "{{ site.baseurl }}/assets/images/sitewide/Instagram.svg" alt="Follow me on Instagram" id="instagramlogo" class="followicon socialicon">
+            </a>
+            <!-- Link to @CuriosityColor twitter page -->
+            <a href="https://twitter.com/CuriosityColor" title="Follow on Twitter" target="_blank">
+              <img src= "{{ site.baseurl }}/assets/images/sitewide/Twitter.svg" alt="Follow me on Twitter" class="followicon socialicon">
+            </a>
+            <!-- Link to my portfolio website -->
+            <a href="http://liaprins.com/" target="_blank" id="portfolio" class="m-textface bold">
+              liaprins.com
+            </a>
+          </span>
+
+        </div>
+      </footer>
+
+  {% if page.title != 'Question Queue' %}
+    </div> <!-- closing id="everythingexceptnav" which exists on every page except QQ -->
+  {% endif %}
+
+    <!-- Menu has to be called here, to account for a major Safari bug: Safari renders anything measured in rems at 1px, if it comes after a <details> tag... and my menu is within a <details> tag, so it was messing up everything with rems in Safari. Moving menu to the very bottom means there is nothing in the html after it, so it is fine. The menu is styled in css to position it absolutely at the top -->
+    <nav role="navigation">
+      <details id="navdetails" open>
+        <summary id="navsummary">
+        </summary>
+        <!-- Home glasses icon -->
+        <a href="{{ site.baseurl }}/" title="Curiosity-Colored Glasses">
+          <img src="{{ site.baseurl }}/assets/images/sitewide/home.svg" alt="Curiosity-Colored Glasses" id="homeicon" class="yellowhover">
+        </a>
+        <!-- Loop through mainpages list according to order number assigned in each page's front matter -->
+        <ul id="navlist">
+        {% assign main_pages = site.mainpages | sort: 'order' %}
+        {% for item in main_pages %}
+          {% unless item.title == 'Page not found' or item.title=='Search' %}
+          <a href="{{ site.baseurl }}{{ item.url }}" {% if page.url == item.url %}class="active"{% endif %} class="menuwordlink">
+            <li id="menuword" class="navnothome m-display yellowhover">
+              <span {% if page.url == item.url %}class="active2"{% endif %} href="{{ site.baseurl }}{{ item.url }}">
+                {{ item.title }}
+              </span>
+            </li>
+          </a>
+          {% endunless %}
+        {% endfor %}
+          <!-- Searchbar -->
+          <li id="navsearch" class="navnothome">
+            <div id="searchdecoy" title="Search" class="yellowhover" style="display: none;">
+              <img src="{{ site.baseurl }}/assets/images/sitewide/search.svg" alt="search" class="navsearchicon">
+            </div>
+            <form action="/search" method="get" id="navsearchform">
+              <input type="text" placeholder="search" name="query" id="navsearchinput" class="s-textface underlineinput">
+              <button type="submit" value="search" title="Search" id="navsearchbutton" class="searchbutton yellowhover">
+                <img src="{{ site.baseurl }}/assets/images/sitewide/search.svg" alt="search" class="navsearchicon">
+              </button>
+            </form>
+          </li>
+        </ul>
+      </details>
+    </nav>
+
+    <!-- Sitewide scripts -->
+    <script src="{{ site.baseurl }}/assets/js/menu.js">
+    </script>
+    <script src="{{ site.baseurl }}/assets/js/search.js">
+    </script>
+    <script async defer src="//assets.pinterest.com/js/pinit.js">
+    </script>
+
+  </body>
+</html>

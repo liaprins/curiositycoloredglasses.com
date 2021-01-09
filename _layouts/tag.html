@@ -1,14 +1,12 @@
-{% include head-open.html %}
-{% include head-close.html %}
+---
+layout: default
+---
 
-<!-- This encompasses everything within <body> except for <nav>, so that there is an element that can be clicked on that will be anything except <nav>,
-that will be recognized in JS menu.js script, that can have an event listener applied when it is clicked on, that will close the <nav> -->
-<div id="everythingexceptnav">
-  {% assign tagname = page.url | replace: '/tags/', '' %}
   <main class="desktopcontent">
 
     <!-- Titling the page after the tag that brought us here -->
     <p id="tagpagename" class="xl-textface tagnobackarrow">
+      {% assign tagname = page.url | replace: '/tags/', '' %}
       #{{ tagname }}
     </p>
 
@@ -22,79 +20,3 @@ that will be recognized in JS menu.js script, that can have an event listener ap
   <div class="resultarea">
     {{ content }}
   </div>
-
-<!-- FORMERLY footer-sitewide SNIPPET vvv ******************************************************************** -->
-
-    <footer role="contentinfo">
-      <div id="footercontent">
-
-        {% include subscribe.html %}
-
-        <!-- FOLLOW -->
-        <!-- Link to my Instagram profile + Twitter + portfolio -->
-        <span id="follow">
-        	<!-- Link to my instagram page -->
-        	<a href="https://www.instagram.com/curiositycoloredglasses/" title="Follow on Instagram" target="_blank">
-        		<img src= "/../assets/images/sitewide/Instagram.svg" alt="Follow me on Instagram" id="instagramlogo" class="followicon socialicon">
-        	</a>
-        	<!-- Link to @CuriosityColor twitter page -->
-        	<a href="https://twitter.com/CuriosityColor" title="Follow on Twitter" target="_blank">
-        		<img src= "/../assets/images/sitewide/Twitter.svg" alt="Follow me on Twitter" class="followicon socialicon">
-        	</a>
-        	<!-- Link to my portfolio website -->
-        	<a href="http://liaprins.com/" target="_blank" id="portfolio" class="m-textface bold">
-        		liaprins.com
-        	</a>
-        </span>
-
-      </div>
-    </footer>
-
-    <!--This is the pinterest script, instructed to place right before closing </body> tag-->
-    <script async defer src="//assets.pinterest.com/js/pinit.js">
-    </script>
-
-    <!--This encompasses everything within <body> except for <nav>. This is so that there is an element that can be clicked on that will be anything except <nav>, that will be recognized in JS menu.js script, that can have an event listener applied when it is clicked on, that will close the <nav> -->
-  </div>
-  <!-- Menu has to be called here, to account for a major Safari bug: Safari renders anything measured in rems at 1px, if it comes after a <details> tag... and my menu is within a <details> tag, so it was messing up everything with rems in Safari. Moving menu to the very bottom means there is nothing in the html after it, so it is fine. The menu is styled in css to position it absolutely at the top -->
-  <nav role="navigation">
-    <details id="navdetails" open>
-      <summary id="navsummary">
-      </summary>
-      <!-- Home glasses icon -->
-      <a href="{{ site.baseurl }}/" title="Curiosity-Colored Glasses">
-        <img src="{{ site.baseurl }}/assets/images/sitewide/home.svg" alt="Curiosity-Colored Glasses" id="homeicon" class="yellowhover">
-      </a>
-      <ul id="navlist">
-        {% assign main_pages = site.mainpages | sort: 'order' %}
-        {% for item in main_pages %}
-          {% unless item.title == 'Page not found' or item.title=='Search' %}
-          <a href="{{ site.baseurl }}{{ item.url }}" {% if page.url == item.url %}class="active"{% endif %} class="menuwordlink">
-            <li id="menuword" class="navnothome m-display yellowhover">
-              <span {% if page.url == item.url %}class="active2"{% endif %} href="{{ site.baseurl }}{{ item.url }}">
-                {{ item.title }}</span></li></a>
-          {% endunless %}
-        {% endfor %}
-      	<!-- I added the searchbar snippet here, inside a list item, so it will be part of the menu list -->
-      	<li id="navsearch" class="navnothome">
-          <div id="searchdecoy" title="Search" class="yellowhover" style="display: none;">
-            <img src="{{ site.baseurl }}/assets/images/sitewide/search.svg" alt="search" class="navsearchicon">
-          </div>
-          <form action="/search.html" method="get" id="navsearchform">
-            <input type="text" placeholder="search" name="query" id="navsearchinput" class="s-textface underlineinput">
-            <button type="submit" value="search" title="Search" id="navsearchbutton" class="searchbutton yellowhover">
-              <img src="{{ site.baseurl }}/assets/images/sitewide/search.svg" alt="search" class="navsearchicon">
-            </button>
-          </form>
-  			</li>
-  		</ul>
-    </details>
-  </nav>
-
-  <!-- Calling the JS scripts used on everypage; they need to come after the menu is called, to else they will have no effect on the menu items they are intended for -->
-  {% include scripts-sitewide.html %}
-
-<!--FORMERLY footer-sitewide SNIPPET ^^^ ******************************************************************** -->
-
-  </body>
-</html>
