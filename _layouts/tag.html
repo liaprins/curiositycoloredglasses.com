@@ -2,21 +2,21 @@
 layout: default
 ---
 
-  <main class="desktopcontent">
+<main class="desktopcontent">
 
-    <!-- Titling the page after the tag that brought us here -->
-    <p id="tagpagename" class="xl-textface tagnobackarrow">
-      {% assign tagname = page.url | replace: '/tags/', '' %}
-      #{{ tagname }}
-    </p>
+  <!-- Titling the page after the tag that brought us here -->
+  <p id="tagpagename" class="xl-textface tagnobackarrow">
+    {% assign tagname = page.url | replace: '/tags/', '' %}
+    #{{ tagname }}
+  </p>
 
-    <!-- Intro sentence (currently none) -->
-    <span class="l-textface">
-      {{ page.intro }}
-    </span>
-  </main>
+  <!-- Intro sentence (currently none) -->
+  <span class="l-textface">
+    {{ page.intro }}
+  </span>
+</main>
 
-  <!-- Resulting posts -->
-  <div class="resultarea">
-    {{ content }}
-  </div>
+<!-- Resulting posts -->
+<div class="resultarea">
+  {{ content }}
+</div>

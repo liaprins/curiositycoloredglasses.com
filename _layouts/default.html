@@ -136,8 +136,8 @@
         </div>
       </footer>
 
-  {% if page.title != 'Question Queue' %}
-    </div> <!-- closing id="everythingexceptnav" which exists on every page except QQ -->
+  {% if page.title != 'Question Queue' or page.title != 'Archive' %}
+    </div> <!-- closing id="everythingexceptnav" which exists on every page except QQ, and is closed within Archive's own layout -->
   {% endif %}
 
     <!-- Menu has to be called here, to account for a major Safari bug: Safari renders anything measured in rems at 1px, if it comes after a <details> tag... and my menu is within a <details> tag, so it was messing up everything with rems in Safari. Moving menu to the very bottom means there is nothing in the html after it, so it is fine. The menu is styled in css to position it absolutely at the top -->

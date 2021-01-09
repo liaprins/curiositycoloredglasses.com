@@ -2,99 +2,99 @@
 layout: default
 ---
 
-  <div id="blognametagline" class="mockmain">
-    <!-- Website name + tagline, etc -->
-    <!-- Using <header> to group these, so they can have the same width, etc -->
-    <header>
-    	<h1 class="blackbg">
-    		<!-- "Curiosity-Colored Glasses" -->
-    		{{ page.title }}
-    	</h1>
-    	<p id="tagline" class="l-textface bold">
-        {{ content }}
-    	</p>
-    </header>
-  </div>
+<div id="blognametagline" class="mockmain">
+  <!-- Website name + tagline, etc -->
+  <!-- Using <header> to group these, so they can have the same width, etc -->
+  <header>
+  	<h1 class="blackbg">
+  		<!-- "Curiosity-Colored Glasses" -->
+  		{{ page.title }}
+  	</h1>
+  	<p id="tagline" class="l-textface bold">
+      {{ content }}
+  	</p>
+  </header>
+</div>
 
-  <main>
+<main>
 
-  <!-- Pulling in date, postglasses, author, excerpt, and tags for each post -->
-  {% for post in paginator.posts %}
-    <article id="homepagepost">
-      <!-- Date for each article -->
-      <p id="homedate" class="date m-textface bold">
-        <time datetime="{{ post.date }}" pubdate="pubdate">
-          {{ post.date | date: '%d %B %Y' }}
-        </time>
-      </p>
-      <!-- Glasses + post title link to post -->
-      <a href="{{ site.baseurl }}{{ post.url }}" id="postlink">
-        <!-- Post glasses icon -->
-        <div class="postglassescontainer">
-          <div class="stem shortstem leftstem"></div><div style="background-image: url({{ site.baseurl }}/assets/images/blogposts/{{ post.slug }}/-l-{{ post.slug }}{% if post.leftextension %}{{ post.leftextension }}{% else %}.jpg{% endif %})" class="circle leftcircle"></div><div class="stem centerstem"></div><div style="background-image: url({{ site.baseurl }}/assets/images/blogposts/{{ post.slug }}/-r-{{ post.slug }}{% if post.rightextension %}{{ post.rightextension }}{% else %}.jpg{% endif %})" class="circle rightcircle"></div><div class="stem shortstem rightstem"></div>
-        </div>
-        <!-- Name of post -->
-        <h2 class="posttitle">
-          {{ post.title | markdownify | smartify }}
-        </h2>
-      </a>
-      <!-- If there is a guest writer -->
-    {% if post.author and post.author != "Lia Prins" %}
-      <span class="guestpostbanner xxs-display">Guest post</span>
-      <!-- If there is a LINK for the guest writer -->
-      {% if post.authorlink %}
-        <span id="writtenby" class="xs-textface bold">by</span><span class="writer s-display"><a href="{{ post.authorlink }}" target="_blank" class="yellowhover">&nbsp{{ post.author }}</a>
-        </span>
-        <!-- If there is NOT a LINK for the guest writer -->
-      {% else %}
-        <span id="writtenby" class="xs-textface bold">by</span><span class="writer s-display">&nbsp{{ post.author }}
-        </span>
-      {% endif %}
-    <!-- "Lia Prins" to show up as default author unless a guest writer is applied in panel -->
-    {% elsif post.author and post.author == "Lia Prins" %}
-      <span id="writtenby" class="xs-textface bold">by</span><span class="writer s-display"><a href="https://liaprins.com" target="_blank" class="yellowhover">&nbspLia Prins</a>
+<!-- Pulling in date, postglasses, author, excerpt, and tags for each post -->
+{% for post in paginator.posts %}
+  <article id="homepagepost">
+    <!-- Date for each article -->
+    <p id="homedate" class="date m-textface bold">
+      <time datetime="{{ post.date }}" pubdate="pubdate">
+        {{ post.date | date: '%d %B %Y' }}
+      </time>
+    </p>
+    <!-- Glasses + post title link to post -->
+    <a href="{{ site.baseurl }}{{ post.url }}" id="postlink">
+      <!-- Post glasses icon -->
+      <div class="postglassescontainer">
+        <div class="stem shortstem leftstem"></div><div style="background-image: url({{ site.baseurl }}/assets/images/blogposts/{{ post.slug }}/-l-{{ post.slug }}{% if post.leftextension %}{{ post.leftextension }}{% else %}.jpg{% endif %})" class="circle leftcircle"></div><div class="stem centerstem"></div><div style="background-image: url({{ site.baseurl }}/assets/images/blogposts/{{ post.slug }}/-r-{{ post.slug }}{% if post.rightextension %}{{ post.rightextension }}{% else %}.jpg{% endif %})" class="circle rightcircle"></div><div class="stem shortstem rightstem"></div>
+      </div>
+      <!-- Name of post -->
+      <h2 class="posttitle">
+        {{ post.title | markdownify | smartify }}
+      </h2>
+    </a>
+    <!-- If there is a guest writer -->
+  {% if post.author and post.author != "Lia Prins" %}
+    <span class="guestpostbanner xxs-display">Guest post</span>
+    <!-- If there is a LINK for the guest writer -->
+    {% if post.authorlink %}
+      <span id="writtenby" class="xs-textface bold">by</span><span class="writer s-display"><a href="{{ post.authorlink }}" target="_blank" class="yellowhover">&nbsp{{ post.author }}</a>
+      </span>
+      <!-- If there is NOT a LINK for the guest writer -->
+    {% else %}
+      <span id="writtenby" class="xs-textface bold">by</span><span class="writer s-display">&nbsp{{ post.author }}
       </span>
     {% endif %}
-      <!-- Intro for each article -->
-      <p id="homeintro" class="m-textface hyphenate">
-        {{ post.excerpt | remove: '<p>' | remove: '</p>' }}
-        <!-- "Read more" -->
-        <!-- I put "&nbsp" between "Read" and "more" so they would never split onto separate lines -->
-        <a href="{{ site.baseurl }}{{ post.url }}" id="readmore" class="s-display yellowhover">
-          &nbspRead&nbspmore
-        </a>
-      </p>
-      <!-- Tags: for loop pulling in the tags for each article -->
-      <div id="hometaggroup" class="s-textface">
-      {% for posttag in post.tags %}
-        <a href="{{ site.baseurl }}/tags/{{ posttag }}" id="hometag" class="xs-textface tag yellowhover">
-          <!-- Adding the 2 x "no break spaces" (&nbsp) to act as L-padding (like for "Read more" button), because using actual padding-left measurements can separate the padding from the word if the word starts on a new line -->
-          &nbsp&nbsp#{{ posttag }}
-        </a>
-      {% endfor %}
-      </div>
-    </article>
-  {% endfor %}
-
-  <!-- Pagination links -->
-  {% if paginator.total_pages > 1 %}
-    <div class="pagination">
-    {% if paginator.previous_page %}
-      <a href="{{ paginator.previous_page_path | relative_url }}">
-        <img src="{{ site.baseurl }}/assets/images/sitewide/left-arrowhead.svg" class="paginationarrows yellowhover">
-      </a>
-    {% else %}
-      <div class="paginationplaceholder"></div>
-    {% endif %}
-      <span class="pagenumbers l-textface"><strong>{{ paginator.page }} / {{ paginator.total_pages }}</strong></span>
-    {% if paginator.next_page %}
-      <a href="{{ paginator.next_page_path | relative_url }}">
-        <img src="{{ site.baseurl }}/assets/images/sitewide/right-arrowhead.svg" class="paginationarrows yellowhover">
-      </a>
-    {% else %}
-      <div class="paginationplaceholder"></div>
-    {% endif %}
-    </div>
+  <!-- "Lia Prins" to show up as default author unless a guest writer is applied in panel -->
+  {% elsif post.author and post.author == "Lia Prins" %}
+    <span id="writtenby" class="xs-textface bold">by</span><span class="writer s-display"><a href="https://liaprins.com" target="_blank" class="yellowhover">&nbspLia Prins</a>
+    </span>
   {% endif %}
+    <!-- Intro for each article -->
+    <p id="homeintro" class="m-textface hyphenate">
+      {{ post.excerpt | remove: '<p>' | remove: '</p>' }}
+      <!-- "Read more" -->
+      <!-- "&nbsp" between "Read" and "more" so they would never split onto separate lines -->
+      <a href="{{ site.baseurl }}{{ post.url }}" id="readmore" class="s-display yellowhover">
+        &nbspRead&nbspmore
+      </a>
+    </p>
+    <!-- Tags: for loop pulling in the tags for each article -->
+    <div id="hometaggroup" class="s-textface">
+    {% for posttag in post.tags %}
+      <a href="{{ site.baseurl }}/tags/{{ posttag }}" id="hometag" class="xs-textface tag yellowhover">
+        <!-- Adding the 2 x "no break spaces" (&nbsp) to act as L-padding (like for "Read more" button), because using actual padding-left measurements can separate the padding from the word if the word starts on a new line -->
+        &nbsp&nbsp#{{ posttag }}
+      </a>
+    {% endfor %}
+    </div>
+  </article>
+{% endfor %}
 
-  </main>
+<!-- Pagination links -->
+{% if paginator.total_pages > 1 %}
+  <div class="pagination">
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path | relative_url }}">
+      <img src="{{ site.baseurl }}/assets/images/sitewide/left-arrowhead.svg" class="paginationarrows yellowhover">
+    </a>
+  {% else %}
+    <div class="paginationplaceholder"></div>
+  {% endif %}
+    <span class="pagenumbers l-textface"><strong>{{ paginator.page }} / {{ paginator.total_pages }}</strong></span>
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path | relative_url }}">
+      <img src="{{ site.baseurl }}/assets/images/sitewide/right-arrowhead.svg" class="paginationarrows yellowhover">
+    </a>
+  {% else %}
+    <div class="paginationplaceholder"></div>
+  {% endif %}
+  </div>
+{% endif %}
+
+</main>

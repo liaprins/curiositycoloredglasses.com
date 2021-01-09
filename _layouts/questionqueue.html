@@ -2,67 +2,67 @@
 layout: default
 ---
 
-  <!-- Positions glasses -->
-  <script src="{{ site.baseurl }}/assets/js/qq-position.js">
-  </script>
+<!-- Positions glasses -->
+<script src="{{ site.baseurl }}/assets/js/qq-position.js">
+</script>
 
-  <!-- Parallax scroll -->
-  <script src="{{ site.baseurl }}/assets/js/qq-parallax.js">
-  </script>
+<!-- Parallax scroll -->
+<script src="{{ site.baseurl }}/assets/js/qq-parallax.js">
+</script>
 
-  <!-- Reveals question + content upon click -->
-  <script src="{{ site.baseurl }}/assets/js/qq.js">
-  </script>
+<!-- Reveals question + content upon click -->
+<script src="{{ site.baseurl }}/assets/js/qq.js">
+</script>
 
-  <!-- Title of the page -->
-  <h2 id="qqpagetitle" class="extracontentpagetitle">
-    <p>
-      {{ page.title }}
-    </p>
-  </h2>
+<!-- Title of the page -->
+<h2 id="qqpagetitle" class="extracontentpagetitle">
+  <p>
+    {{ page.title }}
+  </p>
+</h2>
 
-  <!-- Intro sentence -->
-  <span id="qqpagetext" class="l-textface">
-    {{ content }}
-  </span>
+<!-- Intro sentence -->
+<span id="qqpagetext" class="l-textface">
+  {{ content }}
+</span>
 
-  <!-- Binocular sections -->
-  <div id="qqparent">
-  {% for item in site.data.contentorder.questionqueueorder %}
-    {% for q in site.questionqueuecontent %}
-      {% assign qfilename = q.url | replace: '/questionqueuecontent/', '' %}
-      {% if item.file == qfilename %}
-        <!-- "0rem" MARGINS BELOW ARE JUST PLACEHOLDERS UNTIL I FIGURE OUT HOW TO PULL IN RANDOMIZED MARGIN SELECTION (CONFER ORIGINAL KIRBY FILE) -->
-        <span class="qqpiece" style="margin-left:0rem; margin-top:0rem">
-          <!-- Binoculars -->
-          <div data-clickable="yes" data-id="{{ qfilename }}" class="qqglassescontainer {% if item.size == 'large' %}largeqqglasses{% endif %} {% if item.size == 'medium' %}mediumqqglasses{% endif %} {% if item.size == 'small' %}smallqqglasses{% endif %}" title="{{ q.question }}" alt="{{ q.question }}">
-            <div data-innards-clickable="yes" class="lens l-lens" style="background-image: url({{ site.baseurl }}/assets/images/questionqueueimages/{{ qfilename }}-l{% if q.leftextension %}{{ q.leftextension }}{% else %}.jpg{% endif %})">
-            </div>
-            <div data-innards-clickable="yes" class="knob">
-            </div>
-            <div data-innards-clickable="yes" class="{% if item.size == 'large' %}trapezoid-large{% endif %} {% if item.size == 'medium' %}trapezoid-medium{% endif %} {% if item.size == 'small' %}trapezoid-small{% endif %}">
-            </div>
-            <div data-innards-clickable="yes" class="lens r-lens" style="background-image: url({{ site.baseurl }}/assets/images/questionqueueimages/{{ qfilename }}-r{% if q.rightextension %}{{ q.rightextension }}{% else %}.jpg{% endif %})">
-            </div>
+<!-- Binocular sections -->
+<div id="qqparent">
+{% for item in site.data.contentorder.questionqueueorder %}
+  {% for q in site.questionqueuecontent %}
+    {% assign qfilename = q.url | replace: '/questionqueuecontent/', '' %}
+    {% if item.file == qfilename %}
+      <!-- "0rem" MARGINS BELOW ARE JUST PLACEHOLDERS UNTIL I FIGURE OUT HOW TO PULL IN RANDOMIZED MARGIN SELECTION (CONFER ORIGINAL KIRBY FILE) -->
+      <span class="qqpiece" style="margin-left:0rem; margin-top:0rem">
+        <!-- Binoculars -->
+        <div data-clickable="yes" data-id="{{ qfilename }}" class="qqglassescontainer {% if item.size == 'large' %}largeqqglasses{% endif %} {% if item.size == 'medium' %}mediumqqglasses{% endif %} {% if item.size == 'small' %}smallqqglasses{% endif %}" title="{{ q.question }}" alt="{{ q.question }}">
+          <div data-innards-clickable="yes" class="lens l-lens" style="background-image: url({{ site.baseurl }}/assets/images/questionqueueimages/{{ qfilename }}-l{% if q.leftextension %}{{ q.leftextension }}{% else %}.jpg{% endif %})">
           </div>
-          <!-- QQ flyout with content -->
-          <div class="qqcontents {% if item.size == 'large' %}qqcontents-large{% endif %} {% if item.size == 'medium' %}qqcontents-medium{% endif %} {% if item.size == 'small' %}qqcontents-small{% endif %}" style="display: none;" data-edgemargin="">
-            <div class="sharkfin">
-            </div>
-            <div class="bordercover">
-            </div>
-            <img src= "{{ site.baseurl }}/assets/images/sitewide/x.svg" alt="close" id="qq-x" class="yellowhover close-x">
-            <div class="qqquestion s-display">
-              {{ q.question | markdownify }}
-            </div>
-            <div class="qqdescription s-textface">
-              {{ q.content | markdownify }}
-            </div>
+          <div data-innards-clickable="yes" class="knob">
           </div>
-        </span>
-      {% endif %}
-    {% endfor %}
+          <div data-innards-clickable="yes" class="{% if item.size == 'large' %}trapezoid-large{% endif %} {% if item.size == 'medium' %}trapezoid-medium{% endif %} {% if item.size == 'small' %}trapezoid-small{% endif %}">
+          </div>
+          <div data-innards-clickable="yes" class="lens r-lens" style="background-image: url({{ site.baseurl }}/assets/images/questionqueueimages/{{ qfilename }}-r{% if q.rightextension %}{{ q.rightextension }}{% else %}.jpg{% endif %})">
+          </div>
+        </div>
+        <!-- QQ flyout with content -->
+        <div class="qqcontents {% if item.size == 'large' %}qqcontents-large{% endif %} {% if item.size == 'medium' %}qqcontents-medium{% endif %} {% if item.size == 'small' %}qqcontents-small{% endif %}" style="display: none;" data-edgemargin="">
+          <div class="sharkfin">
+          </div>
+          <div class="bordercover">
+          </div>
+          <img src= "{{ site.baseurl }}/assets/images/sitewide/x.svg" alt="close" id="qq-x" class="yellowhover close-x">
+          <div class="qqquestion s-display">
+            {{ q.question | markdownify }}
+          </div>
+          <div class="qqdescription s-textface">
+            {{ q.content | markdownify }}
+          </div>
+        </div>
+      </span>
+    {% endif %}
   {% endfor %}
+{% endfor %}
 </div>    <!-- close .qqparent -->
 
 <div id="background"></div>

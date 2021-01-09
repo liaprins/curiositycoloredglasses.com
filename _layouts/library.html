@@ -2,43 +2,43 @@
 layout: default
 ---
 
-  <main>
-    <div class="desktopcontent">
-      <!-- Title of the page -->
-      <h2 id="librarypagename" class="extracontentpagetitle">
-        {{ page.title }}
-      </h2>
-      <!-- intro text for the page -->
-      <span id="libraryintro" class="l-textface">
-        {{ content }}
-      </span>
-    </div>
-  </main>
+<main>
+  <div class="desktopcontent">
+    <!-- Title of the page -->
+    <h2 id="librarypagename" class="extracontentpagetitle">
+      {{ page.title }}
+    </h2>
+    <!-- intro text for the page -->
+    <span id="libraryintro" class="l-textface">
+      {{ content }}
+    </span>
+  </div>
+</main>
 
-  <!-- Library entries section -->
-  <div id="librarysection">
-  {% for item in site.data.contentorder.libraryorder %}
-    {% for libraryentry in site.librarycontent %}
-      {% assign filename = libraryentry.url | replace: '/librarycontent/', '' %}
-      {% if item.file == filename %}
-        <!-- Image per library entry -->
-        <img src="{{ site.baseurl }}/assets/images/libraryimages/{{ filename }}.jpg" alt="{{ libraryentry.alttext }}" title="{{ libraryentry.title }}" class="libraryicon" data-id="{{ filename }}" data-clickable="yes" >
-        <!-- Content per library entry (hidden until select an entry's image) -->
-        <article style="display: none;" class="libraryentry">
-          <img src= "{{ site.baseurl }}/assets/images/sitewide/x.svg" alt="close" id="library-x" class="yellowhover close-x">
-          <span class="libraryentryname s-display">
-            <p>
-              {{ libraryentry.title | markdownify }}
-            </p>
-          </span>
-          <div class="libraryentryabout s-textface">
-            {{ libraryentry.content | markdownify }}
-          </div>
-        </article>
-      {% endif %}
-    {% endfor %}
+<!-- Library entries section -->
+<div id="librarysection">
+{% for item in site.data.contentorder.libraryorder %}
+  {% for libraryentry in site.librarycontent %}
+    {% assign filename = libraryentry.url | replace: '/librarycontent/', '' %}
+    {% if item.file == filename %}
+      <!-- Image per library entry -->
+      <img src="{{ site.baseurl }}/assets/images/libraryimages/{{ filename }}.jpg" alt="{{ libraryentry.alttext }}" title="{{ libraryentry.title }}" class="libraryicon" data-id="{{ filename }}" data-clickable="yes" >
+      <!-- Content per library entry (hidden until select an entry's image) -->
+      <article style="display: none;" class="libraryentry">
+        <img src= "{{ site.baseurl }}/assets/images/sitewide/x.svg" alt="close" id="library-x" class="yellowhover close-x">
+        <span class="libraryentryname s-display">
+          <p>
+            {{ libraryentry.title | markdownify }}
+          </p>
+        </span>
+        <div class="libraryentryabout s-textface">
+          {{ libraryentry.content | markdownify }}
+        </div>
+      </article>
+    {% endif %}
   {% endfor %}
-  </div> <!-- #librarysection -->
+{% endfor %}
+</div> <!-- #librarysection -->
 
-  <script src="{{ site.baseurl }}/assets/js/library.js">
-  </script>
+<script src="{{ site.baseurl }}/assets/js/library.js">
+</script>
