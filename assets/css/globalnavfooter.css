@@ -149,6 +149,7 @@ footer {
     color: black;    }
 
 .subscribebutton {
+  cursor: pointer;
     -webkit-appearance: none !important;
     width: 78.571vw;    /* 22/28 cols */
     margin: 0.9375rem 0;    /* Half the height of the input field and of the button */
