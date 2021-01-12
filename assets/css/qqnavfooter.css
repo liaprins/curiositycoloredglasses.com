@@ -10,15 +10,15 @@ html, body {
 *, *:before, *:after {
     box-sizing: border-box;   }
 
-.yellowhover:hover { 
+.yellowhover:hover {
     background-color: #e2e43a;
-    color: black;    } 
+    color: black;    }
 
 .yellowhover {
   -webkit-transition: background-color .2s ease-out;
   -moz-transition: background-color .2s ease-out;
   -o-transition: background-color .2s ease-out;
-  transition: background-color .2s ease-out;    } 
+  transition: background-color .2s ease-out;    }
 
 /* NAV -------------------------------------------------- */
 
@@ -43,7 +43,7 @@ summary {    /* for FF, this hides the triangle toggle! */
     border-width: 0.125rem;
     border-color: black;
     background-color: transparent;
-    color: black;    }    
+    color: black;    }
 
 .searchbutton {
     background-color: transparent;
@@ -60,7 +60,7 @@ summary {    /* for FF, this hides the triangle toggle! */
     width: calc(67.857vw - 1.6rem);    }
 
 #navsearchinput::-webkit-input-placeholder {
-   color: #686b31;    }    
+   color: #686b31;    }
 
 #navsearchbutton {
     height: 1.688rem;
@@ -105,7 +105,7 @@ footer {
     border-color: black;
     color: black;
     background-color: transparent;
-    height: 1.875rem;    
+    height: 1.875rem;
     width: 78.571vw;
     padding: 0.033rem 0.233rem 0 0.467rem;    }
 
@@ -121,7 +121,7 @@ footer {
     background-color: black;
     border: solid;
     border-width: 0.125rem;
-    border-color: black;    
+    border-color: black;
     padding: 0.125rem 0.469rem 0 0.469rem;
     height: 1.8rem;
     -webkit-transition: color .2s ease-out;
@@ -132,6 +132,7 @@ footer {
     color: black;    }
 
 .subscribebutton {
+  cursor: pointer;
     -webkit-appearance: none !important;
     width: 78.571vw;
     margin: 0.9375rem 0;
@@ -159,7 +160,7 @@ footer {
 .socialicon {
     box-sizing: content-box;
     height: 0.844rem;
-    padding: 0.422rem;    
+    padding: 0.422rem;
     cursor: pointer;    }
 
 .followicon {
@@ -171,40 +172,3 @@ footer {
 
 #portfolio {
     margin-left: 0.422rem;    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
