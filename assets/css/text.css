@@ -8,13 +8,16 @@ a {
     color: black;    }
 
 #homeintro a:not(#readmore),    /* All the links in the home intro paragraph except "Read more" */
-#postintro a, 
+#postintro a,
 #posttext a:not(.vocabwordinline),    /* All the links in the post's text except vocab words */
 figcaption a,
 #postedcomment a,
 #abouttext a,
 #qqpagetext a,
-.libraryentryabout a {
+.libraryentryabout a,
+.definition a,
+.notecontent a,
+.qqdescription a {
     /* text-decoration: underline; */    /* Leaving this as an alternative option until I settle on final solution for link styling */
     /* text-underline-position: under; */    /* This places the underline under the text with extra space to prevent crossing descenders |     /* Leaving this as an alternative option until I settle on final solution for link styling */
     /* text-decoration-color: #e2e43a; */    /* Leaving this as an alternative option until I settle on final solution for link styling */
@@ -24,7 +27,7 @@ figcaption a,
     cursor: pointer;    }
 
 #homeintro a:hover:not(#readmore),    /* All the links in the home intro paragraph except "Read more" */
-#postintro a:hover, 
+#postintro a:hover,
 #posttext a:not(.vocabwordinline):hover,    /* All the links in the post's text except vocab words */
 figcaption a:hover,
 #postedcomment a:hover,
@@ -122,7 +125,7 @@ h5 {    /* This is reserved for sub-headings within post content */
     font-family: 'Sintesi_Sans_Demi-Bold',  Geneva, Verdana, "Lucida Sans", "Lucida Grande", Arial, sans-serif;    /* Making the headers bold */
     margin-top:  2.048rem;    }
 
-.l-textface { 
+.l-textface {
     font-size: 15px;    /* Based on 1.2 ratio (5:6, Minor Third) typescale with 12.5px base at level 0, and this at level 1 | Fallback for browser's not processing rems */
     font-size: 0.938rem;    /* This is the rem equivalent of the px size */
     font-family: 'Sintesi_Sans_Light',  Geneva, Verdana, "Lucida Sans", "Lucida Grande", Arial, sans-serif;    }    /* This font wasn't being recognized by QQ page unless explicitly called here */
@@ -151,7 +154,7 @@ h6 {    /* This is reserved for sub-headings within post content */
     display: block !important;
     line-height: 1;
     margin-top: -0.543rem !important;
-    font-size: 0;    }    /* Half of caption's font-size (xs-textface) */    
+    font-size: 0;    }    /* Half of caption's font-size (xs-textface) */
 
 .bold {
     font-family: 'Sintesi_Sans_Demi-Bold', Geneva, Verdana, "Lucida Sans", "Lucida Grande", Arial, sans-serif;    }
@@ -194,13 +197,3 @@ sub {
 
 sup a {
     border-bottom-style: none !important;    }
-
-
-
-
-
-
-
-
-
-
