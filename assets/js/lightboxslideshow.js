@@ -17,7 +17,8 @@ function removeHashReturnScroll() {
     // remove #hash
     history.pushState("", document.title, window.location.pathname + window.location.search);
     // return scrollability
-    document.documentElement.style.overflow = 'auto';
+    // document.documentElement.style.overflow = 'auto';
+    document.documentElement.style.overflowY = 'auto';
 }
 
 
