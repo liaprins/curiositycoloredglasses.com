@@ -16,8 +16,7 @@
 function removeHashReturnScroll() {
     // remove #hash
     history.pushState("", document.title, window.location.pathname + window.location.search);
-    // return scrollability
-    // document.documentElement.style.overflow = 'auto';
+    // return scrollability, but preventing sidescrollability by restricting to y-axis
     document.documentElement.style.overflowY = 'auto';
 }
 

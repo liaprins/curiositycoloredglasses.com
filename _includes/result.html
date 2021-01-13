@@ -9,7 +9,8 @@
     </p>
     <!-- Postglasses image -->
     <div class="resultglassescontainer">
-      <div class="resultstem resultshortstem resultleftstem"></div><div style="background-image: url({{ site.baseurl }}/assets/images/blogposts/{{ post.slug }}/-l-{{ post.slug }}.jpg)" class="resultcircle resultleftcircle"></div><div class="resultstem resultcenterstem"></div><div style="background-image: url({{ site.baseurl }}/assets/images/blogposts/{{ post.slug }}/-r-{{ post.slug }}.jpg)" class="resultcircle resultrightcircle"></div><div class="resultstem resultshortstem resultrightstem"></div>
+      
+      <div class="resultstem resultshortstem resultleftstem"></div><div style="background-image: url({{ site.baseurl }}/assets/images/blogposts/{{ post.slug }}/-l-{{ post.slug }}{% if post.leftextension %}{{ post.leftextension }}{% else %}.jpg{% endif %})" class="resultcircle resultleftcircle"></div><div class="resultstem resultcenterstem"></div><div style="background-image: url({{ site.baseurl }}/assets/images/blogposts/{{ post.slug }}/-r-{{ post.slug }}{% if post.rightextension %}{{ post.rightextension }}{% else %}.jpg{% endif %})" class="resultcircle resultrightcircle"></div><div class="resultstem resultshortstem resultrightstem"></div>
     </div>
     <!-- Title of article -->
     <p id="resulttitle" class="s-display">
