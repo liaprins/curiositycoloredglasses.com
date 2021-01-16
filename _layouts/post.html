@@ -273,7 +273,14 @@ layout: default
 
       <!-- Success or fail message after submit comment -->
       <div id="successmessage" class="successmessagehidden m-textface bold js-modal-text"></div>
-      
+
     </section>
   {% endif %} <!-- closing "if page.comments == true" -->
   </article>
+
+<!-- if there is a D3 vis -->
+{% for js in page.js %}
+  <script type="text/javascript">
+    {% include {{ js }} %}
+  </script>
+{% endfor %}

@@ -31,6 +31,11 @@
       }
     </script>
 
+    <!-- D3.js -->
+    {% if page.layout == 'post' and page.js %}
+      <script src="https://d3js.org/d3.v6.min.js"></script>
+    {% endif %}
+
     <meta charset="utf-8" />
     <meta name="viewport"                  content="width=device-width,initial-scale=1.0">
     <meta property="og:url"                content="https://curiositycoloredglasses.com{{ page.url }}" />
