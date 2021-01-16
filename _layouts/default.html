@@ -32,8 +32,15 @@
     </script>
 
     <!-- D3.js -->
-    {% if page.layout == 'post' and page.js %}
-      <script src="https://d3js.org/d3.v6.min.js"></script>
+    {% if page.layout == 'post' and page.d3 %}
+      <script src="https://d3js.org/d3.v6.min.js">
+      </script>
+    {% endif %}
+
+    <!-- p5.js -->
+    {% if page.layout == 'post' and page.p5 %}
+    <script src="{{ site.baseurl }}/assets/js/p5.min.js">
+    </script>
     {% endif %}
 
     <meta charset="utf-8" />

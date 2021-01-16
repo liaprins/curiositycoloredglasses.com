@@ -279,8 +279,13 @@ layout: default
   </article>
 
 <!-- if there is a D3 vis -->
-{% for js in page.js %}
+{% for d3 in page.d3 %}
   <script type="text/javascript">
-    {% include {{ js }} %}
+    {% include {{ d3 }} %}
+  </script>
+{% endfor %}
+{% for p5 in page.p5 %}
+  <script type="text/javascript">
+    {% include {{ p5 }} %}
   </script>
 {% endfor %}
