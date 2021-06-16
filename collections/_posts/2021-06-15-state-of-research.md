@@ -4,6 +4,7 @@ author: Lia Prins
 tags:
 excerpt:
 comments: false
+rightextension: .png
 d3:
   - graphs/state-of-research/state-of-research.js
 hidden: true
