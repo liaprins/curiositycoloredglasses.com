@@ -4,6 +4,7 @@
 
 #svg-container {
     position: absolute;
+    left: 10.75vw;
 }
 
 #invisible-target {
@@ -37,4 +38,16 @@
   #areoid-text,
   #areoid-number {
     font-size: 1.125rem;
+}
+
+@media (min-width: 817px) {
+  #svg-container {
+    left: calc(50vw - 321px);
+  }
+}
+
+@media (min-width: 1225px) {
+  #svg-container {
+    left: 0;
+  }
 }
