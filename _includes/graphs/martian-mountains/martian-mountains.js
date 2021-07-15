@@ -30,7 +30,7 @@ var numberFormat = d3.format(",");
 
 var svgContainer = d3.select('#areoid-vis').append('svg')
   .attr('id','svg-container')
-  .attr('transform', 'translate(' + -marsImgWidth + ',' + 0 + ')')
+  // .attr('transform', 'translate(' + -marsImgWidth + ',' + 0 + ')')
   .attr('width', marsImgWidth)
   .attr('height', marsImgHeight);
 
@@ -105,8 +105,11 @@ marsCaption.innerHTML = '<hr class="toprule">Marsâ€™ areoid was chosen as the â€
 figContainer.appendChild(marsCaption);
 
 // redraw on screen width / orientation change
+// USING THIS CAUSES THE DEVICE TO CONSTANTLY JUMP TO TOP OF PAGE WHILE SCROLLING ON TOUCHSCREENS, SO AM DISABLING IT
+/*
 function marsVisResize() {
   location.reload();
 }
 window.addEventListener('orientationchange', marsVisResize, false);
 window.addEventListener('resize', marsVisResize, false);
+*/
