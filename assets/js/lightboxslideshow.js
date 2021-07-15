@@ -1224,7 +1224,6 @@ window.addEventListener('resize', verticallyCenter, false);
 // reloads page upon device orientation change, forcing it to run through all the above (and other called) functions so that gallery images load in the correct sizes
 function lightboxSlideshowResize() {
 
-    // this will reload the page as it is resized, and will keep its relative height the same; reloading the page will force it to run through all the existing (above) functions, so it will be resetting placeholderBox height, dotsContainer location, etc as resizing happens
     location.reload();
 
 }
@@ -1232,3 +1231,5 @@ function lightboxSlideshowResize() {
 // EVENT LISTENER +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // runs upon device orientation change
 window.addEventListener('orientationchange', lightboxSlideshowResize, false);
+  // this will reload the page as it is resized, and will keep its relative height the same; reloading the page will force it to run through all the existing (above) functions, so it will be resetting placeholderBox height, dotsContainer location, etc as resizing happens
+window.addEventListener('resize', lightboxSlideshowResize, false);
