@@ -87,6 +87,10 @@
       <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/qqmediaqueries-override.css">
       <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/qq-position-override.css">
     {% endif %}
+    <!-- CSS for post-specific visualizations -->
+    {% if page.layout == 'post' and page.css %}
+      <link rel="stylesheet" href="{{ site.baseurl }}{{ page.css }}">
+    {% endif %}
   </head>
 
   <body>

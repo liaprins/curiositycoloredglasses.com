@@ -1,0 +1,40 @@
+#mars-bg-img {
+  width: 100%;
+}
+
+#svg-container {
+    position: absolute;
+}
+
+#invisible-target {
+  opacity: 0;
+}
+
+.circle,
+#radius-line {
+  fill: none;
+  stroke: black;
+  /* stroke-width: 2px; */
+  stroke-width: 0.1rem;
+}
+
+#invisible-target:hover,
+.circle:hover,
+#radius-line:hover {
+  cursor: pointer;
+}
+
+#areoid-text,
+#areoid-number {
+  font-size: 0.938rem;
+}
+
+#areoid-number {
+  font-family: 'Sintesi_Sans_Demi-Bold';
+}
+
+@media (min-width: 390px) {
+  #areoid-text,
+  #areoid-number {
+    font-size: 1.125rem;
+}

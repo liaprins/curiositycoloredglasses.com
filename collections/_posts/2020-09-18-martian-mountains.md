@@ -3,6 +3,10 @@ title: How are Martian mountains measured?
 author: Lia Prins
 tags: science geology mars mountains volcanoes
 excerpt: On maps, a mountain’s height is always shown solely as its peak’s elevation above sea level. This seems like a bit of a cop-out to me&#58; is the mountain itself really that tall? Or is it just standing on the shoulders of a very tall plateau, so to speak? Then again, determining the base from which to measure any mountain seems like quite the slippery slope once you get down to it, so I do understand and sympathize with the sea level approach adopted by us Earthlings. But what about pinnacle-peppered planets and oceanless asteroids — (how) do we measure their mountains?
+d3:
+  - graphs/martian-mountains/martian-mountains.js
+css:
+  - /assets/css/blogposts/martian-mountains/martian-mountains.css
 glossaryfolder: vocab-martian-mountains
 thankyoufolder: thankyou-martian-mountains
 share: Given that Mars is currently ocean-less, how are the heights of Martian mountains like Olympus Mons quantified? It turns out, sea level is somewhat synthesize-able if you know the math.
@@ -94,6 +98,8 @@ Fortunately for those of us in dire need of more fathomable (and accurate) Marti
 {% include post-image.html image="onion-rings.jpg" alt="Earth and Mars ringed by concentric wobbly circles, indicating geopotential lines of decreasing strength as they move outward." caption="The geopotential surfaces mapping equal strengths of gravity extend below and above any planet’s surface. Since these planes are the basis from which we measure elevations, it makes sense to choose one as a baseline that matches the surface’s circumference closely.<p class='figcaptionspacer'></p>(I exaggerated the gravity anomalies (that is, the squiggliness of the “onion rings”) here to visualize the fact that planes of equal gravity are bumpy in direct response to the planet’s uneven density.)" %}
 
 But on a Mars unmarred by {% include post-glossary-inline.html inlineword="el mar" id="el-mar" %}, how does one choose which onion ring to call “zero”? Scientists settled on the geopotential surface for which the mean radius matches that of Mars’ equator.{%-include post-thankyou-inline.html number="9"-%} This doesn’t necessarily mean that every point along the Martian equator lies at zero inches in elevation, though&#58; like on earth, a surface defined by equal gravity thereby responds to gravity directly, not to physical features (although it may be indirectly affected by land formations in so far as they in turn affect gravity to a degree), and will therefore vary in its distance from the crust, rising above ground in some places and falling below it in others.
+
+<figure id="areoid-vis"></figure>
 
 Just like Earth’s geoid, Mars’ areoid also exhibits areas in which gravitational disruptions reflect topographical ones. Olympus Mons and the Tharsis region near it — home to some very voluminous volcanoes — produce the largest gravity anomalies in the entire Solar System. Olympus Mons came in at 22 kilometers (13.7 miles) high when measuring from the base of its bounding cliffs, but its summit is only about 21 kilometers (13 miles) above the Martian areoid. This is the inverse of what we saw with Everest, wherein its elevation is much greater than its base-to-peak height. Olympus Mons’ transposed elevation-to-height ratio actually serves to further emphasize its sheer magnitude&#58; it produces its own gravity (with a lot of help from its neighboring {% include post-glossary-inline.html inlineword="Tharsis Montes" id="tharsis-montes" %} and the magma-spawned plateau upon which they perch), thereby raising the areoid’s “onion ring” in its region and leading to elevation measures that are lower due to the areoid’s swell.
 
