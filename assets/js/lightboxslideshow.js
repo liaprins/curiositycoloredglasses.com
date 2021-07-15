@@ -1222,14 +1222,19 @@ window.addEventListener('resize', verticallyCenter, false);
 // ******************************************************************************************************************************************
 // INVOKED VIA EVENT LISTENER IMMEDIATELY FOLLOWING THIS FUNCTION ---------------------------------------------------------------------------
 // reloads page upon device orientation change, forcing it to run through all the above (and other called) functions so that gallery images load in the correct sizes
+// USING THIS CAUSES THE DEVICE TO CONSTANTLY JUMP TO TOP OF PAGE WHILE SCROLLING ON TOUCHSCREENS, SO AM DISABLING IT
+/*
 function lightboxSlideshowResize() {
 
     location.reload();
 
 }
+*/
 
 // EVENT LISTENER +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // runs upon device orientation change
-window.addEventListener('orientationchange', lightboxSlideshowResize, false);
-  // this will reload the page as it is resized, and will keep its relative height the same; reloading the page will force it to run through all the existing (above) functions, so it will be resetting placeholderBox height, dotsContainer location, etc as resizing happens
-window.addEventListener('resize', lightboxSlideshowResize, false);
+// USING THIS CAUSES THE DEVICE TO CONSTANTLY JUMP TO TOP OF PAGE WHILE SCROLLING ON TOUCHSCREENS, SO AM DISABLING IT
+// window.addEventListener('orientationchange', lightboxSlideshowResize, false);
+// this will reload the page as it is resized, and will keep its relative height the same; reloading the page will force it to run through all the existing (above) functions, so it will be resetting placeholderBox height, dotsContainer location, etc as resizing happens
+// USING THIS CAUSES THE DEVICE TO CONSTANTLY JUMP TO TOP OF PAGE WHILE SCROLLING ON TOUCHSCREENS, SO AM DISABLING IT
+// window.addEventListener('resize', lightboxSlideshowResize, false);
