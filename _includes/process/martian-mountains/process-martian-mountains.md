@@ -26,7 +26,7 @@ I decided to use my iPad and the drawing app Procreate to create explanatory ill
 {% include post-image.html image="procreate-animation.png" alt="A screenshot of my Procreate app with an animation in-progress." caption="Please note: hotspots in all likelihood do not actually resemble the ketchup-bottle-wielding amoebas I inadvertently made them out to be." %}
 
 <p class="s-textface">
-Yet another good learning opportunity presented itself when I made it my goal to master D3.js, a JavaScript library for coding data visualizations, which I used to build the visualization of Mars’ areoid wherein you can drag to change its radius. To be honest, I think this interactive diagram is slightly gratuitous in that it isn’t really necessary to get the point across: its preceding illustration and text probably do a better job of that conceptually. But I really wanted a tiny self-imposed D3 practice project, plus I think it’s just fun to drag the areoid-circle and see how far it is from Mars’ core.
+Yet another good learning opportunity presented itself when I made it my goal to master D3.js, a JavaScript library for coding data visualizations, which I used to build the visualization of <a href="#areoid-vis">Mars’ areoid wherein you can drag to change its radius</a>. To be honest, I think this interactive diagram is slightly gratuitous in that it isn’t really necessary to get the point across: its preceding illustration and text probably do a better job of that conceptually. But I really wanted a tiny self-imposed D3 practice project, plus I think it’s just fun to drag the areoid-circle and see how far it is from Mars’ core.
 </p>
 
 <!-- code planning sketch -->
@@ -60,8 +60,10 @@ The areoid visualization’s draggability ended up hinging upon my recollection 
     <li>
       … alias distance from Mars’ center, which I calculated via D3’s scaleLinear() function and surfaced in text form below the visual.
     </li>
+    <!-- Pythagorean process, step 4 -->
+    {% include post-image.html image="pythagorean-process-5.jpg" alt="" %}
   </ol>
 
 <p class="s-textface">
-Fun fact (or bug, depending on how you look at it): if you drag very quickly, the straight line representing the radius won’t quite extend all the way to the circle’s edge by the time you pick up your mouse. This is because of all the math involved in calculating that little line’s length: your computer can’t quite keep up! So just drag a little slower if you want it to match the intended design. 🙃
+Fun fact (or bug, depending on how you look at it): if you drag very quickly, the straight line representing the radius won’t quite extend all the way to the circle’s edge by the time you pick up your mouse. This is because of all the math involved in calculating that little line’s length: your computer can’t quite keep up!
 </p>
