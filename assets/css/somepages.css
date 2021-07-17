@@ -273,7 +273,8 @@ figcaption {
 #posttext {    /* The div that holds all text as a whole (and images called within text, galleries, inline vocab words, etc) */
     margin: 1.024rem 0;    }    /* top + bottom: .5 lh */
 
-#posttext p {    /* This applies to each paragraph of text */
+#posttext p,    /* This applies to each paragraph of text */
+#process p {
     clear: right;    /* This is to push the text all the way down istead of wrapping around share icons, in the instance they are pushed to the next line by tags */
     hyphens: manual;    /* This applies to content text on the post page; it needs hyphenation but the auto-wrapping <p> tags surrounding text called from the panel is interfering with any potential hyphenation class being applied */
     margin: 1.024rem 0;    }    /* top + bottom: .5 lh */

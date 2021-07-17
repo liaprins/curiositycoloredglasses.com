@@ -1,0 +1,67 @@
+<p class="s-textface">
+<em>
+Here’s where I explain a bit about the intense nerdiness that goes on behind the scenes while I'm preparing a post.
+</em>
+</p>
+
+<p class="s-textface">
+This being my debut blog post, the selection of topic seemed especially important. I wanted readers to relate to the main question I aimed to answer. Ideally it’d be something they’d (you’d) found themselves wondering about before, but I also wanted the explanation to uncover, and answer, even more intriguing questions (that’s usually what happens when you start digging into a question anyhow). I had <a href="http://localhost:4000/questionqueue">no shortage of options to choose from</a>, but ultimately ended up researching how mountain heights are determined.
+</p>
+
+<p class="s-textface">
+This initial question over-delivered in terms of providing directions to dive into even deeper. I created homemade index cards (a.k.a. chopped up scrap paper) to document each snippet of interesting information, and promptly found myself overwhelmed trying to arrange them into a linear story. Ultimately and agonizingly, I had to sacrifice some captivating trigonometry-driven side plots (I will be back for you yet, <a href="https://curiositycoloredglasses.com/questionqueue#sohcahtoa">SOHCAHTOA</a>!) to maintain a more cohesive thread.
+</p>
+
+<!-- index cards -->
+{% assign galleryid = "index-cards" %}
+{% assign gallery = '<img src="/assets/images/blogposts/martian-mountains/index-cards/index-cards_1.jpg" alt="A lot of index cards laid on my floor in a grid formation." class="contentimage" id="galleryimage"> 🟡 <img src="/assets/images/blogposts/martian-mountains/index-cards/index-cards_2.jpg" alt="A lot of index cards laying scattered all over my desk." class="contentimage" id="galleryimage"> 🟡 <img src="/assets/images/blogposts/martian-mountains/index-cards/index-cards_3.jpg" alt="A sketch of North America with a channel dug from the west coast to the East coast, connecting the Pacific and Atlantic." class="contentimage" id="galleryimage"> 🟡 <img src="/assets/images/blogposts/martian-mountains/index-cards/index-cards_4.jpg" alt="A sketch diagramming topographic prominence from the side." class="contentimage" id="galleryimage">' | split: " 🟡 " %}
+{% assign captions = 'Well-behaved factoids, cooperating temporarily as I attempt to determine a storytelling sequence. 🟡 Factoids rebelling against being forced into orderly rows and columns! 🟡 An early illustration idea that ended up making it into the final post. 🟡 This little factoid didn’t quite make the final cut, but I wish it could have … there just may be a future post featuring topographic prominence.' | split: " 🟡 " %}
+{% include post-gallery.html %}
+
+<p class="s-textface">
+I decided to use my iPad and the drawing app Procreate to create explanatory illustrations. I hadn’t used Procreate before, so this was a “good learning opportunity”, by which I mean an acceptable excuse to spend an entire weekend making a single, very awkward, not-quite scientifically accurate 5-second animation.
+</p>
+
+<!-- Procreate animation -->
+{% include post-image.html image="procreate-animation.png" alt="A screenshot of my Procreate app with an animation in-progress." caption="Please note: hotspots in all likelihood do not actually resemble the ketchup-bottle-wielding amoebas I inadvertently made them out to be." %}
+
+<p class="s-textface">
+Yet another good learning opportunity presented itself when I made it my goal to master D3.js, a JavaScript library for coding data visualizations, which I used to build the visualization of Mars’ areoid wherein you can drag to change its radius. To be honest, I think this interactive diagram is slightly gratuitous in that it isn’t really necessary to get the point across: its preceding illustration and text probably do a better job of that conceptually. But I really wanted a tiny self-imposed D3 practice project, plus I think it’s just fun to drag the areoid-circle and see how far it is from Mars’ core.
+</p>
+
+<!-- code planning sketch -->
+{% include post-image.html image="code-planning-sketch.jpg" alt="My notebook with sketches to help me figure out how to code the interactive visualization." caption="There’s nothing a little graph paper can’t solve." %}
+
+<p class="s-textface">
+The areoid visualization’s draggability ended up hinging upon my recollection of the Pythagorean theorem (not quite trigonometry, but it does fall into the category of triangular geometry, so it’s close), for which I awarded myself bonus nerd points. 🤓&nbsp;🤓&nbsp;🤓 To draw an SVG circle with D3, you need to set a radius. In this case, the circle’s radius changes as the user drags the circle smaller or larger, so I needed a way to capture the distance of the user’s mouse (or finger, if on a touchscreen device) from the areoid-circle’s center.
+</p>
+
+  <ol class="s-textface">
+    <li>
+      I knew the pixel coordinates of the circle’s origin because I’d set them myself to position it, and I could use JavaScript to capture the location of the user’s mouse as they dragged.
+    </li>
+    <!-- Pythagorean process, step 1 -->
+    {% include post-image.html image="pythagorean-process-1.jpg" alt="" %}
+    <li>
+      From there I reasoned (with much reliance on my favorite graph-paper-filled notebook) that I’d effectively have the two legs of a right triangle: I could subtract the x-coordinate of the mouse from the x-coordinate of the circle’s center and repeat with the y-coordinates.
+    </li>
+    <!-- Pythagorean process, step 2 -->
+    {% include post-image.html image="pythagorean-process-2.jpg" alt="" %}
+    <li>
+      But what I needed was the hypotenuse … enter Pythagoras with his theorem of <em>a<sup>2</sup>&nbsp;+&nbsp;b<sup>2</sup>&nbsp;=&nbsp;c<sup>2</sup></em> in tow. I squared the absolute values of the mouse’s and origin’s x- and y-coordinates’ differences, respectively (<em>a<sup>2</sup></em> and <em>b<sup>2</sup></em>: the leg-lengths of the right triangle).
+    </li>
+    <!-- Pythagorean process, step 3 -->
+    {% include post-image.html image="pythagorean-process-3.jpg" alt="" %}
+    <li>
+      Next I passed their sum to the adorably abridged JavaScript function Math.sqrt() (short for square root, and yet somehow I am always left nostalgic for the squirt gun fights of my youth when I use this function), to ultimately solve for <em>c</em>, alias hypotenuse, alias radius…
+    </li>
+    <!-- Pythagorean process, step 4 -->
+    {% include post-image.html image="pythagorean-process-4.jpg" alt="" %}
+    <li>
+      … alias distance from Mars’ center, which I calculated via D3’s scaleLinear() function and surfaced in text form below the visual.
+    </li>
+  </ol>
+
+<p class="s-textface">
+Fun fact (or bug, depending on how you look at it): if you drag very quickly, the straight line representing the radius won’t quite extend all the way to the circle’s edge by the time you pick up your mouse. This is because of all the math involved in calculating that little line’s length: your computer can’t quite keep up! So just drag a little slower if you want it to match the intended design. 🙃
+</p>

@@ -77,8 +77,10 @@ var dragging = function(event, d) {
 
   var dragX = Math.round(event.x);
   var dragY = Math.round(event.y);
-  var pythagoreanX = Math.abs(areoidCtrX - dragX);
-  var pythagoreanY = Math.abs(areoidCtrY - dragY);
+  // var pythagoreanX = Math.abs(areoidCtrX - dragX);    // commenting out because don't need to get absolute value because...
+  // var pythagoreanY = Math.abs(areoidCtrY - dragY);    // ... squaring a negative number makes a positive number anyway!
+  var pythagoreanX = areoidCtrX - dragX;
+  var pythagoreanY = areoidCtrY - dragY;
   var pythagoreanXSquared = Math.pow(pythagoreanX, 2);
   var pythagoreanYSquared = Math.pow(pythagoreanY, 2);
   var areoidRadius = Math.sqrt(pythagoreanXSquared + pythagoreanYSquared);
@@ -101,7 +103,7 @@ svgContainer.call(myDrag);    // bind the dragging behavior
 // caption
 var marsCaption = document.createElement('figcaption');
 marsCaption.setAttribute('class', 'xs-textface');
-marsCaption.innerHTML = '<hr class="toprule">Mars’ areoid was chosen as the “onion ring” — that is, the invisible surface with equal gravitational pull — with the same average radius as the planet itself. However, a different “onion ring” could have been chosen instead, with a different average radius.<p class="figcaptionspacer"></p>Drag the black-bordered circle to see the range of would-be aroids — above, below, and overlapping with parts of Mars’ surface.<p class="figcaptionspacer"></p>(Mars’ volcanic bumps are overly exaggerated here, and its areoid is also overly smoothed (the latter due to technical reasons on my behalf as well!), to illustrate that aroids (and Earth’s own geoid) are not directly based on the surfaces of their planets.';
+marsCaption.innerHTML = '<hr class="toprule">Mars’ areoid was chosen as the “onion ring” — that is, the invisible surface with equal gravitational pull — with the same average radius as the planet’s equator. However, a different “onion ring” could have been chosen instead, with a different average radius.<p class="figcaptionspacer"></p>Drag the black-bordered circle to see the range of would-be areoids — above, below, and overlapping with parts of Mars’ surface.<p class="figcaptionspacer"></p>(Mars’ volcanic bumps are overly exaggerated here, and its areoid is also overly smoothed (the latter due to technical reasons on my behalf as well!), to illustrate that areoids (and Earth’s own geoid) are not directly based on the surfaces of their planets.)';
 figContainer.appendChild(marsCaption);
 
 // redraw on screen width / orientation change

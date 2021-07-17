@@ -109,6 +109,19 @@ layout: default
         {{ content }}<img src="{{ site.baseurl }}/assets/images/sitewide/home.svg" alt="" id="articleendglasses">
       </div>
 
+    <!-- The Method to My Madness -->
+    {% if page.process %}
+      <section id="process">
+        <details class="postsectiondetails" open>
+          <summary class="sectionsummary postpagesectionsummary blackbg"><h3>The Method to My Madness</h3>
+          </summary>
+          {% for process in page.process %}
+            {% include {{ process }} %}
+          {% endfor %}
+        </details>
+      </section>
+    {% endif %}
+
     <!-- Glossary -->
     {% if page.glossaryfolder %}
       <section id="glossarysection">

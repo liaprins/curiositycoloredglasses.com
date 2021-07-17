@@ -456,6 +456,7 @@ function slideshow() {
             dotsList[0].innerHTML = '<img src="https://curiositycoloredglasses.com/assets/images/sitewide/dot-filled.svg" alt="go to this slide" class="dotimg dotimgfill">';
 
             // position all slides' <li> elements horizontally (absolute) + add data-* attribute to recognize them as side slides if clicked on
+            slide[j].setAttribute('class', 'image-list-item');    // used for excluding from regular text <li> visual treatments in text.css
             slide[j].setAttribute('data-slide-index', (j));
             slide[j].setAttribute('data-sideslide', '');
             slide[j].style.position = "absolute";
