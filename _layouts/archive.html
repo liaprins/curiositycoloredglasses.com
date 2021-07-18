@@ -23,9 +23,7 @@ layout: default
       <p id="archivemenu">
       {% for year in postsByYear %}
         <span>
-          <a href="{{ site.baseurl }}{{ site.url }}/archive#{{ year.name }}" id="archivemenuyear" class="sectionsummary yellowhover">
-            {{ year.name }}
-          </a>
+          <a href="{{ site.baseurl }}{{ site.url }}/archive#{{ year.name }}" id="archivemenuyear" class="archivemenu yellowhover">{{ year.name }}</a>
         </span>
       {% endfor %}
       </p>

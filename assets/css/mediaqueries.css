@@ -1,43 +1,19 @@
-/*
-@media (min-width: 315px) {
-    .taglinehalf {
-        display: inline;    }
-}
-
-@media (min-width: 343px) {
-    .taglinehalf {
-        display: inline-block;    }
-}
-
-@media (min-width: 427px) {
-    .taglinehalf {
-        display: inline;    }
-}
-*/
-
-/* vvv USE IF I DECIDE TO KEEP TAGLINE AT CURRENT SIZE! */
-@media (min-width: 392px) {
+@media (min-width: 385px) {
     .tagline2 {
         display: inline-block;    }
 }
 
-@media (min-width: 433px) {
+@media (min-width: 425px) {
     .tagline3 {
         display: inline-block;    }
 }
 
-@media (min-width: 689px) {
+@media (min-width: 677px) {
     .tagline2,
     .tagline3 {
       display: inline;
     }
 }
-@media (min-width: 1225px) {
-    .tagline3 {
-      display: inline-block;
-    }
-}
-/* ^^^ USE IF I DECIDE TO KEEP TAGLINE AT CURRENT SIZE! */
 
 @media (min-width: 276px) {
     #navdetails[open] {
@@ -315,9 +291,9 @@
         top: 13px;    }
 }
 
-@media (min-width: 756px) {
+@media (min-width: 762px) {
     h1 {
-        font-size: 1.586rem;
+        font-size: 1.586rem;    }
 }
 
 @media (min-width: 783px) {
@@ -326,14 +302,14 @@
     #mce-EMAIL {
         float: left;
         margin-right: calc(14.0545rem + 5.3125rem);
-        width: calc(78.571vw - 14.0545rem + 5.3125rem);    }
+        width: calc(78.571vw - 14.4rem + 5.3125rem);    }
     .subscribebutton {
         bottom: calc(7.143vw + 0.844rem + 2.5px);
-        right: calc(12.4rem);    }
+        right: 12.75rem;    }
     #follow {
         position: absolute;
         top: 7.143vw;
-        left: calc(50% + 39.286vw - 8.32rem);    }
+        left: calc(50% + 39.286vw - 8.7rem);    }
     #footercontent {
         width: 78.571vw;    }
     #subscribemessage {
@@ -386,13 +362,14 @@
         width: 641.929px;
         padding: 0.95rem 0;    }
     #mce-EMAIL {
-        width: calc(641.929px - 14.0545rem + 5.3125rem)    }
+        /* width: calc(641.929px - 14.0545rem + 5.3125rem); */
+        width: calc(641.929px - 14.0545rem + 4.9rem);    }
     .subscribebutton {
-        left: calc(50vw - 320.96px + 14.0545rem - 0.9rem);
+        left: calc(50vw - 320.96px + 14.0545rem - 1.3rem);
         bottom: calc(58.357px + 0.844rem + 0.125rem);    }
     #follow {
         top: 58.357px;
-        left: calc(50% + 320.964px - 8.32rem);    }
+        left: calc(50% + 320.964px - 8.7rem);    }
     #footercontent {
         width: 641.929px;    }
     footer {
@@ -485,20 +462,13 @@
         margin-right: auto;    }
 }
 
-@media (min-width: 973px) {
-    .subscribebutton {
-        left: calc(50vw - 320.96px + 14.0545rem - 0.9rem);
-        bottom: calc(58.357px + 0.844rem + 0.1rem);
-    }
-}
-
 @media (min-width: 1225px) {
     :root {
         --resultglasseswidth: 116.667px;    }
     html {
         font-size: 24.531px;    }
     #tagline {
-        font-size: 1.024rem;    }
+    /* font-size: 1.024rem; */    }
     main {
         margin: 0 auto;
         width: 1108.333px;    }
@@ -507,6 +477,8 @@
     .archivemockmain {
         margin-left: 29.167px;
         width: 641.667px;    }
+    h1 {
+        font-size: 1.78rem;    }
     #blognametagline {
         width: 1108.333px;    }
     .desktopcontent,
@@ -558,7 +530,7 @@
     #homeicon {
         display: inline;
         position: absolute;
-        left: calc(-100vw + 677px + 0.422rem);
+        left: calc(-100vw + 643px + 0.422rem);
         top: 0.422rem;
         width: 1.301rem;
         padding: 0.316rem;    }
@@ -621,7 +593,7 @@
     .date {
         position: absolute;
         left: -233.333px;
-        top: calc(96px + 2.048rem + 0.4rem + 1px);
+        top: calc(96px + 2.048rem + 0.4rem + 5px);
         width: 175px;    }
     .postdatewidth {
         position: absolute;
@@ -674,14 +646,14 @@
         width: 816.667px;
         padding: 1.536rem 0;    }
     #mce-EMAIL {
-        width: calc(641.667px - 14.0545rem + 5.3125rem)    }
+        width: calc(641.667px - 14.0545rem + 4.8rem)    }
     #follow {
         top: 58.333px;
-        left: calc(50% + 320.833px - 8.32rem);    }
+        left: calc(50% + 320.833px - 8.7rem);    }
     #footercontent {
         width: 641.667px;    }
     .subscribebutton {
-        left: calc(50vw - 320.96px + 14.0545rem - 50px);
+        left: calc(50vw - 320.96px + 14.0545rem - 2.5rem);
         bottom: calc(58.357px + 0.844rem + 0.1rem);    }
     footer {
         padding: 58.333px 0;
