@@ -51,7 +51,8 @@ header {    /* Holds blog name + tagline */
 
 #tagline {
     text-align: center;
-    margin: 1.536rem 0 2.048rem 0;   }    /* top + bottom: .75 lh */
+    margin: 1.536rem auto 2.048rem auto;
+    /* margin: 1.536rem 0 2.048rem 0; */   }    /* top + bottom: .75 lh */
 
 #homedate {
     margin-top: 2.048rem;    }    /* .75 lh */
@@ -62,7 +63,7 @@ header {    /* Holds blog name + tagline */
 
 #readmore {
     display: inline;
-    padding: 0.6em 0.5em 0.5em 0;    }
+    padding: 0.7em 0.7em 0.65em 0;    }
 
 #hometaggroup {
     line-height: 2.2;
@@ -110,7 +111,7 @@ figcaption {
     letter-spacing: 0.175em !important;    }
 
 .writer a {
-    padding: 0.6em 0.5em 0.3em 0;    }
+    padding: 0.5em 0.5em 0.5em 0;    }
 
 .writer p {
     display: inline;    }
@@ -123,8 +124,7 @@ figcaption {
 
 .tag {
     white-space: nowrap;
-    padding: 0.6em 0.5em 0.5em 0;
-    /* padding: 0.6em 0.5em 0.5em 0.5em; */    }    /* Finessing to be perfectly centered */
+    padding: 0.6em 0.7em 0.6em 0;    }
 
 
 /* POSTGLASSES -------------------------------------------------- */
@@ -811,7 +811,7 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
     margin-bottom: 1.024rem;    }
 
 .libraryentryname > p {
-    margin-top: 0.512rem;
+    margin-top: 0.5rem;
     margin-bottom: 0.768rem;    }    /* .125 lh */
 
 .libraryentryabout {

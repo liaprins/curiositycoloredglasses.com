@@ -1,4 +1,5 @@
-@media (min-width: 284px) {
+/*
+@media (min-width: 315px) {
     .taglinehalf {
         display: inline;    }
 }
@@ -12,6 +13,31 @@
     .taglinehalf {
         display: inline;    }
 }
+*/
+
+/* vvv USE IF I DECIDE TO KEEP TAGLINE AT CURRENT SIZE! */
+@media (min-width: 392px) {
+    .tagline2 {
+        display: inline-block;    }
+}
+
+@media (min-width: 433px) {
+    .tagline3 {
+        display: inline-block;    }
+}
+
+@media (min-width: 689px) {
+    .tagline2,
+    .tagline3 {
+      display: inline;
+    }
+}
+@media (min-width: 1225px) {
+    .tagline3 {
+      display: inline-block;
+    }
+}
+/* ^^^ USE IF I DECIDE TO KEEP TAGLINE AT CURRENT SIZE! */
 
 @media (min-width: 276px) {
     #navdetails[open] {
@@ -555,7 +581,7 @@
         position: relative;
         top: -1px;
         display: inline;
-        padding: 0.422rem 0 0.422rem 0.422rem;
+        padding: 0.422rem 0 0.422rem 0.5rem;    /* padding-left is 0.5 to account for text not looking perfectly centered otherwise */
         margin-top: 0;
         margin-right: 0.422rem;
         box-sizing: border-box;

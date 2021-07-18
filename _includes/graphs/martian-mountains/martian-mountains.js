@@ -30,7 +30,7 @@ var numberFormat = d3.format(",");
 
 var svgContainer = d3.select('#areoid-vis').append('svg')
   .attr('id','svg-container')
-  // .attr('transform', 'translate(' + -marsImgWidth + ',' + 0 + ')')
+  // .attr('transform', 'translate(' + -marsImgWidth + ',' + 0 + ')')    // this is not working on Safari nor on iOS devices (even if using Chrome), so I used CSS to position instead
   .attr('width', marsImgWidth)
   .attr('height', marsImgHeight);
 
