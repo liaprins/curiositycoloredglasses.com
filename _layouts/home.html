@@ -24,7 +24,7 @@ layout: default
     <!-- Date for each article -->
     <p id="homedate" class="date m-textface bold">
       <time datetime="{{ post.date }}" pubdate="pubdate">
-        {{ post.date | date: '%d %B %Y' }}
+        {{ post.date | date: '%d %b %Y' }}
       </time>
     </p>
     <!-- Glasses + post title link to post -->
@@ -61,7 +61,7 @@ layout: default
       <!-- "Read more" -->
       <!-- "&nbsp" between "Read" and "more" so they would never split onto separate lines -->
       <a href="{{ site.baseurl }}{{ post.url }}" id="readmore" class="s-display yellowhover">
-        &nbspRead&nbspmore
+        &nbsp&nbspRead&nbspmore
       </a>
     </p>
     <!-- Tags: for loop pulling in the tags for each article -->

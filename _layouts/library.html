@@ -26,11 +26,22 @@ layout: default
       <!-- Content per library entry (hidden until select an entry's image) -->
       <article style="display: none;" class="libraryentry">
         <img src= "{{ site.baseurl }}/assets/images/sitewide/x.svg" alt="close" id="library-x" class="yellowhover close-x">
+        <!--
         <span class="libraryentryname s-display">
           <p>
             {{ libraryentry.title | markdownify }}
           </p>
         </span>
+        -->
+
+
+
+        <div class="libraryentryname s-display">
+          {{ libraryentry.title | markdownify }}
+        </div>
+
+
+
         <div class="libraryentryabout s-textface">
           {{ libraryentry.content | markdownify }}
         </div>

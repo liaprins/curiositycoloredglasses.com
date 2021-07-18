@@ -23,7 +23,7 @@ layout: default
       <!-- Date of post -->
       <p id="postdate" class="date m-textface bold postdatewidth">
         <time datetime="{{ page.date }}" pubdate="pubdate">
-          {{ page.date | date: '%d %B %Y' }}
+          {{ page.date | date: '%d %b %Y' }}
         </time>
       </p>
 
@@ -69,10 +69,7 @@ layout: default
         <!-- Split the list in the tag field into individual tags -->
         {% for posttag in page.tags %}
           <!-- Make them link to the tags page -->
-          <a href="{{ site.baseurl }}/tags/{{ posttag }}" id="posttag" class="xs-textface tag yellowhover">
-            <!-- Adding the 2 x "no break spaces" (&nbsp) to act as L-padding (like for "Read more" button), because using actual padding-left measurements can separate the padding from the word if the word starts on a new line -->
-            &nbsp&nbsp#{{ posttag }}
-          </a>
+          <a href="{{ site.baseurl }}/tags/{{ posttag }}" id="posttag" class="xs-textface tag yellowhover">&nbsp&nbsp#{{-posttag-}}</a>
         {% endfor %}
         </span>
         <!-- Sharing for this post -->

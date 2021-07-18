@@ -31,7 +31,8 @@
 }
 
 #areoid-number {
-  font-family: 'Sintesi_Sans_Demi-Bold';
+  font-family: 'Work Sans', "Franklin Gothic Medium", "Franklin Gothic", "ITC Franklin Gothic", Arial, sans-serif;
+  font-weight: 600;
 }
 
 @media (min-width: 390px) {
