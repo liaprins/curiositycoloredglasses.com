@@ -9,7 +9,7 @@ css:
   - /assets/css/blogposts/martian-mountains/martian-mountains.css
 glossaryfolder: vocab-martian-mountains
 thankyoufolder: thankyou-martian-mountains
-process: process/martian-mountains/process-martian-mountains.html
+process: process/process-martian-mountains.html
 share: Given that Mars is currently ocean-less, how are the heights of Martian mountains like Olympus Mons quantified? It turns out, sea level is somewhat synthesize-able if you know the math.
 sharelink: http://bit.ly/2MBfPz6
 shareimage: crust-depression.jpg
