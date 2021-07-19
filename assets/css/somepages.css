@@ -198,6 +198,15 @@ figcaption {
 
 /* POST PAGE -------------------------------------------------- */
 
+/* TESTING !!! */
+#readingline {
+  position: fixed;
+  top: 0px;
+  background-color: #e2e43a;
+  height: 2px;
+  z-index: 101;
+}
+
 .mockmain {    /* This applies to the article element which holds all the post content and top part of Archive page; it is taking the place of <main> on post page, because there's only one <main> element allowed per page, but it has to split into two to allow wider #relevantreading <section> to fit between, to accomodate RR results with margins that extend beyond <main> */
     max-width: 1225px;
     width: 78.571%;    /* 22/28 cols | Use % here instead of vw because they can be used inside the max-width */

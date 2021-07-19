@@ -15,6 +15,7 @@ layout: default
   </script>
 
   <article class="mockmain" id="pre-rr">    <!-- Opening <article> to make room for RR results that need to be wider than this width, to accommodate their all having margins on L + R -->
+
     <div class="desktopcontent"> <!-- DO I NEED THIS <div>? -->
       <!-- I'm arranging the pieces of the intro part according to the V-mobile design; CSS can re-arrange them; this is according to responsive design principles -->
     </div>
@@ -106,10 +107,10 @@ layout: default
         {{ content }}<img src="{{ site.baseurl }}/assets/images/sitewide/home.svg" alt="" id="articleendglasses">
       </div>
 
-      <!-- Separator line between main content and extra sections -->
-      {% if page.process or page.glossaryfolder or page.thankyoufolder or page.thankyoucontent or page.relevantreading or page.comments == true %}
-        <hr class="toprule separatorline" />
-      {% endif %}
+    <!-- Separator line between main content and extra sections -->
+    {% if page.process or page.glossaryfolder or page.thankyoufolder or page.thankyoucontent or page.relevantreading or page.comments == true %}
+      <hr class="toprule separatorline" />
+    {% endif %}
 
     <!-- The Method to My Madness -->
     {% if page.process %}
@@ -304,3 +305,7 @@ layout: default
     {% include {{ p5 }} %}
   </script>
 {% endfor %}
+
+<!-- Draws line at top of screen to show how far scrolled through main content -->
+<script src="{{ site.baseurl }}/assets/js/readingline.js">
+</script>
