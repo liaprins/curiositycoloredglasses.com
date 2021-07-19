@@ -2,18 +2,10 @@
 <html lang="en" style="overflow-x: hidden !important;">
   <head>
 
-
-
-
   <!-- Work Sans via Google Fonts, I also commented out line 90 as part of this test! -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
-
-
-
-
-
 
   <!-- Google Analytics -->
   {% if jekyll.environment == "production" %}
@@ -107,8 +99,32 @@
   </head>
 
   <body>
+
+
+
+    {% if page.layout == 'post' %}
+      <!-- Container to hold reading line -->
+      <div id="readingline"></div>
+      <!--
+      <svg id="readinglinecontainer" width="100vw" height="10">
+        <line id="readingline" />
+      </svg>
+      -->
+    {% endif %}
+
+
+
   {% if page.title != 'Question Queue' %}
     <div id="everythingexceptnav">
+    {% if page.layout == 'post' %}
+      <!-- Container to hold reading line -->
+      <!-- <div id="readingline"></div> -->
+      <!--
+      <svg id="readinglinecontainer" width="100vw" height="10">
+        <line id="readingline" />
+      </svg>
+      -->
+    {% endif %}
   {% endif %}
 
 <!-- ******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************** -->
