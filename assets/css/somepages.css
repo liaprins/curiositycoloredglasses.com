@@ -592,6 +592,11 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
     background-color: black;
     margin-bottom: 1.024rem;    }
 
+.separatorline {    /* This is only to separate the main content from extra (TMTMM, etc) sections, but that rule also has .toprule applied for styling, and need to override its margin, so placing its CSS down here to be after .toprule */
+    margin-top: 1.8rem;
+    width: 100%;
+}
+
 .gallerycaption {
     margin-top: 1.584rem;    }
 
