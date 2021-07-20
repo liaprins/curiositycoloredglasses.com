@@ -23,6 +23,7 @@ function readingLine() {
 
 }
 
+
 window.onscroll = (function(e) {
     readingLine();
 });

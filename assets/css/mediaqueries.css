@@ -709,6 +709,59 @@
         position: absolute;
         top: calc(29.167px - 0.844rem);
         left: calc(100vw - 29.167px - 0.844rem - 29.167px - 0.422rem);    }
+
+    #toc {
+        display: block;
+        width: 179px;
+        position: absolute;
+        left: 700.3px;
+        top: 135px;
+        margin-top: calc(1.024rem - 9px);
+        border-left: black 0.28rem solid;
+        padding: 1px 0;
+      }
+
+    #toc > a {
+        padding: 0.7em 0.7em 0.6em 0.7em;
+        line-height: 1.4;
+        display: inline-block;
+        margin: -1px 0 -1px 0.35rem;
+      }
+    #toc > a:hover {
+        /* border-left-color: #e2e43a; */
+        background-color: #e2e43a;
+      }
+
+    #toc-span {
+      border-left: black 0.28rem solid;
+    }
+
+/*
+    #toctopcover,
+    #tocbottomcover {
+      width: 15px;
+      height: 15px;
+      background-color: white;
+    }
+
+    #toctopcover {
+      top: 145px;
+      z-index: 10;
+      position: absolute;
+      left: 700px;
+    }
+
+    #tocbottomcover {
+      position: absolute;
+      left: -0.28rem;
+      top: 303px;
+      height: 15px;
+      left: 700px;
+      z-index: 10;
+    }
+*/
+
+
     #vocabwordanddefinition {
         width: 641.667px;    }
     .glossaryvocabwordandaudio {

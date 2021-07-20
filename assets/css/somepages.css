@@ -296,6 +296,10 @@ figcaption {
     width: 1.2em;    /* This equates to 15px based on m-textface size of 12.5px, so if I want to maintain text size to articleendglasses size ratio, keep this relative em measurement */
     margin: 0 0 0.15em 0.25em;    }    /* Finessing to be perfectly placed; since ems are relative to text size, these ratios should hold for all screen sizes and text sizes, if I also keep the icon sized via ems, like in above line */
 
+#toc {
+  display: none;
+}
+
 .postpagesectionsummary {
     margin: 2.048rem 0;    }    /* top + bottom: 1 lh */
 .postpagesectionsummary::-webkit-details-marker {    /* Setting up the custom icons instead of default toggles */
@@ -319,8 +323,7 @@ figcaption {
 
 .glossaryvocabword > a {
     border-bottom-style: none !important;
-    padding: 0.1em 0.2em;
-}
+    padding: 0.1em 0.2em;    }
 
 #pronunciation {
     white-space: nowrap;    }
@@ -601,7 +604,8 @@ figcaption {    /* :) This applies to all places captions appear (post page sing
     background-color: black;
     margin-bottom: 1.024rem;    }
 
-.separatorline {    /* This is only to separate the main content from extra (TMTMM, etc) sections, but that rule also has .toprule applied for styling, and need to override its margin, so placing its CSS down here to be after .toprule */
+#separatorline {    /* This is only to separate the main content from extra (TMTMM, etc) sections, but that rule also has .toprule applied for styling, and need to override its margin, so placing its CSS down here to be after .toprule */
+    display: block;
     margin-top: 1.8rem;
     width: 100%;
 }
