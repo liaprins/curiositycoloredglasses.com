@@ -361,6 +361,8 @@
         position: relative;
         width: 641.929px;
         padding: 0.95rem 0;    }
+    .toparrowlink {
+        left: calc(50vw + 321px - 2rem - 0.6rem);    }
     #mce-EMAIL {
         /* width: calc(641.929px - 14.0545rem + 5.3125rem); */
         width: calc(641.929px - 14.0545rem + 4.9rem);    }
@@ -735,33 +737,8 @@
     #toc-span {
       border-left: black 0.28rem solid;
     }
-
-/*
-    #toctopcover,
-    #tocbottomcover {
-      width: 15px;
-      height: 15px;
-      background-color: white;
-    }
-
-    #toctopcover {
-      top: 145px;
-      z-index: 10;
-      position: absolute;
-      left: 700px;
-    }
-
-    #tocbottomcover {
-      position: absolute;
-      left: -0.28rem;
-      top: 303px;
-      height: 15px;
-      left: 700px;
-      z-index: 10;
-    }
-*/
-
-
+    .toparrowlink {
+        left: calc(642px - 2rem - 0.6rem);    }
     #vocabwordanddefinition {
         width: 641.667px;    }
     .glossaryvocabwordandaudio {

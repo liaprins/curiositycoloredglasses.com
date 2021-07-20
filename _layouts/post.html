@@ -52,22 +52,22 @@ layout: default
           </a>
         {% endif %}
         {% if page.glossaryfolder %}
-          <a href="#glossarysection" id="glossary-link" class="toc-link">
+          <a href="#glossary" id="glossary-link" class="toc-link">
             Glossary
           </a>
         {% endif %}
         {% if page.thankyoufolder %}
-          <a href="#notessection" id="thankyou-link" class="toc-link">
+          <a href="#notes" id="thankyou-link" class="toc-link">
             Notes
           </a>
         {% endif %}
         {% if page.thankyoucontent %}
-          <a href="#notessection" id="thankyou-link" class="toc-link">
+          <a href="#notes" id="thankyou-link" class="toc-link">
             Notes
           </a>
         {% endif %}
         {% if page.relevantreading %}
-          <a href="#relevantreading" id="rr-link" class="toc-link">
+          <a href="#relatedposts" id="rr-link" class="toc-link">
             Related Posts
           </a>
         {% endif %}
@@ -155,6 +155,9 @@ layout: default
       <section id="process">
         <details class="postsectiondetails" open>
           <summary class="sectionsummary postpagesectionsummary blackbg"><h3>Process</h3>
+            <a href="{{ site.baseurl }}{{ page.url }}" class="toparrowlink" title="Up to top">
+              <img src= "{{ site.baseurl }}/assets/images/sitewide/top-white.svg" class="toparrow">
+            </a>
           </summary>
           {% for process in page.process %}
             {% include {{ process }} %}
@@ -165,9 +168,12 @@ layout: default
 
     <!-- Glossary -->
     {% if page.glossaryfolder %}
-      <section id="glossarysection">
+      <section id="glossary">
         <details class="postsectiondetails" open>
           <summary class="sectionsummary postpagesectionsummary blackbg"><h3>Glossary</h3>
+            <a href="{{ site.baseurl }}{{ page.url }}" class="toparrowlink" title="Up to top">
+              <img src= "{{ site.baseurl }}/assets/images/sitewide/top-white.svg" class="toparrow">
+            </a>
           </summary>
           <dl>
           {% for vocab in site.documents %}
@@ -182,9 +188,12 @@ layout: default
 
     <!-- Notes -->
     {% if page.thankyoufolder %}
-      <section id="notessection">
+      <section id="notes">
         <details class="postsectiondetails" open>
           <summary class="sectionsummary postpagesectionsummary blackbg"><h3>Notes</h3>
+            <a href="{{ site.baseurl }}{{ page.url }}" class="toparrowlink" title="Up to top">
+              <img src= "{{ site.baseurl }}/assets/images/sitewide/top-white.svg" class="toparrow">
+            </a>
           </summary>
         {% assign notesbynumber = site.documents | sort: "basename" %}
         {% for note in notesbynumber %}
@@ -195,9 +204,12 @@ layout: default
         </details>
       </section>
     {% elsif page.thankyoucontent %}
-      <section id="notessection">
+      <section id="notes">
         <details class="postsectiondetails" open>
-          <summary class="sectionsummary postpagesectionsummary blackbg"><h3>Thank You</h3>
+          <summary class="sectionsummary postpagesectionsummary blackbg"><h3>Notes</h3>
+            <a href="{{ site.baseurl }}{{ page.url }}" class="toparrowlink" title="Up to top">
+              <img src= "{{ site.baseurl }}/assets/images/sitewide/top-white.svg" class="toparrow">
+            </a>
           </summary>
           <p class="s-textface">{{ page.thankyoucontent }}</p>
         </details>
@@ -215,9 +227,12 @@ layout: default
 
 <!-- Related Posts -->
 {% if page.relevantreading %}
-  <section id="relevantreading">
+  <section id="relatedposts">
     <details id="rrdetails" open>
       <summary class="sectionsummary postpagesectionsummary blackbg" id="rrsectionheader"><h3>Related Posts</h3>
+        <a href="{{ site.baseurl }}{{ page.url }}" class="toparrowlink" title="Up to top">
+          <img src= "{{ site.baseurl }}/assets/images/sitewide/top-white.svg" class="toparrow">
+        </a>
       </summary>
       <div class="resultarea">
       {% for rr in page.relevantreading %}
@@ -237,10 +252,12 @@ layout: default
   {% if page.comments == true %}
     <section class="comments" id="comments">
       <details class="commentsdetails" open>
-        <summary class="sectionsummary postpagesectionsummary commentssummary blackbg">
-          <h3>Comments</h3>
+        <summary class="sectionsummary postpagesectionsummary commentssummary blackbg"><h3>Comments</h3>
+          <a href="{{ site.baseurl }}{{ page.url }}" class="toparrowlink" title="Up to top">
+            <img src= "{{ site.baseurl }}/assets/images/sitewide/top-white.svg" class="toparrow">
+          </a>
         </summary>
-        
+
       <!-- If there are existing comments -->
       {% if site.data.comments[page.slug] %}
       {% assign comments = site.data.comments[page.slug] | where_exp: "item", "item.replying_to_uid == ''" %}
