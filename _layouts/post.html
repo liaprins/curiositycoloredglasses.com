@@ -41,6 +41,44 @@ layout: default
         </h2>
       </a>
 
+      <!-- In-page table of contents for extra sections; only shown if 2+ extra sections (assuming Comments are always on; if not I should make sure to have two others) -->
+      {% if page.process or page.glossaryfolder or page.thankyoufolder or page.thankyoucontent or page.relevantreading %}
+        <div id="toc" class="s-display">
+        {% if page.process %}
+          <a href="#process" id="process-link" class="toc-link">
+            <span class="toc-span">
+              Process
+            </span>
+          </a>
+        {% endif %}
+        {% if page.glossaryfolder %}
+          <a href="#glossarysection" id="glossary-link" class="toc-link">
+            Glossary
+          </a>
+        {% endif %}
+        {% if page.thankyoufolder %}
+          <a href="#notessection" id="thankyou-link" class="toc-link">
+            Notes
+          </a>
+        {% endif %}
+        {% if page.thankyoucontent %}
+          <a href="#notessection" id="thankyou-link" class="toc-link">
+            Notes
+          </a>
+        {% endif %}
+        {% if page.relevantreading %}
+          <a href="#relevantreading" id="rr-link" class="toc-link">
+            Related Posts
+          </a>
+        {% endif %}
+        {% if page.comments == true %}
+          <a href="#comments" id="comments-link" class="toc-link">
+            Comments
+          </a>
+        {% endif %}
+        </div>
+      {% endif %}
+
     <!-- If there is a guest writer -->
     {% if page.author and page.author != "Lia Prins" %}
       <span class="guestpostbanner xxs-display">Guest post</span>
@@ -109,14 +147,14 @@ layout: default
 
     <!-- Separator line between main content and extra sections -->
     {% if page.process or page.glossaryfolder or page.thankyoufolder or page.thankyoucontent or page.relevantreading or page.comments == true %}
-      <hr class="toprule separatorline" />
+      <hr class="toprule" id="separatorline" />
     {% endif %}
 
-    <!-- The Method to My Madness -->
+    <!-- Process -->
     {% if page.process %}
       <section id="process">
         <details class="postsectiondetails" open>
-          <summary class="sectionsummary postpagesectionsummary blackbg"><h3>The Method to My Madness</h3>
+          <summary class="sectionsummary postpagesectionsummary blackbg"><h3>Process</h3>
           </summary>
           {% for process in page.process %}
             {% include {{ process }} %}
@@ -142,11 +180,11 @@ layout: default
       </section>
     {% endif %}
 
-    <!-- Notes / Thank You section -->
+    <!-- Notes -->
     {% if page.thankyoufolder %}
       <section id="notessection">
         <details class="postsectiondetails" open>
-          <summary class="sectionsummary postpagesectionsummary blackbg"><h3>Thank You</h3>
+          <summary class="sectionsummary postpagesectionsummary blackbg"><h3>Notes</h3>
           </summary>
         {% assign notesbynumber = site.documents | sort: "basename" %}
         {% for note in notesbynumber %}
@@ -175,11 +213,11 @@ layout: default
 
   </article>
 
-<!-- Relevant Reading section -->
+<!-- Related Posts -->
 {% if page.relevantreading %}
   <section id="relevantreading">
     <details id="rrdetails" open>
-      <summary class="sectionsummary postpagesectionsummary blackbg" id="rrsectionheader"><h3>Relevant Reading</h3>
+      <summary class="sectionsummary postpagesectionsummary blackbg" id="rrsectionheader"><h3>Related Posts</h3>
       </summary>
       <div class="resultarea">
       {% for rr in page.relevantreading %}
@@ -197,19 +235,15 @@ layout: default
   <!-- Comments -->
   <article class="mockmain" id="postdesktopcontent2">    <!-- Opening second instance of <article> to make room for RR results that need to be wider than this width, to accommodate their all having margins on L + R -->
   {% if page.comments == true %}
-    <section class="comments">
+    <section class="comments" id="comments">
       <details class="commentsdetails" open>
-
+        <summary class="sectionsummary postpagesectionsummary commentssummary blackbg">
+          <h3>Comments</h3>
+        </summary>
+        
       <!-- If there are existing comments -->
       {% if site.data.comments[page.slug] %}
-        {% assign comments = site.data.comments[page.slug] | where_exp: "item", "item.replying_to_uid == ''" %}
-        {% for commentcounter in comments %}
-          {% if forloop.first %}
-            <summary class="sectionsummary postpagesectionsummary commentssummary blackbg">
-              <h3>Comments: {{ forloop.length }}</h3>
-            </summary>
-          {% endif %}
-        {% endfor %}
+      {% assign comments = site.data.comments[page.slug] | where_exp: "item", "item.replying_to_uid == ''" %}
         <!-- Pulling in existing comments -->
         {% assign comments_by_date = comments | sort: 'date' %}
         {% for comment in comments_by_date %}
@@ -233,12 +267,6 @@ layout: default
             </a>
           </article>
         {% endfor %}
-
-      <!-- If there are not existing comments -->
-      {% else %}
-        <summary class="sectionsummary postpagesectionsummary commentssummary blackbg">
-          <h3>Comments</h3>
-        </summary>
       {% endif %}
 
         <!-- The comment-entry area -->
