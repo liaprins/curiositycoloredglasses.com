@@ -198,7 +198,6 @@ figcaption {
 
 /* POST PAGE -------------------------------------------------- */
 
-/* TESTING !!! */
 #readingline {
   position: fixed;
   top: 0px;
@@ -207,7 +206,7 @@ figcaption {
   z-index: 101;
 }
 
-.mockmain {    /* This applies to the article element which holds all the post content and top part of Archive page; it is taking the place of <main> on post page, because there's only one <main> element allowed per page, but it has to split into two to allow wider #relevantreading <section> to fit between, to accomodate RR results with margins that extend beyond <main> */
+.mockmain {    /* This applies to the article element which holds all the post content and top part of Archive page; it is taking the place of <main> on post page, because there's only one <main> element allowed per page, but it has to split into two to allow wider #relatedposts <section> to fit between, to accomodate RR results with margins that extend beyond <main> */
     max-width: 1225px;
     width: 78.571%;    /* 22/28 cols | Use % here instead of vw because they can be used inside the max-width */
     margin: 0 auto;    }
@@ -223,6 +222,9 @@ figcaption {
 
 /*.postdatewidthbackarrow {
     width: calc(78.571vw - 5.25rem);    } */
+
+#toc {
+    display: none;    }
 
 .guestwriter p {
     display: inline;    }
@@ -296,14 +298,33 @@ figcaption {
     width: 1.2em;    /* This equates to 15px based on m-textface size of 12.5px, so if I want to maintain text size to articleendglasses size ratio, keep this relative em measurement */
     margin: 0 0 0.15em 0.25em;    }    /* Finessing to be perfectly placed; since ems are relative to text size, these ratios should hold for all screen sizes and text sizes, if I also keep the icon sized via ems, like in above line */
 
-#toc {
-  display: none;
-}
-
 .postpagesectionsummary {
     margin: 2.048rem 0;    }    /* top + bottom: 1 lh */
 .postpagesectionsummary::-webkit-details-marker {    /* Setting up the custom icons instead of default toggles */
     display: none;    }
+
+.toparrowlink {
+  padding: 0.65rem 1rem 0.37rem 1rem;
+  position: absolute;
+  left: calc(50vw + 39.29vw - 2rem - 0.6rem);
+  margin-top: -0.55rem;
+  background-image: url(http://localhost:4000/assets/images/sitewide/top-black.svg);
+  background-repeat: no-repeat;
+  background-size: 0.6rem auto;
+  background-position: 50% 50%;
+}
+
+.toparrowlink:hover {
+  background-color: #e2e43a;
+}
+
+.toparrowlink:hover > .toparrow {
+  visibility: hidden;
+}
+
+.toparrow {
+  width: 0.6rem;
+}
 
 .vocabwordinline,
 .notenumberinline {    /* This applies to just the inline vocab word, via vocab.php in the site/tags folder */
@@ -351,7 +372,7 @@ figcaption {
     margin-bottom: 0;
     max-width: 78.571vw;    }    /* 22/28 cols */
 
-#notessection {
+#notes {
     margin-bottom: 2rem;    }
 
 .notesdivclass {
