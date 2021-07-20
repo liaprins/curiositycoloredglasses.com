@@ -3,7 +3,7 @@ title: Rare as One&#58;	 State of Research
 author: Lia Prins
 tags:
 excerpt:
-comments: false
+comments: true
 rightextension: .png
 d3:
   - graphs/state-of-research/state-of-research.js
