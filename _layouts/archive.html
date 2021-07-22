@@ -13,21 +13,24 @@ layout: default
         {{ page.title }}
       </h2>
       <!-- Text for the page -->
-      <span class="l-textface">
+      <span id="archiveintro" class="l-textface">
         {{ content }}
       </span>
     </div>
     {% assign postsByYear = site.posts | group_by_exp:"post", "post.date | date: '%Y'" %}
     <!-- Archive year menu-->
-    <div id="archivemenudesktopcontent">
-      <p id="archivemenu">
+    <!-- THIS MENU IS ALL SET UP AND READY TO GO ONCE THERE ARE ENOUGH YEARS' WORTH OF POSTS TO JUSTIFY IT! -->
+    <!-- JUST UNCOMMENT THE CODE BLOCK BELOW FOR IT TO SHOW. IT IS EXACT SAME STYLE AS MENU IN POST PAGE FOR EXTRA SECTIONS -->
+    <!--
+    <div id="toc-archive" class="toc s-display">
       {% for year in postsByYear %}
-        <span>
-          <a href="{{ site.baseurl }}{{ site.url }}/archive#{{ year.name }}" id="archivemenuyear" class="archivemenu yellowhover">{{ year.name }}</a>
-        </span>
+      <a href="#{{ year.name }}" class="toc-link">
+        {{ year.name }}
+      </a>
       {% endfor %}
-      </p>
     </div>
+    -->
+
   </main>
 </div> <!-- id="everythingexceptnav", opened inside default.html layout -->
 

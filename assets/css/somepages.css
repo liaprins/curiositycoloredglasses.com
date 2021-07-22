@@ -223,7 +223,7 @@ figcaption {
 /*.postdatewidthbackarrow {
     width: calc(78.571vw - 5.25rem);    } */
 
-#toc {
+.toc {
     display: none;    }
 
 .guestwriter p {
