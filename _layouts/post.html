@@ -43,12 +43,10 @@ layout: default
 
       <!-- In-page table of contents for extra sections; only shown if 2+ extra sections (assuming Comments are always on; if not I should make sure to have two others) -->
       {% if page.process or page.glossaryfolder or page.thankyoufolder or page.thankyoucontent or page.relevantreading %}
-        <div id="toc" class="s-display">
+        <div class="toc s-display">
         {% if page.process %}
           <a href="#process" id="process-link" class="toc-link">
-            <span class="toc-span">
-              Process
-            </span>
+            Process
           </a>
         {% endif %}
         {% if page.glossaryfolder %}

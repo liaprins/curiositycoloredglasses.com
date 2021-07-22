@@ -712,7 +712,7 @@
         top: calc(29.167px - 0.844rem);
         left: calc(100vw - 29.167px - 0.844rem - 29.167px - 0.422rem);    }
 
-    #toc {
+    .toc {
         display: block;
         width: 179px;
         position: absolute;
@@ -720,23 +720,21 @@
         top: 135px;
         margin-top: calc(1.024rem - 9px);
         border-left: black 0.28rem solid;
-        padding: 1px 0;
-      }
+        padding: 1px 0;    }
 
-    #toc > a {
+    .toc > a {
         padding: 0.7em 0.7em 0.6em 0.7em;
         line-height: 1.4;
         display: inline-block;
-        margin: -1px 0 -1px 0.35rem;
-      }
-    #toc > a:hover {
-        /* border-left-color: #e2e43a; */
-        background-color: #e2e43a;
-      }
-
-    #toc-span {
-      border-left: black 0.28rem solid;
-    }
+        margin: -1px 0 -1px 0.35rem;    }
+    .toc > a:hover {
+        background-color: #e2e43a;    }
+      #archiveintro > p {
+        margin-bottom: 1.536rem;    }
+      #toc-archive {
+        left: calc(50vw + 379px);
+        top: 209px;
+        width: 100px;    }
     .toparrowlink {
         left: calc(642px - 2rem - 0.6rem);    }
     #vocabwordanddefinition {
