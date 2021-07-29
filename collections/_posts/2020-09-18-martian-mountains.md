@@ -3,6 +3,7 @@ title: How are Martian mountains measured?
 author: Lia Prins
 tags: science geology mars mountains volcanoes
 excerpt: On maps, a mountain’s height is always shown solely as its peak’s elevation above sea level. This seems like a bit of a cop-out to me&#58; is the mountain itself really that tall? Or is it just standing on the shoulders of a very tall plateau, so to speak? Then again, determining the base from which to measure any mountain seems like quite the slippery slope once you get down to it, so I do understand and sympathize with the sea level approach adopted by us Earthlings. But what about pinnacle-peppered planets and oceanless asteroids — (how) do we measure their mountains?
+d3v: v6
 d3:
   - graphs/martian-mountains/martian-mountains.js
 css:

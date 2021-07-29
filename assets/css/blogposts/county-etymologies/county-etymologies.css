@@ -1,0 +1,41 @@
+.county-outline {
+  fill: #ffffff;
+  stroke: #eeeeee;
+  stroke-width: 0.5;
+}
+.centroid-symbol {
+  stroke-width: 2;
+  stroke-linecap: round;
+  pointer-events: none;
+}
+#vis,
+#filter-container {
+  width: 1118px;
+  margin: 10px auto;
+  position: relative;
+  left: -233px;
+}
+#language-filter-group,
+#category-filter-group {
+  /* margin-top: 20px; */
+}
+#language-filter-group > h5,
+#category-filter-group > h5 {
+  margin: 10px 0;
+}
+#language-filter-group > .filter,
+#category-filter-group > .filter {
+  display: inline-block;
+  padding: 15px;
+  margin: 0 5px 10px 0;
+  background-color: #eeeeee;
+  cursor: pointer;
+  border: 2px solid rgba(0, 0, 0, 0);
+  line-height: 1;
+}
+.on {
+  border: 2px solid black !important;
+}
+.centroid-on {
+  stroke-width: 4;
+}
