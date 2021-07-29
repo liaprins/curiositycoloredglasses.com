@@ -37,8 +37,9 @@
     </script>
 
     <!-- D3.js -->
-    {% if page.layout == 'post' and page.d3 %}
-      <script src="https://d3js.org/d3.v6.min.js">
+
+    {% if page.layout == 'post' and page.d3v %}
+      <script src="https://d3js.org/d3.{{ page.d3v }}.min.js">
       </script>
     {% endif %}
 

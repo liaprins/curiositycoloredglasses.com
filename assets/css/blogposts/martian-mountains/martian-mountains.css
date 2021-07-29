@@ -15,7 +15,6 @@
 #radius-line {
   fill: none;
   stroke: black;
-  /* stroke-width: 2px; */
   stroke-width: 0.1rem;
 }
 

@@ -5,6 +5,7 @@ tags:
 excerpt:
 comments: true
 rightextension: .png
+d3v: v6
 d3:
   - graphs/state-of-research/state-of-research.js
 hidden: true
