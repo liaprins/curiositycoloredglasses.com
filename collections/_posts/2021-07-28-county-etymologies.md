@@ -5,9 +5,10 @@ tags:
 excerpt: Just getting the functionality going! No design has been done yet!
 comments: true
 rightextension: .png
-d3v: v4
+d3v: v6
 d3:
-  - graphs/county-etymologies/county-etymologies.js
+  - graphs/county-etymologies/us-map-symbol-color.js
+  - graphs/county-etymologies/cartogram.js
 css:
   - /assets/css/blogposts/county-etymologies/county-etymologies.css
 hidden: true
@@ -70,3 +71,5 @@ hidden: true
     </div>
   </div>
 </div> <!-- close #filter-container -->
+
+<div id="hex-vis"></div>

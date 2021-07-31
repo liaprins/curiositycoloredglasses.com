@@ -1,7 +1,13 @@
 .county-outline {
-  fill: #ffffff;
+  fill: rgba(255, 255, 255, 0);
   stroke: #eeeeee;
   stroke-width: 0.5;
+}
+.state-outline {
+  fill: #ffffff;
+  stroke: #eeeeee;
+  stroke-width: 1.5;
+  pointer-events: none;
 }
 .centroid-symbol {
   stroke-width: 2;
@@ -9,7 +15,8 @@
   pointer-events: none;
 }
 #vis,
-#filter-container {
+#filter-container,
+#hex-vis {
   width: 1118px;
   margin: 10px auto;
   position: relative;
