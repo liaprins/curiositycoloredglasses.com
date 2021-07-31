@@ -1,21 +1,27 @@
-var w = 1118;
-var h = 700;
+var w = 1000;
+var h = 580;
 
 var svg = d3.select('#vis')
   .append('svg')
     .attr('width', w)
     .attr('height', h)
     .style('background', '#eeeeee');
+var pathContainer = svg.append('g') // group to hold state + county outlines
+  .attr('id', 'path-container');
+var centroidContainer = svg.append('g') // group to hold centroid symbols
+  .attr('id', 'centroid-container');
+var allFilters = d3.selectAll('.filter');
+var filterContainer = d3.select('#filter-container');
 
 var projection = d3.geoAlbersUsa()
   .translate([w/2, h/2])
-  .scale([1350]);
+  .scale([1200]);
 
 var path = d3.geoPath()
   .projection(projection);
 
 // using temporarily for nicer colors before determine final design
-var color = d3.scaleOrdinal(d3.schemeCategory20);
+var color = d3.scaleOrdinal(d3.schemePaired);
 
 // establish function to convert CSV categories to words in UI
 var categoryConverter = function(v) {
@@ -96,10 +102,24 @@ var languageConverter = function(w) {
 };
 
 // load CSV of county etymology data
-d3.csv('assets/data/blogposts/county-etymologies/data_county-etymologies.csv', function(data) {
+d3.csv('assets/data/blogposts/county-etymologies/data_county-etymologies.csv')
+  .then(function(data) {
+
+  // load JSON of state outlines
+  d3.json('assets/data/blogposts/county-etymologies/data_states-20m.json')
+    .then(function(json) {
+    // draw state outlines
+    pathContainer.selectAll('.state-outline')
+      .data(json.features)
+      .enter()
+      .append('path')
+        .attr('d', path)
+        .attr('class', 'state-outline');
+  }); // close JSON function for state outlines
 
   // load JSON of county outlines
-  d3.json('assets/data/blogposts/county-etymologies/data_counties-20m.json', function(json) {
+  d3.json('assets/data/blogposts/county-etymologies/data_counties-20m.json')
+    .then(function(json) {
 
     for (var i = 0; i < data.length; i++) {
 
@@ -124,9 +144,6 @@ d3.csv('assets/data/blogposts/county-etymologies/data_county-etymologies.csv', f
     } // close i for-loop
 
     // draw county outlines
-    var pathContainer = svg.append('g') // group to hold county outlines
-      .attr('id', 'path-container');
-
     pathContainer.selectAll('.county-outline')
       .data(json.features)
       .enter()
@@ -143,9 +160,6 @@ d3.csv('assets/data/blogposts/county-etymologies/data_county-etymologies.csv', f
         });
 
     // establish county centroids
-    var centroidContainer = svg.append('g') // group to hold centroid symbols
-      .attr('id', 'centroid-container');
-
     centroidContainer.selectAll('.centroid-symbol')
       .data(json.features)
       .enter()
@@ -169,15 +183,24 @@ d3.csv('assets/data/blogposts/county-etymologies/data_county-etymologies.csv', f
           return categoryConverter(d.properties.category).categoryColor;
         });
 
-  }); // close JSON function
+    var filters = document.getElementsByClassName('filter');
+
+    for (var i = 0; i < filters.length; i++) {
+      var filterGroup = filters[i].getAttribute('data-group');
+      var filterField = filters[i].getAttribute('data-field');
+      var filterCountP = document.createElement('p');
+      filterCountP.innerHTML = ('<em>(' + centroidContainer.selectAll('.centroid-symbol.' + filterGroup + '-' + filterField).size() + ')</em>');
+      filters[i].appendChild(filterCountP);
+
+      console.log(filters[i].getAttribute('data-group'));
+    }
+
+  }); // close JSON function for county outlines
 
 }); // close CSV function
 
 
 // filters
-var allFilters = d3.selectAll('.filter');
-var filterContainer = d3.select('#filter-container');
-
 allFilters
   .on('click', function() {
 
