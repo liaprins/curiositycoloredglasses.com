@@ -16,7 +16,8 @@
 }
 #vis,
 #filter-container,
-#hex-vis {
+#hex-vis,
+#timeline-vis {
   width: 1118px;
   margin: 10px auto;
   position: relative;
