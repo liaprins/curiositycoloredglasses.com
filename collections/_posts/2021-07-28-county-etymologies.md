@@ -10,6 +10,7 @@ d3:
   - graphs/county-etymologies/us-map-symbol-color.js
   - graphs/county-etymologies/cartogram.js
   - graphs/county-etymologies/timeline.js
+  - graphs/county-etymologies/name-frequency.js
 css:
   - /assets/css/blogposts/county-etymologies/county-etymologies.css
 hidden: true
@@ -76,3 +77,5 @@ hidden: true
 <div id="hex-vis"></div>
 
 <div id="timeline-vis"></div>
+
+<div id="name-frequency-vis"></div>

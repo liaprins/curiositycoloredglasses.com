@@ -47,3 +47,8 @@
 .centroid-on {
   stroke-width: 4;
 }
+
+/* NAME FREQUENCY */
+.name-bars {
+  margin: 5px;
+}
