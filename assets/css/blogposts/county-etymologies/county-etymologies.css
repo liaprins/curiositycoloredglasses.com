@@ -17,7 +17,9 @@
 #vis,
 #filter-container,
 #hex-vis,
-#timeline-vis {
+#timeline-vis,
+#name-frequency-vis,
+#state-breakdown-vis {
   width: 1118px;
   margin: 10px auto;
   position: relative;
@@ -51,4 +53,22 @@
 /* NAME FREQUENCY */
 .name-bars {
   margin: 5px;
+}
+
+/* STATE BREAKDOWNS */
+#state-breakdowns-vis {
+  width: 1000px;
+  position: relative;
+  left: -233px;
+}
+#states-svg {
+  background: #eeeeee;
+  padding-top: 25px;
+}
+.state-category {
+  mix-blend-mode: multiply;
+}
+.tick>line,
+.state-grid>path {
+  stroke: #eeeeee;
 }
