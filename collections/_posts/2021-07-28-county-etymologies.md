@@ -11,6 +11,7 @@ d3:
   - graphs/county-etymologies/cartogram.js
   - graphs/county-etymologies/timeline.js
   - graphs/county-etymologies/name-frequency.js
+  - graphs/county-etymologies/state-breakdowns.js
 css:
   - /assets/css/blogposts/county-etymologies/county-etymologies.css
 hidden: true
@@ -79,3 +80,4 @@ hidden: true
 <div id="timeline-vis"></div>
 
 <div id="name-frequency-vis"></div>
+<div id="state-breakdowns-vis"></div>

@@ -111,7 +111,7 @@ d3.csv("assets/data/blogposts/county-etymologies/data_county-etymologies.csv")
   var color = d3.scaleOrdinal(d3.schemePaired);
 
   var w = 1000;
-  var h = 2500;
+  var h = 1850;
 
   var freqSvg = d3.select('#name-frequency-vis')
     .append('svg')
