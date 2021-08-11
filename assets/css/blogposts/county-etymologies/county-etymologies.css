@@ -72,3 +72,11 @@
 .state-grid>path {
   stroke: #eeeeee;
 }
+
+/* NSWE */
+#nswe-vis {
+  width: 1400px;
+  margin: 10px auto;
+  position: relative;
+  left: -350px;
+}
