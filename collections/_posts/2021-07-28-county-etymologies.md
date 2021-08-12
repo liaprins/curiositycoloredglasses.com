@@ -13,6 +13,7 @@ d3:
   - graphs/county-etymologies/name-frequency.js
   - graphs/county-etymologies/state-breakdowns.js
   - graphs/county-etymologies/nswe.js
+  - graphs/county-etymologies/american-pies.js
 css:
   - /assets/css/blogposts/county-etymologies/county-etymologies.css
 hidden: true
@@ -85,3 +86,5 @@ hidden: true
 <div id="state-breakdowns-vis"></div>
 
 <div id="nswe-vis"></div>
+
+<div id="pies-vis"></div>
