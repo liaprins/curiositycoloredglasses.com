@@ -19,7 +19,8 @@
 #hex-vis,
 #timeline-vis,
 #name-frequency-vis,
-#state-breakdown-vis {
+#state-breakdown-vis,
+#pies-vis {
   width: 1118px;
   margin: 10px auto;
   position: relative;
