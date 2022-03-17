@@ -10,12 +10,74 @@ rightextension: .png
 leftextension: .png
 css:
   - /assets/css/blogposts/place-names/place-names.css
+d3v: v6
+d3:
+  - graphs/place-names/place-names.js
 hidden: true
 ---
 
 Rather than rely on my own limited anecdotes to answer these questions, I went in search of data. Although state names would constitute too small a dataset to isolate interesting trends, the fact that there are approximately 3,000 {% include post-glossary-inline.html inlineword="counties" id="county" %}  in the US made them (and their {% include post-glossary-inline.html inlineword="parish" id="parish" %}, {% include post-glossary-inline.html inlineword="borough" id="borough" %}, {% include post-glossary-inline.html inlineword="census area" id="census-area" %}, {% include post-glossary-inline.html inlineword="independent city" id="independent-city" %}, and {% include post-glossary-inline.html inlineword="district" id="district" %} counterparts) a much more promising starting point for my investigation into American {% include post-glossary-inline.html inlineword="toponyms" id="toponym" %}. I found a list of most counties on Wikipedia,{%-include post-thankyou-inline.html number="1"-%} along with a brief etymology for each. From there I manually classified each county by both the category and subcategory its name fell into (within a set of my own devising), and its language, if available. If language wasn’t mentioned and I couldn’t determine it myself from context, I conducted further research (Googling) to at least label it as Indigenous or non-Indigenous.
 
-{% include post-image.html image="interactive-maps.png" alt="" caption="[Click] or tap within any county’s boundaries to learn more about its name’s etymology, granular category, and language, if known. Use the [botton] in the [top-right] to change whether the map is color-coded by high-level category or by language group." %}
+<!-- Zoom buttons -->
+<div id="ixmap-zoom-container">
+  <div id="ixmap-zoom-in" class="ixmap-zoom-button">
+  </div>
+  <div id="ixmap-zoom-out" class="ixmap-zoom-button">
+  </div>
+</div>
+
+<!-- Map container -->
+<div id="ixmap-container">
+</div>
+
+<!-- Toggle + legend -->
+<div id="ixmap-sidebar">
+  <!-- Toggle -->
+  <p>Color counties by:</p>
+  <div id="ixmap-toggle">
+    <div class="ixmap-toggle-pill-cat ixmap-toggle-pill-on">
+      <span class="ixmap-toggle-text-cat ixmap-toggle-text-on">
+        Category
+      </span>
+    </div>
+    <div class="ixmap-toggle-pill-lang">
+      <span class="ixmap-toggle-text-lang">
+        Language
+      </span>
+    </div>
+  </div>
+  <!-- Legend -->
+  <div id="ixmap-legend-container">
+  </div>
+</div>
+
+<!-- Tooltip -->
+<div id="ixmap-tooltip" class="hidden">
+  <p id="ixmap-tooltip-topline">
+      <span id="ixmap-tooltip-name">[County Name]</span>
+      <span id="ixmap-tooltip-type">[Type]</span><span>, </span>
+      <span id="ixmap-tooltip-state">[State]</span>
+  </p>
+  <p id="ixmap-tooltip-ety">[Etymology]</p>
+
+  <div>
+    <div id="ixmap-tooltip-dot-cat" class="ixmap-dot">
+    </div>
+    <p id="ixmap-tooltip-cat-container">
+      <span id="ixmap-tooltip-cat-label">Category: </span>
+      <span id="ixmap-tooltip-cat-value">[Category]</span>
+      <span id="ixmap-tooltip-cat-child"></span>
+    </p>
+  </div>
+
+  <div id="ixmap-tooltip-dot-lang" class="ixmap-dot">
+  </div>
+  <p id="ixmap-tooltip-lang-container">
+    <span id="ixmap-tooltip-lang-label">Language: </span>
+    <span id="ixmap-tooltip-lang-value">[Language]</span>
+    <span id="ixmap-tooltip-lang-child"></span>
+  </p>
+</div>
 
 Geomapping both attributes of my newly minted dataset — category and language — exposed the fact that the vast majority of counties are named for people, specifically men, and of European heritage (or at least with European surnames).  
 
