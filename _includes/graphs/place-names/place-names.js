@@ -1,7 +1,19 @@
-var ixmapW = 1000;
-var ixmapH = 700;
+var windowW = window.innerWidth;
+var ixmapW;
 
-var ixmapScale = 1250;
+if (windowW < 817) { // screenwidth < 817px
+  console.log('I am less than 817px wide!');
+  ixmapW = (92.857 * windowW) / 100;
+} else if (windowW < 1225) { // screenwidth between 817px and 1225px
+  var vw = (46.43 * windowW) / 100;
+  var percent = (50 * windowW) / 100;
+  ixmapW = percent - vw;
+} else { // screenwidth >=1225px
+  var ixmapW = 1108;
+}
+
+var ixmapH = ixmapW * 0.65;
+var ixmapScale = ixmapW * 1.29;
 
 var ixmapProjection = d3.geoAlbersUsa()
   .translate([ixmapW/2, ixmapH/2])
@@ -39,7 +51,7 @@ var placenameColorCat = function(v) {
     };
   } else if (v == 'concept') {
     return {
-      catLabel: 'Concept',
+      catLabel: 'Thing',
       catColor: '#BC80A5',
     };
   } else if (v == 'unknown') {
@@ -175,7 +187,7 @@ d3.csv('assets/data/blogposts/place-names/data_counties.csv')
           var centroid = ixmapCountyPath.centroid(currentCounty.datum());
           var centroidH = centroid[0];
           var centroidV = centroid[1];
-          var windowW = window.innerWidth;
+          // var windowW = window.innerWidth;
           var bodyTop = document.body.getBoundingClientRect().top;
           var map = document.getElementById('ixmap-container');
           var mapTop = map.getBoundingClientRect().top;

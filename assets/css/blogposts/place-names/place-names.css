@@ -2,9 +2,10 @@ body {
   font-family: 'Work Sans';
   margin-top: 0;
 }
-#ixmap-container {
-  display: inline-block;
-  width: 1000px;
+#ixmap-container {    /* This applies to the article element which holds all the post content and top part of Archive page; it is taking the place of <main> on post page, because there's only one <main> element allowed per page, but it has to split into two to allow wider #relatedposts <section> to fit between, to accomodate RR results with margins that extend beyond <main> */
+  width: 92.857vw;
+  position: relative;
+  left: -7.143vw;
   margin: 0px auto;
   background-color: #f5f5f5;
   font-family: 'Work Sans';
@@ -21,6 +22,8 @@ body {
   pointer-events: none;
 }
 #ixmap-sidebar {
+  position: absolute;
+  left: -233px;
   display: inline-block;
   vertical-align: top;
   width: 200px;
@@ -130,22 +133,22 @@ body {
   display: inline-block;
 }
 #ixmap-zoom-in {
-  background: url("images/zoom-in-light.svg") no-repeat;
+  background: url("/assets/images/blogposts/place-names/zoom-in-light.svg") no-repeat;
   background-color: black;
   cursor: pointer;
 }
 #ixmap-zoom-in:hover {
-  background: url("images/zoom-in-black.svg") no-repeat;
+  background: url("/assets/images/blogposts/place-names/zoom-in-black.svg") no-repeat;
   background-color: rgba(0, 0, 0, 0);
 }
 .ixmap-zoom-out-disabled {
-  background: url("images/zoom-out-light.svg") no-repeat;
+  background: url("/assets/images/blogposts/place-names/zoom-out-light.svg") no-repeat;
   background-color: #c7c7c7;
   border-color: #c7c7c7;
   pointer-events: none;
 }
 .ixmap-zoom-out-enabled {
-  background: url("images/zoom-out-light.svg") no-repeat;
+  background: url("/assets/images/blogposts/place-names/zoom-out-light.svg") no-repeat;
   background-color: black;
   border-color: black;
   pointer-events: auto;
@@ -154,4 +157,15 @@ body {
 .ixmap-zoom-out-enabled:hover {
   background: url("images/zoom-out-black.svg") no-repeat;
   background-color: rgba(0, 0, 0, 0);
+}
+@media (min-width: 817px) {
+  #ixmap-container {
+    left: calc(50% - 46.43vw); /* 46.43vw = 50vw (to get to L edge of screen) - 3.57vw (1/28col) */
+  }
+}
+@media (min-width: 1225px) {
+  #ixmap-container {
+    width: 1108.333px;
+    left: -233px;
+  }
 }
