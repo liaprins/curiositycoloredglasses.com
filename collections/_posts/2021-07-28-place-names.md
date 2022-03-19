@@ -27,21 +27,25 @@ Rather than rely on my own limited anecdotes to answer these questions, I went i
 </div>
 
 <!-- Map container -->
+<!--
+<div id="ixmap-container">
+</div>
+-->
 <div id="ixmap-container">
 </div>
 
 <!-- Toggle + legend -->
 <div id="ixmap-sidebar">
   <!-- Toggle -->
-  <p>Color counties by:</p>
+  <p id="ixmap-toggle-label" class="s-textface">Color counties by:</p>
   <div id="ixmap-toggle">
     <div class="ixmap-toggle-pill-cat ixmap-toggle-pill-on">
-      <span class="ixmap-toggle-text-cat ixmap-toggle-text-on">
+      <span class="ixmap-toggle-text-cat ixmap-toggle-text-on xs-textface bold">
         Category
       </span>
     </div>
     <div class="ixmap-toggle-pill-lang">
-      <span class="ixmap-toggle-text-lang">
+      <span class="ixmap-toggle-text-lang xs-textface bold">
         Language
       </span>
     </div>
@@ -49,6 +53,10 @@ Rather than rely on my own limited anecdotes to answer these questions, I went i
   <!-- Legend -->
   <div id="ixmap-legend-container">
   </div>
+  <figcaption id="ixmap-caption" class="xs-textface">
+    <hr class="toprule">
+    I am a caption, oh yeah! Don't you think the little color-coding toggle is adorable? Especially at the tiniest screenwidths! 
+  </figcaption>
 </div>
 
 <!-- Tooltip -->
@@ -81,7 +89,9 @@ Rather than rely on my own limited anecdotes to answer these questions, I went i
 
 Geomapping both attributes of my newly minted dataset — category and language — exposed the fact that the vast majority of counties are named for people, specifically men, and of European heritage (or at least with European surnames).  
 
+<!--
 {% include post-pullquote.html content="Although women-honoring toponyms account for only 1.1% of all counties, they are represented slightly higher in states that themselves possess feminine names: Maryland, Virginia, and Louisiana (although the latter was actually named for French King Louis XIV)." shape="square" %}
+-->
 
 Of those counties commemorating groups of people, nearly all bear Indigenous names. However, digging into their etymologies reveals that they’re not necessarily named in the language of the group they’re named for: to list a couple, the names of Wisconsin’s {% include post-glossary-inline.html inlineword="Outagamie" id="outagamie" %} and {% include post-glossary-inline.html inlineword="Ozaukee" id="ozaukee" %} counties derive from {% include post-glossary-inline.html inlineword="Ojibwe" id="ojibwe" %} words for their neighboring {% include post-glossary-inline.html inlineword="Meskwaki" id="meskwaki" %} people (“dwellers on the other side of the stream”) and {% include post-glossary-inline.html inlineword="Sauk" id="sauk" %} people, respectively. Even the few counties in this category christened with European names are likely to characterize Native American peoples — but based on what white settlers called them, not what they called themselves. For example, the names of Pend Oreille County, Washington; Nez Perce County, Idaho; and the two Huron Counties, in Michigan and Ohio; all originated from French terms used to describe the locals. _Pend d’oreille_ means “hang from ear”, in reference to the Q'lispé people’s shell earrings, while _nez percé_ alluded to the Niimíipuu people’s pierced noses. _Huron_ was an attribution to the way the Wyandot people dressed their hair.
 

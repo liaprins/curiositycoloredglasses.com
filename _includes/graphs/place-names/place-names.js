@@ -1,13 +1,8 @@
 var windowW = window.innerWidth;
 var ixmapW;
 
-if (windowW < 817) { // screenwidth < 817px
-  console.log('I am less than 817px wide!');
+if (windowW < 1225) { // screenwidth < 817px
   ixmapW = (92.857 * windowW) / 100;
-} else if (windowW < 1225) { // screenwidth between 817px and 1225px
-  var vw = (46.43 * windowW) / 100;
-  var percent = (50 * windowW) / 100;
-  ixmapW = percent - vw;
 } else { // screenwidth >=1225px
   var ixmapW = 1108;
 }
@@ -97,8 +92,6 @@ var ixmapZooming = function(event, d) {
     .classed('ixmap-zoom-out-enabled', true)
     .classed('ixmap-zoom-out-disabled', false);
   }
-
-  console.log('k = ' + event.transform.k);
 
 } // close ixmapZooming
 
@@ -297,11 +290,16 @@ var ixmapLegendCat = function() {
     .style('background-color', placenameColorCat(ixmapLegendListCat[i]).catColor);
   ixmapLegendContainer.select('#ixmap-legend-entry-' + i)
     .append('p') // add label
-      .attr('class', 'ixmap-legend-label')
+      .attr('class', 'ixmap-legend-label s-textface')
       .text(function() {
         return placenameColorCat(ixmapLegendListCat[i]).catLabel;
       });
   } // for
+  var ixmapSidebar = document.getElementById('ixmap-sidebar');
+  var ixmapCaptionTopMove = ixmapSidebar.offsetHeight;
+  var ixmapCaption = document.getElementById('ixmap-caption');
+  ixmapCaption.style.top = (ixmapCaptionTopMove + 25) + 'px';
+  console.log(ixmapCaptionTopMove);
 }// fx
 
 ixmapLegendCat();
@@ -338,11 +336,18 @@ ixmapToggle
           .style('background-color', placenameColorLang(ixmapLegendListLang[i]).langColor);
         ixmapLegendContainer.select('#ixmap-legend-entry-' + i)
           .append('p') // add label
-            .attr('class', 'ixmap-legend-label')
+            .attr('class', 'ixmap-legend-label s-textface')
             .text(function() {
               return placenameColorLang(ixmapLegendListLang[i]).langLabel;
             });
       }
+
+      // caption
+      var ixmapSidebar = document.getElementById('ixmap-sidebar');
+      var ixmapCaptionTopMove = ixmapSidebar.offsetHeight;
+      var ixmapCaption = document.getElementById('ixmap-caption');
+      ixmapCaption.style.top = (ixmapCaptionTopMove + 25) + 'px';
+      console.log(ixmapCaptionTopMove);
 
     } else { // if being set to category; therefore colored by language prior to click
 
@@ -399,3 +404,14 @@ d3.selectAll(".ixmap-zoom-button")
       // .duration(500)
       .call(ixmapZoom.scaleBy, scaleFactor);
 }); // close zooming interaction
+
+/*
+// caption vertical positioning
+// if (windowW < 1225) { // screenwidth < 817px
+  var ixmapSidebar = document.getElementById('ixmap-sidebar');
+  var ixmapCaptionTopMove = ixmapSidebar.offsetHeight;
+  var ixmapCaption = document.getElementById('ixmap-caption');
+  ixmapCaption.style.top = (ixmapCaptionTopMove + 25) + 'px';
+  console.log(ixmapCaptionTopMove);
+// }
+*/
