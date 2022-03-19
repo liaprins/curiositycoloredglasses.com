@@ -6,7 +6,8 @@ body {
   width: 92.857vw;
   position: relative;
   left: -7.143vw;
-  margin: 0px auto;
+  margin: 2.048rem auto;
+  /* margin: 1.024rem auto; */
   background-color: #f5f5f5;
   font-family: 'Work Sans';
   font-weight: 600;
@@ -22,35 +23,36 @@ body {
   pointer-events: none;
 }
 #ixmap-sidebar {
-  position: absolute;
-  left: -233px;
+  position: relative;
+  left: 0px;
   display: inline-block;
   vertical-align: top;
-  width: 200px;
 }
 
 /* toggle */
 #ixmap-toggle {
   border: black solid 2px;
-  border-radius: 20px;
+  border-radius: 1rem;
   display: inline-block;
-  padding: 2px;
+  padding: 0.1rem;
   cursor: pointer;
   vertical-align: top;
+  line-height: 1;
 }
 .ixmap-toggle-pill-cat,
 .ixmap-toggle-pill-lang {
   display: inline-block;
-  padding: 5px 10px;
-  border-radius: 20px;
+  /* padding: 0 0.4rem 0.2rem 0.4rem; */
+  padding: 0 0.4em 0.2em 0.4em;
+  border-radius: 1rem;
   background-color: white;
+  line-height: 1.2;
 }
 .ixmap-toggle-pill-on {
   background-color: black;
 }
 .ixmap-toggle-text-cat,
 .ixmap-toggle-text-lang {
-  font-size: 16px;
   font-weight: 600;
   color: black;
 }
@@ -59,15 +61,23 @@ body {
 }
 
 /* legend */
-.ixmap-dot {
-  width: 12px;
-  height: 12px;
+.ixmap-legend-entry {
   display: inline-block;
-  border-radius: 6px;
-  margin-right: 6px;
+  margin-right: 1.5em;
+  margin-top: 0.75em;
+}
+.ixmap-dot {
+  width: 0.6em;
+  height: 0.6em;
+  display: inline-block;
+  border-radius: 0.5em;
+  margin-right: 0.5em;
 }
 .ixmap-legend-label {
   display: inline-block;
+}
+#ixmap-caption {
+  margin-bottom: 1.024rem;
 }
 
 /* tooltip */
@@ -167,5 +177,27 @@ body {
   #ixmap-container {
     width: 1108.333px;
     left: -233px;
+  }
+  #ixmap-sidebar {
+    position: absolute;
+    left: -233px;
+    /* width: 175px; */
+  }
+  .ixmap-legend-entry {
+    display: block;
+    margin-right: 0;
+    margin-top: 0;
+  }
+  #ixmap-toggle-label {
+    margin: 0 0 0.25rem 0 !important;
+    display: block !important;
+  }
+  #ixmap-toggle {
+    display: block;
+    margin-bottom: 0.5rem !important;
+  }
+  #ixmap-caption {
+    position: absolute;
+    left: -58px;
   }
 }
