@@ -93,6 +93,16 @@ var ixmapZooming = function(event, d) {
     .classed('ixmap-zoom-out-disabled', false);
   }
 
+  if (event.transform.k >= 7) {
+    d3.select('#ixmap-zoom-in')
+      .classed('ixmap-zoom-in-disabled', true)
+      .classed('ixmap-zoom-in-enabled', false);
+  } else {
+    d3.select('#ixmap-zoom-in')
+    .classed('ixmap-zoom-in-enabled', true)
+    .classed('ixmap-zoom-in-disabled', false);
+  }
+
 } // close ixmapZooming
 
 // define zoom behavior
@@ -180,29 +190,26 @@ d3.csv('assets/data/blogposts/place-names/data_counties.csv')
           var centroid = ixmapCountyPath.centroid(currentCounty.datum());
           var centroidH = centroid[0];
           var centroidV = centroid[1];
-          // var windowW = window.innerWidth;
-          var bodyTop = document.body.getBoundingClientRect().top;
-          var map = document.getElementById('ixmap-container');
-          var mapTop = map.getBoundingClientRect().top;
-          var yDiff = mapTop - bodyTop;
           var tooltipW = 400;
-          var tooltipPadding = 15;
-          var tooltipH = document.getElementById('ixmap-tooltip').getBoundingClientRect().height;
-          var mapH = map.getBoundingClientRect().height;
+          // var tooltipPadding = 15;
+          var map = document.getElementById('ixmap-container');
+          var mapR = map.getBoundingClientRect().right;
+          var mapW = map.getBoundingClientRect().width;
+          var marginL = (windowW - mapW) / 2;
+          console.log(centroidH + tooltipW);
           d3.select(this)
             .style('fill', 'black');
           d3.select("#ixmap-tooltip")
             .classed("hidden", false)
             .style('left', function() { // position tooltip depending how close it is to edge
-              if ((centroidH + ((windowW - ixmapW) / 2)) < (windowW - ((windowW - ixmapW) / 2) - (tooltipW + (tooltipPadding * 2)))) {
-                return (centroidH + ((windowW - ixmapW) / 2)) + 'px';
+              if ((centroidH + tooltipW + marginL) < mapR) {
+                return centroidH + 'px';
               } else {
-                return ((centroidH + ((windowW - ixmapW) / 2)) - tooltipW - (tooltipPadding * 2)) + 'px';
+                return (centroidH - tooltipW) + 'px';
               }
             })
-            .style('top', (centroidV + yDiff) + 'px')
-            .attr('width', tooltipW + 'px')
-            .attr('padding', tooltipPadding + 'px');
+            .style('top', (centroidV) + 'px')
+            .attr('width', tooltipW + 'px');
           d3.select("#ixmap-tooltip-name")
             .text(d.properties.name);
           d3.select("#ixmap-tooltip-type")
@@ -218,7 +225,7 @@ d3.csv('assets/data/blogposts/place-names/data_counties.csv')
           d3.select("#ixmap-tooltip-cat-value")
             .text(function() {
               return placenameColorCat(d.properties.category).catLabel;
-            })
+            });
           d3.select("#ixmap-tooltip-cat-child")
             .text(d.properties.tooltipsubcategory);
           d3.select("#ixmap-tooltip-dot-lang")
@@ -228,7 +235,7 @@ d3.csv('assets/data/blogposts/place-names/data_counties.csv')
           d3.select("#ixmap-tooltip-lang-value")
             .text(function() {
               return placenameColorLang(d.properties.language).langLabel;
-            })
+            });
           d3.select("#ixmap-tooltip-lang-child")
             .text(d.properties.tooltipgranularlanguage);
           })
@@ -299,7 +306,6 @@ var ixmapLegendCat = function() {
   var ixmapCaptionTopMove = ixmapSidebar.offsetHeight;
   var ixmapCaption = document.getElementById('ixmap-caption');
   ixmapCaption.style.top = (ixmapCaptionTopMove + 25) + 'px';
-  console.log(ixmapCaptionTopMove);
 }// fx
 
 ixmapLegendCat();
@@ -347,7 +353,6 @@ ixmapToggle
       var ixmapCaptionTopMove = ixmapSidebar.offsetHeight;
       var ixmapCaption = document.getElementById('ixmap-caption');
       ixmapCaption.style.top = (ixmapCaptionTopMove + 25) + 'px';
-      console.log(ixmapCaptionTopMove);
 
     } else { // if being set to category; therefore colored by language prior to click
 
@@ -377,8 +382,8 @@ ixmapToggle
 
 var ixmapZoomContainer = document.getElementById('ixmap-zoom-container');
 var ixmapZoomButtonH = 25;
-ixmapZoomContainer.style.top = (ixmapH - (ixmapZoomButtonH) - 35) + "px";
-ixmapZoomContainer.style.left = (ixmapW - (ixmapZoomButtonH * 2) - 35 - 10) + "px";
+ixmapZoomContainer.style.top = 'calc(' + (ixmapH - (ixmapZoomButtonH)) + 'px - 1rem)';
+ixmapZoomContainer.style.left = 'calc(' + (ixmapW - (ixmapZoomButtonH * 2) - 10) + 'px - 1rem)';
 
 // zooming interaction
 d3.selectAll(".ixmap-zoom-button")
@@ -405,13 +410,5 @@ d3.selectAll(".ixmap-zoom-button")
       .call(ixmapZoom.scaleBy, scaleFactor);
 }); // close zooming interaction
 
-/*
-// caption vertical positioning
-// if (windowW < 1225) { // screenwidth < 817px
-  var ixmapSidebar = document.getElementById('ixmap-sidebar');
-  var ixmapCaptionTopMove = ixmapSidebar.offsetHeight;
-  var ixmapCaption = document.getElementById('ixmap-caption');
-  ixmapCaption.style.top = (ixmapCaptionTopMove + 25) + 'px';
-  console.log(ixmapCaptionTopMove);
-// }
-*/
+var ixmapContainer = document.getElementById('ixmap-container');
+ixmapContainer.style.height = (ixmapContainer.offsetHeight - 10) + 'px';
