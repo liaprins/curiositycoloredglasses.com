@@ -2,7 +2,7 @@
 title: How do place names differ across America?
 author: Lia Prins
 tags:
-excerpt: I used to travel to the East coast occasionally for work, and was always struck by how different the names of the towns there were, compared to where I grew up in Washington state. Whereas the nomenclature of the Northwest seemed to be based on Native American languages (if not their Anglicized, Latin-character-converted equivalents), most monikers in the East sounded purely English to my ear. Now, after living in the San Francisco Bay Area — the naming practices of which seem to have been heavily (though unwittingly) influenced by several Spanish saints — I often wonder about the various pockets of American place-name patternsme&#58; How heterogeneous are the names of our nation’s locations, and on what dimensions? What stories are behind these toponyms, and how do they speak to the places they represent?
+excerpt: I used to travel to the East coast occasionally for work, and was always struck by how different the names of the towns there were, compared to where I grew up in Washington state. Whereas the nomenclature of the Northwest seemed to be based on Native American languages (if not their Anglicized, Latin-character-converted equivalents), most monikers in the East sounded purely English to my ear. Now, after living in the San Francisco Bay Area — the naming practices of which seem to have been heavily (though unwittingly) influenced by several Spanish saints — I often wonder about the various pockets of American place-name patterns&#58; How heterogeneous are the names of our nation’s locations, and on what dimensions? What stories are behind these toponyms, and how do they speak to the places they represent?
 glossaryfolder: vocab-place-names
 thankyoufolder: thankyou-place-names
 comments: true
@@ -18,21 +18,47 @@ hidden: true
 
 Rather than rely on my own limited anecdotes to answer these questions, I went in search of data. Although state names would constitute too small a dataset to isolate interesting trends, the fact that there are approximately 3,000 {% include post-glossary-inline.html inlineword="counties" id="county" %}  in the US made them (and their {% include post-glossary-inline.html inlineword="parish" id="parish" %}, {% include post-glossary-inline.html inlineword="borough" id="borough" %}, {% include post-glossary-inline.html inlineword="census area" id="census-area" %}, {% include post-glossary-inline.html inlineword="independent city" id="independent-city" %}, and {% include post-glossary-inline.html inlineword="district" id="district" %} counterparts) a much more promising starting point for my investigation into American {% include post-glossary-inline.html inlineword="toponyms" id="toponym" %}. I found a list of most counties on Wikipedia,{%-include post-thankyou-inline.html number="1"-%} along with a brief etymology for each. From there I manually classified each county by both the category and subcategory its name fell into (within a set of my own devising), and its language, if available. If language wasn’t mentioned and I couldn’t determine it myself from context, I conducted further research (Googling) to at least label it as Indigenous or non-Indigenous.
 
-<!-- Zoom buttons -->
-<div id="ixmap-zoom-container">
-  <div id="ixmap-zoom-in" class="ixmap-zoom-button">
-  </div>
-  <div id="ixmap-zoom-out" class="ixmap-zoom-button">
-  </div>
-</div>
-
 <!-- Map container -->
-<!--
 <div id="ixmap-container">
-</div>
--->
-<div id="ixmap-container">
-</div>
+
+  <!-- Zoom buttons -->
+  <div id="ixmap-zoom-container">
+    <div id="ixmap-zoom-in" class="ixmap-zoom-button">
+    </div>
+    <div id="ixmap-zoom-out" class="ixmap-zoom-button">
+    </div>
+  </div>
+
+  <!-- Tooltip -->
+  <div id="ixmap-tooltip" class="hidden">
+    <p id="ixmap-tooltip-topline" class="m-textface">
+        <span id="ixmap-tooltip-name">[County Name]</span>
+        <span id="ixmap-tooltip-type">[Type]</span><span>, </span>
+        <span id="ixmap-tooltip-state">[State]</span>
+    </p>
+    <p id="ixmap-tooltip-ety" class="s-textface">[Etymology]</p>
+
+    <div>
+      <div id="ixmap-tooltip-dot-cat" class="ixmap-dot">
+      </div>
+      <p id="ixmap-tooltip-cat-container">
+        <span id="ixmap-tooltip-cat-label" class="s-textface">Category: </span>
+        <span id="ixmap-tooltip-cat-value" class="s-textface">[Category]</span>
+        <span id="ixmap-tooltip-cat-child" class="s-textface"></span>
+      </p>
+    </div>
+
+    <div id="ixmap-tooltip-dot-lang" class="ixmap-dot">
+    </div>
+    <p id="ixmap-tooltip-lang-container">
+      <span id="ixmap-tooltip-lang-label" class="s-textface">Language: </span>
+      <span id="ixmap-tooltip-lang-value" class="s-textface">[Language]</span>
+      <span id="ixmap-tooltip-lang-child" class="s-textface"></span>
+    </p>
+
+  </div> <!-- close ixmap-tooltip -->
+
+</div> <!-- close ixmap-container -->
 
 <!-- Toggle + legend -->
 <div id="ixmap-sidebar">
@@ -55,11 +81,12 @@ Rather than rely on my own limited anecdotes to answer these questions, I went i
   </div>
   <figcaption id="ixmap-caption" class="xs-textface">
     <hr class="toprule">
-    I am a caption, oh yeah! Don't you think the little color-coding toggle is adorable? Especially at the tiniest screenwidths! 
+    I am a caption, oh yeah! Don't you think the little color-coding toggle is adorable? Especially at the tiniest screenwidths!
   </figcaption>
 </div>
 
 <!-- Tooltip -->
+<!--
 <div id="ixmap-tooltip" class="hidden">
   <p id="ixmap-tooltip-topline">
       <span id="ixmap-tooltip-name">[County Name]</span>
@@ -86,6 +113,7 @@ Rather than rely on my own limited anecdotes to answer these questions, I went i
     <span id="ixmap-tooltip-lang-child"></span>
   </p>
 </div>
+-->
 
 Geomapping both attributes of my newly minted dataset — category and language — exposed the fact that the vast majority of counties are named for people, specifically men, and of European heritage (or at least with European surnames).  
 

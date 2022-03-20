@@ -31,7 +31,7 @@ body {
 
 /* toggle */
 #ixmap-toggle {
-  border: black solid 2px;
+  border: black solid 0.1rem;
   border-radius: 1rem;
   display: inline-block;
   padding: 0.1rem;
@@ -71,7 +71,7 @@ body {
   height: 0.6em;
   display: inline-block;
   border-radius: 0.5em;
-  margin-right: 0.5em;
+  margin-right: 0.25em;
 }
 .ixmap-legend-label {
   display: inline-block;
@@ -85,22 +85,23 @@ body {
   position: absolute;
   width: 400px;
   height: auto;
-  padding: 15px;
+  padding: 0.5rem 0.75rem;
   background-color: #ffffffdd;
   border-color: black;
-  border-width: 2px;
+  border-width: 0.1rem;
   border-style: solid;
   pointer-events: none;
 }
 #ixmap-tooltip p {
-  margin: 0;
-  font-size: 16px;
-  line-height: 1.5;
+  margin: 0 0 0.25rem 0;
+  line-height: 1.4;
+}
+#ixmap-tooltip-topline {
+  margin-bottom: 1.5rem;
 }
 #ixmap-tooltip-topline span {
-  font-size: 19px;
-  padding-bottom: 5px;
   font-weight: 600;
+  line-height: 1.5;
 }
 #ixmap-tooltip-cat-label,
 #ixmap-tooltip-lang-label {
@@ -117,56 +118,57 @@ body {
 #ixmap-tooltip-lang-container {
   display: inline-block;
 }
+#ixmap-tooltip-cat-container {
+  line-height: 1.0;
+}
 
 /* zoom buttons */
-.zoom-button rect {
-  fill: black;
-  stroke: 2px;
-  stroke-color: black;
-}
-.zoom-button text {
-  fill: white;
-  font-size: 18px;
-  text-anchor: middle;
-}
-.zoom-button:hover rect,
-.zoom-button:hover text {
-  fill: #00000000;
-}
 #ixmap-zoom-container {
   position: absolute;
 }
 .ixmap-zoom-button {
-  border: 2px black solid;
-  width: 25px;
-  height: 25px;
+  border-style: solid;
+  border-width: 0.1rem;
+  width: 1.1rem;
+  height: 1.1rem;
   display: inline-block;
 }
 #ixmap-zoom-in {
-  background: url("/assets/images/blogposts/place-names/zoom-in-light.svg") no-repeat;
-  background-color: black;
-  cursor: pointer;
-}
-#ixmap-zoom-in:hover {
-  background: url("/assets/images/blogposts/place-names/zoom-in-black.svg") no-repeat;
-  background-color: rgba(0, 0, 0, 0);
+  position: relative;
+  left: -0.1rem;
 }
 .ixmap-zoom-out-disabled {
   background: url("/assets/images/blogposts/place-names/zoom-out-light.svg") no-repeat;
+}
+.ixmap-zoom-in-disabled {
+  background: url("/assets/images/blogposts/place-names/zoom-in-light.svg") no-repeat;
+}
+.ixmap-zoom-out-disabled,
+.ixmap-zoom-in-disabled {
   background-color: #c7c7c7;
   border-color: #c7c7c7;
   pointer-events: none;
 }
 .ixmap-zoom-out-enabled {
   background: url("/assets/images/blogposts/place-names/zoom-out-light.svg") no-repeat;
+}
+.ixmap-zoom-out-enabled:hover {
+  background: url("/assets/images/blogposts/place-names/zoom-out-black.svg") no-repeat;
+  background-color: rgba(0, 0, 0, 0);
+}
+.ixmap-zoom-in-enabled {
+  background: url("/assets/images/blogposts/place-names/zoom-in-light.svg") no-repeat;
+}
+.ixmap-zoom-in-enabled:hover {
+  background: url("/assets/images/blogposts/place-names/zoom-in-black.svg") no-repeat;
+  background-color: rgba(0, 0, 0, 0);
+}
+.ixmap-zoom-out-enabled,
+.ixmap-zoom-in-enabled {
   background-color: black;
   border-color: black;
   pointer-events: auto;
   cursor: pointer;
-}
-.ixmap-zoom-out-enabled:hover {
-  background: url("images/zoom-out-black.svg") no-repeat;
-  background-color: rgba(0, 0, 0, 0);
 }
 @media (min-width: 817px) {
   #ixmap-container {
