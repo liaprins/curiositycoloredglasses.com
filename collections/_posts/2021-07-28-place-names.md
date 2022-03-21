@@ -21,6 +21,9 @@ Rather than rely on my own limited anecdotes to answer these questions, I went i
 <!-- Map container -->
 <div id="ixmap-container">
 
+  <!-- Loading image -->
+  <!-- <img id="ixmap-loader" src="/assets/images/sitewide/loader.gif"> -->
+
   <!-- Zoom buttons -->
   <div id="ixmap-zoom-container">
     <div id="ixmap-zoom-in" class="ixmap-zoom-button">
@@ -84,36 +87,6 @@ Rather than rely on my own limited anecdotes to answer these questions, I went i
     I am a caption, oh yeah! Don't you think the little color-coding toggle is adorable? Especially at the tiniest screenwidths!
   </figcaption>
 </div>
-
-<!-- Tooltip -->
-<!--
-<div id="ixmap-tooltip" class="hidden">
-  <p id="ixmap-tooltip-topline">
-      <span id="ixmap-tooltip-name">[County Name]</span>
-      <span id="ixmap-tooltip-type">[Type]</span><span>, </span>
-      <span id="ixmap-tooltip-state">[State]</span>
-  </p>
-  <p id="ixmap-tooltip-ety">[Etymology]</p>
-
-  <div>
-    <div id="ixmap-tooltip-dot-cat" class="ixmap-dot">
-    </div>
-    <p id="ixmap-tooltip-cat-container">
-      <span id="ixmap-tooltip-cat-label">Category: </span>
-      <span id="ixmap-tooltip-cat-value">[Category]</span>
-      <span id="ixmap-tooltip-cat-child"></span>
-    </p>
-  </div>
-
-  <div id="ixmap-tooltip-dot-lang" class="ixmap-dot">
-  </div>
-  <p id="ixmap-tooltip-lang-container">
-    <span id="ixmap-tooltip-lang-label">Language: </span>
-    <span id="ixmap-tooltip-lang-value">[Language]</span>
-    <span id="ixmap-tooltip-lang-child"></span>
-  </p>
-</div>
--->
 
 Geomapping both attributes of my newly minted dataset — category and language — exposed the fact that the vast majority of counties are named for people, specifically men, and of European heritage (or at least with European surnames).  
 

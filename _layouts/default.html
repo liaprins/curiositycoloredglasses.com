@@ -39,7 +39,12 @@
     <!-- D3.js -->
 
     {% if page.layout == 'post' and page.d3v %}
+      <!-- TEMPORARILY REDIRECTING TO LOCAL D3 LIBRARY WHILE ON AIRPLANE -->
+      <!--
       <script src="https://d3js.org/d3.{{ page.d3v }}.min.js">
+      </script>
+      -->
+      <script src="{{ site.baseurl }}/assets/js/d3.min.js">
       </script>
     {% endif %}
 
