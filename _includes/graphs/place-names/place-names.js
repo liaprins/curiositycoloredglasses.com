@@ -2,7 +2,8 @@ var windowW = window.innerWidth;
 var ixmapW;
 
 if (windowW < 1225) { // screenwidth < 817px
-  ixmapW = (92.857 * windowW) / 100;
+  // ixmapW = (92.857 * windowW) / 100;
+  ixmapW = (85.714 * windowW) / 100;
 } else { // screenwidth >=1225px
   var ixmapW = 1108;
 }
@@ -14,6 +15,7 @@ var ixmapProjection = d3.geoAlbersUsa()
   .translate([ixmapW/2, ixmapH/2])
   .scale([ixmapScale]);
 
+// d3.select('#ixmap-loader').remove();
 var ixmapSvg = d3.select('#ixmap-container')
   .append('svg')
     .attr('width', ixmapW)
@@ -83,6 +85,7 @@ var ixmapZooming = function(event, d) {
   ixmapSvg.selectAll("path") // update all paths
     .attr("d", ixmapCountyPath);
 
+  // setting whether zoom out button is disabled or enabled
   if (event.transform.k == 1) {
     d3.select('#ixmap-zoom-out')
       .classed('ixmap-zoom-out-disabled', true)
@@ -92,7 +95,7 @@ var ixmapZooming = function(event, d) {
     .classed('ixmap-zoom-out-enabled', true)
     .classed('ixmap-zoom-out-disabled', false);
   }
-
+  // setting whether zoom in button is disabled or enabled
   if (event.transform.k >= 7) {
     d3.select('#ixmap-zoom-in')
       .classed('ixmap-zoom-in-disabled', true)
@@ -133,6 +136,12 @@ d3.csv('assets/data/blogposts/place-names/data_counties.csv')
   // load JSON of county outlines
   d3.json('assets/data/blogposts/place-names/data_counties-20m.json')
     .then(function(json) {
+
+// TRYING TO GET THE LOADER IMG TO SHOW WHILE DATA LOADS!
+/*
+var ixmapLoaderContainer = document.getElementById('ixmap-container');
+ixmapLoaderContainer.innerHTML = '<img src="/assets/images/sitewide/loader.gif">';
+*/
 
     for (var i = 0; i < data.length; i++) {
 
@@ -190,26 +199,39 @@ d3.csv('assets/data/blogposts/place-names/data_counties.csv')
           var centroid = ixmapCountyPath.centroid(currentCounty.datum());
           var centroidH = centroid[0];
           var centroidV = centroid[1];
-          var tooltipW = 400;
-          // var tooltipPadding = 15;
+          var tooltipW = 350;
           var map = document.getElementById('ixmap-container');
           var mapR = map.getBoundingClientRect().right;
           var mapW = map.getBoundingClientRect().width;
+          var mapH = map.getBoundingClientRect().height;
           var marginL = (windowW - mapW) / 2;
-          console.log(centroidH + tooltipW);
           d3.select(this)
-            .style('fill', 'black');
+            // .style('fill', 'black');
+            .style('fill', function() {
+              if (windowW >= 754) {
+                return 'black';
+              } else {
+                return placenameColorCat(d.properties.category).catColor;
+              }
+            })
           d3.select("#ixmap-tooltip")
-            .classed("hidden", false)
+            // .classed("hidden", false)
+            .classed("hidden", function() {
+              if (windowW >= 754) {
+                return false;
+              } else {
+                return true;
+              }
+            })
             .style('left', function() { // position tooltip depending how close it is to edge
               if ((centroidH + tooltipW + marginL) < mapR) {
                 return centroidH + 'px';
               } else {
                 return (centroidH - tooltipW) + 'px';
-              }
+              } // close inner if
             })
-            .style('top', (centroidV) + 'px')
-            .attr('width', tooltipW + 'px');
+            .style('top', centroidV + 'px')
+            .style('width', tooltipW + 'px');
           d3.select("#ixmap-tooltip-name")
             .text(d.properties.name);
           d3.select("#ixmap-tooltip-type")
@@ -238,7 +260,8 @@ d3.csv('assets/data/blogposts/place-names/data_counties.csv')
             });
           d3.select("#ixmap-tooltip-lang-child")
             .text(d.properties.tooltipgranularlanguage);
-          })
+          } // close fx
+        ) // close .on mouseover
         .on('mouseout', function() {
           d3.select("#ixmap-tooltip")
             .classed("hidden", true);
@@ -306,7 +329,7 @@ var ixmapLegendCat = function() {
   var ixmapCaptionTopMove = ixmapSidebar.offsetHeight;
   var ixmapCaption = document.getElementById('ixmap-caption');
   ixmapCaption.style.top = (ixmapCaptionTopMove + 25) + 'px';
-}// fx
+} // fx
 
 ixmapLegendCat();
 
@@ -380,12 +403,11 @@ ixmapToggle
 
   }); // close .on for toggle
 
+// zoom buttons
 var ixmapZoomContainer = document.getElementById('ixmap-zoom-container');
 var ixmapZoomButtonH = 25;
 ixmapZoomContainer.style.top = 'calc(' + (ixmapH - (ixmapZoomButtonH)) + 'px - 1rem)';
 ixmapZoomContainer.style.left = 'calc(' + (ixmapW - (ixmapZoomButtonH * 2) - 10) + 'px - 1rem)';
-
-// zooming interaction
 d3.selectAll(".ixmap-zoom-button")
   .on("click", function() {
 
@@ -406,7 +428,6 @@ d3.selectAll(".ixmap-zoom-button")
 
     // this triggers a zoom event, scaling by scaleFactor
     ixmapZoomableGroup.transition()
-      // .duration(500)
       .call(ixmapZoom.scaleBy, scaleFactor);
 }); // close zooming interaction
 

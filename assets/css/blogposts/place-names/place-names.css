@@ -3,14 +3,16 @@ body {
   margin-top: 0;
 }
 #ixmap-container {    /* This applies to the article element which holds all the post content and top part of Archive page; it is taking the place of <main> on post page, because there's only one <main> element allowed per page, but it has to split into two to allow wider #relatedposts <section> to fit between, to accomodate RR results with margins that extend beyond <main> */
-  width: 92.857vw;
+  /* width: 92.857vw; */
+  width: 85.714vw;
   position: relative;
-  left: -7.143vw;
+  /* left: -7.143vw; */
+  left: -14.286;
   margin: 2.048rem auto;
-  /* margin: 1.024rem auto; */
   background-color: #f5f5f5;
   font-family: 'Work Sans';
   font-weight: 600;
+  z-index: 10;
 }
 .ixmap-county {
   stroke: #f5f5f5;
@@ -42,7 +44,6 @@ body {
 .ixmap-toggle-pill-cat,
 .ixmap-toggle-pill-lang {
   display: inline-block;
-  /* padding: 0 0.4rem 0.2rem 0.4rem; */
   padding: 0 0.4em 0.2em 0.4em;
   border-radius: 1rem;
   background-color: white;
@@ -83,7 +84,6 @@ body {
 /* tooltip */
 #ixmap-tooltip {
   position: absolute;
-  width: 400px;
   height: auto;
   padding: 0.5rem 0.75rem;
   background-color: #ffffffdd;
@@ -125,6 +125,7 @@ body {
 /* zoom buttons */
 #ixmap-zoom-container {
   position: absolute;
+  /* display: none; */ /* ONLY UP TO 754px SCREEN WIDTH */
 }
 .ixmap-zoom-button {
   border-style: solid;
@@ -170,9 +171,17 @@ body {
   pointer-events: auto;
   cursor: pointer;
 }
+/*
+@media (min-width: 754px) {
+  #ixmap-zoom-container {
+    display: block;
+  }
+}
+*/
 @media (min-width: 817px) {
   #ixmap-container {
-    left: calc(50% - 46.43vw); /* 46.43vw = 50vw (to get to L edge of screen) - 3.57vw (1/28col) */
+    /* left: calc(50% - 46.43vw); */ /* 46.43vw = (50vw (to get to L edge of screen) - 3.57vw (1/28col)) */
+    left: calc(50% - 42.857vw); /* 42.857vw = (50vw (to get to L edge of screen) - 7.143vw (2/28col)) */
   }
 }
 @media (min-width: 1225px) {
