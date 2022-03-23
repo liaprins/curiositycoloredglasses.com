@@ -15,7 +15,6 @@ var ixmapProjection = d3.geoAlbersUsa()
   .translate([ixmapW/2, ixmapH/2])
   .scale([ixmapScale]);
 
-// d3.select('#ixmap-loader').remove();
 var ixmapSvg = d3.select('#ixmap-container')
   .append('svg')
     .attr('width', ixmapW)
