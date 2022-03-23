@@ -21,9 +21,6 @@ Rather than rely on my own limited anecdotes to answer these questions, I went i
 <!-- Map container -->
 <div id="ixmap-container">
 
-  <!-- Loading image -->
-  <!-- <img id="ixmap-loader" src="/assets/images/sitewide/loader.gif"> -->
-
   <!-- Zoom buttons -->
   <div id="ixmap-zoom-container">
     <div id="ixmap-zoom-in" class="ixmap-zoom-button">
