@@ -184,11 +184,47 @@ d3.csv('assets/data/blogposts/place-names/data_counties.csv')
       .append('path')
         .attr('d', ixmapCountyPath)
         .attr('class', function(d) {
-          return 'ixmap-county';
+          return 'ixmap-county ixmap-county-' + d.properties.name;
         })
         .attr('fill', function(d) {
           return placenameColorCat(d.properties.category).catColor;
         })
+        .on('click', function(q, d, r) {
+          // Hamilton Easter eggs
+
+          var ixmapClickedCounty = d3.select(this);
+          var ixmapClickedCountyClass = ixmapClickedCounty.attr('class');
+          console.log(ixmapClickedCountyClass);
+
+          if (ixmapClickedCountyClass.includes('Washington')) {
+            var audio = new Audio('assets/images/blogposts/place-names/easter-eggs/washington.m4a');
+            audio.play();
+          } else if (ixmapClickedCountyClass.includes('Jefferson')) {
+            var audio = new Audio('assets/images/blogposts/place-names/easter-eggs/jefferson.m4a');
+            audio.play();
+          } else if (ixmapClickedCountyClass.includes('Hamilton')) {
+            var audio = new Audio('assets/images/blogposts/place-names/easter-eggs/hamilton.m4a');
+            audio.play();
+          } else if (ixmapClickedCountyClass.includes('Lafayette') || ixmapClickedCountyClass.includes('Fayette')) {
+            var audio = new Audio('assets/images/blogposts/place-names/easter-eggs/lafayette.m4a');
+            audio.play();
+          } else if (ixmapClickedCountyClass.includes('Madison')) {
+            var audio = new Audio('assets/images/blogposts/place-names/easter-eggs/madison.m4a');
+            audio.play();
+          } else if (ixmapClickedCountyClass.includes('Laurens')) {
+            var audio = new Audio('assets/images/blogposts/place-names/easter-eggs/laurens.m4a');
+            audio.play();
+          } else if (ixmapClickedCountyClass.includes('Schuyler')) {
+            var audio = new Audio('assets/images/blogposts/place-names/easter-eggs/schuyler.m4a');
+            audio.play();
+          } else if (ixmapClickedCountyClass.includes('Augusta') || ixmapClickedCountyClass.includes('Charlotte') || ixmapClickedCountyClass.includes('Mecklenburg')) {
+            var audio = new Audio('assets/images/blogposts/place-names/easter-eggs/king-george.m4a');
+            audio.play();
+          }
+
+
+
+          }) // close .on click for Hamilton Easter eggs
         .on('mouseover', function(q, d, r) { // d (to access the dataset) is the second var in the .on() in newer versions of D3
           var currentCounty = d3.select(this);
           var centroid = ixmapCountyPath.centroid(currentCounty.datum());
@@ -251,8 +287,7 @@ d3.csv('assets/data/blogposts/place-names/data_counties.csv')
             });
           d3.select("#ixmap-tooltip-lang-child")
             .text(d.properties.tooltipgranularlanguage);
-          } // close fx
-        ) // close .on mouseover
+          }) // close .on mouseover for tooltip
         .on('mouseout', function() {
           d3.select("#ixmap-tooltip")
             .classed("hidden", true);
@@ -263,8 +298,8 @@ d3.csv('assets/data/blogposts/place-names/data_counties.csv')
               } else {
                 return placenameColorLang(d.properties.language).langColor;
               } // close if
-            }) // close .on for tooltip
-          }); // finish drawing county paths
+            }) // close .on mouseout for tooltip
+        }); // finish drawing county paths
 
     // Load JSON of state outlines
     d3.json('assets/data/blogposts/place-names/data_states-20m.json')
