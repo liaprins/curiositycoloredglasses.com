@@ -32,13 +32,12 @@ Rather than rely on my own limited anecdotes to answer these questions, I went i
   <!-- Tooltip -->
   <div id="ixmap-tooltip" class="hidden">
     <p id="ixmap-tooltip-topline" class="m-textface">
-        <span id="ixmap-tooltip-name">[County Name]</span>
-        <span id="ixmap-tooltip-type">[Type]</span><span>, </span>
+        <span id="ixmap-tooltip-name">[County Name]</span><span>, </span>
         <span id="ixmap-tooltip-state">[State]</span>
     </p>
     <p id="ixmap-tooltip-ety" class="s-textface">[Etymology]</p>
-
-    <div>
+    <!-- Category section -->
+    <div> <!-- needs a wrapper div to keep language section from jumping up to be on same line -->
       <div id="ixmap-tooltip-dot-cat" class="ixmap-dot">
       </div>
       <p id="ixmap-tooltip-cat-container">
@@ -47,7 +46,7 @@ Rather than rely on my own limited anecdotes to answer these questions, I went i
         <span id="ixmap-tooltip-cat-child" class="s-textface"></span>
       </p>
     </div>
-
+    <!-- Language section -->
     <div id="ixmap-tooltip-dot-lang" class="ixmap-dot">
     </div>
     <p id="ixmap-tooltip-lang-container">
@@ -79,25 +78,25 @@ Rather than rely on my own limited anecdotes to answer these questions, I went i
   <!-- Legend -->
   <div id="ixmap-legend-container">
   </div>
-  <figcaption id="ixmap-caption" class="xs-textface">
-    <hr class="toprule">
-    I am a caption, oh yeah! Don't you think the little color-coding toggle is adorable? Especially at the tiniest screenwidths!
-  </figcaption>
+  <span> <!-- MUST BE WRAPPED IN A <span>, OTHERWISE IT IS A DIRECT CHILD OF <div>, AND lightboxsideshow.js CALLS THE LIGHTBOX CAPTIONS THROUGH div>figcaption (ANY <figcaption> THAT IS A DIRECT CHILD OF A <div>, SO IF THIS CAPTION IS ALSO A DIRECT CHILD OF A <div> IT MAJORLY MESSES UP THINGS FOR LIGHTBOX CAPTIONS) -->
+    <figcaption id="ixmap-caption" class="xs-textface">
+      <hr class="toprule">
+      This map shows the distribution of counties across the US based on <em>what</em> they’re named for (category), or the <em>language</em> they’re named in (use the toggle to switch between the two).
+    </figcaption>
+  </span>
 </div>
 
 Geomapping both attributes of my newly minted dataset — category and language — exposed the fact that the vast majority of counties are named for people, specifically men, and of European heritage (or at least with European surnames).  
 
-<!--
-{% include post-pullquote.html content="Although women-honoring toponyms account for only 1.1% of all counties, they are represented slightly higher in states that themselves possess feminine names: Maryland, Virginia, and Louisiana (although the latter was actually named for French King Louis XIV)." shape="square" %}
--->
+Although women-honoring toponyms account for only 1.1% of all counties, they are represented slightly higher in states that themselves possess feminine names: Maryland, Virginia, and Louisiana (although the latter was actually named for French King Louis XIV).
 
 Of those counties commemorating groups of people, nearly all bear Indigenous names. However, digging into their etymologies reveals that they’re not necessarily named in the language of the group they’re named for: to list a couple, the names of Wisconsin’s {% include post-glossary-inline.html inlineword="Outagamie" id="outagamie" %} and {% include post-glossary-inline.html inlineword="Ozaukee" id="ozaukee" %} counties derive from {% include post-glossary-inline.html inlineword="Ojibwe" id="ojibwe" %} words for their neighboring {% include post-glossary-inline.html inlineword="Meskwaki" id="meskwaki" %} people (“dwellers on the other side of the stream”) and {% include post-glossary-inline.html inlineword="Sauk" id="sauk" %} people, respectively. Even the few counties in this category christened with European names are likely to characterize Native American peoples — but based on what white settlers called them, not what they called themselves. For example, the names of Pend Oreille County, Washington; Nez Perce County, Idaho; and the two Huron Counties, in Michigan and Ohio; all originated from French terms used to describe the locals. _Pend d’oreille_ means “hang from ear”, in reference to the Q'lispé people’s shell earrings, while _nez percé_ alluded to the Niimíipuu people’s pierced noses. _Huron_ was an attribution to the way the Wyandot people dressed their hair.
 
-{% include post-image.html image="grid-category.jpg" alt="A series of US maps, each showing the counties named for men (2,086), groups of people (181), women (36), bodies of water (285), geologic features (100), plants or animals (46), natural resources (32), places within America (153), places outside of America (99), abstract concepts (61), objects (5), and unknown reasons (37), respectively." caption="These maps indicate which counties belong to each of the 12 sub-categories I defined, colored by their parent category." %}
+{% include post-image.html image="grid-category.jpg" alt="A series of US maps, each showing the counties named for men (2,086), groups of people (181), women (36), bodies of water (285), geologic features (100), plants or animals (46), natural resources (32), places within America (153), places outside of America (99), abstract concepts (61), objects (5), and unknown reasons (37), respectively." caption="These maps show a more detailed breakdown of what counties are named for; each dot represents one county." %}
 
 Clusters of counties named for English towns and regions blanket the Northeastern seaboard (as was my business-travel-induced hunch), particularly around Jamestown, Virginia, and Plymouth, Massachusetts — the two earliest British settlements on the continent. Likewise, Spanish names are common in the Southwest and areas that were founded after the Mexican-American War. French names are sprinkled throughout several states, but primarily within those whose land was acquired via the Louisiana purchase. In fact, French-named counties are more highly concentrated in Louisiana itself, as well as the Great Lakes region. The former served as the French headquarters for New France before it came under American control as part of the titular Louisiana Purchase; the latter was popular with fur trappers seeking to supply France’s fashion demands.
 
-{% include post-image.html image="grid-language.jpg" alt="A series of US maps, showing the counties named in each of the following languages: English (186), Spanish (121), French (90), Ojibwe (21), Lenape (17), and Muscogee (15), respectively." caption="Most counties’ names derive from a non-Indigenous language; the maps above are color-coded by that distinction. The top row of maps feature the most commonly occurring languages across all county names, while the bottom row shows the most commonly occurring Indigenous languages across all county names." %}
+{% include post-image.html image="grid-language.jpg" alt="A series of US maps, showing the counties named in each of the following languages: English (186), Spanish (121), French (90), Ojibwe (21), Lenape (17), and Muscogee (15), respectively." caption="These maps show the six most common languages appearing in county names. Each dot represents one county; each map is colored according to whether or not that language is Indigenous." %}
 
 {% include post-pullquote.html content="So, what’s in a (county) name? Quite a bit, it would seem. And yet at the same time, not nearly enough." shape="square" %}
 
