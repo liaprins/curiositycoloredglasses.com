@@ -1,0 +1,173 @@
+<p class="s-textface">
+<em>
+Here’s where I explain a bit about the experiments and explorations that go on behind the scenes while I'm preparing a post.
+</em>
+</p>
+
+<p class="s-textface">
+Making this post has required – and facilitated – a lot of learning! I coded well over 100 visualizations (actually 161 so far) with D3 using the dataset I made, the creation of which was itself also a major learning endeavor. Why’d I make so many vis’s? In part because so many new and nuanced questions emerged as I encoded and refined the dataset I needed to answer my initial question about how place names differ across the country. Also in part because I just couldn’t stop myself: visualizing data in the completely customizable way enabled by D3 is truly addicting. I routinely woke up at 3:00am unable to sleep, with a potential solution to my latest coding problem burning in my brain, so of course I had to test it right then.
+</p>
+
+{% include post-image.html image="d3-explorations.jpg" alt="A grid of several screenshots of exploratory data visualizations I made with my county etymology dataset." caption="A small selection from the cutting room floor." %}
+
+<p class="s-textface">
+While this level of passion served as a phenomenal boost in helping me to learn the ins and outs of D3 quickly, I’m certainly not as good at it as I want to be. There’s still a looming gap between the ideal visions of visualizations I see in my head and what I’m capable of bringing to life on screen (at least within any semblance of timeliness). To quote <a href="https://www.thisamericanlife.org/extras/the-gap">Ira Glass on the subject</a>: “… all of us who do creative work, we get into it because we have good taste. But it's like there is this gap. For the first couple years that you're making stuff, what you're making isn't so good. … But your taste, the thing that got you into the game … is good enough that you can tell that what you're making is kind of a disappointment to you …”
+</p>
+
+<p class="s-textface">
+Nonetheless, I try very much to believe that <em>something is better than nothing</em> (touted by the “recovering” half of my “recovering perfectionist” self), as in: it’s better to have shared my interesting learnings on a topic (even if the method by which I do so could have been slightly more fabulous), than to have not done so and just kept all my hard work and interesting insights buried on my laptop. To that end, I’m sharing some of my less polished (or should I just say more rugged) chart-babies and the insights they uncovered as I iterated my way to the final vis’s I ended up using within the main post.
+</p>
+
+<h5>
+Correlations between county name types and languages
+</h5>
+
+<p class="s-textface">
+I initially built an interactive visualization with Altair (a Python visualization library) to get a sense of the relationship, if any, between what a county was named for and the language it was named in. As I noted in the main post above, the primary correlation seemed to be that not only were the vast majority of counties named for men, but for men with European surnames. (This I’d actually noticed far before visualizing the dataset, while reading each county’s etymology to classify its category. I coped with the severe lack of gender equality by attempting to be grateful that this made for a much more efficient data-encoding process (especially when I got to Georgia, Kentucky, Mississippi, and North Dakota): so much easier to repeatedly copy-paste “man”, “man”, “man” row after row than to manually type a distinct category each time!)
+</p>
+
+{% include post-image.html image="python-map.gif" alt="A brief video showing my Python code within a Google Colab notebook and the resulting geomap, wherein symbol shape is mapped to each county’s high-level language family and color is mapped to each county’s name category." caption="Altair (used to build this exploration) is my favorite Python visualization library that I’ve encountered thus far. But you’re still limited to pre-established chart types, which ultimately led me to my current D3 obsession!" %}
+
+<p class="s-textface">
+When I started working more in D3, I further customized the filtering capabilities, and spent a lot of time (mostly the wee hours of the night) experimenting with various cross-filtering approaches. This was a really fun and all-consuming point in my D3 learning journey.
+</p>
+
+{% include post-image.html image="cross-filter-map.gif" alt="A map I built with D3, wherein symbol orientation is mapped to each county’s high-level language family and color is mapped to each county’s name category. There are also filters turned on to indicate all counties that have a name in an Indigenous language and are named for something nature-related." caption="Each county is demarcated by a symbol, the orientation of which indicates its high-level language grouping, and the hue of which represents its name’s category. Filtering by either dimension highlights counties that meet both criteria." %}
+
+<h5>Regional patterns distilled latitudinally and longitudinally</h5>
+
+<p class="s-textface">
+In my initial designs with the cross-filters (above), the vast amount of space surrounding Western counties’ symbols compared to Eastern counties’ made it difficult to discern regional differences, which was at the heart of my initial question. To this end, I made a visualization that isolated latitude and longitude as their own independent dimensions, and which showed a breakdown of name types – and languages, separately – as ratios (binned and calculated as a somewhat hacky kernel density estimate plot). The obvious difference in county-density from East to West intrigued me in itself and I wanted to see it quantified, so I also built a version that just tallied up raw counts along each dimension. Ideally, viewers could toggle between category and language, and then also between an aggregate of raw counts and a percentage of total. I did manage to build each of these permutations (🥳), but right now they’re just four separate charts, rather than a single changeable view.
+</p>
+
+{% include post-image.html image="lat-long-series.jpg" alt="Four of the same geomap layouts slicing the dataset differently." caption="County names broken down longitudinally and latitudinally by category and language, shown as raw counts and ratios." %}
+
+<p class="s-textface">
+I <em>also</em> wanted to make it so viewers could hover on any “chunk” within the stacked area breakdowns to highlight the corresponding counties within the map, and vice versa. <em>And</em> ideally you could select various slices along the North-South and West-East dimensions to highlight the corresponding counties falling within that range.
+</p>
+
+{% include post-image.html image="lat-long-interaction.gif" alt="A brief animation showing interaction within a geomap I built." caption="Hovering a “chunk” reveals the counties that contribute to it." %}
+
+<p class="s-textface">
+Oh yeah, one more thing on my wish list for this vis: I wanted to be able to select a distribution chunk from a stacked area breakdown to filter out all counties except those matching the specific high-level category or language selected, and then rescale the distribution to split out its sub-categories or more granular languages. I actually built a very similar interaction while learning the fundamentals of D3 initially, as part of the final coding exercise in Scott Murray’s excellent book <em>Interactive Data Visualization for the Web</em> (highly, highly recommend!).
+</p>
+
+<p class="s-textface">
+</p>
+
+{% include post-image.html image="area-chart-drill-down.gif" alt="A brief video showing the interaction of a visualization I built using electric car data: the mouse selects one of the stacked pieces within a stacked area chart, and that chunk expands and splits out into its children sub-categories." caption="Just imagine: this functionality, but applied to the static charts shown above! (Maybe someday I’ll make it really exist so you don’t have to imagine. Someday … after I’ve recovered from both the PTSD caused by figuring out how to make this one and the extreme shock I experienced when it finally actually worked correctly.)" %}
+
+<p class="s-textface">
+Exploring the visualizations I made revealed some interesting observations! Male-inspired monikers seem to subside in Western states; conversely, the relative rate of nature-induced names climbs steeply (West coast <em>is</em> the best coast afterall 😛). And as I had hypothesized, the Northwest could be argued to exhibit the highest percent of counties with names in Native American languages (if you don’t count the somewhat skewed reading caused by the fact that the Eastern-most bin contains only a few counties). However, this rate is really not so high, and not nearly as pronounced as I’d predicted, relative to the rest of the country.
+</p>
+
+<p class="s-textface">
+I learned so much while working on this vis, not only in terms of technical skills, but also more nuanced answers to my questions about American toponyms.
+</p>
+
+<h5>Relationships between counties’ names and their ages</h5>
+
+<p class="s-textface">
+An obvious follow-up to the question of how place names differ across two-dimensional space is how they differ across time. These two traits, however – location and time – are inextricably tied given the history of westward expansion, or so I hypothesized. I tried various ways of mapping counties’ ages to their places on a map, which yielded whimsical, if somewhat incomprensible, results. But they didn’t really help me answer how names differ based on when they were given.
+</p>
+
+{% include post-image.html image="shrunken-sweater-map.jpg" alt="An exploratory geomap, with a line of varying length per county, indicating its age." caption="Each vertical line is a county; the shorter it is the younger it is. (Also, if the contiguous United States was a dry-clean only sweater that you definitely were not supposed to wash yourself, let alone put in the drier, but you did, and then tried to stretch it to fit again, is this what it would look like?)" %}
+
+<p class="s-textface">
+I also tried simultaneously mapping hue to name type (and language, as its own vis), and lightness to age. This unfortunately prevented the darkest values (tied to the youngest counties) from being able to be all that dark, since they still had to be recognizable as distinct colors, and all had to maintain the same starting value to keep from visually biasing the age-attribute of the data. However, this color palette proved to be too monochrome, un-contrast-y, and unsightly to proceed with! I won’t drag you through all the hours of fastidious color-for-dataviz secondhand research I conducted … I will just gratefully point you to <a href="https://blog.datawrapper.de/category/color-in-data-vis/" target="_blank">Lisa-Charlotte Muth’s invaluable compendium on the topic</a>!
+</p>
+
+{% include post-image.html image="age-maps-colored.jpg" alt="Two choropleths wherein each county is colored either by its name’s high-level language family or its name’s category, the saturation level of which are mapped to the counties ages." caption="Color value mapped to county age: the older, the lighter." %}
+
+{% include post-image.html image="age-map-greyscale.jpg" alt="A greyscale choropleth wherein saturation is mapped to county age." caption="Given the limitations of a hue-encoded map, I just had to try out an all-greyscale version, wherein the counties’ age range could span the full gamut from nearly white (oldest) to black (youngest). It doesn’t really help to answer my initial question of how county names differ from place to place, but it is fascinating, if I do say so myself. (And this type of rabbit-holing is the epitome of why it took me so long to publish this post!)" %}
+
+<p class="s-textface">
+What I really wanted to do was build a jointly interactive timeline-and-map combo. Brushing over binned decades in a stacked histogram showing name-type or language breakdowns would highlight where the counties that had been named within those selected decades lived on a map (and maybe even vice versa).
+</p>
+
+{% include post-image.html image="timeline-sketches.jpg" alt="Several sketches illustrating the timeline ideas I had." caption="Ideas for an interactive timeline and map." %}
+
+<p class="s-textface">
+Eventually I did try just the binning by decade concept, separately for name type and language, and also separately for raw counts and rates. Ideally you’d be able to toggle between each of these within a single view (like my vision for the latitude-longitude KDE-geomap hybrid).
+</p>
+
+{% include post-image.html image="histogram-series.jpg" alt="Four of the same histogram timelines slicing the dataset differently." caption="Stacked histograms broken down by county name type and language, shown by raw count per decade and by ratio." %}
+
+{% include post-image.html image="histogram-symbol-orientation.png" alt="A histogram binning the number of counties named per decade. Each county is indicated by a symbol, colored by its name’s category and oriented to indicate its high-level language family." caption="A more “experimental” – shall we say – version of the stacked histogram, using symbol orientation to represent high-level language groupings in the same way that my initial cross-filter visualization did, while also tying color to each county name’s category. While it was too difficult to parse, it did create some distractingly mesmerizing Greek-key-like patterns!" %}
+
+<h5>States’ effects on their counties’ names</h5>
+
+<p class="s-textface">
+The most accurate way to determine whether states themselves have had any influence over their counties’ names would be to get more data science-y about it: First, develop a way to predict what a county name’s type and language would be at any given spot in the US, based on the other counties’ name types and languages, and their locations relative to that spot. Then, do that for all counties per state, and compare those predictions to the states’ actual breakdowns. But I don’t quite know <em>how</em> to do that (yet), and I had a different idea in mind: to show each state’s name type and language breakdowns as stacked proportional bar charts laid out as tile maps.
+</p>
+
+{% include post-image.html image="tile-map-sketches.jpg" alt="Sketches exploring how to layout all states in a grid pattern." caption="An 8-bit interpretation of our nation." %}
+
+{% include post-image.html image="tile-maps.jpg" alt="Two tile maps of the US with a stacked bar chart per state; one map breaks down each state’s ration of Indigenous to non-Indigenous counties, and the other is broken down by name type." caption="I found it difficult to detect any state-induced patterns with these tile maps that weren’t already apparent as more general regional trends." %}
+
+<p class="s-textface">
+This didn’t reveal much, though, except for maybe one interesting anomaly: although Arizona and New Mexico share a border of significant length, there seem to be stark differences between their county naming schemes. 80% of Arizona’s counties possess a Native American name, while only one of New Mexico’s does, accounting for just 3% of the state’s total. At first I thought this discrepancy could be explained away by timing: maybe New Mexico entered the Union via one of the Western land acquisitions substantially sooner than Arizona did, and perhaps toponym trends changed with time. But it turns out they were both granted statehood in the exact same year – 1912 – and just over a month apart. Statistically it would seem that in this case, each state itself had a heavy hand in informing its counties’ names.
+</p>
+
+{% include post-image.html image="az-nm.png" alt="A stacked proportion chart showing that Arizona has a little over ⅔ of its counties named in an Indigenous language, while New Mexico has only 3%." caption="Despite their shared border, Arizona’s and New Mexico’s county naming practices seem to be quite different. Green accounts for counties named in an Indigenous language; purple for those in a non-Indigenous language." %}
+
+<h5>Counties named for multiple things or people, indirectly</h5>
+
+<p class="s-textface">
+As I continued to refine the classification system I used in my dataset, I often found myself stumped by a recurring predicament: although many counties were named for one thing on the surface, ultimately that thing was sometimes named for another thing – often several times over – collectively forming a trail of interlinked etymologies. For example, Jefferson County in Colorado is named most directly for an extralegal territory which itself bore the name Jefferson Territory, but which had in turn ultimately been named for Thomas Jefferson. (Relatedly, in my research I learned that Jefferson Davis’s father named <em>him</em> after Thomas Jefferson… So are those four Jeff Davis counties actually commemorating Thomas Jefferson?)
+</p>
+
+<p class="s-textface">
+This made me want to see an “etymological chain” per county, which of course required much more manual tweaking to my dataset. I tried a cartogram-like layout with all counties packed together, each its own teeny tiny pie chart of sorts divided into the number of “links” within its etymological chain and colored according to name type. Then I desaturated counties with fewer links to help those with longer name-histories pop out.
+</p>
+
+<p class="s-textface">
+At least 5% of counties have an indirect name source (likely this number is much higher; this is just based on what I could glean directly from the etymologies provided on <a href="https://en.wikipedia.org/wiki/Lists_of_U.S._county_name_etymologies">Wikipedia</a>). California in particular bears a relatively high rate of counties exhibiting this pattern: several were initially christened for missions or natural features, the names of which in turn paid homage to Spanish saints. The Northeast’s propensity for pre-existing place names ultimately just meant more man-memorializing monikers if you go deep enough, because their surface-level European namesakes were themselves often named for men.
+</p>
+
+{% include post-image.html image="american-pies.jpg" alt="A hexagonal cartogram-like layout wherein each county is represented by a small pie chart, colored by the types of names within its etymological chain." caption="Each county transmogrified into an itsy-bitsy pie. (Try not to harm your computer due to imminent cute-aggression!)" %}
+
+{% include post-image.html image="tooltip-sketches.jpg" alt="Sketches of tooltip iterations." caption="Exploring ways to reveal the stories within etymological chains via tooltips." %}
+
+<h5>Common county names versus common etymologies</h5>
+
+<p class="s-textface">
+During my dataset creation process, I noticed certain county names popping up repeatedly from state to state. In fact, only 46% of counties possess a unique name, and over 8% bear a name belonging to at least 14 other counties.
+</p>
+
+<p class="s-textface">
+In the case of the most common county name – “Washington” – all are named directly for George Washington. Of all the 24 “Lincoln” counties however, only 17 honor Honest Abe; most others commemorate a general from the Revolutionary War, and a couple are ultimately named for a city in England.
+</p>
+
+<p class="s-textface">
+Ironically, “Union” counties have the most disparate set of etymologies, including – even more ironically – an homage to a Georgian political party whose main agenda was to eradicate Native Americans from the area. Hardly a uniting sentiment!
+</p>
+
+{% include post-image.html image="name-frequency.png" alt="A stacked bar chart per common county name, broken down by common etymology." %}
+
+<p class="s-textface">
+I visualized this data as a series of stacked bars; each stack is color-coded by name type and aggregated by etymology. I also experimented in Tableau with this concept a bit, and <a href="https://public.tableau.com/app/profile/lia.prins7728/viz/NamefrequencyofUScountynames/Namefrequencystacked_1">you can actually interact with it and explore some of the patterns yourself</a>!
+</p>
+
+<!-- Tableau name frequency chart (also requires JS file within _includes/graphs/place-names folder) -->
+<div class='tableauPlaceholder' id='viz1658009465141' style='position: relative'><noscript><a href='#'><img alt='Name frequency of US county namesWhich county names are most common, and are they each named after the same thing?Hover over a colored segment to see the reason those counties are named what they are. ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Na&#47;NamefrequencyofUScountynames&#47;Namefrequencystacked_1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='NamefrequencyofUScountynames&#47;Namefrequencystacked_1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Na&#47;NamefrequencyofUScountynames&#47;Namefrequencystacked_1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>
+
+<h5>Overall name type and language breakdowns</h5>
+
+<p class="s-textface">
+While exploring with Tableau, I tried mapping out the ratios of each <a href="https://public.tableau.com/app/profile/lia.prins7728/viz/UScountynamesbycategory/Treediagramofcategories">name category</a> and each <a href="https://public.tableau.com/app/profile/lia.prins7728/viz/UScountynamesbylanguage/Treediagramoflanguages">language</a> across all counties. The visualizations really speak for themselves!
+</p>
+
+<!-- Tableau proportion tree: county names by category (also requires JS file within _includes/graphs/place-names folder) -->
+<div class='tableauPlaceholder' id='viz1658022524579' style='position: relative'><noscript><a href='#'><img alt='US county names by categoryBreaking down all US counties by what they&#39;re named forHover over a segment to see the subcategory and number of counties it represents. ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;US&#47;UScountynamesbycategory&#47;Treediagramofcategories&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='UScountynamesbycategory&#47;Treediagramofcategories' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;US&#47;UScountynamesbycategory&#47;Treediagramofcategories&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>
+
+<!-- Tableau proportion tree: county names by language (also requires JS file within _includes/graphs/place-names folder) -->
+<div class='tableauPlaceholder' id='viz1658022798449' style='position: relative'><noscript><a href='#'><img alt='US county names by languageBreaking down all US county names by their languageHover over a segment to see the language and number of counties it represents. ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;US&#47;UScountynamesbylanguage&#47;Treediagramoflanguages&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='UScountynamesbylanguage&#47;Treediagramoflanguages' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;US&#47;UScountynamesbylanguage&#47;Treediagramoflanguages&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>
+
+<p class="s-textface">
+I’ll be sharing more of my chart-children from the process of developing this post on <a href="https://www.instagram.com/liaprins/">Instagram</a>, so follow along there to see even more somethings that are better than nothings!
+</p>
+
+<p class="s-textface">
+P.S. Are you as <em>Hamilton</em>-obsessed as I am (yes, still)? If so, poke around the map at the top of this page to see (or rather, hear 🎶) where some of the personalities made names for themselves, hint hint.
+</p>
