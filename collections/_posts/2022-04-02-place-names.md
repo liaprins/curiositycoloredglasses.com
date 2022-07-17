@@ -3,6 +3,7 @@ title: How do place names differ across America?
 author: Lia Prins
 tags:
 excerpt: I used to travel to the East coast occasionally for work, and was always struck by how different the names of the towns there were, compared to where I grew up in Washington state. Whereas the nomenclature of the Northwest seemed to be based on Native American languages (if not their Anglicized, Latin-character-converted equivalents), most monikers in the East sounded purely English to my ear. Now, after living in the San Francisco Bay Area — the naming practices of which seem to have been heavily (though unwittingly) influenced by several Spanish saints — I often wonder about the various pockets of American place-name patterns&#58; How heterogeneous are the names of our nation’s locations, and on what dimensions? What stories are behind these toponyms, and how do they speak to the places they represent?
+process: process/process-place-names.html
 glossaryfolder: vocab-place-names
 thankyoufolder: thankyou-place-names
 comments: true
@@ -13,6 +14,9 @@ css:
 d3v: v6
 d3:
   - graphs/place-names/place-names.js
+  - graphs/place-names/tableau-name-frequency.js
+  - graphs/place-names/tableau-proportion-tree-category.js
+  - graphs/place-names/tableau-proportion-tree-language.js
 hidden: true
 ---
 
