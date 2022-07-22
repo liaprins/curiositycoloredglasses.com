@@ -4,4 +4,4 @@ pronunciation: / **burr**-oh /
 audio: borough.mp3
 ---
 
-Historically, a small administrative district typically having its own church and priest, which grew out of Louisiana's heavily Roman Catholic-influenced past. The name "parish" has remained, although they function similarly to counties. *Definition from [World Atlas](https://www.worldatlas.com/articles/why-does-louisiana-have-parishes-and-not-counties.html){:target="_blank"}.*
+Most of Alaska's first-order administrative subdivisions are boroughs, rather than counties: delegates to the Alaska Constitutional Convention wanted to avoid the traditional county system and adopted their own unique model with different classes of boroughs varying in powers and duties. *Definition from [Wikipedia](https://en.wikipedia.org/wiki/List_of_boroughs_and_census_areas_in_Alaska){:target="_blank"}.*

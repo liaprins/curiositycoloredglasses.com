@@ -211,9 +211,6 @@ d3.csv('assets/data/blogposts/place-names/data_counties.csv')
           } else if (ixmapClickedCountyClass.includes('Madison')) {
             var audio = new Audio('assets/images/blogposts/place-names/easter-eggs/madison.m4a');
             audio.play();
-          } else if (ixmapClickedCountyClass.includes('Laurens')) {
-            var audio = new Audio('assets/images/blogposts/place-names/easter-eggs/laurens.m4a');
-            audio.play();
           } else if (ixmapClickedCountyClass.includes('Schuyler')) {
             var audio = new Audio('assets/images/blogposts/place-names/easter-eggs/schuyler.m4a');
             audio.play();
