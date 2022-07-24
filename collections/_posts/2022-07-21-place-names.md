@@ -16,6 +16,9 @@ d3:
   - graphs/place-names/tableau-name-frequency.js
   - graphs/place-names/tableau-proportion-tree-category.js
   - graphs/place-names/tableau-proportion-tree-language.js
+share: Ever wondered how the names of places differ regionally?
+sharelink: https://curiositycoloredglasses.com/place-names
+shareimage: hover-counties.gif
 hidden: false
 ---
 
