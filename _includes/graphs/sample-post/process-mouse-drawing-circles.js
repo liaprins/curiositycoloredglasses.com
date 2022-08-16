@@ -36,7 +36,7 @@ function setup() {
 
 
     canvas.parent('process-sketch-holder');    // Move the canvas so it’s inside our <div id="process-sketch-holder">.
-    background(0, 255, 200);
+    background(0, 0, 200);
 }
 
 
@@ -106,5 +106,5 @@ function draw() {
 
 function mousePressed() {
     redraw();
-    background(20, 0, 0);
+    background(50, 50, 50);
 }
