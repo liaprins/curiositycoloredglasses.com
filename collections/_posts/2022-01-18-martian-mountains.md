@@ -27,8 +27,18 @@ In the case of Mauna Kea, its base turns out to be fairly apparent. As a {% incl
 Mount Everest and other Himalayan peaks are {% include post-glossary-inline.html inlineword="fold mountains" id="fold-mountain" %}, resulting from the collision of the Australian-Indian tectonic plate into the Eurasion plate. The materials these mountains are made from more or less match those of the surrounding land, the way a wrinkle in a rug is made of the rug itself, although the crumpled nature of the Himalayan range does reveal older (and therefore normally buried) layers of the crust. This — and the fact that the “rug” from which it arises is itself not necessarily on a horizontal or flat “floor” — make Everest’s base a much more arbitrary call. Proposed base elevations for Everest range from 4.2 kilometers (2.6 miles) on its south to 5.2 kilometers (3.2 miles) on its north in the Tibetan Plateau, which — when averaged and subtracted from the peak’s 8,848-meter (29,029-foot) elevation — result in a summit-to-average-base height of 4,148 meters (13,579 feet).
 
 {% assign galleryid = "mauna-kea-vs-everest" %}
-{% assign gallery = '<img src="https://curiositycoloredglasses.com/assets/images/blogposts/martian-mountains/mauna-kea-vs-everest/mauna-kea-vs-everest_1.jpg" alt="A drawing of Mauna Kea and Everest side by side with their peaks aligned, and sea level and the baselines demarcated." class="contentimage" id="galleryimage"> 🟡 <img src="https://curiositycoloredglasses.com/assets/images/blogposts/martian-mountains/mauna-kea-vs-everest/mauna-kea-vs-everest_2.jpg" alt="Mauna Kea and Everest side by side, aligned by sea level." class="contentimage" id="galleryimage"> 🟡 <img src="https://curiositycoloredglasses.com/assets/images/blogposts/martian-mountains/mauna-kea-vs-everest/mauna-kea-vs-everest_3.jpg" alt="Mauna Kea and Everest side by side, aligned by their bases." class="contentimage" id="galleryimage">' | split: " 🟡 " %}
-{% assign captions = 'When Mauna Kea’s and Everest’s tops are aligned, it becomes apparent that their elevations and baselines are almost exactly inverted.<p class="figcaptionspacer"></p>(I compressed the horizontal scale for these three illustrations so that I could fit the two mountains side by side.) 🟡 When aligning by sea level, Everest’s elevation is more than double that of Mauna Kea’s. 🟡 However, when we align their bases, Mauna Kea is over twice the height of Everest.' | split: " 🟡 " %}
+{% assign gallery = '
+<img src="https://curiositycoloredglasses.com/assets/images/blogposts/martian-mountains/mauna-kea-vs-everest/mauna-kea-vs-everest_1.jpg" alt="A drawing of Mauna Kea and Everest side by side with their peaks aligned, and sea level and the baselines demarcated." class="contentimage" id="galleryimage"> 🟡 
+<img src="https://curiositycoloredglasses.com/assets/images/blogposts/martian-mountains/mauna-kea-vs-everest/mauna-kea-vs-everest_2.jpg" alt="Mauna Kea and Everest side by side, aligned by sea level." class="contentimage" id="galleryimage"> 🟡 
+<img src="https://curiositycoloredglasses.com/assets/images/blogposts/martian-mountains/mauna-kea-vs-everest/mauna-kea-vs-everest_3.jpg" alt="Mauna Kea and Everest side by side, aligned by their bases." class="contentimage" id="galleryimage">
+' | split: " 🟡 " %}
+{% assign captions = '
+When Mauna Kea’s and Everest’s tops are aligned, it becomes apparent that their elevations and baselines are almost exactly inverted.
+<p class="figcaptionspacer"></p>
+(I compressed the horizontal scale for these three illustrations so that I could fit the two mountains side by side.) 🟡 
+When aligning by sea level, Everest’s elevation is more than double that of Mauna Kea’s. 🟡 
+However, when we align their bases, Mauna Kea is over twice the height of Everest.
+' | split: " 🟡 " %}
 {% include post-gallery.html %}
 
 #### Leaving home base
