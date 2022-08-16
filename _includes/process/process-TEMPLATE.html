@@ -1,0 +1,62 @@
+<!-- TEMPLATE vvv !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
+<!-- 1.) COPY BLANK TEMPLATES BELOW WHERE NEEDED IN SEQUENCE, BELOW THIS WHOLE TEMPLATE SECTION -->
+<!-- 2.) DELETE ALL TEMPLATES -->
+<!-- 3.) FILL OUT COPIED TEMPLATES WITH CONTENT -->
+
+<!-- INTRO SENTENCE ********************************************************** -->
+<p class="s-textface">
+  <em>
+  INTROSENTENCE
+  </em>
+</p>
+
+<!-- HEADING ***************************************************************** -->
+<h5>
+HEADING
+</h5>
+
+<!-- PARAGRAPH *************************************************************** -->
+<p class="s-textface">
+TEXT
+</p>
+
+<!-- LINKS (USE WITHIN PARAGRAPHS) ******************************************** -->
+<a href="HYPERLINK" target="_blank">VISIBLELINKWORDS</a>
+<!-- INTERNAL LINKS USE THE FOLLOWING FORMATS WITHIN THE href="" CONTENT -->
+{{ site.baseurl }}POSTSLUG
+{{ site.baseurl }}POSTSLUG#ID
+{{ site.baseurl }}assets/images/blogposts/POSTSLUG/VISUALSHORTNAME.jpg
+{{ site.baseurl }}hello
+{{ site.baseurl }}library#TOPICSLUG
+{{ site.baseurl }}questionqueue#TOPICSLUG
+
+<!-- SINGLE IMAGE ************************************************************ -->
+{% include post-image.html image="VISUALSHORTNAME.jpg" alt="ALT" caption="CAPTION" %}
+
+<!-- GALLERY ***************************************************************** -->
+{% assign galleryid = "VISUALSHORTNAME" %}
+{% assign gallery = '
+<img src="https://curiositycoloredglasses.com/assets/images/blogposts/POSTSLUG/VISUALSHORTNAME/VISUALSHORTNAME_1.jpg" alt="ALT" class="contentimage" id="galleryimage"> 🟡 
+<img src="https://curiositycoloredglasses.com/assets/images/blogposts/POSTSLUG/VISUALSHORTNAME/VISUALSHORTNAME_2.jpg" alt="ALT" class="contentimage" id="galleryimage"> 🟡 
+<img src="https://curiositycoloredglasses.com/assets/images/blogposts/POSTSLUG/VISUALSHORTNAME/VISUALSHORTNAME_3.jpg" alt="ALT" class="contentimage" id="galleryimage">
+' | split: " 🟡 " %}
+{% assign captions = '
+CAPTION1PARTA
+<p class="figcaptionspacer"></p>
+CAPTION1PARTB 🟡 
+CAPTION2 🟡 
+CAPTION3
+' | split: " 🟡 " %}
+{% include post-gallery.html %}
+
+<!-- VIDEO (CAN CHANGE ratio="" FROM 16-9 TO 4-3; REMOVE caption="" PARAMETER ENTIRELY IF NO CAPTION) -->
+{% include post-vimeo.html vimeonumber="#########" ratio="16-9" caption="CAPTION" %}
+
+<!-- GLOSSARY **************************************************************** -->
+{% include post-glossary-inline.html inlineword="INLINETERM" id="TERMFILENAME" %}
+
+<!-- FOOTNOTE **************************************************************** -->
+{%-include post-thankyou-inline.html number="#"-%}
+
+<!-- TEMPLATE ^^^ !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
