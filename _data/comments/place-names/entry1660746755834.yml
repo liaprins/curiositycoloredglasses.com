@@ -1,0 +1,15 @@
+_id: 6fd9d770-1e39-11ed-8378-4ffd486373aa
+_parent: 'https://curiositycoloredglasses.com/place-names'
+replying_to_uid: ''
+name: Tom
+email: 50fd11fb3e5fb94d302ac5b0e9bc5f38
+hp: ''
+message: >-
+  Very neat! Just a heads up, looks like many of the counties of Massachusetts
+  are shuffled around. The Town and County of Nantucket is an island off the
+  coast, but hovering over that gives information about Norfolk County. Hovering
+  over Norfolk County gives a label of Plymouth County, and then Plymouth County
+  has info for Suffolk County, which then loops back to Nantucket. Not sure
+  where this error is coming in (whether it's your dataset or was lost in
+  translation somewhere or what), but thought you'd want to know :)
+date: 1660746755
