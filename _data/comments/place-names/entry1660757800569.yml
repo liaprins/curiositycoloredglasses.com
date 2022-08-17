@@ -1,0 +1,8 @@
+_id: 27076bb0-1e53-11ed-bba4-bd02c4998511
+_parent: 'https://curiositycoloredglasses.com/place-names'
+replying_to_uid: ''
+name: Lia
+email: e8240c996323667e84d659d353fe0108
+hp: ''
+message: "Thank you all!\r\n\r\nAnd I will update the data for some of those Massachusetts counties. (For some reason the JSON with the SVG data for the county shapes sorts the \"City of...\" counties in a different order than the CSV I made with the actual etymology data, so they didn't always match up and need to be manually re-ordered (this also happened for all the counties starting with \"Mc...\" and \"St\" / \"St.\" / \"Saint\" etc, which I mostly found on my own initially, at least as far as I know, but very annoying!). But I'm happy to have your help in making it more accurate!"
+date: 1660757800
