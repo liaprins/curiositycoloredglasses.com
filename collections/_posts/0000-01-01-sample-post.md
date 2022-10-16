@@ -6,7 +6,7 @@ excerpt: Bear claw carrot cake marzipan jujubes chupa chups marzipan I love cake
 tags: tag1 tag2 tag3 tag4 tag5
 leftextension: .png
 rightextension: .gif
-share: Place names can be quite telling once they’ve been quantified, mapped, and analyzed&#58; ⅔ of American counties are named for men of European heritage, and there are more insights where that one came from!
+share: Ever wondered how the names of places differ regionally?
 sharelink: https://curiositycoloredglasses.com/sample-post
 shareimage: sample-post.jpg
 d3v: v6
