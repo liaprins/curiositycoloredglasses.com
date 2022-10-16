@@ -16,7 +16,7 @@ d3:
   - graphs/place-names/tableau-name-frequency.js
   - graphs/place-names/tableau-proportion-tree-category.js
   - graphs/place-names/tableau-proportion-tree-language.js
-share: Ever wondered how the names of places differ regionally?
+share: Place names can be quite telling once they’ve been quantified, mapped, and analyzed&#58; ⅔ of American counties are named for men of European heritage, and there are more insights where that one came from!
 sharelink: https://curiositycoloredglasses.com/place-names
 shareimage: hover-counties.gif
 hidden: false
