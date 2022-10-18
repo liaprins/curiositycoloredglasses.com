@@ -1,0 +1,9 @@
+---
+title: LIBRARYENTRYNAME
+alttext: ALTTEXT
+---
+
+*ITALICTEXT* 
+__BOLDTEXT__ 
+[VISIBLELINKTEXT](HYPERLINK){:target="_blank"}.
+
