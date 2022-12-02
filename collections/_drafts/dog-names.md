@@ -1,0 +1,62 @@
+---
+hidden: false
+title: How many dogs have my name? And how many humans have my dog's name?
+author: Lia Prins
+excerpt: [Introductory text explaining the concept here. Text explaining the concept to go here. Introductory text explaining the concept here. Text explaining the concept to go here. Introductory text explaining the concept here. Text explaining the concept to go here.]
+tags: 
+share: 
+sharelink: https://curiositycoloredglasses.com/dog-names
+shareimage: dog-names.jpg
+d3v: v6
+d3:
+  - graphs/dog-names/name-shares.js
+css:
+  - /assets/css/blogposts/dog-names/dog-names.css
+comments: true 
+---
+
+[A bit more explanatory text (coming soon!). A bit more explanatory text. A bit more explanatory text (coming soon!). A bit more explanatory text. A bit more explanatory text (coming soon!). A bit more explanatory text. A bit more explanatory text (coming soon!). A bit more explanatory text. A bit more explanatory text (coming soon!). A bit more explanatory text. ]
+
+<input type="text" id="userInput" class="name-shares-search-input" placeholder="Search Name">
+
+<!-- <div id="sort-alphabetical-name">
+  <p>🔤 Sort by name alphabetically</p>
+</div> -->
+            
+<div id="sort-occurrence-dog">
+  <p>🐶 Sort by occurrence across dogs</p>
+</div>
+      
+<div id="sort-occurrence-human">
+  <p>🧒 Sort by occurrence across humans</p>
+</div>
+
+<div id="sort-dog-human-ratio">
+  <p>🐶 : 🧒 Sort by dog-to-human ratio</p>
+</div>
+      
+<div id="sort-human-dog-ratio">
+  <p>🧒 : 🐶 Sort by human-to-dog ratio</p>
+</div>
+            
+<div id="name-shares-axes">
+  <h4 id="chart-title" class="chart-intro-text">
+    Name occurrence
+  </h4>
+  <p class="chart-intro-text">
+    Use the search bar above to find a name. Use the sorting buttons re-order the names. Hover on a name to see the rate of dogs and humans (per 100,000) with that name.
+  </p>
+  <p id="dog-axis-label">
+    Occurrence per 100,000 dogs
+  </p>
+  <p id="human-axis-label">
+    Occurrence per 100,000 humans
+  </p>
+</div>
+<div id="name-shares-outer" class="outer">
+  <div class="inner">
+    <div id="name-shares-vis"></div>
+  </div>
+</div>
+
+[Concluding text will go here (coming soon!). Concluding text will go here. Concluding text will go here (coming soon!). Concluding text will go here. Concluding text will go here (coming soon!). Concluding text will go here. Concluding text will go here (coming soon!). Concluding text will go here. Concluding text will go here (coming soon!). Concluding text will go here. Concluding text will go here (coming soon!). Concluding text will go here. Concluding text will go here (coming soon!). Concluding text will go here. Concluding text will go here (coming soon!). Concluding text will go here. ]
