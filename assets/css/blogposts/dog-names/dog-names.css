@@ -1,0 +1,83 @@
+html {
+  scroll-behavior: smooth;
+}
+.name-shares-search-input,
+#sort-alphabetical-name,
+#sort-occurrence-dog,
+#sort-occurrence-human,
+#sort-dog-human-ratio,
+#sort-human-dog-ratio {
+  background-color: white;
+  color: black;
+  border: 2px black solid;
+  display: block;
+  margin: 15px 0px;
+  padding: 10px 25px;
+  cursor: pointer;
+}
+.name-shares-search-input {
+  display: block;
+  width: 100%;
+  cursor: auto;
+  font-size: 17px;
+  font-family: Work Sans;
+  padding: 15px 25px;
+}
+.outer,
+.inner {
+  height: 500px;
+  z-index: 10;
+}
+#name-shares-axes {
+  margin: 2.048rem auto 0 auto;
+}
+#name-shares-axes,
+.outer {
+  width: 78.6vw;
+  position: relative;
+  left: -14.286;
+  background-color: #f5f5f5;
+}
+.outer {
+  margin: 0 auto 2.048rem auto;
+  overflow: auto;
+  scroll-behavior: smooth;
+}
+.distinct-name-label {
+  text-anchor: middle;
+  letter-spacing: 0.07rem;
+  cursor: pointer;
+}
+.name-bars-dog {
+  transform: scaleX(-1);
+}
+#dog-axis-label,
+#human-axis-label {
+  text-align: center;
+  display: inline-block !important;
+  width: 550px;
+}
+#chart-title {
+  padding-top: 30px;
+}
+.chart-intro-text {
+  margin-left: 50px !important;
+  margin-right: 50px !important;
+  display: block !important;
+}
+
+/* Mediaqueries */
+@media (min-width: 817px) {
+  #name-shares-axes,
+  .outer {
+    width: 85.714vw;
+    left: calc(50% - 42.857vw); /* 42.857vw = (50vw (to get to L edge of screen) - 7.143vw (2/28col)) */
+  }
+}
+@media (min-width: 1225px) {
+  #name-shares-axes,
+  .outer {
+    width: 1108.333px;
+    left: -233px;
+  }
+}
