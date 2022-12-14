@@ -1,83 +1,187 @@
-html {
-  scroll-behavior: smooth;
-}
-.name-shares-search-input,
-#sort-alphabetical-name,
-#sort-occurrence-dog,
-#sort-occurrence-human,
-#sort-dog-human-ratio,
-#sort-human-dog-ratio {
-  background-color: white;
-  color: black;
-  border: 2px black solid;
-  display: block;
-  margin: 15px 0px;
-  padding: 10px 25px;
-  cursor: pointer;
-}
-.name-shares-search-input {
-  display: block;
-  width: 100%;
-  cursor: auto;
-  font-size: 17px;
-  font-family: Work Sans;
-  padding: 15px 25px;
-}
-.outer,
-.inner {
-  height: 500px;
-  z-index: 10;
-}
-#name-shares-axes {
-  margin: 2.048rem auto 0 auto;
-}
-#name-shares-axes,
-.outer {
+#nameshares-fixed,
+#nameshares-vis {
   width: 78.6vw;
   position: relative;
   left: -14.286;
-  background-color: #f5f5f5;
 }
-.outer {
-  margin: 0 auto 2.048rem auto;
-  overflow: auto;
-  scroll-behavior: smooth;
+#nameshares-fixed {
+  margin-bottom: -0.58rem;
 }
-.distinct-name-label {
+#nameshares-fixed > .axis-label {
+  text-align: center;
+  display: inline-block !important; /* need `!important` to overrule the rules called for "#posttext p:last-of-type" in somepages.css (applies to the second axis heading here) */
+  /* width: calc(39.3vw - 3.35rem); */ /* half w (the vis' width) minus [half nameWidth + countWidth4Digits + countOffset] */
+  width: calc(39.3vw - 2.75rem);
+}
+#nameshares-fixed > #human-axis-label {
+  position: relative;
+  left: 5.25rem; /* nameWidth */
+}
+#nameshares-fixed .axis {
+  font-family: Work Sans;
+}
+#nameshares-fixed .axis > path {
+  opacity: 0;
+}
+#h-axes-bg-line {
+  stroke: #000000;
+  stroke-width: 1;
+}
+#nameshares-vis {
+  margin-bottom: 2rem;
+}
+#nameshares-vis > .inner {
+  height: 500px;
+  overflow: scroll;
+  scroll-behavior: smooth; /* even though also called on html element (within globalnavfooter.css), it's not working on search results unless called here */
+}
+#nameshares-vis {
+  height: 500px;
+}
+#nameshares-vis .tick-line {
+  stroke: #d9d9d9;
+  stroke-width: 1;
+}
+#nameshares-vis .selected-box {
+  fill: #f9f9f9;
+  cursor: pointer;
+  mix-blend-mode: multiply;
+}
+#nameshares-vis .count,
+#nameshares-vis .bars-dog,
+#nameshares-vis .bars-human,
+#nameshares-vis .name-label,
+#nameshares-vis .gradient {
+  pointer-events: none;
+}
+#nameshares-vis .bars-dog {
+  transform: scaleX(-1);
+  fill: #FD7F6F;
+}
+#nameshares-vis .bars-human {
+  fill: #56C6E2;
+}
+#nameshares-vis .name-label {
   text-anchor: middle;
   letter-spacing: 0.07rem;
-  cursor: pointer;
 }
-.name-bars-dog {
-  transform: scaleX(-1);
+#nameshares-vis .gradient {
+  height: 50px;
+  background-image: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,1));
+  position: relative;
+  top: -50px;
 }
-#dog-axis-label,
-#human-axis-label {
-  text-align: center;
-  display: inline-block !important;
-  width: 550px;
+
+/* Sidebar */
+#nameshares-sort-search {
+  position: relative;
+  left: 0px;
+  display: inline-block;
+  vertical-align: top;
 }
-#chart-title {
-  padding-top: 30px;
+#nameshares-sort-label,
+#nameshares-sort-dropdown {
+  width: 78.5vw;
+  font-family: 'Work Sans';
 }
-.chart-intro-text {
-  margin-left: 50px !important;
-  margin-right: 50px !important;
-  display: block !important;
+#nameshares-sort-label {
+  margin-bottom: 0.25rem;
+  display: block;
+}
+#nameshares-sort-dropdown {
+  appearance: none;
+  background-image: url(../../../images/sitewide/down-arrowhead.svg);
+  background-repeat: no-repeat;
+  background-size: 0.6rem;
+  background-position: calc(78.5vw - 1rem), 0; /* 1rem = width of arrow (0.6rem) + [2 x padding inside dropdown, see next line (2 x 0.2rem)]  */
+  padding: 0.25rem 0.2rem;
+  margin-bottom: 1rem;
+  border-style: solid;
+  border-radius: 0;
+  border-width: 0.1rem;
+  border-color: #000000;
+}
+#nameshares-search-input {
+  width: calc(78.5vw - 2rem);
+  padding-bottom: 0.25rem;    /* :) Finessed the space between input word and underline bar to match space between input and bottom of field for subscribe + comment name fields */
+  padding-left: 0;
+  position: relative;
+  top: -0.2rem;
+  border-bottom-width: 0.1rem;
+}
+#nameshares-search-button {
+  height: 1.476rem;
+  padding: 0.316rem;
+}
+.nameshares-error {
+  visibility: hidden;
+  width: 78.5vw;
+  margin-top: -0.2rem;
+}
+.visible {
+  visibility: visible;
+}
+#nameshares-caption {
+  margin-bottom: 1.024rem;
+  top: 6.5rem;
 }
 
 /* Mediaqueries */
 @media (min-width: 817px) {
-  #name-shares-axes,
-  .outer {
+  #nameshares-vis,
+  #nameshares-fixed {
     width: 85.714vw;
     left: calc(50% - 42.857vw); /* 42.857vw = (50vw (to get to L edge of screen) - 7.143vw (2/28col)) */
   }
+  #nameshares-fixed > .axis-label {
+    width: calc(42.86vw - 2.75rem); /* half w (the vis' width) minus [half nameWidth + countWidth4Digits + countOffset] */
+  }
+  #nameshares-sort-label,
+  #nameshares-sort-dropdown {
+    width: 642px;
+  }
+  #nameshares-sort-dropdown {
+    background-position: calc(642px - 1rem), 0; /* 1rem = width of arrow (0.6rem) + [2 x padding inside dropdown, see next line (2 x 0.2rem)]  */
+  }
+  #nameshares-search-input {
+    width: calc(640px - 1.9rem);
+  }
+  #nameshares-error {
+    width: 642px;
+  }
 }
 @media (min-width: 1225px) {
-  #name-shares-axes,
-  .outer {
+  #nameshares-vis,
+  #nameshares-fixed {
     width: 1108.333px;
     left: -233px;
+  }
+  #nameshares-fixed > .axis-label {
+    width: calc(554px - 2.75rem); /* half w (the vis' width) minus [half nameWidth + countWidth4Digits + countOffset] */
+  }
+  #nameshares-sort-search {
+    position: absolute;
+    left: -233px;
+  }
+  #nameshares-sort-label,
+  #nameshares-sort-dropdown {
+    width: 175px;
+  }
+  #nameshares-sort-dropdown {
+    background-position: calc(175px - 1rem), 0; /* 1rem = width of arrow (0.6rem) + [2 x padding inside dropdown, see next line (2 x 0.2rem)]  */
+  }
+  #nameshares-search-input {
+    width: calc(175px - 1.15rem);
+  }
+  #nameshares-search-button {
+    position: relative;
+    left: -0.28rem;
+  }
+  #nameshares-error {
+    width: 175px;
+  }
+  #nameshares-caption {
+    position: absolute;
+    left: -58px;
   }
 }

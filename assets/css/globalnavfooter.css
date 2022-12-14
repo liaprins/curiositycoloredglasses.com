@@ -3,7 +3,8 @@
 html {
     height: 100%;     /* This is for the fixed-to-the-bottom footer */
     font-size: 1em;
-    overflow-x: hidden;    }
+    overflow-x: hidden;
+    scroll-behavior: smooth;    }   /* This makes it auto-scroll to Process section, Comment section, etc in a way that shows the scrolling so it's less disorienting */
 
 body {    /* This spans the total screen width, 100% */
     overflow-x: hidden;
