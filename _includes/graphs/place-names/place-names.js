@@ -219,8 +219,6 @@ d3.csv('assets/data/blogposts/place-names/data_counties.csv')
             audio.play();
           }
 
-
-
           }) // close .on click for Hamilton Easter eggs
         .on('mouseover', function(q, d, r) { // d (to access the dataset) is the second var in the .on() in newer versions of D3
           var currentCounty = d3.select(this);
