@@ -6,7 +6,7 @@ excerpt: I used to travel to the East coast occasionally for work, and was alway
 process: process/process-place-names.html
 glossaryfolder: vocab-place-names
 thankyoufolder: thankyou-place-names
-comments: true
+comments: false
 rightextension: .png
 css:
   - /assets/css/blogposts/place-names/place-names.css
